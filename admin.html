@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HARMONİ Yönetim Paneli | Gerçek Zamanlı Analitik & Moderasyon</title>
+  <meta name="google-site-verification" content="QcGPrGD0ave0i2i9t5U4-ti5_OrX7YV9paZcB8cXvxE" />
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Sol Menü (Sidebar) -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <div class="sidebar-brand-text">
+        <h2>HARMONİ</h2>
+        <span>Canlı Yönetim Paneli</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-heading">Canlı Analitik</span>
+      <a class="side-link active" data-tab="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+        <span>Gerçek Zamanlı Özet</span>
+      </a>
+      <a class="side-link" data-tab="traffic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span>Ziyaretçi Trafik Akışı</span>
+        <span class="side-badge" style="background:#10B981;" id="sidebarVisitorsCount">0</span>
+      </a>
+
+      <span class="nav-heading">Üye & Moderasyon</span>
+      <a class="side-link" data-tab="members">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Kayıtlı Üyeler</span>
+        <span class="side-badge" id="sidebarMembersCount">5</span>
+      </a>
+      <a class="side-link" data-tab="approvals">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+        <span>Onay Bekleyenler</span>
+        <span class="side-badge" style="background:var(--accent-amber);" id="sidebarPendingCount">0</span>
+      </a>
+
+      <span class="nav-heading">Finans & Sistem</span>
+      <a class="side-link" data-tab="vip-sales">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <span>VIP Satış Cirosu</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="admin-user-info">
+        <img src="images/turkish_emre_candid_1786793611473.jpg" alt="Admin" class="admin-avatar">
+        <div>
+          <h5>Sistem Yöneticisi</h5>
+          <span style="font-size:0.7rem; color:#94A3B8;">apache35meister@gmail.com</span>
+        </div>
+      </div>
+      <a href="index.html" class="btn-back-site" title="Ana Siteye Dön">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Ana Yönetim Alanı -->
+  <main class="admin-main">
+    
+    <!-- Üst Başlık Barı -->
+    <div class="admin-top-bar">
+      <div class="page-title">
+        <h1>HARMONİ Gerçek Zamanlı Yönetim Paneli</h1>
+        <p>Tüm veriler tarayıcı ve sunucunuzdan gelen %100 gerçek canlı istatistiklerdir.</p>
+      </div>
+
+      <div class="admin-top-actions" style="display:flex; gap:0.5rem;">
+        <button class="btn-action-icon" id="btnResetAllStats" title="İstatistikleri Sıfırla" style="background:#EF4444; color:#fff; padding:0.5rem 0.9rem; border-radius:6px; font-size:0.8rem; font-weight:700; display:flex; align-items:center; gap:0.4rem; width:auto; height:auto;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          <span>Verileri Sıfırla</span>
+        </button>
+
+        <button class="btn-admin-primary" id="btnOpenNewMemberModal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Yeni Profil Ekle</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Canlı Yeni Üye Bildirim Bannerı -->
+    <div id="adminNewMemberAlert" style="display:none; background:linear-gradient(90deg, #F43F5E, #E11D48); color:#FFFFFF; padding:1.15rem 1.75rem; border-radius:14px; margin-bottom:1.75rem; align-items:center; justify-content:space-between; box-shadow:0 0 28px rgba(244,63,94,0.45); border:1px solid rgba(255,255,255,0.2);">
+      <div style="display:flex; align-items:center; gap:0.9rem;">
+        <span style="font-size:1.8rem; animation:heartBeat 1.2s infinite ease-in-out;">🔔</span>
+        <div>
+          <strong style="font-size:1.05rem; display:block; font-family:var(--font-heading);" id="adminAlertTitle">YENİ ÜYE BAŞVURUSU GELDİ!</strong>
+          <span style="font-size:0.88rem; color:#FFE4E6;" id="adminAlertDesc">Zeynep Kaya (Kadın - İstanbul) az önce sisteme kaydoldu ve onay bekliyor.</span>
+        </div>
+      </div>
+      <div style="display:flex; gap:0.6rem;">
+        <button id="btnAdminApproveNow" style="background:#10B981; color:#fff; font-weight:800; padding:0.55rem 1.15rem; border-radius:8px; font-size:0.85rem; cursor:pointer; border:1px solid rgba(255,255,255,0.2);">✓ Hemen Onayla</button>
+        <button id="btnAdminDismissAlert" style="background:rgba(0,0,0,0.35); color:#fff; font-weight:700; padding:0.55rem 0.95rem; border-radius:8px; font-size:0.85rem; cursor:pointer; border:1px solid rgba(255,255,255,0.15);">Kapat ✕</button>
+      </div>
+    </div>
+
+    <!-- 4 Adet KPI İstatistik Kartı (%100 GERÇEK VE CANLI VERİLER) -->
+    <div class="kpi-grid">
+      <!-- Gerçek Ziyaretçi Sayısı -->
+      <div class="kpi-card">
+        <div class="kpi-left">
+          <h3>Toplam Canlı Ziyaret</h3>
+          <div class="kpi-num" id="kpiTotalVisits" style="color:var(--accent-green);">1</div>
+          <div class="kpi-trend" style="color:var(--accent-green);">🟢 Gerçek Zamanlı Trafik</div>
+        </div>
+        <div class="kpi-icon-box" style="background:rgba(16, 185, 129, 0.15); color:var(--accent-green);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+      </div>
+
+      <!-- Gerçek Kayıtlı Üye Sayısı -->
+      <div class="kpi-card">
+        <div class="kpi-left">
+          <h3>Sistemdeki Gerçek Üyeler</h3>
+          <div class="kpi-num" id="kpiTotalMembers">5</div>
+          <div class="kpi-trend" id="kpiGenderRatio">👩 2 Kadın • 👨 3 Erkek</div>
+        </div>
+        <div class="kpi-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+      </div>
+
+      <!-- Gerçek Onay Bekleyenler -->
+      <div class="kpi-card">
+        <div class="kpi-left">
+          <h3>Onay Bekleyen Profiller</h3>
+          <div class="kpi-num" id="kpiPendingCount">0</div>
+          <div class="kpi-trend" style="color:var(--accent-amber);">⏳ İnceleme Kuyruğu</div>
+        </div>
+        <div class="kpi-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+        </div>
+      </div>
+
+      <!-- Gerçek VIP Satış Cirosu -->
+      <div class="kpi-card">
+        <div class="kpi-left">
+          <h3>Gerçek VIP Paket Cirosu</h3>
+          <div class="kpi-num" id="kpiVipRevenue" style="color:var(--accent-gold);">₺0</div>
+          <div class="kpi-trend" style="color:var(--accent-gold);">👑 Erkek VIP Paket Satışları</div>
+        </div>
+        <div class="kpi-icon-box" style="color:var(--accent-gold); background:rgba(245, 158, 11, 0.15);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ziyaretçi & Canlı Trafik Günlüğü Tablosu -->
+    <div class="admin-card" id="trafficSection" style="margin-bottom:2rem;">
+      <div class="card-header-bar">
+        <div class="card-header-title">🟢 Canlı Ziyaretçi & Trafik Akışı</div>
+        <span style="font-size:0.8rem; color:var(--text-muted);">Sitenize gelen gerçek giriş ve etkileşimler anlık listelenir.</span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Zaman</th>
+              <th>Yapılan Eylem / Sayfa</th>
+              <th>Cihaz & Tarayıcı</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="adminTrafficTableBody">
+            <!-- JS ile canlı beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Üye Yönetimi & Moderasyon Tablosu -->
+    <div class="admin-card" id="membersSection">
+      <div class="card-header-bar">
+        <div class="card-header-title">Gerçek Üye Listesi & Üyelik Durumları</div>
+        <div style="display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap;">
+          <input type="text" id="adminSearchInput" class="table-search-box" placeholder="İsim veya şehir ara...">
+          <select id="adminStatusFilter" class="table-search-box" style="width:200px;">
+            <option value="all">Tüm Üyeler</option>
+            <option value="pending">⏳ Onay Bekleyenler</option>
+            <option value="approved">✓ Onaylı Üyeler</option>
+            <option value="female">👩 Kadınlar (%100 Ücretsiz)</option>
+            <option value="male-vip">👑 Erkek VIP Aboneler</option>
+            <option value="male-free">👨 Erkek Standart</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Üye</th>
+              <th>Cinsiyet & Üyelik Tipi</th>
+              <th>Meslek & Şehir</th>
+              <th>Karakter Uyumu</th>
+              <th>Durum</th>
+              <th>Aksiyonlar</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody">
+            <!-- JavaScript ile doldurulacak -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Yeni Üye Ekleme Modalı -->
+  <div class="modal-admin-overlay" id="newMemberModal">
+    <div class="modal-admin-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+        <h3 style="font-family:var(--font-heading); font-size:1.3rem;">Manuel Yeni Üye Ekle</h3>
+        <button id="btnCloseNewMemberModal" style="color:var(--text-muted); font-size:1.2rem; cursor:pointer;">✕</button>
+      </div>
+
+      <form id="newMemberForm">
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="newMemName">Ad Soyad *</label>
+            <input type="text" id="newMemName" class="admin-input" placeholder="Örn: Selin Yılmaz" required>
+          </div>
+          <div class="admin-form-group">
+            <label for="newMemAge">Yaş *</label>
+            <input type="number" id="newMemAge" class="admin-input" placeholder="28" min="18" max="70" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="newMemGender">Cinsiyet *</label>
+            <select id="newMemGender" class="admin-input" required>
+              <option value="female">Kadın (%100 Ücretsiz VIP)</option>
+              <option value="male">Erkek (Standart / VIP)</option>
+            </select>
+          </div>
+          <div class="admin-form-group">
+            <label for="newMemCity">Şehir *</label>
+            <input type="text" id="newMemCity" class="admin-input" placeholder="İstanbul" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label for="newMemJob">Meslek *</label>
+            <input type="text" id="newMemJob" class="admin-input" placeholder="Mimar" required>
+          </div>
+          <div class="admin-form-group">
+            <label for="newMemPhoto">Fotoğraf URL</label>
+            <input type="url" id="newMemPhoto" class="admin-input" placeholder="https://images.unsplash.com/...">
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="newMemBio">Biyografi</label>
+          <textarea id="newMemBio" class="admin-input" style="resize:vertical; min-height:80px;" placeholder="Tanıtım yazısı..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-admin-primary" style="width:100%; justify-content:center; padding:0.85rem;">
+          <span>Üyeyi Sisteme Kaydet ve Onayla</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scriptler -->
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
