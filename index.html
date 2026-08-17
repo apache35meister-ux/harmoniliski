@@ -10,6 +10,14 @@
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
+    <!-- PWA (Mobil Uygulama) Desteği -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ZENSPA VIP">
+  <link rel="apple-touch-icon" href="images/turkish_selin_photo_1786793658243.jpg">
+
   <!-- Primary SEO Meta Tags (81 İl Kapsamlı) -->
   <title>ZENSPA | 81 İl VIP Masaj & Terapist Rehberi - İstanbul, Ankara, İzmir, Antalya</title>
   <meta name="title" content="ZENSPA | 81 İl VIP Masaj & Terapist Rehberi - İstanbul, Ankara, İzmir, Antalya">
@@ -69,6 +77,56 @@
       "closes": "23:59"
     }
   }
+      // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
+    let deferredPrompt;
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then(reg => {
+          console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
+        }).catch(err => {
+          console.log('SW Hata:', err);
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const banner = document.getElementById('pwaBanner');
+      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
+        banner.style.display = 'flex';
+      }
+    });
+
+    function installPWA() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
+          }
+          deferredPrompt = null;
+          document.getElementById('pwaBanner').style.display = 'none';
+        });
+      } else {
+        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
+      }
+    }
+
+    function closePwaBanner() {
+      document.getElementById('pwaBanner').style.display = 'none';
+      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
+    }
+
+    // Mobil cihaz kontrolü ile banner gösterimi
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const banner = document.getElementById('pwaBanner');
+        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
+          banner.style.display = 'flex';
+        }
+      }, 2500);
+    });
   </script>
 
   <!-- 2. Google FAQPage Schema -->
@@ -95,6 +153,56 @@
       }
     ]
   }
+      // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
+    let deferredPrompt;
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then(reg => {
+          console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
+        }).catch(err => {
+          console.log('SW Hata:', err);
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const banner = document.getElementById('pwaBanner');
+      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
+        banner.style.display = 'flex';
+      }
+    });
+
+    function installPWA() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
+          }
+          deferredPrompt = null;
+          document.getElementById('pwaBanner').style.display = 'none';
+        });
+      } else {
+        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
+      }
+    }
+
+    function closePwaBanner() {
+      document.getElementById('pwaBanner').style.display = 'none';
+      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
+    }
+
+    // Mobil cihaz kontrolü ile banner gösterimi
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const banner = document.getElementById('pwaBanner');
+        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
+          banner.style.display = 'flex';
+        }
+      }, 2500);
+    });
   </script>
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
@@ -953,6 +1061,66 @@
       background: linear-gradient(135deg, #FFF 0%, #FDE047 100%);
       box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
     }
+        /* PWA Mobile App Floating Banner */
+    .pwa-install-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: linear-gradient(135deg, #1C1402 0%, #0A0A0E 100%);
+      border: 1.5px solid var(--border-gold-bright);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), var(--gold-glow);
+      border-radius: 18px;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 380px;
+      animation: slideUp 0.5s ease-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .pwa-app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1.5px solid #FBBF24;
+    }
+    .pwa-text h5 {
+      font-size: 0.92rem;
+      font-family: var(--font-heading);
+      color: #FFF;
+      margin-bottom: 2px;
+    }
+    .pwa-text p {
+      font-size: 0.76rem;
+      color: var(--text-gray);
+      margin: 0;
+    }
+    .btn-pwa-install {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+    }
+    .btn-pwa-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 2px;
+    }
+
     /* Modal */
     .modal-overlay {
       position: fixed;
@@ -1413,7 +1581,20 @@
     </div>
   </div>
 
-    <!-- Floating WhatsApp Widget -->
+      <!-- PWA Mobil Uygulama İndir Barı -->
+  <div class="pwa-install-banner" id="pwaBanner" style="display: none;">
+    <img src="images/turkish_selin_photo_1786793658243.jpg" class="pwa-app-icon" alt="ZENSPA">
+    <div class="pwa-text">
+      <h5>ZENSPA VIP Uygulaması</h5>
+      <p>Tek tıkla telefonunuza yükleyin!</p>
+    </div>
+    <button class="btn-pwa-install" onclick="installPWA()" id="installPwaBtn">
+      📲 İndir
+    </button>
+    <button class="btn-pwa-close" onclick="closePwaBanner()">✕</button>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
   <a href="https://wa.me/15096204167?text=Merhaba,%20bilgi%20almak%20istiyorum." target="_blank" class="floating-wa-btn">
     <span>💬</span>
     <span>7/24 Destek</span>
@@ -1907,6 +2088,56 @@
     document.addEventListener('DOMContentLoaded', () => {
       trackPageVisit();
       renderTherapists(therapists);
+    });
+      // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
+    let deferredPrompt;
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then(reg => {
+          console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
+        }).catch(err => {
+          console.log('SW Hata:', err);
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const banner = document.getElementById('pwaBanner');
+      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
+        banner.style.display = 'flex';
+      }
+    });
+
+    function installPWA() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
+          }
+          deferredPrompt = null;
+          document.getElementById('pwaBanner').style.display = 'none';
+        });
+      } else {
+        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
+      }
+    }
+
+    function closePwaBanner() {
+      document.getElementById('pwaBanner').style.display = 'none';
+      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
+    }
+
+    // Mobil cihaz kontrolü ile banner gösterimi
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const banner = document.getElementById('pwaBanner');
+        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
+          banner.style.display = 'flex';
+        }
+      }, 2500);
     });
   </script>
 </body>
