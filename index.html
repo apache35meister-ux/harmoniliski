@@ -1362,7 +1362,7 @@
             <li><span style="color: #4ADE80;">✓</span> Doğrulanmış Profil Rozeti</li>
             <li><span style="color: #4ADE80;">✓</span> 7/24 Kesintisiz Yayın</li>
           </ul>
-          <a href="https://wa.me/15096204167?text=Merhaba,%201%20Haftalık%20Vitrin%20(1.250%20TL)%20paketi%20için%20ilan%20vermek%20istiyorum." target="_blank" class="btn-select-package">
+          <a href="https://wa.me/15096204167?text=Merhaba,%201%20Haftalık%20Vitrin%20(1.250%20TL)%20paketi%20için%20ilan%20vermek%20istiyorum." target="_blank" onclick="trackAdClick()" class="btn-select-package">
             <span>💬</span> <span>Paketi Seç (1.250 ₺)</span>
           </a>
         </div>
@@ -1381,7 +1381,7 @@
             <li><span style="color: #4ADE80;">✓</span> Doğrudan WhatsApp Butonu</li>
             <li><span style="color: #4ADE80;">✓</span> Özel Fotoğraf & Profil Dizaynı</li>
           </ul>
-          <a href="https://wa.me/15096204167?text=Merhaba,%201%20Aylık%20Gold%20VIP%20(3.500%20TL)%20paketi%20için%20ilan%20vermek%20istiyorum." target="_blank" class="btn-select-package">
+          <a href="https://wa.me/15096204167?text=Merhaba,%201%20Aylık%20Gold%20VIP%20(3.500%20TL)%20paketi%20için%20ilan%20vermek%20istiyorum." target="_blank" onclick="trackAdClick()" class="btn-select-package">
             <span>👑</span> <span>Gold Paketi Seç (3.500 ₺)</span>
           </a>
         </div>
@@ -1399,7 +1399,7 @@
             <li><span style="color: #4ADE80;">✓</span> 7/24 Öncelikli Müşteri Akışı</li>
             <li><span style="color: #4ADE80;">✓</span> %30 Tasarruflu Mega Paket</li>
           </ul>
-          <a href="https://wa.me/15096204167?text=Merhaba,%203%20Aylık%20Platinum%20(7.500%20TL)%20paketi%20için%20ilan%20vermek%20istiyorum." target="_blank" class="btn-select-package">
+          <a href="https://wa.me/15096204167?text=Merhaba,%203%20Aylık%20Platinum%20(7.500%20TL)%20paketi%20için%20ilan%20vermek%20istiyorum." target="_blank" onclick="trackAdClick()" class="btn-select-package">
             <span>💎</span> <span>Platinum Seç (7.500 ₺)</span>
           </a>
         </div>
@@ -1727,6 +1727,29 @@
       }
     ];
 
+        // --- LIVE REAL-TIME ANALYTICS ENGINE ---
+    function trackPageVisit() {
+      let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
+      visits++;
+      localStorage.setItem('zenspa_real_visits', visits.toString());
+    }
+
+    function trackWaClick(tId) {
+      let totalWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0');
+      totalWa++;
+      localStorage.setItem('zenspa_real_wa_clicks', totalWa.toString());
+
+      let tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
+      tClicks[tId] = (tClicks[tId] || 0) + 1;
+      localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
+    }
+
+    function trackAdClick() {
+      let totalAd = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '0');
+      totalAd++;
+      localStorage.setItem('zenspa_real_ad_clicks', totalAd.toString());
+    }
+
     function getStoredTherapists() {
       const stored = localStorage.getItem('zenspa_therapists');
       if (stored) {
@@ -1809,7 +1832,7 @@
                 <span class="price-val">${sanitize(t.price)}</span>
               </div>
 
-              <a href="${waUrl}" target="_blank" class="btn-wa-action" title="${t.name} ile WhatsApp Randevusu Al">
+              <a href="${waUrl}" target="_blank" onclick="trackWaClick(${t.id})" class="btn-wa-action" title="${t.name} ile WhatsApp Randevusu Al">
                 <span>💬</span>
                 <span>WhatsApp ile Randevu Al</span>
               </a>
@@ -1882,6 +1905,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
+      trackPageVisit();
       renderTherapists(therapists);
     });
   </script>
