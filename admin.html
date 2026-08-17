@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZENSPA | VIP Yönetim & Terapist Paneli</title>
+  <title>ZENSPA | VIP Yönetim & Güvenli Admin Paneli</title>
+  <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,6 +33,99 @@
       color: var(--text-white);
       min-height: 100vh;
       display: flex;
+    }
+
+    /* LOGIN LOCK SCREEN OVERLAY */
+    #loginScreen {
+      position: fixed;
+      inset: 0;
+      background: #000000;
+      background-image: 
+        radial-gradient(circle at 50% 30%, #1A1404 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, #0D0902 0%, transparent 40%);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .login-box {
+      background: #0C0C10;
+      border: 1px solid var(--border-gold);
+      box-shadow: 0 0 50px rgba(230, 175, 46, 0.2), 0 25px 50px rgba(0,0,0,0.9);
+      border-radius: 24px;
+      max-width: 420px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+    .login-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 25px rgba(230, 175, 46, 0.25);
+    }
+    .login-box h2 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+    }
+    .login-box p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      margin-bottom: 1.75rem;
+    }
+    .login-input {
+      width: 100%;
+      background: #050507;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFF;
+      padding: 0.95rem 1.25rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      text-align: center;
+      letter-spacing: 3px;
+      outline: none;
+      margin-bottom: 1.25rem;
+      transition: all 0.25s;
+    }
+    .login-input:focus {
+      border-color: #FBBF24;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+    .btn-login-submit {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 1rem;
+      padding: 0.95rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(230, 175, 46, 0.4);
+      transition: all 0.2s;
+    }
+    .btn-login-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+    }
+    .login-error {
+      color: #EF4444;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 0.85rem;
+      display: none;
     }
 
     /* Sidebar */
@@ -110,6 +204,9 @@
     .sidebar-footer {
       border-top: 1px solid var(--border-subtle);
       padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
     }
     .btn-live-site {
       display: flex;
@@ -130,6 +227,26 @@
     .btn-live-site:hover {
       border-color: #FBBF24;
       color: #FBBF24;
+    }
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #F87171;
+      padding: 0.7rem;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-logout:hover {
+      background: #EF4444;
+      color: #FFF;
     }
 
     /* Main Content */
@@ -179,12 +296,8 @@
     }
 
     /* Tab Sections */
-    .tab-section {
-      display: none;
-    }
-    .tab-section.active {
-      display: block;
-    }
+    .tab-section { display: none; }
+    .tab-section.active { display: block; }
 
     /* KPI Cards */
     .kpi-grid {
@@ -366,9 +479,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
-    .settings-group {
-      margin-bottom: 1.25rem;
-    }
+    .settings-group { margin-bottom: 1.25rem; }
     .settings-group label {
       display: block;
       font-size: 0.8rem;
@@ -387,9 +498,7 @@
       font-size: 0.92rem;
       outline: none;
     }
-    .settings-input:focus {
-      border-color: #FBBF24;
-    }
+    .settings-input:focus { border-color: #FBBF24; }
     .btn-save-settings {
       background: var(--gold-gradient);
       color: #000;
@@ -515,6 +624,23 @@
 </head>
 <body>
 
+  <!-- 🔒 ADMIN GUVENLIK KILIDI / SIFRE EKRANI -->
+  <div id="loginScreen">
+    <div class="login-box">
+      <div class="login-icon">🔒</div>
+      <h2>YÖNETİCİ GİRİŞİ</h2>
+      <p>Bu panele yalnızca platform yöneticisi erişebilir. Devam etmek için şifrenizi girin.</p>
+      
+      <form onsubmit="handleLogin(event)">
+        <input type="password" id="adminPassInput" class="login-input" placeholder="••••••••" autofocus required>
+        <button type="submit" class="btn-login-submit">
+          GİRİŞ YAP ➜
+        </button>
+        <div id="loginError" class="login-error">⚠️ Hatalı Şifre! Lütfen tekrar deneyin.</div>
+      </form>
+    </div>
+  </div>
+
   <!-- Sidebar -->
   <aside class="sidebar">
     <div>
@@ -548,7 +674,7 @@
         <li>
           <button class="nav-btn" onclick="switchTab('settingsTab', this)">
             <span>⚙️</span>
-            <span>Ayarlar & Şehirler</span>
+            <span>Ayarlar & Şifre Değiştir</span>
           </button>
         </li>
       </ul>
@@ -558,6 +684,10 @@
       <a href="index.html" class="btn-live-site" target="_blank">
         <span>🌐 Ana Siteyi Görüntüle</span>
       </a>
+      <button class="btn-logout" onclick="logoutAdmin()">
+        <span>🔒</span>
+        <span>Güvenli Çıkış Yap</span>
+      </button>
     </div>
   </aside>
 
@@ -738,12 +868,12 @@
       </div>
     </div>
 
-    <!-- TAB 4: AYARLAR -->
+    <!-- TAB 4: AYARLAR & SIFRE DEGISIKLIGI -->
     <div id="settingsTab" class="tab-section">
       <div class="top-header">
         <div>
-          <h1>⚙️ Platform Ayarları</h1>
-          <p>Site başlığı, WhatsApp hatları ve şehir listesini buradan güncelleyin.</p>
+          <h1>⚙️ Platform Ayarları & Güvenlik</h1>
+          <p>Site başlığı, WhatsApp hatları ve Admin giriş şifrenizi buradan değiştirebilirsiniz.</p>
         </div>
       </div>
 
@@ -751,28 +881,26 @@
         <form onsubmit="saveSettings(event)">
           <div class="settings-grid">
             <div class="settings-group">
-              <label>Site Başlığı</label>
-              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | VIP Masaj & Terapi Rehberi">
+              <label>🔒 Yeni Admin Giriş Şifresi</label>
+              <input type="text" class="settings-input" id="settingAdminPass" placeholder="Yeni şifre belirleyin..." value="">
+              <small style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px; display: block;">Mevcut varsayılan şifre: <strong>zen2026</strong></small>
             </div>
             <div class="settings-group">
               <label>Vitrin & İlan WhatsApp Numarası</label>
               <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167">
             </div>
             <div class="settings-group">
-              <label>Hizmet Verilen Şehirler</label>
-              <input type="text" class="settings-input" id="settingCities" value="İstanbul, İzmir, Ankara, Antalya, Bursa, Eskişehir, Adana">
+              <label>Site Başlığı</label>
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | VIP Masaj & Terapi Rehberi">
             </div>
             <div class="settings-group">
-              <label>Otomatik Onay Durumu</label>
-              <select class="settings-input">
-                <option value="auto">Otomatik Onay (Aktif)</option>
-                <option value="manual">Yönetici Onayı Gerekli</option>
-              </select>
+              <label>Hizmet Verilen Şehirler</label>
+              <input type="text" class="settings-input" id="settingCities" value="İstanbul, İzmir, Ankara, Antalya, Bursa, Eskişehir, Adana">
             </div>
           </div>
 
           <button type="submit" class="btn-save-settings">
-            ✓ Ayarları Kaydet
+            ✓ Ayarları ve Şifreyi Kaydet
           </button>
         </form>
       </div>
@@ -860,6 +988,45 @@
   </div>
 
   <script>
+    // --- GÜVENLİK & GİRİŞ KONTROLÜ ---
+    const DEFAULT_PASS = "zen2026";
+    function getAdminPass() {
+      return localStorage.getItem('zenspa_admin_pass') || DEFAULT_PASS;
+    }
+
+    function checkAuth() {
+      const isAuth = sessionStorage.getItem('zenspa_admin_auth');
+      const loginScreen = document.getElementById('loginScreen');
+      if (isAuth === 'true') {
+        loginScreen.style.display = 'none';
+      } else {
+        loginScreen.style.display = 'flex';
+      }
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const entered = document.getElementById('adminPassInput').value;
+      const valid = getAdminPass();
+      const err = document.getElementById('loginError');
+
+      if (entered === valid) {
+        sessionStorage.setItem('zenspa_admin_auth', 'true');
+        document.getElementById('loginScreen').style.display = 'none';
+        err.style.display = 'none';
+        document.getElementById('adminPassInput').value = '';
+      } else {
+        err.style.display = 'block';
+        document.getElementById('adminPassInput').value = '';
+        document.getElementById('adminPassInput').focus();
+      }
+    }
+
+    function logoutAdmin() {
+      sessionStorage.removeItem('zenspa_admin_auth');
+      window.location.reload();
+    }
+
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
     const defaultTherapists = [
@@ -1065,10 +1232,17 @@
 
     function saveSettings(e) {
       e.preventDefault();
-      alert("✓ Platform ayarları başarıyla kaydedildi!");
+      const newPass = document.getElementById('settingAdminPass').value.trim();
+      if (newPass) {
+        localStorage.setItem('zenspa_admin_pass', newPass);
+        alert(`✓ Ayarlar kaydedildi!\nYeni Admin Şifreniz: ${newPass}`);
+      } else {
+        alert("✓ Platform ayarları başarıyla kaydedildi!");
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
       renderTable(list);
     });
   </script>
