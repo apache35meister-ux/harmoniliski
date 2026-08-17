@@ -91,23 +91,40 @@
       color: var(--text-gray);
       margin-bottom: 1.75rem;
     }
+    .login-input-wrap {
+      position: relative;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+    }
     .login-input {
       width: 100%;
       background: #050507;
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #FFF;
-      padding: 0.95rem 1.25rem;
+      padding: 0.95rem 3rem 0.95rem 1.25rem;
       border-radius: 12px;
       font-size: 1.05rem;
-      text-align: center;
-      letter-spacing: 3px;
+      text-align: left;
       outline: none;
-      margin-bottom: 1.25rem;
       transition: all 0.25s;
     }
     .login-input:focus {
       border-color: #FBBF24;
       box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+    .btn-toggle-pass {
+      position: absolute;
+      right: 12px;
+      background: transparent;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--gold-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
     }
     .btn-login-submit {
       width: 100%;
@@ -630,19 +647,25 @@
 </head>
 <body>
 
-  <!-- 🔒 ADMIN GUVENLIK KILIDI / SIFRE EKRANI -->
+  <!-- 🔒 ADMIN GUVENLIK KILIDI / SIFRE EKRANI (GÖZ İKONLU) -->
   <div id="loginScreen">
     <div class="login-box">
       <div class="login-icon">🔒</div>
       <h2>YÖNETİCİ GİRİŞİ</h2>
-      <p>Bu panele yalnızca platform yöneticisi erişebilir. Devam etmek için şifrenizi girin.</p>
+      <p>Lütfen admin paneline erişmek için şifrenizi girin:</p>
       
       <form onsubmit="handleLogin(event)">
-        <input type="password" id="adminPassInput" class="login-input" placeholder="••••••••" autofocus required>
+        <div class="login-input-wrap">
+          <input type="password" id="adminPassInput" class="login-input" placeholder="Şifrenizi yazın (zen2026)" autofocus required>
+          <button type="button" class="btn-toggle-pass" onclick="togglePassVisibility()" id="eyeBtn" title="Şifreyi Göster/Gizle">
+            👁️
+          </button>
+        </div>
+        
         <button type="submit" class="btn-login-submit">
           GİRİŞ YAP ➜
         </button>
-        <div id="loginError" class="login-error">⚠️ Hatalı Şifre! Lütfen tekrar deneyin.</div>
+        <div id="loginError" class="login-error">⚠️ Hatalı Şifre! Lütfen <strong>zen2026</strong> yazın.</div>
       </form>
     </div>
   </div>
@@ -831,8 +854,8 @@
     <div id="whatsappTab" class="tab-section">
       <div class="top-header">
         <div>
-          <h1>💬 WhatsApp Randevu & Trafik Raporu</h1>
-          <p>Terapistlerin aldıkları doğrudan WhatsApp mesaj ve randevu yönlendirmeleri.</p>
+          <h1>💬 Canlı Analitik & WhatsApp Raporu</h1>
+          <p>Gerçek ziyaretçi, randevu tıklamaları ve ilan talepleri canlı olarak takip edilir.</p>
         </div>
       </div>
 
@@ -846,7 +869,7 @@
         </div>
         <div class="kpi-card">
           <div>
-            <h4>Canlı Site Ziyareti (Sayfa Görüntüleme)</h4>
+            <h4>Canlı Site Ziyareti (Sayfa Açılışı)</h4>
             <div class="number" id="realTotalVisits" style="color: #FBBF24;">0</div>
           </div>
           <div class="kpi-icon">👁️</div>
@@ -862,7 +885,10 @@
 
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Terapist Bazlı Canlı WhatsApp İstatistikleri</h3><button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">🔄 İstatistikleri Sıfırla</button>
+          <h3>Terapist Bazlı Canlı WhatsApp İstatistikleri</h3>
+          <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
+            🔄 İstatistikleri Sıfırla
+          </button>
         </div>
         <table>
           <thead>
@@ -870,7 +896,7 @@
               <th>Terapist</th>
               <th>Şehir</th>
               <th>Toplam WhatsApp Tıklanması</th>
-              <th>Müşteri Memnuniyeti</th>
+              <th>Müşteri İlgisi</th>
               <th>Doğrudan İletişim</th>
             </tr>
           </thead>
@@ -1083,32 +1109,44 @@
   </div>
 
   <script>
-    // --- GÜVENLİK & GİRİŞ KONTROLÜ (MASTER FAILSAFE) ---
+    // --- GÖZ İKONU İLE ŞİFRE GÖSTER / GİZLE ---
+    function togglePassVisibility() {
+      const input = document.getElementById('adminPassInput');
+      const btn = document.getElementById('eyeBtn');
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        btn.textContent = '👁️';
+      }
+    }
+
+    // --- GÜVENLİK & GİRİŞ KONTROLÜ (MASTER) ---
     function checkAuth() {
-      const isAuth = sessionStorage.getItem('zenspa_admin_auth');
+      const isAuth = sessionStorage.getItem('zenspa_admin_auth') || localStorage.getItem('zenspa_admin_auth');
       const loginScreen = document.getElementById('loginScreen');
       if (isAuth === 'true' && loginScreen) {
-        loginScreen.style.display = 'none';
+        loginScreen.remove();
       }
     }
 
     function handleLogin(e) {
       if (e) e.preventDefault();
       const inputEl = document.getElementById('adminPassInput');
-      const entered = (inputEl.value || '').trim();
-      const customPass = (localStorage.getItem('zenspa_admin_pass') || '').trim();
+      const entered = (inputEl.value || '').trim().toLowerCase();
+      const customPass = (localStorage.getItem('zenspa_admin_pass') || '').trim().toLowerCase();
       const err = document.getElementById('loginError');
 
-      // Master password: zen2026 veya ozel sifre
+      // Her iki şifreyi de kabul et: zen2026 veya custom
       if (entered === 'zen2026' || (customPass && entered === customPass)) {
         sessionStorage.setItem('zenspa_admin_auth', 'true');
+        localStorage.setItem('zenspa_admin_auth', 'true');
         const loginScreen = document.getElementById('loginScreen');
-        if (loginScreen) loginScreen.style.display = 'none';
-        if (err) err.style.display = 'none';
-        inputEl.value = '';
+        if (loginScreen) loginScreen.remove();
       } else {
         if (err) {
-          err.textContent = "⚠️ Hatalı Şifre! Lütfen 'zen2026' yazarak giriş yapın.";
+          err.innerHTML = "⚠️ Hatalı Şifre! Lütfen <strong>zen2026</strong> yazarak giriş yapın.";
           err.style.display = 'block';
         }
         inputEl.value = '';
@@ -1118,7 +1156,28 @@
 
     function logoutAdmin() {
       sessionStorage.removeItem('zenspa_admin_auth');
+      localStorage.removeItem('zenspa_admin_auth');
       window.location.reload();
+    }
+
+    // --- CANLI GERÇEK ANALİTİK MOTORU ---
+    function getLiveAnalytics() {
+      const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '24');
+      const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '8');
+      const adClicks = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '2');
+      const tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
+      return { visits, waClicks, adClicks, tClicks };
+    }
+
+    function resetLiveAnalytics() {
+      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
+        localStorage.setItem('zenspa_real_visits', '0');
+        localStorage.setItem('zenspa_real_wa_clicks', '0');
+        localStorage.setItem('zenspa_real_ad_clicks', '0');
+        localStorage.setItem('zenspa_t_clicks', '{}');
+        renderWaTable();
+        alert("✓ İstatistikler sıfırlandı!");
+      }
     }
 
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
@@ -1234,26 +1293,7 @@
       }
     }
 
-    // Render Tab 3 (WhatsApp)
-        function getLiveAnalytics() {
-      const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '24');
-      const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '8');
-      const adClicks = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '2');
-      const tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
-      return { visits, waClicks, adClicks, tClicks };
-    }
-
-    function resetLiveAnalytics() {
-      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
-        localStorage.setItem('zenspa_real_visits', '0');
-        localStorage.setItem('zenspa_real_wa_clicks', '0');
-        localStorage.setItem('zenspa_real_ad_clicks', '0');
-        localStorage.setItem('zenspa_t_clicks', '{}');
-        renderWaTable();
-        alert("✓ İstatistikler sıfırlandı!");
-      }
-    }
-
+    // Render Tab 3 (WhatsApp & Canlı Analitik)
     function renderWaTable() {
       const stats = getLiveAnalytics();
       document.getElementById('realTotalWa').textContent = stats.waClicks;
@@ -1263,26 +1303,7 @@
       const tbody = document.getElementById('waStatsTableBody');
       tbody.innerHTML = list.map(t => {
         const count = stats.tClicks[t.id] || 0;
-        return 
-        <tr>
-          <td>
-            <div class="therapist-info">
-              <img src=" + (t.img || t.image) + " class="therapist-avatar">
-              <strong style="color:#FFF;"> + t.name + </strong>
-            </div>
-          </td>
-          <td>📍  + t.city + </td>
-          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡  + count +  Canlı Talep</td>
-          <td> + (count > 0 ? '🟢 Aktif İlgi' : 'Beklemede') + </td>
-          <td>
-            <a href="https://wa.me/ + (t.wa || t.whatsapp) + ?text=Merhaba" target="_blank" class="btn-wa-direct">
-              💬 Sohbeti Aç
-            </a>
-          </td>
-        </tr>
-      }).join('');
-    }
-    function _dummyRenderWa() {
+        return `
         <tr>
           <td>
             <div class="therapist-info">
@@ -1291,15 +1312,15 @@
             </div>
           </td>
           <td>📍 ${t.city}</td>
-          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${t.clicks || 25} Randevu Talebi</td>
-          <td>${t.rating || '⭐ 4.9'}</td>
+          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${count} Canlı Randevu Talebi</td>
+          <td>${count > 0 ? '🟢 Aktif İlgi' : 'Beklemede'}</td>
           <td>
             <a href="https://wa.me/${t.wa || t.whatsapp}?text=Merhaba" target="_blank" class="btn-wa-direct">
               💬 Sohbeti Aç
             </a>
           </td>
         </tr>
-      `).join('');
+      `}).join('');
     }
 
     function filterTable() {
