@@ -1232,7 +1232,7 @@
 
   <!-- App Data & Scripts -->
   <script>
-    const therapists = [
+        const defaultTherapists = [
       {
         id: 1,
         name: "Selin Terapist",
@@ -1439,6 +1439,16 @@
       }
     ];
 
+    function getStoredTherapists() {
+      const stored = localStorage.getItem('zenspa_therapists');
+      if (stored) {
+        try { return JSON.parse(stored); } catch(e) {}
+      }
+      localStorage.setItem('zenspa_therapists', JSON.stringify(defaultTherapists));
+      return defaultTherapists;
+    }
+
+    let therapists = getStoredTherapists();
     let activeServicePill = "all";
 
     function renderTherapists(list) {
