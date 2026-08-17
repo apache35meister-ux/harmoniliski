@@ -569,7 +569,7 @@
       <div class="top-header">
         <div>
           <h1>VIP Terapist & Profil Yönetimi</h1>
-          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, yeni terapistler ekleyin.</p>
+          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
         </div>
 
         <button class="btn-add-therapist" onclick="openAddModal()">
@@ -607,7 +607,7 @@
       <!-- Terapist Listesi Tablosu -->
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Yayındaki Tüm Terapistler</h3>
+          <h3>Yayındaki Tüm Terapistler (Kalıcı Kayıt)</h3>
           <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
         </div>
 
@@ -862,15 +862,31 @@
   <script>
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
-    let list = [
-      { id: 1, name: "Selin Terapist", city: "İstanbul", district: "Beşiktaş", services: "İsveç, Aromaterapi", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg", clicks: 64, rating: "⭐ 4.9" },
-      { id: 2, name: "Derya Masöz", city: "İstanbul", district: "Kadıköy", services: "Aromaterapi, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg", clicks: 82, rating: "⭐ 5.0" },
-      { id: 3, name: "Elif Uzman Terapist", city: "İzmir", district: "Alsancak", services: "Medikal, İsveç", price: "1.500 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg", clicks: 47, rating: "⭐ 4.9" },
-      { id: 4, name: "Emre Masör", city: "İstanbul", district: "Şişli", services: "Sporcu, Derin Doku", price: "1.750 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_emre_candid_1786793611473.jpg", clicks: 53, rating: "⭐ 4.8" },
-      { id: 5, name: "Zeynep Terapist", city: "Ankara", district: "Çankaya", services: "İsveç, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_zeynep_selfie_1786793596006.jpg", clicks: 58, rating: "⭐ 4.9" },
-      { id: 6, name: "Cansu Masöz", city: "Antalya", district: "Muratpaşa", services: "Thai, Aromaterapi", price: "1.700 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_cansu_selfie.jpg", clicks: 39, rating: "⭐ 4.9" },
-      { id: 7, name: "Burak Medikal Masör", city: "Ankara", district: "Kızılay", services: "Medikal, Derin Doku", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_burak_photo_1786793640471.jpg", clicks: 71, rating: "⭐ 5.0" }
+    const defaultTherapists = [
+      { id: 1, name: "Selin Terapist", age: 26, city: "İstanbul", district: "Beşiktaş / Levent", gender: "Kadın", services: ["İsveç", "Aromaterapi", "Medikal"], tags: ["Klasik İsveç", "Aromaterapi", "Kendi Stüdyosu", "VIP Hizmet"], bio: "Uluslararası sertifikalı masaj terapistiyim. Kendi hijyenik ve nezih stüdyomda günün yorgunluğunu unutturacak özel relax ve medikal masaj seansları sunuyorum.", price: "60 Dk: 1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg", clicks: 64, rating: "⭐ 4.9" },
+      { id: 2, name: "Derya Masöz", age: 28, city: "İstanbul", district: "Kadıköy / Moda", gender: "Kadın", services: ["Aromaterapi", "Sıcak Taş", "İsveç"], tags: ["Aromaterapi", "Sıcak Taş", "Otele Servis", "Kendi Yeri"], bio: "Doğal uçucu yağlar eşliğinde kas gevşetici ve zihinsel rahatlama sağlayan özel aromaterapi seansları uyguluyorum. Kadıköy'de kendi yerim bulunmaktadır.", price: "60 Dk: 1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg", clicks: 82, rating: "⭐ 5.0" },
+      { id: 3, name: "Elif Uzman Terapist", age: 25, city: "İzmir", district: "Alsancak / Konak", gender: "Kadın", services: ["Medikal", "İsveç", "Spor"], tags: ["Medikal Masaj", "Klasik Masaj", "Kendi Yeri Var"], bio: "Fizyoterapi ve medikal masaj alanında eğitimliyim. Boyun, sırt ve bel ağrılarına yönelik özel rahatlatıcı tekniklerle seanslar yapmaktayım.", price: "60 Dk: 1.500 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg", clicks: 47, rating: "⭐ 4.9" },
+      { id: 4, name: "Emre Masör", age: 29, city: "İstanbul", district: "Şişli / Nişantaşı", gender: "Erkek", services: ["Spor", "Medikal", "Derin Doku"], tags: ["Sporcu Masajı", "Derin Doku", "Otele / Eve Servis"], bio: "Profesyonel spor kulüplerinde masörlük tecrübem bulunmaktadır. Kas yorgunlukları, kramp ve kulunç açma konusunda uzmanım.", price: "60 Dk: 1.750 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_emre_candid_1786793611473.jpg", clicks: 53, rating: "⭐ 4.8" },
+      { id: 5, name: "Zeynep Terapist", age: 27, city: "Ankara", district: "Çankaya / Tunalı", gender: "Kadın", services: ["İsveç", "Aromaterapi", "Sıcak Taş"], tags: ["Klasik İsveç", "Sıcak Taş", "Nezih Ortam"], bio: "Ankara Çankaya'da lüks ve huzurlu dairemde seanslarımı gerçekleştiriyorum. Mum ışığında ve sakinleştirici müzikler eşliğinde masaj hizmeti.", price: "60 Dk: 1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_zeynep_selfie_1786793596006.jpg", clicks: 58, rating: "⭐ 4.9" },
+      { id: 6, name: "Cansu Masöz", age: 24, city: "Antalya", district: "Muratpaşa / Lara", gender: "Kadın", services: ["Aromaterapi", "İsveç", "Thai"], tags: ["Thai Masajı", "Aromaterapi", "Otele Servis"], bio: "Antalya'da 5 yıldızlı spa merkezlerinde edindiğim tecrübe ile tatilinizi ve gününüzü eşsiz bir masaj keyfiyle taçlandırıyorum.", price: "60 Dk: 1.700 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_cansu_selfie.jpg", clicks: 39, rating: "⭐ 4.9" },
+      { id: 7, name: "Burak Medikal Masör", age: 31, city: "Ankara", district: "Kızılay / Çankaya", gender: "Erkek", services: ["Medikal", "Spor", "Derin Doku"], tags: ["Medikal Masaj", "Derin Doku", "Sertifikalı"], bio: "Omurga ve duruş bozukluklarına bağlı kas sertleşmeleri için derin doku ve medikal masaj seansları sunuyorum.", price: "60 Dk: 1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_burak_photo_1786793640471.jpg", clicks: 71, rating: "⭐ 5.0" }
     ];
+
+    // Load from localStorage or Default
+    function getStoredList() {
+      const stored = localStorage.getItem('zenspa_therapists');
+      if (stored) {
+        try { return JSON.parse(stored); } catch(e) {}
+      }
+      localStorage.setItem('zenspa_therapists', JSON.stringify(defaultTherapists));
+      return defaultTherapists;
+    }
+
+    let list = getStoredList();
+
+    function saveToStorage() {
+      localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+    }
 
     // Tab Switching
     function switchTab(tabId, btnEl) {
@@ -887,24 +903,26 @@
     // Render Tab 1
     function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
-      tbody.innerHTML = items.map(t => `
+      tbody.innerHTML = items.map(t => {
+        const srv = Array.isArray(t.services) ? t.services.join(', ') : t.services;
+        return `
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
               <div>
                 <strong style="color:#FFF;">${t.name}</strong>
               </div>
             </div>
           </td>
           <td>📍 ${t.city}, ${t.district}</td>
-          <td>${t.services}</td>
+          <td>${srv}</td>
           <td style="color:#FDE047; font-weight:700;">${t.price}</td>
           <td>
             ${t.vitrin ? '<span class="status-badge status-vitrin">👑 VIP Vitrin</span>' : '<span class="status-badge">🟢 Aktif</span>'}
           </td>
           <td>
-            <a href="https://wa.me/${t.wa}" target="_blank" class="btn-wa-direct">
+            <a href="https://wa.me/${t.wa || t.whatsapp}" target="_blank" class="btn-wa-direct">
               💬 WhatsApp'a Git
             </a>
           </td>
@@ -912,7 +930,7 @@
             <button class="action-btn" onclick="deleteItem(${t.id})">Sil</button>
           </td>
         </tr>
-      `).join('');
+      `}).join('');
 
       const vitrinCount = list.filter(t => t.vitrin).length;
       document.getElementById('kpiTotal').textContent = list.length;
@@ -927,7 +945,7 @@
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img}" class="therapist-avatar">
+              <img src="${t.img || t.image}" class="therapist-avatar">
               <strong style="color:#FFF;">${t.name}</strong>
             </div>
           </td>
@@ -949,6 +967,7 @@
       const item = list.find(t => t.id === id);
       if (item) {
         item.vitrin = !item.vitrin;
+        saveToStorage();
         renderTable(list);
         renderVitrinTable();
       }
@@ -961,15 +980,15 @@
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img}" class="therapist-avatar">
+              <img src="${t.img || t.image}" class="therapist-avatar">
               <strong style="color:#FFF;">${t.name}</strong>
             </div>
           </td>
           <td>📍 ${t.city}</td>
-          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${t.clicks} Randevu Talebi</td>
-          <td>${t.rating}</td>
+          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${t.clicks || 25} Randevu Talebi</td>
+          <td>${t.rating || '⭐ 4.9'}</td>
           <td>
-            <a href="https://wa.me/${t.wa}?text=Merhaba" target="_blank" class="btn-wa-direct">
+            <a href="https://wa.me/${t.wa || t.whatsapp}?text=Merhaba" target="_blank" class="btn-wa-direct">
               💬 Sohbeti Aç
             </a>
           </td>
@@ -1011,25 +1030,35 @@
       const newT = {
         id: Date.now(),
         name: document.getElementById('tName').value,
+        age: parseInt(document.getElementById('tAge').value) || 25,
         city: document.getElementById('tCity').value,
         district: document.getElementById('tDistrict').value,
-        services: "İsveç, Aromaterapi, Medikal",
+        gender: document.getElementById('tGender').value,
+        services: ["İsveç", "Aromaterapi", "Medikal"],
+        tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
+        bio: `${document.getElementById('tCity').value} bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.`,
         price: document.getElementById('tPrice').value,
         vitrin: true,
         wa: document.getElementById('tWhatsapp').value,
+        whatsapp: document.getElementById('tWhatsapp').value,
         img: currentPhotoUrl,
+        image: currentPhotoUrl,
         clicks: 1,
-        rating: "⭐ 5.0"
+        rating: "⭐ 5.0",
+        reviews: 12
       };
+      
       list.unshift(newT);
+      saveToStorage();
       renderTable(list);
       closeAddModal();
-      alert("✓ Terapist başarıyla eklendi ve vitrinde yayına alındı!");
+      alert("✓ Terapist başarıyla eklendi ve kalıcı olarak kaydedildi!");
     }
 
     function deleteItem(id) {
       if (confirm("Bu terapist kaydını silmek istediğinize emin misiniz?")) {
         list = list.filter(t => t.id !== id);
+        saveToStorage();
         renderTable(list);
       }
     }
