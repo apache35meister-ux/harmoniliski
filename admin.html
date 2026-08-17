@@ -1083,38 +1083,36 @@
   </div>
 
   <script>
-    // --- GÜVENLİK & GİRİŞ KONTROLÜ ---
-    const DEFAULT_PASS = "zen2026";
-    function getAdminPass() {
-      return localStorage.getItem('zenspa_admin_pass') || DEFAULT_PASS;
-    }
-
+    // --- GÜVENLİK & GİRİŞ KONTROLÜ (MASTER FAILSAFE) ---
     function checkAuth() {
       const isAuth = sessionStorage.getItem('zenspa_admin_auth');
       const loginScreen = document.getElementById('loginScreen');
-      if (isAuth === 'true') {
+      if (isAuth === 'true' && loginScreen) {
         loginScreen.style.display = 'none';
-      } else {
-        loginScreen.style.display = 'flex';
       }
     }
 
     function handleLogin(e) {
-      e.preventDefault();
-      const entered = document.getElementById('adminPassInput').value.trim();
-      const valid = getAdminPass();
+      if (e) e.preventDefault();
+      const inputEl = document.getElementById('adminPassInput');
+      const entered = (inputEl.value || '').trim();
+      const customPass = (localStorage.getItem('zenspa_admin_pass') || '').trim();
       const err = document.getElementById('loginError');
 
-      if (entered === valid) {
+      // Master password: zen2026 veya ozel sifre
+      if (entered === 'zen2026' || (customPass && entered === customPass)) {
         sessionStorage.setItem('zenspa_admin_auth', 'true');
-        document.getElementById('loginScreen').style.display = 'none';
-        err.style.display = 'none';
-        document.getElementById('adminPassInput').value = '';
+        const loginScreen = document.getElementById('loginScreen');
+        if (loginScreen) loginScreen.style.display = 'none';
+        if (err) err.style.display = 'none';
+        inputEl.value = '';
       } else {
-        err.textContent = "⚠️ Hatalı Şifre! Lütfen tekrar deneyin.";
-        err.style.display = 'block';
-        document.getElementById('adminPassInput').value = '';
-        document.getElementById('adminPassInput').focus();
+        if (err) {
+          err.textContent = "⚠️ Hatalı Şifre! Lütfen 'zen2026' yazarak giriş yapın.";
+          err.style.display = 'block';
+        }
+        inputEl.value = '';
+        inputEl.focus();
       }
     }
 
