@@ -1,67 +1,146 @@
-<!-- Menü (Ziyaretçi veya Üye) -->
-  <nav class="header-nav" id="mainHeaderNav">
-    <a href="#landingSection" class="nav-item active" id="navHome">Ana Sayfa</a>
-    
-    
-    
+<div class="header-actions">
+    <button class="btn-vitrin-header" onclick="openVitrinModal()">
+      👑 <span>Vitrine İlan Ver</span>
+    </button>
+  </div>
+</div><!-- Filter Card -->
+  <div class="filter-card">
+    <div class="filter-grid">
+      <div class="filter-group">
+        <label>🏙️ Şehir Seçin</label>
+        <select class="filter-select" id="citySelect" onchange="filterTherapists()">
+          <option value="all">Tüm Şehirler</option>
+          <option value="İstanbul">İstanbul</option>
+          <option value="İzmir">İzmir</option>
+          <option value="Ankara">Ankara</option>
+          <option value="Antalya">Antalya</option>
+          <option value="Bursa">Bursa</option>
+          <option value="Eskişehir">Eskişehir</option>
+          <option value="Adana">Adana</option>
+        </select>
+      </div>
 
-  </nav>
+      <div class="filter-group">
+        <label>💆 Masaj / Hizmet Türü</label>
+        <select class="filter-select" id="serviceSelect" onchange="filterTherapists()">
+          <option value="all">Tüm Masaj Çeşitleri</option>
+          <option value="İsveç">Klasik İsveç Masajı</option>
+          <option value="Medikal">Medikal & Derin Doku</option>
+          <option value="Aromaterapi">Aromaterapi & Relax</option>
+          <option value="Spor">Sporcu Masajı</option>
+          <option value="Sıcak Taş">Sıcak Taş Terapisi</option>
+          <option value="Thai">Geleneksel Thai Masajı</option>
+        </select>
+      </div>
 
-  <!-- Aksiyon Butonları -->
-  <div class="header-actions" id="headerActions">
-    
-    <!-- ZİYARETÇİ MODU (GİRİŞ YAPILMAMIŞSA) -->
-    <div id="guestHeaderActions" style="display:flex; align-items:center; gap:0.65rem;">
-      <button class="btn-login-trigger" id="btnOpenLoginModal" onclick="window.openLoginModal()">
-        <span>Giriş Yap</span>
-      </button>
-      <button class="btn-register-trigger" id="btnOpenRegisterModal" onclick="window.openRegisterModal()">
-        <span>✨ Ücretsiz Üye Ol</span>
-      </button>
+      <div class="filter-group">
+        <label>👤 Terapist Cinsiyeti</label>
+        <select class="filter-select" id="genderSelect" onchange="filterTherapists()">
+          <option value="all">Tümü (Kadın & Erkek)</option>
+          <option value="Kadın">Kadın Masözler</option>
+          <option value="Erkek">Erkek Masörler</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>🔍 İsim / Semt Arama</label>
+        <input type="text" class="filter-input" id="searchInput" placeholder="Örn: Beşiktaş, Selin, Medikal..." onkeyup="filterTherapists()">
+      </div>
     </div>
 
-    <!-- ÜYE GİRİŞİ YAPILMIŞSA GÖRÜNEN MOD -->
-    <div id="memberHeaderActions" style="display:none; align-items:center; gap:0.65rem;">
-      <!-- VIP Yükseltme Butonu -->
-      <button class="btn-vip-upgrade" id="btnOpenVipModal" onclick="window.openVipModal()">
-        <span>👑</span>
-        <span id="headerVipBtnText">VIP Üye Ol</span>
-      </button>
+    <!-- Quick Filter Pills -->
+    <div class="category-pills">
+      <button class="pill-btn active" onclick="setServicePill('all', this)">✨ Tümü</button>
+      <button class="pill-btn" onclick="setServicePill('İsveç', this)">🌿 Klasik İsveç</button>
+      <button class="pill-btn" onclick="setServicePill('Aromaterapi', this)">🌸 Aromaterapi</button>
+      <button class="pill-btn" onclick="setServicePill('Medikal', this)">🩺 Medikal Terapi</button>
+      <button class="pill-btn" onclick="setServicePill('Spor', this)">⚡ Spor Masajı</button>
+      <button class="pill-btn" onclick="setServicePill('Sıcak Taş', this)">🔥 Sıcak Taş</button>
+    </div>
+  </div>
 
-      <!-- Mesaj Kutusu Butonu -->
-      <button class="icon-counter-btn" id="btnOpenInbox" title="Mesajlarım & Sohbetler" onclick="window.openInboxModal()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
-        <span class="counter-badge" id="inboxCount">1</span>
-      </button>
+  <!-- VIP Banner -->
+  <div class="vip-banner">
+    <div class="vip-info">
+      <div class="vip-icon">💎</div>
+      <div class="vip-text">
+        <h3>Terapist misiniz? Vitrinde Yerinizi Alın!</h3>
+        <p>Yüzlerce müşteriye anında ulaşmak ve ilanınızı en üst sırada yayınlamak için hemen iletişime geçin.</p>
+      </div>
+    </div>
+    <a href="https://wa.me/15096204167?text=Merhaba,%20ZenSpa%20platformuna%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank" class="btn-vip-action">
+      💬 WhatsApp ile İlan Ver (+1 509 620 4167)
+    </a>
+  </div>
 
-      <!-- Göz Kırpma Butonu -->
-      <button class="icon-counter-btn winks" id="btnWinkList" title="Göz Kırpmalar" onclick="window.openWinksModal()">
-        <span>😉</span>
-        <span class="counter-badge" id="winkCount">0</span>
-      </button>
+  <!-- Section Title -->
+  <div class="section-header">
+    <div>
+      <h3 class="section-title">Uzman Terapistlerimiz</h3>
+      <p class="section-subtitle">Alanında uzman, sertifikalı ve müşteri puanı yüksek terapistler</p>
+    </div>
+    <div class="results-count" id="countDisplay">
+      Toplam 12 Terapist Listeleniyor
+    </div>
+  </div>
 
-      <!-- Favoriler Butonu -->
-      <button class="icon-counter-btn" id="btnOpenFavorites" title="Favorilerim">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-        <span class="counter-badge" id="favCount">0</span>
-      </button>
+  <!-- Therapists Cards Container -->
+  <div class="therapists-grid" id="therapistsContainer">
+    <!-- Rendered by JS -->
+  </div>
 
-      <!-- Profilim -->
-      <button class="btn-my-profile" id="btnOpenMyProfile" title="Kendi Profilim" onclick="window.openMyProfile()">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80" alt="Avatar" class="header-user-avatar" id="headerMyAvatar">
-        <span id="headerUserName">Profilim</span>
-        <span class="gender-membership-badge male-free" id="headerUserBadge">STANDART</span>
-      </button>
+</div><div style="background: var(--bg-card); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.88rem;">
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: center;">
+      <span style="color: var(--emerald);">✓</span>
+      <span>Ana sayfa vitrininde en üst sırada yer alma</span>
+    </div>
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: center;">
+      <span style="color: var(--emerald);">✓</span>
+      <span>Doğrudan kendi WhatsApp numaranıza yönlendirme</span>
+    </div>
+    <div style="display: flex; gap: 0.75rem; align-items: center;">
+      <span style="color: var(--emerald);">✓</span>
+      <span>Fotoğraf, konum, sertifika ve fiyat bilgisi ekleme</span>
+    </div>
+  </div>
 
-      <!-- Çıkış Yap Butonu -->
-      <button class="btn-logout" id="btnLogout" title="Güvenli Çıkış Yap" style="background:#1E293B; color:#94A3B8; border:1px solid rgba(255,255,255,0.08); padding:0.45rem 0.75rem; border-radius:8px; font-size:0.8rem; font-weight:700; cursor:pointer;">
-        <span>Çıkış ✕</span>
-      </button>
+  <a href="https://wa.me/15096204167?text=Merhaba,%20ZenSpa%20platformuna%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank" class="btn-whatsapp-card" style="padding: 1rem; font-size: 1rem;">
+    💬 WhatsApp ile Hemen İlan Ver (+1 509 620 4167)
+  </a>
+</div>  <div class="footer-col">
+      <h4>Popüler Şehirler</h4>
+      <ul class="footer-links">
+        <li><a href="#" onclick="filterCity('İstanbul'); return false;">İstanbul Masaj & Terapist</a></li>
+        <li><a href="#" onclick="filterCity('Ankara'); return false;">Ankara Masöz İlanları</a></li>
+        <li><a href="#" onclick="filterCity('İzmir'); return false;">İzmir Spa & Masör</a></li>
+        <li><a href="#" onclick="filterCity('Antalya'); return false;">Antalya Terapi Hizmetleri</a></li>
+        <li><a href="#" onclick="filterCity('Bursa'); return false;">Bursa Masaj Rehberi</a></li>
+      </ul>
     </div>
 
+    <div class="footer-col">
+      <h4>Hizmet Çeşitleri</h4>
+      <ul class="footer-links">
+        <li><a href="#" onclick="filterService('İsveç'); return false;">Klasik İsveç Masajı</a></li>
+        <li><a href="#" onclick="filterService('Medikal'); return false;">Medikal & Fizik Tedavi</a></li>
+        <li><a href="#" onclick="filterService('Aromaterapi'); return false;">Aromaterapi Masajı</a></li>
+        <li><a href="#" onclick="filterService('Spor'); return false;">Sporcu Masajı</a></li>
+        <li><a href="#" onclick="filterService('Sıcak Taş'); return false;">Sıcak Taş Terapisi</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>İlan & İletişim</h4>
+      <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+        İlan vermek, profil eklemek veya bilgi almak için 7/24 WhatsApp hattımızdan ulaşabilirsiniz:
+      </p>
+      <a href="https://wa.me/15096204167?text=Merhaba,%20bilgi%20almak%20istiyorum." target="_blank" style="color: var(--gold-primary); font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+        💬 +1 509 620 4167
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 ZENSPA Terapi & Masaj Rehberi. Tüm Hakları Saklıdır. Sitemizdeki profiller bağımsız hizmet sağlayıcılara aittir.</p>
   </div>
 </div>
