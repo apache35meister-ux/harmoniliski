@@ -337,6 +337,7 @@ function bootHarmoniApp() {
     trackRealVisit(`💰 Gold Üyelik Satın Alındı (${planName} - ${planPrice} ₺ via ${method})`);
 
     closeModal(DOM.vipModal);
+    window.closeModalById('vipModal');
     updateUserMembershipUI();
     renderProfiles();
     playChime();
@@ -1300,23 +1301,41 @@ function bootHarmoniApp() {
 
     DOM.myProfileForm?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const isFemale = DOM.genderCardFemale.classList.contains('selected');
+      const isFemale = DOM.genderCardFemale ? DOM.genderCardFemale.classList.contains('selected') : false;
 
       state.currentUser = {
-        name: document.getElementById('myProfName').value,
+        id: state.currentUser.id || ("user-" + Date.now()),
+        email: state.currentUser.email || "",
+        name: document.getElementById('myProfName').value.trim() || state.currentUser.name,
         gender: isFemale ? 'female' : 'male',
-        age: parseInt(document.getElementById('myProfAge').value),
-        city: document.getElementById('myProfCity').value,
-        profession: document.getElementById('myProfJob').value,
-        bio: document.getElementById('myProfBio').value,
+        age: parseInt(document.getElementById('myProfAge').value) || state.currentUser.age,
+        city: document.getElementById('myProfCity').value.trim() || state.currentUser.city,
+        profession: document.getElementById('myProfJob').value.trim() || state.currentUser.profession,
+        bio: document.getElementById('myProfBio').value.trim() || state.currentUser.bio,
         isVIP: isFemale ? true : state.currentUser.isVIP,
-        vipPlan: state.currentUser.vipPlan
+        vipPlan: state.currentUser.vipPlan,
+        avatar: state.currentUser.avatar || (isFemale 
+          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80")
       };
 
       localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
+
+      try {
+        let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+        let userIndex = regUsers.findIndex(u => (u.id && u.id === state.currentUser.id) || (u.email && u.email === state.currentUser.email));
+        if (userIndex > -1) {
+          regUsers[userIndex] = { ...regUsers[userIndex], ...state.currentUser };
+        }
+        localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+      } catch(err) {}
+
       closeModal(DOM.myProfileModal);
+      window.closeModalById('myProfileModal');
       updateUserMembershipUI();
-      showToast(isFemale ? '✓ Kadın üyelik: Tüm özellikleriniz %100 ÜCRETSİZ tanımlandı!' : '✓ Erkek üyelik bilgileriniz güncellendi.');
+      renderProfiles();
+      playChime();
+      showToast(isFemale ? '✓ Kadın üyelik: Tüm özellikleriniz %100 ÜCRETSİZ tanımlandı!' : '✓ Profil bilgileriniz başarıyla güncellendi.');
     });
 
     // Filtre Olayları
