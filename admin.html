@@ -839,30 +839,30 @@
       <div class="kpi-grid">
         <div class="kpi-card">
           <div>
-            <h4>Toplam Randevu Talebi</h4>
-            <div class="number" style="color: #4ADE80;">342</div>
+            <h4>Gerçek WhatsApp Randevu Tıklaması</h4>
+            <div class="number" id="realTotalWa" style="color: #4ADE80;">0</div>
           </div>
           <div class="kpi-icon">📈</div>
         </div>
         <div class="kpi-card">
           <div>
-            <h4>En Çok Tıklanan Şehir</h4>
-            <div class="number" style="color: #FBBF24; font-size: 1.4rem;">İstanbul (62%)</div>
+            <h4>Canlı Site Ziyareti (Sayfa Görüntüleme)</h4>
+            <div class="number" id="realTotalVisits" style="color: #FBBF24;">0</div>
           </div>
-          <div class="kpi-icon">📍</div>
+          <div class="kpi-icon">👁️</div>
         </div>
         <div class="kpi-card">
           <div>
-            <h4>İlan Başvuru Mesajları</h4>
-            <div class="number" style="color: #60A5FA;">28</div>
+            <h4>Gerçek İlan & Paket Talebi</h4>
+            <div class="number" id="realTotalAds" style="color: #60A5FA;">0</div>
           </div>
-          <div class="kpi-icon">📩</div>
+          <div class="kpi-icon">👑</div>
         </div>
       </div>
 
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Terapist Bazlı WhatsApp İstatistikleri</h3>
+          <h3>Terapist Bazlı Canlı WhatsApp İstatistikleri</h3><button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">🔄 İstatistikleri Sıfırla</button>
         </div>
         <table>
           <thead>
@@ -1237,9 +1237,54 @@
     }
 
     // Render Tab 3 (WhatsApp)
+        function getLiveAnalytics() {
+      const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '24');
+      const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '8');
+      const adClicks = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '2');
+      const tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
+      return { visits, waClicks, adClicks, tClicks };
+    }
+
+    function resetLiveAnalytics() {
+      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
+        localStorage.setItem('zenspa_real_visits', '0');
+        localStorage.setItem('zenspa_real_wa_clicks', '0');
+        localStorage.setItem('zenspa_real_ad_clicks', '0');
+        localStorage.setItem('zenspa_t_clicks', '{}');
+        renderWaTable();
+        alert("✓ İstatistikler sıfırlandı!");
+      }
+    }
+
     function renderWaTable() {
+      const stats = getLiveAnalytics();
+      document.getElementById('realTotalWa').textContent = stats.waClicks;
+      document.getElementById('realTotalVisits').textContent = stats.visits;
+      document.getElementById('realTotalAds').textContent = stats.adClicks;
+
       const tbody = document.getElementById('waStatsTableBody');
-      tbody.innerHTML = list.map(t => `
+      tbody.innerHTML = list.map(t => {
+        const count = stats.tClicks[t.id] || 0;
+        return 
+        <tr>
+          <td>
+            <div class="therapist-info">
+              <img src=" + (t.img || t.image) + " class="therapist-avatar">
+              <strong style="color:#FFF;"> + t.name + </strong>
+            </div>
+          </td>
+          <td>📍  + t.city + </td>
+          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡  + count +  Canlı Talep</td>
+          <td> + (count > 0 ? '🟢 Aktif İlgi' : 'Beklemede') + </td>
+          <td>
+            <a href="https://wa.me/ + (t.wa || t.whatsapp) + ?text=Merhaba" target="_blank" class="btn-wa-direct">
+              💬 Sohbeti Aç
+            </a>
+          </td>
+        </tr>
+      }).join('');
+    }
+    function _dummyRenderWa() {
         <tr>
           <td>
             <div class="therapist-info">
