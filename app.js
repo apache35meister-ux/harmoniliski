@@ -958,7 +958,7 @@ function bootHarmoniApp() {
     }
 
     // 1. Mükerrer E-Posta Kontrolü (Aynı e-posta ile ikinci kez üye olunamaz)
-    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]') || [];
     const existingUser = regUsers.find(u => u.email && u.email.toLowerCase() === email);
 
     if (existingUser) {
@@ -1043,7 +1043,7 @@ function bootHarmoniApp() {
     }
 
     // 1. Mükerrer E-Posta Kontrolü
-    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]') || [];
     const existingUser = regUsers.find(u => u.email && u.email.toLowerCase() === email);
 
     if (existingUser) {
@@ -1115,8 +1115,8 @@ function bootHarmoniApp() {
     const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : 'murat@gmail.com';
     const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '123456';
 
-    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-    let adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || '[]');
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]') || [];
+    let adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || '[]') || [];
     let allKnown = [...regUsers, ...adminMembers];
     
     let user = allKnown.find(u => u.email && u.email.toLowerCase() === email);
@@ -1213,11 +1213,8 @@ function bootHarmoniApp() {
       DOM.heroGenderFemale.classList.remove('selected');
     });
 
-    // 2. Landing Ücretsiz Kayıt Formu
-    DOM.heroRegisterForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      executeHeroRegister();
-    });
+    // 2. Landing Ücretsiz Kayıt Formu (onsubmit attributu ile HTML'den tetikleniyor)
+
 
     // 3. Giriş Yap / Üye Ol Modal ve Form İşlemleri
     DOM.btnOpenLoginModal?.addEventListener('click', () => openModal(DOM.loginModal));
@@ -1253,17 +1250,8 @@ function bootHarmoniApp() {
       regFemCard?.classList.remove('selected');
     });
 
-    // Hızlı Üye Ol Formu (Modal İçi)
-    DOM.modalRegisterForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      executeModalRegister();
-    });
+    // Hızlı Üye Ol Formu ve Giriş Yap Formu HTML içindeki onsubmit ile tetikleniyor.
 
-    // Giriş Yap Formu
-    DOM.loginForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      executeLogin();
-    });
 
     // 4. Çıkış Yap (Logout)
     DOM.btnLogout?.addEventListener('click', () => {
