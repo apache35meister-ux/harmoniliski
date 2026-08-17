@@ -186,7 +186,34 @@
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3.4">
+  <script>
+    window.openLoginModal = function() {
+      var m = document.getElementById('loginModal');
+      if (m) { m.classList.add('active'); m.style.opacity = '1'; m.style.visibility = 'visible'; m.style.pointerEvents = 'auto'; m.style.display = 'flex'; }
+    };
+    window.openRegisterModal = function() {
+      var m = document.getElementById('registerModal');
+      if (m) { m.classList.add('active'); m.style.opacity = '1'; m.style.visibility = 'visible'; m.style.pointerEvents = 'auto'; m.style.display = 'flex'; }
+    };
+    window.openVipModal = function() {
+      var m = document.getElementById('vipModal');
+      if (m) { m.classList.add('active'); m.style.opacity = '1'; m.style.visibility = 'visible'; m.style.pointerEvents = 'auto'; m.style.display = 'flex'; }
+    };
+    window.closeModalById = function(id) {
+      var m = document.getElementById(id);
+      if (m) { m.classList.remove('active'); m.style.opacity = '0'; m.style.visibility = 'hidden'; m.style.pointerEvents = 'none'; m.style.display = 'none'; }
+    };
+    window.closeAllModals = function() {
+      document.querySelectorAll('.modal-overlay').forEach(function(m) {
+        m.classList.remove('active');
+        m.style.opacity = '0';
+        m.style.visibility = 'hidden';
+        m.style.pointerEvents = 'none';
+        m.style.display = 'none';
+      });
+    };
+  </script>
 </head>
 <body>
 
@@ -228,10 +255,10 @@
         
         <!-- ZİYARETÇİ MODU (GİRİŞ YAPILMAMIŞSA) -->
         <div id="guestHeaderActions" style="display:flex; align-items:center; gap:0.65rem;">
-          <button class="btn-login-trigger" id="btnOpenLoginModal">
+          <button class="btn-login-trigger" id="btnOpenLoginModal" onclick="window.openLoginModal()">
             <span>Giriş Yap</span>
           </button>
-          <button class="btn-register-trigger" id="btnOpenRegisterModal">
+          <button class="btn-register-trigger" id="btnOpenRegisterModal" onclick="window.openRegisterModal()">
             <span>✨ Ücretsiz Üye Ol</span>
           </button>
         </div>
@@ -239,13 +266,13 @@
         <!-- ÜYE GİRİŞİ YAPILMIŞSA GÖRÜNEN MOD -->
         <div id="memberHeaderActions" style="display:none; align-items:center; gap:0.65rem;">
           <!-- VIP Yükseltme Butonu -->
-          <button class="btn-vip-upgrade" id="btnOpenVipModal">
+          <button class="btn-vip-upgrade" id="btnOpenVipModal" onclick="window.openVipModal()">
             <span>👑</span>
             <span id="headerVipBtnText">VIP Üye Ol</span>
           </button>
 
           <!-- Mesaj Kutusu Butonu -->
-          <button class="icon-counter-btn" id="btnOpenInbox" title="Mesajlarım & Sohbetler">
+          <button class="icon-counter-btn" id="btnOpenInbox" title="Mesajlarım & Sohbetler" onclick="window.openInboxModal()">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
@@ -253,7 +280,7 @@
           </button>
 
           <!-- Göz Kırpma Butonu -->
-          <button class="icon-counter-btn winks" id="btnWinkList" title="Göz Kırpmalar">
+          <button class="icon-counter-btn winks" id="btnWinkList" title="Göz Kırpmalar" onclick="window.openWinksModal()">
             <span>😉</span>
             <span class="counter-badge" id="winkCount">0</span>
           </button>
@@ -267,7 +294,7 @@
           </button>
 
           <!-- Profilim -->
-          <button class="btn-my-profile" id="btnOpenMyProfile" title="Kendi Profilim">
+          <button class="btn-my-profile" id="btnOpenMyProfile" title="Kendi Profilim" onclick="window.openMyProfile()">
             <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80" alt="Avatar" class="header-user-avatar" id="headerMyAvatar">
             <span id="headerUserName">Profilim</span>
             <span class="gender-membership-badge male-free" id="headerUserBadge">STANDART</span>
@@ -843,6 +870,82 @@
     </div>
   </div>
 
+  <!-- Hızlı Üye Ol Modalı (Register Modal) -->
+  <div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width:480px; padding:2rem 2.25rem;">
+      <button class="btn-close-modal" id="btnCloseRegisterModal">✕</button>
+      <div style="text-align:center; margin-bottom:1.5rem;">
+        <div class="logo-heart-icon" style="margin:0 auto 0.6rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h3 style="font-family:var(--font-heading); font-size:1.35rem; font-weight:900; color:#FFF;">Hemen Ücretsiz Kaydolun</h3>
+        <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.2rem;">30 saniyede hesabınızı oluşturup onaylı adayları inceleyin.</p>
+      </div>
+
+      <form id="modalRegisterForm">
+        <!-- Cinsiyet Seçimi -->
+        <div class="auth-gender-toggle" style="margin-bottom:1rem;">
+          <div class="gender-select-card female selected" id="modalRegGenderFemale">
+            <h4>👩 Kadınım</h4>
+            <span>%100 ÜCRETSİZ</span>
+          </div>
+          <div class="gender-select-card male" id="modalRegGenderMale">
+            <h4>👨 Erkeğim</h4>
+            <span>VIP Eşleşme</span>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+          <div>
+            <label class="finder-label">Adınız Soyadınız *</label>
+            <input type="text" id="modalRegName" class="filter-control" placeholder="Ad Soyad" required>
+          </div>
+          <div>
+            <label class="finder-label">Yaşınız *</label>
+            <input type="number" id="modalRegAge" class="filter-control" placeholder="28" min="18" max="70" required>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+          <div>
+            <label class="finder-label">Şehir *</label>
+            <select id="modalRegCity" class="filter-control" required>
+              <option value="İstanbul">İstanbul</option>
+              <option value="İzmir">İzmir</option>
+              <option value="Ankara">Ankara</option>
+              <option value="Bursa">Bursa</option>
+              <option value="Antalya">Antalya</option>
+              <option value="Eskişehir">Eskişehir</option>
+              <option value="Adana">Adana</option>
+            </select>
+          </div>
+          <div>
+            <label class="finder-label">Mesleğiniz *</label>
+            <input type="text" id="modalRegJob" class="filter-control" placeholder="Meslek" required>
+          </div>
+        </div>
+
+        <div style="margin-bottom:0.75rem;">
+          <label class="finder-label">E-Posta Adresiniz *</label>
+          <input type="email" id="modalRegEmail" class="filter-control" placeholder="eposta@gmail.com" required>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <label class="finder-label">Şifreniz *</label>
+          <input type="password" id="modalRegPassword" class="filter-control" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-find-matches" style="width:100%; justify-content:center; padding:0.9rem;">
+          <span>🚀 Üyeliği Tamamla & Giriş Yap</span>
+        </button>
+
+        <div style="text-align:center; margin-top:1.15rem; font-size:0.82rem; color:var(--text-muted);">
+          Zaten hesabınız var mı? <a href="#" id="linkSwitchToLoginFromReg" style="color:var(--primary-rose); font-weight:700; text-decoration:underline;">Giriş Yapın</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Karakter Testi Modalı -->
   <div class="modal-overlay" id="quizModal" role="dialog" aria-modal="true">
     <div class="modal-box" style="max-width:600px; padding:2.25rem;">
@@ -1149,22 +1252,19 @@
     </div>
   </div>
 
-  <div class="toast-container" id="toastContainer"></div>
+  <script src="data.js?v=3.4"></script>
+  <script src="app.js?v=3.4"></script>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
-
-  <!-- PWA Service Worker & Viral Web Share Engine -->
+  <!-- PWA Service Worker & Canlı Senkronizasyon -->
   <script>
-    // 1. PWA Service Worker Kaydı (Google Hız & Çevrimdışı Önbellek)
+    // Eski Service Worker önbelleğini temizleme ve en günceli alma
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then((reg) => {
-          console.log('HARMONİ PWA Service Worker Aktif:', reg.scope);
-        }).catch((err) => {
-          console.log('PWA Service Worker hatası:', err);
-        });
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          registration.update();
+        }
       });
+      navigator.serviceWorker.register('/sw.js?v=3.4');
     }
 
     // 2. Kayan WhatsApp / Web Share Viral Davet Butonu
