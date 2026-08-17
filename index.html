@@ -47,7 +47,50 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- 1. Google Structured Data (Schema.org) - 81 İl HealthAndBeautyBusiness -->
+    <!-- 1. Google WebSite & SearchAction Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ZENSPA VIP 81 İl Masaj Rehberi",
+    "url": "https://harmoniliski.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://harmoniliski.com/?city={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- 2. Google BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://harmoniliski.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "81 İl VIP Terapist Vitrini",
+        "item": "https://harmoniliski.com/#vitrin"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "VIP İlan Paketleri & Fiyatlar",
+        "item": "https://harmoniliski.com/#fiyat-tarifesi"
+      }
+    ]
+  }
+  </script>
+
+  <!-- 3. Google HealthAndBeautyBusiness & AggregateRating Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,11 +107,14 @@
       "@type": "PostalAddress",
       "addressCountry": "TR"
     },
+    "areaServed": [
+      "İstanbul", "Ankara", "İzmir", "Antalya", "Bursa", "Adana", "Muğla", "Eskişehir", "Gaziantep", "Konya", "Kocaeli", "Mersin", "Samsun", "Trabzon", "Diyarbakır", "Kayseri"
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.95",
+      "ratingValue": "4.97",
       "bestRating": "5",
-      "ratingCount": "920"
+      "ratingCount": "485"
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -77,59 +123,9 @@
       "closes": "23:59"
     }
   }
-      // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
-    let deferredPrompt;
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').then(reg => {
-          console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
-        }).catch(err => {
-          console.log('SW Hata:', err);
-        });
-      });
-    }
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const banner = document.getElementById('pwaBanner');
-      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-        banner.style.display = 'flex';
-      }
-    });
-
-    function installPWA() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
-          }
-          deferredPrompt = null;
-          document.getElementById('pwaBanner').style.display = 'none';
-        });
-      } else {
-        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
-      }
-    }
-
-    function closePwaBanner() {
-      document.getElementById('pwaBanner').style.display = 'none';
-      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
-    }
-
-    // Mobil cihaz kontrolü ile banner gösterimi
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const banner = document.getElementById('pwaBanner');
-        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-          banner.style.display = 'flex';
-        }
-      }, 2500);
-    });
   </script>
 
-  <!-- 2. Google FAQPage Schema -->
+  <!-- 4. Google FAQPage Rich Snippet Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -137,74 +133,39 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "81 ilde masaj randevusu nasıl alınır?",
+        "name": "81 ilde onaylı masaj randevusu nasıl alınır?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Şehrinizi seçtikten sonra beğendiğiniz terapistin altındaki 'WhatsApp ile Randevu Al' butonuna tıklayarak doğrudan seans oluşturabilirsiniz."
+          "text": "ZENSPA üzerinde şehrinizi seçerek terapist profillerini inceleyebilir, 'WhatsApp ile Randevu Al' butonuna tıklayarak doğrudan seans oluşturabilirsiniz."
         }
       },
       {
         "@type": "Question",
-        "name": "Şehrimde henüz ilan yoksa nasıl ilan verebilirim?",
+        "name": "Masör ve masözler VIP vitrinde nasıl ilan verebilir?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Şehrinizi filtrelediğinizde çıkan 'Bu Şehre İlan Ver' butonuna tıklayarak veya +1 509 620 4167 WhatsApp hattımıza yazarak şehrinizin ilk VIP vitrin terapisti olabilirsiniz."
+          "text": "Üst menüdeki 'Vitrine İlan Ver' butonuna tıklayıp dilediğiniz haftalık veya aylık VIP paketi seçerek doğrudan WhatsApp hattımız (+1 509 620 4167) üzerinden ilanınızı 10 dakikada yayına alabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ZENSPA mobil uygulaması nasıl yüklenir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sitemizi akıllı telefonunuzdan ziyaret ettiğinizde alttaki '📲 İndir' butonuna basarak uygulamayı doğrudan telefonunuzun ana ekranına yükleyebilirsiniz."
         }
       }
     ]
   }
-      // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
-    let deferredPrompt;
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').then(reg => {
-          console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
-        }).catch(err => {
-          console.log('SW Hata:', err);
-        });
-      });
-    }
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const banner = document.getElementById('pwaBanner');
-      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-        banner.style.display = 'flex';
-      }
-    });
-
-    function installPWA() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
-          }
-          deferredPrompt = null;
-          document.getElementById('pwaBanner').style.display = 'none';
-        });
-      } else {
-        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
-      }
-    }
-
-    function closePwaBanner() {
-      document.getElementById('pwaBanner').style.display = 'none';
-      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
-    }
-
-    // Mobil cihaz kontrolü ile banner gösterimi
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const banner = document.getElementById('pwaBanner');
-        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-          banner.style.display = 'flex';
-        }
-      }, 2500);
-    });
   </script>
-  
+
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="geo.region" content="TR">
+  <meta name="geo.placename" content="Turkey">
+  <meta name="geo.position" content="39.9208;32.8541">
+  <meta name="ICBM" content="39.9208, 32.8541">
+  <link rel="alternate" hreflang="tr" href="https://harmoniliski.com/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
   
   <style>
