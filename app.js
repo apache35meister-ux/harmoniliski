@@ -852,21 +852,29 @@ function bootHarmoniApp() {
   function openModal(modalEl) {
     if (!modalEl) return;
     modalEl.classList.add('active');
+    modalEl.style.setProperty('display', 'flex', 'important');
+    modalEl.style.setProperty('opacity', '1', 'important');
+    modalEl.style.setProperty('visibility', 'visible', 'important');
+    modalEl.style.setProperty('pointer-events', 'auto', 'important');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal(modalEl) {
     if (!modalEl) return;
     modalEl.classList.remove('active');
+    modalEl.style.setProperty('display', 'none', 'important');
+    modalEl.style.setProperty('opacity', '0', 'important');
+    modalEl.style.setProperty('visibility', 'hidden', 'important');
+    modalEl.style.setProperty('pointer-events', 'none', 'important');
     document.body.style.overflow = '';
   }
 
   window.openLoginModal = () => openModal(DOM.loginModal);
   window.openRegisterModal = () => openModal(DOM.registerModal);
   window.openVipModal = () => openModal(DOM.vipModal);
-  window.openMyProfile = () => DOM.btnOpenMyProfile?.click();
-  window.openInboxModal = () => DOM.btnOpenInbox?.click();
-  window.openWinksModal = () => DOM.btnWinkList?.click();
+  window.openMyProfile = () => openModal(DOM.myProfileModal);
+  window.openInboxModal = () => openModal(DOM.inboxModal);
+  window.openWinksModal = () => openModal(DOM.winksModal);
   window.openQuizModal = () => startQuiz();
   window.closeAllModals = () => closeAllModals();
   window.closeModalById = (id) => closeModal(document.getElementById(id));
