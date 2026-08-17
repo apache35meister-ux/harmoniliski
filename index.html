@@ -186,7 +186,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css?v=3.5">
+  <link rel="stylesheet" href="styles.css?v=3.7">
   <script>
     window.openModalById = function(id) {
       var m = document.getElementById(id);
@@ -218,6 +218,26 @@
     window.openWinksModal = function() { window.openModalById('winksModal'); };
     window.openQuizModal = function() { window.openModalById('quizModal'); };
     window.openFeedbackModal = function() { window.openModalById('feedbackModal'); };
+    window.selectGender = function(scope, gender) {
+      var f, m;
+      if (scope === 'hero') {
+        f = document.getElementById('heroGenderFemale');
+        m = document.getElementById('heroGenderMale');
+      } else if (scope === 'modal') {
+        f = document.getElementById('modalRegGenderFemale');
+        m = document.getElementById('modalRegGenderMale');
+      } else if (scope === 'profile') {
+        f = document.getElementById('genderCardFemale');
+        m = document.getElementById('genderCardMale');
+      }
+      if (gender === 'male') {
+        if (m) m.classList.add('selected');
+        if (f) f.classList.remove('selected');
+      } else {
+        if (f) f.classList.add('selected');
+        if (m) m.classList.remove('selected');
+      }
+    };
     window.closeAllModals = function() {
       document.querySelectorAll('.modal-overlay').forEach(function(m) {
         m.classList.remove('active');
@@ -393,11 +413,11 @@
           <form id="heroRegisterForm">
             <!-- Cinsiyet Seçimi -->
             <div class="auth-gender-toggle" style="margin-bottom:1.15rem;">
-              <div class="gender-select-card female selected" id="heroGenderFemale" data-gender="female">
+              <div class="gender-select-card female selected" id="heroGenderFemale" data-gender="female" onclick="window.selectGender('hero', 'female')">
                 <h4>👩 Kadınım</h4>
                 <span>%100 ÜCRETSİZ VIP</span>
               </div>
-              <div class="gender-select-card male" id="heroGenderMale" data-gender="male">
+              <div class="gender-select-card male" id="heroGenderMale" data-gender="male" onclick="window.selectGender('hero', 'male')">
                 <h4>👨 Erkeğim</h4>
                 <span>VIP Eşleşme</span>
               </div>
@@ -900,11 +920,11 @@
       <form id="modalRegisterForm">
         <!-- Cinsiyet Seçimi -->
         <div class="auth-gender-toggle" style="margin-bottom:1rem;">
-          <div class="gender-select-card female selected" id="modalRegGenderFemale">
+          <div class="gender-select-card female selected" id="modalRegGenderFemale" onclick="window.selectGender('modal', 'female')">
             <h4>👩 Kadınım</h4>
             <span>%100 ÜCRETSİZ</span>
           </div>
-          <div class="gender-select-card male" id="modalRegGenderMale">
+          <div class="gender-select-card male" id="modalRegGenderMale" onclick="window.selectGender('modal', 'male')">
             <h4>👨 Erkeğim</h4>
             <span>VIP Eşleşme</span>
           </div>
@@ -1133,11 +1153,11 @@
       <form id="myProfileForm">
         <!-- Cinsiyet Seçim Kartları -->
         <div class="auth-gender-toggle">
-          <div class="gender-select-card male selected" id="genderCardMale" data-gender="male">
+          <div class="gender-select-card male selected" id="genderCardMale" data-gender="male" onclick="window.selectGender('profile', 'male')">
             <h4>👨 Erkek Üye</h4>
             <span>VIP Paket Gerekir</span>
           </div>
-          <div class="gender-select-card female" id="genderCardFemale" data-gender="female">
+          <div class="gender-select-card female" id="genderCardFemale" data-gender="female" onclick="window.selectGender('profile', 'female')">
             <h4>👩 Kadın Üye</h4>
             <span>%100 ÜCRETSİZ VIP</span>
           </div>
@@ -1267,8 +1287,8 @@
     </div>
   </div>
 
-  <script src="data.js?v=3.5"></script>
-  <script src="app.js?v=3.5"></script>
+  <script src="data.js?v=3.7"></script>
+  <script src="app.js?v=3.7"></script>
 
   <!-- PWA Service Worker & Canlı Senkronizasyon -->
   <script>
@@ -1279,7 +1299,7 @@
           registration.update();
         }
       });
-      navigator.serviceWorker.register('/sw.js?v=3.5');
+      navigator.serviceWorker.register('/sw.js?v=3.7');
     }
 
     // 2. Kayan WhatsApp / Web Share Viral Davet Butonu
