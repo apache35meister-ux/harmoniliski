@@ -3,7 +3,7 @@
  * Pembe Panjur Modeli: Karşılama/Reklam (Landing) & Üye İçi Portal Motoru
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function bootHarmoniApp() {
   // Oturum ve Uygulama Durumu (Silinen Üyeleri Ayıkla)
   const deletedProfileIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
   const regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
@@ -149,6 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
     feedbackModal: document.getElementById('feedbackModal'),
     btnCloseFeedbackModal: document.getElementById('btnCloseFeedbackModal'),
     feedbackForm: document.getElementById('feedbackForm'),
+    registerModal: document.getElementById('registerModal'),
+    btnCloseRegisterModal: document.getElementById('btnCloseRegisterModal'),
+    modalRegisterForm: document.getElementById('modalRegisterForm'),
     legalModal: document.getElementById('legalModal'),
     btnCloseLegalModal: document.getElementById('btnCloseLegalModal'),
     toastContainer: document.getElementById('toastContainer')
@@ -858,6 +861,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  window.openLoginModal = () => openModal(DOM.loginModal);
+  window.openRegisterModal = () => openModal(DOM.registerModal);
+  window.openVipModal = () => openModal(DOM.vipModal);
+  window.openMyProfile = () => DOM.btnOpenMyProfile?.click();
+  window.openInboxModal = () => DOM.btnOpenInbox?.click();
+  window.openWinksModal = () => DOM.btnWinkList?.click();
+  window.openQuizModal = () => startQuiz();
+  window.closeAllModals = () => closeAllModals();
+  window.closeModalById = (id) => closeModal(document.getElementById(id));
+
   function closeAllModals() {
     closeModal(DOM.profileDetailModal);
     closeModal(DOM.chatModal);
@@ -868,6 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeModal(DOM.checkoutModal);
     closeModal(DOM.quizModal);
     closeModal(DOM.loginModal);
+    closeModal(DOM.registerModal);
     closeModal(DOM.feedbackModal);
     closeModal(DOM.legalModal);
   }
@@ -964,30 +978,100 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
     });
 
-    // 3. Giriş Yap / Üye Ol Modal Geçişleri
+    // 3. Giriş Yap / Üye Ol Modal ve Form İşlemleri
     DOM.btnOpenLoginModal?.addEventListener('click', () => openModal(DOM.loginModal));
-    DOM.btnOpenRegisterModal?.addEventListener('click', () => {
-      DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
-      document.getElementById('heroRegName')?.focus();
-    });
+    DOM.btnOpenRegisterModal?.addEventListener('click', () => openModal(DOM.registerModal));
 
     DOM.linkSwitchToLogin?.addEventListener('click', (e) => {
       e.preventDefault();
+      closeModal(DOM.registerModal);
+      openModal(DOM.loginModal);
+    });
+
+    document.getElementById('linkSwitchToLoginFromReg')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal(DOM.registerModal);
       openModal(DOM.loginModal);
     });
 
     DOM.linkSwitchToRegister?.addEventListener('click', (e) => {
       e.preventDefault();
       closeModal(DOM.loginModal);
-      DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
+      openModal(DOM.registerModal);
     });
 
+    // Kayıt Modalı Cinsiyet Seçimi
+    const regFemCard = document.getElementById('modalRegGenderFemale');
+    const regMaleCard = document.getElementById('modalRegGenderMale');
+    regFemCard?.addEventListener('click', () => {
+      regFemCard.classList.add('selected');
+      regMaleCard?.classList.remove('selected');
+    });
+    regMaleCard?.addEventListener('click', () => {
+      regMaleCard.classList.add('selected');
+      regFemCard?.classList.remove('selected');
+    });
+
+    // Hızlı Üye Ol Formu (Modal İçi)
+    DOM.modalRegisterForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const isFemale = regFemCard ? regFemCard.classList.contains('selected') : false;
+      const name = document.getElementById('modalRegName').value;
+      const age = parseInt(document.getElementById('modalRegAge').value);
+      const city = document.getElementById('modalRegCity').value;
+      const job = document.getElementById('modalRegJob').value;
+
+      state.currentUser = {
+        name: name,
+        gender: isFemale ? 'female' : 'male',
+        age: age,
+        city: city,
+        profession: job,
+        bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
+        isVIP: isFemale,
+        vipPlan: null
+      };
+
+      state.isLoggedIn = true;
+      localStorage.setItem('harmoni_auth_session', 'true');
+      localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
+
+      let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+      regUsers.unshift({
+        id: "reg-" + Date.now(),
+        name: name,
+        gender: isFemale ? 'female' : 'male',
+        age: age,
+        city: city,
+        profession: job,
+        education: "Lisans",
+        matchScore: 97,
+        verified: true,
+        status: 'pending',
+        isVIP: isFemale,
+        avatar: isFemale 
+          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
+        joinDate: new Date().toLocaleDateString('tr-TR')
+      });
+      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+
+      trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
+
+      closeModal(DOM.registerModal);
+      applyAuthStateUI();
+      renderProfiles();
+      playChime();
+      showToast(`🎉 Aramıza Hoşgeldiniz, ${name}! Hesabınız anında aktif edildi.`);
+      document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Giriş Yap Formu
     DOM.loginForm?.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = document.getElementById('loginEmail')?.value || 'Uye';
       const userName = email.split('@')[0];
 
-      // Erkek üye varsayılanı (VIP olmadan, ödeme yapmak zorunda)
       if (!state.currentUser || state.currentUser.gender === 'male') {
         state.currentUser = {
           name: userName.charAt(0).toUpperCase() + userName.slice(1),
@@ -1045,6 +1129,30 @@ document.addEventListener('DOMContentLoaded', () => {
         DOM.genderCardFemale.classList.remove('selected');
       }
       openModal(DOM.myProfileModal);
+    });
+
+    DOM.genderCardFemale?.addEventListener('click', () => {
+      DOM.genderCardFemale.classList.add('selected');
+      DOM.genderCardMale.classList.remove('selected');
+    });
+
+    DOM.genderCardMale?.addEventListener('click', () => {
+      DOM.genderCardMale.classList.add('selected');
+      DOM.genderCardFemale.classList.remove('selected');
+    });
+
+    document.getElementById('navHome')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (state.isLoggedIn) {
+        document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    document.getElementById('brandLogo')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     DOM.myProfileForm?.addEventListener('submit', (e) => {
@@ -1281,6 +1389,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     DOM.btnCloseLegalModal?.addEventListener('click', () => closeModal(DOM.legalModal));
     DOM.btnCloseLoginModal?.addEventListener('click', () => closeModal(DOM.loginModal));
+    DOM.btnCloseRegisterModal?.addEventListener('click', () => closeModal(DOM.registerModal));
     DOM.btnCloseDetailModal?.addEventListener('click', () => closeModal(DOM.profileDetailModal));
     DOM.btnCloseChatModal?.addEventListener('click', () => closeModal(DOM.chatModal));
     DOM.btnCloseInboxModal?.addEventListener('click', () => closeModal(DOM.inboxModal));
@@ -1289,7 +1398,7 @@ document.addEventListener('DOMContentLoaded', () => {
     DOM.btnCloseVipModal?.addEventListener('click', () => closeModal(DOM.vipModal));
     DOM.btnCloseCheckoutModal?.addEventListener('click', () => closeModal(DOM.checkoutModal));
 
-    [DOM.profileDetailModal, DOM.chatModal, DOM.inboxModal, DOM.winksModal, DOM.myProfileModal, DOM.vipModal, DOM.checkoutModal, DOM.quizModal, DOM.loginModal, DOM.feedbackModal, DOM.legalModal].forEach(modal => {
+    [DOM.profileDetailModal, DOM.chatModal, DOM.inboxModal, DOM.winksModal, DOM.myProfileModal, DOM.vipModal, DOM.checkoutModal, DOM.quizModal, DOM.loginModal, DOM.registerModal, DOM.feedbackModal, DOM.legalModal].forEach(modal => {
       modal?.addEventListener('click', (e) => {
         if (e.target === modal) closeModal(modal);
       });
@@ -1299,4 +1408,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape') closeAllModals();
     });
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootHarmoniApp);
+} else {
+  bootHarmoniApp();
+}
