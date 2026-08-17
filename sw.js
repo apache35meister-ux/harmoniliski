@@ -1,27 +1,38 @@
-// HARMONİ PWA Service Worker — Canlı Ağ Öncelikli (Network-First) Motoru
-const CACHE_NAME = 'harmoni-cache-v4-live';
+const CACHE_NAME = 'zenspa-vip-v1';
+const ASSETS_TO_CACHE = [
+  './',
+  './index.html',
+  './manifest.json',
+  './images/turkish_selin_photo_1786793658243.jpg',
+  './images/turkish_derya_photo_1786793693039.jpg',
+  './images/turkish_elif_photo_1786793625708.jpg',
+  './images/turkish_zeynep_selfie_1786793596006.jpg'
+];
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(ASSETS_TO_CACHE);
+    })
+  );
   self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then((keys) => {
+    caches.keys().then(keys => {
       return Promise.all(
-        keys.map((key) => caches.delete(key))
+        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
       );
     })
   );
   self.clients.claim();
 });
 
-// Her zaman canlı sunucudan en güncel dosyayı çek
-self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
+self.addEventListener('fetch', event => {
   event.respondWith(
-    fetch(event.request).catch(() => {
-      return caches.match(event.request);
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
     })
   );
 });
