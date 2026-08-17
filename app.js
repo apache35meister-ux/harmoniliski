@@ -917,23 +917,76 @@ function bootHarmoniApp() {
   function executeHeroRegister() {
     const isFemale = DOM.heroGenderFemale ? DOM.heroGenderFemale.classList.contains('selected') : false;
     const nameInput = document.getElementById('heroRegName');
+  // Auth Yürütücüleri (Mükerrer E-Posta Kontrolü & Güvenli Oturum)
+  function executeHeroRegister() {
+    const isFemale = DOM.heroGenderFemale ? DOM.heroGenderFemale.classList.contains('selected') : false;
+    const nameInput = document.getElementById('heroRegName');
     const ageInput = document.getElementById('heroRegAge');
     const cityInput = document.getElementById('heroRegCity');
     const jobInput = document.getElementById('heroRegJob');
+    const emailInput = document.getElementById('heroRegEmail');
+    const passInput = document.getElementById('heroRegPassword');
 
+    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : '';
+    const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '123456';
     const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (isFemale ? "Zeynep" : "Emre");
     const age = (ageInput && parseInt(ageInput.value)) ? parseInt(ageInput.value) : 28;
     const city = (cityInput && cityInput.value) ? cityInput.value : "İstanbul";
     const job = (jobInput && jobInput.value.trim()) ? jobInput.value.trim() : "Mimar";
 
-    state.currentUser = {
+    if (!email) {
+      showToast("⚠️ Lütfen geçerli bir e-posta adresi giriniz.");
+      return;
+    }
+
+    // 1. Mükerrer E-Posta Kontrolü (Aynı e-posta ile ikinci kez üye olunamaz)
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    const existingUser = regUsers.find(u => u.email && u.email.toLowerCase() === email);
+
+    if (existingUser) {
+      showToast(`⚠️ "${email}" adresi ile kayıtlı bir hesap zaten var. Lütfen giriş yapınız.`);
+      const loginEmailInput = document.getElementById('loginEmail');
+      if (loginEmailInput) loginEmailInput.value = email;
+      openModal(DOM.loginModal);
+      return;
+    }
+
+    // 2. Yeni Kullanıcıyı Oluştur ve Kaydet
+    const newUser = {
+      id: "reg-" + Date.now(),
+      email: email,
+      password: password,
       name: name,
       gender: isFemale ? 'female' : 'male',
       age: age,
       city: city,
       profession: job,
       bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
+      education: "Lisans",
+      matchScore: 97,
+      verified: true,
+      status: 'active',
       isVIP: isFemale,
+      vipPlan: null,
+      avatar: isFemale 
+        ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+        : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
+      joinDate: new Date().toLocaleDateString('tr-TR')
+    };
+
+    regUsers.unshift(newUser);
+    localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+
+    state.currentUser = {
+      id: newUser.id,
+      email: newUser.email,
+      name: newUser.name,
+      gender: newUser.gender,
+      age: newUser.age,
+      city: newUser.city,
+      profession: newUser.profession,
+      bio: newUser.bio,
+      isVIP: newUser.isVIP,
       vipPlan: null
     };
 
@@ -941,33 +994,11 @@ function bootHarmoniApp() {
     localStorage.setItem('harmoni_auth_session', 'true');
     localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
 
-    try {
-      let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-      regUsers.unshift({
-        id: "reg-" + Date.now(),
-        name: name,
-        gender: isFemale ? 'female' : 'male',
-        age: age,
-        city: city,
-        profession: job,
-        education: "Lisans",
-        matchScore: 97,
-        verified: true,
-        status: 'pending',
-        isVIP: isFemale,
-        avatar: isFemale 
-          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
-        joinDate: new Date().toLocaleDateString('tr-TR')
-      });
-      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-    } catch(e) {}
-
-    trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
+    trackRealVisit(`🔔 YENİ ÜYE KAYDI: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city} - ${email})`);
     applyAuthStateUI();
     renderProfiles();
     playChime();
-    showToast(`🎉 Başvurunuz Alındı, ${name}! Profiliniz aktif edildi, eşleşmeleri inceleyebilirsiniz.`);
+    showToast(`🎉 Aramıza Hoşgeldiniz, ${name}! Hesabınız anında aktif edildi.`);
     document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -978,20 +1009,71 @@ function bootHarmoniApp() {
     const ageInput = document.getElementById('modalRegAge');
     const cityInput = document.getElementById('modalRegCity');
     const jobInput = document.getElementById('modalRegJob');
+    const emailInput = document.getElementById('modalRegEmail');
+    const passInput = document.getElementById('modalRegPassword');
 
+    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : '';
+    const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '123456';
     const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (isFemale ? "Selin" : "Murat");
     const age = (ageInput && parseInt(ageInput.value)) ? parseInt(ageInput.value) : 29;
     const city = (cityInput && cityInput.value) ? cityInput.value : "İstanbul";
     const job = (jobInput && jobInput.value.trim()) ? jobInput.value.trim() : "Mühendis";
 
-    state.currentUser = {
+    if (!email) {
+      showToast("⚠️ Lütfen geçerli bir e-posta adresi giriniz.");
+      return;
+    }
+
+    // 1. Mükerrer E-Posta Kontrolü
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    const existingUser = regUsers.find(u => u.email && u.email.toLowerCase() === email);
+
+    if (existingUser) {
+      showToast(`⚠️ "${email}" adresi ile kayıtlı bir hesap zaten var. Lütfen giriş yapınız.`);
+      closeModal(DOM.registerModal);
+      window.closeModalById('registerModal');
+      const loginEmailInput = document.getElementById('loginEmail');
+      if (loginEmailInput) loginEmailInput.value = email;
+      openModal(DOM.loginModal);
+      return;
+    }
+
+    // 2. Yeni Kullanıcıyı Oluştur ve Kaydet
+    const newUser = {
+      id: "reg-" + Date.now(),
+      email: email,
+      password: password,
       name: name,
       gender: isFemale ? 'female' : 'male',
       age: age,
       city: city,
       profession: job,
       bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
+      education: "Lisans",
+      matchScore: 97,
+      verified: true,
+      status: 'active',
       isVIP: isFemale,
+      vipPlan: null,
+      avatar: isFemale 
+        ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+        : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
+      joinDate: new Date().toLocaleDateString('tr-TR')
+    };
+
+    regUsers.unshift(newUser);
+    localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+
+    state.currentUser = {
+      id: newUser.id,
+      email: newUser.email,
+      name: newUser.name,
+      gender: newUser.gender,
+      age: newUser.age,
+      city: newUser.city,
+      profession: newUser.profession,
+      bio: newUser.bio,
+      isVIP: newUser.isVIP,
       vipPlan: null
     };
 
@@ -999,29 +1081,7 @@ function bootHarmoniApp() {
     localStorage.setItem('harmoni_auth_session', 'true');
     localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
 
-    try {
-      let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-      regUsers.unshift({
-        id: "reg-" + Date.now(),
-        name: name,
-        gender: isFemale ? 'female' : 'male',
-        age: age,
-        city: city,
-        profession: job,
-        education: "Lisans",
-        matchScore: 97,
-        verified: true,
-        status: 'pending',
-        isVIP: isFemale,
-        avatar: isFemale 
-          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
-        joinDate: new Date().toLocaleDateString('tr-TR')
-      });
-      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-    } catch(e) {}
-
-    trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
+    trackRealVisit(`🔔 YENİ ÜYE KAYDI: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city} - ${email})`);
     closeModal(DOM.registerModal);
     window.closeModalById('registerModal');
     applyAuthStateUI();
@@ -1033,20 +1093,58 @@ function bootHarmoniApp() {
 
   function executeLogin() {
     const emailInput = document.getElementById('loginEmail');
-    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim() : 'murat@gmail.com';
-    const userName = email.split('@')[0];
+    const passInput = document.getElementById('loginPassword');
+    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : '';
+    const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '';
 
-    if (!state.currentUser || state.currentUser.name === 'Üye') {
+    if (!email) {
+      showToast("⚠️ Lütfen e-posta adresinizi giriniz.");
+      return;
+    }
+
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    const user = regUsers.find(u => u.email && u.email.toLowerCase() === email);
+
+    if (user) {
+      if (user.password && password && user.password !== password) {
+        showToast("❌ Şifreniz hatalı. Lütfen kontrol edip tekrar deneyiniz.");
+        return;
+      }
       state.currentUser = {
-        name: userName.charAt(0).toUpperCase() + userName.slice(1),
-        gender: 'male',
-        age: 31,
-        city: 'İstanbul',
-        profession: 'Üye',
-        bio: 'Ciddi bir ilişki ve evlilik arıyorum.',
-        isVIP: false,
-        vipPlan: null
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        gender: user.gender,
+        age: user.age,
+        city: user.city,
+        profession: user.profession,
+        bio: user.bio || "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
+        isVIP: user.isVIP || user.gender === 'female',
+        vipPlan: user.vipPlan || null
       };
+    } else {
+      // Demo hesap kontrolü
+      if (email === 'murat@gmail.com' || email === 'demo@harmoniliski.com') {
+        state.currentUser = {
+          name: "Murat Demir",
+          email: email,
+          gender: 'male',
+          age: 31,
+          city: 'İstanbul',
+          profession: 'Proje Yöneticisi',
+          bio: 'Ciddi bir ilişki ve evlilik arıyorum.',
+          isVIP: false,
+          vipPlan: null
+        };
+      } else {
+        showToast("ℹ️ Bu e-posta ile kayıtlı hesap bulunamadı. Lütfen önce ücretsiz üye olun.");
+        closeModal(DOM.loginModal);
+        window.closeModalById('loginModal');
+        const regEmailInput = document.getElementById('modalRegEmail') || document.getElementById('heroRegEmail');
+        if (regEmailInput) regEmailInput.value = email;
+        openModal(DOM.registerModal);
+        return;
+      }
     }
 
     state.isLoggedIn = true;
@@ -1057,7 +1155,7 @@ function bootHarmoniApp() {
     applyAuthStateUI();
     renderProfiles();
     playChime();
-    showToast(`✓ Giriş yapıldı. Hoşgeldiniz, ${state.currentUser.name}!`);
+    showToast(`✓ Hoş geldiniz, ${state.currentUser.name}! Başarıyla giriş yapıldı.`);
     document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
   }
 
