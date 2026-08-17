@@ -1,43 +1,38 @@
 /**
  * HARMONİ ADMİN & CANLI ANALİTİK PANELİ
- * %100 Gerçek Ziyaretçi Takibi, Gerçek Üyeler ve Veri Sıfırlama Motoru
+ * %100 Gerçek Ziyaretçi Takibi, Gerçek Üyeler ve Ana Site ile Tam İki Yönlü Senkronizasyon Motoru
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Canlı Kullanıcı Bilgisini Al (Ana siteden)
-  const liveCurrentUser = JSON.parse(localStorage.getItem('harmoni_current_user') || JSON.stringify({
-    name: "Murat Demir",
-    gender: "male",
-    age: 31,
-    city: "İstanbul",
-    profession: "Proje Yöneticisi",
-    isVIP: false,
-    vipPlan: null
-  }));
 
-  // 1. Silinmiş Üye ID'leri (Kara Liste)
-  const deletedIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
-
-  // 2. Admin Üye Listesini Yükle (Kalıcı Depolama)
-  let storedAdminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || 'null');
-
-  if (!storedAdminMembers) {
+  function loadAllAdminMembers() {
+    const deletedIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
+    let storedAdminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || 'null');
     const realRegisteredUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
     const seedCandidates = (typeof MATCH_PROFILES !== 'undefined' ? MATCH_PROFILES : []).map(p => ({
       ...p,
-      status: 'approved',
-      isVIP: true,
-      joinDate: '2026-02-17'
+      status: p.status || 'approved',
+      isVIP: p.gender === 'female' ? true : (p.isVIP || false),
+      joinDate: p.joinDate || '2026-02-17'
     }));
-    storedAdminMembers = [...realRegisteredUsers, ...seedCandidates];
+
+    if (!storedAdminMembers || !Array.isArray(storedAdminMembers) || storedAdminMembers.length === 0) {
+      storedAdminMembers = [...realRegisteredUsers, ...seedCandidates];
+    } else {
+      // Yeni kayıt olan kullanıcıları admin listesine dahil et
+      const existingIds = storedAdminMembers.map(m => m.id);
+      const newRegs = realRegisteredUsers.filter(r => !existingIds.includes(r.id));
+      storedAdminMembers = [...newRegs, ...storedAdminMembers];
+    }
+
+    // Silinenleri ayıkla ve kaydet
+    storedAdminMembers = storedAdminMembers.filter(m => !deletedIds.includes(m.id));
+    localStorage.setItem('harmoni_admin_members', JSON.stringify(storedAdminMembers));
+    return storedAdminMembers;
   }
 
-  // Silinmişleri ayıkla ve kaydet
-  storedAdminMembers = storedAdminMembers.filter(m => !deletedIds.includes(m.id));
-  localStorage.setItem('harmoni_admin_members', JSON.stringify(storedAdminMembers));
-
   const adminState = {
-    members: storedAdminMembers,
+    members: loadAllAdminMembers(),
     searchTerm: '',
     statusFilter: 'all'
   };
@@ -98,26 +93,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       DOM.btnAdminApproveNow.onclick = () => {
         latest.status = 'approved';
-        localStorage.setItem('harmoni_registered_users', JSON.stringify(adminState.members.filter(m => m.id.startsWith('reg-'))));
+        latest.verified = true;
+        saveSyncState();
         DOM.adminNewMemberAlert.style.display = 'none';
         updateKPIs();
         renderTable();
-        alert(`✓ ${latest.name} adlı üyenin hesabı onaylandı ve yayına alındı!`);
+        alert(`✓ ${latest.name} adlı üyenin hesabı onaylandı ve sitede yayına alındı!`);
       };
 
       DOM.btnAdminDismissAlert.onclick = () => {
         DOM.adminNewMemberAlert.style.display = 'none';
       };
+    } else if (DOM.adminNewMemberAlert) {
+      DOM.adminNewMemberAlert.style.display = 'none';
     }
   }
 
   // %100 Gerçek İstatistikleri Hesaplama ve Yansıtma
   function updateKPIs() {
-    // Gerçek Toplam Ziyaret
     const realVisits = parseInt(localStorage.getItem('harmoni_real_total_visits') || '1');
     const realRevenue = parseInt(localStorage.getItem('harmoni_real_vip_revenue') || '0');
     
-    // Gerçek Üyeler
     const totalMembers = adminState.members.length;
     const femaleMembers = adminState.members.filter(m => m.gender === 'female').length;
     const maleMembers = adminState.members.filter(m => m.gender === 'male').length;
@@ -143,11 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let logs = JSON.parse(localStorage.getItem('harmoni_real_visitor_logs') || '[]');
 
     if (logs.length === 0) {
-      // Varsayılan ilk gerçek ziyaret
       logs = [{
         id: 1,
-        date: "Bugün 02:30",
-        action: "Sayfa Görüntülendi (Canlı Yayın Başlangıcı)",
+        date: "Bugün",
+        action: "Canlı Yayın Başlangıcı",
         device: "💻 Masaüstü (Chrome)",
         status: "🟢 Çevrimiçi / Aktif"
       }];
@@ -182,9 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (adminState.searchTerm.trim()) {
       const q = adminState.searchTerm.toLowerCase().trim();
       list = list.filter(m => 
-        m.name.toLowerCase().includes(q) ||
-        m.city.toLowerCase().includes(q) ||
-        m.profession.toLowerCase().includes(q)
+        (m.name && m.name.toLowerCase().includes(q)) ||
+        (m.city && m.city.toLowerCase().includes(q)) ||
+        (m.profession && m.profession.toLowerCase().includes(q)) ||
+        (m.email && m.email.toLowerCase().includes(q))
       );
     }
 
@@ -193,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Tablo Satırlarını Basma
   function renderTable() {
+    if (!DOM.adminTableBody) return;
     const list = getFilteredMembers();
 
     if (list.length === 0) {
@@ -223,10 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <tr data-member-id="${member.id}">
           <td>
             <div class="member-cell">
-              <img src="${member.avatar}" alt="${member.name}" class="member-avatar">
+              <img src="${member.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80'}" alt="${member.name}" class="member-avatar">
               <div class="member-details">
                 <h4>${member.name}, ${member.age}</h4>
-                <span>Kayıt: ${member.joinDate || '2026-02-15'}</span>
+                <span>${member.email || ('Kayıt: ' + (member.joinDate || '2026-02-15'))}</span>
               </div>
             </div>
           </td>
@@ -236,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div style="font-size:0.75rem; color:var(--text-muted);">${member.city}</div>
           </td>
           <td>
-            <strong style="color:var(--primary-pink); font-family:var(--font-heading); font-size:1.05rem;">%${member.matchScore}</strong>
+            <strong style="color:var(--primary-pink); font-family:var(--font-heading); font-size:1.05rem;">%${member.matchScore || 95}</strong>
           </td>
           <td>
             <span class="status-badge ${statusClass}">${statusText}</span>
@@ -277,6 +274,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Veritabanını Ana Site ile Tam Senkronize Kaydetme
+  function saveSyncState() {
+    localStorage.setItem('harmoni_admin_members', JSON.stringify(adminState.members));
+    
+    // Registered users listesini de güncelle
+    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    adminState.members.forEach(m => {
+      const idx = regUsers.findIndex(r => r.id === m.id || (r.email && r.email === m.email));
+      if (idx > -1) {
+        regUsers[idx] = { ...regUsers[idx], ...m };
+      }
+    });
+    localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+
+    // Eğer işlem gören üye aktif oturum açmış kullanıcıysa oturumu da anında güncelle
+    try {
+      const currentUser = JSON.parse(localStorage.getItem('harmoni_current_user') || 'null');
+      if (currentUser) {
+        const matchingMember = adminState.members.find(m => m.id === currentUser.id || (m.email && m.email === currentUser.email));
+        if (matchingMember) {
+          const updatedCurrentUser = {
+            ...currentUser,
+            isVIP: matchingMember.isVIP,
+            name: matchingMember.name,
+            city: matchingMember.city,
+            profession: matchingMember.profession
+          };
+          localStorage.setItem('harmoni_current_user', JSON.stringify(updatedCurrentUser));
+        }
+      }
+    } catch(e) {}
+  }
+
   function handleMemberAction(action, memberId) {
     const member = adminState.members.find(m => m.id === memberId);
     if (!member) return;
@@ -284,19 +314,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (action === 'approve') {
       member.status = 'approved';
       member.verified = true;
-      alert(`✓ ${member.name} profili ve fotoğrafları başarıyla onaylandı.`);
+      saveSyncState();
+      updateKPIs();
+      renderTable();
+      alert(`✓ ${member.name} profili ve fotoğrafları başarıyla onaylandı ve ana sitede yayına alındı.`);
     } else if (action === 'toggle-vip') {
       member.isVIP = !member.isVIP;
-      alert(`👑 ${member.name} için VIP statüsü ${member.isVIP ? 'AKTİF EDİLDİ' : 'İPTAL EDİLDİ'}.`);
+      saveSyncState();
+      updateKPIs();
+      renderTable();
+      alert(`👑 ${member.name} için VIP statüsü ${member.isVIP ? 'AKTİF EDİLDİ (Sitede anında VIP oldu)' : 'İPTAL EDİLDİ'}.`);
     } else if (action === 'ban') {
       member.status = 'banned';
       member.verified = false;
-      alert(`⚠️ ${member.name} profili askıya alındı.`);
+      saveSyncState();
+      updateKPIs();
+      renderTable();
+      alert(`🚫 ${member.name} profili askıya alındı (Ana sitede hemen gizlendi).`);
     } else if (action === 'delete') {
       if (confirm(`${member.name} adlı üyeyi kalıcı olarak silmek istediğinizden emin misiniz?`)) {
         adminState.members = adminState.members.filter(m => m.id !== memberId);
 
-        // 1. Kara listeye ekle (Yenilendiğinde veya ana sitede asla geri gelmesin)
+        // 1. Kara listeye ekle (Ana sitede de hemen yok olur)
         let deletedIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
         if (!deletedIds.includes(memberId)) {
           deletedIds.push(memberId);
@@ -308,20 +347,26 @@ document.addEventListener('DOMContentLoaded', () => {
         regUsers = regUsers.filter(u => u.id !== memberId);
         localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
 
-        localStorage.setItem('harmoni_admin_members', JSON.stringify(adminState.members));
+        saveSyncState();
         updateKPIs();
         renderTable();
-        alert(`✓ ${member.name} adlı üye kalıcı olarak silindi.`);
-        return;
+        alert(`✓ ${member.name} adlı üye kalıcı olarak silindi ve siteden kaldırıldı.`);
       }
     }
-
-    localStorage.setItem('harmoni_admin_members', JSON.stringify(adminState.members));
-    updateKPIs();
-    renderTable();
   }
 
   function attachEvents() {
+    // Canlı Sekmeler Arası İletişim (Ana sitede kayıt olunduğunda panel anında güncellensin)
+    window.addEventListener('storage', (e) => {
+      if (['harmoni_registered_users', 'harmoni_real_total_visits', 'harmoni_real_vip_revenue', 'harmoni_real_visitor_logs'].includes(e.key)) {
+        adminState.members = loadAllAdminMembers();
+        checkNewMemberAlert();
+        updateKPIs();
+        renderTrafficLog();
+        renderTable();
+      }
+    });
+
     // Verileri Sıfırlama
     DOM.btnResetAllStats?.addEventListener('click', () => {
       if (confirm('Tüm canlı ziyaretçi kayıtlarını ve ciroyu sıfırlamak istediğinizden emin misiniz?')) {
@@ -329,18 +374,13 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('harmoni_real_vip_revenue', '0');
         localStorage.setItem('harmoni_real_visitor_logs', JSON.stringify([]));
         localStorage.removeItem('harmoni_admin_members');
+        localStorage.removeItem('harmoni_deleted_profile_ids');
         
-        adminState.members = MATCH_PROFILES.map((p) => ({
-          ...p,
-          status: 'approved',
-          isVIP: p.gender === 'female',
-          joinDate: '2026-02-15'
-        }));
-
+        adminState.members = loadAllAdminMembers();
         updateKPIs();
         renderTrafficLog();
         renderTable();
-        alert('✓ Tüm analitik veriler başarıyla sıfırlandı.');
+        alert('✓ Tüm analitik ve üye verileri başarıyla sıfırlandı.');
       }
     });
 
@@ -365,12 +405,12 @@ document.addEventListener('DOMContentLoaded', () => {
           document.getElementById('trafficSection')?.scrollIntoView({ behavior: 'smooth' });
         } else if (tab === 'approvals') {
           adminState.statusFilter = 'pending';
-          DOM.adminStatusFilter.value = 'pending';
+          if (DOM.adminStatusFilter) DOM.adminStatusFilter.value = 'pending';
           renderTable();
           document.getElementById('membersSection')?.scrollIntoView({ behavior: 'smooth' });
         } else if (tab === 'vip-sales') {
           adminState.statusFilter = 'male-vip';
-          DOM.adminStatusFilter.value = 'male-vip';
+          if (DOM.adminStatusFilter) DOM.adminStatusFilter.value = 'male-vip';
           renderTable();
           document.getElementById('membersSection')?.scrollIntoView({ behavior: 'smooth' });
         } else {
@@ -379,40 +419,55 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    DOM.btnOpenNewMemberModal?.addEventListener('click', () => DOM.newMemberModal.classList.add('active'));
-    DOM.btnCloseNewMemberModal?.addEventListener('click', () => DOM.newMemberModal.classList.remove('active'));
+    DOM.btnOpenNewMemberModal?.addEventListener('click', () => DOM.newMemberModal?.classList.add('active'));
+    DOM.btnCloseNewMemberModal?.addEventListener('click', () => DOM.newMemberModal?.classList.remove('active'));
 
     DOM.newMemberForm?.addEventListener('submit', (e) => {
       e.preventDefault();
       const gender = document.getElementById('newMemGender').value;
       const isFemale = gender === 'female';
+      const name = document.getElementById('newMemName').value.trim();
+      const age = parseInt(document.getElementById('newMemAge').value) || 28;
+      const city = document.getElementById('newMemCity').value.trim() || 'İstanbul';
+      const job = document.getElementById('newMemJob').value.trim() || 'Mimar';
+      const customPhoto = document.getElementById('newMemPhoto').value.trim();
+
+      const defaultAvatar = isFemale 
+        ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+        : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80";
 
       const newMem = {
-        id: "user-" + Date.now(),
-        name: document.getElementById('newMemName').value,
-        age: parseInt(document.getElementById('newMemAge').value),
+        id: "reg-" + Date.now(),
+        name: name,
+        email: name.toLowerCase().replace(/\s+/g, '') + "@gmail.com",
+        age: age,
         gender: gender,
-        city: document.getElementById('newMemCity').value,
-        profession: document.getElementById('newMemJob').value,
+        city: city,
+        profession: job,
         education: "Lisans",
-        matchScore: 92,
+        matchScore: 95,
         verified: true,
         status: 'approved',
         isVIP: isFemale ? true : false,
-        avatar: document.getElementById('newMemPhoto').value || (isFemale 
-          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
-          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"),
-        joinDate: new Date().toISOString().split('T')[0]
+        avatar: customPhoto || defaultAvatar,
+        joinDate: new Date().toLocaleDateString('tr-TR'),
+        bio: "Saygı ve sevgi dolu ciddi bir ilişki arıyorum."
       };
 
       adminState.members.unshift(newMem);
-      localStorage.setItem('harmoni_admin_members', JSON.stringify(adminState.members));
+      
+      // Kayıtlı kullanıcılara da ekle ki ana site doğrudan görsün
+      let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+      regUsers.unshift(newMem);
+      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+      
+      saveSyncState();
 
       DOM.newMemberForm.reset();
-      DOM.newMemberModal.classList.remove('active');
+      DOM.newMemberModal?.classList.remove('active');
       updateKPIs();
       renderTable();
-      alert(`✓ ${newMem.name} sisteme eklendi.`);
+      alert(`✓ ${newMem.name} sisteme eklendi ve ana sitede anında yayına alındı!`);
     });
   }
 });

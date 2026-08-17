@@ -4,15 +4,30 @@
  */
 
 function bootHarmoniApp() {
-  // Oturum ve Uygulama Durumu (Silinen Üyeleri Ayıkla)
-  const deletedProfileIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
-  const regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-  let initialProfiles = [...regUsers, ...(typeof MATCH_PROFILES !== 'undefined' ? MATCH_PROFILES : [])];
-  initialProfiles = initialProfiles.filter(p => !deletedProfileIds.includes(p.id));
+  // Oturum ve Uygulama Durumu (Admin Paneli ile Tam Senkronize Yükleme)
+  function getSynchronizedProfiles() {
+    const deletedProfileIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
+    const adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || 'null');
+    const regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+    const seedProfiles = (typeof MATCH_PROFILES !== 'undefined' ? MATCH_PROFILES : []);
+
+    let combined = [];
+    if (adminMembers && Array.isArray(adminMembers) && adminMembers.length > 0) {
+      // Admin listesini temel al, yeni kayıt olanları da dahil et
+      const adminIds = adminMembers.map(m => m.id);
+      const newRegs = regUsers.filter(r => !adminIds.includes(r.id));
+      combined = [...newRegs, ...adminMembers];
+    } else {
+      combined = [...regUsers, ...seedProfiles];
+    }
+
+    // Silinen ve askıya alınan (banned) profilleri gizle
+    return combined.filter(p => !deletedProfileIds.includes(p.id) && p.status !== 'banned');
+  }
 
   const state = {
     isLoggedIn: JSON.parse(localStorage.getItem('harmoni_auth_session') || 'false'),
-    profiles: initialProfiles,
+    profiles: getSynchronizedProfiles(),
     favorites: JSON.parse(localStorage.getItem('harmoni_favs') || '[]'),
     winks: JSON.parse(localStorage.getItem('harmoni_winks') || '[]'),
     
@@ -1559,6 +1574,19 @@ function bootHarmoniApp() {
     DOM.btnCloseMyProfileModal?.addEventListener('click', () => closeModal(DOM.myProfileModal));
     DOM.btnCloseVipModal?.addEventListener('click', () => closeModal(DOM.vipModal));
     DOM.btnCloseCheckoutModal?.addEventListener('click', () => closeModal(DOM.checkoutModal));
+
+    // Admin Paneli ile Canlı İki Yönlü Senkronizasyon (Sekmeler Arası Anlık Güncelleme)
+    window.addEventListener('storage', (e) => {
+      if (['harmoni_admin_members', 'harmoni_registered_users', 'harmoni_deleted_profile_ids', 'harmoni_current_user'].includes(e.key)) {
+        state.profiles = getSynchronizedProfiles();
+        const updatedUser = localStorage.getItem('harmoni_current_user');
+        if (updatedUser) {
+          try { state.currentUser = JSON.parse(updatedUser); } catch(err) {}
+        }
+        updateUserMembershipUI();
+        renderProfiles();
+      }
+    });
 
     [DOM.profileDetailModal, DOM.chatModal, DOM.inboxModal, DOM.winksModal, DOM.myProfileModal, DOM.vipModal, DOM.checkoutModal, DOM.quizModal, DOM.loginModal, DOM.registerModal, DOM.feedbackModal, DOM.legalModal].forEach(modal => {
       modal?.addEventListener('click', (e) => {
