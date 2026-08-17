@@ -3,8 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZENSPA VIP | Ultra HD Masaj, Spa & Terapist Rehberi</title>
-  <meta name="description" content="Türkiye'nin en seçkin VIP masaj ve terapi platformu. İstanbul, Ankara, İzmir ve tüm şehirlerde sertifikalı uzman terapistler. Doğrudan WhatsApp ile VIP randevu alın.">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>ZENSPA | İstanbul, Ankara, İzmir Masaj & Masöz Rehberi - VIP Terapistler</title>
+  <meta name="title" content="ZENSPA | İstanbul, Ankara, İzmir Masaj & Masöz Rehberi - VIP Terapistler">
+  <meta name="description" content="Türkiye'nin 1 numaralı VIP masaj ve terapist rehberi. İstanbul, Ankara, İzmir, Antalya onaylı masör ve masöz profilleri. Doğrudan WhatsApp ile VIP randevu alın.">
+  <meta name="keywords" content="masaj, masöz, masör, istanbul masaj, ankara masaj, izmir masaj, antalya masaj, bursa masaj, medikal masaj, isveç masajı, aromaterapi masajı, vip masaj rehberi, terapi platformu, masaj salonları, masaj ilanları">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://harmoniliski.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harmoniliski.com/">
+  <meta property="og:title" content="ZENSPA | Profesyonel Masaj & VIP Terapist Rehberi">
+  <meta property="og:description" content="Türkiye'nin en seçkin bağımsız masör ve masöz rehberi. Doğrudan WhatsApp ile randevu alın.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://harmoniliski.com/">
+  <meta name="twitter:title" content="ZENSPA | Profesyonel Masaj & VIP Terapist Rehberi">
+  <meta name="twitter:description" content="İstanbul, Ankara, İzmir masöz ve masör ilanları. WhatsApp ile tek tıkla randevu.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- 1. Google Structured Data (Schema.org) - LocalBusiness & HealthAndBeautyBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "ZENSPA Masaj ve Terapi Rehberi",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    "@id": "https://harmoniliski.com/",
+    "url": "https://harmoniliski.com/",
+    "telephone": "+15096204167",
+    "priceRange": "₺₺",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0082,
+      "longitude": 28.9784
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "486"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+
+  <!-- 2. Google Structured Data - FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Masaj randevusu nasıl alınır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beğendiğiniz terapist kartının altındaki yeşil 'WhatsApp ile Randevu Al' butonuna tıklayarak terapist ile doğrudan görüşüp randevunuzu oluşturabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vitrindeki terapistler sertifikalı mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, platformumuzdaki VIP ve doğrulanmış tüm masör ve masöz profilleri hijyen ve hizmet standartlarına göre listelenir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nasıl vitrine ilan verebilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sitenin üstündeki 'Vitrine İlan Ver' butonuna tıklayarak veya +1 509 620 4167 WhatsApp hattımıza yazarak ilanınızı hemen ekletebilirsiniz."
+        }
+      }
+    ]
+  }
+  </script>
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
@@ -45,11 +143,7 @@
       --radius-full: 9999px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-body);
@@ -66,25 +160,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
 
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      outline: none;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* VIP Top Marquee / Announce */
+    /* VIP Top Marquee */
     .vip-topbar {
       background: linear-gradient(90deg, #000000 0%, #1C1300 50%, #000000 100%);
       border-bottom: 1px solid var(--border-gold);
@@ -115,9 +195,7 @@
       gap: 4px;
       transition: color 0.2s;
     }
-    .vip-topbar a:hover {
-      color: var(--gold-text);
-    }
+    .vip-topbar a:hover { color: var(--gold-text); }
 
     /* Header */
     .site-header {
@@ -279,10 +357,7 @@
       border-color: #FBBF24;
       box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
     }
-    .filter-select option {
-      background: #08080A;
-      color: #FFF;
-    }
+    .filter-select option { background: #08080A; color: #FFF; }
 
     .category-pills {
       display: flex;
@@ -309,7 +384,7 @@
       box-shadow: 0 0 15px rgba(230, 175, 46, 0.25);
     }
 
-    /* VIP Showcase Banner */
+    /* VIP Banner */
     .vip-gold-banner {
       background: linear-gradient(135deg, #140E02 0%, #291C02 50%, #0A0A0A 100%);
       border: 1px solid var(--border-gold-bright);
@@ -324,16 +399,6 @@
       gap: 1.5rem;
       position: relative;
       overflow: hidden;
-    }
-    .vip-gold-banner::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 60%);
-      pointer-events: none;
     }
     .banner-left {
       display: flex;
@@ -353,10 +418,7 @@
       margin-bottom: 0.3rem;
       letter-spacing: 0.5px;
     }
-    .banner-text p {
-      font-size: 0.92rem;
-      color: #D4D4D8;
-    }
+    .banner-text p { font-size: 0.92rem; color: #D4D4D8; }
     .btn-vip-banner-cta {
       background: var(--emerald-gradient);
       color: #FFF;
@@ -394,10 +456,7 @@
       color: #FFF;
       letter-spacing: 1px;
     }
-    .section-title-wrap p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
+    .section-title-wrap p { font-size: 0.92rem; color: var(--text-muted); }
     .live-count-badge {
       background: #121214;
       border: 1px solid var(--border-gold);
@@ -408,12 +467,12 @@
       border-radius: var(--radius-full);
     }
 
-    /* Therapist Grid */
+    /* Grid */
     .therapists-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
     }
 
     /* HD Therapist Card */
@@ -434,7 +493,6 @@
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), var(--gold-glow);
     }
 
-    /* Card Image */
     .card-image-wrap {
       position: relative;
       width: 100%;
@@ -449,9 +507,7 @@
       object-position: center top;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .card-therapist:hover .card-img {
-      transform: scale(1.07);
-    }
+    .card-therapist:hover .card-img { transform: scale(1.07); }
     .card-vignette {
       position: absolute;
       inset: 0;
@@ -459,7 +515,6 @@
       pointer-events: none;
     }
 
-    /* Floating Badges */
     .badge-verified {
       position: absolute;
       top: 14px;
@@ -494,7 +549,6 @@
       gap: 4px;
     }
 
-    /* Card Details */
     .card-body {
       padding: 1.4rem;
       display: flex;
@@ -502,9 +556,7 @@
       flex: 1;
       justify-content: space-between;
     }
-    .card-head {
-      margin-bottom: 0.75rem;
-    }
+    .card-head { margin-bottom: 0.75rem; }
     .card-title-row {
       display: flex;
       align-items: baseline;
@@ -519,11 +571,7 @@
       color: #FFF;
       letter-spacing: 0.5px;
     }
-    .card-age {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
+    .card-age { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
     .card-city {
       font-size: 0.84rem;
       color: var(--gold-text);
@@ -543,7 +591,6 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
     .card-tags {
       display: flex;
       flex-wrap: wrap;
@@ -559,7 +606,6 @@
       padding: 4px 10px;
       border-radius: 6px;
     }
-
     .card-price-row {
       display: flex;
       align-items: center;
@@ -569,15 +615,9 @@
       margin-bottom: 1rem;
       font-size: 0.84rem;
     }
-    .price-label {
-      color: var(--text-muted);
-    }
-    .price-val {
-      color: var(--gold-text);
-      font-weight: 800;
-    }
+    .price-label { color: var(--text-muted); }
+    .price-val { color: var(--gold-text); font-weight: 800; }
 
-    /* HD Neon WhatsApp CTA */
     .btn-wa-action {
       width: 100%;
       background: var(--emerald-gradient);
@@ -597,6 +637,50 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(37, 211, 102, 0.55);
       background: linear-gradient(135deg, #2BF075 0%, #15B8A6 100%);
+    }
+
+    /* SEO Rich Content & FAQ Section */
+    .seo-section {
+      background: #09090C;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+    }
+    .seo-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: #FFF;
+      margin-bottom: 1rem;
+    }
+    .seo-section p {
+      font-size: 0.92rem;
+      color: var(--text-gray);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .faq-card {
+      background: #121216;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+    .faq-card h4 {
+      font-size: 1rem;
+      color: var(--gold-text);
+      margin-bottom: 0.5rem;
+    }
+    .faq-card p {
+      font-size: 0.86rem;
+      color: var(--text-gray);
+      line-height: 1.5;
+      margin-bottom: 0;
     }
 
     /* Floating Widget */
@@ -635,9 +719,7 @@
       justify-content: center;
       padding: 1.5rem;
     }
-    .modal-overlay.active {
-      display: flex;
-    }
+    .modal-overlay.active { display: flex; }
     .modal-box {
       background: #0D0D10;
       border: 1px solid var(--border-gold-bright);
@@ -686,15 +768,9 @@
       margin-bottom: 1.25rem;
       letter-spacing: 0.5px;
     }
-    .footer-links {
-      list-style: none;
-    }
-    .footer-links li {
-      margin-bottom: 0.6rem;
-    }
-    .footer-links a:hover {
-      color: var(--gold-text);
-    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a:hover { color: var(--gold-text); }
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
@@ -838,6 +914,29 @@
         <!-- Rendered by JS -->
       </div>
 
+      <!-- SEO & FAQ Section for Google Ranking -->
+      <section class="seo-section">
+        <h3>Türkiye'nin En Çok Tercih Edilen Masaj Rehberi</h3>
+        <p>
+          ZENSPA, İstanbul başta olmak üzere Ankara, İzmir, Bursa ve Antalya gibi metropollerde profesyonel masör ve masözleri bir araya getiren bağımsız bir terapi rehberidir. Klasik İsveç masajı, derin doku medikal terapi, aromaterapi, sıcak taş ve sporcu masajı gibi alanlarda uzmanlaşmış terapistlerle doğrudan WhatsApp üzerinden aracısız ve güvenle iletişime geçebilirsiniz.
+        </p>
+
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h4>💬 Randevu Nasıl Alınır?</h4>
+            <p>Seçtiğiniz terapistin kartında yer alan 'WhatsApp ile Randevu Al' butonuna basarak doğrudan terapistin kendi özel WhatsApp hattına mesaj gönderebilirsiniz.</p>
+          </div>
+          <div class="faq-card">
+            <h4>👑 Vitrine Nasıl İlan Verilir?</h4>
+            <p>Terapist olarak vitrinde yer almak için üst kısımdaki 'Vitrine İlan Ver' butonuna tıklayarak +1 509 620 4167 destek hattımıza anında mesaj atabilirsiniz.</p>
+          </div>
+          <div class="faq-card">
+            <h4>🌿 Hangi Masaj Türleri Var?</h4>
+            <p>Klasik İsveç, Medikal Ağrı Terapisi, Rahatlatıcı Aromaterapi, Sıcak Taş, Thai Masajı ve Derin Doku Sporcu Masajı seçenekleri mevcuttur.</p>
+          </div>
+        </div>
+      </section>
+
     </div>
   </section>
 
@@ -931,7 +1030,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 ZENSPA VIP Terapi Platformu. Tüm Hakları Saklıdır.</p>
+        <p>© 2026 ZENSPA VIP Terapi Platformu. Tüm Hakları Saklıdır. Google SEO Uyumlu Masaj Rehberi.</p>
       </div>
     </div>
   </footer>
@@ -1171,9 +1270,9 @@
         const waUrl = `https://wa.me/${t.whatsapp}?text=${waText}`;
 
         return `
-          <div class="card-therapist">
+          <article class="card-therapist" itemscope itemtype="https://schema.org/Person">
             <div class="card-image-wrap">
-              <img src="${t.image}" alt="${t.name}" class="card-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80';">
+              <img src="${t.image}" alt="${t.name} - ${t.city} Masöz Terapist" itemprop="image" class="card-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80';">
               <div class="card-vignette"></div>
               <div class="badge-verified">🟢 Doğrulanmış Profil</div>
               <div class="badge-rating">⭐ ${t.rating}</div>
@@ -1182,13 +1281,13 @@
             <div class="card-body">
               <div class="card-head">
                 <div class="card-title-row">
-                  <h4 class="card-name">${t.name}</h4>
+                  <h4 class="card-name" itemprop="name">${t.name}</h4>
                   <span class="card-age">${t.age} Yaş</span>
                 </div>
-                <div class="card-city">📍 ${t.city}, ${t.district}</div>
+                <div class="card-city" itemprop="addressLocality">📍 ${t.city}, ${t.district}</div>
               </div>
 
-              <p class="card-bio">${t.bio}</p>
+              <p class="card-bio" itemprop="description">${t.bio}</p>
 
               <div class="card-tags">
                 ${t.tags.map(tag => `<span class="card-tag">${tag}</span>`).join('')}
@@ -1199,12 +1298,12 @@
                 <span class="price-val">${t.price}</span>
               </div>
 
-              <a href="${waUrl}" target="_blank" class="btn-wa-action">
+              <a href="${waUrl}" target="_blank" class="btn-wa-action" title="${t.name} ile WhatsApp Randevusu Al">
                 <span>💬</span>
                 <span>WhatsApp ile Randevu Al</span>
               </a>
             </div>
-          </div>
+          </article>
         `;
       }).join('');
     }
