@@ -270,11 +270,11 @@
       gap: 0.75rem;
     }
     .therapist-avatar {
-      width: 42px;
-      height: 42px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1px solid var(--border-gold);
+      border: 1.5px solid var(--border-gold);
     }
 
     .status-badge {
@@ -327,8 +327,8 @@
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
       display: none;
       align-items: center;
       justify-content: center;
@@ -340,26 +340,28 @@
       background: #101014;
       border: 1px solid var(--border-gold);
       border-radius: 20px;
-      max-width: 540px;
+      max-width: 580px;
       width: 100%;
-      padding: 2rem;
+      padding: 2.2rem;
       position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
     }
     .modal-close {
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 18px;
+      right: 18px;
       background: #18181E;
       border: none;
       color: #FFF;
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       cursor: pointer;
     }
 
-    .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; text-transform: uppercase; font-weight: 700; }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.35rem; text-transform: uppercase; font-weight: 700; }
     .form-control {
       width: 100%;
       background: #08080A;
@@ -372,6 +374,67 @@
     }
     .form-control:focus { border-color: #FBBF24; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Photo Upload Area */
+    .photo-upload-container {
+      background: #09090C;
+      border: 1.5px dashed var(--border-gold);
+      border-radius: 14px;
+      padding: 1.25rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .photo-preview-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+      overflow: hidden;
+      border: 2px solid #FBBF24;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+      background: #000;
+    }
+    .photo-preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .file-input-btn {
+      background: #181820;
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .file-input-btn:hover { background: #22222C; }
+    
+    /* Preset Gallery Picker */
+    .preset-photos {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 0.75rem;
+    }
+    .preset-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1.5px solid var(--border-subtle);
+      transition: all 0.2s;
+    }
+    .preset-thumb:hover, .preset-thumb.selected {
+      border-color: #FBBF24;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -452,12 +515,12 @@
       <table>
         <thead>
           <tr>
-            <th>Terapist</th>
+            <th>Terapist & Fotoğraf</th>
             <th>Şehir / Semt</th>
             <th>Uzmanlık</th>
             <th>Seans Ücreti</th>
             <th>Durum</th>
-            <th>WhatsApp Randevu</th>
+            <th>WhatsApp</th>
             <th>İşlem</th>
           </tr>
         </thead>
@@ -472,27 +535,51 @@
   <div class="modal-overlay" id="addTherapistModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeAddModal()">✕</button>
-      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.25rem;">Yeni Terapist Ekle</h3>
+      <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
 
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
+        
+        <!-- FOTOĞRAF YÜKLEME ALANI -->
+        <div class="photo-upload-container">
+          <div class="photo-preview-wrap">
+            <img src="images/turkish_selin_photo_1786793658243.jpg" id="previewPhoto" class="photo-preview-img" alt="Önizleme">
+          </div>
+          
+          <label class="file-input-btn" for="fileInput">
+            📷 Bilgisayardan / Telefondan Fotoğraf Seç
+          </label>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileUpload(event)">
+          
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">veya aşağıdaki hazır modellerden birine tıklayın:</p>
+          
+          <div class="preset-photos">
+            <img src="images/turkish_selin_photo_1786793658243.jpg" class="preset-thumb selected" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_derya_photo_1786793693039.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_elif_photo_1786793625708.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_zeynep_selfie_1786793596006.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_cansu_selfie.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_emre_candid_1786793611473.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+          </div>
+        </div>
+
         <div class="form-row">
           <div class="form-group">
-            <label>Ad & Ünvan</label>
+            <label>Ad & Ünvan *</label>
             <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Masöz" required>
           </div>
           <div class="form-group">
-            <label>Yaş</label>
+            <label>Yaş *</label>
             <input type="number" id="tAge" class="form-control" placeholder="26" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>Şehir</label>
+            <label>Şehir *</label>
             <input type="text" id="tCity" class="form-control" placeholder="İstanbul" required>
           </div>
           <div class="form-group">
-            <label>Semt / Bölge</label>
+            <label>Semt / Bölge *</label>
             <input type="text" id="tDistrict" class="form-control" placeholder="Kadıköy" required>
           </div>
         </div>
@@ -506,24 +593,26 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Seans Ücreti</label>
+            <label>Seans Ücreti *</label>
             <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 1.800 ₺" required>
           </div>
         </div>
 
         <div class="form-group">
-          <label>WhatsApp Numarası</label>
+          <label>WhatsApp Randevu Numarası *</label>
           <input type="text" id="tWhatsapp" class="form-control" placeholder="15096204167" value="15096204167" required>
         </div>
 
-        <button type="submit" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.9rem; margin-top: 0.5rem;">
-          Kaydet ve Yayına Al
+        <button type="submit" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
+          ✓ Terapisti Kaydet ve Yayına Al
         </button>
       </form>
     </div>
   </div>
 
   <script>
+    let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
+
     let list = [
       { id: 1, name: "Selin Terapist", city: "İstanbul", district: "Beşiktaş", services: "İsveç, Aromaterapi", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg" },
       { id: 2, name: "Derya Masöz", city: "İstanbul", district: "Kadıköy", services: "Aromaterapi, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg" },
@@ -571,6 +660,27 @@
       renderTable(filtered);
     }
 
+    // Photo Handling
+    function handleFileUpload(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          currentPhotoUrl = evt.target.result;
+          document.getElementById('previewPhoto').src = currentPhotoUrl;
+          document.querySelectorAll('.preset-thumb').forEach(t => t.classList.remove('selected'));
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function selectPreset(url, el) {
+      currentPhotoUrl = url;
+      document.getElementById('previewPhoto').src = url;
+      document.querySelectorAll('.preset-thumb').forEach(t => t.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
     function openAddModal() { document.getElementById('addTherapistModal').classList.add('active'); }
     function closeAddModal() { document.getElementById('addTherapistModal').classList.remove('active'); }
 
@@ -581,16 +691,16 @@
         name: document.getElementById('tName').value,
         city: document.getElementById('tCity').value,
         district: document.getElementById('tDistrict').value,
-        services: "İsveç, Aromaterapi",
+        services: "İsveç, Aromaterapi, Medikal",
         price: document.getElementById('tPrice').value,
         vitrin: true,
         wa: document.getElementById('tWhatsapp').value,
-        img: "images/turkish_selin_photo_1786793658243.jpg"
+        img: currentPhotoUrl
       };
       list.unshift(newT);
       renderTable(list);
       closeAddModal();
-      alert("Terapist başarıyla eklendi!");
+      alert("✓ Terapist başarıyla eklendi ve fotoğrafı yüklendi!");
     }
 
     function deleteItem(id) {
