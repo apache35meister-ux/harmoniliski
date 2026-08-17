@@ -467,13 +467,30 @@ button {
   padding: 0.85rem 0.5rem;
   text-align: center;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
   transition: all var(--transition);
 }
 
+.gender-select-card * {
+  pointer-events: none;
+}
+
+.gender-select-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
 .gender-select-card.selected {
-  border-color: var(--primary-rose);
-  background: rgba(244, 63, 94, 0.15);
-  box-shadow: 0 0 16px rgba(244, 63, 94, 0.25);
+  border-color: var(--primary-rose) !important;
+  background: rgba(244, 63, 94, 0.15) !important;
+  box-shadow: 0 0 16px rgba(244, 63, 94, 0.25) !important;
+}
+
+.gender-select-card.male.selected {
+  border-color: #F59E0B !important;
+  background: rgba(245, 158, 11, 0.15) !important;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.25) !important;
 }
 
 .gender-select-card h4 {
@@ -490,7 +507,7 @@ button {
 }
 
 .gender-select-card.female span { color: #FB7185; }
-.gender-select-card.male span { color: var(--accent-gold-light); }
+.gender-select-card.male span { color: #FCD34D; }
 
 .finder-label {
   font-size: 0.72rem;
