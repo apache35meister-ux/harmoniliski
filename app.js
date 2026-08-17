@@ -4,25 +4,31 @@
  */
 
 function bootHarmoniApp() {
-  // Oturum ve Uygulama Durumu (Admin Paneli ile Tam Senkronize Yükleme)
+  // Oturum ve Uygulama Durumu (Admin Paneli ile %100 Senkronize Veri Tabanı)
   function getSynchronizedProfiles() {
     const deletedProfileIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
-    const adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || 'null');
+    let adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || 'null');
     const regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-    const seedProfiles = (typeof MATCH_PROFILES !== 'undefined' ? MATCH_PROFILES : []);
+    const seedProfiles = (typeof MATCH_PROFILES !== 'undefined' ? MATCH_PROFILES : []).map(p => ({
+      ...p,
+      status: p.status || 'approved',
+      isVIP: p.gender === 'female' ? true : (p.isVIP || false),
+      joinDate: p.joinDate || '2026-02-17'
+    }));
 
-    let combined = [];
+    let allMembers = [];
     if (adminMembers && Array.isArray(adminMembers) && adminMembers.length > 0) {
-      // Admin listesini temel al, yeni kayıt olanları da dahil et
-      const adminIds = adminMembers.map(m => m.id);
-      const newRegs = regUsers.filter(r => !adminIds.includes(r.id));
-      combined = [...newRegs, ...adminMembers];
+      // Admin listesini esas al ve yeni kayıtları ekle
+      const existingIds = adminMembers.map(m => m.id);
+      const newRegs = regUsers.filter(r => !existingIds.includes(r.id));
+      allMembers = [...newRegs, ...adminMembers];
     } else {
-      combined = [...regUsers, ...seedProfiles];
+      allMembers = [...regUsers, ...seedProfiles];
+      localStorage.setItem('harmoni_admin_members', JSON.stringify(allMembers));
     }
 
-    // Silinen ve askıya alınan (banned) profilleri gizle
-    return combined.filter(p => !deletedProfileIds.includes(p.id) && p.status !== 'banned');
+    // Silinen ve yasaklanan (banned) profilleri süz
+    return allMembers.filter(p => !deletedProfileIds.includes(p.id) && p.status !== 'banned');
   }
 
   const state = {
@@ -31,7 +37,7 @@ function bootHarmoniApp() {
     favorites: JSON.parse(localStorage.getItem('harmoni_favs') || '[]'),
     winks: JSON.parse(localStorage.getItem('harmoni_winks') || '[]'),
     
-    // Aktif Kullanıcı (Erkek Üyeler Kesinlikle VIP Olmadan Başlar, Mesaj Atamaz)
+    // Aktif Kullanıcı
     currentUser: JSON.parse(localStorage.getItem('harmoni_current_user') || JSON.stringify({
       name: "Üye",
       gender: "male",
@@ -51,7 +57,7 @@ function bootHarmoniApp() {
       gender: 'all',
       city: 'all',
       ageRange: 'all',
-      minComp: 80,
+      minComp: 70,
       maritalStatus: 'all',
       education: 'all',
       searchQuery: '',
@@ -407,7 +413,7 @@ function bootHarmoniApp() {
     });
   }
 
-  // Profil Filtreleme
+  // Profil Filtreleme (Güvenli & Hatasız)
   function getFilteredProfiles() {
     let list = [...state.profiles];
 
@@ -423,38 +429,38 @@ function bootHarmoniApp() {
       list = list.filter(p => p.gender === state.activeFilter.gender);
     }
     if (state.activeFilter.city !== 'all') {
-      list = list.filter(p => p.city === state.activeFilter.city);
+      list = list.filter(p => (p.city || '').toLowerCase() === state.activeFilter.city.toLowerCase());
     }
     if (state.activeFilter.ageRange !== 'all') {
       const [minAge, maxAge] = state.activeFilter.ageRange.split('-').map(Number);
-      if (minAge && maxAge) list = list.filter(p => p.age >= minAge && p.age <= maxAge);
+      if (minAge && maxAge) list = list.filter(p => (p.age || 25) >= minAge && (p.age || 25) <= maxAge);
     }
     if (state.activeFilter.minComp > 70) {
-      list = list.filter(p => p.matchScore >= state.activeFilter.minComp);
+      list = list.filter(p => (p.matchScore || 95) >= state.activeFilter.minComp);
     }
     if (state.activeFilter.maritalStatus !== 'all') {
       list = list.filter(p => p.maritalStatus === state.activeFilter.maritalStatus);
     }
     if (state.activeFilter.education !== 'all') {
-      list = list.filter(p => p.education.includes(state.activeFilter.education));
+      list = list.filter(p => p.education && p.education.toLowerCase().includes(state.activeFilter.education.toLowerCase()));
     }
     if (state.activeFilter.searchQuery.trim()) {
       const q = state.activeFilter.searchQuery.toLowerCase().trim();
       list = list.filter(p => 
-        p.name.toLowerCase().includes(q) ||
-        p.profession.toLowerCase().includes(q) ||
-        p.city.toLowerCase().includes(q) ||
-        p.bio.toLowerCase().includes(q)
+        (p.name && p.name.toLowerCase().includes(q)) ||
+        (p.profession && p.profession.toLowerCase().includes(q)) ||
+        (p.city && p.city.toLowerCase().includes(q)) ||
+        (p.bio && p.bio.toLowerCase().includes(q))
       );
     }
 
     switch (state.activeFilter.sortBy) {
       case 'online-first': list.sort((a, b) => (b.isOnline ? 1 : 0) - (a.isOnline ? 1 : 0)); break;
-      case 'age-asc': list.sort((a, b) => a.age - b.age); break;
-      case 'age-desc': list.sort((a, b) => b.age - a.age); break;
-      case 'name': list.sort((a, b) => a.name.localeCompare(b.name, 'tr')); break;
+      case 'age-asc': list.sort((a, b) => (a.age || 25) - (b.age || 25)); break;
+      case 'age-desc': list.sort((a, b) => (b.age || 25) - (a.age || 25)); break;
+      case 'name': list.sort((a, b) => (a.name || '').localeCompare((b.name || ''), 'tr')); break;
       case 'match-score':
-      default: list.sort((a, b) => b.matchScore - a.matchScore); break;
+      default: list.sort((a, b) => (b.matchScore || 90) - (a.matchScore || 90)); break;
     }
 
     return list;
