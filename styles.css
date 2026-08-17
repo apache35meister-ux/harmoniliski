@@ -6,14 +6,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap');
 
 :root {
-  /* Pembe Panjur İmza Renk Paleti */
-  --primary-rose: #E11D48;
-  --primary-rose-hover: #BE123C;
-  --primary-rose-light: #FFF1F2;
-  --primary-rose-subtle: rgba(225, 29, 72, 0.08);
-  --primary-rose-glow: rgba(225, 29, 72, 0.25);
-  --pink-accent: #F43F5E;
-  --pink-soft: #FFE4E6;
+  /* Spa & Zen İmza Renk Paleti */
+  --primary-rose: #059669; /* Zümrüt Yeşili */
+  --primary-rose-hover: #047857;
+  --primary-rose-light: #ECFDF5;
+  --primary-rose-subtle: rgba(5, 150, 105, 0.08);
+  --primary-rose-glow: rgba(5, 150, 105, 0.25);
+  --pink-accent: #10B981;
+  --pink-soft: #D1FAE5;
 
   --accent-gold: #D97706;
   --accent-gold-light: #FEF3C7;
@@ -23,18 +23,18 @@
   --accent-emerald-light: #ECFDF5;
   --accent-sky: #0284C7;
 
-  /* Arka Planlar (Temiz, Ferah ve Güven Veren Pembe Panjur Beyaz & Açık Gül) */
-  --bg-deep: #FDF2F4;
-  --bg-page: #FAF7F8;
+  /* Arka Planlar (Temiz, Ferah ve Zen) */
+  --bg-deep: #F0FDF4;
+  --bg-page: #F8FAFC;
   --bg-surface: #FFFFFF;
   --bg-surface-elevated: #FFFFFF;
-  --bg-surface-soft: #FFF5F7;
+  --bg-surface-soft: #F0FDF4;
   --bg-glass: rgba(255, 255, 255, 0.95);
 
   /* Kenarlıklar */
-  --border-subtle: #F1E5E9;
-  --border-medium: #E5D5DA;
-  --border-focus: #E11D48;
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-focus: #059669;
   --border-gold: #FDE68A;
 
   /* Tipografi */
@@ -46,11 +46,11 @@
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Yumuşak Pembe Panjur Gölgeleri */
-  --shadow-sm: 0 2px 6px rgba(225, 29, 72, 0.04);
-  --shadow-md: 0 8px 24px rgba(225, 29, 72, 0.08);
-  --shadow-lg: 0 16px 40px rgba(225, 29, 72, 0.12);
-  --shadow-rose: 0 8px 25px rgba(225, 29, 72, 0.22);
+  /* Yumuşak Gölgeler */
+  --shadow-sm: 0 2px 6px rgba(5, 150, 105, 0.04);
+  --shadow-md: 0 8px 24px rgba(5, 150, 105, 0.08);
+  --shadow-lg: 0 16px 40px rgba(5, 150, 105, 0.12);
+  --shadow-rose: 0 8px 25px rgba(5, 150, 105, 0.22);
   --shadow-gold: 0 8px 25px rgba(217, 119, 6, 0.2);
 
   --radius-sm: 8px;
@@ -82,7 +82,7 @@ body {
   overflow-x: hidden;
   background: var(--bg-page);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(244, 63, 94, 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(5, 150, 105, 0.06) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.04) 0px, transparent 50%);
 }
 
@@ -122,7 +122,7 @@ button {
    1. Üst Güvenlik Barı & Header (Pembe Panjur Şıklığı)
    ========================================================================== */
 .top-safety-bar {
-  background: linear-gradient(90deg, #E11D48, #BE123C);
+  background: linear-gradient(90deg, #059669, #047857);
   color: #FFFFFF;
   padding: 0.55rem 1rem;
   font-size: 0.82rem;
@@ -133,7 +133,7 @@ button {
   justify-content: center;
   gap: 0.6rem;
   flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.2);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
 }
 
 .top-safety-bar strong {
@@ -168,13 +168,13 @@ button {
 .logo-heart-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #F43F5E, #E11D48);
+  background: linear-gradient(135deg, #10B981, #059669);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
 }
 
 .brand-text-wrap {
@@ -252,19 +252,19 @@ button {
 }
 
 .btn-register-trigger {
-  background: linear-gradient(135deg, #F43F5E, #E11D48);
+  background: linear-gradient(135deg, #10B981, #059669);
   color: #FFFFFF;
   font-size: 0.88rem;
   font-weight: 800;
   padding: 0.55rem 1.35rem;
   border-radius: var(--radius-md);
-  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.35);
   transition: all var(--transition);
 }
 
 .btn-register-trigger:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.45);
 }
 
 .btn-vip-upgrade {
@@ -337,9 +337,9 @@ button {
 }
 
 .gender-membership-badge.female {
-  background: #FFF1F2;
-  color: #E11D48;
-  border: 1px solid #FECDD3;
+  background: #ECFDF5;
+  color: #059669;
+  border: 1px solid #A7F3D0;
 }
 
 .gender-membership-badge.male-free {
@@ -353,7 +353,7 @@ button {
    ========================================================================== */
 .landing-hero-section {
   padding: 4rem 0 3rem;
-  background: linear-gradient(135deg, #FFF1F2 0%, #FFFFFF 45%, #FDF2F8 100%);
+  background: linear-gradient(135deg, #ECFDF5 0%, #FFFFFF 45%, #FDF2F8 100%);
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
 }
@@ -370,7 +370,7 @@ button {
   align-items: center;
   gap: 0.5rem;
   background: #FFFFFF;
-  border: 1px solid #FECDD3;
+  border: 1px solid #A7F3D0;
   padding: 0.45rem 1.1rem;
   border-radius: var(--radius-full);
   font-size: 0.82rem;
@@ -432,10 +432,10 @@ button {
 /* Pembe Panjur Hızlı Kayıt Kartı */
 .landing-auth-card {
   background: #FFFFFF;
-  border: 1.5px solid #FBCFE8;
+  border: 1.5px solid #A7F3D0;
   border-radius: 22px;
   padding: 2.5rem;
-  box-shadow: 0 12px 35px rgba(225, 29, 72, 0.12);
+  box-shadow: 0 12px 35px rgba(5, 150, 105, 0.12);
 }
 
 .auth-card-header {
@@ -451,7 +451,7 @@ button {
 
 .gender-select-card {
   background: #FFF5F7;
-  border: 2px solid #FCE7F3;
+  border: 2px solid #D1FAE5;
   border-radius: 14px;
   padding: 1rem;
   text-align: center;
@@ -460,13 +460,13 @@ button {
 }
 
 .gender-select-card:hover {
-  border-color: #FDA4AF;
+  border-color: #6EE7B7;
 }
 
 .gender-select-card.selected {
-  background: #FFF1F2;
+  background: #ECFDF5;
   border-color: var(--primary-rose);
-  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.15);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.15);
 }
 
 .gender-select-card h4 {
@@ -505,11 +505,11 @@ button {
 .filter-control:focus {
   background: #FFFFFF;
   border-color: var(--primary-rose);
-  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
 }
 
 .btn-find-matches {
-  background: linear-gradient(135deg, #F43F5E, #E11D48);
+  background: linear-gradient(135deg, #10B981, #059669);
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: 800;
@@ -519,13 +519,13 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.35);
   transition: all var(--transition);
 }
 
 .btn-find-matches:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(225, 29, 72, 0.45);
+  box-shadow: 0 6px 22px rgba(5, 150, 105, 0.45);
 }
 
 /* ==========================================================================
@@ -705,8 +705,8 @@ button {
 
 .profile-card:hover {
   transform: translateY(-4px);
-  border-color: #FECDD3;
-  box-shadow: 0 12px 30px rgba(225, 29, 72, 0.12);
+  border-color: #A7F3D0;
+  box-shadow: 0 12px 30px rgba(5, 150, 105, 0.12);
 }
 
 .card-image-wrap {
@@ -734,7 +734,7 @@ button {
   padding: 4px 10px;
   border-radius: var(--radius-full);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #FECDD3;
+  border: 1px solid #A7F3D0;
 }
 
 .card-online-badge {
@@ -790,7 +790,7 @@ button {
 /* Pembe Panjur Bilimsel Uyum Çizgisi */
 .card-compatibility-bar {
   background: #FFF5F7;
-  border: 1px solid #FCE7F3;
+  border: 1px solid #D1FAE5;
   border-radius: 10px;
   padding: 0.65rem 0.85rem;
   margin-bottom: 1.15rem;
@@ -815,7 +815,7 @@ button {
 
 .comp-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #F43F5E, #E11D48);
+  background: linear-gradient(90deg, #10B981, #059669);
   border-radius: var(--radius-full);
 }
 
@@ -827,9 +827,9 @@ button {
 }
 
 .btn-wink {
-  background: #FFF1F2;
+  background: #ECFDF5;
   color: var(--primary-rose);
-  border: 1.5px solid #FECDD3;
+  border: 1.5px solid #A7F3D0;
   border-radius: 10px;
   padding: 0.65rem;
   font-size: 0.82rem;
@@ -847,7 +847,7 @@ button {
 }
 
 .btn-chat-trigger {
-  background: linear-gradient(135deg, #F43F5E, #E11D48);
+  background: linear-gradient(135deg, #10B981, #059669);
   color: #FFFFFF;
   border-radius: 10px;
   padding: 0.65rem;
@@ -857,7 +857,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
   transition: all var(--transition);
 }
 
@@ -967,13 +967,13 @@ button {
 }
 
 .pp-plan-row:hover {
-  border-color: #FDA4AF;
+  border-color: #6EE7B7;
 }
 
 .pp-plan-row.selected {
-  background: #FFF1F2;
+  background: #ECFDF5;
   border-color: var(--primary-rose);
-  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.12);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.12);
 }
 
 .pp-plan-info {
@@ -1082,7 +1082,7 @@ button {
 }
 
 .btn-pp-submit-payment {
-  background: linear-gradient(135deg, #F43F5E, #E11D48);
+  background: linear-gradient(135deg, #10B981, #059669);
   color: #FFFFFF;
   font-size: 0.95rem;
   font-weight: 800;
@@ -1092,7 +1092,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.35);
 }
 
 /* Toast Bildirimleri */
@@ -1178,7 +1178,7 @@ button {
 }
 
 .chat-msg.me {
-  background: linear-gradient(135deg, #F43F5E, #E11D48);
+  background: linear-gradient(135deg, #10B981, #059669);
   color: #FFFFFF;
   align-self: flex-end;
   border-bottom-right-radius: 4px;
@@ -1228,3 +1228,9 @@ button {
     display: none;
   }
 }
+
+/* HIDE UNWANTED DATING SECTIONS */
+#landingSection, #howItWorks, #stories, #faq, .city-seo-hub-section, .editorial-seo-guide {
+  display: none !important;
+}
+

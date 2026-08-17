@@ -516,9 +516,9 @@ function bootHarmoniApp() {
               <span>${profile.isOnline ? 'Çevrimiçi' : (profile.lastActive || 'Çevrimdışı')}</span>
             </div>
 
-            <!-- Pembe Panjur Uyum Yüzdesi -->
+            <!-- Terapist Değerlendirmesi -->
             <div class="pp-match-score-badge">
-              <span>%${profile.matchScore} Uyum</span>
+              <span>%${profile.matchScore} Memnuniyet</span>
             </div>
             
             ${isMember ? `
@@ -632,44 +632,44 @@ function bootHarmoniApp() {
       <div style="background:#07090E; padding:1.75rem; display:flex; flex-direction:column; gap:1.25rem; border-right:1px solid rgba(255,255,255,0.08); width:320px; flex-shrink:0;">
         <img src="${profile.avatar}" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1.5px solid rgba(255,255,255,0.15);">
         
-        <!-- Pembe Panjur Hızlı Künye -->
+        <!-- Terapist Künye -->
         <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.82rem; color:#94A3B8; background:#121826; padding:1rem; border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
-          <div>📏 <strong>Boy:</strong> ${profile.height || 170} cm</div>
-          <div>🎓 <strong>Eğitim:</strong> ${profile.education || 'Lisans'}</div>
-          <div>💍 <strong>Medeni Durum:</strong> ${profile.maritalStatus || 'Hiç Evlenmemiş'}</div>
-          <div>👶 <strong>Çocuk:</strong> ${profile.hasChildren || 'Yok'} (${profile.wantsChildren || 'İstiyor'})</div>
-          <div>🚭 <strong>Sigara:</strong> ${profile.smoking || 'Kullanmıyor'}</div>
-          <div>✨ <strong>Burç:</strong> ${profile.zodiac || 'Başak'}</div>
+          <div>📍 <strong>Lokasyon:</strong> ${profile.city}</div>
+          <div>💆 <strong>Uzmanlık:</strong> ${profile.profession || 'Masör / Terapist'}</div>
+          <div>⭐ <strong>Deneyim:</strong> 3+ Yıl</div>
+          <div>💯 <strong>Müşteri Memnuniyeti:</strong> %${profile.matchScore}</div>
+          <div>🕒 <strong>Çalışma Saatleri:</strong> 10:00 - 22:00</div>
+          <div>💼 <strong>Hizmet Türü:</strong> ${profile.serviceType || 'Kişiye Özel'}</div>
         </div>
       </div>
 
       <div style="padding:2.25rem; display:flex; flex-direction:column; background:#121826; flex:1;">
         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.4rem;">
           <h2 style="font-family:var(--font-heading); font-size:1.9rem; font-weight:900; color:#FFFFFF;">${profile.name}, ${profile.age}</h2>
-          <span style="background:rgba(244,63,94,0.15); color:#FDA4AF; border:1px solid rgba(244,63,94,0.3); font-size:0.82rem; font-weight:800; padding:5px 12px; border-radius:9999px;">🎯 %${profile.matchScore} Karakter Uyumu</span>
+          <span style="background:rgba(5,150,105,0.15); color:#6EE7B7; border:1px solid rgba(5,150,105,0.3); font-size:0.82rem; font-weight:800; padding:5px 12px; border-radius:9999px;">🎯 %${profile.matchScore} Değerlendirme Puanı</span>
         </div>
         
         <div style="font-size:0.92rem; color:var(--text-secondary); margin-bottom:1.25rem;">📍 ${profile.city} (${profile.district || 'Merkez'}) • 💼 ${profile.profession}</div>
         <p style="font-size:0.92rem; color:#CBD5E1; line-height:1.65; margin-bottom:1.5rem;">${profile.bio}</p>
 
-        <!-- Pembe Panjur Bilimsel Uyum Barları -->
+        <!-- Terapist Değerlendirme Raporu -->
         <div style="background:#0B0F19; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem;">
-          <h4 style="font-family:var(--font-heading); font-size:0.88rem; font-weight:800; color:#FFFFFF; margin-bottom:0.85rem; text-transform:uppercase; letter-spacing:0.05em;">🧠 Bilimsel Eşleştirme Raporu</h4>
+          <h4 style="font-family:var(--font-heading); font-size:0.88rem; font-weight:800; color:#FFFFFF; margin-bottom:0.85rem; text-transform:uppercase; letter-spacing:0.05em;">💆 Değerlendirme Raporu</h4>
           
           <div style="display:flex; flex-direction:column; gap:0.65rem; font-size:0.8rem;">
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem; color:#94A3B8;">
-                <span>Ortak Değerler & İnançlar</span>
+                <span>Masaj Kalitesi & Teknik</span>
                 <strong style="color:var(--primary-rose);">%${comp.values}</strong>
               </div>
               <div style="width:100%; height:6px; background:#1E293B; border-radius:9999px; overflow:hidden;">
-                <div style="width:${comp.values}%; height:100%; background:linear-gradient(90deg, #F43F5E, #FB7185); border-radius:9999px;"></div>
+                <div style="width:${comp.values}%; height:100%; background:linear-gradient(90deg, #10B981, #059669); border-radius:9999px;"></div>
               </div>
             </div>
 
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem; color:#94A3B8;">
-                <span>Yaşam Tarzı & Alışkanlıklar</span>
+                <span>Hijyen & Profesyonellik</span>
                 <strong style="color:var(--accent-gold);">%${comp.lifestyle}</strong>
               </div>
               <div style="width:100%; height:6px; background:#1E293B; border-radius:9999px; overflow:hidden;">
@@ -679,7 +679,7 @@ function bootHarmoniApp() {
 
             <div>
               <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem; color:#94A3B8;">
-                <span>İletişim & Duygusal Uyum</span>
+                <span>İletişim & Müşteri Memnuniyeti</span>
                 <strong style="color:#10B981;">%${comp.communication}</strong>
               </div>
               <div style="width:100%; height:6px; background:#1E293B; border-radius:9999px; overflow:hidden;">
