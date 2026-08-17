@@ -1,57 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Ana Sayfa (Maximum Priority) -->
   <url>
     <loc>https://harmoniliski.com/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 81 İl Bölgesel ve Şehir Odaklı Google SEO Dizinleri -->
   <url>
-    <loc>https://harmoniliski.com/#istanbul-masaj</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#istanbul</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://harmoniliski.com/#izmir-masaj</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#ankara</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://harmoniliski.com/#ankara-masaj</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#izmir</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://harmoniliski.com/#antalya-masaj</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#antalya</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#bursa</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://harmoniliski.com/#bursa-masaj</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#adana</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://harmoniliski.com/#medikal-masaj</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#mugla</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#eskisehir</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#gaziantep</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#kocaeli</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#konya</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#mersin</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#samsun</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#trabzon</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://harmoniliski.com/#fiyat-tarifesi</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://harmoniliski.com/#isvec-masaji</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://harmoniliski.com/#sikca-sorulan-sorular</loc>
+    <lastmod>2026-08-17T23:55:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
-  <url>
-    <loc>https://harmoniliski.com/#aromaterapi</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
+
 </urlset>
