@@ -879,19 +879,23 @@ function bootHarmoniApp() {
   window.closeAllModals = () => closeAllModals();
   window.closeModalById = (id) => closeModal(document.getElementById(id));
 
-  function closeAllModals() {
-    closeModal(DOM.profileDetailModal);
-    closeModal(DOM.chatModal);
-    closeModal(DOM.inboxModal);
-    closeModal(DOM.winksModal);
-    closeModal(DOM.myProfileModal);
-    closeModal(DOM.vipModal);
-    closeModal(DOM.checkoutModal);
-    closeModal(DOM.quizModal);
-    closeModal(DOM.loginModal);
-    closeModal(DOM.registerModal);
-    closeModal(DOM.feedbackModal);
-    closeModal(DOM.legalModal);
+  function playChime() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(587.33, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.15);
+      gain.gain.setValueAtTime(0.12, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.35);
+    } catch(e) {}
   }
 
   function showToast(message) {
@@ -912,51 +916,42 @@ function bootHarmoniApp() {
       maritalStatus: 'all', education: 'all', searchQuery: '',
       sortBy: 'match-score', onlyFavorites: false
     };
-    DOM.filterGender.value = 'all';
-    DOM.filterCity.value = 'all';
-    DOM.filterMinComp.value = '80';
-    DOM.filterSearch.value = '';
+    if (DOM.filterGender) DOM.filterGender.value = 'all';
+    if (DOM.filterCity) DOM.filterCity.value = 'all';
+    if (DOM.filterMinComp) DOM.filterMinComp.value = '80';
+    if (DOM.filterSearch) DOM.filterSearch.value = '';
     renderProfiles();
   }
 
-  // Event Listeners
-  function attachEventListeners() {
-    // 1. Landing Cinsiyet Seçimi
-    DOM.heroGenderFemale?.addEventListener('click', () => {
-      DOM.heroGenderFemale.classList.add('selected');
-      DOM.heroGenderMale.classList.remove('selected');
-    });
+  // Auth Yürütücüleri (Global & Yerel)
+  function executeHeroRegister() {
+    const isFemale = DOM.heroGenderFemale ? DOM.heroGenderFemale.classList.contains('selected') : false;
+    const nameInput = document.getElementById('heroRegName');
+    const ageInput = document.getElementById('heroRegAge');
+    const cityInput = document.getElementById('heroRegCity');
+    const jobInput = document.getElementById('heroRegJob');
 
-    DOM.heroGenderMale?.addEventListener('click', () => {
-      DOM.heroGenderMale.classList.add('selected');
-      DOM.heroGenderFemale.classList.remove('selected');
-    });
+    const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (isFemale ? "Zeynep" : "Emre");
+    const age = (ageInput && parseInt(ageInput.value)) ? parseInt(ageInput.value) : 28;
+    const city = (cityInput && cityInput.value) ? cityInput.value : "İstanbul";
+    const job = (jobInput && jobInput.value.trim()) ? jobInput.value.trim() : "Mimar";
 
-    // 2. Landing Ücretsiz Kayıt Formu
-    DOM.heroRegisterForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const isFemale = DOM.heroGenderFemale.classList.contains('selected');
-      const name = document.getElementById('heroRegName').value;
-      const age = parseInt(document.getElementById('heroRegAge').value);
-      const city = document.getElementById('heroRegCity').value;
-      const job = document.getElementById('heroRegJob').value;
+    state.currentUser = {
+      name: name,
+      gender: isFemale ? 'female' : 'male',
+      age: age,
+      city: city,
+      profession: job,
+      bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
+      isVIP: isFemale,
+      vipPlan: null
+    };
 
-      state.currentUser = {
-        name: name,
-        gender: isFemale ? 'female' : 'male',
-        age: age,
-        city: city,
-        profession: job,
-        bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
-        isVIP: isFemale,
-        vipPlan: null
-      };
+    state.isLoggedIn = true;
+    localStorage.setItem('harmoni_auth_session', 'true');
+    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
 
-      state.isLoggedIn = true;
-      localStorage.setItem('harmoni_auth_session', 'true');
-      localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-
-      // Admin Paneli İçin Yeni Üyeler Listesine Ekle
+    try {
       let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
       regUsers.unshift({
         id: "reg-" + Date.now(),
@@ -976,14 +971,142 @@ function bootHarmoniApp() {
         joinDate: new Date().toLocaleDateString('tr-TR')
       });
       localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+    } catch(e) {}
 
-      trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
+    trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
+    applyAuthStateUI();
+    renderProfiles();
+    playChime();
+    showToast(`🎉 Başvurunuz Alındı, ${name}! Profiliniz aktif edildi, eşleşmeleri inceleyebilirsiniz.`);
+    document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+  }
 
-      applyAuthStateUI();
-      renderProfiles();
-      playChime();
-      showToast(`🎉 Başvurunuz Alındı, ${name}! Yönetici onayına iletildi, adayları inceleyebilirsiniz.`);
-      document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+  function executeModalRegister() {
+    const regFemCard = document.getElementById('modalRegGenderFemale');
+    const isFemale = regFemCard ? regFemCard.classList.contains('selected') : false;
+    const nameInput = document.getElementById('modalRegName');
+    const ageInput = document.getElementById('modalRegAge');
+    const cityInput = document.getElementById('modalRegCity');
+    const jobInput = document.getElementById('modalRegJob');
+
+    const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (isFemale ? "Selin" : "Murat");
+    const age = (ageInput && parseInt(ageInput.value)) ? parseInt(ageInput.value) : 29;
+    const city = (cityInput && cityInput.value) ? cityInput.value : "İstanbul";
+    const job = (jobInput && jobInput.value.trim()) ? jobInput.value.trim() : "Mühendis";
+
+    state.currentUser = {
+      name: name,
+      gender: isFemale ? 'female' : 'male',
+      age: age,
+      city: city,
+      profession: job,
+      bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
+      isVIP: isFemale,
+      vipPlan: null
+    };
+
+    state.isLoggedIn = true;
+    localStorage.setItem('harmoni_auth_session', 'true');
+    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
+
+    try {
+      let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
+      regUsers.unshift({
+        id: "reg-" + Date.now(),
+        name: name,
+        gender: isFemale ? 'female' : 'male',
+        age: age,
+        city: city,
+        profession: job,
+        education: "Lisans",
+        matchScore: 97,
+        verified: true,
+        status: 'pending',
+        isVIP: isFemale,
+        avatar: isFemale 
+          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
+        joinDate: new Date().toLocaleDateString('tr-TR')
+      });
+      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
+    } catch(e) {}
+
+    trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
+    closeModal(DOM.registerModal);
+    window.closeModalById('registerModal');
+    applyAuthStateUI();
+    renderProfiles();
+    playChime();
+    showToast(`🎉 Aramıza Hoşgeldiniz, ${name}! Hesabınız anında aktif edildi.`);
+    document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function executeLogin() {
+    const emailInput = document.getElementById('loginEmail');
+    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim() : 'murat@gmail.com';
+    const userName = email.split('@')[0];
+
+    if (!state.currentUser || state.currentUser.name === 'Üye') {
+      state.currentUser = {
+        name: userName.charAt(0).toUpperCase() + userName.slice(1),
+        gender: 'male',
+        age: 31,
+        city: 'İstanbul',
+        profession: 'Üye',
+        bio: 'Ciddi bir ilişki ve evlilik arıyorum.',
+        isVIP: false,
+        vipPlan: null
+      };
+    }
+
+    state.isLoggedIn = true;
+    localStorage.setItem('harmoni_auth_session', 'true');
+    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
+    closeModal(DOM.loginModal);
+    window.closeModalById('loginModal');
+    applyAuthStateUI();
+    renderProfiles();
+    playChime();
+    showToast(`✓ Giriş yapıldı. Hoşgeldiniz, ${state.currentUser.name}!`);
+    document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  window.executeHeroRegister = executeHeroRegister;
+  window.executeModalRegister = executeModalRegister;
+  window.executeLogin = executeLogin;
+
+  function closeAllModals() {
+    closeModal(DOM.profileDetailModal);
+    closeModal(DOM.chatModal);
+    closeModal(DOM.inboxModal);
+    closeModal(DOM.winksModal);
+    closeModal(DOM.myProfileModal);
+    closeModal(DOM.vipModal);
+    closeModal(DOM.checkoutModal);
+    closeModal(DOM.quizModal);
+    closeModal(DOM.loginModal);
+    closeModal(DOM.registerModal);
+    closeModal(DOM.feedbackModal);
+    closeModal(DOM.legalModal);
+  }
+
+  // Event Listeners
+  function attachEventListeners() {
+    // 1. Landing Cinsiyet Seçimi
+    DOM.heroGenderFemale?.addEventListener('click', () => {
+      DOM.heroGenderFemale.classList.add('selected');
+      DOM.heroGenderMale.classList.remove('selected');
+    });
+
+    DOM.heroGenderMale?.addEventListener('click', () => {
+      DOM.heroGenderMale.classList.add('selected');
+      DOM.heroGenderFemale.classList.remove('selected');
+    });
+
+    // 2. Landing Ücretsiz Kayıt Formu
+    DOM.heroRegisterForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      executeHeroRegister();
     });
 
     // 3. Giriş Yap / Üye Ol Modal ve Form İşlemleri
@@ -1023,85 +1146,13 @@ function bootHarmoniApp() {
     // Hızlı Üye Ol Formu (Modal İçi)
     DOM.modalRegisterForm?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const isFemale = regFemCard ? regFemCard.classList.contains('selected') : false;
-      const name = document.getElementById('modalRegName').value;
-      const age = parseInt(document.getElementById('modalRegAge').value);
-      const city = document.getElementById('modalRegCity').value;
-      const job = document.getElementById('modalRegJob').value;
-
-      state.currentUser = {
-        name: name,
-        gender: isFemale ? 'female' : 'male',
-        age: age,
-        city: city,
-        profession: job,
-        bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
-        isVIP: isFemale,
-        vipPlan: null
-      };
-
-      state.isLoggedIn = true;
-      localStorage.setItem('harmoni_auth_session', 'true');
-      localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-
-      let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-      regUsers.unshift({
-        id: "reg-" + Date.now(),
-        name: name,
-        gender: isFemale ? 'female' : 'male',
-        age: age,
-        city: city,
-        profession: job,
-        education: "Lisans",
-        matchScore: 97,
-        verified: true,
-        status: 'pending',
-        isVIP: isFemale,
-        avatar: isFemale 
-          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
-        joinDate: new Date().toLocaleDateString('tr-TR')
-      });
-      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-
-      trackRealVisit(`🔔 YENİ ÜYE BAŞVURUSU: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city})`);
-
-      closeModal(DOM.registerModal);
-      applyAuthStateUI();
-      renderProfiles();
-      playChime();
-      showToast(`🎉 Aramıza Hoşgeldiniz, ${name}! Hesabınız anında aktif edildi.`);
-      document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+      executeModalRegister();
     });
 
     // Giriş Yap Formu
     DOM.loginForm?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = document.getElementById('loginEmail')?.value || 'Uye';
-      const userName = email.split('@')[0];
-
-      if (!state.currentUser || state.currentUser.gender === 'male') {
-        state.currentUser = {
-          name: userName.charAt(0).toUpperCase() + userName.slice(1),
-          gender: 'male',
-          age: 31,
-          city: 'İstanbul',
-          profession: 'Üye',
-          bio: 'Ciddi bir ilişki ve evlilik arıyorum.',
-          isVIP: false,
-          vipPlan: null
-        };
-      }
-
-      state.isLoggedIn = true;
-      localStorage.setItem('harmoni_auth_session', 'true');
-      localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-      closeModal(DOM.loginModal);
-      applyAuthStateUI();
-      renderProfiles();
-      playChime();
-      showToast(`✓ Giriş yapıldı. Hoşgeldiniz, ${state.currentUser.name}!`);
-      document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+      executeLogin();
     });
 
     // 4. Çıkış Yap (Logout)
