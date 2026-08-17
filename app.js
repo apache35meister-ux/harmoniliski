@@ -218,23 +218,30 @@ function bootHarmoniApp() {
   // Kullanıcı Üyelik Durumunu Arayüze Yansıtma (Kadın / Erkek / VIP)
   function updateUserMembershipUI() {
     const user = state.currentUser;
+    if (!user) return;
 
     if (DOM.headerUserName) DOM.headerUserName.textContent = user.name.split(' ')[0];
 
     if (user.gender === 'female') {
-      DOM.headerUserBadge.textContent = "KADIN (ÜCRETSİZ VIP)";
-      DOM.headerUserBadge.className = "gender-membership-badge female";
-      DOM.btnOpenVipModal.style.display = "none";
+      if (DOM.headerUserBadge) {
+        DOM.headerUserBadge.textContent = "KADIN (ÜCRETSİZ VIP)";
+        DOM.headerUserBadge.className = "gender-membership-badge female";
+      }
+      if (DOM.btnOpenVipModal) DOM.btnOpenVipModal.style.display = "none";
     } else {
       if (user.isVIP) {
-        DOM.headerUserBadge.textContent = "👑 GOLD VIP";
-        DOM.headerUserBadge.className = "gender-membership-badge male-vip";
-        DOM.headerVipBtnText.textContent = "VIP Aktif";
+        if (DOM.headerUserBadge) {
+          DOM.headerUserBadge.textContent = "👑 GOLD VIP";
+          DOM.headerUserBadge.className = "gender-membership-badge male-vip";
+        }
+        if (DOM.headerVipBtnText) DOM.headerVipBtnText.textContent = "VIP Aktif";
       } else {
-        DOM.headerUserBadge.textContent = "STANDART";
-        DOM.headerUserBadge.className = "gender-membership-badge male-free";
-        DOM.headerVipBtnText.textContent = "VIP Üye Ol";
-        DOM.btnOpenVipModal.style.display = "flex";
+        if (DOM.headerUserBadge) {
+          DOM.headerUserBadge.textContent = "STANDART";
+          DOM.headerUserBadge.className = "gender-membership-badge male-free";
+        }
+        if (DOM.headerVipBtnText) DOM.headerVipBtnText.textContent = "VIP Üye Ol";
+        if (DOM.btnOpenVipModal) DOM.btnOpenVipModal.style.display = "flex";
       }
     }
 
@@ -336,25 +343,7 @@ function bootHarmoniApp() {
     showToast(`🎉 Tebrikler! ${planName} üyeliğiniz başarıyla aktif edildi. Artık tüm kadın üyelerle dilediğinizce mesajlaşabilirsiniz!`);
   }
 
-  // Ses Efekti
-  function playChime() {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(523.25, ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(783.99, ctx.currentTime + 0.15);
-      gain.gain.setValueAtTime(0.08, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.3);
-    } catch(e) {}
-  }
+  // Ses Efekti - Tek tanım (ikinci kopya app.js'in ilerleyen kısımlarında da vardı, o kaldırılacak)
 
   // Başarı Hikayeleri
   function renderSuccessStories() {
@@ -458,8 +447,9 @@ function bootHarmoniApp() {
   // Profil Kartlarını Render Etme (Pembe Panjur Stili Rozetler)
   function renderProfiles() {
     renderOnlineStrip();
+    if (!DOM.profileGrid) return;
     const list = getFilteredProfiles();
-    DOM.matchesCountDisplay.textContent = list.length;
+    if (DOM.matchesCountDisplay) DOM.matchesCountDisplay.textContent = list.length;
 
     if (list.length === 0) {
       DOM.profileGrid.innerHTML = `
