@@ -3,281 +3,604 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HARMONİ Yönetim Paneli | Gerçek Zamanlı Analitik & Moderasyon</title>
-  <meta name="google-site-verification" content="QcGPrGD0ave0i2i9t5U4-ti5_OrX7YV9paZcB8cXvxE" />
-  <link rel="stylesheet" href="admin.css">
+  <title>ZENSPA | VIP Yönetim & Terapist Paneli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-black: #050507;
+      --bg-surface: #0E0E12;
+      --bg-card: #141418;
+      --bg-card-hover: #1A1A20;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(230, 175, 46, 0.35);
+      --gold-gradient: linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%);
+      --emerald-gradient: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      --text-white: #FFFFFF;
+      --text-gray: #A1A1AA;
+      --text-muted: #71717A;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: #08080A;
+      border-right: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .brand-title h2 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .brand-title span {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      color: var(--text-gray);
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .nav-item a:hover, .nav-item a.active {
+      background: rgba(230, 175, 46, 0.12);
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+    }
+
+    .sidebar-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
+    }
+    .btn-live-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      background: #121216;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-live-site:hover {
+      border-color: #FBBF24;
+      color: #FBBF24;
+    }
+
+    /* Main Area */
+    .main-content {
+      flex: 1;
+      padding: 2.5rem;
+      overflow-y: auto;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .top-header h1 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: #FFF;
+    }
+    .top-header p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .btn-add-therapist {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.88rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-add-therapist:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .kpi-card h4 {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+    }
+    .kpi-card .number {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #FFF;
+    }
+    .kpi-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #0D0D10;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    /* Table Section */
+    .table-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 1.75rem;
+    }
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .table-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+    }
+    .search-input {
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+      width: 250px;
+    }
+    .search-input:focus { border-color: #FBBF24; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .therapist-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .therapist-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border-gold);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(37, 211, 102, 0.15);
+      color: #4ADE80;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+    .status-vitrin {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+    }
+
+    .action-btn {
+      background: #1C1C22;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover {
+      border-color: #EF4444;
+      color: #EF4444;
+    }
+    .btn-wa-direct {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #4ADE80;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .btn-wa-direct:hover { background: #25D366; color: #000; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 999;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: #101014;
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      max-width: 540px;
+      width: 100%;
+      padding: 2rem;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #18181E;
+      border: none;
+      color: #FFF;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; text-transform: uppercase; font-weight: 700; }
+    .form-control {
+      width: 100%;
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .form-control:focus { border-color: #FBBF24; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  </style>
 </head>
 <body>
 
-  <!-- Sol Menü (Sidebar) -->
-  <aside class="admin-sidebar">
-    <div class="sidebar-header">
-      <div class="sidebar-logo-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      </div>
-      <div class="sidebar-brand-text">
-        <h2>HARMONİ</h2>
-        <span>Canlı Yönetim Paneli</span>
-      </div>
-    </div>
-
-    <nav class="sidebar-nav">
-      <span class="nav-heading">Canlı Analitik</span>
-      <a class="side-link active" data-tab="dashboard">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-        <span>Gerçek Zamanlı Özet</span>
-      </a>
-      <a class="side-link" data-tab="traffic">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span>Ziyaretçi Trafik Akışı</span>
-        <span class="side-badge" style="background:#10B981;" id="sidebarVisitorsCount">0</span>
-      </a>
-
-      <span class="nav-heading">Üye & Moderasyon</span>
-      <a class="side-link" data-tab="members">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Kayıtlı Üyeler</span>
-        <span class="side-badge" id="sidebarMembersCount">5</span>
-      </a>
-      <a class="side-link" data-tab="approvals">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-        <span>Onay Bekleyen Terapistler</span>
-        <span class="side-badge" style="background:var(--accent-amber);" id="sidebarPendingCount">0</span>
-      </a>
-
-      <span class="nav-heading">Finans & Sistem</span>
-      <a class="side-link" data-tab="vip-sales">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <span>VIP Satış Cirosu</span>
-      </a>
-    </nav>
-
-    <div class="sidebar-footer">
-      <div class="admin-user-info">
-        <img src="images/turkish_emre_candid_1786793611473.jpg" alt="Admin" class="admin-avatar">
-        <div>
-          <h5>Sistem Yöneticisi</h5>
-          <span style="font-size:0.7rem; color:#94A3B8;">apache35meister@gmail.com</span>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand">
+        <div class="brand-icon">✨</div>
+        <div class="brand-title">
+          <h2>ZENSPA</h2>
+          <span>Yönetim Paneli</span>
         </div>
       </div>
-      <a href="index.html" class="btn-back-site" title="Ana Siteye Dön">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="active">📊 Terapist Yönetimi</a></li>
+        <li class="nav-item"><a href="#">👑 Vitrin & İlanlar</a></li>
+        <li class="nav-item"><a href="#">💬 WhatsApp Raporu</a></li>
+        <li class="nav-item"><a href="#">⚙️ Ayarlar</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn-live-site" target="_blank">
+        <span>🌐 Ana Siteyi Görüntüle</span>
       </a>
     </div>
   </aside>
 
-  <!-- Ana Yönetim Alanı -->
-  <main class="admin-main">
-    
-    <!-- Üst Başlık Barı -->
-    <div class="admin-top-bar">
-      <div class="page-title">
-        <h1>HARMONİ Gerçek Zamanlı Yönetim Paneli</h1>
-        <p>Tüm veriler tarayıcı ve sunucunuzdan gelen %100 gerçek canlı istatistiklerdir.</p>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="top-header">
+      <div>
+        <h1>VIP Terapist & İlan Yönetimi</h1>
+        <p>Sitedeki aktif masör, masöz profillerini ve gelen vitrin taleplerini buradan yönetin.</p>
       </div>
 
-      <div class="admin-top-actions" style="display:flex; gap:0.5rem;">
-        <button class="btn-action-icon" id="btnResetAllStats" title="İstatistikleri Sıfırla" style="background:#EF4444; color:#fff; padding:0.5rem 0.9rem; border-radius:6px; font-size:0.8rem; font-weight:700; display:flex; align-items:center; gap:0.4rem; width:auto; height:auto;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-          <span>Verileri Sıfırla</span>
-        </button>
-
-        <button class="btn-admin-primary" id="btnOpenNewMemberModal">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-          <span>Yeni Profil Ekle</span>
-        </button>
-      </div>
+      <button class="btn-add-therapist" onclick="openAddModal()">
+        <span>+ Yeni Terapist Ekle</span>
+      </button>
     </div>
 
-    <!-- Canlı Yeni Üye Bildirim Bannerı -->
-    <div id="adminNewMemberAlert" style="display:none; background:linear-gradient(90deg, #F43F5E, #E11D48); color:#FFFFFF; padding:1.15rem 1.75rem; border-radius:14px; margin-bottom:1.75rem; align-items:center; justify-content:space-between; box-shadow:0 0 28px rgba(244,63,94,0.45); border:1px solid rgba(255,255,255,0.2);">
-      <div style="display:flex; align-items:center; gap:0.9rem;">
-        <span style="font-size:1.8rem; animation:heartBeat 1.2s infinite ease-in-out;">🔔</span>
-        <div>
-          <strong style="font-size:1.05rem; display:block; font-family:var(--font-heading);" id="adminAlertTitle">YENİ ÜYE BAŞVURUSU GELDİ!</strong>
-          <span style="font-size:0.88rem; color:#FFE4E6;" id="adminAlertDesc">Zeynep Kaya (Kadın - İstanbul) az önce sisteme kaydoldu ve onay bekliyor.</span>
-        </div>
-      </div>
-      <div style="display:flex; gap:0.6rem;">
-        <button id="btnAdminApproveNow" style="background:#10B981; color:#fff; font-weight:800; padding:0.55rem 1.15rem; border-radius:8px; font-size:0.85rem; cursor:pointer; border:1px solid rgba(255,255,255,0.2);">✓ Hemen Onayla</button>
-        <button id="btnAdminDismissAlert" style="background:rgba(0,0,0,0.35); color:#fff; font-weight:700; padding:0.55rem 0.95rem; border-radius:8px; font-size:0.85rem; cursor:pointer; border:1px solid rgba(255,255,255,0.15);">Kapat ✕</button>
-      </div>
-    </div>
-
-    <!-- 4 Adet KPI İstatistik Kartı (%100 GERÇEK VE CANLI VERİLER) -->
+    <!-- KPI Summary -->
     <div class="kpi-grid">
-      <!-- Gerçek Ziyaretçi Sayısı -->
       <div class="kpi-card">
-        <div class="kpi-left">
-          <h3>Toplam Canlı Ziyaret</h3>
-          <div class="kpi-num" id="kpiTotalVisits" style="color:var(--accent-green);">1</div>
-          <div class="kpi-trend" style="color:var(--accent-green);">🟢 Gerçek Zamanlı Trafik</div>
+        <div>
+          <h4>Toplam Terapist</h4>
+          <div class="number" id="kpiTotal">12</div>
         </div>
-        <div class="kpi-icon-box" style="background:rgba(16, 185, 129, 0.15); color:var(--accent-green);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
+        <div class="kpi-icon">💆</div>
       </div>
 
-      <!-- Gerçek Kayıtlı Üye Sayısı -->
       <div class="kpi-card">
-        <div class="kpi-left">
-          <h3>Sistemdeki Gerçek Üyeler</h3>
-          <div class="kpi-num" id="kpiTotalMembers">5</div>
-          <div class="kpi-trend" id="kpiGenderRatio">👩 2 Kadın • 👨 3 Erkek</div>
+        <div>
+          <h4>👑 Vitrin İlanları</h4>
+          <div class="number" style="color: #FDE047;">5</div>
         </div>
-        <div class="kpi-icon-box">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
+        <div class="kpi-icon">💎</div>
       </div>
 
-      <!-- Gerçek Onay Bekleyen Terapistler -->
       <div class="kpi-card">
-        <div class="kpi-left">
-          <h3>Onay Bekleyen Profiller</h3>
-          <div class="kpi-num" id="kpiPendingCount">0</div>
-          <div class="kpi-trend" style="color:var(--accent-amber);">⏳ İnceleme Kuyruğu</div>
+        <div>
+          <h4>WhatsApp Hattı</h4>
+          <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
         </div>
-        <div class="kpi-icon-box">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-        </div>
-      </div>
-
-      <!-- Gerçek VIP Satış Cirosu -->
-      <div class="kpi-card">
-        <div class="kpi-left">
-          <h3>Gerçek VIP Paket Cirosu</h3>
-          <div class="kpi-num" id="kpiVipRevenue" style="color:var(--accent-gold);">₺0</div>
-          <div class="kpi-trend" style="color:var(--accent-gold);">👑 Erkek VIP Paket Satışları</div>
-        </div>
-        <div class="kpi-icon-box" style="color:var(--accent-gold); background:rgba(245, 158, 11, 0.15);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
+        <div class="kpi-icon">💬</div>
       </div>
     </div>
 
-    <!-- Ziyaretçi & Canlı Trafik Günlüğü Tablosu -->
-    <div class="admin-card" id="trafficSection" style="margin-bottom:2rem;">
-      <div class="card-header-bar">
-        <div class="card-header-title">🟢 Canlı Ziyaretçi & Trafik Akışı</div>
-        <span style="font-size:0.8rem; color:var(--text-muted);">Sitenize gelen gerçek giriş ve etkileşimler anlık listelenir.</span>
+    <!-- Terapist Listesi Tablosu -->
+    <div class="table-section">
+      <div class="table-header">
+        <h3>Yayındaki Terapistler</h3>
+        <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
       </div>
-      <div style="overflow-x:auto;">
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Zaman</th>
-              <th>Yapılan Eylem / Sayfa</th>
-              <th>Cihaz & Tarayıcı</th>
-              <th>Durum</th>
-            </tr>
-          </thead>
-          <tbody id="adminTrafficTableBody">
-            <!-- JS ile canlı beslenecek -->
-          </tbody>
-        </table>
-      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Terapist</th>
+            <th>Şehir / Semt</th>
+            <th>Uzmanlık</th>
+            <th>Seans Ücreti</th>
+            <th>Durum</th>
+            <th>WhatsApp Randevu</th>
+            <th>İşlem</th>
+          </tr>
+        </thead>
+        <tbody id="therapistTableBody">
+          <!-- JS ile doldurulacak -->
+        </tbody>
+      </table>
     </div>
-
-    <!-- Üye Yönetimi & Moderasyon Tablosu -->
-    <div class="admin-card" id="membersSection">
-      <div class="card-header-bar">
-        <div class="card-header-title">Gerçek Üye Listesi & Üyelik Durumları</div>
-        <div style="display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap;">
-          <input type="text" id="adminSearchInput" class="table-search-box" placeholder="İsim veya şehir ara...">
-          <select id="adminStatusFilter" class="table-search-box" style="width:200px;">
-            <option value="all">Tüm Üyeler</option>
-            <option value="pending">⏳ Onay Bekleyen Terapistler</option>
-            <option value="approved">✓ Onaylı Üyeler</option>
-            <option value="female">👩 Kadınlar (%100 Ücretsiz)</option>
-            <option value="male-vip">👑 Erkek VIP Aboneler</option>
-            <option value="male-free">👨 Erkek Standart</option>
-          </select>
-        </div>
-      </div>
-
-      <div style="overflow-x:auto;">
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Üye</th>
-              <th>Cinsiyet & Üyelik Tipi</th>
-              <th>Meslek & Şehir</th>
-              <th>Karakter Uyumu</th>
-              <th>Durum</th>
-              <th>Aksiyonlar</th>
-            </tr>
-          </thead>
-          <tbody id="adminTableBody">
-            <!-- JavaScript ile doldurulacak -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-
   </main>
 
-  <!-- Yeni Üye Ekleme Modalı -->
-  <div class="modal-admin-overlay" id="newMemberModal">
-    <div class="modal-admin-box">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-        <h3 style="font-family:var(--font-heading); font-size:1.3rem;">Manuel Yeni Üye Ekle</h3>
-        <button id="btnCloseNewMemberModal" style="color:var(--text-muted); font-size:1.2rem; cursor:pointer;">✕</button>
-      </div>
+  <!-- Modal: Yeni Terapist Ekle -->
+  <div class="modal-overlay" id="addTherapistModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAddModal()">✕</button>
+      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.25rem;">Yeni Terapist Ekle</h3>
 
-      <form id="newMemberForm">
-        <div class="form-grid-2">
-          <div class="admin-form-group">
-            <label for="newMemName">Ad Soyad *</label>
-            <input type="text" id="newMemName" class="admin-input" placeholder="Örn: Selin Yılmaz" required>
+      <form id="addTherapistForm" onsubmit="saveTherapist(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad & Ünvan</label>
+            <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Masöz" required>
           </div>
-          <div class="admin-form-group">
-            <label for="newMemAge">Yaş *</label>
-            <input type="number" id="newMemAge" class="admin-input" placeholder="28" min="18" max="70" required>
+          <div class="form-group">
+            <label>Yaş</label>
+            <input type="number" id="tAge" class="form-control" placeholder="26" required>
           </div>
         </div>
 
-        <div class="form-grid-2">
-          <div class="admin-form-group">
-            <label for="newMemGender">Cinsiyet *</label>
-            <select id="newMemGender" class="admin-input" required>
-              <option value="female">Kadın (%100 Ücretsiz VIP)</option>
-              <option value="male">Erkek (Standart / VIP)</option>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Şehir</label>
+            <input type="text" id="tCity" class="form-control" placeholder="İstanbul" required>
+          </div>
+          <div class="form-group">
+            <label>Semt / Bölge</label>
+            <input type="text" id="tDistrict" class="form-control" placeholder="Kadıköy" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Cinsiyet</label>
+            <select id="tGender" class="form-control">
+              <option value="Kadın">Kadın Masöz</option>
+              <option value="Erkek">Erkek Masör</option>
             </select>
           </div>
-          <div class="admin-form-group">
-            <label for="newMemCity">Şehir *</label>
-            <input type="text" id="newMemCity" class="admin-input" placeholder="İstanbul" required>
+          <div class="form-group">
+            <label>Seans Ücreti</label>
+            <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 1.800 ₺" required>
           </div>
         </div>
 
-        <div class="form-grid-2">
-          <div class="admin-form-group">
-            <label for="newMemJob">Meslek *</label>
-            <input type="text" id="newMemJob" class="admin-input" placeholder="Mimar" required>
-          </div>
-          <div class="admin-form-group">
-            <label for="newMemPhoto">Fotoğraf URL</label>
-            <input type="url" id="newMemPhoto" class="admin-input" placeholder="https://images.unsplash.com/...">
-          </div>
+        <div class="form-group">
+          <label>WhatsApp Numarası</label>
+          <input type="text" id="tWhatsapp" class="form-control" placeholder="15096204167" value="15096204167" required>
         </div>
 
-        <div class="admin-form-group">
-          <label for="newMemBio">Biyografi</label>
-          <textarea id="newMemBio" class="admin-input" style="resize:vertical; min-height:80px;" placeholder="Tanıtım yazısı..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-admin-primary" style="width:100%; justify-content:center; padding:0.85rem;">
-          <span>Üyeyi Sisteme Kaydet ve Onayla</span>
+        <button type="submit" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.9rem; margin-top: 0.5rem;">
+          Kaydet ve Yayına Al
         </button>
       </form>
     </div>
   </div>
 
-  <!-- Scriptler -->
-  <script src="data.js?v=5.0"></script>
-  <script src="admin.js?v=5.0"></script>
+  <script>
+    let list = [
+      { id: 1, name: "Selin Terapist", city: "İstanbul", district: "Beşiktaş", services: "İsveç, Aromaterapi", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg" },
+      { id: 2, name: "Derya Masöz", city: "İstanbul", district: "Kadıköy", services: "Aromaterapi, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg" },
+      { id: 3, name: "Elif Uzman Terapist", city: "İzmir", district: "Alsancak", services: "Medikal, İsveç", price: "1.500 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg" },
+      { id: 4, name: "Emre Masör", city: "İstanbul", district: "Şişli", services: "Sporcu, Derin Doku", price: "1.750 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_emre_candid_1786793611473.jpg" },
+      { id: 5, name: "Zeynep Terapist", city: "Ankara", district: "Çankaya", services: "İsveç, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_zeynep_selfie_1786793596006.jpg" },
+      { id: 6, name: "Cansu Masöz", city: "Antalya", district: "Muratpaşa", services: "Thai, Aromaterapi", price: "1.700 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_cansu_selfie.jpg" },
+      { id: 7, name: "Burak Medikal Masör", city: "Ankara", district: "Kızılay", services: "Medikal, Derin Doku", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_burak_photo_1786793640471.jpg" }
+    ];
+
+    function renderTable(items) {
+      const tbody = document.getElementById('therapistTableBody');
+      tbody.innerHTML = items.map(t => `
+        <tr>
+          <td>
+            <div class="therapist-info">
+              <img src="${t.img}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <div>
+                <strong style="color:#FFF;">${t.name}</strong>
+              </div>
+            </div>
+          </td>
+          <td>📍 ${t.city}, ${t.district}</td>
+          <td>${t.services}</td>
+          <td style="color:#FDE047; font-weight:700;">${t.price}</td>
+          <td>
+            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 VIP Vitrin</span>' : '<span class="status-badge">🟢 Aktif</span>'}
+          </td>
+          <td>
+            <a href="https://wa.me/${t.wa}" target="_blank" class="btn-wa-direct">
+              💬 WhatsApp'a Git
+            </a>
+          </td>
+          <td>
+            <button class="action-btn" onclick="deleteItem(${t.id})">Sil</button>
+          </td>
+        </tr>
+      `).join('');
+      document.getElementById('kpiTotal').textContent = list.length;
+    }
+
+    function filterTable() {
+      const q = document.getElementById('tableSearch').value.toLowerCase();
+      const filtered = list.filter(t => t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || t.district.toLowerCase().includes(q));
+      renderTable(filtered);
+    }
+
+    function openAddModal() { document.getElementById('addTherapistModal').classList.add('active'); }
+    function closeAddModal() { document.getElementById('addTherapistModal').classList.remove('active'); }
+
+    function saveTherapist(e) {
+      e.preventDefault();
+      const newT = {
+        id: Date.now(),
+        name: document.getElementById('tName').value,
+        city: document.getElementById('tCity').value,
+        district: document.getElementById('tDistrict').value,
+        services: "İsveç, Aromaterapi",
+        price: document.getElementById('tPrice').value,
+        vitrin: true,
+        wa: document.getElementById('tWhatsapp').value,
+        img: "images/turkish_selin_photo_1786793658243.jpg"
+      };
+      list.unshift(newT);
+      renderTable(list);
+      closeAddModal();
+      alert("Terapist başarıyla eklendi!");
+    }
+
+    function deleteItem(id) {
+      if (confirm("Bu terapist kaydını silmek istediğinize emin misiniz?")) {
+        list = list.filter(t => t.id !== id);
+        renderTable(list);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => renderTable(list));
+  </script>
 </body>
 </html>
-
