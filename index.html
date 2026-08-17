@@ -186,7 +186,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css?v=3.9">
+  <link rel="stylesheet" href="styles.css?v=4.0">
   <script>
     window.openModalById = function(id) {
       var m = document.getElementById(id);
@@ -410,7 +410,7 @@
             <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.3rem;">30 saniyede hesabınızı oluşturup size uygun adayları inceleyin.</p>
           </div>
 
-          <form id="heroRegisterForm">
+          <form id="heroRegisterForm" onsubmit="event.preventDefault(); window.executeHeroRegister();">
             <!-- Cinsiyet Seçimi -->
             <div class="auth-gender-toggle" style="margin-bottom:1.15rem;">
               <div class="gender-select-card female selected" id="heroGenderFemale" data-gender="female" onclick="window.selectGender('hero', 'female')">
@@ -884,7 +884,7 @@
         <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.2rem;">Hesabınıza giriş yaparak eşleşmelerinize ulaşın.</p>
       </div>
 
-      <form id="loginForm">
+      <form id="loginForm" onsubmit="event.preventDefault(); window.executeLogin();">
         <div style="margin-bottom:1rem;">
           <label class="finder-label">E-Posta Adresiniz</label>
           <input type="email" id="loginEmail" class="filter-control" placeholder="eposta@gmail.com" required value="murat@gmail.com">
@@ -917,7 +917,7 @@
         <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.2rem;">30 saniyede hesabınızı oluşturup onaylı adayları inceleyin.</p>
       </div>
 
-      <form id="modalRegisterForm">
+      <form id="modalRegisterForm" onsubmit="event.preventDefault(); window.executeModalRegister();">
         <!-- Cinsiyet Seçimi -->
         <div class="auth-gender-toggle" style="margin-bottom:1rem;">
           <div class="gender-select-card female selected" id="modalRegGenderFemale" onclick="window.selectGender('modal', 'female')">
@@ -1287,8 +1287,8 @@
     </div>
   </div>
 
-  <script src="data.js?v=3.9"></script>
-  <script src="app.js?v=3.9"></script>
+  <script src="data.js?v=4.0"></script>
+  <script src="app.js?v=4.0"></script>
 
   <!-- PWA Service Worker & Canlı Senkronizasyon -->
   <script>
@@ -1299,7 +1299,7 @@
           registration.update();
         }
       });
-      navigator.serviceWorker.register('/sw.js?v=3.9');
+      navigator.serviceWorker.register('/sw.js?v=4.0');
     }
 
     // 2. Kayan WhatsApp / Web Share Viral Davet Butonu

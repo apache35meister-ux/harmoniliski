@@ -913,10 +913,6 @@ function bootHarmoniApp() {
     renderProfiles();
   }
 
-  // Auth Yürütücüleri (Global & Yerel)
-  function executeHeroRegister() {
-    const isFemale = DOM.heroGenderFemale ? DOM.heroGenderFemale.classList.contains('selected') : false;
-    const nameInput = document.getElementById('heroRegName');
   // Auth Yürütücüleri (Mükerrer E-Posta Kontrolü & Güvenli Oturum)
   function executeHeroRegister() {
     const isFemale = DOM.heroGenderFemale ? DOM.heroGenderFemale.classList.contains('selected') : false;
