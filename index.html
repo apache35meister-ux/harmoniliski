@@ -186,32 +186,47 @@
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css?v=3.4">
+  <link rel="stylesheet" href="styles.css?v=3.5">
   <script>
-    window.openLoginModal = function() {
-      var m = document.getElementById('loginModal');
-      if (m) { m.classList.add('active'); m.style.opacity = '1'; m.style.visibility = 'visible'; m.style.pointerEvents = 'auto'; m.style.display = 'flex'; }
-    };
-    window.openRegisterModal = function() {
-      var m = document.getElementById('registerModal');
-      if (m) { m.classList.add('active'); m.style.opacity = '1'; m.style.visibility = 'visible'; m.style.pointerEvents = 'auto'; m.style.display = 'flex'; }
-    };
-    window.openVipModal = function() {
-      var m = document.getElementById('vipModal');
-      if (m) { m.classList.add('active'); m.style.opacity = '1'; m.style.visibility = 'visible'; m.style.pointerEvents = 'auto'; m.style.display = 'flex'; }
+    window.openModalById = function(id) {
+      var m = document.getElementById(id);
+      if (m) {
+        m.classList.add('active');
+        m.style.setProperty('display', 'flex', 'important');
+        m.style.setProperty('opacity', '1', 'important');
+        m.style.setProperty('visibility', 'visible', 'important');
+        m.style.setProperty('pointer-events', 'auto', 'important');
+        document.body.style.overflow = 'hidden';
+      }
     };
     window.closeModalById = function(id) {
       var m = document.getElementById(id);
-      if (m) { m.classList.remove('active'); m.style.opacity = '0'; m.style.visibility = 'hidden'; m.style.pointerEvents = 'none'; m.style.display = 'none'; }
+      if (m) {
+        m.classList.remove('active');
+        m.style.setProperty('display', 'none', 'important');
+        m.style.setProperty('opacity', '0', 'important');
+        m.style.setProperty('visibility', 'hidden', 'important');
+        m.style.setProperty('pointer-events', 'none', 'important');
+        document.body.style.overflow = '';
+      }
     };
+    window.openLoginModal = function() { window.openModalById('loginModal'); };
+    window.openRegisterModal = function() { window.openModalById('registerModal'); };
+    window.openVipModal = function() { window.openModalById('vipModal'); };
+    window.openMyProfile = function() { window.openModalById('myProfileModal'); };
+    window.openInboxModal = function() { window.openModalById('inboxModal'); };
+    window.openWinksModal = function() { window.openModalById('winksModal'); };
+    window.openQuizModal = function() { window.openModalById('quizModal'); };
+    window.openFeedbackModal = function() { window.openModalById('feedbackModal'); };
     window.closeAllModals = function() {
       document.querySelectorAll('.modal-overlay').forEach(function(m) {
         m.classList.remove('active');
-        m.style.opacity = '0';
-        m.style.visibility = 'hidden';
-        m.style.pointerEvents = 'none';
-        m.style.display = 'none';
+        m.style.setProperty('display', 'none', 'important');
+        m.style.setProperty('opacity', '0', 'important');
+        m.style.setProperty('visibility', 'hidden', 'important');
+        m.style.setProperty('pointer-events', 'none', 'important');
       });
+      document.body.style.overflow = '';
     };
   </script>
 </head>
@@ -838,9 +853,9 @@
        ========================================================================= -->
 
   <!-- Giriş Yap Modalı (Login Modal) -->
-  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('loginModal')">
     <div class="modal-box" style="max-width:440px; padding:2.25rem;">
-      <button class="btn-close-modal" id="btnCloseLoginModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseLoginModal" onclick="window.closeModalById('loginModal')">✕</button>
       <div style="text-align:center; margin-bottom:1.75rem;">
         <div class="logo-heart-icon" style="margin:0 auto 0.75rem;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
@@ -864,16 +879,16 @@
         </button>
 
         <div style="text-align:center; margin-top:1.25rem; font-size:0.82rem; color:var(--text-muted);">
-          Henüz üye değil misiniz? <a href="#" id="linkSwitchToRegister" style="color:var(--primary-rose); font-weight:700; text-decoration:underline;">Ücretsiz Üye Olun</a>
+          Henüz üye değil misiniz? <a href="#" id="linkSwitchToRegister" onclick="window.closeModalById('loginModal'); window.openRegisterModal(); return false;" style="color:var(--primary-rose); font-weight:700; text-decoration:underline;">Ücretsiz Üye Olun</a>
         </div>
       </form>
     </div>
   </div>
 
   <!-- Hızlı Üye Ol Modalı (Register Modal) -->
-  <div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('registerModal')">
     <div class="modal-box" style="max-width:480px; padding:2rem 2.25rem;">
-      <button class="btn-close-modal" id="btnCloseRegisterModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseRegisterModal" onclick="window.closeModalById('registerModal')">✕</button>
       <div style="text-align:center; margin-bottom:1.5rem;">
         <div class="logo-heart-icon" style="margin:0 auto 0.6rem;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
@@ -940,16 +955,16 @@
         </button>
 
         <div style="text-align:center; margin-top:1.15rem; font-size:0.82rem; color:var(--text-muted);">
-          Zaten hesabınız var mı? <a href="#" id="linkSwitchToLoginFromReg" style="color:var(--primary-rose); font-weight:700; text-decoration:underline;">Giriş Yapın</a>
+          Zaten hesabınız var mı? <a href="#" id="linkSwitchToLoginFromReg" onclick="window.closeModalById('registerModal'); window.openLoginModal(); return false;" style="color:var(--primary-rose); font-weight:700; text-decoration:underline;">Giriş Yapın</a>
         </div>
       </form>
     </div>
   </div>
 
   <!-- Karakter Testi Modalı -->
-  <div class="modal-overlay" id="quizModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="quizModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('quizModal')">
     <div class="modal-box" style="max-width:600px; padding:2.25rem;">
-      <button class="btn-close-modal" id="btnCloseQuizModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseQuizModal" onclick="window.closeModalById('quizModal')">✕</button>
       <div style="margin-bottom:1.5rem;">
         <span style="font-size:0.75rem; font-weight:800; color:var(--primary-rose); text-transform:uppercase;">Kişilik & Karakter Analizi</span>
         <h3 style="font-family:var(--font-heading); font-size:1.35rem; font-weight:900; color:#FFF; margin-top:0.2rem;" id="quizQuestionTitle">1. İdeal Hafta Sonu</h3>
@@ -962,9 +977,9 @@
   </div>
 
   <!-- Pembe Panjur Stili Gold Üyelik & Güvenli Ödeme Modalı -->
-  <div class="modal-overlay" id="vipModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="vipModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('vipModal')">
     <div class="modal-box pp-payment-modal-box">
-      <button class="btn-close-modal" id="btnCloseVipModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseVipModal" onclick="window.closeModalById('vipModal')">✕</button>
       
       <!-- Pembe Panjur Header -->
       <div class="pp-payment-header">
@@ -1061,17 +1076,17 @@
   </div>
 
   <!-- Profil Detay Modalı -->
-  <div class="modal-overlay" id="profileDetailModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="profileDetailModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('profileDetailModal')">
     <div class="modal-box">
-      <button class="btn-close-modal" id="btnCloseDetailModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseDetailModal" onclick="window.closeModalById('profileDetailModal')">✕</button>
       <div class="detail-modal-layout" id="detailModalContent"></div>
     </div>
   </div>
 
   <!-- Canlı Sohbet Modalı -->
-  <div class="modal-overlay" id="chatModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="chatModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('chatModal')">
     <div class="modal-box chat-modal-box">
-      <button class="btn-close-modal" id="btnCloseChatModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseChatModal" onclick="window.closeModalById('chatModal')">✕</button>
       <div class="chat-header">
         <img src="" alt="Avatar" class="chat-avatar" id="chatPartnerAvatar">
         <div class="chat-user-info">
@@ -1091,27 +1106,27 @@
   </div>
 
   <!-- Gelen Kutusu Modalı -->
-  <div class="modal-overlay" id="inboxModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="inboxModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('inboxModal')">
     <div class="modal-box" style="max-width:540px; padding:2rem;">
-      <button class="btn-close-modal" id="btnCloseInboxModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseInboxModal" onclick="window.closeModalById('inboxModal')">✕</button>
       <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:1rem; color:#FFF;">💬 Mesajlarım</h3>
       <div id="inboxListContainer" style="display:flex; flex-direction:column; gap:0.75rem;"></div>
     </div>
   </div>
 
   <!-- Göz Kırpmalar Modalı -->
-  <div class="modal-overlay" id="winksModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="winksModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('winksModal')">
     <div class="modal-box" style="max-width:540px; padding:2rem;">
-      <button class="btn-close-modal" id="btnCloseWinksModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseWinksModal" onclick="window.closeModalById('winksModal')">✕</button>
       <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:1rem; color:#FFF;">😉 Göz Kırptıklarım</h3>
       <div id="winksListContainer" style="display:flex; flex-direction:column; gap:0.75rem;"></div>
     </div>
   </div>
 
   <!-- Kendi Profilim Modalı (Cinsiyet Seçimi ile) -->
-  <div class="modal-overlay" id="myProfileModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="myProfileModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('myProfileModal')">
     <div class="modal-box" style="max-width:560px; padding:2rem;">
-      <button class="btn-close-modal" id="btnCloseMyProfileModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseMyProfileModal" onclick="window.closeModalById('myProfileModal')">✕</button>
       <h3 style="font-family:var(--font-heading); font-size:1.35rem; margin-bottom:0.5rem; color:#FFF;">👤 Profil & Üyelik Durumum</h3>
       <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.5rem;">Cinsiyetinizi ve bilgilerinizi güncelleyerek üyelik avantajlarınızı belirleyin.</p>
 
@@ -1163,9 +1178,9 @@
   </div>
 
   <!-- Şikayet & Öneri / Destek Modalı -->
-  <div class="modal-overlay" id="feedbackModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="feedbackModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('feedbackModal')">
     <div class="modal-box" style="max-width:540px; padding:2rem;">
-      <button class="btn-close-modal" id="btnCloseFeedbackModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseFeedbackModal" onclick="window.closeModalById('feedbackModal')">✕</button>
       <div style="margin-bottom:1.5rem;">
         <span style="font-size:0.75rem; font-weight:800; color:var(--primary-rose); text-transform:uppercase;">Doğrudan Yönetim Hattı</span>
         <h3 style="font-family:var(--font-heading); font-size:1.4rem; font-weight:800; color:#FFFFFF; margin-top:0.2rem;">Şikayet, Öneri veya Bilgi Bildir</h3>
@@ -1206,9 +1221,9 @@
   </div>
 
   <!-- Yasal Sözleşmeler ve Politikalar Modalı -->
-  <div class="modal-overlay" id="legalModal" role="dialog" aria-modal="true">
+  <div class="modal-overlay" id="legalModal" role="dialog" aria-modal="true" onclick="if(event.target===this)window.closeModalById('legalModal')">
     <div class="modal-box" style="max-width:780px; padding:2.5rem; background:#121826; border:1px solid rgba(255,255,255,0.12);">
-      <button class="btn-close-modal" id="btnCloseLegalModal">✕</button>
+      <button type="button" class="btn-close-modal" id="btnCloseLegalModal" onclick="window.closeModalById('legalModal')">✕</button>
       
       <!-- Sözleşme Sekmeleri -->
       <div style="display:flex; gap:0.5rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:1rem; margin-bottom:1.5rem; overflow-x:auto;">
@@ -1252,8 +1267,8 @@
     </div>
   </div>
 
-  <script src="data.js?v=3.4"></script>
-  <script src="app.js?v=3.4"></script>
+  <script src="data.js?v=3.5"></script>
+  <script src="app.js?v=3.5"></script>
 
   <!-- PWA Service Worker & Canlı Senkronizasyon -->
   <script>
@@ -1264,7 +1279,7 @@
           registration.update();
         }
       });
-      navigator.serviceWorker.register('/sw.js?v=3.4');
+      navigator.serviceWorker.register('/sw.js?v=3.5');
     }
 
     // 2. Kayan WhatsApp / Web Share Viral Davet Butonu
