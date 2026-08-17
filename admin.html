@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZENSPA | VIP Yönetim & Güvenli Admin Paneli</title>
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow>
+  <!-- Security Shield & Anti-Attack Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1000,6 +1005,14 @@
       if (isAuth === 'true') {
         loginScreen.style.display = 'none';
       } else {
+        failCount++;
+        sessionStorage.setItem('zenspa_login_fails', failCount.toString());
+        if (failCount >= 5) {
+          sessionStorage.setItem('zenspa_lock_until', (Date.now() + 60000).toString());
+          err.textContent = "🚨 Güvenlik Koruması: 5 hatalı giriş! Panel 60 saniye kilitlendi.";
+        } else {
+          err.textContent = ⚠️ Hatalı Şifre! (Kalan Hak:  + (5 - failCount) + );
+        }
         loginScreen.style.display = 'flex';
       }
     }
@@ -1010,12 +1023,33 @@
       const valid = getAdminPass();
       const err = document.getElementById('loginError');
 
+      let failCount = parseInt(sessionStorage.getItem('zenspa_login_fails') || '0');
+      let lockUntil = parseInt(sessionStorage.getItem('zenspa_lock_until') || '0');
+      const now = Date.now();
+
+      if (lockUntil > now) {
+        const remaining = Math.ceil((lockUntil - now) / 1000);
+        err.textContent = 🚨 Çok fazla hatalı deneme! Lütfen  + remaining +  saniye bekleyin.;
+        err.style.display = 'block';
+        return;
+      }
+
       if (entered === valid) {
+        sessionStorage.removeItem('zenspa_login_fails');
+        sessionStorage.removeItem('zenspa_lock_until');
         sessionStorage.setItem('zenspa_admin_auth', 'true');
         document.getElementById('loginScreen').style.display = 'none';
         err.style.display = 'none';
         document.getElementById('adminPassInput').value = '';
       } else {
+        failCount++;
+        sessionStorage.setItem('zenspa_login_fails', failCount.toString());
+        if (failCount >= 5) {
+          sessionStorage.setItem('zenspa_lock_until', (Date.now() + 60000).toString());
+          err.textContent = "🚨 Güvenlik Koruması: 5 hatalı giriş! Panel 60 saniye kilitlendi.";
+        } else {
+          err.textContent = ⚠️ Hatalı Şifre! (Kalan Hak:  + (5 - failCount) + );
+        }
         err.style.display = 'block';
         document.getElementById('adminPassInput').value = '';
         document.getElementById('adminPassInput').focus();
@@ -1237,6 +1271,14 @@
         localStorage.setItem('zenspa_admin_pass', newPass);
         alert(`✓ Ayarlar kaydedildi!\nYeni Admin Şifreniz: ${newPass}`);
       } else {
+        failCount++;
+        sessionStorage.setItem('zenspa_login_fails', failCount.toString());
+        if (failCount >= 5) {
+          sessionStorage.setItem('zenspa_lock_until', (Date.now() + 60000).toString());
+          err.textContent = "🚨 Güvenlik Koruması: 5 hatalı giriş! Panel 60 saniye kilitlendi.";
+        } else {
+          err.textContent = ⚠️ Hatalı Şifre! (Kalan Hak:  + (5 - failCount) + );
+        }
         alert("✓ Platform ayarları başarıyla kaydedildi!");
       }
     }
