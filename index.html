@@ -2,7 +2,12 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0>
+  <!-- Security Shield & Anti-Attack Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   
   <!-- Primary SEO Meta Tags -->
   <title>ZENSPA | İstanbul, Ankara, İzmir Masaj & Masöz Rehberi - VIP Terapistler</title>
@@ -1453,6 +1458,21 @@
     }
 
     let therapists = getStoredTherapists();
+        // --- ANTI-ATTACK & XSS SANITIZATION SHIELD ---
+    function sanitize(str) {
+      if (typeof str !== 'string') return str;
+      return str.replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+      });
+    }
+
+    let lastClickTime = 0;
+    function safeClick(callback) {
+      const now = Date.now();
+      if (now - lastClickTime < 300) return; // Anti-flood 300ms throttling
+      lastClickTime = now;
+      if (typeof callback === 'function') callback();
+    }
     let activeServicePill = "all";
 
     function renderTherapists(list) {
