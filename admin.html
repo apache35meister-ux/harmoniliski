@@ -36,7 +36,7 @@
 
     /* Sidebar */
     .sidebar {
-      width: 260px;
+      width: 270px;
       background: #08080A;
       border-right: 1px solid var(--border-subtle);
       padding: 1.5rem;
@@ -54,9 +54,9 @@
       margin-bottom: 2.5rem;
     }
     .brand-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #2A1F05, #0A0A0A);
       border: 1px solid var(--border-gold);
       display: flex;
@@ -80,22 +80,31 @@
     }
 
     .nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-    .nav-item a {
+    .nav-btn {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      padding: 0.75rem 1rem;
-      border-radius: 10px;
+      padding: 0.85rem 1.1rem;
+      border-radius: 12px;
       color: var(--text-gray);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.88rem;
-      text-decoration: none;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      border: 1px solid transparent;
       transition: all 0.2s;
     }
-    .nav-item a:hover, .nav-item a.active {
-      background: rgba(230, 175, 46, 0.12);
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: #FFF;
+    }
+    .nav-btn.active {
+      background: rgba(230, 175, 46, 0.14);
       color: #FDE047;
-      border: 1px solid var(--border-gold);
+      border-color: var(--border-gold);
+      box-shadow: 0 0 15px rgba(230, 175, 46, 0.15);
     }
 
     .sidebar-footer {
@@ -123,7 +132,7 @@
       color: #FBBF24;
     }
 
-    /* Main Area */
+    /* Main Content */
     .main-content {
       flex: 1;
       padding: 2.5rem;
@@ -169,6 +178,14 @@
       box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
     }
 
+    /* Tab Sections */
+    .tab-section {
+      display: none;
+    }
+    .tab-section.active {
+      display: block;
+    }
+
     /* KPI Cards */
     .kpi-grid {
       display: grid;
@@ -210,14 +227,15 @@
       font-size: 1.5rem;
     }
 
-    /* Table Section */
-    .table-section {
+    /* Card Panels */
+    .panel-box {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 18px;
       padding: 1.75rem;
+      margin-bottom: 2rem;
     }
-    .table-header {
+    .panel-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -225,10 +243,12 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .table-header h3 {
+    .panel-header h3 {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      color: #FFF;
     }
+
     .search-input {
       background: #08080A;
       border: 1px solid var(--border-subtle);
@@ -281,7 +301,7 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 9999px;
       font-size: 0.75rem;
       font-weight: 700;
@@ -299,7 +319,7 @@
       background: #1C1C22;
       border: 1px solid var(--border-subtle);
       color: #FFF;
-      padding: 5px 10px;
+      padding: 6px 12px;
       border-radius: 6px;
       font-size: 0.78rem;
       cursor: pointer;
@@ -309,19 +329,79 @@
       border-color: #EF4444;
       color: #EF4444;
     }
+    .btn-toggle-vitrin {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--border-gold);
+      color: #FDE047;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn-toggle-vitrin:hover {
+      background: var(--gold-gradient);
+      color: #000;
+    }
+
     .btn-wa-direct {
       background: rgba(37, 211, 102, 0.15);
       border: 1px solid rgba(37, 211, 102, 0.4);
       color: #4ADE80;
-      padding: 5px 10px;
+      padding: 6px 12px;
       border-radius: 6px;
       font-size: 0.78rem;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      font-weight: 700;
     }
     .btn-wa-direct:hover { background: #25D366; color: #000; }
+
+    /* Settings Form */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .settings-group {
+      margin-bottom: 1.25rem;
+    }
+    .settings-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-gray);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+    .settings-input {
+      width: 100%;
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      outline: none;
+    }
+    .settings-input:focus {
+      border-color: #FBBF24;
+    }
+    .btn-save-settings {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+    }
 
     /* Modal */
     .modal-overlay {
@@ -412,9 +492,6 @@
       display: inline-block;
       margin-bottom: 0.5rem;
     }
-    .file-input-btn:hover { background: #22222C; }
-    
-    /* Preset Gallery Picker */
     .preset-photos {
       display: flex;
       gap: 0.5rem;
@@ -433,7 +510,6 @@
     .preset-thumb:hover, .preset-thumb.selected {
       border-color: #FBBF24;
       transform: scale(1.1);
-      box-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
     }
   </style>
 </head>
@@ -451,10 +527,30 @@
       </div>
 
       <ul class="nav-list">
-        <li class="nav-item"><a href="#" class="active">📊 Terapist Yönetimi</a></li>
-        <li class="nav-item"><a href="#">👑 Vitrin & İlanlar</a></li>
-        <li class="nav-item"><a href="#">💬 WhatsApp Raporu</a></li>
-        <li class="nav-item"><a href="#">⚙️ Ayarlar</a></li>
+        <li>
+          <button class="nav-btn active" onclick="switchTab('therapistsTab', this)">
+            <span>📊</span>
+            <span>Terapist Yönetimi</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('vitrinTab', this)">
+            <span>👑</span>
+            <span>Vitrin & İlanlar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('whatsappTab', this)">
+            <span>💬</span>
+            <span>WhatsApp Raporu</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('settingsTab', this)">
+            <span>⚙️</span>
+            <span>Ayarlar & Şehirler</span>
+          </button>
+        </li>
       </ul>
     </div>
 
@@ -467,68 +563,221 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <div class="top-header">
-      <div>
-        <h1>VIP Terapist & İlan Yönetimi</h1>
-        <p>Sitedeki aktif masör, masöz profillerini ve gelen vitrin taleplerini buradan yönetin.</p>
+
+    <!-- TAB 1: TERAPİST YÖNETİMİ -->
+    <div id="therapistsTab" class="tab-section active">
+      <div class="top-header">
+        <div>
+          <h1>VIP Terapist & Profil Yönetimi</h1>
+          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, yeni terapistler ekleyin.</p>
+        </div>
+
+        <button class="btn-add-therapist" onclick="openAddModal()">
+          <span>+ Yeni Terapist Ekle</span>
+        </button>
       </div>
 
-      <button class="btn-add-therapist" onclick="openAddModal()">
-        <span>+ Yeni Terapist Ekle</span>
-      </button>
+      <!-- KPI Summary -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Terapist</h4>
+            <div class="number" id="kpiTotal">12</div>
+          </div>
+          <div class="kpi-icon">💆</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>👑 Vitrin İlanları</h4>
+            <div class="number" id="kpiVitrinCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>WhatsApp İlan Hattı</h4>
+            <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+      </div>
+
+      <!-- Terapist Listesi Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Yayındaki Tüm Terapistler</h3>
+          <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist & Fotoğraf</th>
+              <th>Şehir / Semt</th>
+              <th>Hizmetler</th>
+              <th>Seans Ücreti</th>
+              <th>Durum</th>
+              <th>WhatsApp Randevu</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="therapistTableBody">
+            <!-- JS ile doldurulacak -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <!-- KPI Summary -->
-    <div class="kpi-grid">
-      <div class="kpi-card">
+    <!-- TAB 2: VİTRİN & İLANLAR -->
+    <div id="vitrinTab" class="tab-section">
+      <div class="top-header">
         <div>
-          <h4>Toplam Terapist</h4>
-          <div class="number" id="kpiTotal">12</div>
+          <h1>👑 Vitrin & VIP İlan Yönetimi</h1>
+          <p>Ana sayfanın en üstünde öne çıkarılan VIP vitrin ilanlarını buradan düzenleyin.</p>
         </div>
-        <div class="kpi-icon">💆</div>
       </div>
 
-      <div class="kpi-card">
-        <div>
-          <h4>👑 Vitrin İlanları</h4>
-          <div class="number" style="color: #FDE047;">5</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Aktif Vitrin İlanları</h4>
+            <div class="number" id="vitrinTabCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">👑</div>
         </div>
-        <div class="kpi-icon">💎</div>
+        <div class="kpi-card">
+          <div>
+            <h4>Haftalık VIP Ücreti</h4>
+            <div class="number" style="color: #4ADE80;">1.500 ₺</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>Aylık VIP Ücreti</h4>
+            <div class="number" style="color: #60A5FA;">4.500 ₺</div>
+          </div>
+          <div class="kpi-icon">⭐</div>
+        </div>
       </div>
 
-      <div class="kpi-card">
-        <div>
-          <h4>WhatsApp Hattı</h4>
-          <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Vitrinde Öne Çıkarılan Terapistler</h3>
         </div>
-        <div class="kpi-icon">💬</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>Vitrin Durumu</th>
+              <th>Vitrin Sıralaması</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="vitrinTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Terapist Listesi Tablosu -->
-    <div class="table-section">
-      <div class="table-header">
-        <h3>Yayındaki Terapistler</h3>
-        <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
+    <!-- TAB 3: WHATSAPP RAPORU -->
+    <div id="whatsappTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>💬 WhatsApp Randevu & Trafik Raporu</h1>
+          <p>Terapistlerin aldıkları doğrudan WhatsApp mesaj ve randevu yönlendirmeleri.</p>
+        </div>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Terapist & Fotoğraf</th>
-            <th>Şehir / Semt</th>
-            <th>Uzmanlık</th>
-            <th>Seans Ücreti</th>
-            <th>Durum</th>
-            <th>WhatsApp</th>
-            <th>İşlem</th>
-          </tr>
-        </thead>
-        <tbody id="therapistTableBody">
-          <!-- JS ile doldurulacak -->
-        </tbody>
-      </table>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Randevu Talebi</h4>
+            <div class="number" style="color: #4ADE80;">342</div>
+          </div>
+          <div class="kpi-icon">📈</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>En Çok Tıklanan Şehir</h4>
+            <div class="number" style="color: #FBBF24; font-size: 1.4rem;">İstanbul (62%)</div>
+          </div>
+          <div class="kpi-icon">📍</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>İlan Başvuru Mesajları</h4>
+            <div class="number" style="color: #60A5FA;">28</div>
+          </div>
+          <div class="kpi-icon">📩</div>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Terapist Bazlı WhatsApp İstatistikleri</h3>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>Toplam WhatsApp Tıklanması</th>
+              <th>Müşteri Memnuniyeti</th>
+              <th>Doğrudan İletişim</th>
+            </tr>
+          </thead>
+          <tbody id="waStatsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <!-- TAB 4: AYARLAR -->
+    <div id="settingsTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>⚙️ Platform Ayarları</h1>
+          <p>Site başlığı, WhatsApp hatları ve şehir listesini buradan güncelleyin.</p>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <form onsubmit="saveSettings(event)">
+          <div class="settings-grid">
+            <div class="settings-group">
+              <label>Site Başlığı</label>
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | VIP Masaj & Terapi Rehberi">
+            </div>
+            <div class="settings-group">
+              <label>Vitrin & İlan WhatsApp Numarası</label>
+              <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167">
+            </div>
+            <div class="settings-group">
+              <label>Hizmet Verilen Şehirler</label>
+              <input type="text" class="settings-input" id="settingCities" value="İstanbul, İzmir, Ankara, Antalya, Bursa, Eskişehir, Adana">
+            </div>
+            <div class="settings-group">
+              <label>Otomatik Onay Durumu</label>
+              <select class="settings-input">
+                <option value="auto">Otomatik Onay (Aktif)</option>
+                <option value="manual">Yönetici Onayı Gerekli</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-save-settings">
+            ✓ Ayarları Kaydet
+          </button>
+        </form>
+      </div>
+    </div>
+
   </main>
 
   <!-- Modal: Yeni Terapist Ekle -->
@@ -539,7 +788,7 @@
 
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
         
-        <!-- FOTOĞRAF YÜKLEME ALANI -->
+        <!-- FOTOĞRAF ALANI -->
         <div class="photo-upload-container">
           <div class="photo-preview-wrap">
             <img src="images/turkish_selin_photo_1786793658243.jpg" id="previewPhoto" class="photo-preview-img" alt="Önizleme">
@@ -550,7 +799,7 @@
           </label>
           <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileUpload(event)">
           
-          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">veya aşağıdaki hazır modellerden birine tıklayın:</p>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">veya aşağıdaki hazır modellerden birini seçin:</p>
           
           <div class="preset-photos">
             <img src="images/turkish_selin_photo_1786793658243.jpg" class="preset-thumb selected" onclick="selectPreset(this.src, this)">
@@ -614,15 +863,28 @@
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
     let list = [
-      { id: 1, name: "Selin Terapist", city: "İstanbul", district: "Beşiktaş", services: "İsveç, Aromaterapi", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg" },
-      { id: 2, name: "Derya Masöz", city: "İstanbul", district: "Kadıköy", services: "Aromaterapi, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg" },
-      { id: 3, name: "Elif Uzman Terapist", city: "İzmir", district: "Alsancak", services: "Medikal, İsveç", price: "1.500 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg" },
-      { id: 4, name: "Emre Masör", city: "İstanbul", district: "Şişli", services: "Sporcu, Derin Doku", price: "1.750 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_emre_candid_1786793611473.jpg" },
-      { id: 5, name: "Zeynep Terapist", city: "Ankara", district: "Çankaya", services: "İsveç, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_zeynep_selfie_1786793596006.jpg" },
-      { id: 6, name: "Cansu Masöz", city: "Antalya", district: "Muratpaşa", services: "Thai, Aromaterapi", price: "1.700 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_cansu_selfie.jpg" },
-      { id: 7, name: "Burak Medikal Masör", city: "Ankara", district: "Kızılay", services: "Medikal, Derin Doku", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_burak_photo_1786793640471.jpg" }
+      { id: 1, name: "Selin Terapist", city: "İstanbul", district: "Beşiktaş", services: "İsveç, Aromaterapi", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg", clicks: 64, rating: "⭐ 4.9" },
+      { id: 2, name: "Derya Masöz", city: "İstanbul", district: "Kadıköy", services: "Aromaterapi, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg", clicks: 82, rating: "⭐ 5.0" },
+      { id: 3, name: "Elif Uzman Terapist", city: "İzmir", district: "Alsancak", services: "Medikal, İsveç", price: "1.500 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg", clicks: 47, rating: "⭐ 4.9" },
+      { id: 4, name: "Emre Masör", city: "İstanbul", district: "Şişli", services: "Sporcu, Derin Doku", price: "1.750 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_emre_candid_1786793611473.jpg", clicks: 53, rating: "⭐ 4.8" },
+      { id: 5, name: "Zeynep Terapist", city: "Ankara", district: "Çankaya", services: "İsveç, Sıcak Taş", price: "1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_zeynep_selfie_1786793596006.jpg", clicks: 58, rating: "⭐ 4.9" },
+      { id: 6, name: "Cansu Masöz", city: "Antalya", district: "Muratpaşa", services: "Thai, Aromaterapi", price: "1.700 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_cansu_selfie.jpg", clicks: 39, rating: "⭐ 4.9" },
+      { id: 7, name: "Burak Medikal Masör", city: "Ankara", district: "Kızılay", services: "Medikal, Derin Doku", price: "1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_burak_photo_1786793640471.jpg", clicks: 71, rating: "⭐ 5.0" }
     ];
 
+    // Tab Switching
+    function switchTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-section').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      
+      document.getElementById(tabId).classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+
+      if (tabId === 'vitrinTab') renderVitrinTable();
+      if (tabId === 'whatsappTab') renderWaTable();
+    }
+
+    // Render Tab 1
     function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
       tbody.innerHTML = items.map(t => `
@@ -651,7 +913,68 @@
           </td>
         </tr>
       `).join('');
+
+      const vitrinCount = list.filter(t => t.vitrin).length;
       document.getElementById('kpiTotal').textContent = list.length;
+      document.getElementById('kpiVitrinCount').textContent = vitrinCount;
+      document.getElementById('vitrinTabCount').textContent = vitrinCount;
+    }
+
+    // Render Tab 2 (Vitrin)
+    function renderVitrinTable() {
+      const tbody = document.getElementById('vitrinTableBody');
+      tbody.innerHTML = list.map((t, idx) => `
+        <tr>
+          <td>
+            <div class="therapist-info">
+              <img src="${t.img}" class="therapist-avatar">
+              <strong style="color:#FFF;">${t.name}</strong>
+            </div>
+          </td>
+          <td>📍 ${t.city}</td>
+          <td>
+            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>'}
+          </td>
+          <td style="color:#FBBF24; font-weight:800;">${t.vitrin ? `#${idx + 1} Sıra` : '-'}</td>
+          <td>
+            <button class="btn-toggle-vitrin" onclick="toggleVitrin(${t.id})">
+              ${t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle'}
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function toggleVitrin(id) {
+      const item = list.find(t => t.id === id);
+      if (item) {
+        item.vitrin = !item.vitrin;
+        renderTable(list);
+        renderVitrinTable();
+      }
+    }
+
+    // Render Tab 3 (WhatsApp)
+    function renderWaTable() {
+      const tbody = document.getElementById('waStatsTableBody');
+      tbody.innerHTML = list.map(t => `
+        <tr>
+          <td>
+            <div class="therapist-info">
+              <img src="${t.img}" class="therapist-avatar">
+              <strong style="color:#FFF;">${t.name}</strong>
+            </div>
+          </td>
+          <td>📍 ${t.city}</td>
+          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${t.clicks} Randevu Talebi</td>
+          <td>${t.rating}</td>
+          <td>
+            <a href="https://wa.me/${t.wa}?text=Merhaba" target="_blank" class="btn-wa-direct">
+              💬 Sohbeti Aç
+            </a>
+          </td>
+        </tr>
+      `).join('');
     }
 
     function filterTable() {
@@ -660,7 +983,6 @@
       renderTable(filtered);
     }
 
-    // Photo Handling
     function handleFileUpload(e) {
       const file = e.target.files[0];
       if (file) {
@@ -695,12 +1017,14 @@
         price: document.getElementById('tPrice').value,
         vitrin: true,
         wa: document.getElementById('tWhatsapp').value,
-        img: currentPhotoUrl
+        img: currentPhotoUrl,
+        clicks: 1,
+        rating: "⭐ 5.0"
       };
       list.unshift(newT);
       renderTable(list);
       closeAddModal();
-      alert("✓ Terapist başarıyla eklendi ve fotoğrafı yüklendi!");
+      alert("✓ Terapist başarıyla eklendi ve vitrinde yayına alındı!");
     }
 
     function deleteItem(id) {
@@ -710,7 +1034,14 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', () => renderTable(list));
+    function saveSettings(e) {
+      e.preventDefault();
+      alert("✓ Platform ayarları başarıyla kaydedildi!");
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderTable(list);
+    });
   </script>
 </body>
 </html>
