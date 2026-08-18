@@ -2454,6 +2454,24 @@
       return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
     }
 
+        async function loadLiveTherapists() {
+      try {
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const liveList = await res.json();
+          if (Array.isArray(liveList) && liveList.length > 0) {
+            therapists = liveList;
+            localStorage.setItem('zenspa_therapists', JSON.stringify(liveList));
+            renderTherapists(therapists);
+            return;
+          }
+        }
+      } catch(e) {
+        console.log('Bulut verisi yuklenirken yerel veriye gecildi:', e);
+      }
+      renderTherapists(therapists);
+    }
+
     function renderTherapists(list) {
       const container = document.getElementById('therapistsContainer');
       const countDisplay = document.getElementById('countDisplay');
@@ -2629,7 +2647,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       trackPageVisit();
-      renderTherapists(therapists);
+      loadLiveTherapists();
     });
       // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
     let deferredPrompt;
