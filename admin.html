@@ -1291,14 +1291,44 @@
     }
 
     // --- CANLI GERÇEK ANALİTİK & ÇAĞRI İZLEME MOTORU ---
-    function getLiveAnalytics() {
-      const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '28');
-      const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14');
-      const callClicks = parseInt(localStorage.getItem('zenspa_real_calls') || '9');
-      const tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
-      const tCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}');
-      const callLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]');
-      return { visits, waClicks, callClicks, tClicks, tCalls, callLogs };
+        // --- CANLI MERKEZİ BULUT ANALİTİK & ÇAĞRI İZLEME MOTORU ---
+    async function getLiveAnalytics() {
+      let stats = {
+        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '28'),
+        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14'),
+        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '9'),
+        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
+        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
+        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]')
+      };
+
+      try {
+        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudStats = await res.json();
+          if (cloudStats) {
+            stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
+            stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
+            stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
+            if (cloudStats.tClicks) {
+              for (let k in cloudStats.tClicks) {
+                stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
+              }
+            }
+            if (cloudStats.tCalls) {
+              for (let k in cloudStats.tCalls) {
+                stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
+              }
+            }
+            if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
+              stats.callLogs = cloudStats.logs;
+            }
+          }
+        }
+      } catch(e) {
+        console.log("Bulut analitik okuma:", e);
+      }
+      return stats;
     }
 
     function resetLiveAnalytics() {
@@ -1546,8 +1576,8 @@
     }
 
     // Render Tab 3 (WhatsApp & Canlı Arama Raporu)
-    function renderWaTable() {
-      const stats = getLiveAnalytics();
+    async function renderWaTable() {
+      const stats = await getLiveAnalytics();
       document.getElementById('realTotalWa').textContent = stats.waClicks;
       document.getElementById('realTotalCalls').textContent = stats.callClicks;
       document.getElementById('realTotalVisits').textContent = stats.visits;
@@ -1603,7 +1633,7 @@
     }
 
     function exportCallLogsToCSV() {
-      const stats = getLiveAnalytics();
+      const stats = await getLiveAnalytics();
       if (!stats.callLogs || stats.callLogs.length === 0) {
         alert("İndirilecek arama veya mesaj kaydı bulunamadı.");
         return;
