@@ -513,9 +513,163 @@
       border-color: #FBBF24;
       transform: scale(1.1);
     }
+      /* Admin Login Lock Screen */
+    #adminAuthOverlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, #151208 0%, #050507 100%);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .auth-card {
+      background: #0E0E12;
+      border: 1px solid var(--border-gold-bright);
+      box-shadow: 0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8);
+      border-radius: 24px;
+      max-width: 420px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .auth-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1.5px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.3);
+    }
+    .auth-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+    }
+    .auth-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .auth-input-wrapper {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+    .auth-input {
+      width: 100%;
+      background: #060608;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      color: #FFF;
+      padding: 0.95rem 3rem 0.95rem 1.2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.2s;
+      letter-spacing: 2px;
+    }
+    .auth-input:focus {
+      border-color: #FBBF24;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.25);
+    }
+    .btn-eye-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #A1A1AA;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+    .btn-eye-toggle:hover {
+      color: #FDE047;
+    }
+    .btn-auth-submit {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.95rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(230, 175, 46, 0.35);
+      transition: all 0.2s;
+    }
+    .btn-auth-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+    }
+    .auth-error {
+      color: #EF4444;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #F87171;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      transition: all 0.2s;
+    }
+    .btn-logout:hover {
+      background: #EF4444;
+      color: #FFF;
+      border-color: #EF4444;
+    }
   </style>
 </head>
 <body>
+  <!-- VIP Admin Password Lock Screen -->
+  <div id="adminAuthOverlay">
+    <div class="auth-card">
+      <div class="auth-logo">🔐</div>
+      <h2 class="auth-title">VIP YÖNETİCİ GİRİŞİ</h2>
+      <p class="auth-desc">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
+      
+      <form onsubmit="handleAdminLogin(event)">
+        <div class="auth-input-wrapper">
+          <input type="password" id="adminPassInput" class="auth-input" placeholder="Şifrenizi giriniz..." autocomplete="current-password" autofocus required>
+          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+        
+        <button type="submit" class="btn-auth-submit">
+          GİRİŞ YAP ➔
+        </button>
+        <div id="authErrorMsg" class="auth-error">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
+      </form>
+    </div>
+  </div>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -953,6 +1107,57 @@
   </div>
 
   <script>
+        // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
+    const ADMIN_PASS = "hakan359";
+
+    function checkAuth() {
+      const isAuth = sessionStorage.getItem('zenspa_admin_logged');
+      const overlay = document.getElementById('adminAuthOverlay');
+      if (isAuth === 'true') {
+        if (overlay) overlay.style.display = 'none';
+      } else {
+        if (overlay) overlay.style.display = 'flex';
+      }
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const input = document.getElementById('adminPassInput').value.trim();
+      const errorMsg = document.getElementById('authErrorMsg');
+
+      if (input === ADMIN_PASS) {
+        sessionStorage.setItem('zenspa_admin_logged', 'true');
+        document.getElementById('adminAuthOverlay').style.display = 'none';
+        errorMsg.style.display = 'none';
+        initAdminData();
+      } else {
+        errorMsg.style.display = 'block';
+        document.getElementById('adminPassInput').value = '';
+        document.getElementById('adminPassInput').focus();
+      }
+    }
+
+    function togglePassVisibility() {
+      const input = document.getElementById('adminPassInput');
+      const eye = document.getElementById('eyeIcon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        eye.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        eye.textContent = '👁️';
+      }
+    }
+
+    function adminLogout() {
+      if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
+        sessionStorage.removeItem('zenspa_admin_logged');
+        document.getElementById('adminPassInput').value = '';
+        document.getElementById('authErrorMsg').style.display = 'none';
+        document.getElementById('adminAuthOverlay').style.display = 'flex';
+      }
+    }
+
     // --- CANLI GERÇEK ANALİTİK MOTORU ---
     function getLiveAnalytics() {
       const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '24');
@@ -1292,6 +1497,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
       initAdminData();
     });
   </script>
