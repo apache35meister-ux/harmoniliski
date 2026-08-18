@@ -574,7 +574,15 @@
           <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
         </div>
 
+              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+        <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+          🗑️ Demo Profilleri Temizle
+        </button>
         <button class="btn-add-therapist" onclick="openAddModal()">
+          <span>+</span>
+          <span>Yeni Terapist / İlan Ekle</span>
+        </button>
+      </div>
           <span>+ Yeni Terapist Ekle</span>
         </button>
       </div>
@@ -980,22 +988,33 @@
     ];
 
     // Load from localStorage or Default
-        async function initAdminData() {
-      try {
-        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
-        if (res.ok) {
-          const cloudList = await res.json();
-          if (Array.isArray(cloudList) && cloudList.length > 0) {
-            list = cloudList;
-            localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+            async function initAdminData() {
+      // 1. Once yerel duzenlemeleri goster
+      const local = localStorage.getItem('zenspa_therapists');
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed)) {
+            list = parsed;
             renderTable(list);
-            return;
           }
-        }
-      } catch(e) {
-        console.log('Bulut verisi okunurken yerel veriye gecildi:', e);
+        } catch(e) {}
       }
-      renderTable(list);
+
+      // 2. Eger kullanici hic degisiklik yapmadiysa buluttan cek
+      if (!localStorage.getItem('zenspa_admin_modified')) {
+        try {
+          const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
+          if (res.ok) {
+            const cloudList = await res.json();
+            if (Array.isArray(cloudList) && cloudList.length > 0) {
+              list = cloudList;
+              localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+              renderTable(list);
+            }
+          }
+        } catch(e) {}
+      }
     }
 
     function getStoredList() {
@@ -1050,9 +1069,10 @@
       }
     }
 
-    function saveToStorage() {
+    async function saveToStorage() {
+      localStorage.setItem('zenspa_admin_modified', 'true');
       localStorage.setItem('zenspa_therapists', JSON.stringify(list));
-      pushTherapistsToGitHub(list);
+      await pushTherapistsToGitHub(list);
     }
 
     // Tab Switching
@@ -1149,8 +1169,9 @@
       const item = list.find(t => t.id === id);
       if (item) {
         item.vitrin = !item.vitrin;
-        saveToStorage();
+        await saveToStorage();
         renderTable(list);
+        alert('✓ Profil başarıyla silindi ve kalıcı olarak kaldırıldı!');
         renderVitrinTable();
       }
     }
@@ -1247,11 +1268,23 @@
       alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
     }
 
-    function deleteItem(id) {
+        async function clearDemoProfiles() {
+      if (confirm("Tüm hazır sanal/demo profilleri silip yalnızca kendi eklediğiniz üyeleri bırakmak istediğinize emin misiniz?")) {
+        // Sadece Melis ve kullanicinin ekledigi ozel profilleri tut, diger 1-14 arasindaki demo id'leri sil
+        list = list.filter(t => t.id === 100 || t.id > 1000);
+        await await saveToStorage();
+        renderTable(list);
+        alert('✓ Profil başarıyla silindi ve kalıcı olarak kaldırıldı!');
+        alert("✓ Tüm demo profiller başarıyla silindi! Artık sayfayı yenileseniz de geri gelmeyecektir.");
+      }
+    }
+
+    async function deleteItem(id) {
       if (confirm("Bu terapist kaydını silmek istediğinize emin misiniz?")) {
         list = list.filter(t => t.id !== id);
-        saveToStorage();
+        await saveToStorage();
         renderTable(list);
+        alert('✓ Profil başarıyla silindi ve kalıcı olarak kaldırıldı!');
       }
     }
 
