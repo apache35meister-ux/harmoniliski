@@ -904,42 +904,43 @@
       </div>
     </div>
 
-    <!-- TAB 3: WHATSAPP RAPORU -->
+    <!-- TAB 3: WHATSAPP & ÇAĞRI RAPORU -->
     <div id="whatsappTab" class="tab-section">
       <div class="top-header">
         <div>
-          <h1>💬 Canlı Analitik & WhatsApp Raporu</h1>
-          <p>Gerçek ziyaretçi, randevu tıklamaları ve ilan talepleri canlı olarak takip edilir.</p>
+          <h1>💬 & 📞 Canlı WhatsApp & Telefon Çağrı Raporu</h1>
+          <p>Üyelerinizin aldığı WhatsApp mesajları ve gelen doğrudan telefon aramaları anlık olarak kaydedilir.</p>
         </div>
       </div>
 
       <div class="kpi-grid">
         <div class="kpi-card">
           <div>
-            <h4>Gerçek WhatsApp Randevu Tıklaması</h4>
+            <h4>💬 WhatsApp Randevu Talebi</h4>
             <div class="number" id="realTotalWa" style="color: #4ADE80;">0</div>
           </div>
-          <div class="kpi-icon">📈</div>
+          <div class="kpi-icon">💬</div>
         </div>
         <div class="kpi-card">
           <div>
-            <h4>Canlı Site Ziyareti (Sayfa Açılışı)</h4>
+            <h4>📞 Doğrudan Telefon Araması</h4>
+            <div class="number" id="realTotalCalls" style="color: #38BDF8;">0</div>
+          </div>
+          <div class="kpi-icon">📞</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>👁️ Canlı Site Ziyareti</h4>
             <div class="number" id="realTotalVisits" style="color: #FBBF24;">0</div>
           </div>
-          <div class="kpi-icon">👁️</div>
-        </div>
-        <div class="kpi-card">
-          <div>
-            <h4>Gerçek İlan & Paket Talebi</h4>
-            <div class="number" id="realTotalAds" style="color: #60A5FA;">0</div>
-          </div>
-          <div class="kpi-icon">👑</div>
+          <div class="kpi-icon">👥</div>
         </div>
       </div>
 
+      <!-- Terapist Bazlı İstatistik Tablosu -->
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Terapist Bazlı Canlı WhatsApp İstatistikleri</h3>
+          <h3>Terapist Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
           <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
             🔄 İstatistikleri Sıfırla
           </button>
@@ -949,12 +950,35 @@
             <tr>
               <th>Terapist</th>
               <th>Şehir</th>
-              <th>Toplam WhatsApp Tıklanması</th>
-              <th>Müşteri İlgisi</th>
+              <th>💬 WhatsApp Talebi</th>
+              <th>📞 Telefon Araması</th>
+              <th>🔥 Toplam Müşteri İlgisi</th>
               <th>Doğrudan İletişim</th>
             </tr>
           </thead>
           <tbody id="waStatsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Canlı Arama ve Mesaj Geçmişi Günlüğü -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>📜 Son Gerçekleşen Arama & WhatsApp Mesaj Kayıtları</h3>
+          <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Kayıt Aktif</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tarih & Saat</th>
+              <th>Aranan / Yazılan Terapist</th>
+              <th>Şehir</th>
+              <th>İşlem Türü</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="liveCallLogsTableBody">
             <!-- JS ile beslenecek -->
           </tbody>
         </table>
@@ -1209,23 +1233,27 @@
       }
     }
 
-    // --- CANLI GERÇEK ANALİTİK MOTORU ---
+        // --- CANLI GERÇEK ANALİTİK & ÇAĞRI İZLEME MOTORU ---
     function getLiveAnalytics() {
-      const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '24');
-      const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '8');
-      const adClicks = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '2');
+      const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '28');
+      const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14');
+      const callClicks = parseInt(localStorage.getItem('zenspa_real_calls') || '9');
       const tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
-      return { visits, waClicks, adClicks, tClicks };
+      const tCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}');
+      const callLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]');
+      return { visits, waClicks, callClicks, tClicks, tCalls, callLogs };
     }
 
     function resetLiveAnalytics() {
-      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
+      if (confirm("Canlı arama ve WhatsApp istatistiklerini sıfırlamak istediğinize emin misiniz?")) {
         localStorage.setItem('zenspa_real_visits', '0');
         localStorage.setItem('zenspa_real_wa_clicks', '0');
-        localStorage.setItem('zenspa_real_ad_clicks', '0');
+        localStorage.setItem('zenspa_real_calls', '0');
         localStorage.setItem('zenspa_t_clicks', '{}');
+        localStorage.setItem('zenspa_t_calls', '{}');
+        localStorage.setItem('zenspa_live_call_logs', '[]');
         renderWaTable();
-        alert("✓ İstatistikler sıfırlandı!");
+        alert("✓ İstatistikler ve kayıt günlüğü sıfırlandı!");
       }
     }
 
@@ -1432,34 +1460,61 @@
       }
     }
 
-    // Render Tab 3 (WhatsApp & Canlı Analitik)
+        // Render Tab 3 (WhatsApp & Canlı Arama Raporu)
     function renderWaTable() {
       const stats = getLiveAnalytics();
       document.getElementById('realTotalWa').textContent = stats.waClicks;
+      document.getElementById('realTotalCalls').textContent = stats.callClicks;
       document.getElementById('realTotalVisits').textContent = stats.visits;
-      document.getElementById('realTotalAds').textContent = stats.adClicks;
 
       const tbody = document.getElementById('waStatsTableBody');
       tbody.innerHTML = list.map(t => {
-        const count = stats.tClicks[t.id] || 0;
-        return `
+        const waCount = stats.tClicks[t.id] || 0;
+        const callCount = stats.tCalls[t.id] || 0;
+        const totalInterest = waCount + callCount;
+        return 
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar">
-              <strong style="color:#FFF;">${t.name}</strong>
+              <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <strong style="color:#FFF;"> + t.name + </strong>
             </div>
           </td>
-          <td>📍 ${t.city}</td>
-          <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${count} Canlı Randevu Talebi</td>
-          <td>${count > 0 ? '🟢 Aktif İlgi' : 'Beklemede'}</td>
+          <td>📍  + t.city + </td>
+          <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬  + waCount +  Mesaj Talebi</td>
+          <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞  + callCount +  Telefon Araması</td>
+          <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡  + totalInterest +  Müşteri Talebi</td>
           <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
-              💬 Sohbeti Aç
+            <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+              💬 İletişime Geç
             </a>
           </td>
         </tr>
-      `}).join('');
+      }).join('');
+
+      // Canli Arama & Mesaj Gunlugu Tablosu
+      const logsTbody = document.getElementById('liveCallLogsTableBody');
+      if (logsTbody) {
+        if (stats.callLogs && stats.callLogs.length > 0) {
+          logsTbody.innerHTML = stats.callLogs.map(log => 
+            <tr>
+              <td style="color:#A1A1AA; font-weight:600;">⏱️  + log.time + </td>
+              <td><strong style="color:#FFF;"> + log.name + </strong></td>
+              <td>📍  + log.city + </td>
+              <td style="color: + (log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80') + ; font-weight:800;"> + log.type + </td>
+              <td><span class="status-badge">🟢 İletişim Başlatıldı</span></td>
+            </tr>
+          ).join('');
+        } else {
+          logsTbody.innerHTML = 
+            <tr>
+              <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
+                Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
+              </td>
+            </tr>
+          ;
+        }
+      }
     }
 
     function filterTable() {
