@@ -2408,21 +2408,7 @@
       localStorage.setItem('zenspa_real_ad_clicks', totalAd.toString());
     }
 
-        // Otomatik Guncel Resim ve Onbellek Temizleme
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(registrations => {
-        for (let registration of registrations) {
-          registration.unregister();
-        }
-      });
-    }
-    if ('caches' in window) {
-      caches.keys().then(names => {
-        for (let name of names) {
-          caches.delete(name);
-        }
-      });
-    }
+
 
     function getStoredTherapists() {
       const stored = localStorage.getItem('zenspa_therapists');
