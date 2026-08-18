@@ -523,6 +523,14 @@
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    #adminAuthOverlay.hidden {
+      display: none !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      z-index: -1 !important;
     }
     .auth-card {
       background: #0E0E12;
@@ -713,7 +721,7 @@
         localStorage.setItem('zenspa_admin_logged', 'true');
         sessionStorage.setItem('zenspa_admin_logged', 'true');
         var overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) overlay.style.display = 'none';
+        if (overlay) { overlay.classList.add('hidden'); overlay.style.setProperty('display', 'none', 'important'); }
         if (typeof initAdminData === 'function') initAdminData();
       } else {
         var err = document.getElementById('authErrorMsg');
@@ -1239,9 +1247,9 @@
       const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
       const overlay = document.getElementById('adminAuthOverlay');
       if (isAuth === 'true') {
-        if (overlay) overlay.style.display = 'none';
+        if (overlay) { overlay.classList.add('hidden'); overlay.style.setProperty('display', 'none', 'important'); }
       } else {
-        if (overlay) overlay.style.display = 'flex';
+        if (overlay) { overlay.classList.remove('hidden'); overlay.style.setProperty('display', 'flex', 'important'); }
       }
     }
 
@@ -1255,7 +1263,7 @@
       if (input === ADMIN_PASS) {
         localStorage.setItem('zenspa_admin_logged', 'true');
         sessionStorage.setItem('zenspa_admin_logged', 'true');
-        if (overlay) overlay.style.display = 'none';
+        if (overlay) { overlay.classList.add('hidden'); overlay.style.setProperty('display', 'none', 'important'); }
         if (errorMsg) errorMsg.style.display = 'none';
         initAdminData();
       } else {
@@ -1286,7 +1294,7 @@
         const errorMsg = document.getElementById('authErrorMsg');
         if (errorMsg) errorMsg.style.display = 'none';
         const overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) overlay.style.display = 'flex';
+        if (overlay) { overlay.classList.remove('hidden'); overlay.style.setProperty('display', 'flex', 'important'); }
       }
     }
 
@@ -1799,6 +1807,26 @@
       e.preventDefault();
       alert("✓ Platform ayarları başarıyla kaydedildi!");
     }
+
+        // Explicit global window bindings for 100% button reliability
+    window.switchTab = switchTab;
+    window.openAddModal = openAddModal;
+    window.closeAddModal = closeAddModal;
+    window.editItem = editItem;
+    window.toggleActive = toggleActive;
+    window.deleteItem = deleteItem;
+    window.toggleVitrin = toggleVitrin;
+    window.exportCallLogsToCSV = exportCallLogsToCSV;
+    window.filterTable = filterTable;
+    window.adminLogout = adminLogout;
+    window.handleAdminLogin = handleAdminLogin;
+    window.togglePassVisibility = togglePassVisibility;
+    window.selectPreset = selectPreset;
+    window.handleFileUpload = handleFileUpload;
+    window.saveTherapist = saveTherapist;
+    window.saveSettings = saveSettings;
+    window.clearDemoProfiles = clearDemoProfiles;
+    window.resetLiveAnalytics = resetLiveAnalytics;
 
     document.addEventListener('DOMContentLoaded', () => {
       checkAuth();
