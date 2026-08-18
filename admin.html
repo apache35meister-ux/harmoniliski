@@ -645,6 +645,51 @@
       color: #FFF;
       border-color: #EF4444;
     }
+      /* Floating & Header Logout Buttons */
+    .btn-logout-header {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      color: #F87171;
+      padding: 0.65rem 1.2rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .btn-logout-header:hover {
+      background: #EF4444;
+      color: #FFF;
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    }
+    .floating-logout {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99999;
+      background: #1E0E10;
+      border: 1.5px solid #EF4444;
+      color: #F87171;
+      padding: 0.75rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8), 0 0 15px rgba(239, 68, 68, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .floating-logout:hover {
+      background: #EF4444;
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
+    }
   </style>
 </head>
 <body>
@@ -731,13 +776,16 @@
           <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
         </div>
 
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
           <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
             🗑️ Demo Profilleri Temizle
           </button>
           <button class="btn-add-therapist" onclick="openAddModal()">
             <span>+</span>
             <span>Yeni Terapist / İlan Ekle</span>
+          </button>
+          <button class="btn-logout-header" onclick="adminLogout()">
+            🔒 Güvenli Çıkış Yap
           </button>
         </div>
       </div>
@@ -1504,5 +1552,9 @@
       initAdminData();
     });
   </script>
+  <!-- Her Zaman Görünür Sabit Güvenli Çıkış Butonu -->
+  <button class="floating-logout" onclick="adminLogout()" title="Yönetim Panelinden Güvenli Çıkış Yap">
+    🔒 Güvenli Çıkış Yap
+  </button>
 </body>
 </html>
