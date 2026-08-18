@@ -574,17 +574,15 @@
           <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
         </div>
 
-              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-        <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
-          🗑️ Demo Profilleri Temizle
-        </button>
-        <button class="btn-add-therapist" onclick="openAddModal()">
-          <span>+</span>
-          <span>Yeni Terapist / İlan Ekle</span>
-        </button>
-      </div>
-          <span>+ Yeni Terapist Ekle</span>
-        </button>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🗑️ Demo Profilleri Temizle
+          </button>
+          <button class="btn-add-therapist" onclick="openAddModal()">
+            <span>+</span>
+            <span>Yeni Terapist / İlan Ekle</span>
+          </button>
+        </div>
       </div>
 
       <!-- KPI Summary -->
@@ -1268,13 +1266,11 @@
       alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
     }
 
-        async function clearDemoProfiles() {
+    async function clearDemoProfiles() {
       if (confirm("Tüm hazır sanal/demo profilleri silip yalnızca kendi eklediğiniz üyeleri bırakmak istediğinize emin misiniz?")) {
-        // Sadece Melis ve kullanicinin ekledigi ozel profilleri tut, diger 1-14 arasindaki demo id'leri sil
         list = list.filter(t => t.id === 100 || t.id > 1000);
-        await await saveToStorage();
+        await saveToStorage();
         renderTable(list);
-        alert('✓ Profil başarıyla silindi ve kalıcı olarak kaldırıldı!');
         alert("✓ Tüm demo profiller başarıyla silindi! Artık sayfayı yenileseniz de geri gelmeyecektir.");
       }
     }
