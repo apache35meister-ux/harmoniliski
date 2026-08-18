@@ -2106,6 +2106,13 @@
     }
 
     function getStoredTherapists() {
+      const currentVer = "v4_live";
+      const storedVer = localStorage.getItem('zenspa_ver');
+      if (storedVer !== currentVer) {
+        localStorage.setItem('zenspa_ver', currentVer);
+        localStorage.setItem('zenspa_therapists', JSON.stringify(defaultTherapists));
+        return defaultTherapists;
+      }
       const stored = localStorage.getItem('zenspa_therapists');
       if (stored) {
         try { 
@@ -2301,7 +2308,7 @@
     let deferredPrompt;
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').then(reg => {
+        navigator.serviceWorker.register('./sw.js?v=4').then(reg => { reg.update();.then(reg => {
           console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
         }).catch(err => {
           console.log('SW Hata:', err);
