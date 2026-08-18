@@ -829,11 +829,11 @@
             <tr>
               <th>Terapist & Fotoğraf</th>
               <th>Şehir / Semt</th>
-              <th>Hizmetler</th>
               <th>Seans Ücreti</th>
-              <th>Durum</th>
+              <th>Yayın Durumu</th>
+              <th>Kalan Süre</th>
               <th>WhatsApp Randevu</th>
-              <th>İşlem</th>
+              <th>Hızlı İşlemler</th>
             </tr>
           </thead>
           <tbody id="therapistTableBody">
@@ -965,8 +965,13 @@
       <!-- Canlı Arama ve Mesaj Geçmişi Günlüğü -->
       <div class="panel-box">
         <div class="panel-header">
-          <h3>📜 Son Gerçekleşen Arama & WhatsApp Mesaj Kayıtları</h3>
-          <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Kayıt Aktif</span>
+          <div>
+            <h3>📜 Son Gerçekleşen Arama & WhatsApp Mesaj Kayıtları</h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Kayıt Aktif</span>
+          </div>
+          <button onclick="exportCallLogsToCSV()" style="background:#142B1A; color:#4ADE80; border:1px solid rgba(74,222,128,0.4); padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.82rem; cursor:pointer;">
+            📥 Raporu Excel (CSV) İndir
+          </button>
         </div>
         <table>
           <thead>
@@ -1024,7 +1029,7 @@
   <div class="modal-overlay" id="addTherapistModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeAddModal()">✕</button>
-      <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
+      <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
 
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
         
@@ -1169,12 +1174,25 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label>WhatsApp Randevu Numarası *</label>
-          <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya 90532..." value="" required>
+        <input type="hidden" id="editTherapistId" value="">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp Randevu Numarası *</label>
+            <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya 90532..." value="" required>
+          </div>
+          <div class="form-group">
+            <label>📅 İlan / Vitrin Süresi</label>
+            <select id="tDuration" class="form-control">
+              <option value="30">1 Aylık VIP (30 Gün)</option>
+              <option value="7">1 Haftalık Vitrin (7 Gün)</option>
+              <option value="90">3 Aylık Platinum (90 Gün)</option>
+              <option value="365">1 Yıllık / Süresiz</option>
+            </select>
+          </div>
         </div>
 
-        <button type="submit" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
+        <button type="submit" id="btnSubmitTherapist" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
           ✓ Terapisti Kaydet ve Yayına Al
         </button>
       </form>
@@ -1388,36 +1406,55 @@
       return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
     }
 
+        function getExpiryBadge(t) {
+      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.78rem;">Süresiz</span>';
+      const diffMs = t.expiresAt - Date.now();
+      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      if (diffDays <= 0) {
+        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu</span>';
+      } else if (diffDays <= 3) {
+        return '<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ ' + diffDays + ' Gün Kaldı</span>';
+      } else {
+        return '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ' + diffDays + ' Gün Kaldı</span>';
+      }
+    }
+
     function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
       tbody.innerHTML = items.map(t => {
-        const srv = Array.isArray(t.services) ? t.services.join(', ') : t.services;
-        return `
-        <tr>
+        const isAct = t.active !== false;
+        return 
+        <tr style="opacity:  + (isAct ? '1' : '0.6') + ;">
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
               <div>
-                <strong style="color:#FFF;">${t.name}</strong>
+                <strong style="color:#FFF;"> + t.name + </strong>
+                <div style="font-size:0.75rem; color:#A1A1AA;"> + t.age +  Yaş •  + (t.gender || 'Kadın') + </div>
               </div>
             </div>
           </td>
-          <td>📍 ${t.city}, ${t.district || ''}</td>
-          <td>${srv}</td>
-          <td style="color:#FDE047; font-weight:700;">${t.price}</td>
+          <td>📍  + t.city + ,  + (t.district || '') + </td>
+          <td style="color:#FDE047; font-weight:700;"> + t.price + </td>
           <td>
-            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 VIP Vitrin</span>' : '<span class="status-badge">🟢 Aktif</span>'}
+             + (isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>') + 
+             + (t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : '') + 
           </td>
+          <td> + getExpiryBadge(t) + </td>
           <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
-              💬 WhatsApp'a Git
+            <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+              💬 WhatsApp
             </a>
           </td>
           <td>
-            <button class="action-btn" onclick="deleteItem(${t.id})">Sil</button>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+              <button class="action-btn" onclick="editItem( + t.id + )" style="color:#60A5FA; border-color:rgba(96,165,250,0.3);" title="Profili Düzenle">✏️ Düzenle</button>
+              <button class="action-btn" onclick="toggleActive( + t.id + )" style="color: + (isAct ? '#FB923C' : '#4ADE80') + ;" title="Yayından Gizle / Aç"> + (isAct ? '⏸️ Gizle' : '▶️ Aç') + </button>
+              <button class="action-btn" onclick="deleteItem( + t.id + )" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
+            </div>
           </td>
         </tr>
-      `}).join('');
+      }).join('');
 
       const vitrinCount = list.filter(t => t.vitrin).length;
       document.getElementById('kpiTotal').textContent = list.length;
@@ -1428,39 +1465,48 @@
     // Render Tab 2 (Vitrin)
     function renderVitrinTable() {
       const tbody = document.getElementById('vitrinTableBody');
-      tbody.innerHTML = list.map((t, idx) => `
+      tbody.innerHTML = list.map((t, idx) => 
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar">
-              <strong style="color:#FFF;">${t.name}</strong>
+              <img src=" + (t.img || t.image) + " class="therapist-avatar">
+              <strong style="color:#FFF;"> + t.name + </strong>
             </div>
           </td>
-          <td>📍 ${t.city}</td>
+          <td>📍  + t.city + </td>
           <td>
-            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>'}
+             + (t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>') + 
           </td>
-          <td style="color:#FBBF24; font-weight:800;">${t.vitrin ? `#${idx + 1} Sıra` : '-'}</td>
+          <td style="color:#FBBF24; font-weight:800;"> + (t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-') + </td>
           <td>
-            <button class="btn-toggle-vitrin" onclick="toggleVitrin(${t.id})">
-              ${t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle'}
+            <button class="btn-toggle-vitrin" onclick="toggleVitrin( + t.id + )">
+               + (t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle') + 
             </button>
           </td>
         </tr>
-      `).join('');
+      ).join('');
     }
 
     async function toggleVitrin(id) {
       const item = list.find(t => t.id === id);
       if (item) {
         item.vitrin = !item.vitrin;
-        await saveToStorage();
+        saveToStorage();
         renderTable(list);
         renderVitrinTable();
       }
     }
 
-        // Render Tab 3 (WhatsApp & Canlı Arama Raporu)
+    function toggleActive(id) {
+      const item = list.find(t => t.id === id);
+      if (item) {
+        item.active = item.active === false ? true : false;
+        saveToStorage();
+        renderTable(list);
+      }
+    }
+
+    // Render Tab 3 (WhatsApp & Canlı Arama Raporu)
     function renderWaTable() {
       const stats = getLiveAnalytics();
       document.getElementById('realTotalWa').textContent = stats.waClicks;
@@ -1517,6 +1563,26 @@
       }
     }
 
+    function exportCallLogsToCSV() {
+      const stats = getLiveAnalytics();
+      if (!stats.callLogs || stats.callLogs.length === 0) {
+        alert("İndirilecek arama veya mesaj kaydı bulunamadı.");
+        return;
+      }
+      let csvContent = "\uFEFFTarih & Saat,Terapist,Şehir,İşlem Türü,Durum\n";
+      stats.callLogs.forEach(l => {
+        csvContent += "","","","","İletişim Başlatıldı"\n;
+      });
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", harmoniliski_cagri_raporu_.csv);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
     function filterTable() {
       const q = document.getElementById('tableSearch').value.toLowerCase();
       const filtered = list.filter(t => t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || (t.district && t.district.toLowerCase().includes(q)));
@@ -1543,14 +1609,75 @@
       el.classList.add('selected');
     }
 
-    function openAddModal() { document.getElementById('addTherapistModal').classList.add('active'); }
-    function closeAddModal() { document.getElementById('addTherapistModal').classList.remove('active'); }
+    function openAddModal() {
+      document.getElementById('editTherapistId').value = "";
+      document.getElementById('modalTitle').textContent = "YENİ TERAPİST EKLE";
+      document.getElementById('btnSubmitTherapist').textContent = "✓ Terapisti Kaydet ve Yayına Al";
+      document.getElementById('addTherapistForm').reset();
+      currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
+      document.getElementById('previewPhoto').src = currentPhotoUrl;
+      document.getElementById('addTherapistModal').classList.add('active');
+    }
+
+    function editItem(id) {
+      const item = list.find(t => t.id === id);
+      if (!item) return;
+
+      document.getElementById('editTherapistId').value = item.id;
+      document.getElementById('modalTitle').textContent = "✏️ TERAPİSTİ DÜZENLE: " + item.name;
+      document.getElementById('btnSubmitTherapist').textContent = "✓ Güncellemeleri Kaydet";
+
+      document.getElementById('tName').value = item.name || '';
+      document.getElementById('tAge').value = item.age || 25;
+      document.getElementById('tCity').value = item.city || 'İstanbul';
+      document.getElementById('tDistrict').value = item.district || '';
+      document.getElementById('tGender').value = item.gender || 'Kadın';
+      document.getElementById('tPrice').value = item.price || '60 Dk: 1.800 ₺';
+      document.getElementById('tWhatsapp').value = item.whatsapp || item.wa || '';
+      
+      currentPhotoUrl = item.img || item.image || "images/turkish_selin_photo_1786793658243.jpg";
+      document.getElementById('previewPhoto').src = currentPhotoUrl;
+
+      document.getElementById('addTherapistModal').classList.add('active');
+    }
+
+    function closeAddModal() {
+      document.getElementById('addTherapistModal').classList.remove('active');
+    }
 
     function saveTherapist(e) {
       e.preventDefault();
       const rawWa = document.getElementById('tWhatsapp').value;
       const cleanWa = formatPhone(rawWa);
-      
+      const editId = document.getElementById('editTherapistId').value;
+      const durationDays = parseInt(document.getElementById('tDuration').value) || 30;
+      const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+
+      if (editId) {
+        // DÜZENLEME MODU (Mevcut profili güncelle)
+        const idx = list.findIndex(t => t.id == editId);
+        if (idx !== -1) {
+          list[idx].name = document.getElementById('tName').value;
+          list[idx].age = parseInt(document.getElementById('tAge').value) || 25;
+          list[idx].city = document.getElementById('tCity').value;
+          list[idx].district = document.getElementById('tDistrict').value;
+          list[idx].gender = document.getElementById('tGender').value;
+          list[idx].price = document.getElementById('tPrice').value;
+          list[idx].wa = cleanWa;
+          list[idx].whatsapp = cleanWa;
+          list[idx].img = currentPhotoUrl;
+          list[idx].image = currentPhotoUrl;
+          list[idx].expiresAt = expiresAt;
+          
+          saveToStorage();
+          renderTable(list);
+          closeAddModal();
+          alert("✓ Terapist profili başarıyla güncellendi!");
+          return;
+        }
+      }
+
+      // YENİ EKLEME MODU
       const newT = {
         id: Date.now(),
         name: document.getElementById('tName').value,
@@ -1560,9 +1687,11 @@
         gender: document.getElementById('tGender').value,
         services: ["İsveç", "Aromaterapi", "Medikal"],
         tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
-        bio: `${document.getElementById('tCity').value} bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.`,
+        bio: ${document.getElementById('tCity').value} bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.,
         price: document.getElementById('tPrice').value,
         vitrin: true,
+        active: true,
+        expiresAt: expiresAt,
         wa: cleanWa,
         whatsapp: cleanWa,
         img: currentPhotoUrl,
@@ -1579,7 +1708,7 @@
       alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
     }
 
-        function clearDemoProfiles() {
+    function clearDemoProfiles() {
       if (confirm("Tüm hazır sanal/demo profilleri silip yalnızca kendi eklediğiniz üyeleri bırakmak istediğinize emin misiniz?")) {
         list = list.filter(t => t.id === 100 || t.id > 1000);
         saveToStorage();
