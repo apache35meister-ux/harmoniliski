@@ -1423,38 +1423,38 @@
       const tbody = document.getElementById('therapistTableBody');
       tbody.innerHTML = items.map(t => {
         const isAct = t.active !== false;
-        return 
-        <tr style="opacity:  + (isAct ? '1' : '0.6') + ;">
+        return `
+        <tr style="opacity: ${isAct ? '1' : '0.6'};">
           <td>
             <div class="therapist-info">
-              <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
               <div>
-                <strong style="color:#FFF;"> + t.name + </strong>
-                <div style="font-size:0.75rem; color:#A1A1AA;"> + t.age +  Yaş •  + (t.gender || 'Kadın') + </div>
+                <strong style="color:#FFF;">${t.name}</strong>
+                <div style="font-size:0.75rem; color:#A1A1AA;">${t.age} Yaş • ${t.gender || 'Kadın'}</div>
               </div>
             </div>
           </td>
-          <td>📍  + t.city + ,  + (t.district || '') + </td>
-          <td style="color:#FDE047; font-weight:700;"> + t.price + </td>
+          <td>📍 ${t.city}, ${t.district || ''}</td>
+          <td style="color:#FDE047; font-weight:700;">${t.price}</td>
           <td>
-             + (isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>') + 
-             + (t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : '') + 
+            ${isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>'}
+            ${t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : ''}
           </td>
-          <td> + getExpiryBadge(t) + </td>
+          <td>${getExpiryBadge(t)}</td>
           <td>
-            <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
               💬 WhatsApp
             </a>
           </td>
           <td>
             <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-              <button class="action-btn" onclick="editItem( + t.id + )" style="color:#60A5FA; border-color:rgba(96,165,250,0.3);" title="Profili Düzenle">✏️ Düzenle</button>
-              <button class="action-btn" onclick="toggleActive( + t.id + )" style="color: + (isAct ? '#FB923C' : '#4ADE80') + ;" title="Yayından Gizle / Aç"> + (isAct ? '⏸️ Gizle' : '▶️ Aç') + </button>
-              <button class="action-btn" onclick="deleteItem( + t.id + )" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
+              <button class="action-btn" onclick="editItem(${t.id})" style="color:#60A5FA; border-color:rgba(96,165,250,0.3);" title="Profili Düzenle">✏️ Düzenle</button>
+              <button class="action-btn" onclick="toggleActive(${t.id})" style="color:${isAct ? '#FB923C' : '#4ADE80'};" title="Yayından Gizle / Aç">${isAct ? '⏸️ Gizle' : '▶️ Aç'}</button>
+              <button class="action-btn" onclick="deleteItem(${t.id})" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
             </div>
           </td>
         </tr>
-      }).join('');
+      `}).join('');
 
       const vitrinCount = list.filter(t => t.vitrin).length;
       document.getElementById('kpiTotal').textContent = list.length;
@@ -1465,26 +1465,26 @@
     // Render Tab 2 (Vitrin)
     function renderVitrinTable() {
       const tbody = document.getElementById('vitrinTableBody');
-      tbody.innerHTML = list.map((t, idx) => 
+      tbody.innerHTML = list.map((t, idx) => `
         <tr>
           <td>
             <div class="therapist-info">
-              <img src=" + (t.img || t.image) + " class="therapist-avatar">
-              <strong style="color:#FFF;"> + t.name + </strong>
+              <img src="${t.img || t.image}" class="therapist-avatar">
+              <strong style="color:#FFF;">${t.name}</strong>
             </div>
           </td>
-          <td>📍  + t.city + </td>
+          <td>📍 ${t.city}</td>
           <td>
-             + (t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>') + 
+            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>'}
           </td>
-          <td style="color:#FBBF24; font-weight:800;"> + (t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-') + </td>
+          <td style="color:#FBBF24; font-weight:800;">${t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-'}</td>
           <td>
-            <button class="btn-toggle-vitrin" onclick="toggleVitrin( + t.id + )">
-               + (t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle') + 
+            <button class="btn-toggle-vitrin" onclick="toggleVitrin(${t.id})">
+              ${t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle'}
             </button>
           </td>
         </tr>
-      ).join('');
+      `).join('');
     }
 
     async function toggleVitrin(id) {
@@ -1518,47 +1518,47 @@
         const waCount = stats.tClicks[t.id] || 0;
         const callCount = stats.tCalls[t.id] || 0;
         const totalInterest = waCount + callCount;
-        return 
+        return `
         <tr>
           <td>
             <div class="therapist-info">
-              <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
-              <strong style="color:#FFF;"> + t.name + </strong>
+              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <strong style="color:#FFF;">${t.name}</strong>
             </div>
           </td>
-          <td>📍  + t.city + </td>
-          <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬  + waCount +  Mesaj Talebi</td>
-          <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞  + callCount +  Telefon Araması</td>
-          <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡  + totalInterest +  Müşteri Talebi</td>
+          <td>📍 ${t.city}</td>
+          <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬 ${waCount} Mesaj Talebi</td>
+          <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 ${callCount} Telefon Araması</td>
+          <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ ${totalInterest} Müşteri Talebi</td>
           <td>
-            <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
               💬 İletişime Geç
             </a>
           </td>
         </tr>
-      }).join('');
+      `}).join('');
 
       // Canli Arama & Mesaj Gunlugu Tablosu
       const logsTbody = document.getElementById('liveCallLogsTableBody');
       if (logsTbody) {
         if (stats.callLogs && stats.callLogs.length > 0) {
-          logsTbody.innerHTML = stats.callLogs.map(log => 
+          logsTbody.innerHTML = stats.callLogs.map(log => `
             <tr>
-              <td style="color:#A1A1AA; font-weight:600;">⏱️  + log.time + </td>
-              <td><strong style="color:#FFF;"> + log.name + </strong></td>
-              <td>📍  + log.city + </td>
-              <td style="color: + (log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80') + ; font-weight:800;"> + log.type + </td>
+              <td style="color:#A1A1AA; font-weight:600;">⏱️ ${log.time}</td>
+              <td><strong style="color:#FFF;">${log.name}</strong></td>
+              <td>📍 ${log.city}</td>
+              <td style="color:${log.type && log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80'}; font-weight:800;">${log.type}</td>
               <td><span class="status-badge">🟢 İletişim Başlatıldı</span></td>
             </tr>
-          ).join('');
+          `).join('');
         } else {
-          logsTbody.innerHTML = 
+          logsTbody.innerHTML = `
             <tr>
               <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
                 Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
               </td>
             </tr>
-          ;
+          `;
         }
       }
     }
@@ -1571,13 +1571,13 @@
       }
       let csvContent = "\uFEFFTarih & Saat,Terapist,Şehir,İşlem Türü,Durum\n";
       stats.callLogs.forEach(l => {
-        csvContent += "","","","","İletişim Başlatıldı"\n;
+        csvContent += `"${l.time}","${l.name}","${l.city}","${l.type}","İletişim Başlatıldı"\n`;
       });
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.setAttribute("href", url);
-      link.setAttribute("download", harmoniliski_cagri_raporu_.csv);
+      link.setAttribute("download", `harmoniliski_cagri_raporu_${Date.now()}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
