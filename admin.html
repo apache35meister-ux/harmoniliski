@@ -417,7 +417,7 @@
       padding: 1.5rem;
       z-index: 999;
     }
-    .modal-overlay.active { display: flex; }
+    .modal-overlay.active { display: flex !important; }
     .modal-box {
       background: #101014;
       border: 1px solid var(--border-gold);
@@ -1026,20 +1026,23 @@
 
     let list = getStoredList();
 
-        async function pushTherapistsToGitHub(currentList) {
-            const p1 = "ghp_";
-      const p2 = "zODf518H";
-      const p3 = "3Pvnrz6TVb";
-      const p4 = "WMXRlu8iNL8";
-      const p5 = "m2TVMqo";
-      const token = p1 + p2 + p3 + p4 + p5;
-      const owner = "apache35meister-ux";
-      const repo = "harmoniliski";
+            async function pushTherapistsToGitHub(currentList) {
       try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
         const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
           headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
         });
         const fileData = await fileRes.json();
+        if (!fileData || !fileData.sha) return;
+
         const jsonStr = JSON.stringify(currentList, null, 2);
         const utf8Bytes = new TextEncoder().encode(jsonStr);
         let binary = '';
@@ -1056,21 +1059,21 @@
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            message: "Admin: Sync therapist catalog to cloud for all mobile devices",
+            message: "Admin: Sync therapist catalog to cloud",
             content: base64Content,
             sha: fileData.sha
           })
         });
-        console.log("Bulut senkronizasyonu tum telefonlar icin basariyla tamamlandi!");
+        console.log("Bulut guncellemesi basarili!");
       } catch(err) {
-        console.log("Bulut senkronizasyon:", err);
+        console.log("Bulut sync uyari:", err);
       }
     }
 
-    async function saveToStorage() {
+    function saveToStorage() {
       localStorage.setItem('zenspa_admin_modified', 'true');
       localStorage.setItem('zenspa_therapists', JSON.stringify(list));
-      await pushTherapistsToGitHub(list);
+      pushTherapistsToGitHub(list);
     }
 
     // Tab Switching
@@ -1265,21 +1268,21 @@
       alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
     }
 
-    async function clearDemoProfiles() {
+        function clearDemoProfiles() {
       if (confirm("Tüm hazır sanal/demo profilleri silip yalnızca kendi eklediğiniz üyeleri bırakmak istediğinize emin misiniz?")) {
         list = list.filter(t => t.id === 100 || t.id > 1000);
-        await saveToStorage();
+        saveToStorage();
         renderTable(list);
-        alert("✓ Tüm demo profiller başarıyla silindi! Artık sayfayı yenileseniz de geri gelmeyecektir.");
+        alert("✓ Tüm demo profiller başarıyla silindi!");
       }
     }
 
-    async function deleteItem(id) {
+    function deleteItem(id) {
       if (confirm("Bu terapist kaydını silmek istediğinize emin misiniz?")) {
         list = list.filter(t => t.id !== id);
-        await saveToStorage();
+        saveToStorage();
         renderTable(list);
-        alert('✓ Profil başarıyla silindi ve kalıcı olarak kaldırıldı!');
+        alert('✓ Profil başarıyla silindi!');
       }
     }
 
