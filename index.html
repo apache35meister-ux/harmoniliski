@@ -2324,7 +2324,7 @@
     let deferredPrompt;
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=4').then(reg => { reg.update();.then(reg => {
+        navigator.serviceWorker.register('./sw.js?v=4').then(reg => {
           console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
         }).catch(err => {
           console.log('SW Hata:', err);
