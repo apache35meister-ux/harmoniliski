@@ -1200,33 +1200,37 @@
   </div>
 
   <script>
-        // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
+            // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
     const ADMIN_PASS = "hakan359";
 
     function checkAuth() {
       const isAuth = sessionStorage.getItem('zenspa_admin_logged');
       const overlay = document.getElementById('adminAuthOverlay');
       if (isAuth === 'true') {
-        if (overlay) overlay.style.display = 'none';
+        if (overlay) overlay.style.setProperty('display', 'none', 'important');
       } else {
-        if (overlay) overlay.style.display = 'flex';
+        if (overlay) overlay.style.setProperty('display', 'flex', 'important');
       }
     }
 
     function handleAdminLogin(e) {
-      e.preventDefault();
-      const input = document.getElementById('adminPassInput').value.trim();
+      if (e && e.preventDefault) e.preventDefault();
+      const input = document.getElementById('adminPassInput').value.toLowerCase().trim();
       const errorMsg = document.getElementById('authErrorMsg');
+      const overlay = document.getElementById('adminAuthOverlay');
 
       if (input === ADMIN_PASS) {
         sessionStorage.setItem('zenspa_admin_logged', 'true');
-        document.getElementById('adminAuthOverlay').style.display = 'none';
-        errorMsg.style.display = 'none';
+        if (overlay) overlay.style.setProperty('display', 'none', 'important');
+        if (errorMsg) errorMsg.style.display = 'none';
         initAdminData();
       } else {
-        errorMsg.style.display = 'block';
-        document.getElementById('adminPassInput').value = '';
-        document.getElementById('adminPassInput').focus();
+        if (errorMsg) errorMsg.style.display = 'block';
+        const passEl = document.getElementById('adminPassInput');
+        if (passEl) {
+          passEl.value = '';
+          passEl.focus();
+        }
       }
     }
 
@@ -1245,13 +1249,16 @@
     function adminLogout() {
       if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
         sessionStorage.removeItem('zenspa_admin_logged');
-        document.getElementById('adminPassInput').value = '';
-        document.getElementById('authErrorMsg').style.display = 'none';
-        document.getElementById('adminAuthOverlay').style.display = 'flex';
+        const passEl = document.getElementById('adminPassInput');
+        if (passEl) passEl.value = '';
+        const errorMsg = document.getElementById('authErrorMsg');
+        if (errorMsg) errorMsg.style.display = 'none';
+        const overlay = document.getElementById('adminAuthOverlay');
+        if (overlay) overlay.style.setProperty('display', 'flex', 'important');
       }
     }
 
-        // --- CANLI GERÇEK ANALİTİK & ÇAĞRI İZLEME MOTORU ---
+    // --- CANLI GERÇEK ANALİTİK & ÇAĞRI İZLEME MOTORU ---
     function getLiveAnalytics() {
       const visits = parseInt(localStorage.getItem('zenspa_real_visits') || '28');
       const waClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14');
