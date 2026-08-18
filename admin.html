@@ -1122,7 +1122,7 @@
             ${t.vitrin ? '<span class="status-badge status-vitrin">👑 VIP Vitrin</span>' : '<span class="status-badge">🟢 Aktif</span>'}
           </td>
           <td>
-            <a href="` + getWaLink(t.wa || t.whatsapp, 'Merhaba') + `" target="_blank" class="btn-wa-direct">
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
               💬 WhatsApp'a Git
             </a>
           </td>
@@ -1163,13 +1163,12 @@
       `).join('');
     }
 
-    function toggleVitrin(id) {
+    async function toggleVitrin(id) {
       const item = list.find(t => t.id === id);
       if (item) {
         item.vitrin = !item.vitrin;
         await saveToStorage();
         renderTable(list);
-        alert('✓ Profil başarıyla silindi ve kalıcı olarak kaldırıldı!');
         renderVitrinTable();
       }
     }
