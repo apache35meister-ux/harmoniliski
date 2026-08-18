@@ -1243,6 +1243,560 @@
                 // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
     const ADMIN_PASS = "hakan359";
 
+        function checkAuth() {
+      // URL parametresi ile aninda otomatik giris destegi (?pass=hakan359)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('pass') === 'hakan359') {
+        localStorage.setItem('zenspa_admin_logged', 'true');
+        sessionStorage.setItem('zenspa_admin_logged', 'true');
+      }
+
+      const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
+      const overlay = document.getElementById('adminAuthOverlay');
+      if (isAuth === 'true') {
+        if (overlay) {
+          overlay.classList.add('hidden');
+          overlay.style.setProperty('display', 'none', 'important');
+          overlay.style.setProperty('pointer-events', 'none', 'important');
+        }
+      } else {
+        if (overlay) {
+          overlay.classList.remove('hidden');
+          overlay.style.setProperty('display', 'flex', 'important');
+        }
+      }
+    }
+
+    function handleAdminLogin() {
+      var passEl = document.getElementById('adminPassInput');
+      if (!passEl) return;
+      var val = passEl.value.toLowerCase().trim();
+      if (val === 'hakan359') {
+        localStorage.setItem('zenspa_admin_logged', 'true');
+        sessionStorage.setItem('zenspa_admin_logged', 'true');
+        var overlay = document.getElementById('adminAuthOverlay');
+        if (overlay) { overlay.classList.add('hidden'); overlay.style.setProperty('display', 'none', 'important'); }
+        if (typeof initAdminData === 'function') initAdminData();
+      } else {
+        var err = document.getElementById('authErrorMsg');
+        if (err) err.style.display = 'block';
+        passEl.value = '';
+        passEl.focus();
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- VIP Admin Password Lock Screen -->
+  <div id="adminAuthOverlay">
+    <div class="auth-card">
+      <div class="auth-logo">🔐</div>
+      <h2 class="auth-title">VIP YÖNETİCİ GİRİŞİ</h2>
+      <p class="auth-desc">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
+      
+      <div>
+        <div class="auth-input-wrapper">
+          <input type="password" id="adminPassInput" class="auth-input" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
+          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+        
+        <button type="button" class="btn-auth-submit" onclick="handleAdminLogin()">
+          GİRİŞ YAP ➔
+        </button>
+        <div id="authErrorMsg" class="auth-error" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold;">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand">
+        <div class="brand-icon">✨</div>
+        <div class="brand-title">
+          <h2>ZENSPA</h2>
+          <span>Yönetim Paneli</span>
+        </div>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <button class="nav-btn active" onclick="switchTab('therapistsTab', this)">
+            <span>📊</span>
+            <span>Terapist Yönetimi</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('vitrinTab', this)">
+            <span>👑</span>
+            <span>Vitrin & İlanlar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('whatsappTab', this)">
+            <span>💬</span>
+            <span>WhatsApp Raporu</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('settingsTab', this)">
+            <span>⚙️</span>
+            <span>Ayarlar</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn-live-site" target="_blank">
+        <span>🌐 Ana Siteyi Görüntüle</span>
+      </a>
+      <button class="btn-logout" onclick="adminLogout()">
+        <span>🔒 Güvenli Çıkış Yap</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- TAB 1: TERAPİST YÖNETİMİ -->
+    <div id="therapistsTab" class="tab-section active">
+      <div class="top-header">
+        <div>
+          <h1>VIP Terapist & Profil Yönetimi</h1>
+          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+          <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🗑️ Demo Profilleri Temizle
+          </button>
+          <button class="btn-add-therapist" onclick="openAddModal()">
+            <span>+</span>
+            <span>Yeni Terapist / İlan Ekle</span>
+          </button>
+          <button class="btn-logout-header" onclick="adminLogout()">
+            🔒 Güvenli Çıkış Yap
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Summary -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Terapist</h4>
+            <div class="number" id="kpiTotal">14</div>
+          </div>
+          <div class="kpi-icon">💆</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>👑 Vitrin İlanları</h4>
+            <div class="number" id="kpiVitrinCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>WhatsApp İlan Hattı</h4>
+            <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+      </div>
+
+      <!-- Terapist Listesi Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Yayındaki Tüm Terapistler (Kalıcı Kayıt)</h3>
+          <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist & Fotoğraf</th>
+              <th>Şehir / Semt</th>
+              <th>Seans Ücreti</th>
+              <th>Yayın Durumu</th>
+              <th>Kalan Süre</th>
+              <th>WhatsApp Randevu</th>
+              <th>Hızlı İşlemler</th>
+            </tr>
+          </thead>
+          <tbody id="therapistTableBody">
+            <!-- JS ile doldurulacak -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 2: VİTRİN & İLANLAR -->
+    <div id="vitrinTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>👑 Vitrin & VIP İlan Yönetimi</h1>
+          <p>Ana sayfanın en üstünde öne çıkarılan VIP vitrin ilanlarını buradan düzenleyin.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Aktif Vitrin İlanları</h4>
+            <div class="number" id="vitrinTabCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">👑</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>1 Haftalık Vitrin</h4>
+            <div class="number" style="color: #4ADE80;">1.250 ₺</div>
+          </div>
+          <div class="kpi-icon">🥉</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>1 Aylık Gold VIP</h4>
+            <div class="number" style="color: #FDE047;">3.500 ₺</div>
+          </div>
+          <div class="kpi-icon">👑</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>3 Aylık Platinum</h4>
+            <div class="number" style="color: #60A5FA;">7.500 ₺</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Vitrinde Öne Çıkarılan Terapistler</h3>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>Vitrin Durumu</th>
+              <th>Vitrin Sıralaması</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="vitrinTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: WHATSAPP & ÇAĞRI RAPORU -->
+    <div id="whatsappTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>💬 & 📞 Canlı WhatsApp & Telefon Çağrı Raporu</h1>
+          <p>Üyelerinizin aldığı WhatsApp mesajları ve gelen doğrudan telefon aramaları anlık olarak kaydedilir.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>💬 WhatsApp Randevu Talebi</h4>
+            <div class="number" id="realTotalWa" style="color: #4ADE80;">0</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>📞 Doğrudan Telefon Araması</h4>
+            <div class="number" id="realTotalCalls" style="color: #38BDF8;">0</div>
+          </div>
+          <div class="kpi-icon">📞</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>👁️ Canlı Site Ziyareti</h4>
+            <div class="number" id="realTotalVisits" style="color: #FBBF24;">0</div>
+          </div>
+          <div class="kpi-icon">👥</div>
+        </div>
+      </div>
+
+      <!-- Terapist Bazlı İstatistik Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Terapist Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
+          <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
+            🔄 İstatistikleri Sıfırla
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>💬 WhatsApp Talebi</th>
+              <th>📞 Telefon Araması</th>
+              <th>🔥 Toplam Müşteri İlgisi</th>
+              <th>Doğrudan İletişim</th>
+            </tr>
+          </thead>
+          <tbody id="waStatsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Canlı Arama ve Mesaj Geçmişi Günlüğü -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <div>
+            <h3>📜 Son Gerçekleşen Arama & WhatsApp Mesaj Kayıtları</h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Kayıt Aktif</span>
+          </div>
+          <button onclick="exportCallLogsToCSV()" style="background:#142B1A; color:#4ADE80; border:1px solid rgba(74,222,128,0.4); padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.82rem; cursor:pointer;">
+            📥 Raporu Excel (CSV) İndir
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tarih & Saat</th>
+              <th>Aranan / Yazılan Terapist</th>
+              <th>Şehir</th>
+              <th>İşlem Türü</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="liveCallLogsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 4: AYARLAR -->
+    <div id="settingsTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>⚙️ Platform Ayarları</h1>
+          <p>Site başlığı ve WhatsApp numaralarını buradan güncelleyebilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <form onsubmit="saveSettings(event)">
+          <div class="settings-grid">
+            <div class="settings-group">
+              <label>Vitrin & İlan WhatsApp Numarası</label>
+              <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167">
+            </div>
+            <div class="settings-group">
+              <label>Site Başlığı</label>
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | 81 İl VIP Masaj & Terapi Rehberi">
+            </div>
+            <div class="settings-group">
+              <label>Kapsam</label>
+              <input type="text" class="settings-input" id="settingCities" value="Türkiye Geneli 81 İl">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-save-settings">
+            ✓ Ayarları Kaydet
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal: Yeni Terapist Ekle -->
+  <div class="modal-overlay" id="addTherapistModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAddModal()">✕</button>
+      <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
+
+      <form id="addTherapistForm" onsubmit="saveTherapist(event)">
+        
+        <!-- FOTOĞRAF ALANI -->
+        <div class="photo-upload-container">
+          <div class="photo-preview-wrap">
+            <img src="images/turkish_selin_photo_1786793658243.jpg" id="previewPhoto" class="photo-preview-img" alt="Önizleme">
+          </div>
+          
+          <label class="file-input-btn" for="fileInput">
+            📷 Bilgisayardan / Telefondan Fotoğraf Seç
+          </label>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileUpload(event)">
+          
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">veya aşağıdaki hazır modellerden birini seçin:</p>
+          
+          <div class="preset-photos">
+            <img src="images/turkish_selin_photo_1786793658243.jpg" class="preset-thumb selected" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_derya_photo_1786793693039.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_elif_photo_1786793625708.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_zeynep_selfie_1786793596006.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_cansu_selfie.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+            <img src="images/turkish_emre_candid_1786793611473.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad & Ünvan *</label>
+            <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Masöz" required>
+          </div>
+          <div class="form-group">
+            <label>Yaş *</label>
+            <input type="number" id="tAge" class="form-control" placeholder="26" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Şehir *</label>
+            <select id="tCity" class="form-control" required>
+              <option value="İstanbul">İstanbul</option>
+              <option value="Ankara">Ankara</option>
+              <option value="İzmir">İzmir</option>
+              <option value="Antalya">Antalya</option>
+              <option value="Bursa">Bursa</option>
+              <option value="Adana">Adana</option>
+              <option value="Muğla">Muğla (Bodrum/Marmaris)</option>
+              <option value="Eskişehir">Eskişehir</option>
+              <option value="Gaziantep">Gaziantep</option>
+              <option value="Konya">Konya</option>
+              <option value="Kocaeli">Kocaeli</option>
+              <option value="Mersin">Mersin</option>
+              <option value="Samsun">Samsun</option>
+              <option value="Trabzon">Trabzon</option>
+              <option value="Kayseri">Kayseri</option>
+              <option value="Diyarbakır">Diyarbakır</option>
+              <option value="Şanlıurfa">Şanlıurfa</option>
+              <option value="Denizli">Denizli</option>
+              <option value="Sakarya">Sakarya</option>
+              <option value="Tekirdağ">Tekirdağ</option>
+              <option value="Balıkesir">Balıkesir</option>
+              <option value="Manisa">Manisa</option>
+              <option value="Aydın">Aydın</option>
+              <option value="Hatay">Hatay</option>
+              <option value="Kahramanmaraş">Kahramanmaraş</option>
+              <option value="Van">Van</option>
+              <option value="Malatya">Malatya</option>
+              <option value="Erzurum">Erzurum</option>
+              <option value="Elazığ">Elazığ</option>
+              <option value="Batman">Batman</option>
+              <option value="Sivas">Sivas</option>
+              <option value="Çanakkale">Çanakkale</option>
+              <option value="Zonguldak">Zonguldak</option>
+              <option value="Kütahya">Kütahya</option>
+              <option value="Yalova">Yalova</option>
+              <option value="Düzce">Düzce</option>
+              <option value="Uşak">Uşak</option>
+              <option value="Çorum">Çorum</option>
+              <option value="Afyonkarahisar">Afyonkarahisar</option>
+              <option value="Isparta">Isparta</option>
+              <option value="Giresun">Giresun</option>
+              <option value="Ordu">Ordu</option>
+              <option value="Rize">Rize</option>
+              <option value="Aksaray">Aksaray</option>
+              <option value="Kastamonu">Kastamonu</option>
+              <option value="Tokat">Tokat</option>
+              <option value="Adıyaman">Adıyaman</option>
+              <option value="Edirne">Edirne</option>
+              <option value="Bolu">Bolu</option>
+              <option value="Nevşehir">Nevşehir</option>
+              <option value="Kırklareli">Kırklareli</option>
+              <option value="Kırıkkale">Kırıkkale</option>
+              <option value="Karabük">Karabük</option>
+              <option value="Osmaniye">Osmaniye</option>
+              <option value="Kars">Kars</option>
+              <option value="Ağrı">Ağrı</option>
+              <option value="Mardin">Mardin</option>
+              <option value="Muş">Muş</option>
+              <option value="Bitlis">Bitlis</option>
+              <option value="Niğde">Niğde</option>
+              <option value="Amasya">Amasya</option>
+              <option value="Kilis">Kilis</option>
+              <option value="Siirt">Siirt</option>
+              <option value="Bilecik">Bilecik</option>
+              <option value="Erzincan">Erzincan</option>
+              <option value="Sinop">Sinop</option>
+              <option value="Bartın">Bartın</option>
+              <option value="Karaman">Karaman</option>
+              <option value="Kırşehir">Kırşehir</option>
+              <option value="Artvin">Artvin</option>
+              <option value="Çankırı">Çankırı</option>
+              <option value="Gümüşhane">Gümüşhane</option>
+              <option value="Hakkari">Hakkari</option>
+              <option value="Şırnak">Şırnak</option>
+              <option value="Yozgat">Yozgat</option>
+              <option value="Bayburt">Bayburt</option>
+              <option value="Tunceli">Tunceli</option>
+              <option value="Ardahan">Ardahan</option>
+              <option value="Iğdır">Iğdır</option>
+              <option value="Bingöl">Bingöl</option>
+              <option value="Burdur">Burdur</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Semt / Bölge *</label>
+            <input type="text" id="tDistrict" class="form-control" placeholder="Kadıköy" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Cinsiyet</label>
+            <select id="tGender" class="form-control">
+              <option value="Kadın">Kadın Masöz</option>
+              <option value="Erkek">Erkek Masör</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Seans Ücreti *</label>
+            <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 1.800 ₺" required>
+          </div>
+        </div>
+
+        <input type="hidden" id="editTherapistId" value="">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp Randevu Numarası *</label>
+            <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya 90532..." value="" required>
+          </div>
+          <div class="form-group">
+            <label>📅 İlan / Vitrin Süresi</label>
+            <select id="tDuration" class="form-control">
+              <option value="30">1 Aylık VIP (30 Gün)</option>
+              <option value="7">1 Haftalık Vitrin (7 Gün)</option>
+              <option value="90">3 Aylık Platinum (90 Gün)</option>
+              <option value="365">1 Yıllık / Süresiz</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" id="btnSubmitTherapist" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
+          ✓ Terapisti Kaydet ve Yayına Al
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+                // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
+    const ADMIN_PASS = "hakan359";
+
     function checkAuth() {
       const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
       const overlay = document.getElementById('adminAuthOverlay');
