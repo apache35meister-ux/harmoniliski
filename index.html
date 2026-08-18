@@ -2419,14 +2419,34 @@
       }
     ];
 
-        // --- LIVE REAL-TIME ANALYTICS ENGINE ---
+            // --- GELİŞMİŞ CANLI WHATSAPP & TELEFON ÇAĞRI İZLEME MOTORU ---
+    function getFormattedTime() {
+      const d = new Date();
+      const pad = n => n.toString().padStart(2, '0');
+      return pad(d.getDate()) + '.' + pad(d.getMonth()+1) + '.' + d.getFullYear() + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+    }
+
+    function addLogEntry(tName, city, actionType) {
+      try {
+        let logs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]');
+        logs.unshift({
+          time: getFormattedTime(),
+          name: tName || 'VIP Terapist',
+          city: city || 'Türkiye',
+          type: actionType
+        });
+        if (logs.length > 50) logs = logs.slice(0, 50); // son 50 arama ve mesaj kaydi
+        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(logs));
+      } catch(e) {}
+    }
+
     function trackPageVisit() {
       let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
       visits++;
       localStorage.setItem('zenspa_real_visits', visits.toString());
     }
 
-    function trackWaClick(tId) {
+    function trackWaAction(tId, tName, city) {
       let totalWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0');
       totalWa++;
       localStorage.setItem('zenspa_real_wa_clicks', totalWa.toString());
@@ -2434,6 +2454,20 @@
       let tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
       tClicks[tId] = (tClicks[tId] || 0) + 1;
       localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
+
+      addLogEntry(tName, city, '💬 WhatsApp Randevu Talebi');
+    }
+
+    function trackCallAction(tId, tName, city) {
+      let totalCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '0');
+      totalCalls++;
+      localStorage.setItem('zenspa_real_calls', totalCalls.toString());
+
+      let tCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}');
+      tCalls[tId] = (tCalls[tId] || 0) + 1;
+      localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
+
+      addLogEntry(tName, city, '📞 Doğrudan Telefon Araması');
     }
 
     function trackAdClick() {
@@ -2441,8 +2475,6 @@
       totalAd++;
       localStorage.setItem('zenspa_real_ad_clicks', totalAd.toString());
     }
-
-
 
     function getStoredTherapists() {
       const stored = localStorage.getItem('zenspa_therapists');
@@ -2589,11 +2621,11 @@
               </div>
 
               <div class="card-actions-dual">
-                <a href="${waLink}" target="_blank" onclick="trackWaClick(${t.id})" class="btn-action-wa" title="${t.name} ile WhatsApp Randevusu Al">
+                <a href="${waLink}" target="_blank" onclick="trackWaAction(${t.id}, '${t.name}', '${t.city}')" class="btn-action-wa" title="${t.name} ile WhatsApp Randevusu Al">
                   <span>💬</span>
                   <span>WhatsApp</span>
                 </a>
-                <a href="tel:+${telNumber}" onclick="trackWaClick(${t.id})" class="btn-action-call" title="${t.name} Randevu Hattını Ara">
+                <a href="tel:+${telNumber}" onclick="trackCallAction(${t.id}, '${t.name}', '${t.city}')" class="btn-action-call" title="${t.name} Randevu Hattını Ara">
                   <span>📞</span>
                   <span>Hemen Ara</span>
                 </a>
