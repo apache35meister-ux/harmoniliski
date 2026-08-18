@@ -1,0 +1,423 @@
+[
+    {
+        "image":  "images/turkish_merve_photo.jpg",
+        "id":  100,
+        "img":  "images/turkish_merve_photo.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 2.000 ₺",
+        "age":  25,
+        "whatsapp":  "66639372920",
+        "district":  "Şişli / Nişantaşı",
+        "services":  [
+                         "İsveç",
+                         "Aromaterapi",
+                         "Medikal",
+                         "Sıcak Taş"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "VIP Vitrin",
+                     "Aromaterapi",
+                     "Özel Seans",
+                     "Kendi Stüdyosu"
+                 ],
+        "experience":  "5 Yıl Deneyim",
+        "wa":  "66639372920",
+        "city":  "İstanbul",
+        "name":  "Melis VIP Terapist",
+        "bio":  "Nişantaşı\u0027nda VIP standartlarda özel lüks stüdyomda günün yorgunluğunu sıfırlayan aromaterapi ve klasik masaj terapisi sunuyorum. Randevu için WhatsApp\u0027tan hemen yazabilirsiniz.",
+        "reviews":  94,
+        "rating":  "5.0"
+    },
+    {
+        "image":  "images/turkish_selin_photo_1786793658243.jpg",
+        "id":  1,
+        "img":  "images/turkish_selin_photo_1786793658243.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.800 ₺",
+        "age":  26,
+        "whatsapp":  "15096204167",
+        "district":  "Beşiktaş / Levent",
+        "services":  [
+                         "İsveç",
+                         "Aromaterapi",
+                         "Medikal"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Klasik İsveç",
+                     "Aromaterapi",
+                     "Kendi Stüdyosu",
+                     "VIP Hizmet"
+                 ],
+        "experience":  "5 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "İstanbul",
+        "name":  "Selin Terapist",
+        "bio":  "Uluslararası sertifikalı masaj terapistiyim. Kendi hijyenik ve nezih stüdyomda günün yorgunluğunu unutturacak özel relax ve medikal masaj seansları sunuyorum.",
+        "reviews":  64,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_derya_photo_1786793693039.jpg",
+        "id":  2,
+        "img":  "images/turkish_derya_photo_1786793693039.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.600 ₺",
+        "age":  28,
+        "whatsapp":  "15096204167",
+        "district":  "Kadıköy / Moda",
+        "services":  [
+                         "Aromaterapi",
+                         "Sıcak Taş",
+                         "İsveç"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Aromaterapi",
+                     "Sıcak Taş",
+                     "Otele Servis",
+                     "Kendi Yeri"
+                 ],
+        "experience":  "6 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "İstanbul",
+        "name":  "Derya Masöz",
+        "bio":  "Doğal uçucu yağlar eşliğinde kas gevşetici ve zihinsel rahatlama sağlayan özel aromaterapi seansları uyguluyorum. Kadıköy\u0027de kendi yerim bulunmaktadır.",
+        "reviews":  82,
+        "rating":  "5.0"
+    },
+    {
+        "image":  "images/turkish_elif_photo_1786793625708.jpg",
+        "id":  3,
+        "img":  "images/turkish_elif_photo_1786793625708.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.500 ₺",
+        "age":  25,
+        "whatsapp":  "15096204167",
+        "district":  "Alsancak / Konak",
+        "services":  [
+                         "Medikal",
+                         "İsveç",
+                         "Spor"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Medikal Masaj",
+                     "Klasik Masaj",
+                     "Kendi Yeri Var"
+                 ],
+        "experience":  "4 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "İzmir",
+        "name":  "Elif Uzman Terapist",
+        "bio":  "Fizyoterapi ve medikal masaj alanında eğitimliyim. Boyun, sırt ve bel ağrılarına yönelik özel rahatlatıcı tekniklerle seanslar yapmaktayım.",
+        "reviews":  47,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_emre_candid_1786793611473.jpg",
+        "id":  4,
+        "img":  "images/turkish_emre_candid_1786793611473.jpg",
+        "vitrin":  false,
+        "price":  "60 Dk: 1.750 ₺",
+        "age":  29,
+        "whatsapp":  "15096204167",
+        "district":  "Şişli / Nişantaşı",
+        "services":  [
+                         "Spor",
+                         "Medikal",
+                         "Derin Doku"
+                     ],
+        "gender":  "Erkek",
+        "tags":  [
+                     "Sporcu Masajı",
+                     "Derin Doku",
+                     "Otele / Eve Servis"
+                 ],
+        "experience":  "7 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "İstanbul",
+        "name":  "Emre Masör",
+        "bio":  "Profesyonel spor kulüplerinde masörlük tecrübem bulunmaktadır. Kas yorgunlukları, kramp ve kulunç açma konusunda uzmanım.",
+        "reviews":  53,
+        "rating":  "4.8"
+    },
+    {
+        "image":  "images/turkish_zeynep_selfie_1786793596006.jpg",
+        "id":  5,
+        "img":  "images/turkish_zeynep_selfie_1786793596006.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.600 ₺",
+        "age":  27,
+        "whatsapp":  "15096204167",
+        "district":  "Çankaya / Tunalı",
+        "services":  [
+                         "İsveç",
+                         "Aromaterapi",
+                         "Sıcak Taş"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Klasik İsveç",
+                     "Sıcak Taş",
+                     "Nezih Ortam"
+                 ],
+        "experience":  "5 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Ankara",
+        "name":  "Zeynep Terapist",
+        "bio":  "Ankara Çankaya\u0027da lüks ve huzurlu dairemde seanslarımı gerçekleştiriyorum. Mum ışığında ve sakinleştirici müzikler eşliğinde masaj hizmeti.",
+        "reviews":  58,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_cansu_selfie.jpg",
+        "id":  6,
+        "img":  "images/turkish_cansu_selfie.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.700 ₺",
+        "age":  24,
+        "whatsapp":  "15096204167",
+        "district":  "Muratpaşa / Lara",
+        "services":  [
+                         "Aromaterapi",
+                         "İsveç",
+                         "Thai"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Thai Masajı",
+                     "Aromaterapi",
+                     "Otele Servis"
+                 ],
+        "experience":  "3 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Antalya",
+        "name":  "Cansu Masöz",
+        "bio":  "Antalya\u0027da 5 yıldızlı spa merkezlerinde edindiğim tecrübe ile tatilinizi ve gününüzü eşsiz bir masaj keyfiyle taçlandırıyorum.",
+        "reviews":  39,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_burak_photo_1786793640471.jpg",
+        "id":  7,
+        "img":  "images/turkish_burak_photo_1786793640471.jpg",
+        "vitrin":  false,
+        "price":  "60 Dk: 1.800 ₺",
+        "age":  31,
+        "whatsapp":  "15096204167",
+        "district":  "Kızılay / Çankaya",
+        "services":  [
+                         "Medikal",
+                         "Spor",
+                         "Derin Doku"
+                     ],
+        "gender":  "Erkek",
+        "tags":  [
+                     "Medikal Masaj",
+                     "Derin Doku",
+                     "Sertifikalı"
+                 ],
+        "experience":  "8 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Ankara",
+        "name":  "Burak Medikal Masör",
+        "bio":  "Omurga ve duruş bozukluklarına bağlı kas sertleşmeleri için derin doku ve medikal masaj seansları sunuyorum.",
+        "reviews":  71,
+        "rating":  "5.0"
+    },
+    {
+        "image":  "images/turkish_gamze_candid.jpg",
+        "id":  8,
+        "img":  "images/turkish_gamze_candid.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.500 ₺",
+        "age":  26,
+        "whatsapp":  "15096204167",
+        "district":  "Seyhan / Ziyapaşa",
+        "services":  [
+                         "İsveç",
+                         "Aromaterapi"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Klasik İsveç",
+                     "Aromatik Yağlar",
+                     "Kendi Stüdyosu"
+                 ],
+        "experience":  "4 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Adana",
+        "name":  "Gamze Terapist",
+        "bio":  "Adana Seyhan\u0027da nezih ortamda günün yorgunluğunu sıfırlayan arındırıcı aromaterapi ve klasik İsveç masajı hizmeti.",
+        "reviews":  42,
+        "rating":  "4.8"
+    },
+    {
+        "image":  "images/turkish_busra_selfie.jpg",
+        "id":  9,
+        "img":  "images/turkish_busra_selfie.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 2.200 ₺",
+        "age":  25,
+        "whatsapp":  "15096204167",
+        "district":  "Bodrum / Yalıkavak",
+        "services":  [
+                         "İsveç",
+                         "Sıcak Taş",
+                         "Aromaterapi"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Bodrum VIP",
+                     "Sıcak Taş",
+                     "Otele / Tekneye Servis"
+                 ],
+        "experience":  "4 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Muğla",
+        "name":  "Büşra Masöz",
+        "bio":  "Bodrum ve çevresinde otele, villaya ve özel stüdyomda VIP standartlarda lüks masaj ve arınma terapisi sunuyorum.",
+        "reviews":  51,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_mert_photo_1786793675099.jpg",
+        "id":  10,
+        "img":  "images/turkish_mert_photo_1786793675099.jpg",
+        "vitrin":  false,
+        "price":  "60 Dk: 1.600 ₺",
+        "age":  28,
+        "whatsapp":  "15096204167",
+        "district":  "Bornova",
+        "services":  [
+                         "Spor",
+                         "Medikal"
+                     ],
+        "gender":  "Erkek",
+        "tags":  [
+                     "Spor Masajı",
+                     "Medikal",
+                     "Adrese Servis"
+                 ],
+        "experience":  "6 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "İzmir",
+        "name":  "Mert Terapist",
+        "bio":  "Tüm İzmir genelinde adrese veya otele seyyar masaj masası ile servis vermekteyim. Kas gerginliklerini sıfırlayan güçlü seanslar.",
+        "reviews":  36,
+        "rating":  "4.8"
+    },
+    {
+        "image":  "images/turkish_ezgi_candid.jpg",
+        "id":  11,
+        "img":  "images/turkish_ezgi_candid.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.500 ₺",
+        "age":  27,
+        "whatsapp":  "15096204167",
+        "district":  "Nilüfer / FSM",
+        "services":  [
+                         "İsveç",
+                         "Aromaterapi",
+                         "Medikal"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Klasik İsveç",
+                     "Aromaterapi",
+                     "Nilüfer\u0027de Yer"
+                 ],
+        "experience":  "5 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Bursa",
+        "name":  "Ezgi Masöz",
+        "bio":  "Bursa Nilüfer\u0027de nezih ve ferah ortamda masaj hizmeti vermekteyim. Randevu ve detaylar için WhatsApp\u0027tan hemen yazabilirsiniz.",
+        "reviews":  44,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_hande_candid.jpg",
+        "id":  12,
+        "img":  "images/turkish_hande_candid.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 2.000 ₺",
+        "age":  29,
+        "whatsapp":  "15096204167",
+        "district":  "Bakırköy / Florya",
+        "services":  [
+                         "Medikal",
+                         "Aromaterapi",
+                         "Sıcak Taş"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Medikal Masaj",
+                     "VIP Hizmet",
+                     "Kendi Yeri"
+                 ],
+        "experience":  "7 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "İstanbul",
+        "name":  "Hande Uzman Terapist",
+        "bio":  "Bakırköy\u0027de VIP standartlarda hijyenik ortamda profesyonel masaj terapisi. Kendinize hak ettiğiniz değeri verin.",
+        "reviews":  79,
+        "rating":  "5.0"
+    },
+    {
+        "image":  "images/turkish_nilay_photo.jpg",
+        "id":  13,
+        "img":  "images/turkish_nilay_photo.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.400 ₺",
+        "age":  26,
+        "whatsapp":  "15096204167",
+        "district":  "Tepebaşı / Bağlar",
+        "services":  [
+                         "İsveç",
+                         "Aromaterapi"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Klasik Masaj",
+                     "Aromaterapi",
+                     "Nezih Daire"
+                 ],
+        "experience":  "4 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Eskişehir",
+        "name":  "Nilay Terapist",
+        "bio":  "Eskişehir\u0027de ferah ve huzurlu dairemde seanslar yapmaktayım. Sıcak yağlar eşliğinde kaslarınızı dinlendiren özel terapi.",
+        "reviews":  38,
+        "rating":  "4.9"
+    },
+    {
+        "image":  "images/turkish_pinar_photo.jpg",
+        "id":  14,
+        "img":  "images/turkish_pinar_photo.jpg",
+        "vitrin":  true,
+        "price":  "60 Dk: 1.600 ₺",
+        "age":  27,
+        "whatsapp":  "15096204167",
+        "district":  "Şehitkamil / İbrahimli",
+        "services":  [
+                         "Medikal",
+                         "İsveç",
+                         "Sıcak Taş"
+                     ],
+        "gender":  "Kadın",
+        "tags":  [
+                     "Medikal Terapi",
+                     "Sıcak Taş",
+                     "Kendi Yeri"
+                 ],
+        "experience":  "5 Yıl Deneyim",
+        "wa":  "15096204167",
+        "city":  "Gaziantep",
+        "name":  "Pınar Masöz",
+        "bio":  "Gaziantep İbrahimli\u0027de VIP standartlarda hijyenik masaj seansları sunuyorum. Günün stresini atmak için hemen randevu alın.",
+        "reviews":  35,
+        "rating":  "4.9"
+    }
+]
