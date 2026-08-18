@@ -700,19 +700,19 @@
       <h2 class="auth-title">VIP YÖNETİCİ GİRİŞİ</h2>
       <p class="auth-desc">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
       
-      <form onsubmit="handleAdminLogin(event)">
+      <div>
         <div class="auth-input-wrapper">
-          <input type="password" id="adminPassInput" class="auth-input" placeholder="Şifrenizi giriniz..." autocomplete="current-password" autofocus required>
+          <input type="password" id="adminPassInput" class="auth-input" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
           <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle">
             <span id="eyeIcon">👁️</span>
           </button>
         </div>
         
-        <button type="submit" class="btn-auth-submit">
+        <button type="button" class="btn-auth-submit" onclick="handleAdminLogin()">
           GİRİŞ YAP ➔
         </button>
-        <div id="authErrorMsg" class="auth-error">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
-      </form>
+        <div id="authErrorMsg" class="auth-error" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold;">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
+      </div>
     </div>
   </div>
 
@@ -1200,37 +1200,36 @@
   </div>
 
   <script>
-            // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
+                // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
     const ADMIN_PASS = "hakan359";
 
     function checkAuth() {
-      const isAuth = sessionStorage.getItem('zenspa_admin_logged');
+      const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
       const overlay = document.getElementById('adminAuthOverlay');
       if (isAuth === 'true') {
-        if (overlay) overlay.style.setProperty('display', 'none', 'important');
+        if (overlay) overlay.style.display = 'none';
       } else {
-        if (overlay) overlay.style.setProperty('display', 'flex', 'important');
+        if (overlay) overlay.style.display = 'flex';
       }
     }
 
-    function handleAdminLogin(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      const input = document.getElementById('adminPassInput').value.toLowerCase().trim();
+    function handleAdminLogin() {
+      const passEl = document.getElementById('adminPassInput');
+      if (!passEl) return;
+      const input = passEl.value.toLowerCase().trim();
       const errorMsg = document.getElementById('authErrorMsg');
       const overlay = document.getElementById('adminAuthOverlay');
 
       if (input === ADMIN_PASS) {
+        localStorage.setItem('zenspa_admin_logged', 'true');
         sessionStorage.setItem('zenspa_admin_logged', 'true');
-        if (overlay) overlay.style.setProperty('display', 'none', 'important');
+        if (overlay) overlay.style.display = 'none';
         if (errorMsg) errorMsg.style.display = 'none';
         initAdminData();
       } else {
         if (errorMsg) errorMsg.style.display = 'block';
-        const passEl = document.getElementById('adminPassInput');
-        if (passEl) {
-          passEl.value = '';
-          passEl.focus();
-        }
+        passEl.value = '';
+        passEl.focus();
       }
     }
 
@@ -1248,13 +1247,14 @@
 
     function adminLogout() {
       if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
+        localStorage.removeItem('zenspa_admin_logged');
         sessionStorage.removeItem('zenspa_admin_logged');
         const passEl = document.getElementById('adminPassInput');
         if (passEl) passEl.value = '';
         const errorMsg = document.getElementById('authErrorMsg');
         if (errorMsg) errorMsg.style.display = 'none';
         const overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) overlay.style.setProperty('display', 'flex', 'important');
+        if (overlay) overlay.style.display = 'flex';
       }
     }
 
