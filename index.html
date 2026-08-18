@@ -2543,7 +2543,9 @@
       }
     }
 
-    function renderTherapists(list) {
+        function renderTherapists(rawList) {
+      // Yalnizca aktif olan terapistleri yayinda goster (Gizlenenleri filtrele)
+      const list = (rawList || []).filter(t => t.active !== false);
       const container = document.getElementById('therapistsContainer');
       const countDisplay = document.getElementById('countDisplay');
       const selectedCity = document.getElementById('citySelect').value;
