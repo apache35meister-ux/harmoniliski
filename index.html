@@ -47,7 +47,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- 1. Google WebSite & SearchAction Schema -->
+      <!-- 4. Google FAQPage Rich Snippet Schema (Google Arama Sonuclarinda Buyuk Alan Kaplama) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Türkiye'nin 81 ilinde VIP masaj terapistine nasıl randevu alabilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ZENSPA platformunda şehrinizi seçip beğendiğiniz terapistin profili altındaki yeşil 'WhatsApp' veya 'Hemen Ara' butonuna tıklayarak doğrudan terapistle aracısız ve komisyonsuz randevu oluşturabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Masör ve masöz profilleri gerçek ve doğrulanmış mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, ZENSPA'da yayınlanan tüm VIP masöz ve masör profilleri doğrulanmış WhatsApp iletişim numaralarına ve onaylı seans bilgilerine sahiptir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi masaj çeşitleri ve seans türleri mevcuttur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Klasik İsveç masajı, Aromaterapi relax seansı, Medikal derin doku terapisi, Sıcak taş masajı, Sporcu masajı ve Geleneksel Thai masajı başta olmak üzere 81 ilde geniş seans seçenekleri sunulmaktadır."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 1. Google WebSite & SearchAction Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2458,6 +2492,25 @@
       renderTherapists(therapists);
     }
 
+        function checkUrlCityFilter() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let cityParam = urlParams.get('city') || window.location.hash.replace('#', '');
+      if (cityParam) {
+        cityParam = cityParam.toLowerCase().trim();
+        const select = document.getElementById('citySelect');
+        if (select) {
+          for (let opt of select.options) {
+            const optSlug = opt.value.toLowerCase().replace('ı','i').replace('ğ','g').replace('ü','u').replace('ş','s').replace('ö','o').replace('ç','c').replace(' ','-');
+            if (optSlug === cityParam || opt.value.toLowerCase() === cityParam) {
+              select.value = opt.value;
+              filterTherapists();
+              break;
+            }
+          }
+        }
+      }
+    }
+
     function renderTherapists(list) {
       const container = document.getElementById('therapistsContainer');
       const countDisplay = document.getElementById('countDisplay');
@@ -2634,6 +2687,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       trackPageVisit();
       loadLiveTherapists();
+      checkUrlCityFilter();
     });
       // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
     let deferredPrompt;
