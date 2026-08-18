@@ -618,6 +618,207 @@
       margin-bottom: 4rem;
     }
 
+        /* High-Converting VIP Directory Card UI */
+    .card-therapist {
+      background: #0E0E12;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+      position: relative;
+    }
+    .card-therapist:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-gold-bright);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(230, 175, 46, 0.25);
+    }
+    .card-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 360px;
+      overflow: hidden;
+      background: #050505;
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-therapist:hover .card-img { transform: scale(1.06); }
+    .card-vignette {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #0E0E12 0%, rgba(14, 14, 18, 0.25) 50%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* Live Floating Badges on Photo */
+    .badge-vip-top {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--gold-gradient);
+      color: #000;
+      font-size: 0.72rem;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-live-available {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(37, 211, 102, 0.6);
+      color: #4ADE80;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+    .pulse-dot-green {
+      width: 8px;
+      height: 8px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #25D366;
+      animation: pulseGreen 1.5s infinite;
+    }
+    @keyframes pulseGreen {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .badge-photo-bottom {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .photo-loc-tag {
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(10px);
+      color: #FFF;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .photo-rating-tag {
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(10px);
+      color: var(--gold-text);
+      font-size: 0.76rem;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border-gold);
+    }
+
+    /* Dual Action Buttons */
+    .card-actions-dual {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .btn-action-wa {
+      flex: 1.2;
+      background: var(--emerald-gradient);
+      color: #FFF;
+      font-weight: 900;
+      font-size: 0.86rem;
+      padding: 0.85rem 0.5rem;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+      transition: all 0.2s;
+    }
+    .btn-action-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+    }
+    .btn-action-call {
+      flex: 0.9;
+      background: #181822;
+      border: 1px solid var(--border-gold);
+      color: #FDE047;
+      font-weight: 800;
+      font-size: 0.84rem;
+      padding: 0.85rem 0.5rem;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-action-call:hover {
+      background: var(--gold-gradient);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* Quick Filter Pills Bar */
+    .filter-pills-bar {
+      display: flex;
+      gap: 0.6rem;
+      overflow-x: auto;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      scrollbar-width: none;
+    }
+    .filter-pills-bar::-webkit-scrollbar { display: none; }
+    .filter-pill-btn {
+      background: #101015;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #A1A1AA;
+      padding: 0.6rem 1.2rem;
+      border-radius: 9999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .filter-pill-btn:hover {
+      background: #1A1A22;
+      color: #FFF;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .filter-pill-btn.active {
+      background: var(--gold-gradient);
+      color: #000;
+      border-color: transparent;
+      font-weight: 900;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.35);
+    }
     /* HD Therapist Card */
     .card-therapist {
       background: var(--bg-card);
@@ -1233,6 +1434,18 @@
       </div>
 
       <!-- HD Filter Box (81 İL TAM LİSTE) -->
+            <!-- Quick Filter Pills Bar -->
+      <div class="filter-pills-bar">
+        <button class="filter-pill-btn active" onclick="setQuickPill('all', this)">✨ Tüm Terapistler</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('vitrin', this)">👑 VIP Vitrin</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('Kadın', this)">💆 Masözler</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('Erkek', this)">👨‍⚕️ Masörler</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('İstanbul', this)">📍 İstanbul</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('Ankara', this)">📍 Ankara</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('İzmir', this)">📍 İzmir</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('Antalya', this)">📍 Antalya</button>
+      </div>
+
       <div class="filter-wrapper">
         <div class="filter-grid">
           <div class="filter-item">
@@ -1950,8 +2163,18 @@
             <div class="card-image-wrap">
               <img src="${t.img || t.image}" alt="${t.name} - ${t.city} Masöz Terapist" itemprop="image" class="card-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80';">
               <div class="card-vignette"></div>
-              <div class="badge-verified">🟢 Doğrulanmış Profil</div>
-              <div class="badge-rating">⭐ ${t.rating || '4.9'}</div>
+              
+              <!-- Badges -->
+              <div class="badge-vip-top">👑 VIP VİTRİN</div>
+              <div class="badge-live-available">
+                <span class="pulse-dot-green"></span>
+                <span>Şu An Müsait</span>
+              </div>
+
+              <div class="badge-photo-bottom">
+                <span class="photo-loc-tag">📍 ${sanitize(t.city)}</span>
+                <span class="photo-rating-tag">⭐ ${t.rating || '4.9'}</span>
+              </div>
             </div>
 
             <div class="card-body">
@@ -1974,14 +2197,38 @@
                 <span class="price-val">${sanitize(t.price)}</span>
               </div>
 
-              <a href="${waUrl}" target="_blank" onclick="trackWaClick(${t.id})" class="btn-wa-action" title="${t.name} ile WhatsApp Randevusu Al">
-                <span>💬</span>
-                <span>WhatsApp ile Randevu Al</span>
-              </a>
+              <div class="card-actions-dual">
+                <a href="${waUrl}" target="_blank" onclick="trackWaClick(${t.id})" class="btn-action-wa" title="${t.name} ile WhatsApp Randevusu Al">
+                  <span>💬</span>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="tel:+15096204167" onclick="trackWaClick(${t.id})" class="btn-action-call" title="${t.name} Randevu Hattını Ara">
+                  <span>📞</span>
+                  <span>Hemen Ara</span>
+                </a>
+              </div>
             </div>
           </article>
         `;
       }).join('');
+    }
+
+        function setQuickPill(type, btnEl) {
+      document.querySelectorAll('.filter-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+
+      if (type === 'all') {
+        resetFilters();
+      } else if (type === 'vitrin') {
+        const vitrinList = therapists.filter(t => t.vitrin);
+        renderTherapists(vitrinList);
+      } else if (type === 'Kadın' || type === 'Erkek') {
+        document.getElementById('genderSelect').value = type;
+        filterTherapists();
+      } else {
+        document.getElementById('citySelect').value = type;
+        filterTherapists();
+      }
     }
 
     function filterTherapists() {
