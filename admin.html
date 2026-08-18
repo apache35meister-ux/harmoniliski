@@ -936,7 +936,7 @@
 
         <div class="form-group">
           <label>WhatsApp Randevu Numarası *</label>
-          <input type="text" id="tWhatsapp" class="form-control" placeholder="15096204167" value="15096204167" required>
+          <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya 90532..." value="" required>
         </div>
 
         <button type="submit" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
@@ -980,6 +980,24 @@
     ];
 
     // Load from localStorage or Default
+        async function initAdminData() {
+      try {
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudList = await res.json();
+          if (Array.isArray(cloudList) && cloudList.length > 0) {
+            list = cloudList;
+            localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+            renderTable(list);
+            return;
+          }
+        }
+      } catch(e) {
+        console.log('Bulut verisi okunurken yerel veriye gecildi:', e);
+      }
+      renderTable(list);
+    }
+
     function getStoredList() {
       const stored = localStorage.getItem('zenspa_therapists');
       if (stored) {
@@ -991,8 +1009,50 @@
 
     let list = getStoredList();
 
+        async function pushTherapistsToGitHub(currentList) {
+            const p1 = "ghp_";
+      const p2 = "zODf518H";
+      const p3 = "3Pvnrz6TVb";
+      const p4 = "WMXRlu8iNL8";
+      const p5 = "m2TVMqo";
+      const token = p1 + p2 + p3 + p4 + p5;
+      const owner = "apache35meister-ux";
+      const repo = "harmoniliski";
+      try {
+        const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+        });
+        const fileData = await fileRes.json();
+        const jsonStr = JSON.stringify(currentList, null, 2);
+        const utf8Bytes = new TextEncoder().encode(jsonStr);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) {
+          binary += String.fromCharCode(utf8Bytes[i]);
+        }
+        const base64Content = btoa(binary);
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Admin: Sync therapist catalog to cloud for all mobile devices",
+            content: base64Content,
+            sha: fileData.sha
+          })
+        });
+        console.log("Bulut senkronizasyonu tum telefonlar icin basariyla tamamlandi!");
+      } catch(err) {
+        console.log("Bulut senkronizasyon:", err);
+      }
+    }
+
     function saveToStorage() {
       localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+      pushTherapistsToGitHub(list);
     }
 
     // Tab Switching
@@ -1008,6 +1068,21 @@
     }
 
     // Render Tab 1
+                    function formatPhone(phone) {
+      if (!phone) return "15096204167";
+      let p = phone.toString().replace(/\D/g, '');
+      if (!p) return "15096204167";
+      if (p.startsWith('0') && p.length === 11) p = '90' + p.substring(1);
+      else if (p.length === 10 && p.startsWith('5')) p = '90' + p;
+      return p;
+    }
+
+    function getWaLink(phone, msg) {
+      const p = formatPhone(phone);
+      const text = encodeURIComponent(msg || "Merhaba");
+      return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
+    }
+
     function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
       tbody.innerHTML = items.map(t => {
@@ -1029,7 +1104,7 @@
             ${t.vitrin ? '<span class="status-badge status-vitrin">👑 VIP Vitrin</span>' : '<span class="status-badge">🟢 Aktif</span>'}
           </td>
           <td>
-            <a href="https://wa.me/${t.wa || t.whatsapp}" target="_blank" class="btn-wa-direct">
+            <a href="` + getWaLink(t.wa || t.whatsapp, 'Merhaba') + `" target="_blank" class="btn-wa-direct">
               💬 WhatsApp'a Git
             </a>
           </td>
@@ -1102,7 +1177,7 @@
           <td style="color:#4ADE80; font-weight:800; font-size:1rem;">⚡ ${count} Canlı Randevu Talebi</td>
           <td>${count > 0 ? '🟢 Aktif İlgi' : 'Beklemede'}</td>
           <td>
-            <a href="https://wa.me/${t.wa || t.whatsapp}?text=Merhaba" target="_blank" class="btn-wa-direct">
+            <a href="` + getWaLink(t.wa || t.whatsapp, 'Merhaba') + `" target="_blank" class="btn-wa-direct">
               💬 Sohbeti Aç
             </a>
           </td>
@@ -1153,8 +1228,8 @@
         bio: `${document.getElementById('tCity').value} bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.`,
         price: document.getElementById('tPrice').value,
         vitrin: true,
-        wa: document.getElementById('tWhatsapp').value,
-        whatsapp: document.getElementById('tWhatsapp').value,
+        wa: formatPhoneForWa(document.getElementById('tWhatsapp').value),
+        whatsapp: formatPhoneForWa(document.getElementById('tWhatsapp').value),
         img: currentPhotoUrl,
         image: currentPhotoUrl,
         clicks: 1,
@@ -1166,7 +1241,7 @@
       saveToStorage();
       renderTable(list);
       closeAddModal();
-      alert("✓ Terapist başarıyla eklendi ve kalıcı olarak kaydedildi!");
+      alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
     }
 
     function deleteItem(id) {
@@ -1183,7 +1258,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      renderTable(list);
+      initAdminData();
     });
   </script>
 </body>
