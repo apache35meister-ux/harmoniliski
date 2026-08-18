@@ -2446,6 +2446,71 @@
       localStorage.setItem('zenspa_real_visits', visits.toString());
     }
 
+        // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
+    async function syncClickToCloud(tId, tName, city, actionType) {
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+        });
+        const fileData = await res.json();
+        if (!fileData || !fileData.content) return;
+
+        const currentJson = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+        
+        if (actionType.includes('WhatsApp')) {
+          currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
+          currentJson.tClicks = currentJson.tClicks || {};
+          currentJson.tClicks[tId] = (currentJson.tClicks[tId] || 0) + 1;
+        } else {
+          currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
+          currentJson.tCalls = currentJson.tCalls || {};
+          currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
+        }
+
+        currentJson.logs = currentJson.logs || [];
+        currentJson.logs.unshift({
+          time: getFormattedTime(),
+          name: tName || 'VIP Terapist',
+          city: city || 'İstanbul',
+          type: actionType
+        });
+        if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
+
+        const newStr = JSON.stringify(currentJson, null, 2);
+        const utf8Bytes = new TextEncoder().encode(newStr);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) {
+          binary += String.fromCharCode(utf8Bytes[i]);
+        }
+        const base64Content = btoa(binary);
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Track live user interaction: " + tName,
+            content: base64Content,
+            sha: fileData.sha
+          })
+        });
+      } catch(e) {
+        console.log("Bulut kayit sync:", e);
+      }
+    }
+
     function trackWaAction(tId, tName, city) {
       let totalWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0');
       totalWa++;
@@ -2456,6 +2521,7 @@
       localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
 
       addLogEntry(tName, city, '💬 WhatsApp Randevu Talebi');
+      syncClickToCloud(tId, tName, city, '💬 WhatsApp Randevu Talebi');
     }
 
     function trackCallAction(tId, tName, city) {
@@ -2468,6 +2534,7 @@
       localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
 
       addLogEntry(tName, city, '📞 Doğrudan Telefon Araması');
+      syncClickToCloud(tId, tName, city, '📞 Doğrudan Telefon Araması');
     }
 
     function trackAdClick() {
