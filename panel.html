@@ -1094,8 +1094,13 @@
   </div>
 
   <script>
-    const ADMIN_PASS = "hakan359";
-    let list = [];
+    const defaultTherapists = [
+      { id: 100, name: "Melis VIP Masöz", age: 25, city: "İzmir", district: "Konak / Alsancak", gender: "Kadın", price: "60 Dk: 2.000 ₺", vitrin: true, active: true, wa: "905338901234", img: "images/turkish_selin_photo_1786793658243.jpg", clicks: 12, rating: "⭐ 5.0" },
+      { id: 1, name: "Selin Terapist", age: 26, city: "İstanbul", district: "Beşiktaş / Levent", gender: "Kadın", price: "60 Dk: 1.800 ₺", vitrin: true, active: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg", clicks: 64, rating: "⭐ 4.9" },
+      { id: 2, name: "Derya Masöz", age: 28, city: "İstanbul", district: "Kadıköy / Moda", gender: "Kadın", price: "60 Dk: 1.600 ₺", vitrin: true, active: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg", clicks: 82, rating: "⭐ 5.0" },
+      { id: 3, name: "Elif Uzman Terapist", age: 25, city: "İzmir", district: "Alsancak", gender: "Kadın", price: "60 Dk: 1.500 ₺", vitrin: true, active: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg", clicks: 47, rating: "⭐ 4.9" }
+    ];
+    let list = defaultTherapists;
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
     function checkAuth() {
@@ -1108,9 +1113,15 @@
       const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
       const overlay = document.getElementById('adminAuthOverlay');
       if (isAuth === 'true') {
-        if (overlay) overlay.classList.add('hidden');
+        if (overlay) {
+          overlay.classList.add('hidden');
+          overlay.style.display = 'none';
+        }
       } else {
-        if (overlay) overlay.classList.remove('hidden');
+        if (overlay) {
+          overlay.classList.remove('hidden');
+          overlay.style.display = 'flex';
+        }
       }
     }
 
@@ -1124,7 +1135,10 @@
       if (input === ADMIN_PASS) {
         localStorage.setItem('zenspa_admin_logged', 'true');
         sessionStorage.setItem('zenspa_admin_logged', 'true');
-        if (overlay) overlay.classList.add('hidden');
+        if (overlay) {
+          overlay.classList.add('hidden');
+          overlay.style.display = 'none';
+        }
         if (errorMsg) errorMsg.style.display = 'none';
         initAdminData();
       } else {
@@ -1149,12 +1163,10 @@
 
     function adminLogout() {
       if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
-        localStorage.removeItem('zenspa_admin_logged');
-        sessionStorage.removeItem('zenspa_admin_logged');
-        const passEl = document.getElementById('adminPassInput');
-        if (passEl) passEl.value = '';
-        const overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) overlay.classList.remove('hidden');
+        try { localStorage.removeItem('zenspa_admin_logged'); } catch(e) {}
+        try { sessionStorage.removeItem('zenspa_admin_logged'); } catch(e) {}
+        alert("✓ Güvenli çıkış yapıldı. Ana sayfaya yönlendiriliyorsunuz.");
+        window.location.href = "index.html";
       }
     }
 
@@ -1187,6 +1199,8 @@
     }
 
     async function initAdminData() {
+      renderTable(list);
+      
       const local = localStorage.getItem('zenspa_therapists');
       if (local) {
         try {
@@ -1499,6 +1513,24 @@
       renderTable(filtered);
     }
 
+    function switchTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-section').forEach(t => {
+        t.style.display = 'none';
+        t.classList.remove('active');
+      });
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.style.display = 'block';
+        target.classList.add('active');
+      }
+      if (btnEl) btnEl.classList.add('active');
+
+      if (tabId === 'vitrinTab') renderVitrinTable();
+      if (tabId === 'whatsappTab') renderWaTable();
+    }
+
     function handleFileUpload(e) {
       const file = e.target.files[0];
       if (file) {
@@ -1525,7 +1557,10 @@
       const p = document.getElementById('previewPhoto');
       if (p) p.src = currentPhotoUrl;
       const modal = document.getElementById('addTherapistModal');
-      if (modal) modal.classList.add('active');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.add('active');
+      }
     }
 
     function editItem(id) {
@@ -1552,12 +1587,18 @@
       if (p) p.src = currentPhotoUrl;
 
       const modal = document.getElementById('addTherapistModal');
-      if (modal) modal.classList.add('active');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.add('active');
+      }
     }
 
     function closeAddModal() {
       const modal = document.getElementById('addTherapistModal');
-      if (modal) modal.classList.remove('active');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.remove('active');
+      }
     }
 
     function saveTherapist(e) {
