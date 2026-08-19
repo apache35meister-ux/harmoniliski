@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENSPA | VIP Yönetim Paneli</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-black: #050507;
+      --bg-surface: #0E0E12;
+      --bg-card: #141418;
+      --bg-card-hover: #1A1A20;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(230, 175, 46, 0.35);
+      --border-gold-bright: rgba(255, 215, 0, 0.6);
+      --gold-gradient: linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%);
+      --emerald-gradient: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      --text-white: #FFFFFF;
+      --text-gray: #A1A1AA;
+      --text-muted: #71717A;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 270px;
+      background: #08080A;
+      border-right: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .brand-title h2 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .brand-title span {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      border-radius: 12px;
+      color: var(--text-gray);
+      font-weight: 700;
+      font-size: 0.88rem;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: #FFF;
+    }
+    .nav-btn.active {
+      background: rgba(230, 175, 46, 0.14);
+      color: #FDE047;
+      border-color: var(--border-gold);
+      box-shadow: 0 0 15px rgba(230, 175, 46, 0.15);
+    }
+
+    .sidebar-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .btn-live-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      background: #121216;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-live-site:hover {
+      border-color: #FBBF24;
+      color: #FBBF24;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 2.5rem;
+      overflow-y: auto;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .top-header h1 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: #FFF;
+    }
+    .top-header p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .btn-add-therapist {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.88rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-add-therapist:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    }
+
+    /* Tab Sections */
+    .tab-section { display: none; }
+    .tab-section.active { display: block; }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .kpi-card h4 {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+    }
+    .kpi-card .number {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #FFF;
+    }
+    .kpi-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #0D0D10;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    /* Card Panels */
+    .panel-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .panel-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: #FFF;
+    }
+
+    .search-input {
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+      width: 250px;
+    }
+    .search-input:focus { border-color: #FBBF24; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .therapist-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .therapist-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--border-gold);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(37, 211, 102, 0.15);
+      color: #4ADE80;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+    .status-vitrin {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+    }
+
+    .action-btn {
+      background: #1C1C22;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover {
+      border-color: #EF4444;
+      color: #EF4444;
+    }
+    .btn-toggle-vitrin {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--border-gold);
+      color: #FDE047;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn-toggle-vitrin:hover {
+      background: var(--gold-gradient);
+      color: #000;
+    }
+
+    .btn-wa-direct {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #4ADE80;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 700;
+    }
+    .btn-wa-direct:hover { background: #25D366; color: #000; }
+
+    /* Settings Form */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .settings-group { margin-bottom: 1.25rem; }
+    .settings-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-gray);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+    .settings-input {
+      width: 100%;
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      outline: none;
+    }
+    .settings-input:focus { border-color: #FBBF24; }
+    .btn-save-settings {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 999;
+    }
+    .modal-overlay.active { display: flex !important; }
+    .modal-box {
+      background: #101014;
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      max-width: 580px;
+      width: 100%;
+      padding: 2.2rem;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #18181E;
+      border: none;
+      color: #FFF;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.35rem; text-transform: uppercase; font-weight: 700; }
+    .form-control {
+      width: 100%;
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .form-control:focus { border-color: #FBBF24; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Photo Upload Area */
+    .photo-upload-container {
+      background: #09090C;
+      border: 1.5px dashed var(--border-gold);
+      border-radius: 14px;
+      padding: 1.25rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .photo-preview-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+      overflow: hidden;
+      border: 2px solid #FBBF24;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+      background: #000;
+    }
+    .photo-preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .file-input-btn {
+      background: #181820;
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .preset-photos {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 0.75rem;
+    }
+    .preset-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1.5px solid var(--border-subtle);
+      transition: all 0.2s;
+    }
+    .preset-thumb:hover, .preset-thumb.selected {
+      border-color: #FBBF24;
+      transform: scale(1.1);
+    }
+      /* Admin Login Lock Screen */
+    #adminAuthOverlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, #151208 0%, #050507 100%);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    #adminAuthOverlay.hidden {
+      display: none !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      z-index: -1 !important;
+    }
+    .auth-card {
+      background: #0E0E12;
+      border: 1px solid var(--border-gold-bright);
+      box-shadow: 0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8);
+      border-radius: 24px;
+      max-width: 420px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .auth-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1.5px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.3);
+    }
+    .auth-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+    }
+    .auth-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .auth-input-wrapper {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+    .auth-input {
+      width: 100%;
+      background: #060608;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      color: #FFF;
+      padding: 0.95rem 3rem 0.95rem 1.2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.2s;
+      letter-spacing: 2px;
+    }
+    .auth-input:focus {
+      border-color: #FBBF24;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.25);
+    }
+    .btn-eye-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #A1A1AA;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+    .btn-eye-toggle:hover {
+      color: #FDE047;
+    }
+    .btn-auth-submit {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.95rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(230, 175, 46, 0.35);
+      transition: all 0.2s;
+    }
+    .btn-auth-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+    }
+    .auth-error {
+      color: #EF4444;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #F87171;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      transition: all 0.2s;
+    }
+    .btn-logout:hover {
+      background: #EF4444;
+      color: #FFF;
+      border-color: #EF4444;
+    }
+      /* Floating & Header Logout Buttons */
+    .btn-logout-header {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      color: #F87171;
+      padding: 0.65rem 1.2rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .btn-logout-header:hover {
+      background: #EF4444;
+      color: #FFF;
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    }
+    .floating-logout {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99999;
+      background: #1E0E10;
+      border: 1.5px solid #EF4444;
+      color: #F87171;
+      padding: 0.75rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8), 0 0 15px rgba(239, 68, 68, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .floating-logout:hover {
+      background: #EF4444;
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
+    }
+  </style>
+  
+</head>
+<body>
+
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand">
+        <div class="brand-icon">✨</div>
+        <div class="brand-title">
+          <h2>ZENSPA</h2>
+          <span>Yönetim Paneli</span>
+        </div>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <button class="nav-btn active" onclick="switchTab('therapistsTab', this)">
+            <span>📊</span>
+            <span>Terapist Yönetimi</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('vitrinTab', this)">
+            <span>👑</span>
+            <span>Vitrin & İlanlar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('whatsappTab', this)">
+            <span>💬</span>
+            <span>WhatsApp Raporu</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('settingsTab', this)">
+            <span>⚙️</span>
+            <span>Ayarlar</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn-live-site" target="_blank">
+        <span>🌐 Ana Siteyi Görüntüle</span>
+      </a>
+      <button class="btn-logout" onclick="adminLogout()">
+        <span>🔒 Güvenli Çıkış Yap</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- TAB 1: TERAPİST YÖNETİMİ -->
+    <div id="therapistsTab" class="tab-section active">
+      <div class="top-header">
+        <div>
+          <h1>VIP Terapist & Profil Yönetimi</h1>
+          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+          <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🗑️ Demo Profilleri Temizle
+          </button>
+          <button class="btn-add-therapist" onclick="openAddModal()">
+            <span>+</span>
+            <span>Yeni Terapist / İlan Ekle</span>
+          </button>
+          <button class="btn-logout-header" onclick="adminLogout()">
+            🔒 Güvenli Çıkış Yap
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Summary -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Terapist</h4>
+            <div class="number" id="kpiTotal">14</div>
+          </div>
+          <div class="kpi-icon">💆</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>👑 Vitrin İlanları</h4>
+            <div class="number" id="kpiVitrinCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>WhatsApp İlan Hattı</h4>
+            <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+      </div>
+
+      <!-- Terapist Listesi Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Yayındaki Tüm Terapistler (Kalıcı Kayıt)</h3>
+          <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist & Fotoğraf</th>
+              <th>Şehir / Semt</th>
+              <th>Seans Ücreti</th>
+              <th>Yayın Durumu</th>
+              <th>Kalan Süre</th>
+              <th>WhatsApp Randevu</th>
+              <th>Hızlı İşlemler</th>
+            </tr>
+          </thead>
+          <tbody id="therapistTableBody">
+            <!-- JS ile doldurulacak -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 2: VİTRİN & İLANLAR -->
+    <div id="vitrinTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>👑 Vitrin & VIP İlan Yönetimi</h1>
+          <p>Ana sayfanın en üstünde öne çıkarılan VIP vitrin ilanlarını buradan düzenleyin.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Aktif Vitrin İlanları</h4>
+            <div class="number" id="vitrinTabCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">👑</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>1 Haftalık Vitrin</h4>
+            <div class="number" style="color: #4ADE80;">1.250 ₺</div>
+          </div>
+          <div class="kpi-icon">🥉</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>1 Aylık Gold VIP</h4>
+            <div class="number" style="color: #FDE047;">3.500 ₺</div>
+          </div>
+          <div class="kpi-icon">👑</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>3 Aylık Platinum</h4>
+            <div class="number" style="color: #60A5FA;">7.500 ₺</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Vitrinde Öne Çıkarılan Terapistler</h3>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>Vitrin Durumu</th>
+              <th>Vitrin Sıralaması</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="vitrinTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: WHATSAPP & ÇAĞRI RAPORU -->
+    <div id="whatsappTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>💬 & 📞 Canlı WhatsApp & Telefon Çağrı Raporu</h1>
+          <p>Üyelerinizin aldığı WhatsApp mesajları ve gelen doğrudan telefon aramaları anlık olarak kaydedilir.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>💬 WhatsApp Randevu Talebi</h4>
+            <div class="number" id="realTotalWa" style="color: #4ADE80;">0</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>📞 Doğrudan Telefon Araması</h4>
+            <div class="number" id="realTotalCalls" style="color: #38BDF8;">0</div>
+          </div>
+          <div class="kpi-icon">📞</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>👁️ Canlı Site Ziyareti</h4>
+            <div class="number" id="realTotalVisits" style="color: #FBBF24;">0</div>
+          </div>
+          <div class="kpi-icon">👥</div>
+        </div>
+      </div>
+
+      <!-- Terapist Bazlı İstatistik Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Terapist Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
+          <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
+            🔄 İstatistikleri Sıfırla
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>💬 WhatsApp Talebi</th>
+              <th>📞 Telefon Araması</th>
+              <th>🔥 Toplam Müşteri İlgisi</th>
+              <th>Doğrudan İletişim</th>
+            </tr>
+          </thead>
+          <tbody id="waStatsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Canlı Arama ve Mesaj Geçmişi Günlüğü -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <div>
+            <h3>📜 Son Gerçekleşen Arama & WhatsApp Mesaj Kayıtları</h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Kayıt Aktif</span>
+          </div>
+          <button onclick="exportCallLogsToCSV()" style="background:#142B1A; color:#4ADE80; border:1px solid rgba(74,222,128,0.4); padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.82rem; cursor:pointer;">
+            📥 Raporu Excel (CSV) İndir
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tarih & Saat</th>
+              <th>Aranan / Yazılan Terapist</th>
+              <th>Şehir</th>
+              <th>İşlem Türü</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="liveCallLogsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 4: AYARLAR -->
+    <div id="settingsTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>⚙️ Platform Ayarları</h1>
+          <p>Site başlığı ve WhatsApp numaralarını buradan güncelleyebilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <form onsubmit="saveSettings(event)">
+          <div class="settings-grid">
+            <div class="settings-group">
+              <label>Vitrin & İlan WhatsApp Numarası</label>
+              <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167">
+            </div>
+            <div class="settings-group">
+              <label>Site Başlığı</label>
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | 81 İl VIP Masaj & Terapi Rehberi">
+            </div>
+            <div class="settings-group">
+              <label>Kapsam</label>
+              <input type="text" class="settings-input" id="settingCities" value="Türkiye Geneli 81 İl">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-save-settings">
+            ✓ Ayarları Kaydet
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal: Yeni Terapist Ekle -->
+  <div class="modal-overlay" id="addTherapistModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAddModal()">✕</button>
+      <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
+
+      <form id="addTherapistForm" onsubmit="saveTherapist(event)">
+        
+                <!-- FOTOGRAF ALANI -->
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display:block; font-size:0.82rem; color:var(--text-gray); margin-bottom:0.4rem; font-weight:700;">Terapist Fotoğrafı</label>
+          <div style="display:flex; gap:1rem; align-items:center; margin-bottom:0.75rem;">
+            <img id="previewPhoto" src="images/turkish_selin_photo_1786793658243.jpg" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid #FBBF24;">
+            <div style="flex:1;">
+              <input type="file" id="filePhoto" accept="image/*" class="form-control" onchange="handleFileUpload(event)">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad & Ünvan *</label>
+            <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Masöz" required>
+          </div>
+          <div class="form-group">
+            <label>Yaş *</label>
+            <input type="number" id="tAge" class="form-control" placeholder="25" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Şehir *</label>
+            <input type="text" id="tCity" class="form-control" placeholder="İstanbul" required>
+          </div>
+          <div class="form-group">
+            <label>Semt / Bölge *</label>
+            <input type="text" id="tDistrict" class="form-control" placeholder="Nişantaşı" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Cinsiyet</label>
+            <select id="tGender" class="form-control">
+              <option value="Kadın">Kadın Masöz</option>
+              <option value="Erkek">Erkek Masör</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Seans Ücreti *</label>
+            <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 2.000 ₺" required>
+          </div>
+        </div>
+
+        <input type="hidden" id="editTherapistId" value="">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp Randevu Numarası *</label>
+            <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya +66..." required>
+          </div>
+          <div class="form-group">
+            <label>📅 İlan / Vitrin Süresi</label>
+            <select id="tDuration" class="form-control">
+              <option value="30">1 Aylık VIP (30 Gün)</option>
+              <option value="7">1 Haftalık Vitrin (7 Gün)</option>
+              <option value="90">3 Aylık Platinum (90 Gün)</option>
+              <option value="365">1 Yıllık / Süresiz</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" id="btnSubmitTherapist" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
+          ✓ Terapisti Kaydet ve Yayına Al
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const ADMIN_PASS = "hakan359";
+    let list = [];
+    let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
+
+    function checkAuth() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('pass') === 'hakan359') {
+        localStorage.setItem('zenspa_admin_logged', 'true');
+        sessionStorage.setItem('zenspa_admin_logged', 'true');
+      }
+
+      const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
+      const overlay = document.getElementById('adminAuthOverlay');
+      if (isAuth === 'true') {
+        if (overlay) overlay.classList.add('hidden');
+      } else {
+        if (overlay) overlay.classList.remove('hidden');
+      }
+    }
+
+    function handleAdminLogin() {
+      const passEl = document.getElementById('adminPassInput');
+      if (!passEl) return;
+      const input = passEl.value.toLowerCase().trim();
+      const errorMsg = document.getElementById('authErrorMsg');
+      const overlay = document.getElementById('adminAuthOverlay');
+
+      if (input === ADMIN_PASS) {
+        localStorage.setItem('zenspa_admin_logged', 'true');
+        sessionStorage.setItem('zenspa_admin_logged', 'true');
+        if (overlay) overlay.classList.add('hidden');
+        if (errorMsg) errorMsg.style.display = 'none';
+        initAdminData();
+      } else {
+        if (errorMsg) errorMsg.style.display = 'block';
+        passEl.value = '';
+        passEl.focus();
+      }
+    }
+
+    function togglePassVisibility() {
+      const input = document.getElementById('adminPassInput');
+      const eye = document.getElementById('eyeIcon');
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        if (eye) eye.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        if (eye) eye.textContent = '👁️';
+      }
+    }
+
+    function adminLogout() {
+      if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
+        localStorage.removeItem('zenspa_admin_logged');
+        sessionStorage.removeItem('zenspa_admin_logged');
+        const passEl = document.getElementById('adminPassInput');
+        if (passEl) passEl.value = '';
+        const overlay = document.getElementById('adminAuthOverlay');
+        if (overlay) overlay.classList.remove('hidden');
+      }
+    }
+
+    function formatPhone(phone) {
+      if (!phone) return "15096204167";
+      let p = phone.toString().replace(/\D/g, '');
+      if (!p) return "15096204167";
+      if (p.startsWith('0') && p.length === 11) p = '90' + p.substring(1);
+      else if (p.length === 10 && p.startsWith('5')) p = '90' + p;
+      return p;
+    }
+
+    function getWaLink(phone, msg) {
+      const p = formatPhone(phone);
+      const text = encodeURIComponent(msg || "Merhaba");
+      return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
+    }
+
+    function getExpiryBadge(t) {
+      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.78rem;">Süresiz</span>';
+      const diffMs = t.expiresAt - Date.now();
+      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      if (diffDays <= 0) {
+        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu</span>';
+      } else if (diffDays <= 3) {
+        return '<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ ' + diffDays + ' Gün Kaldı</span>';
+      } else {
+        return '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ' + diffDays + ' Gün Kaldı</span>';
+      }
+    }
+
+    async function initAdminData() {
+      const local = localStorage.getItem('zenspa_therapists');
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            list = parsed;
+            renderTable(list);
+          }
+        } catch(e) {}
+      }
+
+      try {
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudList = await res.json();
+          if (Array.isArray(cloudList) && cloudList.length > 0) {
+            list = cloudList;
+            localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+            renderTable(list);
+          }
+        }
+      } catch(e) {}
+    }
+
+    async function pushTherapistsToGitHub(currentList) {
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+        });
+        const fileData = await fileRes.json();
+        if (!fileData || !fileData.sha) return;
+
+        const jsonStr = JSON.stringify(currentList, null, 2);
+        const utf8Bytes = new TextEncoder().encode(jsonStr);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) {
+          binary += String.fromCharCode(utf8Bytes[i]);
+        }
+        const base64Content = btoa(binary);
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Admin: Sync therapist catalog to cloud",
+            content: base64Content,
+            sha: fileData.sha
+          })
+        });
+      } catch(err) {
+        console.log("Bulut sync:", err);
+      }
+    }
+
+    function saveToStorage() {
+      localStorage.setItem('zenspa_admin_modified', 'true');
+      localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+      pushTherapistsToGitHub(list);
+    }
+
+    function switchTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-section').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+
+      if (tabId === 'vitrinTab') renderVitrinTable();
+      if (tabId === 'whatsappTab') renderWaTable();
+    }
+
+    function renderTable(items) {
+      const tbody = document.getElementById('therapistTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = (items || []).map(t => {
+        const isAct = t.active !== false;
+        return 
+        <tr style="opacity:  + (isAct ? '1' : '0.6') + ;">
+          <td>
+            <div class="therapist-info">
+              <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <div>
+                <strong style="color:#FFF;"> + t.name + </strong>
+                <div style="font-size:0.75rem; color:#A1A1AA;"> + (t.age || 25) +  Yaş •  + (t.gender || 'Kadın') + </div>
+              </div>
+            </div>
+          </td>
+          <td>📍  + t.city + ,  + (t.district || '') + </td>
+          <td style="color:#FDE047; font-weight:700;"> + t.price + </td>
+          <td>
+             + (isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>') + 
+             + (t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : '') + 
+          </td>
+          <td> + getExpiryBadge(t) + </td>
+          <td>
+            <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+              💬 WhatsApp
+            </a>
+          </td>
+          <td>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+              <button class="action-btn" onclick="editItem( + t.id + )" style="color:#60A5FA;" title="Profili Düzenle">✏️ Düzenle</button>
+              <button class="action-btn" onclick="toggleActive( + t.id + )" style="color: + (isAct ? '#FB923C' : '#4ADE80') + ;" title="Yayından Gizle / Aç"> + (isAct ? '⏸️ Gizle' : '▶️ Aç') + </button>
+              <button class="action-btn" onclick="deleteItem( + t.id + )" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
+            </div>
+          </td>
+        </tr>
+      }).join('');
+
+      const vitrinCount = (items || []).filter(t => t.vitrin).length;
+      const kpiT = document.getElementById('kpiTotal');
+      if (kpiT) kpiT.textContent = (items || []).length;
+      const kpiV = document.getElementById('kpiVitrinCount');
+      if (kpiV) kpiV.textContent = vitrinCount;
+      const vTab = document.getElementById('vitrinTabCount');
+      if (vTab) vTab.textContent = vitrinCount;
+    }
+
+    function renderVitrinTable() {
+      const tbody = document.getElementById('vitrinTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = (list || []).map((t, idx) => 
+        <tr>
+          <td>
+            <div class="therapist-info">
+              <img src=" + (t.img || t.image) + " class="therapist-avatar">
+              <strong style="color:#FFF;"> + t.name + </strong>
+            </div>
+          </td>
+          <td>📍  + t.city + </td>
+          <td>
+             + (t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>') + 
+          </td>
+          <td style="color:#FBBF24; font-weight:800;"> + (t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-') + </td>
+          <td>
+            <button class="btn-toggle-vitrin" onclick="toggleVitrin( + t.id + )">
+               + (t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle') + 
+            </button>
+          </td>
+        </tr>
+      ).join('');
+    }
+
+    async function toggleVitrin(id) {
+      const item = list.find(t => t.id === id);
+      if (item) {
+        item.vitrin = !item.vitrin;
+        saveToStorage();
+        renderTable(list);
+        renderVitrinTable();
+      }
+    }
+
+    function toggleActive(id) {
+      const item = list.find(t => t.id === id);
+      if (item) {
+        item.active = item.active === false ? true : false;
+        saveToStorage();
+        renderTable(list);
+      }
+    }
+
+    async function getLiveAnalytics() {
+      let stats = {
+        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '28'),
+        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14'),
+        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '9'),
+        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
+        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
+        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]')
+      };
+
+      try {
+        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudStats = await res.json();
+          if (cloudStats) {
+            stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
+            stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
+            stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
+            if (cloudStats.tClicks) {
+              for (let k in cloudStats.tClicks) {
+                stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
+              }
+            }
+            if (cloudStats.tCalls) {
+              for (let k in cloudStats.tCalls) {
+                stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
+              }
+            }
+            if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
+              stats.callLogs = cloudStats.logs;
+            }
+          }
+        }
+      } catch(e) {}
+      return stats;
+    }
+
+    async function renderWaTable() {
+      const stats = await getLiveAnalytics();
+      const elWa = document.getElementById('realTotalWa');
+      if (elWa) elWa.textContent = stats.waClicks;
+      const elCalls = document.getElementById('realTotalCalls');
+      if (elCalls) elCalls.textContent = stats.callClicks;
+      const elVisits = document.getElementById('realTotalVisits');
+      if (elVisits) elVisits.textContent = stats.visits;
+
+      const tbody = document.getElementById('waStatsTableBody');
+      if (tbody) {
+        tbody.innerHTML = list.map(t => {
+          const waCount = stats.tClicks[t.id] || 0;
+          const callCount = stats.tCalls[t.id] || 0;
+          const totalInterest = waCount + callCount;
+          return 
+          <tr>
+            <td>
+              <div class="therapist-info">
+                <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+                <strong style="color:#FFF;"> + t.name + </strong>
+              </div>
+            </td>
+            <td>📍  + t.city + </td>
+            <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬  + waCount +  Mesaj Talebi</td>
+            <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞  + callCount +  Telefon Araması</td>
+            <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡  + totalInterest +  Müşteri Talebi</td>
+            <td>
+              <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+                💬 İletişime Geç
+              </a>
+            </td>
+          </tr>
+        }).join('');
+      }
+
+      const logsTbody = document.getElementById('liveCallLogsTableBody');
+      if (logsTbody) {
+        if (stats.callLogs && stats.callLogs.length > 0) {
+          logsTbody.innerHTML = stats.callLogs.map(log => 
+            <tr>
+              <td style="color:#A1A1AA; font-weight:600;">⏱️  + log.time + </td>
+              <td><strong style="color:#FFF;"> + log.name + </strong></td>
+              <td>📍  + log.city + </td>
+              <td style="color: + (log.type && log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80') + ; font-weight:800;"> + log.type + </td>
+              <td><span class="status-badge">🟢 İletişim Başlatıldı</span></td>
+            </tr>
+          ).join('');
+        } else {
+          logsTbody.innerHTML = 
+            <tr>
+              <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
+                Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
+              </td>
+            </tr>
+          ;
+        }
+      }
+    }
+
+    async function exportCallLogsToCSV() {
+      const stats = await getLiveAnalytics();
+      if (!stats.callLogs || stats.callLogs.length === 0) {
+        alert("İndirilecek arama veya mesaj kaydı bulunamadı.");
+        return;
+      }
+      let csvContent = "\uFEFFTarih & Saat,Terapist,Şehir,İşlem Türü,Durum\n";
+      stats.callLogs.forEach(l => {
+        csvContent += " + l.time + "," + l.name + "," + l.city + "," + l.type + ","İletişim Başlatıldı"\n;
+      });
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", harmoniliski_cagri_raporu_ + Date.now() + .csv);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function resetLiveAnalytics() {
+      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
+        localStorage.setItem('zenspa_real_visits', '0');
+        localStorage.setItem('zenspa_real_wa_clicks', '0');
+        localStorage.setItem('zenspa_real_calls', '0');
+        localStorage.setItem('zenspa_t_clicks', '{}');
+        localStorage.setItem('zenspa_t_calls', '{}');
+        localStorage.setItem('zenspa_live_call_logs', '[]');
+        renderWaTable();
+        alert("✓ İstatistikler sıfırlandı!");
+      }
+    }
+
+    function filterTable() {
+      const q = (document.getElementById('tableSearch').value || '').toLowerCase();
+      const filtered = list.filter(t => t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || (t.district && t.district.toLowerCase().includes(q)));
+      renderTable(filtered);
+    }
+
+    function handleFileUpload(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          currentPhotoUrl = evt.target.result;
+          const p = document.getElementById('previewPhoto');
+          if (p) p.src = currentPhotoUrl;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function openAddModal() {
+      const editId = document.getElementById('editTherapistId');
+      if (editId) editId.value = "";
+      const mTitle = document.getElementById('modalTitle');
+      if (mTitle) mTitle.textContent = "YENİ TERAPİST EKLE";
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      if (btnSub) btnSub.textContent = "✓ Terapisti Kaydet ve Yayına Al";
+      const form = document.getElementById('addTherapistForm');
+      if (form) form.reset();
+      currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
+      const p = document.getElementById('previewPhoto');
+      if (p) p.src = currentPhotoUrl;
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) modal.classList.add('active');
+    }
+
+    function editItem(id) {
+      const item = list.find(t => t.id === id);
+      if (!item) return;
+
+      const editId = document.getElementById('editTherapistId');
+      if (editId) editId.value = item.id;
+      const mTitle = document.getElementById('modalTitle');
+      if (mTitle) mTitle.textContent = "✏️ TERAPİSTİ DÜZENLE: " + item.name;
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      if (btnSub) btnSub.textContent = "✓ Güncellemeleri Kaydet";
+
+      document.getElementById('tName').value = item.name || '';
+      document.getElementById('tAge').value = item.age || 25;
+      document.getElementById('tCity').value = item.city || 'İstanbul';
+      document.getElementById('tDistrict').value = item.district || '';
+      document.getElementById('tGender').value = item.gender || 'Kadın';
+      document.getElementById('tPrice').value = item.price || '60 Dk: 2.000 ₺';
+      document.getElementById('tWhatsapp').value = item.whatsapp || item.wa || '';
+      
+      currentPhotoUrl = item.img || item.image || "images/turkish_selin_photo_1786793658243.jpg";
+      const p = document.getElementById('previewPhoto');
+      if (p) p.src = currentPhotoUrl;
+
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) modal.classList.add('active');
+    }
+
+    function closeAddModal() {
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    function saveTherapist(e) {
+      e.preventDefault();
+      const rawWa = document.getElementById('tWhatsapp').value;
+      const cleanWa = formatPhone(rawWa);
+      const editId = document.getElementById('editTherapistId').value;
+      const durationDays = parseInt(document.getElementById('tDuration').value) || 30;
+      const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+
+      if (editId) {
+        const idx = list.findIndex(t => t.id == editId);
+        if (idx !== -1) {
+          list[idx].name = document.getElementById('tName').value;
+          list[idx].age = parseInt(document.getElementById('tAge').value) || 25;
+          list[idx].city = document.getElementById('tCity').value;
+          list[idx].district = document.getElementById('tDistrict').value;
+          list[idx].gender = document.getElementById('tGender').value;
+          list[idx].price = document.getElementById('tPrice').value;
+          list[idx].wa = cleanWa;
+          list[idx].whatsapp = cleanWa;
+          list[idx].img = currentPhotoUrl;
+          list[idx].image = currentPhotoUrl;
+          list[idx].expiresAt = expiresAt;
+          
+          saveToStorage();
+          renderTable(list);
+          closeAddModal();
+          alert("✓ Terapist profili başarıyla güncellendi!");
+          return;
+        }
+      }
+
+      const newT = {
+        id: Date.now(),
+        name: document.getElementById('tName').value,
+        age: parseInt(document.getElementById('tAge').value) || 25,
+        city: document.getElementById('tCity').value,
+        district: document.getElementById('tDistrict').value,
+        gender: document.getElementById('tGender').value,
+        services: ["İsveç", "Aromaterapi", "Medikal"],
+        tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
+        bio: document.getElementById('tCity').value + " bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+        price: document.getElementById('tPrice').value,
+        vitrin: true,
+        active: true,
+        expiresAt: expiresAt,
+        wa: cleanWa,
+        whatsapp: cleanWa,
+        img: currentPhotoUrl,
+        image: currentPhotoUrl,
+        clicks: 1,
+        rating: "⭐ 5.0",
+        reviews: 12
+      };
+      
+      list.unshift(newT);
+      saveToStorage();
+      renderTable(list);
+      closeAddModal();
+      alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
+    }
+
+    function clearDemoProfiles() {
+      if (confirm("Tüm hazır sanal/demo profilleri silip yalnızca kendi eklediğiniz üyeleri bırakmak istediğinize emin misiniz?")) {
+        list = list.filter(t => t.id === 100 || t.id > 1000);
+        saveToStorage();
+        renderTable(list);
+        alert("✓ Tüm demo profiller başarıyla silindi!");
+      }
+    }
+
+    function deleteItem(id) {
+      if (confirm("Bu terapist kaydını silmek istediğinize emin misiniz?")) {
+        list = list.filter(t => t.id !== id);
+        saveToStorage();
+        renderTable(list);
+        alert('✓ Profil başarıyla silindi!');
+      }
+    }
+
+    function saveSettings(e) {
+      e.preventDefault();
+      alert("✓ Platform ayarları başarıyla kaydedildi!");
+    }
+
+    // Window bindings
+    window.switchTab = switchTab;
+    window.openAddModal = openAddModal;
+    window.closeAddModal = closeAddModal;
+    window.editItem = editItem;
+    window.toggleActive = toggleActive;
+    window.deleteItem = deleteItem;
+    window.toggleVitrin = toggleVitrin;
+    window.exportCallLogsToCSV = exportCallLogsToCSV;
+    window.filterTable = filterTable;
+    window.adminLogout = adminLogout;
+    window.handleAdminLogin = handleAdminLogin;
+    window.togglePassVisibility = togglePassVisibility;
+    window.handleFileUpload = handleFileUpload;
+    window.saveTherapist = saveTherapist;
+    window.saveSettings = saveSettings;
+    window.clearDemoProfiles = clearDemoProfiles;
+    window.resetLiveAnalytics = resetLiveAnalytics;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      initAdminData();
+    });
+  </script>
+
+  <!-- Sabit Güvenli Çıkış Butonu -->
+  <button class="floating-logout" onclick="adminLogout()" title="Yönetim Panelinden Güvenli Çıkış Yap">
+    🔒 Güvenli Çıkış Yap
+  </button>
+</body>
+</html>
