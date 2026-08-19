@@ -700,9 +700,30 @@
     }
   </style>
   
-</head>
 <body>
 
+  <!-- VIP Admin Password Lock Screen -->
+  <div id="adminAuthOverlay" style="position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
+    <div class="auth-card" style="background:#0E0E12; border:1.5px solid rgba(255, 215, 0, 0.6); box-shadow:0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8); border-radius:24px; max-width:420px; width:100%; padding:2.5rem 2rem; text-align:center; position:relative;">
+      <div class="auth-logo" style="width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg, #2A1F05, #0A0A0A); border:1.5px solid rgba(230, 175, 46, 0.35); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.25rem; box-shadow:0 0 25px rgba(251, 191, 36, 0.3);">🔐</div>
+      <h2 class="auth-title" style="font-family:'Cinzel', serif; font-size:1.5rem; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.4rem;">VIP YÖNETİCİ GİRİŞİ</h2>
+      <p class="auth-desc" style="font-size:0.82rem; color:#71717A; margin-bottom:1.75rem;">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
+      
+      <div>
+        <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
+          <input type="password" id="adminPassInput" class="auth-input" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
+          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+        
+        <button type="button" class="btn-auth-submit" onclick="handleAdminLogin()" style="width:100%; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); color:#000; font-weight:900; font-size:0.95rem; padding:0.95rem; border-radius:12px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(230, 175, 46, 0.35);">
+          GİRİŞ YAP ➔
+        </button>
+        <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -1103,24 +1124,22 @@
     let list = defaultTherapists;
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
-    function checkAuth() {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('pass') === 'hakan359') {
-        localStorage.setItem('zenspa_admin_logged', 'true');
-        sessionStorage.setItem('zenspa_admin_logged', 'true');
-      }
 
-      const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
+    const ADMIN_PASS = "hakan359";
+
+    function checkAuth() {
+      const isAuth = sessionStorage.getItem('zenspa_session_logged');
       const overlay = document.getElementById('adminAuthOverlay');
       if (isAuth === 'true') {
-        if (overlay) {
-          overlay.classList.add('hidden');
-          overlay.style.display = 'none';
-        }
+        if (overlay) overlay.style.display = 'none';
       } else {
         if (overlay) {
-          overlay.classList.remove('hidden');
           overlay.style.display = 'flex';
+          const passEl = document.getElementById('adminPassInput');
+          if (passEl) {
+            passEl.value = '';
+            passEl.focus();
+          }
         }
       }
     }
@@ -1128,17 +1147,13 @@
     function handleAdminLogin() {
       const passEl = document.getElementById('adminPassInput');
       if (!passEl) return;
-      const input = passEl.value.toLowerCase().trim();
+      const input = (passEl.value || '').toLowerCase().trim();
       const errorMsg = document.getElementById('authErrorMsg');
       const overlay = document.getElementById('adminAuthOverlay');
 
       if (input === ADMIN_PASS) {
-        localStorage.setItem('zenspa_admin_logged', 'true');
-        sessionStorage.setItem('zenspa_admin_logged', 'true');
-        if (overlay) {
-          overlay.classList.add('hidden');
-          overlay.style.display = 'none';
-        }
+        try { sessionStorage.setItem('zenspa_session_logged', 'true'); } catch(e) {}
+        if (overlay) overlay.style.display = 'none';
         if (errorMsg) errorMsg.style.display = 'none';
         initAdminData();
       } else {
@@ -1163,10 +1178,15 @@
 
     function adminLogout() {
       if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
+        try { sessionStorage.removeItem('zenspa_session_logged'); } catch(e) {}
         try { localStorage.removeItem('zenspa_admin_logged'); } catch(e) {}
-        try { sessionStorage.removeItem('zenspa_admin_logged'); } catch(e) {}
-        alert("✓ Güvenli çıkış yapıldı. Ana sayfaya yönlendiriliyorsunuz.");
-        window.location.href = "index.html";
+        const passEl = document.getElementById('adminPassInput');
+        if (passEl) passEl.value = '';
+        const overlay = document.getElementById('adminAuthOverlay');
+        if (overlay) {
+          overlay.style.display = 'flex';
+          if (passEl) passEl.focus();
+        }
       }
     }
 
@@ -1702,10 +1722,10 @@
     window.saveTherapist = saveTherapist;
     window.saveSettings = saveSettings;
     window.clearDemoProfiles = clearDemoProfiles;
-    window.resetLiveAnalytics = resetLiveAnalytics;
+    window.checkAuth = checkAuth;
 
     document.addEventListener('DOMContentLoaded', () => {
-      
+      checkAuth();
       initAdminData();
     });
   </script>
