@@ -1725,8 +1725,16 @@
     window.checkAuth = checkAuth;
 
     document.addEventListener('DOMContentLoaded', () => {
-      checkAuth();
-      initAdminData();
+      const isAuth = sessionStorage.getItem('zenspa_session_logged') === 'true';
+      const overlay = document.getElementById('adminAuthOverlay');
+      if (isAuth) {
+        if (overlay) overlay.style.display = 'none';
+        initAdminData();
+      } else {
+        if (overlay) overlay.style.display = 'flex';
+        const passEl = document.getElementById('adminPassInput');
+        if (passEl) { passEl.value = ''; passEl.focus(); }
+      }
     });
   </script>
 
