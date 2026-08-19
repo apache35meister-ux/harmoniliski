@@ -7,7 +7,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZENSPA | VIP Yönetim Paneli</title>
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="ZENSPA VIP Yönetim Paneli – Güvenli oturum yönetimi, terapist listesi ve randevu takibi." />
+  <meta name="robots" content="index, follow">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -702,12 +703,26 @@
       box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
     }
   </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://harmoniliski.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://harmoniliski.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
 
   <!-- KRITIK: Sayfa yuklenmeden once sifreyi kontrol et -->
   <script>
     (function() {
+      // DEBUG: her sayfa yüklemesinde önceki oturumu temizle
+      localStorage.removeItem('zenspa_panel_auth');
       var logged = localStorage.getItem('zenspa_panel_auth');
       if (logged !== 'evet') {
         // Oturum yok — overlay gorunur kalsin, arka plani hemen karart
