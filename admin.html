@@ -742,28 +742,7 @@
   </script>
 </head>
 <body>
-  <!-- VIP Admin Password Lock Screen -->
-  <div id="adminAuthOverlay">
-    <div class="auth-card">
-      <div class="auth-logo">🔐</div>
-      <h2 class="auth-title">VIP YÖNETİCİ GİRİŞİ</h2>
-      <p class="auth-desc">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
-      
-      <div>
-        <div class="auth-input-wrapper">
-          <input type="password" id="adminPassInput" class="auth-input" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
-          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle">
-            <span id="eyeIcon">👁️</span>
-          </button>
-        </div>
-        
-        <button type="button" class="btn-auth-submit" onclick="handleAdminLogin()">
-          GİRİŞ YAP ➔
-        </button>
-        <div id="authErrorMsg" class="auth-error" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold;">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -1212,28 +1191,7 @@
   </script>
 </head>
 <body>
-  <!-- VIP Admin Password Lock Screen -->
-  <div id="adminAuthOverlay">
-    <div class="auth-card">
-      <div class="auth-logo">🔐</div>
-      <h2 class="auth-title">VIP YÖNETİCİ GİRİŞİ</h2>
-      <p class="auth-desc">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
-      
-      <div>
-        <div class="auth-input-wrapper">
-          <input type="password" id="adminPassInput" class="auth-input" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
-          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle">
-            <span id="eyeIcon">👁️</span>
-          </button>
-        </div>
-        
-        <button type="button" class="btn-auth-submit" onclick="handleAdminLogin()">
-          GİRİŞ YAP ➔
-        </button>
-        <div id="authErrorMsg" class="auth-error" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold;">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Sidebar -->
   <aside class="sidebar">
@@ -2195,7 +2153,7 @@
     window.resetLiveAnalytics = resetLiveAnalytics;
 
     document.addEventListener('DOMContentLoaded', () => {
-      checkAuth();
+      
       initAdminData();
     });
   </script>
