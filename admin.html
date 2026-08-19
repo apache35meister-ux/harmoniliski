@@ -1042,26 +1042,14 @@
 
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
         
-        <!-- FOTOĞRAF ALANI -->
-        <div class="photo-upload-container">
-          <div class="photo-preview-wrap">
-            <img src="images/turkish_selin_photo_1786793658243.jpg" id="previewPhoto" class="photo-preview-img" alt="Önizleme">
-          </div>
-          
-          <label class="file-input-btn" for="fileInput">
-            📷 Bilgisayardan / Telefondan Fotoğraf Seç
-          </label>
-          <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileUpload(event)">
-          
-          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">veya aşağıdaki hazır modellerden birini seçin:</p>
-          
-          <div class="preset-photos">
-            <img src="images/turkish_selin_photo_1786793658243.jpg" class="preset-thumb selected" onclick="selectPreset(this.src, this)">
-            <img src="images/turkish_derya_photo_1786793693039.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
-            <img src="images/turkish_elif_photo_1786793625708.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
-            <img src="images/turkish_zeynep_selfie_1786793596006.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
-            <img src="images/turkish_cansu_selfie.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
-            <img src="images/turkish_emre_candid_1786793611473.jpg" class="preset-thumb" onclick="selectPreset(this.src, this)">
+                <!-- FOTOGRAF ALANI -->
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display:block; font-size:0.82rem; color:var(--text-gray); margin-bottom:0.4rem; font-weight:700;">Terapist Fotoğrafı</label>
+          <div style="display:flex; gap:1rem; align-items:center; margin-bottom:0.75rem;">
+            <img id="previewPhoto" src="images/turkish_selin_photo_1786793658243.jpg" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid #FBBF24;">
+            <div style="flex:1;">
+              <input type="file" id="filePhoto" accept="image/*" class="form-control" onchange="handleFileUpload(event)">
+            </div>
           </div>
         </div>
 
@@ -1072,100 +1060,18 @@
           </div>
           <div class="form-group">
             <label>Yaş *</label>
-            <input type="number" id="tAge" class="form-control" placeholder="26" required>
+            <input type="number" id="tAge" class="form-control" placeholder="25" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label>Şehir *</label>
-            <select id="tCity" class="form-control" required>
-              <option value="İstanbul">İstanbul</option>
-              <option value="Ankara">Ankara</option>
-              <option value="İzmir">İzmir</option>
-              <option value="Antalya">Antalya</option>
-              <option value="Bursa">Bursa</option>
-              <option value="Adana">Adana</option>
-              <option value="Muğla">Muğla (Bodrum/Marmaris)</option>
-              <option value="Eskişehir">Eskişehir</option>
-              <option value="Gaziantep">Gaziantep</option>
-              <option value="Konya">Konya</option>
-              <option value="Kocaeli">Kocaeli</option>
-              <option value="Mersin">Mersin</option>
-              <option value="Samsun">Samsun</option>
-              <option value="Trabzon">Trabzon</option>
-              <option value="Kayseri">Kayseri</option>
-              <option value="Diyarbakır">Diyarbakır</option>
-              <option value="Şanlıurfa">Şanlıurfa</option>
-              <option value="Denizli">Denizli</option>
-              <option value="Sakarya">Sakarya</option>
-              <option value="Tekirdağ">Tekirdağ</option>
-              <option value="Balıkesir">Balıkesir</option>
-              <option value="Manisa">Manisa</option>
-              <option value="Aydın">Aydın</option>
-              <option value="Hatay">Hatay</option>
-              <option value="Kahramanmaraş">Kahramanmaraş</option>
-              <option value="Van">Van</option>
-              <option value="Malatya">Malatya</option>
-              <option value="Erzurum">Erzurum</option>
-              <option value="Elazığ">Elazığ</option>
-              <option value="Batman">Batman</option>
-              <option value="Sivas">Sivas</option>
-              <option value="Çanakkale">Çanakkale</option>
-              <option value="Zonguldak">Zonguldak</option>
-              <option value="Kütahya">Kütahya</option>
-              <option value="Yalova">Yalova</option>
-              <option value="Düzce">Düzce</option>
-              <option value="Uşak">Uşak</option>
-              <option value="Çorum">Çorum</option>
-              <option value="Afyonkarahisar">Afyonkarahisar</option>
-              <option value="Isparta">Isparta</option>
-              <option value="Giresun">Giresun</option>
-              <option value="Ordu">Ordu</option>
-              <option value="Rize">Rize</option>
-              <option value="Aksaray">Aksaray</option>
-              <option value="Kastamonu">Kastamonu</option>
-              <option value="Tokat">Tokat</option>
-              <option value="Adıyaman">Adıyaman</option>
-              <option value="Edirne">Edirne</option>
-              <option value="Bolu">Bolu</option>
-              <option value="Nevşehir">Nevşehir</option>
-              <option value="Kırklareli">Kırklareli</option>
-              <option value="Kırıkkale">Kırıkkale</option>
-              <option value="Karabük">Karabük</option>
-              <option value="Osmaniye">Osmaniye</option>
-              <option value="Kars">Kars</option>
-              <option value="Ağrı">Ağrı</option>
-              <option value="Mardin">Mardin</option>
-              <option value="Muş">Muş</option>
-              <option value="Bitlis">Bitlis</option>
-              <option value="Niğde">Niğde</option>
-              <option value="Amasya">Amasya</option>
-              <option value="Kilis">Kilis</option>
-              <option value="Siirt">Siirt</option>
-              <option value="Bilecik">Bilecik</option>
-              <option value="Erzincan">Erzincan</option>
-              <option value="Sinop">Sinop</option>
-              <option value="Bartın">Bartın</option>
-              <option value="Karaman">Karaman</option>
-              <option value="Kırşehir">Kırşehir</option>
-              <option value="Artvin">Artvin</option>
-              <option value="Çankırı">Çankırı</option>
-              <option value="Gümüşhane">Gümüşhane</option>
-              <option value="Hakkari">Hakkari</option>
-              <option value="Şırnak">Şırnak</option>
-              <option value="Yozgat">Yozgat</option>
-              <option value="Bayburt">Bayburt</option>
-              <option value="Tunceli">Tunceli</option>
-              <option value="Ardahan">Ardahan</option>
-              <option value="Iğdır">Iğdır</option>
-              <option value="Bingöl">Bingöl</option>
-              <option value="Burdur">Burdur</option>
-            </select>
+            <input type="text" id="tCity" class="form-control" placeholder="İstanbul" required>
           </div>
           <div class="form-group">
             <label>Semt / Bölge *</label>
-            <input type="text" id="tDistrict" class="form-control" placeholder="Kadıköy" required>
+            <input type="text" id="tDistrict" class="form-control" placeholder="Nişantaşı" required>
           </div>
         </div>
 
@@ -1179,7 +1085,7 @@
           </div>
           <div class="form-group">
             <label>Seans Ücreti *</label>
-            <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 1.800 ₺" required>
+            <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 2.000 ₺" required>
           </div>
         </div>
 
@@ -1188,7 +1094,7 @@
         <div class="form-row">
           <div class="form-group">
             <label>WhatsApp Randevu Numarası *</label>
-            <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya 90532..." value="" required>
+            <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya +66..." required>
           </div>
           <div class="form-group">
             <label>📅 İlan / Vitrin Süresi</label>
@@ -1209,16 +1115,23 @@
   </div>
 
   <script>
-                // --- GÜVENLİK VE GİRİŞ KONTROL SİSTEMİ ---
     const ADMIN_PASS = "hakan359";
+    let list = [];
+    let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
     function checkAuth() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('pass') === 'hakan359') {
+        localStorage.setItem('zenspa_admin_logged', 'true');
+        sessionStorage.setItem('zenspa_admin_logged', 'true');
+      }
+
       const isAuth = localStorage.getItem('zenspa_admin_logged') || sessionStorage.getItem('zenspa_admin_logged');
       const overlay = document.getElementById('adminAuthOverlay');
       if (isAuth === 'true') {
-        if (overlay) { overlay.classList.add('hidden'); overlay.style.setProperty('display', 'none', 'important'); }
+        if (overlay) overlay.classList.add('hidden');
       } else {
-        if (overlay) { overlay.classList.remove('hidden'); overlay.style.setProperty('display', 'flex', 'important'); }
+        if (overlay) overlay.classList.remove('hidden');
       }
     }
 
@@ -1232,7 +1145,7 @@
       if (input === ADMIN_PASS) {
         localStorage.setItem('zenspa_admin_logged', 'true');
         sessionStorage.setItem('zenspa_admin_logged', 'true');
-        if (overlay) { overlay.classList.add('hidden'); overlay.style.setProperty('display', 'none', 'important'); }
+        if (overlay) overlay.classList.add('hidden');
         if (errorMsg) errorMsg.style.display = 'none';
         initAdminData();
       } else {
@@ -1245,12 +1158,13 @@
     function togglePassVisibility() {
       const input = document.getElementById('adminPassInput');
       const eye = document.getElementById('eyeIcon');
+      if (!input) return;
       if (input.type === 'password') {
         input.type = 'text';
-        eye.textContent = '🙈';
+        if (eye) eye.textContent = '🙈';
       } else {
         input.type = 'password';
-        eye.textContent = '👁️';
+        if (eye) eye.textContent = '👁️';
       }
     }
 
@@ -1260,121 +1174,65 @@
         sessionStorage.removeItem('zenspa_admin_logged');
         const passEl = document.getElementById('adminPassInput');
         if (passEl) passEl.value = '';
-        const errorMsg = document.getElementById('authErrorMsg');
-        if (errorMsg) errorMsg.style.display = 'none';
         const overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) { overlay.classList.remove('hidden'); overlay.style.setProperty('display', 'flex', 'important'); }
+        if (overlay) overlay.classList.remove('hidden');
       }
     }
 
-    // --- CANLI GERÇEK ANALİTİK & ÇAĞRI İZLEME MOTORU ---
-        // --- CANLI MERKEZİ BULUT ANALİTİK & ÇAĞRI İZLEME MOTORU ---
-    async function getLiveAnalytics() {
-      let stats = {
-        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '28'),
-        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14'),
-        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '9'),
-        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
-        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
-        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]')
-      };
-
-      try {
-        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-cache' });
-        if (res.ok) {
-          const cloudStats = await res.json();
-          if (cloudStats) {
-            stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
-            stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
-            stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
-            if (cloudStats.tClicks) {
-              for (let k in cloudStats.tClicks) {
-                stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
-              }
-            }
-            if (cloudStats.tCalls) {
-              for (let k in cloudStats.tCalls) {
-                stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
-              }
-            }
-            if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
-              stats.callLogs = cloudStats.logs;
-            }
-          }
-        }
-      } catch(e) {
-        console.log("Bulut analitik okuma:", e);
-      }
-      return stats;
+    function formatPhone(phone) {
+      if (!phone) return "15096204167";
+      let p = phone.toString().replace(/\D/g, '');
+      if (!p) return "15096204167";
+      if (p.startsWith('0') && p.length === 11) p = '90' + p.substring(1);
+      else if (p.length === 10 && p.startsWith('5')) p = '90' + p;
+      return p;
     }
 
-    function resetLiveAnalytics() {
-      if (confirm("Canlı arama ve WhatsApp istatistiklerini sıfırlamak istediğinize emin misiniz?")) {
-        localStorage.setItem('zenspa_real_visits', '0');
-        localStorage.setItem('zenspa_real_wa_clicks', '0');
-        localStorage.setItem('zenspa_real_calls', '0');
-        localStorage.setItem('zenspa_t_clicks', '{}');
-        localStorage.setItem('zenspa_t_calls', '{}');
-        localStorage.setItem('zenspa_live_call_logs', '[]');
-        renderWaTable();
-        alert("✓ İstatistikler ve kayıt günlüğü sıfırlandı!");
+    function getWaLink(phone, msg) {
+      const p = formatPhone(phone);
+      const text = encodeURIComponent(msg || "Merhaba");
+      return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
+    }
+
+    function getExpiryBadge(t) {
+      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.78rem;">Süresiz</span>';
+      const diffMs = t.expiresAt - Date.now();
+      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      if (diffDays <= 0) {
+        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu</span>';
+      } else if (diffDays <= 3) {
+        return '<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ ' + diffDays + ' Gün Kaldı</span>';
+      } else {
+        return '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ' + diffDays + ' Gün Kaldı</span>';
       }
     }
 
-    let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
-
-    const defaultTherapists = [
-      { id: 1, name: "Selin Terapist", age: 26, city: "İstanbul", district: "Beşiktaş / Levent", gender: "Kadın", services: ["İsveç", "Aromaterapi", "Medikal"], tags: ["Klasik İsveç", "Aromaterapi", "Kendi Stüdyosu", "VIP Hizmet"], bio: "Uluslararası sertifikalı masaj terapistiyim. Kendi hijyenik ve nezih stüdyomda günün yorgunluğunu unutturacak özel relax ve medikal masaj seansları sunuyorum.", price: "60 Dk: 1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_selin_photo_1786793658243.jpg", clicks: 64, rating: "⭐ 4.9" },
-      { id: 2, name: "Derya Masöz", age: 28, city: "İstanbul", district: "Kadıköy / Moda", gender: "Kadın", services: ["Aromaterapi", "Sıcak Taş", "İsveç"], tags: ["Aromaterapi", "Sıcak Taş", "Otele Servis", "Kendi Yeri"], bio: "Doğal uçucu yağlar eşliğinde kas gevşetici ve zihinsel rahatlama sağlayan özel aromaterapi seansları uyguluyorum. Kadıköy'de kendi yerim bulunmaktadır.", price: "60 Dk: 1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_derya_photo_1786793693039.jpg", clicks: 82, rating: "⭐ 5.0" },
-      { id: 3, name: "Elif Uzman Terapist", age: 25, city: "İzmir", district: "Alsancak / Konak", gender: "Kadın", services: ["Medikal", "İsveç", "Spor"], tags: ["Medikal Masaj", "Klasik Masaj", "Kendi Yeri Var"], bio: "Fizyoterapi ve medikal masaj alanında eğitimliyim. Boyun, sırt ve bel ağrılarına yönelik özel rahatlatıcı tekniklerle seanslar yapmaktayım.", price: "60 Dk: 1.500 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_elif_photo_1786793625708.jpg", clicks: 47, rating: "⭐ 4.9" },
-      { id: 4, name: "Emre Masör", age: 29, city: "İstanbul", district: "Şişli / Nişantaşı", gender: "Erkek", services: ["Spor", "Medikal", "Derin Doku"], tags: ["Sporcu Masajı", "Derin Doku", "Otele / Eve Servis"], bio: "Profesyonel spor kulüplerinde masörlük tecrübem bulunmaktadır. Kas yorgunlukları, kramp ve kulunç açma konusunda uzmanım.", price: "60 Dk: 1.750 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_emre_candid_1786793611473.jpg", clicks: 53, rating: "⭐ 4.8" },
-      { id: 5, name: "Zeynep Terapist", age: 27, city: "Ankara", district: "Çankaya / Tunalı", gender: "Kadın", services: ["İsveç", "Aromaterapi", "Sıcak Taş"], tags: ["Klasik İsveç", "Sıcak Taş", "Nezih Ortam"], bio: "Ankara Çankaya'da lüks ve huzurlu dairemde seanslarımı gerçekleştiriyorum. Mum ışığında ve sakinleştirici müzikler eşliğinde masaj hizmeti.", price: "60 Dk: 1.600 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_zeynep_selfie_1786793596006.jpg", clicks: 58, rating: "⭐ 4.9" },
-      { id: 6, name: "Cansu Masöz", age: 24, city: "Antalya", district: "Muratpaşa / Lara", gender: "Kadın", services: ["Aromaterapi", "İsveç", "Thai"], tags: ["Thai Masajı", "Aromaterapi", "Otele Servis"], bio: "Antalya'da 5 yıldızlı spa merkezlerinde edindiğim tecrübe ile tatilinizi ve gününüzü eşsiz bir masaj keyfiyle taçlandırıyorum.", price: "60 Dk: 1.700 ₺", vitrin: false, wa: "15096204167", img: "images/turkish_cansu_selfie.jpg", clicks: 39, rating: "⭐ 4.9" },
-      { id: 7, name: "Burak Medikal Masör", age: 31, city: "Ankara", district: "Kızılay / Çankaya", gender: "Erkek", services: ["Medikal", "Spor", "Derin Doku"], tags: ["Medikal Masaj", "Derin Doku", "Sertifikalı"], bio: "Omurga ve duruş bozukluklarına bağlı kas sertleşmeleri için derin doku ve medikal masaj seansları sunuyorum.", price: "60 Dk: 1.800 ₺", vitrin: true, wa: "15096204167", img: "images/turkish_burak_photo_1786793640471.jpg", clicks: 71, rating: "⭐ 5.0" }
-    ];
-
-    // Load from localStorage or Default
-            async function initAdminData() {
-      // 1. Once yerel duzenlemeleri goster
+    async function initAdminData() {
       const local = localStorage.getItem('zenspa_therapists');
       if (local) {
         try {
           const parsed = JSON.parse(local);
-          if (Array.isArray(parsed)) {
+          if (Array.isArray(parsed) && parsed.length > 0) {
             list = parsed;
             renderTable(list);
           }
         } catch(e) {}
       }
 
-      // 2. Eger kullanici hic degisiklik yapmadiysa buluttan cek
-      if (!localStorage.getItem('zenspa_admin_modified')) {
-        try {
-          const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
-          if (res.ok) {
-            const cloudList = await res.json();
-            if (Array.isArray(cloudList) && cloudList.length > 0) {
-              list = cloudList;
-              localStorage.setItem('zenspa_therapists', JSON.stringify(list));
-              renderTable(list);
-            }
+      try {
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudList = await res.json();
+          if (Array.isArray(cloudList) && cloudList.length > 0) {
+            list = cloudList;
+            localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+            renderTable(list);
           }
-        } catch(e) {}
-      }
+        }
+      } catch(e) {}
     }
 
-    function getStoredList() {
-      const stored = localStorage.getItem('zenspa_therapists');
-      if (stored) {
-        try { return JSON.parse(stored); } catch(e) {}
-      }
-      localStorage.setItem('zenspa_therapists', JSON.stringify(defaultTherapists));
-      return defaultTherapists;
-    }
-
-    let list = getStoredList();
-
-            async function pushTherapistsToGitHub(currentList) {
+    async function pushTherapistsToGitHub(currentList) {
       try {
         const p1 = "ghp_";
         const p2 = "zODf518H";
@@ -1412,9 +1270,8 @@
             sha: fileData.sha
           })
         });
-        console.log("Bulut guncellemesi basarili!");
       } catch(err) {
-        console.log("Bulut sync uyari:", err);
+        console.log("Bulut sync:", err);
       }
     }
 
@@ -1424,113 +1281,88 @@
       pushTherapistsToGitHub(list);
     }
 
-    // Tab Switching
     function switchTab(tabId, btnEl) {
       document.querySelectorAll('.tab-section').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
       
-      document.getElementById(tabId).classList.add('active');
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
       if (btnEl) btnEl.classList.add('active');
 
       if (tabId === 'vitrinTab') renderVitrinTable();
       if (tabId === 'whatsappTab') renderWaTable();
     }
 
-    // Render Tab 1
-                    function formatPhone(phone) {
-      if (!phone) return "15096204167";
-      let p = phone.toString().replace(/\D/g, '');
-      if (!p) return "15096204167";
-      if (p.startsWith('0') && p.length === 11) p = '90' + p.substring(1);
-      else if (p.length === 10 && p.startsWith('5')) p = '90' + p;
-      return p;
-    }
-
-    function getWaLink(phone, msg) {
-      const p = formatPhone(phone);
-      const text = encodeURIComponent(msg || "Merhaba");
-      return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
-    }
-
-        function getExpiryBadge(t) {
-      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.78rem;">Süresiz</span>';
-      const diffMs = t.expiresAt - Date.now();
-      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-      if (diffDays <= 0) {
-        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu</span>';
-      } else if (diffDays <= 3) {
-        return '<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ ' + diffDays + ' Gün Kaldı</span>';
-      } else {
-        return '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ' + diffDays + ' Gün Kaldı</span>';
-      }
-    }
-
     function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
-      tbody.innerHTML = items.map(t => {
+      if (!tbody) return;
+      tbody.innerHTML = (items || []).map(t => {
         const isAct = t.active !== false;
-        return `
-        <tr style="opacity: ${isAct ? '1' : '0.6'};">
+        return 
+        <tr style="opacity:  + (isAct ? '1' : '0.6') + ;">
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
               <div>
-                <strong style="color:#FFF;">${t.name}</strong>
-                <div style="font-size:0.75rem; color:#A1A1AA;">${t.age} Yaş • ${t.gender || 'Kadın'}</div>
+                <strong style="color:#FFF;"> + t.name + </strong>
+                <div style="font-size:0.75rem; color:#A1A1AA;"> + (t.age || 25) +  Yaş •  + (t.gender || 'Kadın') + </div>
               </div>
             </div>
           </td>
-          <td>📍 ${t.city}, ${t.district || ''}</td>
-          <td style="color:#FDE047; font-weight:700;">${t.price}</td>
+          <td>📍  + t.city + ,  + (t.district || '') + </td>
+          <td style="color:#FDE047; font-weight:700;"> + t.price + </td>
           <td>
-            ${isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>'}
-            ${t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : ''}
+             + (isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>') + 
+             + (t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : '') + 
           </td>
-          <td>${getExpiryBadge(t)}</td>
+          <td> + getExpiryBadge(t) + </td>
           <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+            <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
               💬 WhatsApp
             </a>
           </td>
           <td>
             <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-              <button class="action-btn" onclick="editItem(${t.id})" style="color:#60A5FA; border-color:rgba(96,165,250,0.3);" title="Profili Düzenle">✏️ Düzenle</button>
-              <button class="action-btn" onclick="toggleActive(${t.id})" style="color:${isAct ? '#FB923C' : '#4ADE80'};" title="Yayından Gizle / Aç">${isAct ? '⏸️ Gizle' : '▶️ Aç'}</button>
-              <button class="action-btn" onclick="deleteItem(${t.id})" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
+              <button class="action-btn" onclick="editItem( + t.id + )" style="color:#60A5FA;" title="Profili Düzenle">✏️ Düzenle</button>
+              <button class="action-btn" onclick="toggleActive( + t.id + )" style="color: + (isAct ? '#FB923C' : '#4ADE80') + ;" title="Yayından Gizle / Aç"> + (isAct ? '⏸️ Gizle' : '▶️ Aç') + </button>
+              <button class="action-btn" onclick="deleteItem( + t.id + )" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
             </div>
           </td>
         </tr>
-      `}).join('');
+      }).join('');
 
-      const vitrinCount = list.filter(t => t.vitrin).length;
-      document.getElementById('kpiTotal').textContent = list.length;
-      document.getElementById('kpiVitrinCount').textContent = vitrinCount;
-      document.getElementById('vitrinTabCount').textContent = vitrinCount;
+      const vitrinCount = (items || []).filter(t => t.vitrin).length;
+      const kpiT = document.getElementById('kpiTotal');
+      if (kpiT) kpiT.textContent = (items || []).length;
+      const kpiV = document.getElementById('kpiVitrinCount');
+      if (kpiV) kpiV.textContent = vitrinCount;
+      const vTab = document.getElementById('vitrinTabCount');
+      if (vTab) vTab.textContent = vitrinCount;
     }
 
-    // Render Tab 2 (Vitrin)
     function renderVitrinTable() {
       const tbody = document.getElementById('vitrinTableBody');
-      tbody.innerHTML = list.map((t, idx) => `
+      if (!tbody) return;
+      tbody.innerHTML = (list || []).map((t, idx) => 
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar">
-              <strong style="color:#FFF;">${t.name}</strong>
+              <img src=" + (t.img || t.image) + " class="therapist-avatar">
+              <strong style="color:#FFF;"> + t.name + </strong>
             </div>
           </td>
-          <td>📍 ${t.city}</td>
+          <td>📍  + t.city + </td>
           <td>
-            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>'}
+             + (t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>') + 
           </td>
-          <td style="color:#FBBF24; font-weight:800;">${t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-'}</td>
+          <td style="color:#FBBF24; font-weight:800;"> + (t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-') + </td>
           <td>
-            <button class="btn-toggle-vitrin" onclick="toggleVitrin(${t.id})">
-              ${t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle'}
+            <button class="btn-toggle-vitrin" onclick="toggleVitrin( + t.id + )">
+               + (t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle') + 
             </button>
           </td>
         </tr>
-      `).join('');
+      ).join('');
     }
 
     async function toggleVitrin(id) {
@@ -1552,64 +1384,104 @@
       }
     }
 
-    // Render Tab 3 (WhatsApp & Canlı Arama Raporu)
+    async function getLiveAnalytics() {
+      let stats = {
+        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '28'),
+        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14'),
+        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '9'),
+        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
+        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
+        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]')
+      };
+
+      try {
+        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudStats = await res.json();
+          if (cloudStats) {
+            stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
+            stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
+            stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
+            if (cloudStats.tClicks) {
+              for (let k in cloudStats.tClicks) {
+                stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
+              }
+            }
+            if (cloudStats.tCalls) {
+              for (let k in cloudStats.tCalls) {
+                stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
+              }
+            }
+            if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
+              stats.callLogs = cloudStats.logs;
+            }
+          }
+        }
+      } catch(e) {}
+      return stats;
+    }
+
     async function renderWaTable() {
       const stats = await getLiveAnalytics();
-      document.getElementById('realTotalWa').textContent = stats.waClicks;
-      document.getElementById('realTotalCalls').textContent = stats.callClicks;
-      document.getElementById('realTotalVisits').textContent = stats.visits;
+      const elWa = document.getElementById('realTotalWa');
+      if (elWa) elWa.textContent = stats.waClicks;
+      const elCalls = document.getElementById('realTotalCalls');
+      if (elCalls) elCalls.textContent = stats.callClicks;
+      const elVisits = document.getElementById('realTotalVisits');
+      if (elVisits) elVisits.textContent = stats.visits;
 
       const tbody = document.getElementById('waStatsTableBody');
-      tbody.innerHTML = list.map(t => {
-        const waCount = stats.tClicks[t.id] || 0;
-        const callCount = stats.tCalls[t.id] || 0;
-        const totalInterest = waCount + callCount;
-        return `
-        <tr>
-          <td>
-            <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
-              <strong style="color:#FFF;">${t.name}</strong>
-            </div>
-          </td>
-          <td>📍 ${t.city}</td>
-          <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬 ${waCount} Mesaj Talebi</td>
-          <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 ${callCount} Telefon Araması</td>
-          <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ ${totalInterest} Müşteri Talebi</td>
-          <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
-              💬 İletişime Geç
-            </a>
-          </td>
-        </tr>
-      `}).join('');
+      if (tbody) {
+        tbody.innerHTML = list.map(t => {
+          const waCount = stats.tClicks[t.id] || 0;
+          const callCount = stats.tCalls[t.id] || 0;
+          const totalInterest = waCount + callCount;
+          return 
+          <tr>
+            <td>
+              <div class="therapist-info">
+                <img src=" + (t.img || t.image) + " class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+                <strong style="color:#FFF;"> + t.name + </strong>
+              </div>
+            </td>
+            <td>📍  + t.city + </td>
+            <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬  + waCount +  Mesaj Talebi</td>
+            <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞  + callCount +  Telefon Araması</td>
+            <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡  + totalInterest +  Müşteri Talebi</td>
+            <td>
+              <a href=" + getWaLink(t.wa || t.whatsapp, 'Merhaba') + " target="_blank" class="btn-wa-direct">
+                💬 İletişime Geç
+              </a>
+            </td>
+          </tr>
+        }).join('');
+      }
 
-      // Canli Arama & Mesaj Gunlugu Tablosu
       const logsTbody = document.getElementById('liveCallLogsTableBody');
       if (logsTbody) {
         if (stats.callLogs && stats.callLogs.length > 0) {
-          logsTbody.innerHTML = stats.callLogs.map(log => `
+          logsTbody.innerHTML = stats.callLogs.map(log => 
             <tr>
-              <td style="color:#A1A1AA; font-weight:600;">⏱️ ${log.time}</td>
-              <td><strong style="color:#FFF;">${log.name}</strong></td>
-              <td>📍 ${log.city}</td>
-              <td style="color:${log.type && log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80'}; font-weight:800;">${log.type}</td>
+              <td style="color:#A1A1AA; font-weight:600;">⏱️  + log.time + </td>
+              <td><strong style="color:#FFF;"> + log.name + </strong></td>
+              <td>📍  + log.city + </td>
+              <td style="color: + (log.type && log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80') + ; font-weight:800;"> + log.type + </td>
               <td><span class="status-badge">🟢 İletişim Başlatıldı</span></td>
             </tr>
-          `).join('');
+          ).join('');
         } else {
-          logsTbody.innerHTML = `
+          logsTbody.innerHTML = 
             <tr>
               <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
                 Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
               </td>
             </tr>
-          `;
+          ;
         }
       }
     }
 
-    function exportCallLogsToCSV() {
+    async function exportCallLogsToCSV() {
       const stats = await getLiveAnalytics();
       if (!stats.callLogs || stats.callLogs.length === 0) {
         alert("İndirilecek arama veya mesaj kaydı bulunamadı.");
@@ -1617,20 +1489,33 @@
       }
       let csvContent = "\uFEFFTarih & Saat,Terapist,Şehir,İşlem Türü,Durum\n";
       stats.callLogs.forEach(l => {
-        csvContent += `"${l.time}","${l.name}","${l.city}","${l.type}","İletişim Başlatıldı"\n`;
+        csvContent += " + l.time + "," + l.name + "," + l.city + "," + l.type + ","İletişim Başlatıldı"\n;
       });
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.setAttribute("href", url);
-      link.setAttribute("download", `harmoniliski_cagri_raporu_${Date.now()}.csv`);
+      link.setAttribute("download", harmoniliski_cagri_raporu_ + Date.now() + .csv);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
 
+    function resetLiveAnalytics() {
+      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
+        localStorage.setItem('zenspa_real_visits', '0');
+        localStorage.setItem('zenspa_real_wa_clicks', '0');
+        localStorage.setItem('zenspa_real_calls', '0');
+        localStorage.setItem('zenspa_t_clicks', '{}');
+        localStorage.setItem('zenspa_t_calls', '{}');
+        localStorage.setItem('zenspa_live_call_logs', '[]');
+        renderWaTable();
+        alert("✓ İstatistikler sıfırlandı!");
+      }
+    }
+
     function filterTable() {
-      const q = document.getElementById('tableSearch').value.toLowerCase();
+      const q = (document.getElementById('tableSearch').value || '').toLowerCase();
       const filtered = list.filter(t => t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || (t.district && t.district.toLowerCase().includes(q)));
       renderTable(filtered);
     }
@@ -1641,54 +1526,59 @@
         const reader = new FileReader();
         reader.onload = function(evt) {
           currentPhotoUrl = evt.target.result;
-          document.getElementById('previewPhoto').src = currentPhotoUrl;
-          document.querySelectorAll('.preset-thumb').forEach(t => t.classList.remove('selected'));
+          const p = document.getElementById('previewPhoto');
+          if (p) p.src = currentPhotoUrl;
         };
         reader.readAsDataURL(file);
       }
     }
 
-    function selectPreset(url, el) {
-      currentPhotoUrl = url;
-      document.getElementById('previewPhoto').src = url;
-      document.querySelectorAll('.preset-thumb').forEach(t => t.classList.remove('selected'));
-      el.classList.add('selected');
-    }
-
     function openAddModal() {
-      document.getElementById('editTherapistId').value = "";
-      document.getElementById('modalTitle').textContent = "YENİ TERAPİST EKLE";
-      document.getElementById('btnSubmitTherapist').textContent = "✓ Terapisti Kaydet ve Yayına Al";
-      document.getElementById('addTherapistForm').reset();
+      const editId = document.getElementById('editTherapistId');
+      if (editId) editId.value = "";
+      const mTitle = document.getElementById('modalTitle');
+      if (mTitle) mTitle.textContent = "YENİ TERAPİST EKLE";
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      if (btnSub) btnSub.textContent = "✓ Terapisti Kaydet ve Yayına Al";
+      const form = document.getElementById('addTherapistForm');
+      if (form) form.reset();
       currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
-      document.getElementById('previewPhoto').src = currentPhotoUrl;
-      document.getElementById('addTherapistModal').classList.add('active');
+      const p = document.getElementById('previewPhoto');
+      if (p) p.src = currentPhotoUrl;
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) modal.classList.add('active');
     }
 
     function editItem(id) {
       const item = list.find(t => t.id === id);
       if (!item) return;
 
-      document.getElementById('editTherapistId').value = item.id;
-      document.getElementById('modalTitle').textContent = "✏️ TERAPİSTİ DÜZENLE: " + item.name;
-      document.getElementById('btnSubmitTherapist').textContent = "✓ Güncellemeleri Kaydet";
+      const editId = document.getElementById('editTherapistId');
+      if (editId) editId.value = item.id;
+      const mTitle = document.getElementById('modalTitle');
+      if (mTitle) mTitle.textContent = "✏️ TERAPİSTİ DÜZENLE: " + item.name;
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      if (btnSub) btnSub.textContent = "✓ Güncellemeleri Kaydet";
 
       document.getElementById('tName').value = item.name || '';
       document.getElementById('tAge').value = item.age || 25;
       document.getElementById('tCity').value = item.city || 'İstanbul';
       document.getElementById('tDistrict').value = item.district || '';
       document.getElementById('tGender').value = item.gender || 'Kadın';
-      document.getElementById('tPrice').value = item.price || '60 Dk: 1.800 ₺';
+      document.getElementById('tPrice').value = item.price || '60 Dk: 2.000 ₺';
       document.getElementById('tWhatsapp').value = item.whatsapp || item.wa || '';
       
       currentPhotoUrl = item.img || item.image || "images/turkish_selin_photo_1786793658243.jpg";
-      document.getElementById('previewPhoto').src = currentPhotoUrl;
+      const p = document.getElementById('previewPhoto');
+      if (p) p.src = currentPhotoUrl;
 
-      document.getElementById('addTherapistModal').classList.add('active');
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) modal.classList.add('active');
     }
 
     function closeAddModal() {
-      document.getElementById('addTherapistModal').classList.remove('active');
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) modal.classList.remove('active');
     }
 
     function saveTherapist(e) {
@@ -1700,7 +1590,6 @@
       const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
 
       if (editId) {
-        // DÜZENLEME MODU (Mevcut profili güncelle)
         const idx = list.findIndex(t => t.id == editId);
         if (idx !== -1) {
           list[idx].name = document.getElementById('tName').value;
@@ -1723,7 +1612,6 @@
         }
       }
 
-      // YENİ EKLEME MODU
       const newT = {
         id: Date.now(),
         name: document.getElementById('tName').value,
@@ -1733,7 +1621,7 @@
         gender: document.getElementById('tGender').value,
         services: ["İsveç", "Aromaterapi", "Medikal"],
         tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
-        bio: `${document.getElementById('tCity').value} bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.`,
+        bio: document.getElementById('tCity').value + " bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
         price: document.getElementById('tPrice').value,
         vitrin: true,
         active: true,
@@ -1777,7 +1665,7 @@
       alert("✓ Platform ayarları başarıyla kaydedildi!");
     }
 
-        // Explicit global window bindings for 100% button reliability
+    // Window bindings
     window.switchTab = switchTab;
     window.openAddModal = openAddModal;
     window.closeAddModal = closeAddModal;
@@ -1790,7 +1678,6 @@
     window.adminLogout = adminLogout;
     window.handleAdminLogin = handleAdminLogin;
     window.togglePassVisibility = togglePassVisibility;
-    window.selectPreset = selectPreset;
     window.handleFileUpload = handleFileUpload;
     window.saveTherapist = saveTherapist;
     window.saveSettings = saveSettings;
@@ -1802,7 +1689,8 @@
       initAdminData();
     });
   </script>
-  <!-- Her Zaman Görünür Sabit Güvenli Çıkış Butonu -->
+
+  <!-- Sabit Güvenli Çıkış Butonu -->
   <button class="floating-logout" onclick="adminLogout()" title="Yönetim Panelinden Güvenli Çıkış Yap">
     🔒 Güvenli Çıkış Yap
   </button>
