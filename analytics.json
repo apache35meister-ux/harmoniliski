@@ -1,106 +1,113 @@
 {
-    "logs": [
-        {
-            "time": "20.08.2026 13:55",
-            "name": "Melis VIP Terapist",
-            "type": "💬 WhatsApp Randevu Talebi",
-            "city": "İstanbul (Şişli / Nişantaşı)"
-        },
-        {
-            "time": "20.08.2026 12:40",
-            "name": "Selin VIP Terapist",
-            "type": "📞 Doğrudan Telefon Araması",
-            "city": "İzmir (Alsancak)"
-        },
-        {
-            "time": "20.08.2026 11:15",
-            "name": "Ece VIP Terapist",
-            "type": "💬 WhatsApp Randevu Talebi",
-            "city": "Ankara (Çankaya)"
-        },
-        {
-            "time": "19.08.2026 22:30",
-            "name": "Derya VIP Terapist",
-            "type": "💬 WhatsApp Randevu Talebi",
-            "city": "Antalya (Muratpaşa)"
-        }
-    ],
-    "cityVisits": [
-        {
-            "time": "20.08.2026 14:05",
-            "city": "İstanbul (Beşiktaş)",
-            "country": "Türkiye",
-            "ip": "176.240.***.***",
-            "device": "Mobil 📱",
-            "page": "Ana Sayfa"
-        },
-        {
-            "time": "20.08.2026 13:48",
-            "city": "İzmir (Konak)",
-            "country": "Türkiye",
-            "ip": "88.255.***.***",
-            "device": "Mobil 📱",
-            "page": "Ana Sayfa"
-        },
-        {
-            "time": "20.08.2026 12:30",
-            "city": "Ankara (Çankaya)",
-            "country": "Türkiye",
-            "ip": "212.156.***.***",
-            "device": "Masaüstü 💻",
-            "page": "Ana Sayfa"
-        },
-        {
-            "time": "20.08.2026 11:12",
-            "city": "Antalya (Muratpaşa)",
-            "country": "Türkiye",
-            "ip": "94.54.***.***",
-            "device": "Mobil 📱",
-            "page": "Ana Sayfa"
-        },
-        {
-            "time": "20.08.2026 09:45",
-            "city": "Bursa (Nilüfer)",
-            "country": "Türkiye",
-            "ip": "85.105.***.***",
-            "device": "Mobil 📱",
-            "page": "Ana Sayfa"
-        },
-        {
-            "time": "19.08.2026 23:20",
-            "city": "Muğla (Bodrum)",
-            "country": "Türkiye",
-            "ip": "78.190.***.***",
-            "device": "Mobil 📱",
-            "page": "Ana Sayfa"
-        },
-        {
-            "time": "19.08.2026 21:15",
-            "city": "Adana (Seyhan)",
-            "country": "Türkiye",
-            "ip": "195.175.***.***",
-            "device": "Masaüstü 💻",
-            "page": "Ana Sayfa"
-        }
-    ],
-    "cityCounts": {
-        "İstanbul": 24,
-        "İzmir": 12,
-        "Ankara": 9,
-        "Antalya": 7,
-        "Bursa": 5,
-        "Muğla": 3,
-        "Adana": 2
+  "logs": [
+    {
+      "time": "20.08.2026 14:16",
+      "name": "sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
-    "tCalls":  {
-                   "100":  8,
-                   "1":  3
-               },
-    "tClicks":  {
-                    "100":  14,
-                    "1":  4
-                },
-    "totalCalls":  11,
-    "totalVisits":  62,
-    "totalWaClicks":  18
+    {
+      "time": "20.08.2026 13:55",
+      "name": "Melis VIP Terapist",
+      "type": "💬 WhatsApp Randevu Talebi",
+      "city": "İstanbul (Şişli / Nişantaşı)"
+    },
+    {
+      "time": "20.08.2026 12:40",
+      "name": "Selin VIP Terapist",
+      "type": "📞 Doğrudan Telefon Araması",
+      "city": "İzmir (Alsancak)"
+    },
+    {
+      "time": "20.08.2026 11:15",
+      "name": "Ece VIP Terapist",
+      "type": "💬 WhatsApp Randevu Talebi",
+      "city": "Ankara (Çankaya)"
+    },
+    {
+      "time": "19.08.2026 22:30",
+      "name": "Derya VIP Terapist",
+      "type": "💬 WhatsApp Randevu Talebi",
+      "city": "Antalya (Muratpaşa)"
+    }
+  ],
+  "cityVisits": [
+    {
+      "time": "20.08.2026 14:05",
+      "city": "İstanbul (Beşiktaş)",
+      "country": "Türkiye",
+      "ip": "176.240.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "20.08.2026 13:48",
+      "city": "İzmir (Konak)",
+      "country": "Türkiye",
+      "ip": "88.255.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "20.08.2026 12:30",
+      "city": "Ankara (Çankaya)",
+      "country": "Türkiye",
+      "ip": "212.156.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "20.08.2026 11:12",
+      "city": "Antalya (Muratpaşa)",
+      "country": "Türkiye",
+      "ip": "94.54.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "20.08.2026 09:45",
+      "city": "Bursa (Nilüfer)",
+      "country": "Türkiye",
+      "ip": "85.105.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "19.08.2026 23:20",
+      "city": "Muğla (Bodrum)",
+      "country": "Türkiye",
+      "ip": "78.190.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "19.08.2026 21:15",
+      "city": "Adana (Seyhan)",
+      "country": "Türkiye",
+      "ip": "195.175.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    }
+  ],
+  "cityCounts": {
+    "İstanbul": 24,
+    "İzmir": 12,
+    "Ankara": 9,
+    "Antalya": 7,
+    "Bursa": 5,
+    "Muğla": 3,
+    "Adana": 2
+  },
+  "tCalls": {
+    "1": 3,
+    "100": 8
+  },
+  "tClicks": {
+    "1": 4,
+    "100": 14,
+    "1787093135705": 1
+  },
+  "totalCalls": 11,
+  "totalVisits": 62,
+  "totalWaClicks": 19
 }
