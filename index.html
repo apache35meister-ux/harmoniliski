@@ -2164,7 +2164,53 @@
     </div>
   </div>
 
-      <!-- PWA Mobil Uygulama İndir Barı -->
+  <!-- HD Fotoğraf & Profil İnceleme Lightbox Modalı -->
+  <div class="modal-overlay" id="photoViewerModal" onclick="handlePhotoModalBackdrop(event)">
+    <div class="modal-box" style="max-width: 640px; padding: 0; overflow: hidden; background: #0C0C0F; border: 1px solid var(--border-gold-bright); box-shadow: 0 30px 80px rgba(0,0,0,0.95), var(--gold-glow);">
+      <button class="modal-close" onclick="closePhotoModal()" style="z-index: 10; top: 14px; right: 14px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; width: 38px; height: 38px; font-size: 1.2rem;">✕</button>
+      
+      <div style="position: relative; width: 100%; height: 420px; background: #000; overflow: hidden;">
+        <img id="pvImg" src="" alt="Terapist Fotoğrafı" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, #0C0C0F 0%, rgba(12, 12, 15, 0.1) 60%, transparent 100%); pointer-events: none;"></div>
+        <div style="position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; z-index: 5;">
+          <span class="badge-vip-top" style="position: static; font-size: 0.8rem; padding: 6px 14px;">👑 VIP PROFİL</span>
+          <span class="badge-live-available" style="position: static; font-size: 0.8rem; padding: 6px 14px;"><span class="pulse-dot-green"></span> Şu An Müsait</span>
+        </div>
+      </div>
+
+      <div style="padding: 1.5rem 1.75rem 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h3 id="pvName" style="font-family: var(--font-heading); color: #FFF; font-size: 1.6rem; margin-bottom: 3px;">-</h3>
+            <div id="pvLocation" style="color: var(--gold-text); font-size: 0.95rem; font-weight: 700;">📍 -</div>
+          </div>
+          <div style="text-align: right;">
+            <div id="pvPrice" style="color: #4ADE80; font-weight: 900; font-size: 1.3rem;">-</div>
+            <div id="pvRating" style="color: #FBBF24; font-size: 0.88rem; font-weight: 700;">⭐ 5.0 (94 Değerlendirme)</div>
+          </div>
+        </div>
+
+        <p id="pvBio" style="color: #D4D4D8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem; background: rgba(255,255,255,0.03); padding: 1rem 1.25rem; border-radius: 14px; border: 1px solid rgba(255,255,255,0.06);">
+          -
+        </p>
+
+        <div id="pvTags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <!-- JS ile doldurulacak -->
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a id="pvWaBtn" href="#" target="_blank" class="btn-action-wa" style="flex: 1.4; padding: 1.05rem; font-size: 0.95rem; border-radius: 14px; text-decoration: none; justify-content: center;">
+            💬 WhatsApp ile Hemen Yaz
+          </a>
+          <a id="pvCallBtn" href="#" class="btn-action-call" style="flex: 0.9; padding: 1.05rem; font-size: 0.95rem; border-radius: 14px; text-decoration: none; justify-content: center;">
+            📞 Doğrudan Ara
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PWA Mobil Uygulama İndir Barı -->
   <div class="pwa-install-banner" id="pwaBanner" style="display: none;">
     <img src="images/turkish_selin_photo_1786793658243.jpg" class="pwa-app-icon" alt="ZENSPA">
     <div class="pwa-text">
@@ -2829,7 +2875,7 @@
 
         return `
           <article class="card-therapist" itemscope itemtype="https://schema.org/Person">
-            <div class="card-image-wrap">
+            <div class="card-image-wrap" onclick="openPhotoModal(${t.id})" title="Fotoğrafı Büyüt ve Profili İncele">
               <img src="${t.img || t.image}" alt="${t.name} - ${t.city} Masöz Terapist" itemprop="image" class="card-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80';">
               <div class="card-vignette"></div>
               
@@ -2840,7 +2886,12 @@
                 <span>Şu An Müsait</span>
               </div>
 
-              <div class="badge-photo-bottom">
+              <!-- Fotoğrafı Büyüt İpucu -->
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; font-size: 0.72rem; font-weight: 700; padding: 4px 9px; border-radius: 999px; display: flex; align-items: center; gap: 4px; z-index: 3;">
+                <span>🔍 Fotoğrafı Büyüt</span>
+              </div>
+
+              <div class="badge-photo-bottom" style="left: 12px; bottom: 12px; right: auto;">
                 <span class="photo-loc-tag">📍 ${sanitize(t.city)}</span>
                 <span class="photo-rating-tag">⭐ ${t.rating || '4.9'}</span>
               </div>
@@ -2848,7 +2899,7 @@
 
             <div class="card-body">
               <div class="card-head">
-                <div class="card-title-row">
+                <div class="card-title-row" onclick="openPhotoModal(${t.id})" style="cursor: pointer;" title="Detayları Görüntüle">
                   <h4 class="card-name" itemprop="name">${sanitize(t.name)}</h4>
                   <span class="card-age">${t.age} Yaş</span>
                 </div>
@@ -2960,6 +3011,78 @@
 
     document.getElementById('vitrinModal')?.addEventListener('click', (e) => {
       if (e.target.id === 'vitrinModal') closeVitrinModal();
+    });
+
+    // --- HD FOTOĞRAF & PROFİL LIGHTBOX MODAL MOTORU ---
+    function openPhotoModal(id) {
+      const t = (therapists || []).find(item => item.id == id);
+      if (!t) return;
+
+      const modal = document.getElementById('photoViewerModal');
+      const img = document.getElementById('pvImg');
+      const name = document.getElementById('pvName');
+      const loc = document.getElementById('pvLocation');
+      const price = document.getElementById('pvPrice');
+      const rating = document.getElementById('pvRating');
+      const bio = document.getElementById('pvBio');
+      const tags = document.getElementById('pvTags');
+      const waBtn = document.getElementById('pvWaBtn');
+      const callBtn = document.getElementById('pvCallBtn');
+
+      if (img) {
+        img.src = t.img || t.image;
+        img.alt = `${t.name} - ${t.city} Masöz`;
+      }
+      if (name) name.textContent = `${t.name} (${t.age} Yaş)`;
+      if (loc) loc.textContent = `📍 ${t.city}${t.district ? ', ' + t.district : ''}`;
+      if (price) price.textContent = t.price || '60 Dk: 2.000 ₺';
+      if (rating) rating.textContent = `⭐ ${t.rating || '5.0'} (${t.reviews || 48} Değerlendirme)`;
+      if (bio) bio.textContent = t.bio || `${t.city} bölgesinde VIP ve hijyenik masaj hizmeti sunmaktadır.`;
+
+      if (tags) {
+        const tagList = t.tags || t.services || ['Klasik Masaj', 'Aromaterapi', 'Medikal'];
+        tags.innerHTML = tagList.map(tag => `<span class="card-tag" style="background:#181822; border:1px solid rgba(255,255,255,0.15); color:#FDE047; font-weight:700;">${sanitize(tag)}</span>`).join('');
+      }
+
+      const waLink = getWaLink(t.wa || t.whatsapp, `Merhaba ${t.name}, profilinizi detaylı inceledim. Masaj seansı için randevu almak istiyorum.`);
+      const telNum = formatPhone(t.wa || t.whatsapp);
+
+      if (waBtn) {
+        waBtn.href = waLink;
+        waBtn.onclick = () => trackWaAction(t.id, t.name, t.city);
+      }
+      if (callBtn) {
+        callBtn.href = `tel:+${telNum}`;
+        callBtn.onclick = () => trackCallAction(t.id, t.name, t.city);
+      }
+
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.add('active');
+        document.documentElement.style.overflow = 'hidden';
+      }
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoViewerModal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.remove('active');
+        document.documentElement.style.overflow = '';
+      }
+    }
+
+    function handlePhotoModalBackdrop(e) {
+      if (e.target.id === 'photoViewerModal') {
+        closePhotoModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePhotoModal();
+        closeVitrinModal();
+      }
     });
 
     async function applySavedSettings() {
