@@ -1,10 +1,19 @@
 {
-    "logs": [],
-    "cityVisits": [],
-    "cityCounts": {},
-    "tCalls": {},
-    "tClicks": {},
-    "totalCalls": 0,
-    "totalVisits": 0,
-    "totalWaClicks": 0
+  "logs": [
+    {
+      "time": "20.08.2026 14:57",
+      "name": "sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
+  "cityVisits": [],
+  "cityCounts": {},
+  "tCalls": {},
+  "tClicks": {
+    "1787093135705": 1
+  },
+  "totalCalls": 0,
+  "totalVisits": 0,
+  "totalWaClicks": 1
 }
