@@ -1549,6 +1549,26 @@
         <button class="filter-pill-btn" onclick="setQuickPill('Antalya', this)">📍 Antalya</button>
       </div>
 
+      <!-- Popüler Semtler & İlçeler Hızlı Barı (Long-Tail SEO) -->
+      <div class="filter-pills-bar" style="margin-top:-0.5rem; margin-bottom:1.5rem;">
+        <span style="color:var(--gold-text); font-size:0.78rem; font-weight:800; display:flex; align-items:center; padding-right:6px; white-space:nowrap;">📍 POPÜLER SEMTLER:</span>
+        <button class="filter-pill-btn" onclick="filterDistrict('Kadıköy', 'İstanbul', this)">Kadıköy</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Şişli', 'İstanbul', this)">Şişli / Nişantaşı</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Beşiktaş', 'İstanbul', this)">Beşiktaş</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Bakırköy', 'İstanbul', this)">Bakırköy</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Beylikdüzü', 'İstanbul', this)">Beylikdüzü</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Çankaya', 'Ankara', this)">Ankara Çankaya</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Kızılay', 'Ankara', this)">Kızılay</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Alsancak', 'İzmir', this)">İzmir Alsancak</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Karşıyaka', 'İzmir', this)">Karşıyaka</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Bornova', 'İzmir', this)">Bornova</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Muratpaşa', 'Antalya', this)">Antalya Muratpaşa</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Lara', 'Antalya', this)">Lara</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Alanya', 'Antalya', this)">Alanya</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Nilüfer', 'Bursa', this)">Bursa Nilüfer</button>
+        <button class="filter-pill-btn" onclick="filterDistrict('Bodrum', 'Muğla', this)">Bodrum</button>
+      </div>
+
       <div class="filter-wrapper">
         <div class="filter-grid">
           <div class="filter-item">
@@ -2698,16 +2718,66 @@
       renderTherapists(therapists);
     }
 
-        function checkUrlCityFilter() {
+    function filterDistrict(districtName, cityName, btnEl) {
+      if (btnEl) {
+        document.querySelectorAll('.filter-pills-bar .filter-pill-btn').forEach(b => b.classList.remove('active'));
+        btnEl.classList.add('active');
+      }
+      
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect && cityName) {
+        citySelect.value = cityName;
+      }
+
+      const q = districtName.toLowerCase().trim();
+      const filtered = therapists.filter(t => {
+        const d = (t.district || '').toLowerCase();
+        const b = (t.bio || '').toLowerCase();
+        const tags = (t.tags || []).join(' ').toLowerCase();
+        const cityMatch = !cityName || t.city.toLowerCase() === cityName.toLowerCase();
+        return cityMatch && (d.includes(q) || b.includes(q) || tags.includes(q));
+      });
+
+      const heroTitle = document.querySelector('.hero-title');
+      if (heroTitle) {
+        heroTitle.innerHTML = `${cityName ? cityName + ' ' : ''}${districtName} <span class="gold-shimmer">VIP Masaj Rehberi</span>`;
+      }
+      document.title = `${cityName ? cityName + ' ' : ''}${districtName} VIP Masaj & Masöz Terapistleri | ZENSPA`;
+
+      renderTherapists(filtered);
+    }
+
+    function checkUrlCityFilter() {
       const urlParams = new URLSearchParams(window.location.search);
-      let cityParam = urlParams.get('city') || window.location.hash.replace('#', '');
+      const cityParam = urlParams.get('city');
+      const districtParam = urlParams.get('district');
+
+      if (districtParam) {
+        let matchedCity = '';
+        if (cityParam) {
+          const select = document.getElementById('citySelect');
+          if (select) {
+            for (let opt of select.options) {
+              const optSlug = opt.value.toLowerCase().replace('ı','i').replace('ğ','g').replace('ü','u').replace('ş','s').replace('ö','o').replace('ç','c').replace(' ','-');
+              if (optSlug === cityParam.toLowerCase() || opt.value.toLowerCase() === cityParam.toLowerCase()) {
+                select.value = opt.value;
+                matchedCity = opt.value;
+                break;
+              }
+            }
+          }
+        }
+        filterDistrict(districtParam, matchedCity);
+        return;
+      }
+
       if (cityParam) {
-        cityParam = cityParam.toLowerCase().trim();
+        let cp = cityParam.toLowerCase().trim();
         const select = document.getElementById('citySelect');
         if (select) {
           for (let opt of select.options) {
             const optSlug = opt.value.toLowerCase().replace('ı','i').replace('ğ','g').replace('ü','u').replace('ş','s').replace('ö','o').replace('ç','c').replace(' ','-');
-            if (optSlug === cityParam || opt.value.toLowerCase() === cityParam) {
+            if (optSlug === cp || opt.value.toLowerCase() === cp) {
               select.value = opt.value;
               filterTherapists();
               break;
