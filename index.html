@@ -2797,7 +2797,19 @@
       if (e.target.id === 'vitrinModal') closeVitrinModal();
     });
 
+    function applySavedSettings() {
+      const savedTitle = localStorage.getItem('zenspa_site_title');
+      if (savedTitle) {
+        document.title = savedTitle;
+        const brandLogo = document.querySelector('.brand-title h2');
+        if (brandLogo && savedTitle.includes('|')) {
+          brandLogo.textContent = savedTitle.split('|')[0].trim();
+        }
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+      applySavedSettings();
       trackPageVisit();
       loadLiveTherapists();
       checkUrlCityFilter();
