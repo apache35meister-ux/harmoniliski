@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "20.08.2026 14:54",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:dd",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "20.08.2026 14:53",
       "city": "Menderes (Izmir)",
       "country": "Türkiye",
@@ -51,11 +59,12 @@
     }
   ],
   "cityCounts": {
-    "Menderes": 6
+    "Menderes": 6,
+    "Izmir": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 0
 }
