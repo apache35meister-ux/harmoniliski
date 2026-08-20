@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "20.08.2026 16:00",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "21.08.2026 01:48",
       "city": "Izmir",
       "country": "Türkiye",
@@ -44,11 +52,12 @@
   ],
   "cityCounts": {
     "İstanbul": 2,
-    "Izmir": 3
+    "Izmir": 3,
+    "San Jose": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 5,
+  "totalVisits": 6,
   "totalWaClicks": 0
 }
