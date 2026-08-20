@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "21.08.2026 00:00",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "176.89.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "20.08.2026 12:57",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -19,11 +27,12 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 2
+    "İstanbul": 2,
+    "Izmir": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 0
 }
