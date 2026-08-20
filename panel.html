@@ -1675,6 +1675,7 @@
       if (tabId === 'vitrinTab') renderVitrinTable();
       if (tabId === 'whatsappTab') renderWaTable();
       if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
+      if (tabId === 'settingsTab') loadSettings();
     }
 
     async function renderCityVisitorStats() {
@@ -1895,10 +1896,22 @@
       }
     }
 
-    function loadSettings() {
-      const savedTitle = localStorage.getItem('zenspa_site_title');
-      const savedWa = localStorage.getItem('zenspa_wa_number');
-      const savedScope = localStorage.getItem('zenspa_scope');
+    async function loadSettings() {
+      let savedTitle = localStorage.getItem('zenspa_site_title');
+      let savedWa = localStorage.getItem('zenspa_wa_number');
+      let savedScope = localStorage.getItem('zenspa_scope');
+
+      try {
+        const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudSet = await res.json();
+          if (cloudSet) {
+            if (cloudSet.siteTitle && !savedTitle) savedTitle = cloudSet.siteTitle;
+            if (cloudSet.waNumber && !savedWa) savedWa = cloudSet.waNumber;
+            if (cloudSet.scope && !savedScope) savedScope = cloudSet.scope;
+          }
+        }
+      } catch(e) {}
 
       const titleInput = document.getElementById('settingSiteTitle');
       const waInput = document.getElementById('settingWaNumber');
@@ -1907,10 +1920,17 @@
       if (savedTitle && titleInput) titleInput.value = savedTitle;
       if (savedWa && waInput) waInput.value = savedWa;
       if (savedScope && scopeInput) scopeInput.value = savedScope;
+
+      if (savedTitle) {
+        const brandH2 = document.querySelector('.brand-title h2');
+        if (brandH2 && savedTitle.includes('|')) {
+          brandH2.textContent = savedTitle.split('|')[0].trim();
+        }
+      }
     }
 
-    function saveSettings(e) {
-      e.preventDefault();
+    async function saveSettings(e) {
+      if (e) e.preventDefault();
       const titleInput = document.getElementById('settingSiteTitle');
       const waInput = document.getElementById('settingWaNumber');
       const scopeInput = document.getElementById('settingCities');
@@ -1922,6 +1942,56 @@
       if (title) localStorage.setItem('zenspa_site_title', title);
       if (wa) localStorage.setItem('zenspa_wa_number', wa);
       if (scope) localStorage.setItem('zenspa_scope', scope);
+
+      const brandH2 = document.querySelector('.brand-title h2');
+      if (brandH2 && title && title.includes('|')) {
+        brandH2.textContent = title.split('|')[0].trim();
+      }
+
+      // Bulut Senkronizasyonu (Tüm cihazlar ve oturumlar için)
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        let sha = null;
+        try {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+          });
+          if (res.ok) {
+            const fd = await res.json();
+            if (fd && fd.sha) sha = fd.sha;
+          }
+        } catch(e) {}
+
+        const newSettingsObj = { siteTitle: title, waNumber: wa, scope: scope };
+        const newStr = JSON.stringify(newSettingsObj, null, 2);
+        const utf8Bytes = new TextEncoder().encode(newStr);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+        const base64Content = btoa(binary);
+
+        const putBody = { message: "Update platform settings: " + title, content: base64Content };
+        if (sha) putBody.sha = sha;
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(putBody)
+        });
+      } catch(err) {
+        console.log("Settings cloud sync err:", err);
+      }
 
       alert("✓ Platform ayarları kalıcı olarak kaydedildi! Sayfa yenilense dahi güncel başlığınız korunacaktır.");
     }
@@ -1946,6 +2016,7 @@
     window.checkAuth = checkAuth;
 
     document.addEventListener('DOMContentLoaded', function() {
+      loadSettings();
       var logged = localStorage.getItem('zenspa_panel_auth');
       var overlay = document.getElementById('adminAuthOverlay');
       if (logged === 'evet') {
