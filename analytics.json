@@ -15,6 +15,14 @@
   ],
   "cityVisits": [
     {
+      "time": "20.08.2026 05:48",
+      "city": "New York City (New York)",
+      "country": "United States",
+      "ip": "103.196.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "20.08.2026 15:21",
       "city": "Aydin",
       "country": "Türkiye",
@@ -65,7 +73,8 @@
   ],
   "cityCounts": {
     "Izmir": 1,
-    "Aydin": 5
+    "Aydin": 5,
+    "New York City": 1
   },
   "tCalls": {},
   "tClicks": {
@@ -73,6 +82,6 @@
     "1787133440430": 1
   },
   "totalCalls": 0,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 2
 }
