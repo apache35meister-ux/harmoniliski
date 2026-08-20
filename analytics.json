@@ -7,13 +7,24 @@
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "cityVisits": [],
-  "cityCounts": {},
+  "cityVisits": [
+    {
+      "time": "20.08.2026 14:58",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:dd",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    }
+  ],
+  "cityCounts": {
+    "Izmir": 1
+  },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "totalWaClicks": 1
 }
