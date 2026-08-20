@@ -1329,6 +1329,7 @@
     }
 
     async function initAdminData() {
+      loadSettings();
       renderTable(list);
       
       const local = localStorage.getItem('zenspa_therapists');
@@ -1894,9 +1895,35 @@
       }
     }
 
+    function loadSettings() {
+      const savedTitle = localStorage.getItem('zenspa_site_title');
+      const savedWa = localStorage.getItem('zenspa_wa_number');
+      const savedScope = localStorage.getItem('zenspa_scope');
+
+      const titleInput = document.getElementById('settingSiteTitle');
+      const waInput = document.getElementById('settingWaNumber');
+      const scopeInput = document.getElementById('settingCities');
+
+      if (savedTitle && titleInput) titleInput.value = savedTitle;
+      if (savedWa && waInput) waInput.value = savedWa;
+      if (savedScope && scopeInput) scopeInput.value = savedScope;
+    }
+
     function saveSettings(e) {
       e.preventDefault();
-      alert("✓ Platform ayarları başarıyla kaydedildi!");
+      const titleInput = document.getElementById('settingSiteTitle');
+      const waInput = document.getElementById('settingWaNumber');
+      const scopeInput = document.getElementById('settingCities');
+
+      const title = titleInput ? titleInput.value.trim() : '';
+      const wa = waInput ? waInput.value.trim() : '';
+      const scope = scopeInput ? scopeInput.value.trim() : '';
+
+      if (title) localStorage.setItem('zenspa_site_title', title);
+      if (wa) localStorage.setItem('zenspa_wa_number', wa);
+      if (scope) localStorage.setItem('zenspa_scope', scope);
+
+      alert("✓ Platform ayarları kalıcı olarak kaydedildi! Sayfa yenilense dahi güncel başlığınız korunacaktır.");
     }
 
     // Window bindings
