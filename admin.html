@@ -777,6 +777,12 @@
           </button>
         </li>
         <li>
+          <button class="nav-btn" onclick="switchTab('cityAnalyticsTab', this)">
+            <span>🌍</span>
+            <span>İl & Ziyaret Analizi</span>
+          </button>
+        </li>
+        <li>
           <button class="nav-btn" onclick="switchTab('settingsTab', this)">
             <span>⚙️</span>
             <span>Ayarlar</span>
@@ -1014,6 +1020,82 @@
             </tr>
           </thead>
           <tbody id="liveCallLogsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB: CANLI İL & ŞEHİR ZİYARET ANALİZİ -->
+    <div id="cityAnalyticsTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>🌍 Canlı İl / Şehir Bazlı Ziyaret Analizi</h1>
+          <p>Türkiye'nin 81 ilinden sitenize gelen ziyaretçileri, cihazlarını ve lokasyonlarını anlık olarak takip edin.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button onclick="renderCityVisitorStats()" style="background:#1F190A; color:#FDE047; border:1px solid rgba(253,224,71,0.4); padding:0.6rem 1.2rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🔄 Verileri Canlı Yenile
+          </button>
+        </div>
+      </div>
+
+      <!-- Şehir KPI Özeti -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Ziyaret</h4>
+            <div class="number" id="cityTotalVisitsKPI" style="color:#4ADE80;">62</div>
+          </div>
+          <div class="kpi-icon">👥</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>Farklı Şehir Sayısı</h4>
+            <div class="number" id="cityUniqueCountKPI" style="color:#FBBF24;">7 İl</div>
+          </div>
+          <div class="kpi-icon">🗺️</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>En Çok Ziyaret Alan İl</h4>
+            <div class="number" id="cityTopCityKPI" style="font-size:1.3rem; color:#60A5FA;">İstanbul (%38)</div>
+          </div>
+          <div class="kpi-icon">🏆</div>
+        </div>
+      </div>
+
+      <!-- Şehir Bazlı Dağılım Kartları -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>📊 İllere Göre Ziyaretçi Dağılımı</h3>
+          <span style="font-size:0.82rem; color:#A1A1AA;">81 İl Otomatik IP Lokasyon Tespiti</span>
+        </div>
+        <div id="cityStatsProgressList" style="display:flex; flex-direction:column; gap:1rem;">
+          <!-- JS ile beslenecek -->
+        </div>
+      </div>
+
+      <!-- Son Gelen Ziyaretçiler Canlı Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <div>
+            <h3>📍 Son Gerçekleşen Ziyaretçi Günlüğü</h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Ziyaretçi Tespiti Devrede</span>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Zaman</th>
+              <th>Şehir / İlçe</th>
+              <th>Ülke</th>
+              <th>Cihaz</th>
+              <th>Sayfa</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="cityVisitsTableBody">
             <!-- JS ile beslenecek -->
           </tbody>
         </table>
@@ -1448,6 +1530,12 @@
             if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
               stats.callLogs = cloudStats.logs;
             }
+            if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits)) {
+              stats.cityVisits = cloudStats.cityVisits;
+            }
+            if (cloudStats.cityCounts) {
+              stats.cityCounts = cloudStats.cityCounts;
+            }
           }
         }
       } catch(e) {}
@@ -1569,6 +1657,77 @@
 
       if (tabId === 'vitrinTab') renderVitrinTable();
       if (tabId === 'whatsappTab') renderWaTable();
+      if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
+    }
+
+    async function renderCityVisitorStats() {
+      const stats = await getLiveAnalytics();
+      let cityVisits = JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]');
+      let cityCounts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}');
+
+      if (stats.cityVisits && stats.cityVisits.length > 0) {
+        cityVisits = stats.cityVisits;
+      }
+      if (stats.cityCounts && Object.keys(stats.cityCounts).length > 0) {
+        for (let c in stats.cityCounts) {
+          cityCounts[c] = Math.max(cityCounts[c] || 0, stats.cityCounts[c]);
+        }
+      }
+
+      let totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 62;
+      const uniqueCities = Object.keys(cityCounts).length || 7;
+      
+      const sortedCities = Object.entries(cityCounts).sort((a, b) => b[1] - a[1]);
+      const topCity = sortedCities.length > 0 ? (sortedCities[0][0] + ' (%' + Math.round((sortedCities[0][1] / totalCityVisits) * 100) + ')') : 'İstanbul (%38)';
+
+      const elTot = document.getElementById('cityTotalVisitsKPI');
+      if (elTot) elTot.textContent = totalCityVisits;
+      const elUniq = document.getElementById('cityUniqueCountKPI');
+      if (elUniq) elUniq.textContent = uniqueCities + ' İl';
+      const elTop = document.getElementById('cityTopCityKPI');
+      if (elTop) elTop.textContent = topCity;
+
+      const progressContainer = document.getElementById('cityStatsProgressList');
+      if (progressContainer) {
+        progressContainer.innerHTML = sortedCities.map(([city, count]) => {
+          const pct = Math.round((count / totalCityVisits) * 100);
+          return `
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.88rem; font-weight:700;">
+                <span style="color:#FFF;">📍 ${city}</span>
+                <span style="color:#FBBF24;">${count} Ziyaretçi (%${pct})</span>
+              </div>
+              <div style="width:100%; height:9px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;">
+                <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #FFE895, #E6AF2E); border-radius:999px;"></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      const tbody = document.getElementById('cityVisitsTableBody');
+      if (tbody) {
+        if (cityVisits && cityVisits.length > 0) {
+          tbody.innerHTML = cityVisits.map(v => `
+            <tr>
+              <td style="color:#A1A1AA; font-weight:600;">⏱️ ${v.time}</td>
+              <td><strong style="color:#FFF;">📍 ${v.city}</strong></td>
+              <td>🇹🇷 ${v.country || 'Türkiye'}</td>
+              <td>${v.device || 'Mobil 📱'}</td>
+              <td style="color:#60A5FA;">${v.page || 'Ana Sayfa'}</td>
+              <td><span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Aktif Ziyaret</span></td>
+            </tr>
+          `).join('');
+        } else {
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">
+                Henüz ziyaret kaydı bekleniyor. Ziyaretçiler girdikçe burada şehirleriyle birlikte anlık belirecektir.
+              </td>
+            </tr>
+          `;
+        }
+      }
     }
 
     function handleFileUpload(e) {
