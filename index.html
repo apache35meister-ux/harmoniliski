@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   
   <!-- Security Shield & Anti-Attack Headers -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -2803,7 +2806,7 @@
     let deferredPrompt;
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=4').then(reg => {
+        navigator.serviceWorker.register('./sw.js?v=5').then(reg => {
           console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
         }).catch(err => {
           console.log('SW Hata:', err);
