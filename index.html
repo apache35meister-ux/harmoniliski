@@ -2797,13 +2797,61 @@
       if (e.target.id === 'vitrinModal') closeVitrinModal();
     });
 
-    function applySavedSettings() {
-      const savedTitle = localStorage.getItem('zenspa_site_title');
+    async function applySavedSettings() {
+      let savedTitle = localStorage.getItem('zenspa_site_title');
+      let savedWa = localStorage.getItem('zenspa_wa_number');
+      let savedScope = localStorage.getItem('zenspa_scope');
+
+      try {
+        const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudSet = await res.json();
+          if (cloudSet) {
+            if (cloudSet.siteTitle) savedTitle = cloudSet.siteTitle;
+            if (cloudSet.waNumber) savedWa = cloudSet.waNumber;
+            if (cloudSet.scope) savedScope = cloudSet.scope;
+          }
+        }
+      } catch(e) {}
+
       if (savedTitle) {
         document.title = savedTitle;
-        const brandLogo = document.querySelector('.brand-title h2');
-        if (brandLogo && savedTitle.includes('|')) {
-          brandLogo.textContent = savedTitle.split('|')[0].trim();
+        
+        // Logo başlığı ve alt başlığı
+        const logoH1 = document.querySelector('.logo-text h1');
+        const logoSpan = document.querySelector('.logo-text span');
+        if (savedTitle.includes('|')) {
+          const parts = savedTitle.split('|');
+          if (logoH1) logoH1.textContent = parts[0].trim();
+          if (logoSpan && parts[1]) logoSpan.textContent = parts[1].trim();
+        } else {
+          if (logoH1) logoH1.textContent = savedTitle;
+        }
+
+        // Ana vitrin manşet başlığı
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+          if (savedTitle.includes('|')) {
+            const parts = savedTitle.split('|');
+            heroTitle.innerHTML = parts[0].trim() + ' <span class="gold-shimmer">' + (parts[1] ? parts[1].trim() : '') + '</span>';
+          } else {
+            heroTitle.innerHTML = '<span class="gold-shimmer">' + savedTitle + '</span>';
+          }
+        }
+      }
+
+      if (savedWa) {
+        const cleanWa = savedWa.replace(/\D/g, '');
+        // Üst kayan bant WhatsApp hattı
+        const topbarA = document.querySelector('.vip-topbar a');
+        if (topbarA) {
+          topbarA.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba randevu almak istiyorum.");
+          topbarA.textContent = "💬 WhatsApp: " + savedWa;
+        }
+        // 7/24 Canlı Destek Butonu
+        const btnContactTop = document.querySelector('.btn-contact-top');
+        if (btnContactTop) {
+          btnContactTop.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, canli destek hattindan randevu almak istiyorum.");
         }
       }
     }
