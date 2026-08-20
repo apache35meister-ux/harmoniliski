@@ -1,10 +1,21 @@
 {
-    "logs": [],
-    "cityVisits": [],
-    "cityCounts": {},
-    "tCalls": {},
-    "tClicks": {},
-    "totalCalls": 0,
-    "totalVisits": 0,
-    "totalWaClicks": 0
+  "logs": [],
+  "cityVisits": [
+    {
+      "time": "20.08.2026 14:37",
+      "city": "Aydin",
+      "country": "Türkiye",
+      "ip": "31.142.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    }
+  ],
+  "cityCounts": {
+    "Aydin": 1
+  },
+  "tCalls": {},
+  "tClicks": {},
+  "totalCalls": 0,
+  "totalVisits": 1,
+  "totalWaClicks": 0
 }
