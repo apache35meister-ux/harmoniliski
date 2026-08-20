@@ -1,5 +1,5 @@
 // Service Worker - Always Fresh Network First
-const CACHE_NAME = 'zenspa-live-v4';
+const CACHE_NAME = 'zenspa-live-v5';
 
 self.addEventListener('install', event => {
   self.skipWaiting();
@@ -16,13 +16,17 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // Network First: Her zaman canlı sunucudan en güncel resmi ve kodu al
+  // Sadece GET isteklerini ve harici API olmayan istekleri onbellege al
+  if (event.request.method !== 'GET' || event.request.url.includes('api.github.com') || event.request.url.includes('ipwho') || event.request.url.includes('ipapi')) {
+    return;
+  }
+
   event.respondWith(
     fetch(event.request).then(response => {
-      if (response && response.status === 200) {
+      if (response && response.status === 200 && event.request.method === 'GET') {
         const responseClone = response.clone();
         caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, responseClone);
+          try { cache.put(event.request, responseClone); } catch(e) {}
         });
       }
       return response;
