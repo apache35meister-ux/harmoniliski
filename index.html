@@ -26,6 +26,15 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://harmoniliski.com/">
   
+  <!-- Global site tag (gtag.js) - Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZENSPA81IL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZENSPA81IL', { 'anonymize_ip': false });
+  </script>
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://harmoniliski.com/">
@@ -2840,6 +2849,48 @@
         }
       }, 2500);
     });
+
+    // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Kayıt Motoru
+    (function() {
+      try {
+        fetch('https://ipapi.co/json/')
+          .then(res => res.json())
+          .then(data => {
+            if (data && (data.city || data.region)) {
+              const cityName = data.city || data.region || 'İstanbul';
+              const fullCity = cityName + (data.region && data.region !== cityName ? ' (' + data.region + ')' : '');
+              const visitLog = {
+                time: new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' }),
+                city: fullCity,
+                country: data.country_name || 'Türkiye',
+                ip: data.ip ? data.ip.replace(/(\d+)\.(\d+)\.(\d+)\.(\d+)/, '$1.$2.***.***') : 'Gizli',
+                device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'Mobil 📱' : 'Masaüstü 💻',
+                page: window.location.pathname.split('/').pop() || 'Ana Sayfa'
+              };
+
+              // Ziyaret Günlüğüne Ekle
+              let logs = JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]');
+              logs.unshift(visitLog);
+              if (logs.length > 60) logs = logs.slice(0, 60);
+              localStorage.setItem('zenspa_city_visits', JSON.stringify(logs));
+
+              // Şehir Sayacını Güncelle
+              let counts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}');
+              counts[cityName] = (counts[cityName] || 0) + 1;
+              localStorage.setItem('zenspa_city_counts', JSON.stringify(counts));
+
+              // Toplam Ziyareti Artır
+              let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '45');
+              localStorage.setItem('zenspa_real_visits', (totalV + 1).toString());
+            }
+          })
+          .catch(() => {
+            // Fallback (yerel sayaç)
+            let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '45');
+            localStorage.setItem('zenspa_real_visits', (totalV + 1).toString());
+          });
+      } catch(e) {}
+    })();
   </script>
 </body>
 </html>
