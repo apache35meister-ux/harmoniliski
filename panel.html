@@ -1053,21 +1053,21 @@
         <div class="kpi-card">
           <div>
             <h4>Toplam Ziyaret</h4>
-            <div class="number" id="cityTotalVisitsKPI" style="color:#4ADE80;">62</div>
+            <div class="number" id="cityTotalVisitsKPI" style="color:#4ADE80;">0</div>
           </div>
           <div class="kpi-icon">👥</div>
         </div>
         <div class="kpi-card">
           <div>
             <h4>Farklı Şehir Sayısı</h4>
-            <div class="number" id="cityUniqueCountKPI" style="color:#FBBF24;">7 İl</div>
+            <div class="number" id="cityUniqueCountKPI" style="color:#FBBF24;">0 İl</div>
           </div>
           <div class="kpi-icon">🗺️</div>
         </div>
         <div class="kpi-card">
           <div>
             <h4>En Çok Ziyaret Alan İl</h4>
-            <div class="number" id="cityTopCityKPI" style="font-size:1.3rem; color:#60A5FA;">İstanbul (38%)</div>
+            <div class="number" id="cityTopCityKPI" style="font-size:1.3rem; color:#60A5FA;">-</div>
           </div>
           <div class="kpi-icon">🏆</div>
         </div>
@@ -1510,12 +1510,14 @@
 
     async function getLiveAnalytics() {
       let stats = {
-        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '28'),
-        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '14'),
-        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '9'),
+        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0'),
+        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0'),
+        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0'),
         tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
         tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
-        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]')
+        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
+        cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
+        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}')
       };
 
       try {
@@ -1539,11 +1541,13 @@
             if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
               stats.callLogs = cloudStats.logs;
             }
-            if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits)) {
+            if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits) && cloudStats.cityVisits.length > 0) {
               stats.cityVisits = cloudStats.cityVisits;
             }
-            if (cloudStats.cityCounts) {
-              stats.cityCounts = cloudStats.cityCounts;
+            if (cloudStats.cityCounts && Object.keys(cloudStats.cityCounts).length > 0) {
+              for (let c in cloudStats.cityCounts) {
+                stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cloudStats.cityCounts[c]);
+              }
             }
           }
         }
@@ -1639,7 +1643,10 @@
         localStorage.setItem('zenspa_t_clicks', '{}');
         localStorage.setItem('zenspa_t_calls', '{}');
         localStorage.setItem('zenspa_live_call_logs', '[]');
+        localStorage.setItem('zenspa_city_visits', '[]');
+        localStorage.setItem('zenspa_city_counts', '{}');
         renderWaTable();
+        renderCityVisitorStats();
         alert("✓ İstatistikler sıfırlandı!");
       }
     }
@@ -1671,23 +1678,14 @@
 
     async function renderCityVisitorStats() {
       const stats = await getLiveAnalytics();
-      let cityVisits = JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]');
-      let cityCounts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}');
+      const cityVisits = stats.cityVisits || [];
+      const cityCounts = stats.cityCounts || {};
 
-      if (stats.cityVisits && stats.cityVisits.length > 0) {
-        cityVisits = stats.cityVisits;
-      }
-      if (stats.cityCounts && Object.keys(stats.cityCounts).length > 0) {
-        for (let c in stats.cityCounts) {
-          cityCounts[c] = Math.max(cityCounts[c] || 0, stats.cityCounts[c]);
-        }
-      }
-
-      let totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 62;
-      const uniqueCities = Object.keys(cityCounts).length || 7;
+      const totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 0;
+      const uniqueCities = Object.keys(cityCounts).length || 0;
       
       const sortedCities = Object.entries(cityCounts).sort((a, b) => b[1] - a[1]);
-      const topCity = sortedCities.length > 0 ? (sortedCities[0][0] + ' (%' + Math.round((sortedCities[0][1] / totalCityVisits) * 100) + ')') : 'İstanbul (%38)';
+      const topCity = (sortedCities.length > 0 && totalCityVisits > 0) ? (sortedCities[0][0] + ' (%' + Math.round((sortedCities[0][1] / totalCityVisits) * 100) + ')') : '-';
 
       const elTot = document.getElementById('cityTotalVisitsKPI');
       if (elTot) elTot.textContent = totalCityVisits;
@@ -1698,20 +1696,28 @@
 
       const progressContainer = document.getElementById('cityStatsProgressList');
       if (progressContainer) {
-        progressContainer.innerHTML = sortedCities.map(([city, count]) => {
-          const pct = Math.round((count / totalCityVisits) * 100);
-          return `
-            <div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.88rem; font-weight:700;">
-                <span style="color:#FFF;">📍 ${city}</span>
-                <span style="color:#FBBF24;">${count} Ziyaretçi (%${pct})</span>
+        if (sortedCities.length > 0 && totalCityVisits > 0) {
+          progressContainer.innerHTML = sortedCities.map(([city, count]) => {
+            const pct = Math.round((count / totalCityVisits) * 100);
+            return `
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.88rem; font-weight:700;">
+                  <span style="color:#FFF;">📍 ${city}</span>
+                  <span style="color:#FBBF24;">${count} Ziyaretçi (%${pct})</span>
+                </div>
+                <div style="width:100%; height:9px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;">
+                  <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #FFE895, #E6AF2E); border-radius:999px;"></div>
+                </div>
               </div>
-              <div style="width:100%; height:9px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;">
-                <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #FFE895, #E6AF2E); border-radius:999px;"></div>
-              </div>
+            `;
+          }).join('');
+        } else {
+          progressContainer.innerHTML = `
+            <div style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.88rem;">
+              Henüz il bazlı ziyaretçi verisi oluşmadı. Sitenize ziyaretçiler girdikçe iller otomatik sıralanacaktır.
             </div>
           `;
-        }).join('');
+        }
       }
 
       const tbody = document.getElementById('cityVisitsTableBody');
@@ -1731,7 +1737,7 @@
           tbody.innerHTML = `
             <tr>
               <td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">
-                Henüz ziyaret kaydı bekleniyor. Ziyaretçiler girdikçe burada şehirleriyle birlikte anlık belirecektir.
+                Henüz yeni bir ziyaretçi kaydı bekleniyor. Ziyaretçiler siteye girdikçe gerçek saat ve şehirleriyle burada listelenecektir.
               </td>
             </tr>
           `;
