@@ -2880,13 +2880,13 @@
               localStorage.setItem('zenspa_city_counts', JSON.stringify(counts));
 
               // Toplam Ziyareti Artır
-              let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '45');
+              let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '0');
               localStorage.setItem('zenspa_real_visits', (totalV + 1).toString());
             }
           })
           .catch(() => {
             // Fallback (yerel sayaç)
-            let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '45');
+            let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '0');
             localStorage.setItem('zenspa_real_visits', (totalV + 1).toString());
           });
       } catch(e) {}
