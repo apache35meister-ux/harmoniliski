@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "21.08.2026 07:06",
+      "city": "Frankfurt am Main (Hessen)",
+      "country": "Germany",
+      "ip": "84.200.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "21.08.2026 06:03",
       "city": "San Jose (California)",
       "country": "United States",
@@ -141,11 +149,12 @@
   "cityCounts": {
     "Izmir": 15,
     "Warsaw": 1,
-    "San Jose": 1
+    "San Jose": 1,
+    "Frankfurt am Main": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 17,
+  "totalVisits": 18,
   "totalWaClicks": 0
 }
