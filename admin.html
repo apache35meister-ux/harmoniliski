@@ -1146,14 +1146,35 @@
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
         
                 <!-- FOTOGRAF ALANI -->
-        <div style="margin-bottom: 1.25rem;">
-          <label style="display:block; font-size:0.82rem; color:var(--text-gray); margin-bottom:0.4rem; font-weight:700;">Terapist Fotoğrafı</label>
-          <div style="display:flex; gap:1rem; align-items:center; margin-bottom:0.75rem;">
-            <img id="previewPhoto" src="images/turkish_selin_photo_1786793658243.jpg" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid #FBBF24;">
-            <div style="flex:1;">
-              <input type="file" id="filePhoto" accept="image/*" class="form-control" onchange="handleFileUpload(event)">
-            </div>
+        <!-- ÇOKLU FOTOĞRAF & GALERİ ALANI -->
+        <div style="margin-bottom: 1.25rem; background: rgba(0,0,0,0.4); border: 1px dashed var(--border-gold); border-radius: var(--radius-md); padding: 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.6rem;">
+            <label style="font-size:0.85rem; color:#FFF; font-weight:800; display:flex; align-items:center; gap:6px;">
+              <span>📸 Terapist Fotoğraf Galerisi</span>
+              <span id="photoCountBadge" style="background:#FBBF24; color:#000; font-size:0.7rem; font-weight:900; padding:2px 8px; border-radius:999px;">0 Fotoğraf</span>
+            </label>
+            <span style="font-size:0.75rem; color:#A1A1AA;">Birden fazla fotoğraf yükleyebilirsiniz</span>
           </div>
+
+          <!-- Dosya Yükleme Butonu (Çoklu Seçim) -->
+          <div style="margin-bottom:0.75rem;">
+            <label style="display:inline-flex; align-items:center; gap:6px; background:#27272A; hover:background:#3F3F46; color:#FFF; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-sm); padding:0.5rem 1rem; font-size:0.82rem; font-weight:700; cursor:pointer; width:100%; justify-content:center;">
+              <span>📁 Cihazdan Çoklu Fotoğraf Seç</span>
+              <input type="file" id="filePhotosMulti" accept="image/*" multiple onchange="handleMultiFileUpload(event)" style="display:none;">
+            </label>
+          </div>
+
+          <!-- Veya URL İle Ekleme -->
+          <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+            <input type="text" id="photoUrlInput" class="form-control" placeholder="Fotoğraf URL'si (images/... veya https://...)" style="font-size:0.82rem; padding:0.45rem 0.75rem;">
+            <button type="button" onclick="addPhotoUrl()" style="background:#374151; color:#FFF; border:1px solid #4B5563; border-radius:var(--radius-sm); padding:0 0.9rem; font-size:0.78rem; font-weight:700; cursor:pointer; white-space:nowrap;">+ Ekle</button>
+          </div>
+
+          <!-- Fotoğraf Galerisi Önizleme Izgarası -->
+          <div id="photosPreviewGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(70px, 1fr)); gap:0.6rem; max-height:160px; overflow-y:auto; padding:4px;">
+            <!-- Dinamik Olarak JS ile Doldurulur -->
+          </div>
+          <div style="font-size:0.7rem; color:#71717A; margin-top:0.4rem;">💡 İlk sıradaki fotoğraf ana vitrin kapağı olarak kullanılır.</div>
         </div>
 
         <div class="form-row">
@@ -1779,17 +1800,81 @@
       }
     }
 
-    function handleFileUpload(e) {
-      const file = e.target.files[0];
-      if (file) {
+    let currentPhotos = ["images/turkish_merve_photo.jpg"];
+
+    function renderPhotosGrid() {
+      const grid = document.getElementById('photosPreviewGrid');
+      const countBadge = document.getElementById('photoCountBadge');
+      if (countBadge) {
+        countBadge.textContent = `${currentPhotos.length} Fotoğraf`;
+      }
+      if (!grid) return;
+
+      if (!currentPhotos || currentPhotos.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align:center; color:#71717A; padding:1rem; font-size:0.8rem;">
+            Henüz fotoğraf eklenmedi. Yukarıdaki butonlardan fotoğraf seçin.
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = currentPhotos.map((url, idx) => `
+        <div style="position:relative; width:70px; height:70px; border-radius:6px; overflow:hidden; border:2px solid ${idx === 0 ? '#FBBF24' : 'rgba(255,255,255,0.15)'}; background:#000;">
+          <img src="${url}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/turkish_merve_photo.jpg'">
+          ${idx === 0 ? '<span style="position:absolute; top:2px; left:2px; background:#FBBF24; color:#000; font-size:0.6rem; font-weight:900; padding:1px 4px; border-radius:3px;">KAPAK</span>' : `
+            <button type="button" onclick="setCoverPhoto(${idx})" title="Ana Kapak Fotoğrafı Yap" style="position:absolute; top:2px; left:2px; background:rgba(0,0,0,0.7); color:#FBBF24; border:none; border-radius:3px; font-size:0.65rem; cursor:pointer; padding:1px 4px;">👑</button>
+          `}
+          <button type="button" onclick="removePhoto(${idx})" title="Fotoğrafı Sil" style="position:absolute; top:2px; right:2px; background:rgba(239,68,68,0.85); color:#FFF; border:none; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:0.65rem; cursor:pointer;">✕</button>
+        </div>
+      `).join('');
+    }
+
+    function handleMultiFileUpload(e) {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+
+      let loadedCount = 0;
+      files.forEach(file => {
         const reader = new FileReader();
         reader.onload = function(evt) {
-          currentPhotoUrl = evt.target.result;
-          const p = document.getElementById('previewPhoto');
-          if (p) p.src = currentPhotoUrl;
+          currentPhotos.push(evt.target.result);
+          loadedCount++;
+          if (loadedCount === files.length) {
+            renderPhotosGrid();
+          }
         };
         reader.readAsDataURL(file);
+      });
+      e.target.value = "";
+    }
+
+    function addPhotoUrl() {
+      const inp = document.getElementById('photoUrlInput');
+      if (!inp) return;
+      const url = (inp.value || '').trim();
+      if (!url) {
+        alert("Lütfen geçerli bir fotoğraf bağlantısı girin.");
+        return;
       }
+      currentPhotos.push(url);
+      inp.value = "";
+      renderPhotosGrid();
+    }
+
+    function removePhoto(idx) {
+      if (currentPhotos.length <= 1) {
+        alert("Profilde en az 1 fotoğraf bulunmalıdır.");
+        return;
+      }
+      currentPhotos.splice(idx, 1);
+      renderPhotosGrid();
+    }
+
+    function setCoverPhoto(idx) {
+      const selected = currentPhotos.splice(idx, 1)[0];
+      currentPhotos.unshift(selected);
+      renderPhotosGrid();
     }
 
     function openAddModal() {
@@ -1812,9 +1897,9 @@
         `;
       }
 
-      currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
-      const p = document.getElementById('previewPhoto');
-      if (p) p.src = currentPhotoUrl;
+      currentPhotos = ["images/turkish_merve_photo.jpg"];
+      renderPhotosGrid();
+
       const modal = document.getElementById('addTherapistModal');
       if (modal) {
         modal.style.display = 'flex';
@@ -1858,9 +1943,14 @@
         `;
       }
 
-      currentPhotoUrl = item.img || item.image || "images/turkish_selin_photo_1786793658243.jpg";
-      const p = document.getElementById('previewPhoto');
-      if (p) p.src = currentPhotoUrl;
+      if (Array.isArray(item.images) && item.images.length > 0) {
+        currentPhotos = [...item.images];
+      } else if (Array.isArray(item.photos) && item.photos.length > 0) {
+        currentPhotos = [...item.photos];
+      } else {
+        currentPhotos = [item.img || item.image || "images/turkish_merve_photo.jpg"];
+      }
+      renderPhotosGrid();
 
       const modal = document.getElementById('addTherapistModal');
       if (modal) {
@@ -1884,6 +1974,9 @@
       const editId = document.getElementById('editTherapistId').value;
       const durationVal = document.getElementById('tDuration').value;
 
+      const primaryPhoto = currentPhotos[0] || "images/turkish_merve_photo.jpg";
+      const allPhotos = currentPhotos.length > 0 ? currentPhotos : [primaryPhoto];
+
       if (editId) {
         const idx = list.findIndex(t => t.id == editId);
         if (idx !== -1) {
@@ -1895,8 +1988,10 @@
           list[idx].price = document.getElementById('tPrice').value;
           list[idx].wa = cleanWa;
           list[idx].whatsapp = cleanWa;
-          list[idx].img = currentPhotoUrl;
-          list[idx].image = currentPhotoUrl;
+          list[idx].img = primaryPhoto;
+          list[idx].image = primaryPhoto;
+          list[idx].images = allPhotos;
+          list[idx].photos = allPhotos;
 
           // Süre yönetimi
           if (durationVal !== 'keep') {
@@ -1911,7 +2006,7 @@
           checkAndAutoExpire();
           renderTable(list);
           closeAddModal();
-          alert("✓ Terapist profili başarıyla güncellendi!");
+          alert("✓ Terapist profili ve " + allPhotos.length + " fotoğraflı galeri başarıyla güncellendi!");
           return;
         }
       }
@@ -1935,8 +2030,10 @@
         expiresAt: expiresAt,
         wa: cleanWa,
         whatsapp: cleanWa,
-        img: currentPhotoUrl,
-        image: currentPhotoUrl,
+        img: primaryPhoto,
+        image: primaryPhoto,
+        images: allPhotos,
+        photos: allPhotos,
         clicks: 1,
         rating: "⭐ 5.0",
         reviews: 12
@@ -1947,7 +2044,7 @@
       checkAndAutoExpire();
       renderTable(list);
       closeAddModal();
-      alert("✓ Terapist başarıyla eklendi ve ilan süresi başlatıldı!");
+      alert("✓ Terapist " + allPhotos.length + " fotoğrafla başarıyla eklendi ve vitrin süresi başlatıldı!");
     }
 
     function clearDemoProfiles() {
