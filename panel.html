@@ -1315,22 +1315,51 @@
       return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
     }
 
+    function checkAndAutoExpire() {
+      let modified = false;
+      const now = Date.now();
+      (list || []).forEach(t => {
+        // Eğer expiresAt hiç yoksa 30 günlük başlangıç süresi ver
+        if (!t.expiresAt) {
+          t.expiresAt = now + (30 * 24 * 60 * 60 * 1000);
+          modified = true;
+        }
+
+        // Süresi bitmişse ve halen aktifse otomatik pasife al!
+        if (t.expiresAt && now >= t.expiresAt) {
+          if (t.active !== false) {
+            t.active = false;
+            modified = true;
+          }
+        }
+      });
+      if (modified) {
+        saveToStorage();
+      }
+    }
+
     function getExpiryBadge(t) {
-      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.78rem;">Süresiz</span>';
+      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.8rem; font-weight:700;">♾️ Süresiz</span>';
       const diffMs = t.expiresAt - Date.now();
-      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-      if (diffDays <= 0) {
-        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu</span>';
-      } else if (diffDays <= 3) {
-        return '<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ ' + diffDays + ' Gün Kaldı</span>';
+      if (diffMs <= 0) {
+        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu (Otomatik Pasif)</span>';
+      }
+      
+      const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+      const days = Math.floor(totalHours / 24);
+      const hours = totalHours % 24;
+
+      if (days === 0) {
+        return `<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">⏱️ Son ${hours} Saat</span>`;
+      } else if (days <= 3) {
+        return `<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ Son ${days} Gün (${hours}s)</span>`;
       } else {
-        return '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ' + diffDays + ' Gün Kaldı</span>';
+        return `<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ${days} Gün Kaldı</span>`;
       }
     }
 
     async function initAdminData() {
       loadSettings();
-      renderTable(list);
       
       const local = localStorage.getItem('zenspa_therapists');
       if (local) {
@@ -1338,7 +1367,6 @@
           const parsed = JSON.parse(local);
           if (Array.isArray(parsed) && parsed.length > 0) {
             list = parsed;
-            renderTable(list);
           }
         } catch(e) {}
       }
@@ -1350,10 +1378,12 @@
           if (Array.isArray(cloudList) && cloudList.length > 0) {
             list = cloudList;
             localStorage.setItem('zenspa_therapists', JSON.stringify(list));
-            renderTable(list);
           }
         }
       } catch(e) {}
+
+      checkAndAutoExpire();
+      renderTable(list);
     }
 
     async function pushTherapistsToGitHub(currentList) {
@@ -1769,6 +1799,17 @@
       if (btnSub) btnSub.textContent = "✓ Terapisti Kaydet ve Yayına Al";
       const form = document.getElementById('addTherapistForm');
       if (form) form.reset();
+
+      const durationSelect = document.getElementById('tDuration');
+      if (durationSelect) {
+        durationSelect.innerHTML = `
+          <option value="30" selected>1 Aylık VIP (30 Gün)</option>
+          <option value="7">1 Haftalık Vitrin (7 Gün)</option>
+          <option value="90">3 Aylık Platinum (90 Gün)</option>
+          <option value="365">1 Yıllık / Süresiz</option>
+        `;
+      }
+
       currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
       const p = document.getElementById('previewPhoto');
       if (p) p.src = currentPhotoUrl;
@@ -1798,6 +1839,23 @@
       document.getElementById('tPrice').value = item.price || '60 Dk: 2.000 ₺';
       document.getElementById('tWhatsapp').value = item.whatsapp || item.wa || '';
       
+      const durationSelect = document.getElementById('tDuration');
+      if (durationSelect) {
+        let remainingText = "30 Gün Kaldı";
+        if (item.expiresAt) {
+          const diffMs = item.expiresAt - Date.now();
+          const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+          remainingText = days > 0 ? `${days} Gün Kaldı` : 'Süresi Bitti (Pasif)';
+        }
+        durationSelect.innerHTML = `
+          <option value="keep" selected>⏱️ Mevcut Süreyi Koru (${remainingText})</option>
+          <option value="30">🔄 +30 Gün Yenile / Uzat (1 Ay)</option>
+          <option value="7">🔄 +7 Gün Uzat (1 Hafta)</option>
+          <option value="90">🔄 +90 Gün Uzat (3 Ay)</option>
+          <option value="365">🔄 +365 Gün (1 Yıl)</option>
+        `;
+      }
+
       currentPhotoUrl = item.img || item.image || "images/turkish_selin_photo_1786793658243.jpg";
       const p = document.getElementById('previewPhoto');
       if (p) p.src = currentPhotoUrl;
@@ -1822,8 +1880,7 @@
       const rawWa = document.getElementById('tWhatsapp').value;
       const cleanWa = formatPhone(rawWa);
       const editId = document.getElementById('editTherapistId').value;
-      const durationDays = parseInt(document.getElementById('tDuration').value) || 30;
-      const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+      const durationVal = document.getElementById('tDuration').value;
 
       if (editId) {
         const idx = list.findIndex(t => t.id == editId);
@@ -1838,15 +1895,27 @@
           list[idx].whatsapp = cleanWa;
           list[idx].img = currentPhotoUrl;
           list[idx].image = currentPhotoUrl;
-          list[idx].expiresAt = expiresAt;
+
+          // Süre yönetimi
+          if (durationVal !== 'keep') {
+            const durationDays = parseInt(durationVal) || 30;
+            list[idx].expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+            list[idx].active = true; // Süre uzatıldığında otomatik tekrar aktif et!
+          } else if (!list[idx].expiresAt) {
+            list[idx].expiresAt = Date.now() + (30 * 24 * 60 * 60 * 1000);
+          }
           
           saveToStorage();
+          checkAndAutoExpire();
           renderTable(list);
           closeAddModal();
           alert("✓ Terapist profili başarıyla güncellendi!");
           return;
         }
       }
+
+      const durationDays = parseInt(durationVal) || 30;
+      const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
 
       const newT = {
         id: Date.now(),
@@ -1873,9 +1942,10 @@
       
       list.unshift(newT);
       saveToStorage();
+      checkAndAutoExpire();
       renderTable(list);
       closeAddModal();
-      alert("✓ Terapist başarıyla eklendi ve tüm cihazlar için kalıcı olarak yayınlandı!");
+      alert("✓ Terapist başarıyla eklendi ve ilan süresi başlatıldı!");
     }
 
     function clearDemoProfiles() {
