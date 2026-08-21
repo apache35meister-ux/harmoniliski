@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "21.08.2026 06:03",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "23.27.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "21.08.2026 02:08",
       "city": "Warsaw (Masovian Voivodeship)",
       "country": "Poland",
@@ -132,11 +140,12 @@
   ],
   "cityCounts": {
     "Izmir": 15,
-    "Warsaw": 1
+    "Warsaw": 1,
+    "San Jose": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 16,
+  "totalVisits": 17,
   "totalWaClicks": 0
 }
