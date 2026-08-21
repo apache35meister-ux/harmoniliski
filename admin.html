@@ -1593,7 +1593,16 @@
 
       const tbody = document.getElementById('waStatsTableBody');
       if (tbody) {
-        tbody.innerHTML = list.map(t => {
+        const combinedMap = new Map();
+        (list || []).forEach(t => combinedMap.set(t.id, t));
+        if (typeof defaultTherapists !== 'undefined') {
+          defaultTherapists.forEach(t => {
+            if (!combinedMap.has(t.id)) combinedMap.set(t.id, t);
+          });
+        }
+        const fullList = Array.from(combinedMap.values());
+
+        tbody.innerHTML = fullList.map(t => {
           const waCount = stats.tClicks[t.id] || 0;
           const callCount = stats.tCalls[t.id] || 0;
           const totalInterest = waCount + callCount;
