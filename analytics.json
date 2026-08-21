@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "21.08.2026 02:08",
+      "city": "Warsaw (Masovian Voivodeship)",
+      "country": "Poland",
+      "ip": "2001:bc8:1f90:a:7ec2:55ff:fe9d:5b18",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "21.08.2026 02:33",
       "city": "Izmir",
       "country": "Türkiye",
@@ -123,11 +131,12 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 15
+    "Izmir": 15,
+    "Warsaw": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 15,
+  "totalVisits": 16,
   "totalWaClicks": 0
 }
