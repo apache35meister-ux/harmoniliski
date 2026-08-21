@@ -2669,7 +2669,30 @@
       localStorage.setItem('zenspa_real_visits', visits.toString());
     }
 
-        // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
+    // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
+    function decodeGitHubBase64(base64Str) {
+      try {
+        const clean = (base64Str || '').replace(/\s/g, '');
+        const binary = atob(clean);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+          bytes[i] = binary.charCodeAt(i);
+        }
+        return new TextDecoder('utf-8').decode(bytes);
+      } catch(e) {
+        return "{}";
+      }
+    }
+
+    function encodeGitHubBase64(str) {
+      const utf8Bytes = new TextEncoder().encode(str);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) {
+        binary += String.fromCharCode(utf8Bytes[i]);
+      }
+      return btoa(binary);
+    }
+
     async function syncClickToCloud(tId, tName, city, actionType) {
       try {
         const p1 = "ghp_";
@@ -2687,7 +2710,8 @@
         const fileData = await res.json();
         if (!fileData || !fileData.content) return;
 
-        const currentJson = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+        const decoded = decodeGitHubBase64(fileData.content);
+        const currentJson = JSON.parse(decoded || '{}');
         
         if (actionType.includes('WhatsApp')) {
           currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
@@ -2709,12 +2733,7 @@
         if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
 
         const newStr = JSON.stringify(currentJson, null, 2);
-        const utf8Bytes = new TextEncoder().encode(newStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) {
-          binary += String.fromCharCode(utf8Bytes[i]);
-        }
-        const base64Content = btoa(binary);
+        const base64Content = encodeGitHubBase64(newStr);
 
         await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
           method: 'PUT',
@@ -2735,6 +2754,18 @@
     }
 
     function trackWaAction(tId, tName, city) {
+      let name = tName;
+      let c = city;
+      if (!name || !c) {
+        const t = (therapists || []).find(item => item.id == tId);
+        if (t) {
+          name = name || t.name;
+          c = c || t.city;
+        }
+      }
+      name = name || 'VIP Terapist';
+      c = c || 'Türkiye';
+
       let totalWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0');
       totalWa++;
       localStorage.setItem('zenspa_real_wa_clicks', totalWa.toString());
@@ -2743,11 +2774,23 @@
       tClicks[tId] = (tClicks[tId] || 0) + 1;
       localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
 
-      addLogEntry(tName, city, '💬 WhatsApp Randevu Talebi');
-      syncClickToCloud(tId, tName, city, '💬 WhatsApp Randevu Talebi');
+      addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
+      syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
     }
 
     function trackCallAction(tId, tName, city) {
+      let name = tName;
+      let c = city;
+      if (!name || !c) {
+        const t = (therapists || []).find(item => item.id == tId);
+        if (t) {
+          name = name || t.name;
+          c = c || t.city;
+        }
+      }
+      name = name || 'VIP Terapist';
+      c = c || 'Türkiye';
+
       let totalCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '0');
       totalCalls++;
       localStorage.setItem('zenspa_real_calls', totalCalls.toString());
@@ -2756,8 +2799,8 @@
       tCalls[tId] = (tCalls[tId] || 0) + 1;
       localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
 
-      addLogEntry(tName, city, '📞 Doğrudan Telefon Araması');
-      syncClickToCloud(tId, tName, city, '📞 Doğrudan Telefon Araması');
+      addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
+      syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
     }
 
     function trackAdClick() {
