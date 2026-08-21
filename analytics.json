@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "21.08.2026 18:33",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "205.169.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "21.08.2026 18:36",
       "city": "Izmir",
       "country": "Türkiye",
@@ -42,13 +50,14 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 4
+    "Izmir": 4,
+    "San Jose": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 1
 }
