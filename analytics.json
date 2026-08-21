@@ -27,6 +27,14 @@
   ],
   "cityVisits": [
     {
+      "time": "21.08.2026 17:14",
+      "city": "Washington (District of Columbia)",
+      "country": "United States",
+      "ip": "64.15.***.***",
+      "device": "Mobil 📱",
+      "page": "index.html"
+    },
+    {
       "time": "22.08.2026 00:14",
       "city": "Izmir",
       "country": "Türkiye",
@@ -77,7 +85,8 @@
   ],
   "cityCounts": {
     "Izmir": 5,
-    "Manavgat": 1
+    "Manavgat": 1,
+    "Washington": 1
   },
   "tCalls": {},
   "tClicks": {
@@ -87,6 +96,6 @@
     "1787133440430": 1
   },
   "totalCalls": 0,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 4
 }
