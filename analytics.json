@@ -21,6 +21,14 @@
   ],
   "cityVisits": [
     {
+      "time": "21.08.2026 22:46",
+      "city": "Manavgat (Antalya)",
+      "country": "Türkiye",
+      "ip": "5.27.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "21.08.2026 22:44",
       "city": "Izmir",
       "country": "Türkiye",
@@ -38,7 +46,8 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 2
+    "Izmir": 2,
+    "Manavgat": 1
   },
   "tCalls": {},
   "tClicks": {
@@ -47,6 +56,6 @@
     "1787133029944": 1
   },
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 3
 }
