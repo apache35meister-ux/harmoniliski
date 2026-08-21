@@ -2042,17 +2042,38 @@
   </div>
 
   <!-- HD Fotoğraf & Profil İnceleme Lightbox Modalı -->
+  <!-- HD Fotoğraf & Profil İnceleme Lightbox Modalı (Çoklu Fotoğraf Slider & Galeri Destekli) -->
   <div class="modal-overlay" id="photoViewerModal" onclick="handlePhotoModalBackdrop(event)">
     <div class="modal-box" style="max-width: 640px; padding: 0; overflow: hidden; background: #0C0C0F; border: 1px solid var(--border-gold-bright); box-shadow: 0 30px 80px rgba(0,0,0,0.95), var(--gold-glow);">
-      <button class="modal-close" onclick="closePhotoModal()" style="z-index: 10; top: 14px; right: 14px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; width: 38px; height: 38px; font-size: 1.2rem;">✕</button>
+      <button class="modal-close" onclick="closePhotoModal()" style="z-index: 15; top: 14px; right: 14px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; width: 38px; height: 38px; font-size: 1.2rem;">✕</button>
       
-      <div style="position: relative; width: 100%; height: 420px; background: #000; overflow: hidden;">
-        <img id="pvImg" src="" alt="Terapist Fotoğrafı" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+      <div style="position: relative; width: 100%; height: 420px; background: #000; overflow: hidden;" id="pvImageWrapper">
+        <img id="pvImg" src="" alt="Terapist Fotoğrafı" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: opacity 0.25s ease;">
         <div style="position: absolute; inset: 0; background: linear-gradient(to top, #0C0C0F 0%, rgba(12, 12, 15, 0.1) 60%, transparent 100%); pointer-events: none;"></div>
+        
+        <!-- Badges -->
         <div style="position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; z-index: 5;">
           <span class="badge-vip-top" style="position: static; font-size: 0.8rem; padding: 6px 14px;">👑 VIP PROFİL</span>
           <span class="badge-live-available" style="position: static; font-size: 0.8rem; padding: 6px 14px;"><span class="pulse-dot-green"></span> Şu An Müsait</span>
         </div>
+
+        <!-- Slider Sayaç Rozeti -->
+        <div id="pvCounterBadge" style="position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,0.8); border: 1px solid var(--border-gold); color: #FDE047; font-size: 0.78rem; font-weight: 900; padding: 4px 12px; border-radius: 999px; z-index: 5; display: none;">
+          📷 1 / 1
+        </div>
+
+        <!-- Slider Ok Butonları (Önceki / Sonraki) -->
+        <button id="pvPrevBtn" onclick="prevModalPhoto(event)" style="display: none; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.65); hover:background: rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.3); color: #FFF; width: 42px; height: 42px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; z-index: 10; align-items: center; justify-content: center;">
+          ❮
+        </button>
+        <button id="pvNextBtn" onclick="nextModalPhoto(event)" style="display: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.65); hover:background: rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.3); color: #FFF; width: 42px; height: 42px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; z-index: 10; align-items: center; justify-content: center;">
+          ❯
+        </button>
+      </div>
+
+      <!-- Küçük Fotoğraf Galerisi Şeridi (Thumbnails Strip) -->
+      <div id="pvThumbnailsStrip" style="display: none; padding: 0.6rem 1.25rem 0; gap: 0.5rem; overflow-x: auto; background: #0C0C0F; border-bottom: 1px solid rgba(255,255,255,0.06);">
+        <!-- JS ile Doldurulur -->
       </div>
 
       <div style="padding: 1.5rem 1.75rem 2rem;">
@@ -2604,7 +2625,7 @@
 
         return `
           <article class="card-therapist" data-id="${t.id}" itemscope itemtype="https://schema.org/Person">
-            <div class="card-image-wrap" data-id="${t.id}" onclick="openPhotoModal(${t.id})" title="Fotoğrafı Büyüt ve Profili İncele">
+            <div class="card-image-wrap" data-id="${t.id}" onclick="openPhotoModal(${t.id})" title="Fotoğrafları ve Profili İncele">
               <img src="${t.img || t.image}" alt="${t.name} - ${t.city} Masöz Terapist" itemprop="image" class="card-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80';">
               <div class="card-vignette"></div>
               
@@ -2615,10 +2636,16 @@
                 <span>Şu An Müsait</span>
               </div>
 
-              <!-- Fotoğrafı Büyüt İpucu -->
-              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; font-size: 0.72rem; font-weight: 700; padding: 4px 9px; border-radius: 999px; display: flex; align-items: center; gap: 4px; z-index: 3;">
-                <span>🔍 Fotoğrafı Büyüt</span>
-              </div>
+              ${((t.images && t.images.length > 1) || (t.photos && t.photos.length > 1)) ? `
+                <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.85); border: 1px solid var(--border-gold); color: #FDE047; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 999px; display: flex; align-items: center; gap: 4px; z-index: 4;">
+                  <span>📸</span> <span>${(t.images || t.photos).length} Fotoğraf</span>
+                </div>
+              ` : `
+                <!-- Fotoğrafı Büyüt İpucu -->
+                <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; font-size: 0.72rem; font-weight: 700; padding: 4px 9px; border-radius: 999px; display: flex; align-items: center; gap: 4px; z-index: 3;">
+                  <span>🔍 Fotoğrafı Büyüt</span>
+                </div>
+              `}
 
               <div class="badge-photo-bottom" style="left: 12px; bottom: 12px; right: auto;">
                 <span class="photo-loc-tag">📍 ${sanitize(t.city)}</span>
@@ -2742,7 +2769,74 @@
       if (e.target.id === 'vitrinModal') closeVitrinModal();
     });
 
-    // --- HD FOTOĞRAF & PROFİL LIGHTBOX MODAL MOTORU ---
+    // --- HD ÇOKLU FOTOĞRAF & GALERİ SLIDER MODAL MOTORU ---
+    let activeModalPhotos = [];
+    let activePhotoIndex = 0;
+
+    function updateModalPhotoDisplay() {
+      const img = document.getElementById('pvImg');
+      const counter = document.getElementById('pvCounterBadge');
+      const prevBtn = document.getElementById('pvPrevBtn');
+      const nextBtn = document.getElementById('pvNextBtn');
+      const strip = document.getElementById('pvThumbnailsStrip');
+
+      if (!activeModalPhotos || activeModalPhotos.length === 0) return;
+
+      const currentSrc = activeModalPhotos[activePhotoIndex];
+      if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+          img.src = currentSrc;
+          img.style.opacity = '1';
+        }, 150);
+      }
+
+      const totalPhotos = activeModalPhotos.length;
+      if (totalPhotos > 1) {
+        if (counter) {
+          counter.style.display = 'block';
+          counter.textContent = `📷 ${activePhotoIndex + 1} / ${totalPhotos}`;
+        }
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+        
+        if (strip) {
+          strip.style.display = 'flex';
+          strip.innerHTML = activeModalPhotos.map((p, idx) => `
+            <div onclick="selectModalPhoto(${idx})" style="width:54px; height:54px; flex-shrink:0; border-radius:6px; overflow:hidden; cursor:pointer; border:2px solid ${idx === activePhotoIndex ? '#FBBF24' : 'rgba(255,255,255,0.15)'}; opacity:${idx === activePhotoIndex ? '1' : '0.6'}; transition:all 0.2s;">
+              <img src="${p}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/turkish_merve_photo.jpg'">
+            </div>
+          `).join('');
+        }
+      } else {
+        if (counter) counter.style.display = 'none';
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (strip) strip.style.display = 'none';
+      }
+    }
+
+    function prevModalPhoto(e) {
+      if (e) e.stopPropagation();
+      if (activeModalPhotos.length <= 1) return;
+      activePhotoIndex = (activePhotoIndex - 1 + activeModalPhotos.length) % activeModalPhotos.length;
+      updateModalPhotoDisplay();
+    }
+
+    function nextModalPhoto(e) {
+      if (e) e.stopPropagation();
+      if (activeModalPhotos.length <= 1) return;
+      activePhotoIndex = (activePhotoIndex + 1) % activeModalPhotos.length;
+      updateModalPhotoDisplay();
+    }
+
+    function selectModalPhoto(idx) {
+      if (idx >= 0 && idx < activeModalPhotos.length) {
+        activePhotoIndex = idx;
+        updateModalPhotoDisplay();
+      }
+    }
+
     function openPhotoModal(id) {
       let t = (therapists || []).find(item => item.id == id);
       if (!t && typeof defaultTherapists !== 'undefined') {
@@ -2751,7 +2845,6 @@
       if (!t) return;
 
       const modal = document.getElementById('photoViewerModal');
-      const img = document.getElementById('pvImg');
       const name = document.getElementById('pvName');
       const loc = document.getElementById('pvLocation');
       const price = document.getElementById('pvPrice');
@@ -2761,10 +2854,16 @@
       const waBtn = document.getElementById('pvWaBtn');
       const callBtn = document.getElementById('pvCallBtn');
 
-      if (img) {
-        img.src = t.img || t.image;
-        img.alt = `${t.name} - ${t.city} Masöz`;
+      if (Array.isArray(t.images) && t.images.length > 0) {
+        activeModalPhotos = [...t.images];
+      } else if (Array.isArray(t.photos) && t.photos.length > 0) {
+        activeModalPhotos = [...t.photos];
+      } else {
+        activeModalPhotos = [t.img || t.image || "images/turkish_merve_photo.jpg"];
       }
+      activePhotoIndex = 0;
+      updateModalPhotoDisplay();
+
       if (name) name.textContent = `${t.name} (${t.age} Yaş)`;
       if (loc) loc.textContent = `📍 ${t.city}${t.district ? ', ' + t.district : ''}`;
       if (price) price.textContent = t.price || '60 Dk: 2.000 ₺';
@@ -2776,7 +2875,7 @@
         tags.innerHTML = tagList.map(tag => `<span class="card-tag" style="background:#181822; border:1px solid rgba(255,255,255,0.15); color:#FDE047; font-weight:700;">${sanitize(tag)}</span>`).join('');
       }
 
-      const waLink = getWaLink(t.wa || t.whatsapp, `Merhaba ${t.name}, profilinizi detaylı inceledim. Masaj seansı için randevu almak istiyorum.`);
+      const waLink = getWaLink(t.wa || t.whatsapp, `Merhaba ${t.name}, profilinizi ve fotoğraflarınızı detaylı inceledim. Masaj seansı için randevu almak istiyorum.`);
       const telNum = formatPhone(t.wa || t.whatsapp);
 
       if (waBtn) {
@@ -2810,12 +2909,43 @@
       }
     }
 
+    // Klavye ile Fotoğraf Kaydırma (Sol / Sağ Ok Tuşları)
     document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('photoViewerModal');
+      const isModalOpen = modal && (modal.classList.contains('active') || modal.style.display === 'flex');
+
       if (e.key === 'Escape') {
         closePhotoModal();
         closeVitrinModal();
+      } else if (isModalOpen && e.key === 'ArrowRight') {
+        nextModalPhoto();
+      } else if (isModalOpen && e.key === 'ArrowLeft') {
+        prevModalPhoto();
       }
     });
+
+    // Mobil Cihazlar İçin Dokunmatik Kaydırma (Touch Swipe Support)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const imgWrapper = document.getElementById('pvImageWrapper');
+    if (imgWrapper) {
+      imgWrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      imgWrapper.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+          nextModalPhoto(); // Sola kaydırınca sonraki fotoğraf
+        } else if (touchEndX - touchStartX > 50) {
+          prevModalPhoto(); // Sağa kaydırınca önceki fotoğraf
+        }
+      }, { passive: true });
+    }
+
+    window.prevModalPhoto = prevModalPhoto;
+    window.nextModalPhoto = nextModalPhoto;
+    window.selectModalPhoto = selectModalPhoto;
 
     // Global Click Delegation (Tüm cihazlar ve dinamik kartlar için)
     document.addEventListener('click', (e) => {
