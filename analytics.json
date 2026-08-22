@@ -27,6 +27,14 @@
   ],
   "cityVisits": [
     {
+      "time": "23.08.2026 00:05",
+      "city": "Zurich (Kanton Zurich)",
+      "country": "Switzerland",
+      "ip": "79.127.***.***",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "22.08.2026 19:28",
       "city": "Izmir",
       "country": "Türkiye",
@@ -278,7 +286,8 @@
     "Cincinnati": 1,
     "San Jose": 1,
     "Elizabeth": 1,
-    "Paris": 2
+    "Paris": 2,
+    "Zurich": 1
   },
   "tCalls": {},
   "tClicks": {
@@ -288,6 +297,6 @@
     "1787133440430": 1
   },
   "totalCalls": 0,
-  "totalVisits": 30,
+  "totalVisits": 31,
   "totalWaClicks": 4
 }
