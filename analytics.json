@@ -33,6 +33,14 @@
   ],
   "cityVisits": [
     {
+      "time": "23.08.2026 19:07",
+      "city": "Washington (District of Columbia)",
+      "country": "United States",
+      "ip": "202.8.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "22.08.2026 17:00",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -412,7 +420,7 @@
   "cityCounts": {
     "Izmir": 16,
     "Manavgat": 1,
-    "Washington": 3,
+    "Washington": 4,
     "İstanbul": 4,
     "Kane": 2,
     "Warsaw": 1,
@@ -437,6 +445,6 @@
     "1787433267678": 1
   },
   "totalCalls": 0,
-  "totalVisits": 47,
+  "totalVisits": 48,
   "totalWaClicks": 5
 }
