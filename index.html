@@ -1754,6 +1754,13 @@
           </div>
 
           <div class="filter-item">
+            <label>📍 İLÇE / SEMT</label>
+            <select class="filter-select" id="districtSelect" onchange="filterTherapists()">
+              <option value="all">Tüm İlçeler & Semtler</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
             <label>💆 MASAJ TÜRÜ</label>
             <select class="filter-select" id="serviceSelect" onchange="filterTherapists()">
               <option value="all">Tüm Masaj Çeşitleri</option>
@@ -1777,7 +1784,7 @@
 
           <div class="filter-item">
             <label>🔍 ARAMA</label>
-            <input type="text" class="filter-input" id="searchInput" placeholder="İsim, semt veya masaj türü..." onkeyup="filterTherapists()">
+            <input type="text" class="filter-input" id="searchInput" placeholder="İsim, ilçe, semt veya masaj..." onkeyup="filterTherapists()">
           </div>
         </div>
 
@@ -1788,6 +1795,34 @@
           <button class="pill-btn" onclick="setServicePill('Medikal', this)">🩺 Medikal Terapi</button>
           <button class="pill-btn" onclick="setServicePill('Spor', this)">⚡ Spor Masajı</button>
           <button class="pill-btn" onclick="setServicePill('Sıcak Taş', this)">🔥 Sıcak Taş</button>
+        </div>
+
+        <!-- Popüler İlçe ve Semtler Hızlı Erişim Şeridi -->
+        <div style="margin-top: 1.1rem; padding-top: 0.85rem; border-top: 1px solid rgba(255,255,255,0.07);">
+          <div style="font-size: 0.76rem; color: var(--gold-text); font-weight: 800; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 6px;">
+            <span>📍 Popüler Semtler & İlçeler:</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+            <button class="pill-btn" onclick="filterDistrict('Kadıköy', 'İstanbul')">Kadıköy</button>
+            <button class="pill-btn" onclick="filterDistrict('Nişantaşı', 'İstanbul')">Nişantaşı</button>
+            <button class="pill-btn" onclick="filterDistrict('Beşiktaş', 'İstanbul')">Beşiktaş</button>
+            <button class="pill-btn" onclick="filterDistrict('Bakırköy', 'İstanbul')">Bakırköy</button>
+            <button class="pill-btn" onclick="filterDistrict('Beylikdüzü', 'İstanbul')">Beylikdüzü</button>
+            <button class="pill-btn" onclick="filterDistrict('Çankaya', 'Ankara')">Çankaya</button>
+            <button class="pill-btn" onclick="filterDistrict('Kızılay', 'Ankara')">Kızılay</button>
+            <button class="pill-btn" onclick="filterDistrict('Alsancak', 'İzmir')">Alsancak</button>
+            <button class="pill-btn" onclick="filterDistrict('Karşıyaka', 'İzmir')">Karşıyaka</button>
+            <button class="pill-btn" onclick="filterDistrict('Bornova', 'İzmir')">Bornova</button>
+            <button class="pill-btn" onclick="filterDistrict('Lara', 'Antalya')">Lara</button>
+            <button class="pill-btn" onclick="filterDistrict('Alanya', 'Antalya')">Alanya</button>
+            <button class="pill-btn" onclick="filterDistrict('Bodrum', 'Muğla')">Bodrum</button>
+            <button class="pill-btn" onclick="filterDistrict('Çeşme', 'İzmir')">Çeşme</button>
+            <button class="pill-btn" onclick="filterDistrict('Marmaris', 'Muğla')">Marmaris</button>
+            <button class="pill-btn" onclick="filterDistrict('Fethiye', 'Muğla')">Fethiye</button>
+            <button class="pill-btn" onclick="filterDistrict('Nilüfer', 'Bursa')">Nilüfer</button>
+            <button class="pill-btn" onclick="filterDistrict('İzmit', 'Kocaeli')">İzmit</button>
+            <button class="pill-btn" onclick="filterDistrict('Seyhan', 'Adana')">Seyhan</button>
+          </div>
         </div>
       </div>
 
@@ -2588,24 +2623,33 @@
       });
       const container = document.getElementById('therapistsContainer');
       const countDisplay = document.getElementById('countDisplay');
-      const selectedCity = document.getElementById('citySelect').value;
+      const selectedCity = document.getElementById('citySelect')?.value || 'all';
+      const selectedDistrict = document.getElementById('districtSelect')?.value || 'all';
       
-      // AKILLI VİTRİN KANCASI (Boş Şehirlerde Terapist Çeken Altın Kart)
+      // AKILLI VİTRİN KANCASI (Boş Şehirlerde & İlçelerde Terapist Çeken Altın Kart)
       if (!list || list.length === 0) {
-        const cityName = selectedCity !== 'all' ? selectedCity : 'Türkiye Geneli';
-        const waAdText = encodeURIComponent(`Merhaba, ${cityName} şehri için ZENSPA platformuna ilk VIP vitrin ilanını vermek istiyorum.`);
+        let locationLabel = 'Türkiye Geneli';
+        if (selectedCity !== 'all' && selectedDistrict !== 'all') {
+          locationLabel = `${selectedCity} / ${selectedDistrict}`;
+        } else if (selectedCity !== 'all') {
+          locationLabel = selectedCity;
+        } else if (selectedDistrict !== 'all') {
+          locationLabel = selectedDistrict;
+        }
+
+        const waAdText = encodeURIComponent(`Merhaba, ${locationLabel} bölgesi için ZENSPA platformuna ilk VIP vitrin ilanını vermek istiyorum.`);
         const waAdUrl = `https://api.whatsapp.com/send/?phone=15096204167&text=${waAdText}`;
 
         container.innerHTML = `
           <div class="empty-state-magnet">
             <div class="empty-state-icon">👑</div>
-            <h4 class="empty-state-title">${cityName.toUpperCase()} VIP VİTRİNİ HENÜZ BOŞ!</h4>
+            <h4 class="empty-state-title">${locationLabel.toUpperCase()} VIP VİTRİNİ HENÜZ BOŞ!</h4>
             <p class="empty-state-desc">
-              <strong>${cityName}</strong> bölgesinde hizmet veren masör veya masöz müsünüz? Şehrinizin <strong>1 numaralı VIP vitrininde</strong> yerinizi hemen ayırtın, bölgenizdeki tüm randevu talepleri doğrudan sizin WhatsApp'ınıza gelsin.
+              <strong>${locationLabel}</strong> bölgesinde hizmet veren masör veya masöz müsünüz? Bölgenizin <strong>1 numaralı VIP vitrininde</strong> yerinizi hemen ayırtın, bu bölgedeki tüm randevu talepleri doğrudan sizin WhatsApp'ınıza gelsin.
             </p>
             <div class="empty-state-actions">
               <a href="${waAdUrl}" target="_blank" class="btn-vip-banner-cta" style="font-size: 1.05rem; padding: 1.1rem 2.2rem;">
-                💬 ${cityName} İçin İlk İlanı Sen Ver (+1 509 620 4167)
+                💬 ${locationLabel} İçin İlk İlanı Sen Ver (+1 509 620 4167)
               </a>
               <button onclick="resetFilters()" style="background: #1C1C22; color: #FFF; border: 1px solid var(--border-gold); font-weight: 700; padding: 0.9rem 1.8rem; border-radius: var(--radius-full);">
                 Tüm İlleri Görüntüle
@@ -2707,21 +2751,93 @@
       }
     }
 
+    const cityDistricts = {
+      "İstanbul": ["Kadıköy", "Şişli", "Nişantaşı", "Beşiktaş", "Levent", "Bakırköy", "Florya", "Beylikdüzü", "Ataşehir", "Üsküdar", "Maltepe", "Kartal", "Pendik", "Sarıyer", "Fatih", "Beyoğlu", "Taksim", "Esenyurt", "Başakşehir", "Avcılar", "Tuzla", "Zeytinburnu", "Büyükçekmece", "Bahçelievler", "Kağıthane"],
+      "Ankara": ["Çankaya", "Kızılay", "Tunalı", "Eryaman", "Batıkent", "Keçiören", "Yenimahalle", "Etimesgut", "Mamak", "Gölbaşı", "Altındağ", "Sincan", "Pursaklar"],
+      "İzmir": ["Alsancak", "Konak", "Karşıyaka", "Bornova", "Buca", "Çiğli", "Bayraklı", "Balçova", "Gaziemir", "Çeşme", "Alaçatı", "Urla", "Karabağlar", "Menemen", "Torbalı", "Narlıdere", "Güzelbahçe", "Seferihisar", "Foça"],
+      "Antalya": ["Muratpaşa", "Lara", "Konyaaltı", "Kepez", "Alanya", "Manavgat", "Side", "Kemer", "Kaş", "Kalkan", "Serik", "Belek", "Döşemealtı", "Kumluca"],
+      "Bursa": ["Nilüfer", "FSM", "Osmangazi", "Yıldırım", "Mudanya", "Gemlik", "İnegöl", "Gürsu", "Kestel"],
+      "Muğla": ["Bodrum", "Yalıkavak", "Türkbükü", "Gümbet", "Bitez", "Marmaris", "İçmeler", "Fethiye", "Ölüdeniz", "Datça", "Milas", "Ortaca", "Dalyan", "Köyceğiz", "Menteşe"],
+      "Adana": ["Seyhan", "Ziyapaşa", "Çukurova", "Yüreğir", "Sarıçam", "Ceyhan", "Kozan"],
+      "Kocaeli": ["İzmit", "Gebze", "Başiskele", "Kartepe", "Gölcük", "Darıca", "Körfez", "Karamürsel", "Derince", "Çayırova"],
+      "Eskişehir": ["Tepebaşı", "Bağlar", "Odunpazarı"],
+      "Gaziantep": ["Şehitkamil", "İbrahimli", "Şahinbey", "Oğuzeli"],
+      "Mersin": ["Yenişehir", "Mezitli", "Toroslar", "Akdeniz", "Erdemli", "Tarsus", "Silifke", "Anamur"],
+      "Konya": ["Selçuklu", "Meram", "Karatay", "Ereğli", "Akşehir"],
+      "Samsun": ["Atakum", "İlkadım", "Canik", "Tekkeköy", "Bafra", "Çarşamba"],
+      "Trabzon": ["Ortahisar", "Akçaabat", "Yomra", "Of", "Araklı"],
+      "Balıkesir": ["Altıeylül", "Karesi", "Edremit", "Akçay", "Ayvalık", "Cunda", "Bandırma", "Burhaniye", "Erdek", "Gönen"],
+      "Aydın": ["Efeler", "Kuşadası", "Didim", "Nazilli", "Söke", "Germencik"],
+      "Tekirdağ": ["Süleymanpaşa", "Çorlu", "Çerkezköy", "Kapaklı", "Ergene"],
+      "Sakarya": ["Adapazarı", "Serdivan", "Sapanca", "Erenler", "Akyazı", "Hendek", "Karasu"],
+      "Denizli": ["Pamukkale", "Merkezefendi"],
+      "Hatay": ["Antakya", "İskenderun", "Defne", "Dörtyol", "Samandağ"],
+      "Kayseri": ["Melikgazi", "Kocasinan", "Talas"],
+      "Diyarbakır": ["Kayapınar", "Bağlar", "Yenişehir", "Sur"],
+      "Manisa": ["Yunusemre", "Şehzadeler", "Akhisar", "Turgutlu", "Salihli", "Soma"],
+      "Çanakkale": ["Merkez", "Biga", "Gelibolu", "Ayvacık", "Bozcaada", "Gökçeada"],
+      "Yalova": ["Merkez", "Çınarcık", "Altınova", "Armutlu", "Termal"]
+    };
+
+    function updateDistrictOptions(cityName, selectDistrict) {
+      const distSelect = document.getElementById('districtSelect');
+      if (!distSelect) return;
+
+      distSelect.innerHTML = '<option value="all">Tüm İlçeler & Semtler</option>';
+
+      if (cityName && cityName !== 'all' && cityDistricts[cityName]) {
+        cityDistricts[cityName].forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (selectDistrict && selectDistrict.toLowerCase() === d.toLowerCase()) {
+            opt.selected = true;
+          }
+          distSelect.appendChild(opt);
+        });
+      } else if (!cityName || cityName === 'all') {
+        const allPopular = ["Kadıköy", "Şişli", "Nişantaşı", "Beşiktaş", "Bakırköy", "Beylikdüzü", "Çankaya", "Kızılay", "Alsancak", "Karşıyaka", "Bornova", "Lara", "Alanya", "Bodrum", "Çeşme", "Marmaris", "Fethiye", "Nilüfer", "İzmit", "Seyhan"];
+        allPopular.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (selectDistrict && selectDistrict.toLowerCase() === d.toLowerCase()) {
+            opt.selected = true;
+          }
+          distSelect.appendChild(opt);
+        });
+      }
+    }
+
     function filterTherapists() {
-      const city = document.getElementById('citySelect').value;
+      const citySelectEl = document.getElementById('citySelect');
+      const city = citySelectEl ? citySelectEl.value : 'all';
+      const districtSelectEl = document.getElementById('districtSelect');
+      const district = districtSelectEl ? districtSelectEl.value : 'all';
       const service = document.getElementById('serviceSelect').value;
       const gender = document.getElementById('genderSelect').value;
       const search = document.getElementById('searchInput').value.toLowerCase().trim();
 
       const filtered = therapists.filter(t => {
         if (city !== 'all' && t.city !== city) return false;
+        
+        if (district !== 'all') {
+          const tDist = (t.district || '').toLowerCase();
+          const tTags = (t.tags || []).join(' ').toLowerCase();
+          const tBio = (t.bio || '').toLowerCase();
+          const targetDist = district.toLowerCase();
+          if (!tDist.includes(targetDist) && !tTags.includes(targetDist) && !tBio.includes(targetDist)) {
+            return false;
+          }
+        }
+
         if (gender !== 'all' && t.gender !== gender) return false;
         if (service !== 'all' && (!t.services || !t.services.includes(service))) return false;
         if (activeServicePill !== 'all' && (!t.services || !t.services.includes(activeServicePill))) return false;
 
         if (search) {
           const tagsStr = t.tags ? t.tags.join(' ') : '';
-          const combined = (t.name + ' ' + t.city + ' ' + t.district + ' ' + (t.bio || '') + ' ' + tagsStr).toLowerCase();
+          const combined = (t.name + ' ' + t.city + ' ' + (t.district || '') + ' ' + (t.bio || '') + ' ' + tagsStr).toLowerCase();
           if (!combined.includes(search)) return false;
         }
 
@@ -2739,7 +2855,27 @@
     }
 
     function filterCity(cityName) {
-      document.getElementById('citySelect').value = cityName;
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect) {
+        citySelect.value = cityName;
+        updateDistrictOptions(cityName);
+      }
+      filterTherapists();
+      window.scrollTo({ top: 450, behavior: 'smooth' });
+    }
+
+    function filterDistrict(districtName, cityName) {
+      const citySelect = document.getElementById('citySelect');
+      if (cityName && citySelect) {
+        citySelect.value = cityName;
+        updateDistrictOptions(cityName, districtName);
+      } else {
+        updateDistrictOptions('all', districtName);
+      }
+      const distSelect = document.getElementById('districtSelect');
+      if (distSelect) {
+        distSelect.value = districtName;
+      }
       filterTherapists();
       window.scrollTo({ top: 450, behavior: 'smooth' });
     }
@@ -2751,7 +2887,10 @@
     }
 
     function resetFilters() {
-      document.getElementById('citySelect').value = 'all';
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect) citySelect.value = 'all';
+      updateDistrictOptions('all');
+      document.getElementById('districtSelect').value = 'all';
       document.getElementById('serviceSelect').value = 'all';
       document.getElementById('genderSelect').value = 'all';
       document.getElementById('searchInput').value = '';
@@ -2761,6 +2900,11 @@
       });
       renderTherapists(therapists);
     }
+
+    // Şehir değiştiğinde ilçeleri dinamik güncelle
+    document.getElementById('citySelect')?.addEventListener('change', function() {
+      updateDistrictOptions(this.value);
+    });
 
     function openVitrinModal() { document.getElementById('vitrinModal').classList.add('active'); }
     function closeVitrinModal() { document.getElementById('vitrinModal').classList.remove('active'); }
@@ -2959,6 +3103,36 @@
     window.openPhotoModal = openPhotoModal;
     window.closePhotoModal = closePhotoModal;
     window.handlePhotoModalBackdrop = handlePhotoModalBackdrop;
+
+    function checkUrlCityFilter() {
+      const params = new URLSearchParams(window.location.search);
+      const city = params.get('city');
+      const district = params.get('district');
+      if (city) {
+        const citySelect = document.getElementById('citySelect');
+        if (citySelect) {
+          Array.from(citySelect.options).forEach(opt => {
+            if (opt.value.toLowerCase() === city.toLowerCase()) {
+              citySelect.value = opt.value;
+              updateDistrictOptions(opt.value);
+            }
+          });
+        }
+      }
+      if (district) {
+        const distSelect = document.getElementById('districtSelect');
+        if (distSelect) {
+          Array.from(distSelect.options).forEach(opt => {
+            if (opt.value.toLowerCase() === district.toLowerCase()) {
+              distSelect.value = opt.value;
+            }
+          });
+        }
+      }
+      if (city || district) {
+        filterTherapists();
+      }
+    }
 
     async function applySavedSettings() {
       let savedTitle = localStorage.getItem('zenspa_site_title');
