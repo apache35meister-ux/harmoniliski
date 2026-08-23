@@ -2338,11 +2338,38 @@
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 ZENSPA VIP 81 İl Terapi Platformu. Tüm Hakları Saklıdır. Google SEO & Multi-City Network.</p>
+      <div class="footer-bottom" style="display:flex; flex-direction:column; gap:0.75rem; align-items:center; justify-content:center;">
+        <div style="display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:center; font-size:0.8rem; color:#A1A1AA;">
+          <a href="#" onclick="openPolicyModal('privacy'); return false;" style="color:#A1A1AA; text-decoration:none;">🔒 Gizlilik Politikası & KVKK</a>
+          <span>•</span>
+          <a href="#" onclick="openPolicyModal('terms'); return false;" style="color:#A1A1AA; text-decoration:none;">📜 Kullanım Koşulları</a>
+          <span>•</span>
+          <a href="#" onclick="openPolicyModal('cookies'); return false;" style="color:#A1A1AA; text-decoration:none;">🍪 Çerez Politikası</a>
+          <span>•</span>
+          <a href="#" onclick="openPolicyModal('disclaimer'); return false;" style="color:#A1A1AA; text-decoration:none;">🛡️ Yasal Sorumluluk Reddi</a>
+        </div>
+        <p style="margin:0; font-size:0.78rem; color:#71717A;">
+          © 2026 ZENSPA VIP 81 İl Masaj & Terapi Kataloğu. Yalnızca 18 yaş ve üzeri yetişkinlere yönelik bağımsız terapist rehberidir.
+        </p>
       </div>
     </div>
   </footer>
+
+  <!-- Google Ads & KVKK Uyumlu Yasal Politika Modalı -->
+  <div class="modal-overlay" id="policyModal" onclick="if(event.target.id==='policyModal') closePolicyModal()">
+    <div class="modal-box" style="max-width: 620px; max-height: 85vh; overflow-y: auto; background: #0C0C0F; border: 1px solid var(--border-gold); padding: 2rem;">
+      <button class="modal-close" onclick="closePolicyModal()" style="top: 14px; right: 14px; color: #FFF; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); width:34px; height:34px;">✕</button>
+      <h3 id="policyModalTitle" style="color: var(--gold-text); font-family: var(--font-heading); margin-bottom: 1rem; font-size: 1.3rem;">-</h3>
+      <div id="policyModalContent" style="color: #D4D4D8; font-size: 0.88rem; line-height: 1.7;">
+        <!-- JS ile doldurulur -->
+      </div>
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <button onclick="closePolicyModal()" style="background: var(--gold-gradient); color: #000; font-weight: 800; border: none; padding: 0.65rem 1.8rem; border-radius: var(--radius-full); cursor: pointer;">
+          Anladım & Kapat
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- App Data & Scripts -->
   <script>
@@ -3129,6 +3156,65 @@
     window.openPhotoModal = openPhotoModal;
     window.closePhotoModal = closePhotoModal;
     window.handlePhotoModalBackdrop = handlePhotoModalBackdrop;
+
+    const policyData = {
+      privacy: {
+        title: "🔒 Gizlilik Politikası & KVKK Aydınlatma Metni",
+        content: `
+          <p><strong>1. Veri Sorumlusu:</strong> ZENSPA VIP Platformu (harmoniliski.com), kullanıcılarının ve ziyaretçilerinin kişisel verilerinin güvenliğine en üst düzeyde önem verir.</p>
+          <p><strong>2. Toplanan Veriler:</strong> Sitemizi ziyaret ettiğinizde IP adresiniz, cihaz türünüz ve şehir bilginiz yalnızca anonim istatistiki analiz amacıyla işlenir. Kişisel hassas verileriniz üçüncü taraflarla paylaşılmaz veya satılmaz.</p>
+          <p><strong>3. İletişim Güvenliği:</strong> Terapistlerle kurulan WhatsApp ve telefon iletişimleri uçtan uca şifreli olup, platformumuz bu mesajlaşmaları kaydetmez veya dinlemez.</p>
+          <p><strong>4. KVKK Haklarınız:</strong> 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında dilediğiniz zaman verilerinizin silinmesini talep edebilirsiniz.</p>
+        `
+      },
+      terms: {
+        title: "📜 Kullanım Koşulları & Hizmet Şartları",
+        content: `
+          <p><strong>1. Hizmet Niteliği:</strong> ZENSPA, Türkiye genelinde 81 ilde hizmet veren bağımsız ve sertifikalı masör ve masözlerin tanıtımını sağlayan bir rehber kataloğudur.</p>
+          <p><strong>2. Yaş Sınırı:</strong> Sitemiz yalnızca 18 yaşını doldurmuş yetişkin bireylerin kullanımına açıktır.</p>
+          <p><strong>3. Hizmet Kapsamı:</strong> Sitemizde yer alan tüm terapistler klasik masaj, aromaterapi, medikal masaj ve spa terapisi gibi yasal ve profesyonel rahatlama hizmetleri sunmaktadır.</p>
+          <p><strong>4. Randevu ve Anlaşmalar:</strong> Müşteri ile terapist arasındaki randevu, seans saati ve ücret mutabakatı doğrudan taraflar arasında gerçekleşir.</p>
+        `
+      },
+      cookies: {
+        title: "🍪 Çerez (Cookie) Politikası",
+        content: `
+          <p><strong>1. Çerez Kullanımı:</strong> Sitemizde en iyi kullanıcı deneyimini sunmak, şehir tercihlerinizi hatırlamak ve sayfa yükleme hızını artırmak amacıyla zorunlu ve işlevsel çerezler kullanılmaktadır.</p>
+          <p><strong>2. Çerezleri Yönetme:</strong> Tarayıcınızın ayarlarından çerezleri dilediğiniz zaman silebilir veya engelleyebilirsiniz.</p>
+        `
+      },
+      disclaimer: {
+        title: "🛡️ Yasal Sorumluluk Reddi & Bildirim",
+        content: `
+          <p><strong>1. Bağımsız İlan Verenler:</strong> Sitede yer alan profil bilgileri, görseller ve iletişim numaraları ilan veren bağımsız terapistlerin kendi beyanlarıdır.</p>
+          <p><strong>2. Yasal Uygunluk:</strong> Platformumuz yalnızca profesyonel masaj, spa ve terapi hizmetlerinin listelenmesine izin verir. Yasalara aykırı içerik tespit edildiğinde anında yayından kaldırılır.</p>
+          <p><strong>3. İletişim:</strong> Her türlü telif, bildirim veya destek talebiniz için 7/24 WhatsApp destek hattımızdan bize ulaşabilirsiniz.</p>
+        `
+      }
+    };
+
+    function openPolicyModal(type) {
+      const p = policyData[type];
+      if (!p) return;
+      document.getElementById('policyModalTitle').textContent = p.title;
+      document.getElementById('policyModalContent').innerHTML = p.content;
+      const m = document.getElementById('policyModal');
+      if (m) {
+        m.classList.add('active');
+        m.style.display = 'flex';
+      }
+    }
+
+    function closePolicyModal() {
+      const m = document.getElementById('policyModal');
+      if (m) {
+        m.classList.remove('active');
+        m.style.display = 'none';
+      }
+    }
+
+    window.openPolicyModal = openPolicyModal;
+    window.closePolicyModal = closePolicyModal;
 
     function checkUrlCityFilter() {
       const params = new URLSearchParams(window.location.search);
