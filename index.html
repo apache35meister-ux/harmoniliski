@@ -114,7 +114,94 @@
   }
   </script>
 
-      <!-- 4. Google FAQPage Rich Snippet Schema (Google Arama Sonuclarinda Buyuk Alan Kaplama) -->
+  <!-- 5. Google Organization & Knowledge Graph Schema (Resmi Marka Tescili & Otorite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ZENSPA VIP",
+    "legalName": "ZENSPA 81 İl Terapi & Masaj Rehberi",
+    "url": "https://harmoniliski.com/",
+    "logo": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+    "description": "Türkiye'nin 81 ilinde profesyonel ve sertifikalı masöz ve terapist kataloğu.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+15096204167",
+      "contactType": "customer service",
+      "availableLanguage": ["Turkish", "English"]
+    },
+    "sameAs": [
+      "https://harmoniliski.com/"
+    ]
+  }
+  </script>
+
+  <!-- 6. Google Voice Search (Sesli Arama & Google Asistan) Speakable Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "ZENSPA 81 İl VIP Masöz & Terapist Rehberi",
+    "url": "https://harmoniliski.com/",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-title", ".hero-subtitle", ".section-head-bar", ".empty-state-title"]
+    }
+  }
+  </script>
+
+  <!-- 7. Google OfferCatalog & Masaj Hizmetleri Hizmet Listesi Şeması -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "ZENSPA VIP Terapi Hizmetleri",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Klasik İsveç Masajı",
+          "description": "Tüm vücut kas gevşetici ve rahatlatıcı geleneksel İsveç masaj terapisi."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Aromaterapi Relax Masajı",
+          "description": "Bitkisel esansiyel yağlarla uygulanan zihinsel ve bedensel arınma seansı."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Medikal & Derin Doku Terapisi",
+          "description": "Boyun, bel, sırt tutulmaları ve kronik kas ağrılarına yönelik uzman anatomik terapi."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sıcak Taş Terapisi",
+          "description": "Volkanik bazalt taşlarının derin ısısıyla kan dolaşımını canlandıran lüks masaj seansı."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Geleneksel Thai Masajı",
+          "description": "Pasif yoga esnetmeleri ve akupresür baskı teknikleriyle enerji dengeleyici masaj."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 4. Google FAQPage Rich Snippet Schema (Google Arama Sonuclarinda Buyuk Alan Kaplama) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2250,37 +2337,76 @@
         </div>
       </div>
 
-      <!-- Şehir & Semt Hızlı Bağlantı Grid'i -->
-      <div style="border-top: 1px solid var(--border-subtle); padding-top: 2rem; margin-bottom: 2rem;">
-        <h4 style="color: var(--gold-text); font-size: 1rem; font-weight: 800; margin-bottom: 1rem; text-align: center;">
-          📍 Şehirlere ve Popüler Semtlere Göre Hızlı Terapist Filtreleri:
+      <!-- 81 İl ve İlçe Kapsamlı Bölgesel SEO Otorite Ağları (Google 1. Sıra Hub) -->
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 2.5rem; margin-bottom: 2rem;">
+        <h4 style="color: var(--gold-text); font-size: 1.15rem; font-weight: 800; margin-bottom: 1.5rem; text-align: center;">
+          📍 Türkiye Geneli 81 İl ve Popüler İlçelerde Hızlı Terapist Filtreleri:
         </h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.55rem; justify-content: center;">
-          <a href="./?city=istanbul" onclick="filterCity('İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">İstanbul Masöz & Masaj</a>
-          <a href="./?city=istanbul&district=kadikoy" onclick="filterDistrict('Kadıköy', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">İstanbul Kadıköy Masaj</a>
-          <a href="./?city=istanbul&district=sisli" onclick="filterDistrict('Şişli', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Şişli & Nişantaşı Masöz</a>
-          <a href="./?city=istanbul&district=besiktas" onclick="filterDistrict('Beşiktaş', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Beşiktaş Masaj</a>
-          <a href="./?city=ankara" onclick="filterCity('Ankara'); return false;" class="pill-btn" style="text-decoration:none;">Ankara VIP Masaj</a>
-          <a href="./?city=ankara&district=cankaya" onclick="filterDistrict('Çankaya', 'Ankara'); return false;" class="pill-btn" style="text-decoration:none;">Ankara Çankaya Masaj</a>
-          <a href="./?city=izmir" onclick="filterCity('İzmir'); return false;" class="pill-btn" style="text-decoration:none;">İzmir Masaj Terapistleri</a>
-          <a href="./?city=izmir&district=alsancak" onclick="filterDistrict('Alsancak', 'İzmir'); return false;" class="pill-btn" style="text-decoration:none;">İzmir Alsancak Masöz</a>
-          <a href="./?city=antalya" onclick="filterCity('Antalya'); return false;" class="pill-btn" style="text-decoration:none;">Antalya & Lara Masaj</a>
-          <a href="./?city=antalya&district=alanya" onclick="filterDistrict('Alanya', 'Antalya'); return false;" class="pill-btn" style="text-decoration:none;">Alanya Masaj Hizmeti</a>
-          <a href="./?city=bursa" onclick="filterCity('Bursa'); return false;" class="pill-btn" style="text-decoration:none;">Bursa Masöz Rehberi</a>
-          <a href="./?city=bursa&district=nilufer" onclick="filterDistrict('Nilüfer', 'Bursa'); return false;" class="pill-btn" style="text-decoration:none;">Bursa Nilüfer Terapi</a>
-          <a href="./?city=adana" onclick="filterCity('Adana'); return false;" class="pill-btn" style="text-decoration:none;">Adana VIP Terapi</a>
-          <a href="./?city=mugla" onclick="filterCity('Muğla'); return false;" class="pill-btn" style="text-decoration:none;">Muğla & Bodrum Masaj</a>
-          <a href="./?city=mugla&district=bodrum" onclick="filterDistrict('Bodrum', 'Muğla'); return false;" class="pill-btn" style="text-decoration:none;">Bodrum VIP Masöz</a>
-          <a href="./?city=kocaeli" onclick="filterCity('Kocaeli'); return false;" class="pill-btn" style="text-decoration:none;">Kocaeli / İzmit</a>
-          <a href="./?city=eskisehir" onclick="filterCity('Eskişehir'); return false;" class="pill-btn" style="text-decoration:none;">Eskişehir Masaj</a>
-          <a href="./?city=gaziantep" onclick="filterCity('Gaziantep'); return false;" class="pill-btn" style="text-decoration:none;">Gaziantep Terapi</a>
-          <a href="./?city=konya" onclick="filterCity('Konya'); return false;" class="pill-btn" style="text-decoration:none;">Konya Masaj</a>
-          <a href="./?city=mersin" onclick="filterCity('Mersin'); return false;" class="pill-btn" style="text-decoration:none;">Mersin Masaj</a>
-          <a href="./?city=samsun" onclick="filterCity('Samsun'); return false;" class="pill-btn" style="text-decoration:none;">Samsun Terapi</a>
-          <a href="./?city=trabzon" onclick="filterCity('Trabzon'); return false;" class="pill-btn" style="text-decoration:none;">Trabzon Masaj</a>
-          <a href="./?city=denizli" onclick="filterCity('Denizli'); return false;" class="pill-btn" style="text-decoration:none;">Denizli Terapi</a>
-          <a href="./?city=aydin" onclick="filterCity('Aydın'); return false;" class="pill-btn" style="text-decoration:none;">Aydın & Kuşadası</a>
-          <a href="./?city=tekirdag" onclick="filterCity('Tekirdağ'); return false;" class="pill-btn" style="text-decoration:none;">Tekirdağ / Çorlu</a>
+
+        <!-- 1. Marmara Bölgesi Hub -->
+        <div style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 12px; padding: 1.25rem;">
+          <h5 style="color: #60A5FA; font-size: 0.92rem; font-weight: 800; margin-bottom: 0.75rem;">🏢 Marmara Bölgesi Masöz & Terapist Rehberi:</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+            <a href="./?city=istanbul" onclick="filterCity('İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">İstanbul Masaj</a>
+            <a href="./?city=istanbul&district=kadikoy" onclick="filterDistrict('Kadıköy', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Kadıköy Masöz</a>
+            <a href="./?city=istanbul&district=sisli" onclick="filterDistrict('Şişli', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Şişli Masaj</a>
+            <a href="./?city=istanbul&district=nisantasi" onclick="filterDistrict('Nişantaşı', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Nişantaşı Terapi</a>
+            <a href="./?city=istanbul&district=besiktas" onclick="filterDistrict('Beşiktaş', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Beşiktaş Masöz</a>
+            <a href="./?city=istanbul&district=bakirkoy" onclick="filterDistrict('Bakırköy', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Bakırköy Masaj</a>
+            <a href="./?city=istanbul&district=beylikduzu" onclick="filterDistrict('Beylikdüzü', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Beylikdüzü Masöz</a>
+            <a href="./?city=istanbul&district=atasehir" onclick="filterDistrict('Ataşehir', 'İstanbul'); return false;" class="pill-btn" style="text-decoration:none;">Ataşehir Masaj</a>
+            <a href="./?city=bursa" onclick="filterCity('Bursa'); return false;" class="pill-btn" style="text-decoration:none;">Bursa Masöz</a>
+            <a href="./?city=bursa&district=nilufer" onclick="filterDistrict('Nilüfer', 'Bursa'); return false;" class="pill-btn" style="text-decoration:none;">Bursa Nilüfer Terapi</a>
+            <a href="./?city=kocaeli" onclick="filterCity('Kocaeli'); return false;" class="pill-btn" style="text-decoration:none;">Kocaeli / İzmit Masaj</a>
+            <a href="./?city=kocaeli&district=gebze" onclick="filterDistrict('Gebze', 'Kocaeli'); return false;" class="pill-btn" style="text-decoration:none;">Gebze Masöz</a>
+            <a href="./?city=tekirdag" onclick="filterCity('Tekirdağ'); return false;" class="pill-btn" style="text-decoration:none;">Tekirdağ / Çorlu</a>
+            <a href="./?city=balikesir" onclick="filterCity('Balıkesir'); return false;" class="pill-btn" style="text-decoration:none;">Balıkesir / Ayvalık</a>
+            <a href="./?city=sakarya" onclick="filterCity('Sakarya'); return false;" class="pill-btn" style="text-decoration:none;">Sakarya / Sapanca</a>
+            <a href="./?city=canakkale" onclick="filterCity('Çanakkale'); return false;" class="pill-btn" style="text-decoration:none;">Çanakkale Masaj</a>
+            <a href="./?city=yalova" onclick="filterCity('Yalova'); return false;" class="pill-btn" style="text-decoration:none;">Yalova Termal Terapi</a>
+          </div>
+        </div>
+
+        <!-- 2. Ege Bölgesi Hub -->
+        <div style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 12px; padding: 1.25rem;">
+          <h5 style="color: #34D399; font-size: 0.92rem; font-weight: 800; margin-bottom: 0.75rem;">🌿 Ege Bölgesi Masaj & Spa Katalogu:</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+            <a href="./?city=izmir" onclick="filterCity('İzmir'); return false;" class="pill-btn" style="text-decoration:none;">İzmir Masaj Terapistleri</a>
+            <a href="./?city=izmir&district=alsancak" onclick="filterDistrict('Alsancak', 'İzmir'); return false;" class="pill-btn" style="text-decoration:none;">İzmir Alsancak Masöz</a>
+            <a href="./?city=izmir&district=karsiyaka" onclick="filterDistrict('Karşıyaka', 'İzmir'); return false;" class="pill-btn" style="text-decoration:none;">Karşıyaka Masaj</a>
+            <a href="./?city=izmir&district=bornova" onclick="filterDistrict('Bornova', 'İzmir'); return false;" class="pill-btn" style="text-decoration:none;">Bornova Terapist</a>
+            <a href="./?city=izmir&district=cesme" onclick="filterDistrict('Çeşme', 'İzmir'); return false;" class="pill-btn" style="text-decoration:none;">Çeşme & Alaçatı VIP Masaj</a>
+            <a href="./?city=mugla" onclick="filterCity('Muğla'); return false;" class="pill-btn" style="text-decoration:none;">Muğla Masaj</a>
+            <a href="./?city=mugla&district=bodrum" onclick="filterDistrict('Bodrum', 'Muğla'); return false;" class="pill-btn" style="text-decoration:none;">Bodrum VIP Masöz</a>
+            <a href="./?city=mugla&district=marmaris" onclick="filterDistrict('Marmaris', 'Muğla'); return false;" class="pill-btn" style="text-decoration:none;">Marmaris Terapi</a>
+            <a href="./?city=mugla&district=fethiye" onclick="filterDistrict('Fethiye', 'Muğla'); return false;" class="pill-btn" style="text-decoration:none;">Fethiye Masaj</a>
+            <a href="./?city=aydin" onclick="filterCity('Aydın'); return false;" class="pill-btn" style="text-decoration:none;">Aydın & Kuşadası</a>
+            <a href="./?city=manisa" onclick="filterCity('Manisa'); return false;" class="pill-btn" style="text-decoration:none;">Manisa Masaj</a>
+            <a href="./?city=denizli" onclick="filterCity('Denizli'); return false;" class="pill-btn" style="text-decoration:none;">Denizli Terapi</a>
+          </div>
+        </div>
+
+        <!-- 3. Akdeniz & İç Anadolu & Diğer İller Hub -->
+        <div style="background: rgba(255,255,255,0.02); border-radius: 12px; padding: 1.25rem;">
+          <h5 style="color: #FBBF24; font-size: 0.92rem; font-weight: 800; margin-bottom: 0.75rem;">☀️ Akdeniz, İç Anadolu ve Diğer 81 İl:</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+            <a href="./?city=ankara" onclick="filterCity('Ankara'); return false;" class="pill-btn" style="text-decoration:none;">Ankara VIP Masaj</a>
+            <a href="./?city=ankara&district=cankaya" onclick="filterDistrict('Çankaya', 'Ankara'); return false;" class="pill-btn" style="text-decoration:none;">Ankara Çankaya Masaj</a>
+            <a href="./?city=ankara&district=kizilay" onclick="filterDistrict('Kızılay', 'Ankara'); return false;" class="pill-btn" style="text-decoration:none;">Kızılay Masöz</a>
+            <a href="./?city=antalya" onclick="filterCity('Antalya'); return false;" class="pill-btn" style="text-decoration:none;">Antalya Masaj</a>
+            <a href="./?city=antalya&district=lara" onclick="filterDistrict('Lara', 'Antalya'); return false;" class="pill-btn" style="text-decoration:none;">Antalya Lara Masöz</a>
+            <a href="./?city=antalya&district=alanya" onclick="filterDistrict('Alanya', 'Antalya'); return false;" class="pill-btn" style="text-decoration:none;">Alanya Masaj</a>
+            <a href="./?city=adana" onclick="filterCity('Adana'); return false;" class="pill-btn" style="text-decoration:none;">Adana VIP Terapi</a>
+            <a href="./?city=mersin" onclick="filterCity('Mersin'); return false;" class="pill-btn" style="text-decoration:none;">Mersin Masaj</a>
+            <a href="./?city=eskisehir" onclick="filterCity('Eskişehir'); return false;" class="pill-btn" style="text-decoration:none;">Eskişehir Masaj</a>
+            <a href="./?city=gaziantep" onclick="filterCity('Gaziantep'); return false;" class="pill-btn" style="text-decoration:none;">Gaziantep Terapi</a>
+            <a href="./?city=konya" onclick="filterCity('Konya'); return false;" class="pill-btn" style="text-decoration:none;">Konya Masaj</a>
+            <a href="./?city=samsun" onclick="filterCity('Samsun'); return false;" class="pill-btn" style="text-decoration:none;">Samsun Terapi</a>
+            <a href="./?city=trabzon" onclick="filterCity('Trabzon'); return false;" class="pill-btn" style="text-decoration:none;">Trabzon Masaj</a>
+            <a href="./?city=kayseri" onclick="filterCity('Kayseri'); return false;" class="pill-btn" style="text-decoration:none;">Kayseri Masaj</a>
+            <a href="./?city=diyarbakir" onclick="filterCity('Diyarbakır'); return false;" class="pill-btn" style="text-decoration:none;">Diyarbakır Terapi</a>
+            <a href="./?city=sanliurfa" onclick="filterCity('Şanlıurfa'); return false;" class="pill-btn" style="text-decoration:none;">Şanlıurfa Masaj</a>
+          </div>
         </div>
       </div>
 
