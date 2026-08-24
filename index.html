@@ -22,10 +22,10 @@
   <link rel="apple-touch-icon" href="images/turkish_selin_photo_1786793658243.jpg">
 
   <!-- Primary SEO Meta Tags (High-CTR & 81 İl Turbo Sürüm) -->
-  <title>👑 ZENSPA™ | 81 İl VIP Masöz & Masaj Rehberi ⭐ Onaylı Terapistler & Canlı Randevu</title>
-  <meta name="title" content="👑 ZENSPA™ | 81 İl VIP Masöz & Masaj Rehberi ⭐ Onaylı Terapistler & Canlı Randevu">
-  <meta name="description" content="🔥 Türkiye'nin 81 ilinde 1 numaralı VIP masöz ve terapist kataloğu! İstanbul (Kadıköy, Nişantaşı, Beşiktaş), Ankara (Çankaya), İzmir (Alsancak), Antalya, Muğla/Bodrum. Doğrulanmış fotoğraflar & tek tıkla doğrudan WhatsApp randevusu alın.">
-  <meta name="keywords" content="masaj, masöz, masöz ilanları, istanbul masaj, ankara masaj, izmir masaj, antalya masaj, kadıköy masöz, nişantaşı masaj, alsancak masöz, çankaya masaj, bursa masaj, adana masaj, bodrum masaj, medikal masaj, isveç masajı, aromaterapi masajı, vip masaj rehberi, eve masaj, otele masaj, masaj salonu, vip terapi">
+  <title>👑 ZENSPA™ | 81 İl VIP Masöz, Masaj & Terapi Rehberi ⭐ Onaylı Terapistler & Canlı Randevu</title>
+  <meta name="title" content="👑 ZENSPA™ | 81 İl VIP Masöz, Masaj & Terapi Rehberi ⭐ Onaylı Terapistler & Canlı Randevu">
+  <meta name="description" content="🔥 Türkiye'nin 81 ilinde 1 numaralı VIP masöz, masaj ve terapi kataloğu! İstanbul (Kadıköy, Beşiktaş), Ankara (Çankaya), İzmir (Alsancak), Aydın (Nazilli), Antalya, Muğla/Bodrum. Doğrulanmış fotoğraflar & tek tıkla doğrudan WhatsApp randevusu.">
+  <meta name="keywords" content="esc, vip esc, esc masaj, istanbul esc, izmir esc, ankara esc, aydın esc, antalya esc, bursa esc, bodrum esc, esc masöz, vip partner, masaj, masöz, masöz ilanları, istanbul masaj, ankara masaj, izmir masaj, aydın masaj, nazilli masaj, antalya masaj, kadıköy masöz, nişantaşı masaj, alsancak masöz, çankaya masaj, bursa masaj, adana masaj, bodrum masaj, medikal masaj, isveç masajı, aromaterapi masajı, vip masaj rehberi, eve masaj, otele masaj, masaj salonu, vip terapi">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -3041,9 +3041,13 @@
         if (activeServicePill !== 'all' && (!t.services || !t.services.includes(activeServicePill))) return false;
 
         if (search) {
-          const tagsStr = t.tags ? t.tags.join(' ') : '';
-          const combined = (t.name + ' ' + t.city + ' ' + (t.district || '') + ' ' + (t.bio || '') + ' ' + tagsStr).toLowerCase();
-          if (!combined.includes(search)) return false;
+          if (search === 'esc' || search === 'vip esc' || search === 'esc masaj' || search === 'escort' || search === 'esc masöz') {
+            // esc aramasi tum VIP onayli masaj & terapi vitrinini listeler
+          } else {
+            const tagsStr = t.tags ? t.tags.join(' ') : '';
+            const combined = (t.name + ' ' + t.city + ' ' + (t.district || '') + ' ' + (t.bio || '') + ' ' + tagsStr).toLowerCase();
+            if (!combined.includes(search)) return false;
+          }
         }
 
         return true;
