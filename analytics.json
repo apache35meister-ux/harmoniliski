@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "25.08.2026 00:42",
+      "city": "Frankfurt am Main (Hessen)",
+      "country": "Germany",
+      "ip": "193.108.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 00:41",
       "city": "Izmir",
       "country": "Türkiye",
@@ -19,14 +27,23 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 2
+    "Izmir": 2,
+    "Frankfurt am Main": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 0,
   "activeVisitors": [
+    {
+      "id": "v_mt7rifh6_m5hy",
+      "city": "Frankfurt am Main",
+      "device": "iPhone 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787607771455,
+      "time": "00:42"
+    },
     {
       "id": "v_mt7rgq42_42qt",
       "city": "Izmir",
