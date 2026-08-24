@@ -2274,18 +2274,7 @@
     </div>
   </div>
 
-  <!-- PWA Mobil Uygulama İndir Barı -->
-  <div class="pwa-install-banner" id="pwaBanner" style="display: none;">
-    <img src="images/turkish_selin_photo_1786793658243.jpg" class="pwa-app-icon" alt="ZENSPA">
-    <div class="pwa-text">
-      <h5>ZENSPA VIP Uygulaması</h5>
-      <p>Tek tıkla telefonunuza yükleyin!</p>
-    </div>
-    <button class="btn-pwa-install" onclick="installPWA()" id="installPwaBtn">
-      📲 İndir
-    </button>
-    <button class="btn-pwa-close" onclick="closePwaBanner()">✕</button>
-  </div>
+
 
   <!-- Floating WhatsApp Widget -->
   <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba%20randevu%20almak%20istiyorum." target="_blank"&text=Merhaba,%20bilgi%20almak%20istiyorum." target="_blank" class="floating-wa-btn">
@@ -3479,44 +3468,7 @@
       });
     }
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const banner = document.getElementById('pwaBanner');
-      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-        banner.style.display = 'flex';
-      }
-    });
 
-    function installPWA() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
-          }
-          deferredPrompt = null;
-          document.getElementById('pwaBanner').style.display = 'none';
-        });
-      } else {
-        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
-      }
-    }
-
-    function closePwaBanner() {
-      document.getElementById('pwaBanner').style.display = 'none';
-      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
-    }
-
-    // Mobil cihaz kontrolü ile banner gösterimi
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const banner = document.getElementById('pwaBanner');
-        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-          banner.style.display = 'flex';
-        }
-      }, 2500);
-    });
 
     // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASYONU
     let activeVisitorId = sessionStorage.getItem('zenspa_vis_id');
