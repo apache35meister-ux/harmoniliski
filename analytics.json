@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "24.08.2026 15:21",
+      "city": "New York City (New York)",
+      "country": "United States",
+      "ip": "103.196.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 01:16",
       "city": "Izmir",
       "country": "Türkiye",
@@ -331,63 +339,24 @@
   ],
   "cityCounts": {
     "Izmir": 35,
-    "Frankfurt am Main": 5
+    "Frankfurt am Main": 5,
+    "New York City": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 40,
+  "totalVisits": 41,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
+      "id": "v_mt7swc8z_vgi0",
+      "city": "New York City",
+      "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609815242,
-      "time": "01:16"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609775095,
-      "time": "01:16"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609671875,
-      "time": "01:14"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609649928,
-      "time": "01:14"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609641126,
-      "time": "01:14"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609636259,
-      "time": "01:13"
+      "lastSeen": 1787610105124,
+      "time": "15:21"
     }
   ]
 }
