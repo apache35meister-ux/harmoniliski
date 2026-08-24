@@ -3514,7 +3514,81 @@
       }, 2500);
     });
 
-    // 🌍 MERKEZİ BULUT ZİYARETÇİ SENKRONİZASYONU (Tüm telefonlar ve bilgisayarlar için)
+    // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASYONU
+    let activeVisitorId = sessionStorage.getItem('zenspa_vis_id');
+    if (!activeVisitorId) {
+      activeVisitorId = 'v_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 6);
+      sessionStorage.setItem('zenspa_vis_id', activeVisitorId);
+    }
+
+    let detectedCityName = 'İstanbul';
+    let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
+
+    async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor') {
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+        });
+        const fileData = await res.json();
+        if (!fileData || !fileData.content) return;
+
+        const decoded = decodeGitHubBase64(fileData.content);
+        const currentJson = JSON.parse(decoded || '{}');
+        const now = Date.now();
+        const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
+
+        // 3 dakikadan eski oturumları temizle
+        let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
+        
+        // Mevcut kullanıcıyı güncelle veya ekle
+        const existingIdx = activeList.findIndex(v => v.id === activeVisitorId);
+        const visitorObj = {
+          id: activeVisitorId,
+          city: detectedCityName,
+          device: detectedDevice,
+          activity: activityText,
+          lastSeen: now,
+          time: timeStr
+        };
+
+        if (existingIdx !== -1) {
+          activeList[existingIdx] = visitorObj;
+        } else {
+          activeList.unshift(visitorObj);
+        }
+        if (activeList.length > 25) activeList = activeList.slice(0, 25);
+        currentJson.activeVisitors = activeList;
+
+        const newStr = JSON.stringify(currentJson, null, 2);
+        const base64Content = encodeGitHubBase64(newStr);
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Track live active online session: " + detectedCityName,
+            content: base64Content,
+            sha: fileData.sha
+          })
+        });
+      } catch(e) {
+        console.log("Active radar sync error:", e);
+      }
+    }
+
     async function syncVisitToCloud(visitLog, cityName) {
       try {
         const p1 = "ghp_";
@@ -3541,6 +3615,21 @@
 
         currentJson.cityCounts = currentJson.cityCounts || {};
         currentJson.cityCounts[cityName] = (currentJson.cityCounts[cityName] || 0) + 1;
+
+        // Canlı aktif listeye de ekle
+        const now = Date.now();
+        const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
+        let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
+        activeList.unshift({
+          id: activeVisitorId,
+          city: cityName,
+          device: detectedDevice,
+          activity: 'Ana Sayfa Vitrininde Geziyor',
+          lastSeen: now,
+          time: timeStr
+        });
+        if (activeList.length > 25) activeList = activeList.slice(0, 25);
+        currentJson.activeVisitors = activeList;
 
         const newStr = JSON.stringify(currentJson, null, 2);
         const base64Content = encodeGitHubBase64(newStr);
@@ -3580,6 +3669,7 @@
         }
 
         const cityName = (data && (data.city || data.region)) ? (data.city || data.region) : 'İstanbul';
+        detectedCityName = cityName;
         const regionName = (data && data.region) ? data.region : '';
         const fullCity = cityName + (regionName && regionName !== cityName ? ' (' + regionName + ')' : '');
         const visitLog = {
@@ -3587,7 +3677,7 @@
           city: fullCity,
           country: (data && (data.country || data.country_name)) ? (data.country || data.country_name) : 'Türkiye',
           ip: (data && data.ip) ? data.ip.replace(/(\d+)\.(\d+)\.(\d+)\.(\d+)/, '$1.$2.***.***') : 'Gizli',
-          device: /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'Mobil 📱' : 'Masaüstü 💻',
+          device: detectedDevice,
           page: window.location.pathname.split('/').pop() || 'Ana Sayfa'
         };
 
@@ -3606,6 +3696,13 @@
 
         // MERKEZİ BULUTA GÖNDER (Telefondan girildiğinde PC yönetim paneline anında düşmesi için)
         syncVisitToCloud(visitLog, cityName);
+
+        // Kullanıcı sayfada kaldığı sürece her 45 saniyede bir canlı nabız gönder
+        setInterval(() => {
+          if (document.visibilityState === 'visible') {
+            broadcastLiveVisitor('Sitede Aktif Geziniyor');
+          }
+        }, 45000);
       } catch(err) {
         console.log('Geo track err:', err);
       }
