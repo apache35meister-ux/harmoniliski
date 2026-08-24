@@ -514,7 +514,22 @@
       border-color: #FBBF24;
       transform: scale(1.1);
     }
-      /* Admin Login Lock Screen */
+      @keyframes pulseLive {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+    }
+    .live-pulsing-dot {
+      width: 10px;
+      height: 10px;
+      background: #22C55E;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseLive 2s infinite;
+      flex-shrink: 0;
+    }
+
+    /* Admin Login Lock Screen */
     #adminAuthOverlay {
       position: fixed;
       inset: 0;
@@ -1042,6 +1057,16 @@
 
       <!-- Şehir KPI Özeti -->
       <div class="kpi-grid">
+        <div class="kpi-card" style="border: 1px solid rgba(74,222,128,0.4); background: linear-gradient(135deg, rgba(15,41,27,0.7), rgba(24,24,27,0.9));">
+          <div>
+            <h4 style="display:flex; align-items:center; gap:6px;">
+              <span class="live-pulsing-dot"></span>
+              Şu An Sitede Gezinenler
+            </h4>
+            <div class="number" id="liveActiveVisitorsKPI" style="color:#4ADE80; font-size:1.6rem; font-weight:900;">0 Kişi Canlı</div>
+          </div>
+          <div class="kpi-icon">🟢</div>
+        </div>
         <div class="kpi-card">
           <div>
             <h4>Toplam Ziyaret</h4>
@@ -1063,6 +1088,34 @@
           </div>
           <div class="kpi-icon">🏆</div>
         </div>
+      </div>
+
+      <!-- 🟢 ŞU AN SİTEDE GEZİNEN CANLI ZİYARETÇİLER RADARI -->
+      <div class="panel-box" style="border: 1px solid rgba(74,222,128,0.35); background: rgba(12,24,18,0.5);">
+        <div class="panel-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px;">
+              <span class="live-pulsing-dot"></span>
+              🟢 Canlı Ziyaretçi Radarı (Şu An Sitede Olan Kişiler)
+            </h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">Canlı oturumlar anlık olarak izlenmektedir (Her 10 sn'de bir yenilenir)</span>
+          </div>
+          <span id="activeRadarBadge" style="background:#0F291B; color:#4ADE80; border:1px solid #22C55E; padding:4px 12px; border-radius:999px; font-weight:800; font-size:0.8rem;">0 Canlı Ziyaretçi</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Durum</th>
+              <th>Şehir / Konum</th>
+              <th>Cihaz</th>
+              <th>Şu An Ne Yapıyor?</th>
+              <th>Son Hareket</th>
+            </tr>
+          </thead>
+          <tbody id="activeVisitorsTableBody">
+            <!-- JS ile dinamik beslenecek -->
+          </tbody>
+        </table>
       </div>
 
       <!-- Şehir Bazlı Dağılım Kartları -->
@@ -1644,11 +1697,11 @@
         tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
         callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
         cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
-        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}')
+        activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
       };
 
       try {
-        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-cache' });
+        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-store' });
         if (res.ok) {
           const cloudStats = await res.json();
           if (cloudStats) {
@@ -1675,6 +1728,9 @@
               for (let c in cloudStats.cityCounts) {
                 stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cloudStats.cityCounts[c]);
               }
+            }
+            if (cloudStats.activeVisitors && Array.isArray(cloudStats.activeVisitors)) {
+              stats.activeVisitors = cloudStats.activeVisitors;
             }
           }
         }
@@ -1781,6 +1837,7 @@
         localStorage.setItem('zenspa_live_call_logs', '[]');
         localStorage.setItem('zenspa_city_visits', '[]');
         localStorage.setItem('zenspa_city_counts', '{}');
+        localStorage.setItem('zenspa_active_visitors', '[]');
         renderWaTable();
         renderCityVisitorStats();
         alert("✓ İstatistikler sıfırlandı!");
@@ -1817,6 +1874,49 @@
       const stats = await getLiveAnalytics();
       const cityVisits = stats.cityVisits || [];
       const cityCounts = stats.cityCounts || {};
+      const now = Date.now();
+
+      // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Son 3 dakika içindekiler)
+      const rawActive = stats.activeVisitors || [];
+      const activeVisitors = rawActive.filter(v => (now - (v.lastSeen || 0)) < 180000);
+
+      const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
+      if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
+
+      const elActiveBadge = document.getElementById('activeRadarBadge');
+      if (elActiveBadge) elActiveBadge.textContent = `${activeVisitors.length} Canlı Ziyaretçi`;
+
+      const activeTbody = document.getElementById('activeVisitorsTableBody');
+      if (activeTbody) {
+        if (activeVisitors.length > 0) {
+          activeTbody.innerHTML = activeVisitors.map(v => {
+            const diffSec = Math.floor((now - (v.lastSeen || 0)) / 1000);
+            const statusLabel = diffSec < 30 ? '🟢 Şu An Sitede (Canlı)' : `⏱️ ${Math.floor(diffSec/60) || 1} dk önce aktifti`;
+            return `
+              <tr style="background: rgba(34, 197, 94, 0.04);">
+                <td>
+                  <span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E; display:inline-flex; align-items:center; gap:6px;">
+                    <span class="live-pulsing-dot"></span>
+                    ${statusLabel}
+                  </span>
+                </td>
+                <td><strong style="color:#FFF;">📍 ${v.city || 'Türkiye'}</strong></td>
+                <td style="color:#A1A1AA;">${v.device || 'Mobil 📱'}</td>
+                <td style="color:#FDE047; font-weight:700;">👀 ${v.activity || 'Ana Sayfa Vitrininde'}</td>
+                <td style="color:#60A5FA; font-weight:600;">${v.time || 'Az önce'}</td>
+              </tr>
+            `;
+          }).join('');
+        } else {
+          activeTbody.innerHTML = `
+            <tr>
+              <td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.85rem;">
+                Şu an sitede aktif gezinen canlı kullanıcı bulunmuyor. Bir ziyaretçi siteye girdiğinde burada anlık radar olarak listelenecektir.
+              </td>
+            </tr>
+          `;
+        }
+      }
 
       const totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 0;
       const uniqueCities = Object.keys(cityCounts).length || 0;
@@ -1866,21 +1966,35 @@
               <td><strong style="color:#FFF;">📍 ${v.city}</strong></td>
               <td>🇹🇷 ${v.country || 'Türkiye'}</td>
               <td>${v.device || 'Mobil 📱'}</td>
-              <td style="color:#60A5FA;">${v.page || 'Ana Sayfa'}</td>
-              <td><span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Aktif Ziyaret</span></td>
+              <td style="color:#38BDF8; font-weight:600;">${v.page || 'Ana Sayfa'}</td>
+              <td><span class="status-badge">🟢 Tamamlandı</span></td>
             </tr>
           `).join('');
         } else {
           tbody.innerHTML = `
             <tr>
               <td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">
-                Henüz yeni bir ziyaretçi kaydı bekleniyor. Ziyaretçiler siteye girdikçe gerçek saat ve şehirleriyle burada listelenecektir.
+                Henüz şehir ziyareti kaydedilmedi. Ziyaretçiler geldikçe burada listelenecektir.
               </td>
             </tr>
           `;
         }
       }
     }
+
+    // 🟢 OTOMATİK CANLI RADAR YENİLEME MOTORU (Her 10 saniyede bir paneli otomatik günceller)
+    setInterval(() => {
+      if (document.visibilityState === 'visible') {
+        const cityTab = document.getElementById('cityAnalyticsTab');
+        if (cityTab && cityTab.style.display !== 'none') {
+          renderCityVisitorStats();
+        }
+        const waTab = document.getElementById('whatsappTab');
+        if (waTab && waTab.style.display !== 'none') {
+          renderWaTable();
+        }
+      }
+    }, 10000);
 
     let currentPhotos = ["images/turkish_merve_photo.jpg"];
 
