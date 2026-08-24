@@ -1,87 +1,27 @@
-{
-  "logs": [],
-  "cityVisits": [
-    {
-      "time": "25.08.2026 00:13",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:12",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:10",
-      "city": "Frankfurt am Main (Hessen)",
-      "country": "Germany",
-      "ip": "193.108.***.***",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:05",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "24.08.2026 20:28",
-      "city": "Washington (District of Columbia)",
-      "country": "United States",
-      "ip": "32.198.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "24.08.2026 20:59",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "24.08.2026 20:58",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "24.08.2026 20:58",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "23.08.2026 22:33",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    }
-  ],
-  "cityCounts": {
-    "Izmir": 7,
-    "Washington": 1,
-    "Frankfurt am Main": 1
-  },
-  "tCalls": {},
-  "tClicks": {},
-  "totalCalls": 0,
-  "totalVisits": 9,
-  "totalWaClicks": 0
+﻿{
+    "logs":  [
+
+             ],
+    "cityVisits":  [
+                       {
+                           "time":  "23.08.2026 22:33",
+                           "city":  "Izmir",
+                           "country":  "Türkiye",
+                           "ip":  "212.253.***.***",
+                           "device":  "Masaüstü 💻",
+                           "page":  "Ana Sayfa"
+                       }
+                   ],
+    "cityCounts":  {
+                       "Izmir":  1
+                   },
+    "tCalls":  {
+
+               },
+    "tClicks":  {
+
+                },
+    "totalCalls":  0,
+    "totalVisits":  1,
+    "totalWaClicks":  0
 }
