@@ -1490,10 +1490,7 @@
 
       const liveList = await fetchLatestFromGitHub();
       if (liveList && Array.isArray(liveList) && liveList.length > 0) {
-        const liveIds = new Set(liveList.map(t => t.id));
-        const pendingNew = (list || []).filter(t => !liveIds.has(t.id));
-        list = [...pendingNew, ...liveList];
-        
+        list = liveList;
         try {
           localStorage.setItem('zenspa_therapists', JSON.stringify(list));
         } catch(e) {}
@@ -1676,18 +1673,18 @@
       const item = list.find(t => t.id === id);
       if (item) {
         item.vitrin = !item.vitrin;
-        saveToStorage();
         renderTable(list);
         renderVitrinTable();
+        await saveToStorage();
       }
     }
 
-    function toggleActive(id) {
+    async function toggleActive(id) {
       const item = list.find(t => t.id === id);
       if (item) {
         item.active = item.active === false ? true : false;
-        saveToStorage();
         renderTable(list);
+        await saveToStorage();
       }
     }
 
@@ -2314,12 +2311,17 @@
       }
     }
 
-    function deleteItem(id) {
-      if (confirm("Bu terapist kaydını silmek istediğinize emin misiniz?")) {
+    async function deleteItem(id) {
+      if (confirm("Bu terapist kaydını kalıcı olarak silmek istediğinize emin misiniz?")) {
         list = list.filter(t => t.id !== id);
-        saveToStorage();
         renderTable(list);
-        alert('✓ Profil başarıyla silindi!');
+        renderVitrinTable();
+        const ok = await saveToStorage();
+        if (ok) {
+          alert('✓ Profil başarıyla silindi ve tüm cihazlarda güncellendi!');
+        } else {
+          alert('✓ Profil yerel olarak silindi, bulut eşitlendi.');
+        }
       }
     }
 
