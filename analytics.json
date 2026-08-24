@@ -1,29 +1,27 @@
-{
-  "logs": [],
-  "cityVisits": [
-    {
-      "time": "25.08.2026 00:21",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "23.08.2026 22:33",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    }
-  ],
-  "cityCounts": {
-    "Izmir": 2
-  },
-  "tCalls": {},
-  "tClicks": {},
-  "totalCalls": 0,
-  "totalVisits": 2,
-  "totalWaClicks": 0
+﻿{
+    "logs":  [
+
+             ],
+    "cityVisits":  [
+                       {
+                           "time":  "23.08.2026 22:33",
+                           "city":  "Izmir",
+                           "country":  "Türkiye",
+                           "ip":  "212.253.***.***",
+                           "device":  "Masaüstü 💻",
+                           "page":  "Ana Sayfa"
+                       }
+                   ],
+    "cityCounts":  {
+                       "Izmir":  1
+                   },
+    "tCalls":  {
+
+               },
+    "tClicks":  {
+
+                },
+    "totalCalls":  0,
+    "totalVisits":  1,
+    "totalWaClicks":  0
 }
