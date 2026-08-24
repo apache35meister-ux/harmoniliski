@@ -3506,7 +3506,8 @@
         const fileData = await res.json();
         if (!fileData || !fileData.content) return;
 
-        const currentJson = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+        const decoded = decodeGitHubBase64(fileData.content);
+        const currentJson = JSON.parse(decoded || '{}');
         currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
         currentJson.cityVisits = currentJson.cityVisits || [];
         currentJson.cityVisits.unshift(visitLog);
@@ -3516,12 +3517,7 @@
         currentJson.cityCounts[cityName] = (currentJson.cityCounts[cityName] || 0) + 1;
 
         const newStr = JSON.stringify(currentJson, null, 2);
-        const utf8Bytes = new TextEncoder().encode(newStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) {
-          binary += String.fromCharCode(utf8Bytes[i]);
-        }
-        const base64Content = btoa(binary);
+        const base64Content = encodeGitHubBase64(newStr);
 
         await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
           method: 'PUT',
