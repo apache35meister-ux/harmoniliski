@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "25.08.2026 00:54",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "5.24.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 00:48",
       "city": "Izmir",
       "country": "Türkiye",
@@ -91,46 +99,22 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 6,
+    "Izmir": 7,
     "Frankfurt am Main": 5
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 11,
+  "totalVisits": 12,
   "totalWaClicks": 0,
   "activeVisitors": [
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787608106058,
-      "time": "00:48"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787608097587,
-      "time": "00:48"
-    },
     {
       "id": "v_mt7rk5jb_hbmp",
       "city": "Izmir",
       "device": "iPhone 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787608069866,
-      "time": "00:47"
-    },
-    {
-      "id": "v_mt7rgq42_42qt",
-      "city": "Izmir",
-      "device": "Android 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787607980978,
-      "time": "00:46"
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787608450269,
+      "time": "00:54"
     }
   ]
 }
