@@ -1,5 +1,5 @@
 // Service Worker - Always Fresh Network First
-const CACHE_NAME = 'zenspa-live-v5';
+const CACHE_NAME = 'zenspa-live-v6';
 
 self.addEventListener('install', event => {
   self.skipWaiting();
@@ -16,8 +16,18 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // Sadece GET isteklerini ve harici API olmayan istekleri onbellege al
-  if (event.request.method !== 'GET' || event.request.url.includes('api.github.com') || event.request.url.includes('ipwho') || event.request.url.includes('ipapi')) {
+  // Sadece statik medya/font GET isteklerini onbellege al, JSON ve dinamik sayfalari asla onbellege alma!
+  if (
+    event.request.method !== 'GET' ||
+    event.request.url.includes('api.github.com') ||
+    event.request.url.includes('therapists.json') ||
+    event.request.url.includes('analytics.json') ||
+    event.request.url.includes('panel.html') ||
+    event.request.url.includes('admin.html') ||
+    event.request.url.includes('raw.githubusercontent') ||
+    event.request.url.includes('ipwho') ||
+    event.request.url.includes('ipapi')
+  ) {
     return;
   }
 
