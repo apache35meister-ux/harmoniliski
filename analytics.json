@@ -1,5 +1,12 @@
 {
-  "logs": [],
+  "logs": [
+    {
+      "time": "25.08.2026 01:02",
+      "name": "sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "25.08.2026 01:02",
@@ -127,10 +134,12 @@
     "Frankfurt am Main": 5
   },
   "tCalls": {},
-  "tClicks": {},
+  "tClicks": {
+    "1787093135705": 1
+  },
   "totalCalls": 0,
   "totalVisits": 15,
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "activeVisitors": [
     {
       "id": "v_mt7rk5jb_hbmp",
