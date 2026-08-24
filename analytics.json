@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 01:11",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 01:10",
       "city": "Izmir",
       "country": "Türkiye",
@@ -226,7 +234,7 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 22,
+    "Izmir": 23,
     "Frankfurt am Main": 5
   },
   "tCalls": {},
@@ -234,9 +242,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 27,
+  "totalVisits": 28,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt7rpey9_6zxc",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787609516061,
+      "time": "01:11"
+    },
     {
       "id": "v_mt7rpey9_6zxc",
       "city": "Izmir",
@@ -316,14 +332,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787609371892,
       "time": "01:09"
-    },
-    {
-      "id": "v_mt7rpey9_6zxc",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787609299102,
-      "time": "01:08"
     }
   ]
 }
