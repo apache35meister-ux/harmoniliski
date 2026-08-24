@@ -1412,11 +1412,40 @@
         const owner = "apache35meister-ux";
         const repo = "harmoniliski";
 
-        const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-        });
-        const fileData = await fileRes.json();
-        if (!fileData || !fileData.sha) return;
+        let fileSha = null;
+        try {
+          const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+          });
+          if (fileRes.ok) {
+            const fileData = await fileRes.json();
+            if (fileData && fileData.sha) fileSha = fileData.sha;
+          }
+        } catch(e) {}
+
+        if (!fileSha) {
+          try {
+            const refRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/ref/heads/main', {
+              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+            });
+            const refData = await refRes.json();
+            const commitRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/commits/' + refData.object.sha, {
+              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+            });
+            const commitData = await commitRes.json();
+            const treeRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/trees/' + commitData.tree.sha, {
+              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+            });
+            const treeData = await treeRes.json();
+            const item = (treeData.tree || []).find(f => f.path === 'therapists.json');
+            if (item) fileSha = item.sha;
+          } catch(e) {}
+        }
+
+        if (!fileSha) {
+          console.warn("SHA alinamadi, bulut guncellenemedi.");
+          return false;
+        }
 
         const jsonStr = JSON.stringify(currentList, null, 2);
         const utf8Bytes = new TextEncoder().encode(jsonStr);
@@ -1426,7 +1455,7 @@
         }
         const base64Content = btoa(binary);
 
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+        const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
           method: 'PUT',
           headers: {
             'Authorization': 'Bearer ' + token,
@@ -1436,18 +1465,24 @@
           body: JSON.stringify({
             message: "Admin: Sync therapist catalog to cloud",
             content: base64Content,
-            sha: fileData.sha
+            sha: fileSha
           })
         });
+        return putRes.ok;
       } catch(err) {
-        console.log("Bulut sync:", err);
+        console.error("Bulut sync hatasi:", err);
+        return false;
       }
     }
 
-    function saveToStorage() {
-      localStorage.setItem('zenspa_admin_modified', 'true');
-      localStorage.setItem('zenspa_therapists', JSON.stringify(list));
-      pushTherapistsToGitHub(list);
+    async function saveToStorage() {
+      try {
+        localStorage.setItem('zenspa_admin_modified', 'true');
+        localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+      } catch(e) {
+        console.warn("LocalStorage kotasi dolu:", e);
+      }
+      return await pushTherapistsToGitHub(list);
     }
 
     function switchTab(tabId, btnEl) {
@@ -1831,22 +1866,64 @@
       `).join('');
     }
 
-    function handleMultiFileUpload(e) {
-      const files = Array.from(e.target.files || []);
-      if (!files.length) return;
-
-      let loadedCount = 0;
-      files.forEach(file => {
+    function compressImage(file, maxWidth = 800, maxHeight = 1000, quality = 0.78) {
+      return new Promise((resolve) => {
         const reader = new FileReader();
-        reader.onload = function(evt) {
-          currentPhotos.push(evt.target.result);
-          loadedCount++;
-          if (loadedCount === files.length) {
-            renderPhotosGrid();
-          }
+        reader.onload = function(e) {
+          const img = new Image();
+          img.onload = function() {
+            let width = img.width;
+            let height = img.height;
+
+            if (width > height) {
+              if (width > maxWidth) {
+                height = Math.round((height * maxWidth) / width);
+                width = maxWidth;
+              }
+            } else {
+              if (height > maxHeight) {
+                width = Math.round((width * maxHeight) / height);
+                height = maxHeight;
+              }
+            }
+
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+
+            const compressedBase64 = canvas.toDataURL('image/jpeg', quality);
+            resolve(compressedBase64);
+          };
+          img.onerror = function() {
+            resolve(e.target.result);
+          };
+          img.src = e.target.result;
+        };
+        reader.onerror = function() {
+          resolve("images/turkish_merve_photo.jpg");
         };
         reader.readAsDataURL(file);
       });
+    }
+
+    async function handleMultiFileUpload(e) {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+
+      const badge = document.getElementById('photoCountBadge');
+      if (badge) badge.textContent = "⏳ İşleniyor...";
+
+      for (let file of files) {
+        try {
+          const compressed = await compressImage(file);
+          currentPhotos.push(compressed);
+        } catch(err) {
+          console.error("Fotoğraf yükleme hatası:", err);
+        }
+      }
+      renderPhotosGrid();
       e.target.value = "";
     }
 
@@ -1968,84 +2045,100 @@
       }
     }
 
-    function saveTherapist(e) {
+    async function saveTherapist(e) {
       e.preventDefault();
-      const rawWa = document.getElementById('tWhatsapp').value;
-      const cleanWa = formatPhone(rawWa);
-      const editId = document.getElementById('editTherapistId').value;
-      const durationVal = document.getElementById('tDuration').value;
-
-      const primaryPhoto = currentPhotos[0] || "images/turkish_merve_photo.jpg";
-      const allPhotos = currentPhotos.length > 0 ? currentPhotos : [primaryPhoto];
-
-      if (editId) {
-        const idx = list.findIndex(t => t.id == editId);
-        if (idx !== -1) {
-          list[idx].name = document.getElementById('tName').value;
-          list[idx].age = parseInt(document.getElementById('tAge').value) || 25;
-          list[idx].city = document.getElementById('tCity').value;
-          list[idx].district = document.getElementById('tDistrict').value;
-          list[idx].gender = document.getElementById('tGender').value;
-          list[idx].price = document.getElementById('tPrice').value;
-          list[idx].wa = cleanWa;
-          list[idx].whatsapp = cleanWa;
-          list[idx].img = primaryPhoto;
-          list[idx].image = primaryPhoto;
-          list[idx].images = allPhotos;
-          list[idx].photos = allPhotos;
-
-          // Süre yönetimi
-          if (durationVal !== 'keep') {
-            const durationDays = parseInt(durationVal) || 30;
-            list[idx].expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
-            list[idx].active = true; // Süre uzatıldığında otomatik tekrar aktif et!
-          } else if (!list[idx].expiresAt) {
-            list[idx].expiresAt = Date.now() + (30 * 24 * 60 * 60 * 1000);
-          }
-          
-          saveToStorage();
-          checkAndAutoExpire();
-          renderTable(list);
-          closeAddModal();
-          alert("✓ Terapist profili ve " + allPhotos.length + " fotoğraflı galeri başarıyla güncellendi!");
-          return;
-        }
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      const origText = btnSub ? btnSub.innerHTML : '✓ Kaydet';
+      if (btnSub) {
+        btnSub.disabled = true;
+        btnSub.innerHTML = '⏳ Buluta Kaydediliyor... Lütfen Bekleyin';
       }
 
-      const durationDays = parseInt(durationVal) || 30;
-      const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+      try {
+        const rawWa = document.getElementById('tWhatsapp').value;
+        const cleanWa = formatPhone(rawWa);
+        const editId = document.getElementById('editTherapistId').value;
+        const durationVal = document.getElementById('tDuration').value;
 
-      const newT = {
-        id: Date.now(),
-        name: document.getElementById('tName').value,
-        age: parseInt(document.getElementById('tAge').value) || 25,
-        city: document.getElementById('tCity').value,
-        district: document.getElementById('tDistrict').value,
-        gender: document.getElementById('tGender').value,
-        services: ["İsveç", "Aromaterapi", "Medikal"],
-        tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
-        bio: document.getElementById('tCity').value + " bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
-        price: document.getElementById('tPrice').value,
-        vitrin: true,
-        active: true,
-        expiresAt: expiresAt,
-        wa: cleanWa,
-        whatsapp: cleanWa,
-        img: primaryPhoto,
-        image: primaryPhoto,
-        images: allPhotos,
-        photos: allPhotos,
-        clicks: 1,
-        rating: "⭐ 5.0",
-        reviews: 12
-      };
-      
-      list.unshift(newT);
-      saveToStorage();
-      checkAndAutoExpire();
-      renderTable(list);
-      closeAddModal();
-      alert("✓ Terapist " + allPhotos.length + " fotoğrafla başarıyla eklendi ve vitrin süresi başlatıldı!");
+        const primaryPhoto = currentPhotos[0] || "images/turkish_merve_photo.jpg";
+        const allPhotos = currentPhotos.length > 0 ? currentPhotos : [primaryPhoto];
+
+        if (editId) {
+          const idx = list.findIndex(t => t.id == editId);
+          if (idx !== -1) {
+            list[idx].name = document.getElementById('tName').value;
+            list[idx].age = parseInt(document.getElementById('tAge').value) || 25;
+            list[idx].city = document.getElementById('tCity').value;
+            list[idx].district = document.getElementById('tDistrict').value;
+            list[idx].gender = document.getElementById('tGender').value;
+            list[idx].price = document.getElementById('tPrice').value;
+            list[idx].wa = cleanWa;
+            list[idx].whatsapp = cleanWa;
+            list[idx].img = primaryPhoto;
+            list[idx].image = primaryPhoto;
+            list[idx].images = allPhotos;
+            list[idx].photos = allPhotos;
+
+            // Süre yönetimi
+            if (durationVal !== 'keep') {
+              const durationDays = parseInt(durationVal) || 30;
+              list[idx].expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+              list[idx].active = true;
+            } else if (!list[idx].expiresAt) {
+              list[idx].expiresAt = Date.now() + (30 * 24 * 60 * 60 * 1000);
+            }
+            
+            await saveToStorage();
+            checkAndAutoExpire();
+            renderTable(list);
+            closeAddModal();
+            alert("✓ Terapist profili ve " + allPhotos.length + " fotoğraflı galeri başarıyla güncellendi ve tüm cihazlarda yayına alındı!");
+            return;
+          }
+        }
+
+        const durationDays = parseInt(durationVal) || 30;
+        const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+
+        const newT = {
+          id: Date.now(),
+          name: document.getElementById('tName').value,
+          age: parseInt(document.getElementById('tAge').value) || 25,
+          city: document.getElementById('tCity').value,
+          district: document.getElementById('tDistrict').value,
+          gender: document.getElementById('tGender').value,
+          services: ["İsveç", "Aromaterapi", "Medikal"],
+          tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
+          bio: document.getElementById('tCity').value + " bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+          price: document.getElementById('tPrice').value,
+          vitrin: true,
+          active: true,
+          expiresAt: expiresAt,
+          wa: cleanWa,
+          whatsapp: cleanWa,
+          img: primaryPhoto,
+          image: primaryPhoto,
+          images: allPhotos,
+          photos: allPhotos,
+          clicks: 1,
+          rating: "⭐ 5.0",
+          reviews: 12
+        };
+        
+        list.unshift(newT);
+        await saveToStorage();
+        checkAndAutoExpire();
+        renderTable(list);
+        closeAddModal();
+        alert("✓ Terapist " + allPhotos.length + " fotoğrafla başarıyla eklendi ve tüm cihazlarda canlıya alındı!");
+      } catch(err) {
+        alert("Kayıt sırasında bir hata oluştu: " + err.message);
+      } finally {
+        if (btnSub) {
+          btnSub.disabled = false;
+          btnSub.innerHTML = origText;
+        }
+      }
     }
 
     function clearDemoProfiles() {
