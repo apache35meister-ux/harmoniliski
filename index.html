@@ -2706,21 +2706,47 @@
       return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
     }
 
-        async function loadLiveTherapists() {
+    async function loadLiveTherapists() {
+      // 1. First render immediately from localStorage so zero delay
+      const local = localStorage.getItem('zenspa_therapists');
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            therapists = parsed;
+            renderTherapists(therapists);
+          }
+        } catch(e) {}
+      }
+
+      // 2. Fetch fresh live data directly from raw GitHub (bypasses GitHub Pages CDN delay)
       try {
-        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-cache' });
-        if (res.ok) {
-          const liveList = await res.json();
+        const rawRes = await fetch('https://raw.githubusercontent.com/apache35meister-ux/harmoniliski/main/therapists.json?t=' + Date.now(), { cache: 'no-store' });
+        if (rawRes.ok) {
+          const liveList = await rawRes.json();
           if (Array.isArray(liveList) && liveList.length > 0) {
             therapists = liveList;
-            localStorage.setItem('zenspa_therapists', JSON.stringify(liveList));
+            try { localStorage.setItem('zenspa_therapists', JSON.stringify(liveList)); } catch(e) {}
             renderTherapists(therapists);
             return;
           }
         }
-      } catch(e) {
-        console.log('Bulut verisi yuklenirken yerel veriye gecildi:', e);
-      }
+      } catch(e) {}
+
+      // 3. Fallback to local ./therapists.json
+      try {
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-store' });
+        if (res.ok) {
+          const liveList = await res.json();
+          if (Array.isArray(liveList) && liveList.length > 0) {
+            therapists = liveList;
+            try { localStorage.setItem('zenspa_therapists', JSON.stringify(liveList)); } catch(e) {}
+            renderTherapists(therapists);
+            return;
+          }
+        }
+      } catch(e) {}
+
       renderTherapists(therapists);
     }
 
