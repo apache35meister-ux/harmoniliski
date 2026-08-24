@@ -13,13 +13,7 @@
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- PWA (Mobil Uygulama) Desteği -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000000">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="ZENSPA VIP">
-  <link rel="apple-touch-icon" href="images/turkish_selin_photo_1786793658243.jpg">
+
 
   <!-- Primary SEO Meta Tags (High-CTR & 81 İl Turbo Sürüm) -->
   <title>👑 ZENSPA™ | 81 İl VIP Masöz, Masaj & Terapi Rehberi ⭐ Onaylı Terapistler & Canlı Randevu</title>
@@ -1544,65 +1538,7 @@
       background: linear-gradient(135deg, #FFF 0%, #FDE047 100%);
       box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
     }
-        /* PWA Mobile App Floating Banner */
-    .pwa-install-banner {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-      background: linear-gradient(135deg, #1C1402 0%, #0A0A0E 100%);
-      border: 1.5px solid var(--border-gold-bright);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), var(--gold-glow);
-      border-radius: 18px;
-      padding: 0.9rem 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      max-width: 380px;
-      animation: slideUp 0.5s ease-out;
-    }
-    @keyframes slideUp {
-      from { transform: translateY(100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .pwa-app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      object-fit: cover;
-      border: 1.5px solid #FBBF24;
-    }
-    .pwa-text h5 {
-      font-size: 0.92rem;
-      font-family: var(--font-heading);
-      color: #FFF;
-      margin-bottom: 2px;
-    }
-    .pwa-text p {
-      font-size: 0.76rem;
-      color: var(--text-gray);
-      margin: 0;
-    }
-    .btn-pwa-install {
-      background: var(--gold-gradient);
-      color: #000;
-      font-weight: 900;
-      font-size: 0.8rem;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
-      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
-    }
-    .btn-pwa-close {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      cursor: pointer;
-      padding: 2px;
-    }
+
 
     /* Modal */
     .modal-overlay {
@@ -3456,16 +3392,16 @@
       loadLiveTherapists();
       checkUrlCityFilter();
     });
-      // --- PWA SERVICE WORKER & MOBİL UYGULAMA MOTORU ---
-    let deferredPrompt;
+    // --- PWA Devre Dışı Bırakıldı & Eski Önbellekler Temizlendi ---
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=5').then(reg => {
-          console.log('ZENSPA PWA Service Worker Aktif:', reg.scope);
-        }).catch(err => {
-          console.log('SW Hata:', err);
-        });
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          registration.unregister();
+        }
       });
+    }
+    if ('caches' in window) {
+      caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
     }
 
 
