@@ -2,6 +2,14 @@
   "logs": [],
   "cityVisits": [
     {
+      "time": "24.08.2026 20:28",
+      "city": "Washington (District of Columbia)",
+      "country": "United States",
+      "ip": "32.198.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "24.08.2026 20:59",
       "city": "Izmir",
       "country": "Türkiye",
@@ -35,11 +43,12 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 4
+    "Izmir": 4,
+    "Washington": 1
   },
   "tCalls": {},
   "tClicks": {},
   "totalCalls": 0,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 0
 }
