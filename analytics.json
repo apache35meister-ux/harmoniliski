@@ -10,6 +10,14 @@
   "cityVisits": [
     {
       "time": "25.08.2026 13:42",
+      "city": "Ä°stanbul",
+      "country": "TÃ¼rkiye",
+      "ip": "Gizli",
+      "device": "Android ğŸ“±",
+      "page": "mugla-bodrum-masaj.html"
+    },
+    {
+      "time": "25.08.2026 13:42",
       "city": "Mountain View (California)",
       "country": "US",
       "ip": "66.249.***.***",
@@ -479,14 +487,6 @@
       "ip": "5.24.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:01",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "5.24.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -499,7 +499,7 @@
     "The Dalles": 4,
     "San Jose": 11,
     "Porvoo": 1,
-    "Ä°stanbul": 4,
+    "Ä°stanbul": 5,
     "Mountain View": 2
   },
   "tCalls": {},
@@ -507,9 +507,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 73,
+  "totalVisits": 74,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt94sw7e_n0ja",
+      "city": "Ä°stanbul",
+      "device": "Android ğŸ“±",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787690560040,
+      "time": "13:42"
+    },
     {
       "id": "v_mt94sibe_n0ja",
       "city": "Mountain View",
