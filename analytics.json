@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 11:31",
+      "city": "The Dalles (Oregon)",
+      "country": "United States",
+      "ip": "72.14.***.***",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 12:26",
       "city": "San Jose (California)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "193.108.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:42",
-      "city": "Frankfurt am Main (Hessen)",
-      "country": "Germany",
-      "ip": "193.108.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -496,7 +496,7 @@
     "Kane": 1,
     "Warsaw": 1,
     "Springfield": 2,
-    "The Dalles": 3,
+    "The Dalles": 4,
     "San Jose": 10,
     "Porvoo": 1
   },
@@ -505,9 +505,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 62,
+  "totalVisits": 63,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt903z6q_n0ja",
+      "city": "The Dalles",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787682679032,
+      "time": "11:31"
+    },
     {
       "id": "v_mt922dsi_8wmb",
       "city": "San Jose",
