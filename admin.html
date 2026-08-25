@@ -1975,6 +1975,30 @@
           }
         }
 
+        const tbody = document.getElementById('cityVisitsTableBody');
+        if (tbody) {
+          if (cityVisits && cityVisits.length > 0) {
+            tbody.innerHTML = cityVisits.map(v => `
+              <tr>
+                <td style="color:#A1A1AA; font-weight:600;">⏱️ ${v.time}</td>
+                <td><strong style="color:#FFF;">📍 ${v.city}</strong></td>
+                <td>🇹🇷 ${v.country || 'Türkiye'}</td>
+                <td>${v.device || 'Mobil 📱'}</td>
+                <td style="color:#38BDF8; font-weight:600;">${v.page || 'Ana Sayfa'}</td>
+                <td><span class="status-badge">🟢 Tamamlandı</span></td>
+              </tr>
+            `).join('');
+          } else {
+            tbody.innerHTML = `
+              <tr>
+                <td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">
+                  Henüz şehir ziyareti kaydedilmedi. Ziyaretçiler geldikçe burada listelenecektir.
+                </td>
+              </tr>
+            `;
+          }
+        }
+
         if (btnEl) {
           btnEl.innerHTML = "✓ Canlı Veriler Güncellendi!";
           setTimeout(() => {
@@ -1986,31 +2010,6 @@
         if (btnEl) {
           btnEl.innerHTML = "🔄 Verileri Canlı Yenile";
           btnEl.disabled = false;
-        }
-      }
-    }
-
-      const tbody = document.getElementById('cityVisitsTableBody');
-      if (tbody) {
-        if (cityVisits && cityVisits.length > 0) {
-          tbody.innerHTML = cityVisits.map(v => `
-            <tr>
-              <td style="color:#A1A1AA; font-weight:600;">⏱️ ${v.time}</td>
-              <td><strong style="color:#FFF;">📍 ${v.city}</strong></td>
-              <td>🇹🇷 ${v.country || 'Türkiye'}</td>
-              <td>${v.device || 'Mobil 📱'}</td>
-              <td style="color:#38BDF8; font-weight:600;">${v.page || 'Ana Sayfa'}</td>
-              <td><span class="status-badge">🟢 Tamamlandı</span></td>
-            </tr>
-          `).join('');
-        } else {
-          tbody.innerHTML = `
-            <tr>
-              <td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">
-                Henüz şehir ziyareti kaydedilmedi. Ziyaretçiler geldikçe burada listelenecektir.
-              </td>
-            </tr>
-          `;
         }
       }
     }
