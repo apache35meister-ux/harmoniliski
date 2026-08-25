@@ -1894,9 +1894,9 @@
         const cityCounts = stats.cityCounts || {};
         const now = Date.now();
 
-        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Son 3 dakika içindekiler)
+        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Sadece son 2 dakika içinde anlık sitede olanlar)
         const rawActive = stats.activeVisitors || [];
-        const activeVisitors = rawActive.filter(v => (now - (v.lastSeen || 0)) < 180000);
+        const activeVisitors = rawActive.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 120000));
 
         const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
         if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
