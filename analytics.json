@@ -10,6 +10,14 @@
   "cityVisits": [
     {
       "time": "25.08.2026 14:04",
+      "city": "Mountain View (California)",
+      "country": "US",
+      "ip": "66.249.***.***",
+      "device": "Android ğŸ“±",
+      "page": "konya-masaj.html"
+    },
+    {
+      "time": "25.08.2026 14:04",
       "city": "Ä°stanbul",
       "country": "TÃ¼rkiye",
       "ip": "Gizli",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:12",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -500,7 +500,7 @@
     "San Jose": 11,
     "Porvoo": 1,
     "Ä°stanbul": 12,
-    "Mountain View": 6,
+    "Mountain View": 7,
     "İstanbul": 1
   },
   "tCalls": {},
@@ -508,9 +508,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 89,
+  "totalVisits": 90,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt95lkm2_n0ja",
+      "city": "Mountain View",
+      "device": "Android ğŸ“±",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787691898050,
+      "time": "14:04"
+    },
     {
       "id": "v_mt95lkm2_n0ja",
       "city": "Ä°stanbul",
