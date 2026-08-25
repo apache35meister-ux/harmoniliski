@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 23:32",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 14:34",
       "city": "Kane (Iowa)",
       "country": "United States",
@@ -479,18 +487,10 @@
       "ip": "193.108.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:44",
-      "city": "Frankfurt am Main (Hessen)",
-      "country": "Germany",
-      "ip": "193.108.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 39,
+    "Izmir": 40,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 2,
@@ -505,24 +505,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 65,
+  "totalVisits": 66,
   "totalWaClicks": 1,
   "activeVisitors": [
-    {
-      "id": "v_mt92dd38_h5gv",
-      "city": "Kane",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787686476834,
-      "time": "14:34"
-    },
     {
       "id": "v_mt8zfvpf_nbev",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787686446693,
-      "time": "22:34"
+      "lastSeen": 1787689938153,
+      "time": "23:32"
     }
   ]
 }
