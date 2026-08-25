@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 14:35",
+      "city": "Springfield (Nebraska)",
+      "country": "United States",
+      "ip": "2a03:2880:18ff:49::",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 14:15",
       "city": "Mountain View (California)",
       "country": "US",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:13",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -495,7 +495,7 @@
     "New York City": 1,
     "Kane": 2,
     "Warsaw": 1,
-    "Springfield": 3,
+    "Springfield": 4,
     "The Dalles": 4,
     "San Jose": 11,
     "Porvoo": 1,
@@ -508,16 +508,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 91,
+  "totalVisits": 92,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt95zeaq_n0ja",
-      "city": "Mountain View",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "id": "v_mt96ophw_2uo3",
+      "city": "Springfield",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787692543040,
-      "time": "14:15"
+      "lastSeen": 1787693724457,
+      "time": "14:35"
     }
   ]
 }
