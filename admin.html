@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZENSPA | VIP Yönetim Paneli</title>
@@ -514,7 +517,7 @@
       border-color: #FBBF24;
       transform: scale(1.1);
     }
-      @keyframes pulseLive {
+    @keyframes pulseLive {
       0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
       70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
@@ -714,14 +717,17 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
     }
+  </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "https://harmoniliski.com",
-      "name": "ZENSPA VIP Yönetim Paneli",
-      "logo": "https://harmoniliski.com/logo.png",
-      "sameAs": ["https://twitter.com/harmoniliski","https://facebook.com/harmoniliski"]
+      "@type": "WebSite",
+      "url": "https://harmoniliski.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://harmoniliski.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 </head>
@@ -730,6 +736,8 @@
   <!-- KRITIK: Sayfa yuklenmeden once sifreyi kontrol et -->
   <script>
     (function() {
+      // DEBUG: her sayfa yüklemesinde önceki oturumu temizle
+      localStorage.removeItem('zenspa_panel_auth');
       var logged = localStorage.getItem('zenspa_panel_auth');
       if (logged !== 'evet') {
         // Oturum yok — overlay gorunur kalsin, arka plani hemen karart
@@ -1049,7 +1057,7 @@
           <p>Türkiye'nin 81 ilinden sitenize gelen ziyaretçileri, cihazlarını ve lokasyonlarını anlık olarak takip edin.</p>
         </div>
         <div style="display:flex; gap:0.5rem;">
-          <button onclick="renderCityVisitorStats()" style="background:#1F190A; color:#FDE047; border:1px solid rgba(253,224,71,0.4); padding:0.6rem 1.2rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+          <button id="btnRefreshCityStats" onclick="renderCityVisitorStats(this)" style="background:#1F190A; color:#FDE047; border:1px solid rgba(253,224,71,0.4); padding:0.6rem 1.2rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
             🔄 Verileri Canlı Yenile
           </button>
         </div>
@@ -1198,8 +1206,7 @@
 
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
         
-                <!-- FOTOGRAF ALANI -->
-        <!-- ÇOKLU FOTOĞRAF & GALERİ ALANI -->
+                <!-- ÇOKLU FOTOĞRAF & GALERİ ALANI -->
         <div style="margin-bottom: 1.25rem; background: rgba(0,0,0,0.4); border: 1px dashed var(--border-gold); border-radius: var(--radius-md); padding: 1rem;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.6rem;">
             <label style="font-size:0.85rem; color:#FFF; font-weight:800; display:flex; align-items:center; gap:6px;">
@@ -1376,11 +1383,6 @@
       return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
     }
 
-    function getExpiryBadge(t) {
-      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.78rem;">Süresiz</span>';
-      const diffMs = t.expiresAt - Date.now();
-      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-      if (diffDays <= 0) {
     function checkAndAutoExpire() {
       let modified = false;
       const now = Date.now();
@@ -1592,6 +1594,7 @@
 
       if (tabId === 'vitrinTab') renderVitrinTable();
       if (tabId === 'whatsappTab') renderWaTable();
+      if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
     }
 
     function renderTable(items) {
@@ -1694,41 +1697,53 @@
         tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
         callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
         cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
+        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'),
         activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
       };
 
       try {
-        const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-store' });
-        if (res.ok) {
-          const cloudStats = await res.json();
-          if (cloudStats) {
-            stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
-            stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
-            stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
-            if (cloudStats.tClicks) {
-              for (let k in cloudStats.tClicks) {
-                stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
-              }
+        let cloudStats = null;
+        // 1. Direct raw.githubusercontent.com (Zero Cache)
+        try {
+          const rawRes = await fetch('https://raw.githubusercontent.com/apache35meister-ux/harmoniliski/main/analytics.json?t=' + Date.now(), { cache: 'no-store' });
+          if (rawRes.ok) cloudStats = await rawRes.json();
+        } catch(e) {}
+
+        // 2. Fallback to local ./analytics.json
+        if (!cloudStats) {
+          try {
+            const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-store' });
+            if (res.ok) cloudStats = await res.json();
+          } catch(e) {}
+        }
+
+        if (cloudStats) {
+          stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
+          stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
+          stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
+          if (cloudStats.tClicks) {
+            for (let k in cloudStats.tClicks) {
+              stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
             }
-            if (cloudStats.tCalls) {
-              for (let k in cloudStats.tCalls) {
-                stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
-              }
+          }
+          if (cloudStats.tCalls) {
+            for (let k in cloudStats.tCalls) {
+              stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
             }
-            if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
-              stats.callLogs = cloudStats.logs;
+          }
+          if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
+            stats.callLogs = cloudStats.logs;
+          }
+          if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits) && cloudStats.cityVisits.length > 0) {
+            stats.cityVisits = cloudStats.cityVisits;
+          }
+          if (cloudStats.cityCounts && Object.keys(cloudStats.cityCounts).length > 0) {
+            for (let c in cloudStats.cityCounts) {
+              stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cloudStats.cityCounts[c]);
             }
-            if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits) && cloudStats.cityVisits.length > 0) {
-              stats.cityVisits = cloudStats.cityVisits;
-            }
-            if (cloudStats.cityCounts && Object.keys(cloudStats.cityCounts).length > 0) {
-              for (let c in cloudStats.cityCounts) {
-                stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cloudStats.cityCounts[c]);
-              }
-            }
-            if (cloudStats.activeVisitors && Array.isArray(cloudStats.activeVisitors)) {
-              stats.activeVisitors = cloudStats.activeVisitors;
-            }
+          }
+          if (cloudStats.activeVisitors && Array.isArray(cloudStats.activeVisitors)) {
+            stats.activeVisitors = cloudStats.activeVisitors;
           }
         }
       } catch(e) {}
@@ -1867,92 +1882,113 @@
       if (tabId === 'settingsTab') loadSettings();
     }
 
-    async function renderCityVisitorStats() {
-      const stats = await getLiveAnalytics();
-      const cityVisits = stats.cityVisits || [];
-      const cityCounts = stats.cityCounts || {};
-      const now = Date.now();
+    async function renderCityVisitorStats(btnEl) {
+      if (!btnEl) btnEl = document.getElementById('btnRefreshCityStats');
+      if (btnEl) {
+        btnEl.innerHTML = "⏳ Veriler Çekiliyor...";
+        btnEl.disabled = true;
+      }
+      try {
+        const stats = await getLiveAnalytics();
+        const cityVisits = stats.cityVisits || [];
+        const cityCounts = stats.cityCounts || {};
+        const now = Date.now();
 
-      // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Son 3 dakika içindekiler)
-      const rawActive = stats.activeVisitors || [];
-      const activeVisitors = rawActive.filter(v => (now - (v.lastSeen || 0)) < 180000);
+        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Son 3 dakika içindekiler)
+        const rawActive = stats.activeVisitors || [];
+        const activeVisitors = rawActive.filter(v => (now - (v.lastSeen || 0)) < 180000);
 
-      const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
-      if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
+        const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
+        if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
 
-      const elActiveBadge = document.getElementById('activeRadarBadge');
-      if (elActiveBadge) elActiveBadge.textContent = `${activeVisitors.length} Canlı Ziyaretçi`;
+        const elActiveBadge = document.getElementById('activeRadarBadge');
+        if (elActiveBadge) elActiveBadge.textContent = `${activeVisitors.length} Canlı Ziyaretçi`;
 
-      const activeTbody = document.getElementById('activeVisitorsTableBody');
-      if (activeTbody) {
-        if (activeVisitors.length > 0) {
-          activeTbody.innerHTML = activeVisitors.map(v => {
-            const diffSec = Math.floor((now - (v.lastSeen || 0)) / 1000);
-            const statusLabel = diffSec < 30 ? '🟢 Şu An Sitede (Canlı)' : `⏱️ ${Math.floor(diffSec/60) || 1} dk önce aktifti`;
-            return `
-              <tr style="background: rgba(34, 197, 94, 0.04);">
-                <td>
-                  <span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E; display:inline-flex; align-items:center; gap:6px;">
-                    <span class="live-pulsing-dot"></span>
-                    ${statusLabel}
-                  </span>
+        const activeTbody = document.getElementById('activeVisitorsTableBody');
+        if (activeTbody) {
+          if (activeVisitors.length > 0) {
+            activeTbody.innerHTML = activeVisitors.map(v => {
+              const diffSec = Math.floor((now - (v.lastSeen || 0)) / 1000);
+              const statusLabel = diffSec < 30 ? '🟢 Şu An Sitede (Canlı)' : `⏱️ ${Math.floor(diffSec/60) || 1} dk önce aktifti`;
+              return `
+                <tr style="background: rgba(34, 197, 94, 0.04);">
+                  <td>
+                    <span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E; display:inline-flex; align-items:center; gap:6px;">
+                      <span class="live-pulsing-dot"></span>
+                      ${statusLabel}
+                    </span>
+                  </td>
+                  <td><strong style="color:#FFF;">📍 ${v.city || 'Türkiye'}</strong></td>
+                  <td style="color:#A1A1AA;">${v.device || 'Mobil 📱'}</td>
+                  <td style="color:#FDE047; font-weight:700;">👀 ${v.activity || 'Ana Sayfa Vitrininde'}</td>
+                  <td style="color:#60A5FA; font-weight:600;">${v.time || 'Az önce'}</td>
+                </tr>
+              `;
+            }).join('');
+          } else {
+            activeTbody.innerHTML = `
+              <tr>
+                <td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.85rem;">
+                  Şu an sitede aktif gezinen canlı kullanıcı bulunmuyor. Bir ziyaretçi siteye girdiğinde burada anlık radar olarak listelenecektir.
                 </td>
-                <td><strong style="color:#FFF;">📍 ${v.city || 'Türkiye'}</strong></td>
-                <td style="color:#A1A1AA;">${v.device || 'Mobil 📱'}</td>
-                <td style="color:#FDE047; font-weight:700;">👀 ${v.activity || 'Ana Sayfa Vitrininde'}</td>
-                <td style="color:#60A5FA; font-weight:600;">${v.time || 'Az önce'}</td>
               </tr>
             `;
-          }).join('');
-        } else {
-          activeTbody.innerHTML = `
-            <tr>
-              <td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.85rem;">
-                Şu an sitede aktif gezinen canlı kullanıcı bulunmuyor. Bir ziyaretçi siteye girdiğinde burada anlık radar olarak listelenecektir.
-              </td>
-            </tr>
-          `;
+          }
         }
-      }
 
-      const totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 0;
-      const uniqueCities = Object.keys(cityCounts).length || 0;
-      
-      const sortedCities = Object.entries(cityCounts).sort((a, b) => b[1] - a[1]);
-      const topCity = (sortedCities.length > 0 && totalCityVisits > 0) ? (sortedCities[0][0] + ' (%' + Math.round((sortedCities[0][1] / totalCityVisits) * 100) + ')') : '-';
+        const totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 0;
+        const uniqueCities = Object.keys(cityCounts).length || 0;
+        
+        const sortedCities = Object.entries(cityCounts).sort((a, b) => b[1] - a[1]);
+        const topCity = (sortedCities.length > 0 && totalCityVisits > 0) ? (sortedCities[0][0] + ' (%' + Math.round((sortedCities[0][1] / totalCityVisits) * 100) + ')') : '-';
 
-      const elTot = document.getElementById('cityTotalVisitsKPI');
-      if (elTot) elTot.textContent = totalCityVisits;
-      const elUniq = document.getElementById('cityUniqueCountKPI');
-      if (elUniq) elUniq.textContent = uniqueCities + ' İl';
-      const elTop = document.getElementById('cityTopCityKPI');
-      if (elTop) elTop.textContent = topCity;
+        const elTot = document.getElementById('cityTotalVisitsKPI');
+        if (elTot) elTot.textContent = totalCityVisits;
+        const elUniq = document.getElementById('cityUniqueCountKPI');
+        if (elUniq) elUniq.textContent = uniqueCities + ' İl';
+        const elTop = document.getElementById('cityTopCityKPI');
+        if (elTop) elTop.textContent = topCity;
 
-      const progressContainer = document.getElementById('cityStatsProgressList');
-      if (progressContainer) {
-        if (sortedCities.length > 0 && totalCityVisits > 0) {
-          progressContainer.innerHTML = sortedCities.map(([city, count]) => {
-            const pct = Math.round((count / totalCityVisits) * 100);
-            return `
-              <div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.88rem; font-weight:700;">
-                  <span style="color:#FFF;">📍 ${city}</span>
-                  <span style="color:#FBBF24;">${count} Ziyaretçi (%${pct})</span>
+        const progressContainer = document.getElementById('cityStatsProgressList');
+        if (progressContainer) {
+          if (sortedCities.length > 0 && totalCityVisits > 0) {
+            progressContainer.innerHTML = sortedCities.map(([city, count]) => {
+              const pct = Math.round((count / totalCityVisits) * 100);
+              return `
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.88rem; font-weight:700;">
+                    <span style="color:#FFF;">📍 ${city}</span>
+                    <span style="color:#FBBF24;">${count} Ziyaretçi (%${pct})</span>
+                  </div>
+                  <div style="width:100%; height:9px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;">
+                    <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #FFE895, #E6AF2E); border-radius:999px;"></div>
+                  </div>
                 </div>
-                <div style="width:100%; height:9px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;">
-                  <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #FFE895, #E6AF2E); border-radius:999px;"></div>
-                </div>
+              `;
+            }).join('');
+          } else {
+            progressContainer.innerHTML = `
+              <div style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.88rem;">
+                Henüz il bazlı ziyaretçi verisi oluşmadı. Sitenize ziyaretçiler girdikçe iller otomatik sıralanacaktır.
               </div>
             `;
-          }).join('');
-        } else {
-          progressContainer.innerHTML = `
-            <div style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.88rem;">
-              Henüz il bazlı ziyaretçi verisi oluşmadı. Sitenize ziyaretçiler girdikçe iller otomatik sıralanacaktır.
-            </div>
-          `;
+          }
+        }
+
+        if (btnEl) {
+          btnEl.innerHTML = "✓ Canlı Veriler Güncellendi!";
+          setTimeout(() => {
+            btnEl.innerHTML = "🔄 Verileri Canlı Yenile";
+            btnEl.disabled = false;
+          }, 1500);
+        }
+      } catch(err) {
+        if (btnEl) {
+          btnEl.innerHTML = "🔄 Verileri Canlı Yenile";
+          btnEl.disabled = false;
         }
       }
+    }
 
       const tbody = document.getElementById('cityVisitsTableBody');
       if (tbody) {
@@ -2439,6 +2475,10 @@
     window.saveSettings = saveSettings;
     window.clearDemoProfiles = clearDemoProfiles;
     window.checkAuth = checkAuth;
+    window.renderCityVisitorStats = renderCityVisitorStats;
+    window.renderWaTable = renderWaTable;
+    window.getLiveAnalytics = getLiveAnalytics;
+    window.resetLiveAnalytics = resetLiveAnalytics;
 
     document.addEventListener('DOMContentLoaded', function() {
       loadSettings();
