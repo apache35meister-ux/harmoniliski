@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 12:24",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "192.178.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 12:13",
       "city": "San Jose (California)",
       "country": "United States",
@@ -465,31 +473,23 @@
     "Warsaw": 1,
     "Springfield": 2,
     "The Dalles": 3,
-    "San Jose": 5
+    "San Jose": 6
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 56,
+  "totalVisits": 57,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt91mlrg_0hsz",
+      "id": "v_mt9208g5_v3hk",
       "city": "San Jose",
       "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787685272712,
-      "time": "12:14"
-    },
-    {
-      "id": "v_mt91lb52_r1n3",
-      "city": "Springfield",
-      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685168055,
-      "time": "12:12"
+      "lastSeen": 1787685863643,
+      "time": "12:24"
     }
   ]
 }
