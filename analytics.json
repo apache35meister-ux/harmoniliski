@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 14:34",
+      "city": "Kane (Iowa)",
+      "country": "United States",
+      "ip": "2607:f8b0:4001:c40::3",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 22:34",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,21 +487,13 @@
       "ip": "193.108.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:44",
-      "city": "Frankfurt am Main (Hessen)",
-      "country": "Germany",
-      "ip": "193.108.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
     "Izmir": 39,
     "Frankfurt am Main": 5,
     "New York City": 1,
-    "Kane": 1,
+    "Kane": 2,
     "Warsaw": 1,
     "Springfield": 2,
     "The Dalles": 4,
@@ -505,9 +505,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 64,
+  "totalVisits": 65,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt92dd38_h5gv",
+      "city": "Kane",
+      "device": "iPhone 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787686476834,
+      "time": "14:34"
+    },
     {
       "id": "v_mt8zfvpf_nbev",
       "city": "Izmir",
