@@ -10,6 +10,14 @@
   "cityVisits": [
     {
       "time": "25.08.2026 13:43",
+      "city": "Ä°stanbul",
+      "country": "TÃ¼rkiye",
+      "ip": "Gizli",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "page": "mersin-masaj.html"
+    },
+    {
+      "time": "25.08.2026 13:43",
       "city": "Mountain View (California)",
       "country": "US",
       "ip": "66.249.***.***",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:08",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -499,7 +499,7 @@
     "The Dalles": 4,
     "San Jose": 11,
     "Porvoo": 1,
-    "Ä°stanbul": 5,
+    "Ä°stanbul": 6,
     "Mountain View": 4
   },
   "tCalls": {},
@@ -507,9 +507,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 76,
+  "totalVisits": 77,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt94u79u_n0ja",
+      "city": "Ä°stanbul",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787690621040,
+      "time": "13:43"
+    },
     {
       "id": "v_mt94tu5m_n0ja",
       "city": "Mountain View",
