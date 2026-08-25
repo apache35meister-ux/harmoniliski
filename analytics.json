@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 13:41",
+      "city": "Mountain View (California)",
+      "country": "US",
+      "ip": "66.249.***.***",
+      "device": "Android ğŸ“±",
+      "page": "istanbul-masaj.html"
+    },
+    {
       "time": "25.08.2026 13:00",
       "city": "Ä°stanbul",
       "country": "TÃ¼rkiye",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:48",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -499,39 +499,24 @@
     "The Dalles": 4,
     "San Jose": 11,
     "Porvoo": 1,
-    "Ä°stanbul": 2
+    "Ä°stanbul": 2,
+    "Mountain View": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 69,
+  "totalVisits": 70,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt93a0wa_n0ja",
-      "city": "Ä°stanbul",
+      "id": "v_mt94r8si_n0ja",
+      "city": "Mountain View",
       "device": "Android ğŸ“±",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787688000077,
-      "time": "13:00"
-    },
-    {
-      "id": "v_mt94mxp8_fnfb",
-      "city": "San Jose",
-      "device": "Android ğŸ“±",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787690282067,
-      "time": "13:38"
-    },
-    {
-      "id": "v_mt94lwnu_n0ja",
-      "city": "Ä°stanbul",
-      "device": "Android ğŸ“±",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787690234040,
-      "time": "13:37"
+      "lastSeen": 1787690483050,
+      "time": "13:41"
     }
   ]
 }
