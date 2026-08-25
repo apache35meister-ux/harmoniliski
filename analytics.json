@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 13:43",
+      "city": "Mountain View (California)",
+      "country": "US",
+      "ip": "66.249.***.***",
+      "device": "Android ğŸ“±",
+      "page": "bursa-masaj.html"
+    },
+    {
       "time": "25.08.2026 13:42",
       "city": "Ä°stanbul",
       "country": "TÃ¼rkiye",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:02",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "5.24.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -500,16 +500,24 @@
     "San Jose": 11,
     "Porvoo": 1,
     "Ä°stanbul": 5,
-    "Mountain View": 2
+    "Mountain View": 3
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 74,
+  "totalVisits": 75,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt94tbmy_n0ja",
+      "city": "Mountain View",
+      "device": "Android ğŸ“±",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787690580074,
+      "time": "13:43"
+    },
     {
       "id": "v_mt94sw7e_n0ja",
       "city": "Ä°stanbul",
