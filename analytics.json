@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 13:57",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "ip": "Gizli",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 23:54",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:10",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -500,16 +500,25 @@
     "San Jose": 11,
     "Porvoo": 1,
     "Ä°stanbul": 11,
-    "Mountain View": 4
+    "Mountain View": 4,
+    "İstanbul": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 85,
+  "totalVisits": 86,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt95bk9u_n0ja",
+      "city": "İstanbul",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787691431040,
+      "time": "13:57"
+    },
     {
       "id": "v_mt8zfvpf_nbev",
       "city": "Izmir",
@@ -517,22 +526,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787691254533,
       "time": "23:54"
-    },
-    {
-      "id": "v_mt95716d_4fvw",
-      "city": "Springfield",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787691220417,
-      "time": "13:53"
-    },
-    {
-      "id": "v_mt8zfvpf_nbev",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787691201429,
-      "time": "23:53"
     }
   ]
 }
