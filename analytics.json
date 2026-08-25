@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 13:37",
+      "city": "Ä°stanbul",
+      "country": "TÃ¼rkiye",
+      "ip": "Gizli",
+      "device": "Android ğŸ“±",
+      "page": "izmir-masaj.html"
+    },
+    {
       "time": "25.08.2026 23:32",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Android 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:44",
-      "city": "Frankfurt am Main (Hessen)",
-      "country": "Germany",
-      "ip": "193.108.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -498,23 +498,24 @@
     "Springfield": 2,
     "The Dalles": 4,
     "San Jose": 10,
-    "Porvoo": 1
+    "Porvoo": 1,
+    "Ä°stanbul": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 66,
+  "totalVisits": 67,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt8zfvpf_nbev",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787690028045,
-      "time": "23:33"
+      "id": "v_mt94lwnu_n0ja",
+      "city": "Ä°stanbul",
+      "device": "Android ğŸ“±",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787690234040,
+      "time": "13:37"
     }
   ]
 }
