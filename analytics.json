@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 13:58",
+      "city": "Mountain View (California)",
+      "country": "US",
+      "ip": "66.249.***.***",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "page": "konya-masaj.html"
+    },
+    {
       "time": "25.08.2026 13:57",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:10",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -500,7 +500,7 @@
     "San Jose": 11,
     "Porvoo": 1,
     "Ä°stanbul": 11,
-    "Mountain View": 4,
+    "Mountain View": 5,
     "İstanbul": 1
   },
   "tCalls": {},
@@ -508,9 +508,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 86,
+  "totalVisits": 87,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt95cmuq_n0ja",
+      "city": "Mountain View",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787691481077,
+      "time": "13:58"
+    },
     {
       "id": "v_mt95bk9u_n0ja",
       "city": "İstanbul",
@@ -518,14 +526,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787691431040,
       "time": "13:57"
-    },
-    {
-      "id": "v_mt8zfvpf_nbev",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787691254533,
-      "time": "23:54"
     }
   ]
 }
