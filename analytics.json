@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 22:34",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 11:31",
       "city": "The Dalles (Oregon)",
       "country": "United States",
@@ -479,18 +487,10 @@
       "ip": "193.108.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 00:43",
-      "city": "Frankfurt am Main (Hessen)",
-      "country": "Germany",
-      "ip": "193.108.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 38,
+    "Izmir": 39,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 1,
@@ -505,64 +505,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 63,
+  "totalVisits": 64,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt903z6q_n0ja",
-      "city": "The Dalles",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787682679032,
-      "time": "11:31"
-    },
-    {
-      "id": "v_mt922dsi_8wmb",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685963913,
-      "time": "12:26"
-    },
-    {
-      "id": "v_mt9223lv_q0qp",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685950714,
-      "time": "12:25"
-    },
-    {
-      "id": "v_mt921u9f_kw0e",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685938602,
-      "time": "12:25"
-    },
-    {
-      "id": "v_mt921rlf_o1nc",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685935111,
-      "time": "12:25"
-    },
-    {
-      "id": "v_mt921pys_ylmk",
-      "city": "Porvoo",
+      "id": "v_mt8zfvpf_nbev",
+      "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685933039,
-      "time": "12:25"
-    },
-    {
-      "id": "v_mt9208g5_v3hk",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787685863643,
-      "time": "12:24"
+      "lastSeen": 1787686446693,
+      "time": "22:34"
     }
   ]
 }
