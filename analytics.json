@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 23:54",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "25.08.2026 13:53",
       "city": "Springfield (Nebraska)",
       "country": "United States",
@@ -479,18 +487,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:10",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 41,
+    "Izmir": 42,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 2,
@@ -507,9 +507,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 84,
+  "totalVisits": 85,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt8zfvpf_nbev",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787691254533,
+      "time": "23:54"
+    },
     {
       "id": "v_mt95716d_4fvw",
       "city": "Springfield",
