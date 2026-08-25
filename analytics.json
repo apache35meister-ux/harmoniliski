@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "25.08.2026 15:06",
+      "city": "Ä°stanbul",
+      "country": "TÃ¼rkiye",
+      "ip": "Gizli",
+      "device": "Android ğŸ“±",
+      "page": "istanbul-masaj.html"
+    },
+    {
       "time": "25.08.2026 15:04",
       "city": "Springfield (Nebraska)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 01:14",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -499,7 +499,7 @@
     "The Dalles": 4,
     "San Jose": 11,
     "Porvoo": 1,
-    "Ä°stanbul": 14,
+    "Ä°stanbul": 15,
     "Mountain View": 8,
     "İstanbul": 1
   },
@@ -508,9 +508,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 97,
+  "totalVisits": 98,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mt97s7mq_n0ja",
+      "city": "Ä°stanbul",
+      "device": "Android ğŸ“±",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787695567056,
+      "time": "15:06"
+    },
     {
       "id": "v_mt97q6pf_8cxu",
       "city": "Springfield",
