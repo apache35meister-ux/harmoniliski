@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:15",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "page": "cesme-alacati-masaj.html"
+    },
+    {
       "time": "27.08.2026 00:09",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 14:34",
-      "city": "Kane (Iowa)",
-      "country": "United States",
-      "ip": "2607:f8b0:4001:c40::3",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 61,
+    "Izmir": 62,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,32 +512,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 124,
+  "totalVisits": 125,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtal7doh_6sn8",
+      "id": "v_mtaleq2x_amz7",
       "city": "Izmir",
-      "device": "Masaüstü 💻",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787778576855,
-      "time": "00:09"
-    },
-    {
-      "id": "v_mtal6dbh_ttr0",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787778530565,
-      "time": "00:08"
-    },
-    {
-      "id": "v_mtakzr97_qoy3",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787778491126,
-      "time": "00:08"
+      "lastSeen": 1787778923410,
+      "time": "00:15"
     }
   ]
 }
