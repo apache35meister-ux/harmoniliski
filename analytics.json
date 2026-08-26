@@ -14,6 +14,14 @@
       "country": "Türkiye",
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
+      "page": "bornova-masaj.html"
+    },
+    {
+      "time": "27.08.2026 00:24",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
       "page": "karsiyaka-masaj.html"
     },
     {
@@ -479,18 +487,10 @@
       "ip": "Gizli",
       "device": "Android ğŸ“±",
       "page": "mugla-bodrum-masaj.html"
-    },
-    {
-      "time": "25.08.2026 13:00",
-      "city": "Ä°stanbul",
-      "country": "TÃ¼rkiye",
-      "ip": "Gizli",
-      "device": "Android ğŸ“±",
-      "page": "antalya-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 77,
+    "Izmir": 78,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 140,
+  "totalVisits": 141,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalqehf_kzm3",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779464213,
+      "time": "00:24"
+    },
     {
       "id": "v_mtalqavh_i4su",
       "city": "Izmir",
