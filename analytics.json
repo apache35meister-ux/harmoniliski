@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:25",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "lara-masaj.html"
+    },
+    {
       "time": "27.08.2026 00:24",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "66.249.***.***",
       "device": "MasaÃ¼stÃ¼ ğŸ’»",
       "page": "konya-masaj.html"
-    },
-    {
-      "time": "25.08.2026 13:57",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "ip": "Gizli",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 82,
+    "Izmir": 83,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 145,
+  "totalVisits": 146,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalrk8x_9krv",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779518400,
+      "time": "00:25"
+    },
     {
       "id": "v_mtalr0no_bfmx",
       "city": "Izmir",
