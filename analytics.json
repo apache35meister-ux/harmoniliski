@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 18:46",
+      "city": "Washington (District of Columbia)",
+      "country": "United States",
+      "ip": "202.8.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 20:00",
       "city": "Ankara",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 22:09",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -504,23 +504,24 @@
     "İstanbul": 1,
     "Bangkok": 1,
     "Amsterdam": 1,
-    "Ankara": 1
+    "Ankara": 1,
+    "Washington": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 113,
+  "totalVisits": 114,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtacaezk_1tp0",
-      "city": "Ankara",
-      "device": "Android 📱",
+      "id": "v_mtag3jpt_qq6r",
+      "city": "Washington",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787763602314,
-      "time": "20:00"
+      "lastSeen": 1787769999282,
+      "time": "18:46"
     }
   ]
 }
