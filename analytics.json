@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 20:00",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "ip": "176.89.***.***",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 18:32",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 11:40",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "66.102.***.***",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -503,23 +503,24 @@
     "Mountain View": 9,
     "İstanbul": 1,
     "Bangkok": 1,
-    "Amsterdam": 1
+    "Amsterdam": 1,
+    "Ankara": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 112,
+  "totalVisits": 113,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mta95fdl_cyme",
-      "city": "Izmir",
-      "device": "iPhone 📱",
+      "id": "v_mtacaezk_1tp0",
+      "city": "Ankara",
+      "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787758330056,
-      "time": "18:32"
+      "lastSeen": 1787763602314,
+      "time": "20:00"
     }
   ]
 }
