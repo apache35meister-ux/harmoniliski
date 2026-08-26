@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:31",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "27.08.2026 00:30",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "104.197.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 00:14",
-      "city": "Mountain View (California)",
-      "country": "US",
-      "ip": "66.249.***.***",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "page": "konya-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 101,
+    "Izmir": 102,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 164,
+  "totalVisits": 165,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalxg8d_j6wa",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779879268,
+      "time": "00:31"
+    },
     {
       "id": "v_mtalyvzw_8mh4",
       "city": "Izmir",
@@ -593,14 +601,6 @@
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787779726424,
-      "time": "00:28"
-    },
-    {
-      "id": "v_mtalv9cb_wshf",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779691352,
       "time": "00:28"
     }
   ]
