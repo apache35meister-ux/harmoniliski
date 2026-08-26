@@ -13,6 +13,14 @@
       "city": "Izmir",
       "country": "Türkiye",
       "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "alsancak-masaj.html"
+    },
+    {
+      "time": "27.08.2026 00:26",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "MasaÃ¼stÃ¼ ğŸ’»",
       "page": "alsancak-masaj.html"
     },
@@ -479,18 +487,10 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 14:15",
-      "city": "Mountain View (California)",
-      "country": "US",
-      "ip": "66.249.***.***",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "page": "konya-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 87,
+    "Izmir": 88,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 150,
+  "totalVisits": 151,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtaltia5_jq4o",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779612946,
+      "time": "00:26"
+    },
     {
       "id": "v_mtalsolm_ytkq",
       "city": "Izmir",
@@ -618,30 +626,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787779444589,
       "time": "00:24"
-    },
-    {
-      "id": "v_mtalpeg7_7f1u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779417694,
-      "time": "00:23"
-    },
-    {
-      "id": "v_mtalp727_jr5l",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779408119,
-      "time": "00:23"
-    },
-    {
-      "id": "v_mtalotm7_gkfr",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779390775,
-      "time": "00:23"
     }
   ]
 }
