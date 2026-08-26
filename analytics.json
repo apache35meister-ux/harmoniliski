@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 17:22",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "ip": "2403:6200:88a4:85de:be24:11ff:fec0:8289",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 07:37",
       "city": "Kane (Iowa)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "192.178.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 11:12",
-      "city": "The Dalles (Oregon)",
-      "country": "United States",
-      "ip": "72.14.***.***",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -501,23 +501,24 @@
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
-    "İstanbul": 1
+    "İstanbul": 1,
+    "Bangkok": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 106,
+  "totalVisits": 107,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt9s71qg_c9ls",
-      "city": "Kane",
+      "id": "v_mt9y2pzn_825y",
+      "city": "Bangkok",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787729852157,
-      "time": "07:37"
+      "lastSeen": 1787739728157,
+      "time": "17:22"
     }
   ]
 }
