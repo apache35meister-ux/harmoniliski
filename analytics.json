@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 15:21",
+      "city": "New York City (New York)",
+      "country": "United States",
+      "ip": "103.196.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "27.08.2026 01:16",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,20 +487,12 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 12:32",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "66.249.***.***",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "page": "konya-masaj.html"
     }
   ],
   "cityCounts": {
     "Izmir": 112,
     "Frankfurt am Main": 5,
-    "New York City": 1,
+    "New York City": 2,
     "Kane": 3,
     "Warsaw": 1,
     "Springfield": 6,
@@ -512,16 +512,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 175,
+  "totalVisits": 176,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtanllve_wi0v",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
+      "id": "v_mtans9n4_t7bo",
+      "city": "New York City",
+      "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787782600277,
-      "time": "01:16"
+      "lastSeen": 1787782916524,
+      "time": "15:21"
     }
   ]
 }
