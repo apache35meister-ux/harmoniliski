@@ -25,6 +25,14 @@
       "page": "alsancak-masaj.html"
     },
     {
+      "time": "27.08.2026 00:19",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "page": "alsancak-masaj.html"
+    },
+    {
       "time": "27.08.2026 00:16",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "66.249.***.***",
       "device": "Android ğŸ“±",
       "page": "istanbul-masaj.html"
-    },
-    {
-      "time": "25.08.2026 13:00",
-      "city": "Ä°stanbul",
-      "country": "TÃ¼rkiye",
-      "ip": "Gizli",
-      "device": "Android ğŸ“±",
-      "page": "izmir-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 65,
+    "Izmir": 66,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 128,
+  "totalVisits": 129,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalk2uo_hmh5",
+      "city": "Izmir",
+      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779169075,
+      "time": "00:19"
+    },
     {
       "id": "v_mtaljv5r_lyy5",
       "city": "Izmir",
@@ -530,14 +538,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787779151831,
       "time": "00:19"
-    },
-    {
-      "id": "v_mtalg445_t7po",
-      "city": "Izmir",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787778984417,
-      "time": "00:16"
     }
   ]
 }
