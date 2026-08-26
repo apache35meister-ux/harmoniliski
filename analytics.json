@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 22:06",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "31.142.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 18:46",
       "city": "Washington (District of Columbia)",
       "country": "United States",
@@ -479,18 +487,10 @@
       "ip": "66.249.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 12:12",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 52,
+    "Izmir": 53,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,16 +512,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 114,
+  "totalVisits": 115,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtag3jpt_qq6r",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
+      "id": "v_mtagssae_vt2l",
+      "city": "Izmir",
+      "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787769999282,
-      "time": "18:46"
+      "lastSeen": 1787771177713,
+      "time": "22:06"
     }
   ]
 }
