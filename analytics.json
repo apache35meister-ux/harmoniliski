@@ -14,6 +14,14 @@
       "country": "Türkiye",
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
+      "page": "nisantasi-masaj.html"
+    },
+    {
+      "time": "27.08.2026 00:24",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
       "page": "sisli-masaj.html"
     },
     {
@@ -479,18 +487,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 13:53",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 80,
+    "Izmir": 81,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 143,
+  "totalVisits": 144,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalqs9o_5wuk",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779482323,
+      "time": "00:24"
+    },
     {
       "id": "v_mtalqp0o_bkvs",
       "city": "Izmir",
