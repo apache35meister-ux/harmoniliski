@@ -14,6 +14,14 @@
       "country": "Türkiye",
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
+      "page": "karsiyaka-masaj.html"
+    },
+    {
+      "time": "27.08.2026 00:31",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
     },
     {
@@ -479,18 +487,10 @@
       "ip": "2403:6200:88a4:85de:be24:11ff:fec0:8289",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 07:37",
-      "city": "Kane (Iowa)",
-      "country": "United States",
-      "ip": "104.197.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 102,
+    "Izmir": 103,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 165,
+  "totalVisits": 166,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalzcev_e6aw",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779881314,
+      "time": "00:31"
+    },
     {
       "id": "v_mtalxg8d_j6wa",
       "city": "Izmir",
