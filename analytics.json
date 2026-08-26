@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 13:11",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "23.27.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 17:22",
       "city": "Bangkok",
       "country": "Thailand",
@@ -479,14 +487,6 @@
       "ip": "66.249.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 11:12",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "192.178.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 1,
     "Springfield": 6,
     "The Dalles": 4,
-    "San Jose": 11,
+    "San Jose": 12,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -509,16 +509,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 107,
+  "totalVisits": 108,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt9y2pzn_825y",
-      "city": "Bangkok",
+      "id": "v_mta449at_z6qs",
+      "city": "San Jose",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787739728157,
-      "time": "17:22"
+      "lastSeen": 1787749878011,
+      "time": "13:11"
     }
   ]
 }
