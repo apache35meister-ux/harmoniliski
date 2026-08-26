@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:08",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "27.08.2026 00:03",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 11:31",
-      "city": "The Dalles (Oregon)",
-      "country": "United States",
-      "ip": "72.14.***.***",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 59,
+    "Izmir": 60,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 122,
+  "totalVisits": 123,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtal6dbh_ttr0",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787778530565,
+      "time": "00:08"
+    },
     {
       "id": "v_mtakzr97_qoy3",
       "city": "Izmir",
