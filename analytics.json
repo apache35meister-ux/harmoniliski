@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:22",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "kadikoy-masaj.html"
+    },
+    {
       "time": "27.08.2026 00:20",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "Gizli",
       "device": "Android ğŸ“±",
       "page": "mugla-bodrum-masaj.html"
-    },
-    {
-      "time": "25.08.2026 13:42",
-      "city": "Mountain View (California)",
-      "country": "US",
-      "ip": "66.249.***.***",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "page": "antalya-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 69,
+    "Izmir": 70,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 132,
+  "totalVisits": 133,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalnxq1_jas8",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779349207,
+      "time": "00:22"
+    },
     {
       "id": "v_mtalll4a_kisy",
       "city": "Izmir",
@@ -537,30 +545,6 @@
       "device": "MasaÃ¼stÃ¼ ğŸ’»",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787779186195,
-      "time": "00:19"
-    },
-    {
-      "id": "v_mtalk2uo_hmh5",
-      "city": "Izmir",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779169075,
-      "time": "00:19"
-    },
-    {
-      "id": "v_mtaljv5r_lyy5",
-      "city": "Izmir",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779159069,
-      "time": "00:19"
-    },
-    {
-      "id": "v_mtaljp6z_3qlt",
-      "city": "Izmir",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779151831,
       "time": "00:19"
     }
   ]
