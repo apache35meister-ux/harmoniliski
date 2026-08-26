@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 15:22",
+      "city": "Philadelphia (Pennsylvania)",
+      "country": "United States",
+      "ip": "216.194.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 15:21",
       "city": "New York City (New York)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 23:15",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -505,16 +505,25 @@
     "Bangkok": 1,
     "Amsterdam": 1,
     "Ankara": 1,
-    "Washington": 1
+    "Washington": 1,
+    "Philadelphia": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 176,
+  "totalVisits": 177,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtantd2l_ywqy",
+      "city": "Philadelphia",
+      "device": "iPhone 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787782961272,
+      "time": "15:22"
+    },
     {
       "id": "v_mtans9n4_t7bo",
       "city": "New York City",
