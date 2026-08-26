@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 15:08",
+      "city": "Amsterdam (Provincie Noord-Holland)",
+      "country": "Netherlands",
+      "ip": "2001:bc8:50c0:318:da5e:d3ff:feea:e975",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 17:43",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "66.249.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 11:31",
-      "city": "The Dalles (Oregon)",
-      "country": "United States",
-      "ip": "72.14.***.***",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -502,31 +502,24 @@
     "Ä°stanbul": 15,
     "Mountain View": 9,
     "İstanbul": 1,
-    "Bangkok": 1
+    "Bangkok": 1,
+    "Amsterdam": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 110,
+  "totalVisits": 111,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mta7ekbi_sqdf",
-      "city": "Izmir",
-      "device": "iPhone ğŸ“±",
+      "id": "v_mta8bdcp_d3cm",
+      "city": "Amsterdam",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787755397164,
-      "time": "17:43"
-    },
-    {
-      "id": "v_mta7dtwp_9zrs",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787755363312,
-      "time": "17:42"
+      "lastSeen": 1787756928232,
+      "time": "15:08"
     }
   ]
 }
