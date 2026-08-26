@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "26.08.2026 07:37",
+      "city": "Kane (Iowa)",
+      "country": "United States",
+      "ip": "104.197.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 00:14",
       "city": "Mountain View (California)",
       "country": "US",
@@ -479,21 +487,13 @@
       "ip": "72.14.***.***",
       "device": "Android 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 21:12",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
     "Izmir": 49,
     "Frankfurt am Main": 5,
     "New York City": 1,
-    "Kane": 2,
+    "Kane": 3,
     "Warsaw": 1,
     "Springfield": 6,
     "The Dalles": 4,
@@ -508,16 +508,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 105,
+  "totalVisits": 106,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mt9rdsv8_fnfb",
-      "city": "Mountain View",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
+      "id": "v_mt9s71qg_c9ls",
+      "city": "Kane",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787728487050,
-      "time": "00:14"
+      "lastSeen": 1787729852157,
+      "time": "07:37"
     }
   ]
 }
