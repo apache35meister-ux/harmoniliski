@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:03",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 23:33",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "72.14.***.***",
       "device": "Android 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "25.08.2026 12:26",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "192.178.***.***",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 58,
+    "Izmir": 59,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,24 +512,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 121,
+  "totalVisits": 122,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtajamvj_0eeb",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787776409040,
-      "time": "23:33"
-    },
-    {
-      "id": "v_mtajbh8l_iel0",
+      "id": "v_mtakzr97_qoy3",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787776403225,
-      "time": "23:33"
+      "lastSeen": 1787778222692,
+      "time": "00:03"
     }
   ]
 }
