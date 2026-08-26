@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 00:30",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cf:d2d::150:74",
+      "device": "Masaüstü 💻",
+      "page": "alsancak-masaj.html"
+    },
+    {
       "time": "27.08.2026 00:29",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "66.249.***.***",
       "device": "MasaÃ¼stÃ¼ ğŸ’»",
       "page": "konya-masaj.html"
-    },
-    {
-      "time": "25.08.2026 16:31",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 100,
+    "Izmir": 101,
     "Frankfurt am Main": 5,
     "New York City": 1,
     "Kane": 3,
@@ -512,9 +512,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 163,
+  "totalVisits": 164,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtalyvzw_8mh4",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787779864454,
+      "time": "00:31"
+    },
     {
       "id": "v_mtalxg8d_j6wa",
       "city": "Izmir",
@@ -594,14 +602,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787779691352,
       "time": "00:28"
-    },
-    {
-      "id": "v_mtalul50_28oj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787779663614,
-      "time": "00:27"
     }
   ]
 }
