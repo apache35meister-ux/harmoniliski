@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 15:41",
+      "city": "Springfield (Nebraska)",
+      "country": "United States",
+      "ip": "2a03:2880:18ff:49::",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "28.08.2026 01:29",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
       "page": "lara-masaj.html"
-    },
-    {
-      "time": "27.08.2026 00:24",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "Masaüstü 💻",
-      "page": "nazilli-masaj.html"
     }
   ],
   "cityCounts": {
@@ -495,7 +495,7 @@
     "New York City": 2,
     "Kane": 3,
     "Warsaw": 2,
-    "Springfield": 21,
+    "Springfield": 22,
     "The Dalles": 4,
     "San Jose": 14,
     "Porvoo": 1,
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 204,
+  "totalVisits": 205,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
+      "id": "v_mtc3wrns_rd26",
+      "city": "Springfield",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787869765562,
-      "time": "01:29"
+      "lastSeen": 1787870460386,
+      "time": "15:41"
     }
   ]
 }
