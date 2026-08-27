@@ -13,6 +13,14 @@
       "city": "San Jose (California)",
       "country": "United States",
       "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "alsancak-masaj.html"
+    },
+    {
+      "time": "27.08.2026 15:42",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
       "device": "Masaüstü 💻",
       "page": "alsancak-masaj.html"
     },
@@ -479,14 +487,6 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
       "page": "buca-masaj.html"
-    },
-    {
-      "time": "27.08.2026 00:25",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "page": "alsancak-masaj.html"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 2,
     "Springfield": 22,
     "The Dalles": 4,
-    "San Jose": 15,
+    "San Jose": 16,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -514,9 +514,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 206,
+  "totalVisits": 207,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtc3z39m_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787870568064,
+      "time": "15:42"
+    },
     {
       "id": "v_mtc3z39m_n0ja",
       "city": "San Jose",
