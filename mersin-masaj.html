@@ -1544,65 +1544,7 @@
       background: linear-gradient(135deg, #FFF 0%, #FDE047 100%);
       box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
     }
-        /* PWA Mobile App Floating Banner */
-    .pwa-install-banner {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-      background: linear-gradient(135deg, #1C1402 0%, #0A0A0E 100%);
-      border: 1.5px solid var(--border-gold-bright);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), var(--gold-glow);
-      border-radius: 18px;
-      padding: 0.9rem 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      max-width: 380px;
-      animation: slideUp 0.5s ease-out;
-    }
-    @keyframes slideUp {
-      from { transform: translateY(100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .pwa-app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      object-fit: cover;
-      border: 1.5px solid #FBBF24;
-    }
-    .pwa-text h5 {
-      font-size: 0.92rem;
-      font-family: var(--font-heading);
-      color: #FFF;
-      margin-bottom: 2px;
-    }
-    .pwa-text p {
-      font-size: 0.76rem;
-      color: var(--text-gray);
-      margin: 0;
-    }
-    .btn-pwa-install {
-      background: var(--gold-gradient);
-      color: #000;
-      font-weight: 900;
-      font-size: 0.8rem;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
-      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
-    }
-    .btn-pwa-close {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      cursor: pointer;
-      padding: 2px;
-    }
+        /* PWA banner removed */
 
     /* Modal */
     .modal-overlay {
@@ -2272,19 +2214,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- PWA Mobil Uygulama İndir Barı -->
-  <div class="pwa-install-banner" id="pwaBanner" style="display: none;">
-    <img src="images/turkish_selin_photo_1786793658243.jpg" class="pwa-app-icon" alt="ZENSPA">
-    <div class="pwa-text">
-      <h5>ZENSPA VIP Uygulaması</h5>
-      <p>Tek tıkla telefonunuza yükleyin!</p>
-    </div>
-    <button class="btn-pwa-install" onclick="installPWA()" id="installPwaBtn">
-      📲 İndir
-    </button>
-    <button class="btn-pwa-close" onclick="closePwaBanner()">✕</button>
   </div>
 
   <!-- Floating WhatsApp Widget -->
@@ -3475,70 +3404,8 @@
       });
     }
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const banner = document.getElementById('pwaBanner');
-      if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-        banner.style.display = 'flex';
-      }
-    });
-
-    function installPWA() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('Kullanici ZENSPA VIP uygulamasini yukledi!');
-          }
-          deferredPrompt = null;
-          document.getElementById('pwaBanner').style.display = 'none';
-        });
-      } else {
-        alert("📲 iPhone / Safari kullanıcıları için:\n\n1. Alttaki 'Paylaş' (kare ve yukarı ok) simgesine basın.\n2. 'Ana Ekrana Ekle' seçeneğine dokunun.\n\nZENSPA VIP uygulamanız anında telefonunuza yüklenecektir!");
-      }
-    }
-
-    function closePwaBanner() {
-      document.getElementById('pwaBanner').style.display = 'none';
-      sessionStorage.setItem('zenspa_pwa_dismissed', 'true');
-    }
-
-    // Mobil cihaz kontrolü ile banner gösterimi
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const banner = document.getElementById('pwaBanner');
-        if (banner && !sessionStorage.getItem('zenspa_pwa_dismissed')) {
-          banner.style.display = 'flex';
-        }
-      }, 2500);
-    });
-
-    // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASYONU
-    let activeVisitorId = sessionStorage.getItem('zenspa_vis_id');
-    if (!activeVisitorId) {
-      activeVisitorId = 'v_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 6);
-      sessionStorage.setItem('zenspa_vis_id', activeVisitorId);
-    }
-
-    let detectedCityName = 'İstanbul';
-    let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
-
-    async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor') {
-      try {
-        const p1 = "ghp_";
-        const p2 = "zODf518H";
-        const p3 = "3Pvnrz6TVb";
-        const p4 = "WMXRlu8iNL8";
-        const p5 = "m2TVMqo";
-        const token = p1 + p2 + p3 + p4 + p5;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
-
-        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-        });
-        const fileData = await res.json();
+    // PWA banner removed
+const fileData = await res.json();
         if (!fileData || !fileData.content) return;
 
         const decoded = decodeGitHubBase64(fileData.content);
