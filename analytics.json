@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 15:45",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "nisantasi-masaj.html"
+    },
+    {
       "time": "27.08.2026 15:44",
       "city": "San Jose (California)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
       "page": "cesme-alacati-masaj.html"
-    },
-    {
-      "time": "27.08.2026 00:26",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "Masaüstü 💻",
-      "page": "alsancak-masaj.html"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 2,
     "Springfield": 22,
     "The Dalles": 4,
-    "San Jose": 19,
+    "San Jose": 20,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -514,9 +514,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 210,
+  "totalVisits": 211,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtc41zfm_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787870703040,
+      "time": "15:45"
+    },
     {
       "id": "v_mtc41j8a_n0ja",
       "city": "San Jose",
