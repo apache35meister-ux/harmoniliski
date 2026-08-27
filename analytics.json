@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 06:04",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "23.27.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "26.08.2026 15:22",
       "city": "Philadelphia (Pennsylvania)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 23:16",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 1,
     "Springfield": 6,
     "The Dalles": 4,
-    "San Jose": 13,
+    "San Jose": 14,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -513,24 +513,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 177,
+  "totalVisits": 178,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtantd2l_ywqy",
-      "city": "Philadelphia",
-      "device": "iPhone 📱",
+      "id": "v_mtb4apni_0lai",
+      "city": "San Jose",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787782961272,
-      "time": "15:22"
-    },
-    {
-      "id": "v_mtans9n4_t7bo",
-      "city": "New York City",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787782916524,
-      "time": "15:21"
+      "lastSeen": 1787810645145,
+      "time": "06:04"
     }
   ]
 }
