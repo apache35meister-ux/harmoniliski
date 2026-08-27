@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 15:45",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "izmir-masaj.html"
+    },
+    {
       "time": "27.08.2026 15:00",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
       "page": "alsancak-masaj.html"
-    },
-    {
-      "time": "27.08.2026 00:28",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "Masaüstü 💻",
-      "page": "alsancak-masaj.html"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 2,
     "Springfield": 22,
     "The Dalles": 4,
-    "San Jose": 21,
+    "San Jose": 22,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 213,
+  "totalVisits": 214,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtc2g1sa_n0ja",
-      "city": "İstanbul",
+      "id": "v_mtc42zp6_n0ja",
+      "city": "San Jose",
       "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787868000060,
-      "time": "15:00"
+      "lastSeen": 1787870750064,
+      "time": "15:45"
     },
     {
       "id": "v_mtc42ev6_n0ja",
@@ -564,22 +564,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787870618040,
       "time": "15:43"
-    },
-    {
-      "id": "v_mtc3z39m_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787870568064,
-      "time": "15:42"
-    },
-    {
-      "id": "v_mtc3z39m_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787870568030,
-      "time": "15:42"
     }
   ]
 }
