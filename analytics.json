@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 14:46",
+      "city": "Paris (Ile-de-France)",
+      "country": "France",
+      "ip": "2001:bc8:701:51:da5e:d3ff:fe66:deac",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "27.08.2026 14:12",
       "city": "Warsaw (Masovian Voivodeship)",
       "country": "Poland",
@@ -479,14 +487,6 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 00:08",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -506,23 +506,24 @@
     "Amsterdam": 1,
     "Ankara": 1,
     "Washington": 1,
-    "Philadelphia": 1
+    "Philadelphia": 1,
+    "Paris": 1
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 182,
+  "totalVisits": 183,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtblqzax_za8r",
-      "city": "Warsaw",
+      "id": "v_mtbmy0ty_kim6",
+      "city": "Paris",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787839957376,
-      "time": "14:12"
+      "lastSeen": 1787841966175,
+      "time": "14:46"
     }
   ]
 }
