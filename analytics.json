@@ -25,6 +25,14 @@
       "page": "Ana Sayfa"
     },
     {
+      "time": "28.08.2026 02:13",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72c0:10::150:f4",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "28.08.2026 02:12",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "Masaüstü 💻",
       "page": "alsancak-masaj.html"
-    },
-    {
-      "time": "27.08.2026 00:29",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 126,
+    "Izmir": 127,
     "Frankfurt am Main": 5,
     "New York City": 2,
     "Kane": 3,
@@ -514,9 +514,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 222,
+  "totalVisits": 223,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtc3htx6_v4mj",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1787872408803,
+      "time": "02:13"
+    },
     {
       "id": "v_mtc3htx6_v4mj",
       "city": "Izmir",
@@ -548,22 +556,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1787872292806,
       "time": "02:11"
-    },
-    {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787872221525,
-      "time": "02:10"
-    },
-    {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1787872216988,
-      "time": "02:10"
     }
   ]
 }
