@@ -2,9 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /panel.html
 Disallow: /admin.html
-Disallow: /*?*city=
-Disallow: /*?*cat=
-Disallow: /*?*t=
 
 User-agent: Googlebot
 Allow: /
