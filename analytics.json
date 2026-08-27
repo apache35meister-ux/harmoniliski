@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 09:05",
+      "city": "Springfield (Nebraska)",
+      "country": "United States",
+      "ip": "2a03:2880:18ff:49::",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "27.08.2026 18:07",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a09:bac5:58cf:d2d::150:74",
       "device": "MasaÃ¼stÃ¼ ğŸ’»",
       "page": "alsancak-masaj.html"
-    },
-    {
-      "time": "27.08.2026 00:15",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58cf:d2d::150:74",
-      "device": "MasaÃ¼stÃ¼ ğŸ’»",
-      "page": "cesme-alacati-masaj.html"
     }
   ],
   "cityCounts": {
@@ -495,7 +495,7 @@
     "New York City": 2,
     "Kane": 3,
     "Warsaw": 2,
-    "Springfield": 6,
+    "Springfield": 7,
     "The Dalles": 4,
     "San Jose": 14,
     "Porvoo": 1,
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 184,
+  "totalVisits": 185,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtbnq0ms_f5dl",
-      "city": "Izmir",
-      "device": "iPhone 📱",
+      "id": "v_mtbpsd3f_t3cm",
+      "city": "Springfield",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787843271686,
-      "time": "18:07"
+      "lastSeen": 1787846740018,
+      "time": "09:05"
     }
   ]
 }
