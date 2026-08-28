@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "28.08.2026 14:40",
+      "city": "Paris (Ile-de-France)",
+      "country": "France",
+      "ip": "2001:bc8:1201:a02:3eec:efff:feff:18ba",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "28.08.2026 07:37",
       "city": "Kane (Iowa)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "151.115.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 16:12",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "31.142.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -507,23 +507,23 @@
     "Ankara": 1,
     "Washington": 1,
     "Philadelphia": 1,
-    "Paris": 2
+    "Paris": 3
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 240,
+  "totalVisits": 241,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtcn39qy_vbrb",
-      "city": "Kane",
+      "id": "v_mtd26qdi_84y6",
+      "city": "Paris",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787902676356,
-      "time": "07:37"
+      "lastSeen": 1787928032939,
+      "time": "14:40"
     }
   ]
 }
