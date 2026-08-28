@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 18:41",
+      "city": "Springfield (Nebraska)",
+      "country": "United States",
+      "ip": "2a03:2880:18ff:5b::",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "28.08.2026 00:44",
       "city": "Paris (Ile-de-France)",
       "country": "France",
@@ -479,14 +487,6 @@
       "ip": "31.142.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 06:04",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "23.27.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -495,7 +495,7 @@
     "New York City": 2,
     "Kane": 3,
     "Warsaw": 2,
-    "Springfield": 23,
+    "Springfield": 24,
     "The Dalles": 4,
     "San Jose": 25,
     "Porvoo": 1,
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 237,
+  "totalVisits": 238,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtc8bqmm_gyq6",
-      "city": "Paris",
+      "id": "v_mtcaccvu_7j3b",
+      "city": "Springfield",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787877877343,
-      "time": "00:44"
+      "lastSeen": 1787881265781,
+      "time": "18:41"
     }
   ]
 }
