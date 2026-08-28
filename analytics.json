@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "28.08.2026 00:44",
+      "city": "Paris (Ile-de-France)",
+      "country": "France",
+      "ip": "62.210.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "27.08.2026 17:38",
       "city": "Springfield (Nebraska)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "23.27.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 15:22",
-      "city": "Philadelphia (Pennsylvania)",
-      "country": "United States",
-      "ip": "216.194.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -507,23 +507,23 @@
     "Ankara": 1,
     "Washington": 1,
     "Philadelphia": 1,
-    "Paris": 1
+    "Paris": 2
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 236,
+  "totalVisits": 237,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtc84cfm_myzt",
-      "city": "Springfield",
+      "id": "v_mtc8bqmm_gyq6",
+      "city": "Paris",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787877532243,
-      "time": "17:38"
+      "lastSeen": 1787877877343,
+      "time": "00:44"
     }
   ]
 }
