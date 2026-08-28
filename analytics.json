@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "27.08.2026 17:38",
+      "city": "Springfield (Nebraska)",
+      "country": "United States",
+      "ip": "2a03:2880:18ff:49::",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "28.08.2026 02:21",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "216.194.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "26.08.2026 15:21",
-      "city": "New York City (New York)",
-      "country": "United States",
-      "ip": "103.196.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -495,7 +495,7 @@
     "New York City": 2,
     "Kane": 3,
     "Warsaw": 2,
-    "Springfield": 22,
+    "Springfield": 23,
     "The Dalles": 4,
     "San Jose": 25,
     "Porvoo": 1,
@@ -514,48 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 235,
+  "totalVisits": 236,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
+      "id": "v_mtc84cfm_myzt",
+      "city": "Springfield",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787872871708,
-      "time": "02:21"
-    },
-    {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787872801864,
-      "time": "02:20"
-    },
-    {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787872790387,
-      "time": "02:19"
-    },
-    {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787872729387,
-      "time": "02:18"
-    },
-    {
-      "id": "v_mtc3htx6_v4mj",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787872719927,
-      "time": "02:18"
+      "lastSeen": 1787877532243,
+      "time": "17:38"
     }
   ]
 }
