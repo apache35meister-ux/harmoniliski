@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "29.08.2026 22:54",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "ip": "5.46.***.***",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "29.08.2026 22:01",
       "city": "Ankara",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "istanbul-masaj.html"
-    },
-    {
-      "time": "27.08.2026 10:11",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -504,7 +504,7 @@
     "İstanbul": 3,
     "Bangkok": 1,
     "Amsterdam": 1,
-    "Ankara": 2,
+    "Ankara": 3,
     "Washington": 2,
     "Philadelphia": 1,
     "Paris": 5
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 252,
+  "totalVisits": 253,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mteqxoel_lfmh",
+      "id": "v_mtestxel_8ui0",
       "city": "Ankara",
       "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788030066734,
-      "time": "22:01"
+      "lastSeen": 1788033251250,
+      "time": "22:54"
     }
   ]
 }
