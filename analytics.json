@@ -13,6 +13,14 @@
       "city": "San Jose (California)",
       "country": "United States",
       "ip": "66.249.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "29.08.2026 08:48",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
       "device": "Android 📱",
       "page": "Ana Sayfa"
     },
@@ -479,14 +487,6 @@
       "ip": "31.142.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 19:20",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "31.142.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 3,
     "Springfield": 24,
     "The Dalles": 4,
-    "San Jose": 26,
+    "San Jose": 27,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -514,9 +514,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 247,
+  "totalVisits": 248,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtek2av6_np1m",
+      "city": "San Jose",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788018524051,
+      "time": "08:48"
+    },
     {
       "id": "v_mtek2aui_n0ja",
       "city": "San Jose",
