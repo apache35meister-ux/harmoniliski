@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "29.08.2026 14:46",
+      "city": "Paris (Ile-de-France)",
+      "country": "France",
+      "ip": "62.210.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "29.08.2026 16:36",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "31.142.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 19:18",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "31.142.***.***",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -507,23 +507,23 @@
     "Ankara": 1,
     "Washington": 1,
     "Philadelphia": 1,
-    "Paris": 4
+    "Paris": 5
   },
   "tCalls": {},
   "tClicks": {
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 245,
+  "totalVisits": 246,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mte6zyvw_6zuw",
-      "city": "Izmir",
-      "device": "iPhone 📱",
+      "id": "v_mtehu8ha_sfze",
+      "city": "Paris",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788010573817,
-      "time": "16:36"
+      "lastSeen": 1788014789494,
+      "time": "14:46"
     }
   ]
 }
