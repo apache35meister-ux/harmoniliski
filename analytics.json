@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "29.08.2026 18:35",
+      "city": "Washington (District of Columbia)",
+      "country": "United States",
+      "ip": "202.8.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "29.08.2026 19:51",
       "city": "Izmir",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "izmir-masaj.html"
-    },
-    {
-      "time": "27.08.2026 09:36",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -505,7 +505,7 @@
     "Bangkok": 1,
     "Amsterdam": 1,
     "Ankara": 1,
-    "Washington": 1,
+    "Washington": 2,
     "Philadelphia": 1,
     "Paris": 5
   },
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 250,
+  "totalVisits": 251,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtemarrx_vtqg",
-      "city": "Izmir",
+      "id": "v_mteq0urs_udrp",
+      "city": "Washington",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788022285345,
-      "time": "19:51"
+      "lastSeen": 1788028534403,
+      "time": "18:35"
     }
   ]
 }
