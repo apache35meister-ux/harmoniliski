@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "29.08.2026 19:51",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cb:d2d::150:dc",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "28.08.2026 17:00",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -479,18 +487,10 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 09:35",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "ankara-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 141,
+    "Izmir": 142,
     "Frankfurt am Main": 5,
     "New York City": 2,
     "Kane": 5,
@@ -514,32 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 249,
+  "totalVisits": 250,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtdm680a_n0ja",
-      "city": "İstanbul",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1787961600040,
-      "time": "17:00"
-    },
-    {
-      "id": "v_mtek2av6_np1m",
-      "city": "San Jose",
+      "id": "v_mtemarrx_vtqg",
+      "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788018524051,
-      "time": "08:48"
-    },
-    {
-      "id": "v_mtek2aui_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788018524032,
-      "time": "08:48"
+      "lastSeen": 1788022285345,
+      "time": "19:51"
     }
   ]
 }
