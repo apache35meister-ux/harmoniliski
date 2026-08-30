@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "29.08.2026 17:00",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "ip": "Gizli",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "30.08.2026 08:36",
       "city": "Kane (Iowa)",
       "country": "United States",
@@ -479,14 +487,6 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 11:20",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -501,7 +501,7 @@
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
-    "İstanbul": 3,
+    "İstanbul": 4,
     "Bangkok": 1,
     "Amsterdam": 1,
     "Ankara": 3,
@@ -514,9 +514,17 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 254,
+  "totalVisits": 255,
   "totalWaClicks": 1,
   "activeVisitors": [
+    {
+      "id": "v_mtf1m2oa_n0ja",
+      "city": "İstanbul",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788048000060,
+      "time": "17:00"
+    },
     {
       "id": "v_mtfk2eu5_87ap",
       "city": "Kane",
