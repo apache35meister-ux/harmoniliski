@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "30.08.2026 14:36",
+      "city": "Amsterdam (Provincie Noord-Holland)",
+      "country": "Netherlands",
+      "ip": "51.158.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "29.08.2026 17:00",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -479,14 +487,6 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 12:01",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -503,7 +503,7 @@
     "Mountain View": 9,
     "İstanbul": 4,
     "Bangkok": 1,
-    "Amsterdam": 1,
+    "Amsterdam": 2,
     "Ankara": 3,
     "Washington": 2,
     "Philadelphia": 1,
@@ -514,24 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 255,
+  "totalVisits": 256,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtf1m2oa_n0ja",
-      "city": "İstanbul",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788048000060,
-      "time": "17:00"
-    },
-    {
-      "id": "v_mtfk2eu5_87ap",
-      "city": "Kane",
+      "id": "v_mtfwxlog_sp31",
+      "city": "Amsterdam",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788078996046,
-      "time": "08:36"
+      "lastSeen": 1788100608289,
+      "time": "14:36"
     }
   ]
 }
