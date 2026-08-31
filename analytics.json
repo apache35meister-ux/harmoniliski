@@ -9,6 +9,14 @@
   ],
   "cityVisits": [
     {
+      "time": "30.08.2026 17:00",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "30.08.2026 14:36",
       "city": "Amsterdam (Provincie Noord-Holland)",
       "country": "Netherlands",
@@ -479,14 +487,6 @@
       "ip": "2a03:2880:18ff:49::",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "27.08.2026 12:38",
-      "city": "Springfield (Nebraska)",
-      "country": "United States",
-      "ip": "2a03:2880:18ff:49::",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -497,7 +497,7 @@
     "Warsaw": 3,
     "Springfield": 24,
     "The Dalles": 4,
-    "San Jose": 27,
+    "San Jose": 28,
     "Porvoo": 1,
     "Ä°stanbul": 15,
     "Mountain View": 9,
@@ -514,16 +514,16 @@
     "1787093135705": 1
   },
   "totalCalls": 0,
-  "totalVisits": 256,
+  "totalVisits": 257,
   "totalWaClicks": 1,
   "activeVisitors": [
     {
-      "id": "v_mtfwxlog_sp31",
-      "city": "Amsterdam",
-      "device": "Masaüstü 💻",
+      "id": "v_mtgh1xca_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788100608289,
-      "time": "14:36"
+      "lastSeen": 1788134400058,
+      "time": "17:00"
     }
   ]
 }
