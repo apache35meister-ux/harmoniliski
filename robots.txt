@@ -2,11 +2,13 @@ User-agent: *
 Allow: /
 Disallow: /panel.html
 Disallow: /admin.html
+Disallow: /*?*
 
 User-agent: Googlebot
 Allow: /
 Disallow: /panel.html
 Disallow: /admin.html
+Disallow: /*?*
 
 User-agent: Googlebot-Image
 Allow: /
@@ -16,6 +18,9 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+Disallow: /panel.html
+Disallow: /admin.html
+Disallow: /*?*
 
 Sitemap: https://harmoniliski.com/sitemap.xml
-Host: https://harmoniliski.com
+Host: harmoniliski.com
