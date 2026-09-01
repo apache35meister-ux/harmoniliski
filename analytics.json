@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "01.09.2026 16:05",
+      "city": "Warsaw (Masovian Voivodeship)",
+      "country": "Poland",
+      "ip": "151.115.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "01.09.2026 18:09",
       "city": "Ankara",
       "country": "Türkiye",
@@ -33,17 +41,18 @@
   "tCalls": {},
   "cityCounts": {
     "Izmir": 2,
-    "Ankara": 1
+    "Ankara": 1,
+    "Warsaw": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtiszojs_voqt",
-      "city": "Ankara",
-      "device": "Android 📱",
+      "id": "v_mtiuzqtn_cx79",
+      "city": "Warsaw",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788275385086,
-      "time": "18:09"
+      "lastSeen": 1788278745643,
+      "time": "16:05"
     }
   ],
-  "totalVisits": 3
+  "totalVisits": 4
 }
