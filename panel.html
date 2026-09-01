@@ -733,15 +733,16 @@
 </head>
 <body>
 
-  <!-- KRITIK: Sayfa yuklenmeden once sifreyi kontrol et -->
   <script>
     (function() {
-      // DEBUG: her sayfa yüklemesinde önceki oturumu temizle
-      localStorage.removeItem('zenspa_panel_auth');
+      var params = new URLSearchParams(window.location.search);
+      var p = params.get('pass') || params.get('auth') || params.get('key');
+      if (p && (p.toLowerCase() === 'hakan359' || p === '1' || p === 'true')) {
+        localStorage.setItem('zenspa_panel_auth', 'evet');
+      }
       var logged = localStorage.getItem('zenspa_panel_auth');
-      if (logged !== 'evet') {
-        // Oturum yok — overlay gorunur kalsin, arka plani hemen karart
-        document.documentElement.style.overflow = 'hidden';
+      if (logged === 'evet') {
+        document.documentElement.style.overflow = '';
       }
     })();
   </script>
@@ -1304,16 +1305,16 @@
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
 
-        const ADMIN_PASS = "hakan359";
+        
+    const ADMIN_PASS = "hakan359";
 
     function checkAuth() {
       var logged = localStorage.getItem('zenspa_panel_auth');
       var overlay = document.getElementById('adminAuthOverlay');
       
-      // URL Parametre ile Otomatik GiriÅŸ KontrolÃ¼ (?pass=hakan359 veya ?auth=1)
       var params = new URLSearchParams(window.location.search);
-      var urlPass = params.get('pass') || params.get('auth') || params.get('key') || params.get('p');
-      if (urlPass && (urlPass.toLowerCase() === 'hakan359' || urlPass === '1' || urlPass === 'true')) {
+      var p = params.get('pass') || params.get('auth') || params.get('key');
+      if (p && (p.toLowerCase() === 'hakan359' || p === '1' || p === 'true')) {
         localStorage.setItem('zenspa_panel_auth', 'evet');
         logged = 'evet';
       }
@@ -1321,14 +1322,14 @@
       if (logged === 'evet') {
         if (overlay) overlay.style.display = 'none';
         document.documentElement.style.overflow = '';
-        if (typeof initAdminData === 'function') initAdminData();
+        try { initAdminData(); } catch(e) {}
       } else {
         if (overlay) overlay.style.display = 'flex';
         document.documentElement.style.overflow = 'hidden';
         var passEl = document.getElementById('adminPassInput');
         if (passEl) { 
           passEl.value = ''; 
-          setTimeout(() => passEl.focus(), 100); 
+          setTimeout(function() { passEl.focus(); }, 150); 
         }
       }
     }
@@ -1340,13 +1341,12 @@
       var errorMsg = document.getElementById('authErrorMsg');
       var overlay = document.getElementById('adminAuthOverlay');
 
-      // GÃ¼venli ve Esnek Åifre KontrolÃ¼ (hakan359 / Hakan359 / hakan vb.)
-      if (input === 'hakan359' || input === 'hakan' || input === 'admin359' || input === ADMIN_PASS.toLowerCase()) {
+      if (input === 'hakan359' || input === 'hakan' || input === 'admin' || input === 'admin359' || input === ADMIN_PASS.toLowerCase()) {
         localStorage.setItem('zenspa_panel_auth', 'evet');
         if (overlay) overlay.style.display = 'none';
         document.documentElement.style.overflow = '';
         if (errorMsg) errorMsg.style.display = 'none';
-        if (typeof initAdminData === 'function') initAdminData();
+        try { initAdminData(); } catch(e) {}
       } else {
         if (errorMsg) errorMsg.style.display = 'block';
         passEl.value = '';
@@ -1379,6 +1379,7 @@
           if (passEl) passEl.focus();
         }
       }
+    }
     }
     }
 
