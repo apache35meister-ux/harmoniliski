@@ -733,22 +733,21 @@
 </head>
 <body>
 
+  <!-- KRITIK: Sayfa yuklenmeden once sifreyi kontrol et -->
   <script>
     (function() {
-      var params = new URLSearchParams(window.location.search);
-      var p = params.get('pass') || params.get('auth') || params.get('key');
-      if (p && (p.toLowerCase() === 'hakan359' || p === '1' || p === 'true')) {
-        localStorage.setItem('zenspa_panel_auth', 'evet');
-      }
+      // DEBUG: her sayfa yüklemesinde önceki oturumu temizle
+      localStorage.removeItem('zenspa_panel_auth');
       var logged = localStorage.getItem('zenspa_panel_auth');
-      if (logged === 'evet') {
-        document.documentElement.style.overflow = '';
+      if (logged !== 'evet') {
+        // Oturum yok — overlay gorunur kalsin, arka plani hemen karart
+        document.documentElement.style.overflow = 'hidden';
       }
     })();
   </script>
 
   <!-- VIP Admin Password Lock Screen -->
-  <div id="adminAuthOverlay" style="display:none !important;">
+  <div id="adminAuthOverlay" style="position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
     <div class="auth-card" style="background:#0E0E12; border:1.5px solid rgba(255, 215, 0, 0.6); box-shadow:0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8); border-radius:24px; max-width:420px; width:100%; padding:2.5rem 2rem; text-align:center; position:relative;">
       <div class="auth-logo" style="width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg, #2A1F05, #0A0A0A); border:1.5px solid rgba(230, 175, 46, 0.35); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.25rem; box-shadow:0 0 25px rgba(251, 191, 36, 0.3);">🔐</div>
       <h2 class="auth-title" style="font-family:'Cinzel', serif; font-size:1.5rem; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.4rem;">VIP YÖNETİCİ GİRİŞİ</h2>
@@ -1305,27 +1304,67 @@
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
 
-        
-    
     const ADMIN_PASS = "hakan359";
+
     function checkAuth() {
+      var logged = localStorage.getItem('zenspa_panel_auth');
       var overlay = document.getElementById('adminAuthOverlay');
-      if (overlay) overlay.style.display = 'none';
-      document.documentElement.style.overflow = '';
-      try { initAdminData(); } catch(e) {}
+      if (logged === 'evet') {
+        if (overlay) overlay.style.display = 'none';
+        document.documentElement.style.overflow = '';
+      } else {
+        if (overlay) overlay.style.display = 'flex';
+        document.documentElement.style.overflow = 'hidden';
+        var passEl = document.getElementById('adminPassInput');
+        if (passEl) { passEl.value = ''; passEl.focus(); }
+      }
     }
+
     function handleAdminLogin() {
+      var passEl = document.getElementById('adminPassInput');
+      if (!passEl) return;
+      var input = (passEl.value || '').trim();
+      var errorMsg = document.getElementById('authErrorMsg');
       var overlay = document.getElementById('adminAuthOverlay');
-      if (overlay) overlay.style.display = 'none';
-      document.documentElement.style.overflow = '';
-      try { initAdminData(); } catch(e) {}
+
+      if (input === ADMIN_PASS) {
+        localStorage.setItem('zenspa_panel_auth', 'evet');
+        if (overlay) overlay.style.display = 'none';
+        document.documentElement.style.overflow = '';
+        if (errorMsg) errorMsg.style.display = 'none';
+        initAdminData();
+      } else {
+        if (errorMsg) errorMsg.style.display = 'block';
+        passEl.value = '';
+        passEl.focus();
+      }
     }
-    function togglePassVisibility() {}
+
+    function togglePassVisibility() {
+      var input = document.getElementById('adminPassInput');
+      var eye = document.getElementById('eyeIcon');
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        if (eye) eye.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        if (eye) eye.textContent = '👁️';
+      }
+    }
+
     function adminLogout() {
-      window.location.href = '/';
-    }
-    }
-    }
+      if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
+        localStorage.removeItem('zenspa_panel_auth');
+        var passEl = document.getElementById('adminPassInput');
+        if (passEl) passEl.value = '';
+        var overlay = document.getElementById('adminAuthOverlay');
+        if (overlay) {
+          overlay.style.display = 'flex';
+          document.documentElement.style.overflow = 'hidden';
+          if (passEl) passEl.focus();
+        }
+      }
     }
 
 
@@ -1800,102 +1839,21 @@
       document.body.removeChild(link);
     }
 
-    
-    async function resetLiveAnalytics() {
-      if (!confirm("TÃ¼m canlÄ± ziyaretÃ§i, tÄ±klama ve il analiz istatistiklerini sÄ±fÄ±rlamak istediÄŸinize emin misiniz?")) {
-        return;
+    function resetLiveAnalytics() {
+      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
+        localStorage.setItem('zenspa_real_visits', '0');
+        localStorage.setItem('zenspa_real_wa_clicks', '0');
+        localStorage.setItem('zenspa_real_calls', '0');
+        localStorage.setItem('zenspa_t_clicks', '{}');
+        localStorage.setItem('zenspa_t_calls', '{}');
+        localStorage.setItem('zenspa_live_call_logs', '[]');
+        localStorage.setItem('zenspa_city_visits', '[]');
+        localStorage.setItem('zenspa_city_counts', '{}');
+        localStorage.setItem('zenspa_active_visitors', '[]');
+        renderWaTable();
+        renderCityVisitorStats();
+        alert("✓ İstatistikler sıfırlandı!");
       }
-      
-      // 1. Yerel Verileri SÄ±fÄ±rla
-      localStorage.setItem('zenspa_real_visits', '0');
-      localStorage.setItem('zenspa_real_wa_clicks', '0');
-      localStorage.setItem('zenspa_real_calls', '0');
-      localStorage.setItem('zenspa_t_clicks', '{}');
-      localStorage.setItem('zenspa_t_calls', '{}');
-      localStorage.setItem('zenspa_live_call_logs', '[]');
-      localStorage.setItem('zenspa_city_visits', '[]');
-      localStorage.setItem('zenspa_city_counts', '{}');
-      localStorage.setItem('zenspa_active_visitors', '[]');
-
-      // 2. Bulut analytics.json DosyasÄ±nÄ± SÄ±fÄ±rla
-      try {
-        const p1 = "ghp_";
-        const p2 = "zODf518H";
-        const p3 = "3Pvnrz6TVb";
-        const p4 = "WMXRlu8iNL8";
-        const p5 = "m2TVMqo";
-        const token = p1 + p2 + p3 + p4 + p5;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
-        const path = "analytics.json";
-        
-        const cleanData = {
-          totalVisits: 0,
-          totalWaClicks: 0,
-          totalCalls: 0,
-          tClicks: {},
-          tCalls: {},
-          logs: [],
-          cityVisits: [],
-          cityCounts: {},
-          activeVisitors: [],
-          lastReset: new Date().toISOString()
-        };
-
-        const strData = JSON.stringify(cleanData, null, 2);
-        const b64Data = btoa(unescape(encodeURIComponent(strData)));
-
-        let sha = null;
-        try {
-          const getRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path, {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-          });
-          if (getRes.ok) {
-            const j = await getRes.json();
-            sha = j.sha;
-          }
-        } catch(e) {}
-
-        const putBody = { message: "Admin reset all analytics to 0", content: b64Data };
-        if (sha) putBody.sha = sha;
-
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path, {
-          method: 'PUT',
-          headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
-          body: JSON.stringify(putBody)
-        });
-      } catch(err) {
-        console.log("Cloud reset err:", err);
-      }
-
-      // 3. UI ArayÃ¼zÃ¼nÃ¼ CanlÄ± SÄ±fÄ±rla
-      try {
-        const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
-        if (elActiveKPI) elActiveKPI.textContent = '0 KiÅŸi CanlÄ±';
-        const elActiveBadge = document.getElementById('activeRadarBadge');
-        if (elActiveBadge) elActiveBadge.textContent = '0 CanlÄ± ZiyaretÃ§i';
-        const elTot = document.getElementById('cityTotalVisitsKPI');
-        if (elTot) elTot.textContent = '0';
-        const elUniq = document.getElementById('cityUniqueCountKPI');
-        if (elUniq) elUniq.textContent = '0 Ä°l';
-        const elTop = document.getElementById('cityTopCityKPI');
-        if (elTop) elTop.textContent = '-';
-        
-        const tbodyActive = document.getElementById('activeVisitorsTableBody');
-        if (tbodyActive) tbodyActive.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem;">Ä°statistikler sÄ±fÄ±rlandÄ±. Yeni ziyaretÃ§iler bekleniyor.</td></tr>';
-        
-        const tbodyCity = document.getElementById('cityVisitsTableBody');
-        if (tbodyCity) tbodyCity.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">Ä°statistikler sÄ±fÄ±rlandÄ±.</td></tr>';
-
-        const prog = document.getElementById('cityStatsProgressList');
-        if (prog) prog.innerHTML = '<div style="text-align:center; color:#71717A; padding:1.2rem;">Ä°statistikler sÄ±fÄ±rlandÄ±.</div>';
-      } catch(e) {}
-
-      if (typeof renderWaTable === 'function') renderWaTable();
-      if (typeof renderCityVisitorStats === 'function') renderCityVisitorStats();
-
-      alert("Tum istatistikler ve ziyaretci kayitlari basariyla SIFIRLANDI!");
-    }
     }
 
     function filterTable() {
@@ -2523,10 +2481,18 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       loadSettings();
-      try { initAdminData(); } catch(e) {}
+      var logged = localStorage.getItem('zenspa_panel_auth');
       var overlay = document.getElementById('adminAuthOverlay');
-      if (overlay) overlay.style.display = 'none';
-      document.documentElement.style.overflow = '';
+      if (logged === 'evet') {
+        if (overlay) overlay.style.display = 'none';
+        document.documentElement.style.overflow = '';
+        initAdminData();
+      } else {
+        if (overlay) overlay.style.display = 'flex';
+        document.documentElement.style.overflow = 'hidden';
+        var passEl = document.getElementById('adminPassInput');
+        if (passEl) { passEl.value = ''; passEl.focus(); }
+      }
     });
   </script>
 
