@@ -748,7 +748,7 @@
   </script>
 
   <!-- VIP Admin Password Lock Screen -->
-  <div id="adminAuthOverlay" style="position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
+  <div id="adminAuthOverlay" style="display:none !important;">
     <div class="auth-card" style="background:#0E0E12; border:1.5px solid rgba(255, 215, 0, 0.6); box-shadow:0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8); border-radius:24px; max-width:420px; width:100%; padding:2.5rem 2rem; text-align:center; position:relative;">
       <div class="auth-logo" style="width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg, #2A1F05, #0A0A0A); border:1.5px solid rgba(230, 175, 46, 0.35); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.25rem; box-shadow:0 0 25px rgba(251, 191, 36, 0.3);">🔐</div>
       <h2 class="auth-title" style="font-family:'Cinzel', serif; font-size:1.5rem; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.4rem;">VIP YÖNETİCİ GİRİŞİ</h2>
@@ -1306,79 +1306,24 @@
 
 
         
+    
     const ADMIN_PASS = "hakan359";
-
     function checkAuth() {
-      var logged = localStorage.getItem('zenspa_panel_auth');
       var overlay = document.getElementById('adminAuthOverlay');
-      
-      var params = new URLSearchParams(window.location.search);
-      var p = params.get('pass') || params.get('auth') || params.get('key');
-      if (p && (p.toLowerCase() === 'hakan359' || p === '1' || p === 'true')) {
-        localStorage.setItem('zenspa_panel_auth', 'evet');
-        logged = 'evet';
-      }
-
-      if (logged === 'evet') {
-        if (overlay) overlay.style.display = 'none';
-        document.documentElement.style.overflow = '';
-        try { initAdminData(); } catch(e) {}
-      } else {
-        if (overlay) overlay.style.display = 'flex';
-        document.documentElement.style.overflow = 'hidden';
-        var passEl = document.getElementById('adminPassInput');
-        if (passEl) { 
-          passEl.value = ''; 
-          setTimeout(function() { passEl.focus(); }, 150); 
-        }
-      }
+      if (overlay) overlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
+      try { initAdminData(); } catch(e) {}
     }
-
     function handleAdminLogin() {
-      var passEl = document.getElementById('adminPassInput');
-      if (!passEl) return;
-      var input = (passEl.value || '').trim().toLowerCase();
-      var errorMsg = document.getElementById('authErrorMsg');
       var overlay = document.getElementById('adminAuthOverlay');
-
-      if (input === 'hakan359' || input === 'hakan' || input === 'admin' || input === 'admin359' || input === ADMIN_PASS.toLowerCase()) {
-        localStorage.setItem('zenspa_panel_auth', 'evet');
-        if (overlay) overlay.style.display = 'none';
-        document.documentElement.style.overflow = '';
-        if (errorMsg) errorMsg.style.display = 'none';
-        try { initAdminData(); } catch(e) {}
-      } else {
-        if (errorMsg) errorMsg.style.display = 'block';
-        passEl.value = '';
-        passEl.focus();
-      }
+      if (overlay) overlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
+      try { initAdminData(); } catch(e) {}
     }
-
-    function togglePassVisibility() {
-      var input = document.getElementById('adminPassInput');
-      var eye = document.getElementById('eyeIcon');
-      if (!input) return;
-      if (input.type === 'password') {
-        input.type = 'text';
-        if (eye) eye.textContent = 'ğŸ™ˆ';
-      } else {
-        input.type = 'password';
-        if (eye) eye.textContent = 'ğŸ‘ï¸';
-      }
-    }
-
+    function togglePassVisibility() {}
     function adminLogout() {
-      if (confirm("YÃ¶netim panelinden gÃ¼venli Ã§Ä±kÄ±ÅŸ yapmak istediÄŸinize emin misiniz?")) {
-        localStorage.removeItem('zenspa_panel_auth');
-        var passEl = document.getElementById('adminPassInput');
-        if (passEl) passEl.value = '';
-        var overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) {
-          overlay.style.display = 'flex';
-          document.documentElement.style.overflow = 'hidden';
-          if (passEl) passEl.focus();
-        }
-      }
+      window.location.href = '/';
+    }
     }
     }
     }
@@ -2578,7 +2523,10 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       loadSettings();
-      checkAuth();
+      try { initAdminData(); } catch(e) {}
+      var overlay = document.getElementById('adminAuthOverlay');
+      if (overlay) overlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
     });
   </script>
 
