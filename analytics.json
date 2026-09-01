@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "01.09.2026 18:07",
+      "city": "Washington (District of Columbia)",
+      "country": "United States",
+      "ip": "202.8.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "01.09.2026 16:05",
       "city": "Warsaw (Masovian Voivodeship)",
       "country": "Poland",
@@ -42,17 +50,18 @@
   "cityCounts": {
     "Izmir": 2,
     "Ankara": 1,
-    "Warsaw": 1
+    "Warsaw": 1,
+    "Washington": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtiuzqtn_cx79",
-      "city": "Warsaw",
+      "id": "v_mtizch0t_x3ll",
+      "city": "Washington",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788278745643,
-      "time": "16:05"
+      "lastSeen": 1788286057840,
+      "time": "18:07"
     }
   ],
-  "totalVisits": 4
+  "totalVisits": 5
 }
