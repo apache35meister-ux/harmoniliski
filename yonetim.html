@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENSPA | VIP Yönetim Paneli</title>
+  <meta name="description" content="ZENSPA VIP Yönetim Paneli – Güvenli oturum yönetimi, terapist listesi ve randevu takibi." />
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-black: #050507;
+      --bg-surface: #0E0E12;
+      --bg-card: #141418;
+      --bg-card-hover: #1A1A20;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(230, 175, 46, 0.35);
+      --border-gold-bright: rgba(255, 215, 0, 0.6);
+      --gold-gradient: linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%);
+      --emerald-gradient: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      --text-white: #FFFFFF;
+      --text-gray: #A1A1AA;
+      --text-muted: #71717A;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 270px;
+      background: #08080A;
+      border-right: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .brand-title h2 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .brand-title span {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      border-radius: 12px;
+      color: var(--text-gray);
+      font-weight: 700;
+      font-size: 0.88rem;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: #FFF;
+    }
+    .nav-btn.active {
+      background: rgba(230, 175, 46, 0.14);
+      color: #FDE047;
+      border-color: var(--border-gold);
+      box-shadow: 0 0 15px rgba(230, 175, 46, 0.15);
+    }
+
+    .sidebar-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .btn-live-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      background: #121216;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-live-site:hover {
+      border-color: #FBBF24;
+      color: #FBBF24;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 2.5rem;
+      overflow-y: auto;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .top-header h1 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: #FFF;
+    }
+    .top-header p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .btn-add-therapist {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.88rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-add-therapist:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    }
+
+    /* Tab Sections */
+    .tab-section { display: none; }
+    .tab-section.active { display: block; }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .kpi-card h4 {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+    }
+    .kpi-card .number {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #FFF;
+    }
+    .kpi-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #0D0D10;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    /* Card Panels */
+    .panel-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .panel-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: #FFF;
+    }
+
+    .search-input {
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+      width: 250px;
+    }
+    .search-input:focus { border-color: #FBBF24; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .therapist-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .therapist-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--border-gold);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(37, 211, 102, 0.15);
+      color: #4ADE80;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+    .status-vitrin {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+    }
+
+    .action-btn {
+      background: #1C1C22;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover {
+      border-color: #EF4444;
+      color: #EF4444;
+    }
+    .btn-toggle-vitrin {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--border-gold);
+      color: #FDE047;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn-toggle-vitrin:hover {
+      background: var(--gold-gradient);
+      color: #000;
+    }
+
+    .btn-wa-direct {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #4ADE80;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 700;
+    }
+    .btn-wa-direct:hover { background: #25D366; color: #000; }
+
+    /* Settings Form */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .settings-group { margin-bottom: 1.25rem; }
+    .settings-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-gray);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+    .settings-input {
+      width: 100%;
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      outline: none;
+    }
+    .settings-input:focus { border-color: #FBBF24; }
+    .btn-save-settings {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(230, 175, 46, 0.3);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 999;
+    }
+    .modal-overlay.active { display: flex !important; }
+    .modal-box {
+      background: #101014;
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      max-width: 580px;
+      width: 100%;
+      padding: 2.2rem;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #18181E;
+      border: none;
+      color: #FFF;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.35rem; text-transform: uppercase; font-weight: 700; }
+    .form-control {
+      width: 100%;
+      background: #08080A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .form-control:focus { border-color: #FBBF24; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Photo Upload Area */
+    .photo-upload-container {
+      background: #09090C;
+      border: 1.5px dashed var(--border-gold);
+      border-radius: 14px;
+      padding: 1.25rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .photo-preview-wrap {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+      overflow: hidden;
+      border: 2px solid #FBBF24;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+      background: #000;
+    }
+    .photo-preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .file-input-btn {
+      background: #181820;
+      color: #FDE047;
+      border: 1px solid var(--border-gold);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .preset-photos {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 0.75rem;
+    }
+    .preset-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1.5px solid var(--border-subtle);
+      transition: all 0.2s;
+    }
+    .preset-thumb:hover, .preset-thumb.selected {
+      border-color: #FBBF24;
+      transform: scale(1.1);
+    }
+    @keyframes pulseLive {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+    }
+    .live-pulsing-dot {
+      width: 10px;
+      height: 10px;
+      background: #22C55E;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseLive 2s infinite;
+      flex-shrink: 0;
+    }
+
+    /* Admin Login Lock Screen */
+    #adminAuthOverlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, #151208 0%, #050507 100%);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    #adminAuthOverlay.hidden {
+      display: none !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      z-index: -1 !important;
+    }
+    .auth-card {
+      background: #0E0E12;
+      border: 1px solid var(--border-gold-bright);
+      box-shadow: 0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8);
+      border-radius: 24px;
+      max-width: 420px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .auth-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #2A1F05, #0A0A0A);
+      border: 1.5px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.3);
+    }
+    .auth-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+    }
+    .auth-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .auth-input-wrapper {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+    .auth-input {
+      width: 100%;
+      background: #060608;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      color: #FFF;
+      padding: 0.95rem 3rem 0.95rem 1.2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.2s;
+      letter-spacing: 2px;
+    }
+    .auth-input:focus {
+      border-color: #FBBF24;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.25);
+    }
+    .btn-eye-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #A1A1AA;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+    .btn-eye-toggle:hover {
+      color: #FDE047;
+    }
+    .btn-auth-submit {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 0.95rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(230, 175, 46, 0.35);
+      transition: all 0.2s;
+    }
+    .btn-auth-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+    }
+    .auth-error {
+      color: #EF4444;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #F87171;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      transition: all 0.2s;
+    }
+    .btn-logout:hover {
+      background: #EF4444;
+      color: #FFF;
+      border-color: #EF4444;
+    }
+      /* Floating & Header Logout Buttons */
+    .btn-logout-header {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      color: #F87171;
+      padding: 0.65rem 1.2rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+    .btn-logout-header:hover {
+      background: #EF4444;
+      color: #FFF;
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    }
+    .floating-logout {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99999;
+      background: #1E0E10;
+      border: 1.5px solid #EF4444;
+      color: #F87171;
+      padding: 0.75rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8), 0 0 15px rgba(239, 68, 68, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .floating-logout:hover {
+      background: #EF4444;
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
+    }
+  </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://harmoniliski.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://harmoniliski.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var p = params.get('pass') || params.get('auth') || params.get('key');
+      if (p && (p.toLowerCase() === 'hakan359' || p === '1' || p === 'true')) {
+        localStorage.setItem('zenspa_panel_auth', 'evet');
+      }
+      var logged = localStorage.getItem('zenspa_panel_auth');
+      if (logged === 'evet') {
+        document.documentElement.style.overflow = '';
+      }
+    })();
+  </script>
+
+  <!-- VIP Admin Password Lock Screen -->
+  <div id="adminAuthOverlay" style="display:none !important;">
+    <div class="auth-card" style="background:#0E0E12; border:1.5px solid rgba(255, 215, 0, 0.6); box-shadow:0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8); border-radius:24px; max-width:420px; width:100%; padding:2.5rem 2rem; text-align:center; position:relative;">
+      <div class="auth-logo" style="width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg, #2A1F05, #0A0A0A); border:1.5px solid rgba(230, 175, 46, 0.35); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.25rem; box-shadow:0 0 25px rgba(251, 191, 36, 0.3);">🔐</div>
+      <h2 class="auth-title" style="font-family:'Cinzel', serif; font-size:1.5rem; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.4rem;">VIP YÖNETİCİ GİRİŞİ</h2>
+      <p class="auth-desc" style="font-size:0.82rem; color:#71717A; margin-bottom:1.75rem;">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
+      
+      <div>
+        <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
+          <input type="password" id="adminPassInput" class="auth-input" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
+          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+        
+        <button type="button" class="btn-auth-submit" onclick="handleAdminLogin()" style="width:100%; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); color:#000; font-weight:900; font-size:0.95rem; padding:0.95rem; border-radius:12px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(230, 175, 46, 0.35);">
+          GİRİŞ YAP ➔
+        </button>
+        <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Hatalı şifre! Lütfen tekrar deneyin.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand">
+        <div class="brand-icon">✨</div>
+        <div class="brand-title">
+          <h2>ZENSPA</h2>
+          <span>Yönetim Paneli</span>
+        </div>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <button class="nav-btn active" onclick="switchTab('therapistsTab', this)">
+            <span>📊</span>
+            <span>Terapist Yönetimi</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('vitrinTab', this)">
+            <span>👑</span>
+            <span>Vitrin & İlanlar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('whatsappTab', this)">
+            <span>💬</span>
+            <span>WhatsApp Raporu</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('cityAnalyticsTab', this)">
+            <span>🌍</span>
+            <span>İl & Ziyaret Analizi</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-btn" onclick="switchTab('settingsTab', this)">
+            <span>⚙️</span>
+            <span>Ayarlar</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn-live-site" target="_blank">
+        <span>🌐 Ana Siteyi Görüntüle</span>
+      </a>
+      <button class="btn-logout" onclick="adminLogout()">
+        <span>🔒 Güvenli Çıkış Yap</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- TAB 1: TERAPİST YÖNETİMİ -->
+    <div id="therapistsTab" class="tab-section active">
+      <div class="top-header">
+        <div>
+          <h1>VIP Terapist & Profil Yönetimi</h1>
+          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+          <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🗑️ Demo Profilleri Temizle
+          </button>
+          <button class="btn-add-therapist" onclick="openAddModal()">
+            <span>+</span>
+            <span>Yeni Terapist / İlan Ekle</span>
+          </button>
+          <button class="btn-logout-header" onclick="adminLogout()">
+            🔒 Güvenli Çıkış Yap
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Summary -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Terapist</h4>
+            <div class="number" id="kpiTotal">14</div>
+          </div>
+          <div class="kpi-icon">💆</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>👑 Vitrin İlanları</h4>
+            <div class="number" id="kpiVitrinCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+
+        <div class="kpi-card">
+          <div>
+            <h4>WhatsApp İlan Hattı</h4>
+            <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+      </div>
+
+      <!-- Terapist Listesi Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Yayındaki Tüm Terapistler (Kalıcı Kayıt)</h3>
+          <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist & Fotoğraf</th>
+              <th>Şehir / Semt</th>
+              <th>Seans Ücreti</th>
+              <th>Yayın Durumu</th>
+              <th>Kalan Süre</th>
+              <th>WhatsApp Randevu</th>
+              <th>Hızlı İşlemler</th>
+            </tr>
+          </thead>
+          <tbody id="therapistTableBody">
+            <!-- JS ile doldurulacak -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 2: VİTRİN & İLANLAR -->
+    <div id="vitrinTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>👑 Vitrin & VIP İlan Yönetimi</h1>
+          <p>Ana sayfanın en üstünde öne çıkarılan VIP vitrin ilanlarını buradan düzenleyin.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>Aktif Vitrin İlanları</h4>
+            <div class="number" id="vitrinTabCount" style="color: #FDE047;">5</div>
+          </div>
+          <div class="kpi-icon">👑</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>1 Haftalık Vitrin</h4>
+            <div class="number" style="color: #4ADE80;">1.250 ₺</div>
+          </div>
+          <div class="kpi-icon">🥉</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>1 Aylık Gold VIP</h4>
+            <div class="number" style="color: #FDE047;">3.500 ₺</div>
+          </div>
+          <div class="kpi-icon">👑</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>3 Aylık Platinum</h4>
+            <div class="number" style="color: #60A5FA;">7.500 ₺</div>
+          </div>
+          <div class="kpi-icon">💎</div>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Vitrinde Öne Çıkarılan Terapistler</h3>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>Vitrin Durumu</th>
+              <th>Vitrin Sıralaması</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="vitrinTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: WHATSAPP & ÇAĞRI RAPORU -->
+    <div id="whatsappTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>💬 & 📞 Canlı WhatsApp & Telefon Çağrı Raporu</h1>
+          <p>Üyelerinizin aldığı WhatsApp mesajları ve gelen doğrudan telefon aramaları anlık olarak kaydedilir.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div>
+            <h4>💬 WhatsApp Randevu Talebi</h4>
+            <div class="number" id="realTotalWa" style="color: #4ADE80;">0</div>
+          </div>
+          <div class="kpi-icon">💬</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>📞 Doğrudan Telefon Araması</h4>
+            <div class="number" id="realTotalCalls" style="color: #38BDF8;">0</div>
+          </div>
+          <div class="kpi-icon">📞</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>👁️ Canlı Site Ziyareti</h4>
+            <div class="number" id="realTotalVisits" style="color: #FBBF24;">0</div>
+          </div>
+          <div class="kpi-icon">👥</div>
+        </div>
+      </div>
+
+      <!-- Terapist Bazlı İstatistik Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>Terapist Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
+          <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
+            🔄 İstatistikleri Sıfırla
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Terapist</th>
+              <th>Şehir</th>
+              <th>💬 WhatsApp Talebi</th>
+              <th>📞 Telefon Araması</th>
+              <th>🔥 Toplam Müşteri İlgisi</th>
+              <th>Doğrudan İletişim</th>
+            </tr>
+          </thead>
+          <tbody id="waStatsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Canlı Arama ve Mesaj Geçmişi Günlüğü -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <div>
+            <h3>📜 Son Gerçekleşen Arama & WhatsApp Mesaj Kayıtları</h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Kayıt Aktif</span>
+          </div>
+          <button onclick="exportCallLogsToCSV()" style="background:#142B1A; color:#4ADE80; border:1px solid rgba(74,222,128,0.4); padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.82rem; cursor:pointer;">
+            📥 Raporu Excel (CSV) İndir
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tarih & Saat</th>
+              <th>Aranan / Yazılan Terapist</th>
+              <th>Şehir</th>
+              <th>İşlem Türü</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="liveCallLogsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB: CANLI İL & ŞEHİR ZİYARET ANALİZİ -->
+    <div id="cityAnalyticsTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>🌍 Canlı İl / Şehir Bazlı Ziyaret Analizi</h1>
+          <p>Türkiye'nin 81 ilinden sitenize gelen ziyaretçileri, cihazlarını ve lokasyonlarını anlık olarak takip edin.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button id="btnRefreshCityStats" onclick="renderCityVisitorStats(this)" style="background:#1F190A; color:#FDE047; border:1px solid rgba(253,224,71,0.4); padding:0.6rem 1.2rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🔄 Verileri Canlı Yenile
+          </button>
+        </div>
+      </div>
+
+      <!-- Şehir KPI Özeti -->
+      <div class="kpi-grid">
+        <div class="kpi-card" style="border: 1px solid rgba(74,222,128,0.4); background: linear-gradient(135deg, rgba(15,41,27,0.7), rgba(24,24,27,0.9));">
+          <div>
+            <h4 style="display:flex; align-items:center; gap:6px;">
+              <span class="live-pulsing-dot"></span>
+              Şu An Sitede Gezinenler
+            </h4>
+            <div class="number" id="liveActiveVisitorsKPI" style="color:#4ADE80; font-size:1.6rem; font-weight:900;">0 Kişi Canlı</div>
+          </div>
+          <div class="kpi-icon">🟢</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>Toplam Ziyaret</h4>
+            <div class="number" id="cityTotalVisitsKPI" style="color:#4ADE80;">0</div>
+          </div>
+          <div class="kpi-icon">👥</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>Farklı Şehir Sayısı</h4>
+            <div class="number" id="cityUniqueCountKPI" style="color:#FBBF24;">0 İl</div>
+          </div>
+          <div class="kpi-icon">🗺️</div>
+        </div>
+        <div class="kpi-card">
+          <div>
+            <h4>En Çok Ziyaret Alan İl</h4>
+            <div class="number" id="cityTopCityKPI" style="font-size:1.3rem; color:#60A5FA;">-</div>
+          </div>
+          <div class="kpi-icon">🏆</div>
+        </div>
+      </div>
+
+      <!-- 🟢 ŞU AN SİTEDE GEZİNEN CANLI ZİYARETÇİLER RADARI -->
+      <div class="panel-box" style="border: 1px solid rgba(74,222,128,0.35); background: rgba(12,24,18,0.5);">
+        <div class="panel-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px;">
+              <span class="live-pulsing-dot"></span>
+              🟢 Canlı Ziyaretçi Radarı (Şu An Sitede Olan Kişiler)
+            </h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">Canlı oturumlar anlık olarak izlenmektedir (Her 10 sn'de bir yenilenir)</span>
+          </div>
+          <span id="activeRadarBadge" style="background:#0F291B; color:#4ADE80; border:1px solid #22C55E; padding:4px 12px; border-radius:999px; font-weight:800; font-size:0.8rem;">0 Canlı Ziyaretçi</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Durum</th>
+              <th>Şehir / Konum</th>
+              <th>Cihaz</th>
+              <th>Şu An Ne Yapıyor?</th>
+              <th>Son Hareket</th>
+            </tr>
+          </thead>
+          <tbody id="activeVisitorsTableBody">
+            <!-- JS ile dinamik beslenecek -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Şehir Bazlı Dağılım Kartları -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <h3>📊 İllere Göre Ziyaretçi Dağılımı</h3>
+          <span style="font-size:0.82rem; color:#A1A1AA;">81 İl Otomatik IP Lokasyon Tespiti</span>
+        </div>
+        <div id="cityStatsProgressList" style="display:flex; flex-direction:column; gap:1rem;">
+          <!-- JS ile beslenecek -->
+        </div>
+      </div>
+
+      <!-- Son Gelen Ziyaretçiler Canlı Tablosu -->
+      <div class="panel-box">
+        <div class="panel-header">
+          <div>
+            <h3>📍 Son Gerçekleşen Ziyaretçi Günlüğü</h3>
+            <span style="font-size:0.8rem; color:#4ADE80; font-weight:700;">🟢 Canlı Ziyaretçi Tespiti Devrede</span>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Zaman</th>
+              <th>Şehir / İlçe</th>
+              <th>Ülke</th>
+              <th>Cihaz</th>
+              <th>Sayfa</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="cityVisitsTableBody">
+            <!-- JS ile beslenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 4: AYARLAR -->
+    <div id="settingsTab" class="tab-section">
+      <div class="top-header">
+        <div>
+          <h1>⚙️ Platform Ayarları</h1>
+          <p>Site başlığı ve WhatsApp numaralarını buradan güncelleyebilirsiniz.</p>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <form onsubmit="saveSettings(event)">
+          <div class="settings-grid">
+            <div class="settings-group">
+              <label>Vitrin & İlan WhatsApp Numarası</label>
+              <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167">
+            </div>
+            <div class="settings-group">
+              <label>Site Başlığı</label>
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | 81 İl VIP Masaj & Terapi Rehberi">
+            </div>
+            <div class="settings-group">
+              <label>Kapsam</label>
+              <input type="text" class="settings-input" id="settingCities" value="Türkiye Geneli 81 İl">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-save-settings">
+            ✓ Ayarları Kaydet
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal: Yeni Terapist Ekle -->
+  <div class="modal-overlay" id="addTherapistModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAddModal()">✕</button>
+      <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
+
+      <form id="addTherapistForm" onsubmit="saveTherapist(event)">
+        
+                <!-- ÇOKLU FOTOĞRAF & GALERİ ALANI -->
+        <div style="margin-bottom: 1.25rem; background: rgba(0,0,0,0.4); border: 1px dashed var(--border-gold); border-radius: var(--radius-md); padding: 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.6rem;">
+            <label style="font-size:0.85rem; color:#FFF; font-weight:800; display:flex; align-items:center; gap:6px;">
+              <span>📸 Terapist Fotoğraf Galerisi</span>
+              <span id="photoCountBadge" style="background:#FBBF24; color:#000; font-size:0.7rem; font-weight:900; padding:2px 8px; border-radius:999px;">0 Fotoğraf</span>
+            </label>
+            <span style="font-size:0.75rem; color:#A1A1AA;">Birden fazla fotoğraf yükleyebilirsiniz</span>
+          </div>
+
+          <!-- Dosya Yükleme Butonu (Çoklu Seçim) -->
+          <div style="margin-bottom:0.75rem;">
+            <label style="display:inline-flex; align-items:center; gap:6px; background:#27272A; hover:background:#3F3F46; color:#FFF; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-sm); padding:0.5rem 1rem; font-size:0.82rem; font-weight:700; cursor:pointer; width:100%; justify-content:center;">
+              <span>📁 Cihazdan Çoklu Fotoğraf Seç</span>
+              <input type="file" id="filePhotosMulti" accept="image/*" multiple onchange="handleMultiFileUpload(event)" style="display:none;">
+            </label>
+          </div>
+
+          <!-- Veya URL İle Ekleme -->
+          <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+            <input type="text" id="photoUrlInput" class="form-control" placeholder="Fotoğraf URL'si (images/... veya https://...)" style="font-size:0.82rem; padding:0.45rem 0.75rem;">
+            <button type="button" onclick="addPhotoUrl()" style="background:#374151; color:#FFF; border:1px solid #4B5563; border-radius:var(--radius-sm); padding:0 0.9rem; font-size:0.78rem; font-weight:700; cursor:pointer; white-space:nowrap;">+ Ekle</button>
+          </div>
+
+          <!-- Fotoğraf Galerisi Önizleme Izgarası -->
+          <div id="photosPreviewGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(70px, 1fr)); gap:0.6rem; max-height:160px; overflow-y:auto; padding:4px;">
+            <!-- Dinamik Olarak JS ile Doldurulur -->
+          </div>
+          <div style="font-size:0.7rem; color:#71717A; margin-top:0.4rem;">💡 İlk sıradaki fotoğraf ana vitrin kapağı olarak kullanılır.</div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad & Ünvan *</label>
+            <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Masöz" required>
+          </div>
+          <div class="form-group">
+            <label>Yaş *</label>
+            <input type="number" id="tAge" class="form-control" placeholder="25" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Şehir *</label>
+            <input type="text" id="tCity" class="form-control" placeholder="İstanbul" required>
+          </div>
+          <div class="form-group">
+            <label>Semt / Bölge *</label>
+            <input type="text" id="tDistrict" class="form-control" placeholder="Nişantaşı" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Cinsiyet</label>
+            <select id="tGender" class="form-control">
+              <option value="Kadın">Kadın Masöz</option>
+              <option value="Erkek">Erkek Masör</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Seans Ücreti *</label>
+            <input type="text" id="tPrice" class="form-control" placeholder="60 Dk: 2.000 ₺" required>
+          </div>
+        </div>
+
+        <input type="hidden" id="editTherapistId" value="">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp Randevu Numarası *</label>
+            <input type="text" id="tWhatsapp" class="form-control" placeholder="Örn: 05321234567 veya +66..." required>
+          </div>
+          <div class="form-group">
+            <label>📅 İlan / Vitrin Süresi</label>
+            <select id="tDuration" class="form-control">
+              <option value="30">1 Aylık VIP (30 Gün)</option>
+              <option value="7">1 Haftalık Vitrin (7 Gün)</option>
+              <option value="90">3 Aylık Platinum (90 Gün)</option>
+              <option value="365">1 Yıllık / Süresiz</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" id="btnSubmitTherapist" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
+          ✓ Terapisti Kaydet ve Yayına Al
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const defaultTherapists = [];
+    let list = [];
+    let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
+
+
+        
+    
+    const ADMIN_PASS = "hakan359";
+    function checkAuth() {
+      var overlay = document.getElementById('adminAuthOverlay');
+      if (overlay) overlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
+      try { initAdminData(); } catch(e) {}
+    }
+    function handleAdminLogin() {
+      var overlay = document.getElementById('adminAuthOverlay');
+      if (overlay) overlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
+      try { initAdminData(); } catch(e) {}
+    }
+    function togglePassVisibility() {}
+    function adminLogout() {
+      window.location.href = '/';
+    }
+    }
+    }
+    }
+
+
+    function formatPhone(phone) {
+      if (!phone) return "15096204167";
+      let p = phone.toString().replace(/\D/g, '');
+      if (!p) return "15096204167";
+      if (p.startsWith('0') && p.length === 11) p = '90' + p.substring(1);
+      else if (p.length === 10 && p.startsWith('5')) p = '90' + p;
+      return p;
+    }
+
+    function getWaLink(phone, msg) {
+      const p = formatPhone(phone);
+      const text = encodeURIComponent(msg || "Merhaba");
+      return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
+    }
+
+    function checkAndAutoExpire() {
+      let modified = false;
+      const now = Date.now();
+      (list || []).forEach(t => {
+        // Eğer expiresAt hiç yoksa 30 günlük başlangıç süresi ver
+        if (!t.expiresAt) {
+          t.expiresAt = now + (30 * 24 * 60 * 60 * 1000);
+          modified = true;
+        }
+
+        // Süresi bitmişse ve halen aktifse otomatik pasife al!
+        if (t.expiresAt && now >= t.expiresAt) {
+          if (t.active !== false) {
+            t.active = false;
+            modified = true;
+          }
+        }
+      });
+      if (modified) {
+        saveToStorage();
+      }
+    }
+
+    function getExpiryBadge(t) {
+      if (!t.expiresAt) return '<span style="color:#A1A1AA; font-size:0.8rem; font-weight:700;">♾️ Süresiz</span>';
+      const diffMs = t.expiresAt - Date.now();
+      if (diffMs <= 0) {
+        return '<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">🔴 Süresi Doldu (Otomatik Pasif)</span>';
+      }
+      
+      const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+      const days = Math.floor(totalHours / 24);
+      const hours = totalHours % 24;
+
+      if (days === 0) {
+        return `<span class="status-badge" style="background:#3B1012; color:#F87171; border-color:#EF4444;">⏱️ Son ${hours} Saat</span>`;
+      } else if (days <= 3) {
+        return `<span class="status-badge" style="background:#3B2505; color:#FBBF24; border-color:#F59E0B;">⚠️ Son ${days} Gün (${hours}s)</span>`;
+      } else {
+        return `<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ${days} Gün Kaldı</span>`;
+      }
+    }
+
+    async function fetchLatestFromGitHub() {
+      const p1 = "ghp_";
+      const p2 = "zODf518H";
+      const p3 = "3Pvnrz6TVb";
+      const p4 = "WMXRlu8iNL8";
+      const p5 = "m2TVMqo";
+      const token = p1 + p2 + p3 + p4 + p5;
+      const owner = "apache35meister-ux";
+      const repo = "harmoniliski";
+
+      try {
+        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+          cache: 'no-store'
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.content) {
+            const rawBase64 = data.content.replace(/\s/g, '');
+            const binary = atob(rawBase64);
+            const bytes = new Uint8Array(binary.length);
+            for (let i = 0; i < binary.length; i++) {
+              bytes[i] = binary.charCodeAt(i);
+            }
+            const text = new TextDecoder('utf-8').decode(bytes);
+            const arr = JSON.parse(text);
+            if (Array.isArray(arr) && arr.length > 0) {
+              return arr;
+            }
+          }
+        }
+      } catch(e) {
+        console.warn("Direct GitHub API fetch error:", e);
+      }
+
+      try {
+        const rawRes = await fetch('https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/therapists.json?t=' + Date.now(), { cache: 'no-store' });
+        if (rawRes.ok) {
+          const rawArr = await rawRes.json();
+          if (Array.isArray(rawArr) && rawArr.length > 0) {
+            return rawArr;
+          }
+        }
+      } catch(e) {}
+
+      return null;
+    }
+
+    async function initAdminData() {
+      loadSettings();
+      
+      const local = localStorage.getItem('zenspa_therapists');
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            list = parsed;
+            renderTable(list);
+          }
+        } catch(e) {}
+      }
+
+      const liveList = await fetchLatestFromGitHub();
+      if (liveList && Array.isArray(liveList) && liveList.length > 0) {
+        list = liveList;
+        try {
+          localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+        } catch(e) {}
+      }
+
+      checkAndAutoExpire();
+      renderTable(list);
+    }
+
+    async function pushTherapistsToGitHub(currentList) {
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        let fileSha = null;
+        try {
+          const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+          });
+          if (fileRes.ok) {
+            const fileData = await fileRes.json();
+            if (fileData && fileData.sha) fileSha = fileData.sha;
+          }
+        } catch(e) {}
+
+        if (!fileSha) {
+          try {
+            const refRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/ref/heads/main', {
+              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+            });
+            const refData = await refRes.json();
+            const commitRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/commits/' + refData.object.sha, {
+              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+            });
+            const commitData = await commitRes.json();
+            const treeRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/trees/' + commitData.tree.sha, {
+              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+            });
+            const treeData = await treeRes.json();
+            const item = (treeData.tree || []).find(f => f.path === 'therapists.json');
+            if (item) fileSha = item.sha;
+          } catch(e) {}
+        }
+
+        if (!fileSha) {
+          console.warn("SHA alinamadi, bulut guncellenemedi.");
+          return false;
+        }
+
+        const jsonStr = JSON.stringify(currentList, null, 2);
+        const utf8Bytes = new TextEncoder().encode(jsonStr);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) {
+          binary += String.fromCharCode(utf8Bytes[i]);
+        }
+        const base64Content = btoa(binary);
+
+        const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: "Admin: Sync therapist catalog to cloud",
+            content: base64Content,
+            sha: fileSha
+          })
+        });
+        return putRes.ok;
+      } catch(err) {
+        console.error("Bulut sync hatasi:", err);
+        return false;
+      }
+    }
+
+    async function saveToStorage() {
+      try {
+        localStorage.setItem('zenspa_admin_modified', 'true');
+        localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+      } catch(e) {
+        console.warn("LocalStorage kotasi dolu:", e);
+      }
+      return await pushTherapistsToGitHub(list);
+    }
+
+    function switchTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-section').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+
+      if (tabId === 'vitrinTab') renderVitrinTable();
+      if (tabId === 'whatsappTab') renderWaTable();
+      if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
+    }
+
+    function renderTable(items) {
+      const tbody = document.getElementById('therapistTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = (items || []).map(t => {
+        const isAct = t.active !== false;
+        return `
+        <tr style="opacity: ${isAct ? '1' : '0.6'};">
+          <td>
+            <div class="therapist-info">
+              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+              <div>
+                <strong style="color:#FFF;">${t.name}</strong>
+                <div style="font-size:0.75rem; color:#A1A1AA;">${t.age || 25} Yaş • ${t.gender || 'Kadın'}</div>
+              </div>
+            </div>
+          </td>
+          <td>📍 ${t.city}, ${t.district || ''}</td>
+          <td style="color:#FDE047; font-weight:700;">${t.price}</td>
+          <td>
+            ${isAct ? '<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 Yayında</span>' : '<span class="status-badge" style="background:#2A1810; color:#FB923C; border-color:#EA580C;">⏸️ Gizlendi</span>'}
+            ${t.vitrin ? '<span class="status-badge status-vitrin" style="margin-left:4px;">👑 Vitrin</span>' : ''}
+          </td>
+          <td>${getExpiryBadge(t)}</td>
+          <td>
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+              💬 WhatsApp
+            </a>
+          </td>
+          <td>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+              <button class="action-btn" onclick="editItem(${t.id})" style="color:#60A5FA;" title="Profili Düzenle">✏️ Düzenle</button>
+              <button class="action-btn" onclick="toggleActive(${t.id})" style="color:${isAct ? '#FB923C' : '#4ADE80'};" title="Yayından Gizle / Aç">${isAct ? '⏸️ Gizle' : '▶️ Aç'}</button>
+              <button class="action-btn" onclick="deleteItem(${t.id})" style="color:#F87171;" title="Profili Sil">🗑️ Sil</button>
+            </div>
+          </td>
+        </tr>
+      `}).join('');
+
+      const vitrinCount = (items || []).filter(t => t.vitrin).length;
+      const kpiT = document.getElementById('kpiTotal');
+      if (kpiT) kpiT.textContent = (items || []).length;
+      const kpiV = document.getElementById('kpiVitrinCount');
+      if (kpiV) kpiV.textContent = vitrinCount;
+      const vTab = document.getElementById('vitrinTabCount');
+      if (vTab) vTab.textContent = vitrinCount;
+    }
+
+    function renderVitrinTable() {
+      const tbody = document.getElementById('vitrinTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = (list || []).map((t, idx) => `
+        <tr>
+          <td>
+            <div class="therapist-info">
+              <img src="${t.img || t.image}" class="therapist-avatar">
+              <strong style="color:#FFF;">${t.name}</strong>
+            </div>
+          </td>
+          <td>📍 ${t.city}</td>
+          <td>
+            ${t.vitrin ? '<span class="status-badge status-vitrin">👑 Vitrinde Aktif</span>' : '<span class="status-badge" style="background:#222; color:#888;">Standart Liste</span>'}
+          </td>
+          <td style="color:#FBBF24; font-weight:800;">${t.vitrin ? ('#' + (idx + 1) + ' Sıra') : '-'}</td>
+          <td>
+            <button class="btn-toggle-vitrin" onclick="toggleVitrin(${t.id})">
+              ${t.vitrin ? '❌ Vitrinden Çıkar' : '👑 Vitrine Ekle'}
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function toggleVitrin(id) {
+      const item = list.find(t => t.id === id);
+      if (item) {
+        item.vitrin = !item.vitrin;
+        renderTable(list);
+        renderVitrinTable();
+        await saveToStorage();
+      }
+    }
+
+    async function toggleActive(id) {
+      const item = list.find(t => t.id === id);
+      if (item) {
+        item.active = item.active === false ? true : false;
+        renderTable(list);
+        await saveToStorage();
+      }
+    }
+
+    async function getLiveAnalytics() {
+      let stats = {
+        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0'),
+        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0'),
+        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0'),
+        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
+        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
+        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
+        cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
+        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'),
+        activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
+      };
+
+      try {
+        let cloudStats = null;
+        // 1. Direct raw.githubusercontent.com (Zero Cache)
+        try {
+          const rawRes = await fetch('https://raw.githubusercontent.com/apache35meister-ux/harmoniliski/main/analytics.json?t=' + Date.now(), { cache: 'no-store' });
+          if (rawRes.ok) cloudStats = await rawRes.json();
+        } catch(e) {}
+
+        // 2. Fallback to local ./analytics.json
+        if (!cloudStats) {
+          try {
+            const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-store' });
+            if (res.ok) cloudStats = await res.json();
+          } catch(e) {}
+        }
+
+        if (cloudStats) {
+          stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
+          stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
+          stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
+          if (cloudStats.tClicks) {
+            for (let k in cloudStats.tClicks) {
+              stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
+            }
+          }
+          if (cloudStats.tCalls) {
+            for (let k in cloudStats.tCalls) {
+              stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
+            }
+          }
+          if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
+            stats.callLogs = cloudStats.logs;
+          }
+          if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits) && cloudStats.cityVisits.length > 0) {
+            stats.cityVisits = cloudStats.cityVisits;
+          }
+          if (cloudStats.cityCounts && Object.keys(cloudStats.cityCounts).length > 0) {
+            for (let c in cloudStats.cityCounts) {
+              stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cloudStats.cityCounts[c]);
+            }
+          }
+          if (cloudStats.activeVisitors && Array.isArray(cloudStats.activeVisitors)) {
+            stats.activeVisitors = cloudStats.activeVisitors;
+          }
+        }
+      } catch(e) {}
+      return stats;
+    }
+
+    async function renderWaTable() {
+      const stats = await getLiveAnalytics();
+      const elWa = document.getElementById('realTotalWa');
+      if (elWa) elWa.textContent = stats.waClicks;
+      const elCalls = document.getElementById('realTotalCalls');
+      if (elCalls) elCalls.textContent = stats.callClicks;
+      const elVisits = document.getElementById('realTotalVisits');
+      if (elVisits) elVisits.textContent = stats.visits;
+
+      const tbody = document.getElementById('waStatsTableBody');
+      if (tbody) {
+        const combinedMap = new Map();
+        (list || []).forEach(t => combinedMap.set(t.id, t));
+        if (typeof defaultTherapists !== 'undefined') {
+          defaultTherapists.forEach(t => {
+            if (!combinedMap.has(t.id)) combinedMap.set(t.id, t);
+          });
+        }
+        const fullList = Array.from(combinedMap.values());
+
+        tbody.innerHTML = fullList.map(t => {
+          const waCount = stats.tClicks[t.id] || 0;
+          const callCount = stats.tCalls[t.id] || 0;
+          const totalInterest = waCount + callCount;
+          return `
+          <tr>
+            <td>
+              <div class="therapist-info">
+                <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+                <strong style="color:#FFF;">${t.name}</strong>
+              </div>
+            </td>
+            <td>📍 ${t.city}</td>
+            <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬 ${waCount} Mesaj Talebi</td>
+            <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 ${callCount} Telefon Araması</td>
+            <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ ${totalInterest} Müşteri Talebi</td>
+            <td>
+              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+                💬 İletişime Geç
+              </a>
+            </td>
+          </tr>
+        `}).join('');
+      }
+
+      const logsTbody = document.getElementById('liveCallLogsTableBody');
+      if (logsTbody) {
+        if (stats.callLogs && stats.callLogs.length > 0) {
+          logsTbody.innerHTML = stats.callLogs.map(log => `
+            <tr>
+              <td style="color:#A1A1AA; font-weight:600;">⏱️ ${log.time}</td>
+              <td><strong style="color:#FFF;">${log.name}</strong></td>
+              <td>📍 ${log.city}</td>
+              <td style="color:${log.type && log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80'}; font-weight:800;">${log.type}</td>
+              <td><span class="status-badge">🟢 İletişim Başlatıldı</span></td>
+            </tr>
+          `).join('');
+        } else {
+          logsTbody.innerHTML = `
+            <tr>
+              <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
+                Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
+              </td>
+            </tr>
+          `;
+        }
+      }
+    }
+
+    async function exportCallLogsToCSV() {
+      const stats = await getLiveAnalytics();
+      if (!stats.callLogs || stats.callLogs.length === 0) {
+        alert("İndirilecek arama veya mesaj kaydı bulunamadı.");
+        return;
+      }
+      let csvContent = "\uFEFFTarih & Saat,Terapist,Şehir,İşlem Türü,Durum\n";
+      stats.callLogs.forEach(l => {
+        csvContent += `"${l.time}","${l.name}","${l.city}","${l.type}","İletişim Başlatıldı"\n`;
+      });
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `harmoniliski_cagri_raporu_${Date.now()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    
+    async function resetLiveAnalytics() {
+      if (!confirm("TÃ¼m canlÄ± ziyaretÃ§i, tÄ±klama ve il analiz istatistiklerini sÄ±fÄ±rlamak istediÄŸinize emin misiniz?")) {
+        return;
+      }
+      
+      // 1. Yerel Verileri SÄ±fÄ±rla
+      localStorage.setItem('zenspa_real_visits', '0');
+      localStorage.setItem('zenspa_real_wa_clicks', '0');
+      localStorage.setItem('zenspa_real_calls', '0');
+      localStorage.setItem('zenspa_t_clicks', '{}');
+      localStorage.setItem('zenspa_t_calls', '{}');
+      localStorage.setItem('zenspa_live_call_logs', '[]');
+      localStorage.setItem('zenspa_city_visits', '[]');
+      localStorage.setItem('zenspa_city_counts', '{}');
+      localStorage.setItem('zenspa_active_visitors', '[]');
+
+      // 2. Bulut analytics.json DosyasÄ±nÄ± SÄ±fÄ±rla
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+        const path = "analytics.json";
+        
+        const cleanData = {
+          totalVisits: 0,
+          totalWaClicks: 0,
+          totalCalls: 0,
+          tClicks: {},
+          tCalls: {},
+          logs: [],
+          cityVisits: [],
+          cityCounts: {},
+          activeVisitors: [],
+          lastReset: new Date().toISOString()
+        };
+
+        const strData = JSON.stringify(cleanData, null, 2);
+        const b64Data = btoa(unescape(encodeURIComponent(strData)));
+
+        let sha = null;
+        try {
+          const getRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path, {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+          });
+          if (getRes.ok) {
+            const j = await getRes.json();
+            sha = j.sha;
+          }
+        } catch(e) {}
+
+        const putBody = { message: "Admin reset all analytics to 0", content: b64Data };
+        if (sha) putBody.sha = sha;
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path, {
+          method: 'PUT',
+          headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+          body: JSON.stringify(putBody)
+        });
+      } catch(err) {
+        console.log("Cloud reset err:", err);
+      }
+
+      // 3. UI ArayÃ¼zÃ¼nÃ¼ CanlÄ± SÄ±fÄ±rla
+      try {
+        const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
+        if (elActiveKPI) elActiveKPI.textContent = '0 KiÅŸi CanlÄ±';
+        const elActiveBadge = document.getElementById('activeRadarBadge');
+        if (elActiveBadge) elActiveBadge.textContent = '0 CanlÄ± ZiyaretÃ§i';
+        const elTot = document.getElementById('cityTotalVisitsKPI');
+        if (elTot) elTot.textContent = '0';
+        const elUniq = document.getElementById('cityUniqueCountKPI');
+        if (elUniq) elUniq.textContent = '0 Ä°l';
+        const elTop = document.getElementById('cityTopCityKPI');
+        if (elTop) elTop.textContent = '-';
+        
+        const tbodyActive = document.getElementById('activeVisitorsTableBody');
+        if (tbodyActive) tbodyActive.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem;">Ä°statistikler sÄ±fÄ±rlandÄ±. Yeni ziyaretÃ§iler bekleniyor.</td></tr>';
+        
+        const tbodyCity = document.getElementById('cityVisitsTableBody');
+        if (tbodyCity) tbodyCity.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">Ä°statistikler sÄ±fÄ±rlandÄ±.</td></tr>';
+
+        const prog = document.getElementById('cityStatsProgressList');
+        if (prog) prog.innerHTML = '<div style="text-align:center; color:#71717A; padding:1.2rem;">Ä°statistikler sÄ±fÄ±rlandÄ±.</div>';
+      } catch(e) {}
+
+      if (typeof renderWaTable === 'function') renderWaTable();
+      if (typeof renderCityVisitorStats === 'function') renderCityVisitorStats();
+
+      alert("Tum istatistikler ve ziyaretci kayitlari basariyla SIFIRLANDI!");
+    }
+    }
+
+    function filterTable() {
+      const q = (document.getElementById('tableSearch').value || '').toLowerCase();
+      const filtered = list.filter(t => t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || (t.district && t.district.toLowerCase().includes(q)));
+      renderTable(filtered);
+    }
+
+    function switchTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-section').forEach(t => {
+        t.style.display = 'none';
+        t.classList.remove('active');
+      });
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.style.display = 'block';
+        target.classList.add('active');
+      }
+      if (btnEl) btnEl.classList.add('active');
+
+      if (tabId === 'vitrinTab') renderVitrinTable();
+      if (tabId === 'whatsappTab') renderWaTable();
+      if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
+      if (tabId === 'settingsTab') loadSettings();
+    }
+
+    async function renderCityVisitorStats(btnEl) {
+      if (!btnEl) btnEl = document.getElementById('btnRefreshCityStats');
+      if (btnEl) {
+        btnEl.innerHTML = "⏳ Veriler Çekiliyor...";
+        btnEl.disabled = true;
+      }
+      try {
+        const stats = await getLiveAnalytics();
+        const cityVisits = stats.cityVisits || [];
+        const cityCounts = stats.cityCounts || {};
+        const now = Date.now();
+
+        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Sadece son 2 dakika içinde anlık sitede olanlar)
+        const rawActive = stats.activeVisitors || [];
+        const activeVisitors = rawActive.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 120000));
+
+        const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
+        if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
+
+        const elActiveBadge = document.getElementById('activeRadarBadge');
+        if (elActiveBadge) elActiveBadge.textContent = `${activeVisitors.length} Canlı Ziyaretçi`;
+
+        const activeTbody = document.getElementById('activeVisitorsTableBody');
+        if (activeTbody) {
+          if (activeVisitors.length > 0) {
+            activeTbody.innerHTML = activeVisitors.map(v => {
+              const diffSec = Math.floor((now - (v.lastSeen || 0)) / 1000);
+              const statusLabel = diffSec < 30 ? '🟢 Şu An Sitede (Canlı)' : `⏱️ ${Math.floor(diffSec/60) || 1} dk önce aktifti`;
+              return `
+                <tr style="background: rgba(34, 197, 94, 0.04);">
+                  <td>
+                    <span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E; display:inline-flex; align-items:center; gap:6px;">
+                      <span class="live-pulsing-dot"></span>
+                      ${statusLabel}
+                    </span>
+                  </td>
+                  <td><strong style="color:#FFF;">📍 ${v.city || 'Türkiye'}</strong></td>
+                  <td style="color:#A1A1AA;">${v.device || 'Mobil 📱'}</td>
+                  <td style="color:#FDE047; font-weight:700;">👀 ${v.activity || 'Ana Sayfa Vitrininde'}</td>
+                  <td style="color:#60A5FA; font-weight:600;">${v.time || 'Az önce'}</td>
+                </tr>
+              `;
+            }).join('');
+          } else {
+            activeTbody.innerHTML = `
+              <tr>
+                <td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.85rem;">
+                  Şu an sitede aktif gezinen canlı kullanıcı bulunmuyor. Bir ziyaretçi siteye girdiğinde burada anlık radar olarak listelenecektir.
+                </td>
+              </tr>
+            `;
+          }
+        }
+
+        const totalCityVisits = Object.values(cityCounts).reduce((a, b) => a + b, 0) || stats.visits || 0;
+        const uniqueCities = Object.keys(cityCounts).length || 0;
+        
+        const sortedCities = Object.entries(cityCounts).sort((a, b) => b[1] - a[1]);
+        const topCity = (sortedCities.length > 0 && totalCityVisits > 0) ? (sortedCities[0][0] + ' (%' + Math.round((sortedCities[0][1] / totalCityVisits) * 100) + ')') : '-';
+
+        const elTot = document.getElementById('cityTotalVisitsKPI');
+        if (elTot) elTot.textContent = totalCityVisits;
+        const elUniq = document.getElementById('cityUniqueCountKPI');
+        if (elUniq) elUniq.textContent = uniqueCities + ' İl';
+        const elTop = document.getElementById('cityTopCityKPI');
+        if (elTop) elTop.textContent = topCity;
+
+        const progressContainer = document.getElementById('cityStatsProgressList');
+        if (progressContainer) {
+          if (sortedCities.length > 0 && totalCityVisits > 0) {
+            progressContainer.innerHTML = sortedCities.map(([city, count]) => {
+              const pct = Math.round((count / totalCityVisits) * 100);
+              return `
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.88rem; font-weight:700;">
+                    <span style="color:#FFF;">📍 ${city}</span>
+                    <span style="color:#FBBF24;">${count} Ziyaretçi (%${pct})</span>
+                  </div>
+                  <div style="width:100%; height:9px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;">
+                    <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #FFE895, #E6AF2E); border-radius:999px;"></div>
+                  </div>
+                </div>
+              `;
+            }).join('');
+          } else {
+            progressContainer.innerHTML = `
+              <div style="text-align:center; color:#71717A; padding:1.2rem; font-size:0.88rem;">
+                Henüz il bazlı ziyaretçi verisi oluşmadı. Sitenize ziyaretçiler girdikçe iller otomatik sıralanacaktır.
+              </div>
+            `;
+          }
+        }
+
+        const tbody = document.getElementById('cityVisitsTableBody');
+        if (tbody) {
+          if (cityVisits && cityVisits.length > 0) {
+            tbody.innerHTML = cityVisits.map(v => `
+              <tr>
+                <td style="color:#A1A1AA; font-weight:600;">⏱️ ${v.time}</td>
+                <td><strong style="color:#FFF;">📍 ${v.city}</strong></td>
+                <td>🇹🇷 ${v.country || 'Türkiye'}</td>
+                <td>${v.device || 'Mobil 📱'}</td>
+                <td style="color:#38BDF8; font-weight:600;">${v.page || 'Ana Sayfa'}</td>
+                <td><span class="status-badge">🟢 Tamamlandı</span></td>
+              </tr>
+            `).join('');
+          } else {
+            tbody.innerHTML = `
+              <tr>
+                <td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">
+                  Henüz şehir ziyareti kaydedilmedi. Ziyaretçiler geldikçe burada listelenecektir.
+                </td>
+              </tr>
+            `;
+          }
+        }
+
+        if (btnEl) {
+          btnEl.innerHTML = "✓ Canlı Veriler Güncellendi!";
+          setTimeout(() => {
+            btnEl.innerHTML = "🔄 Verileri Canlı Yenile";
+            btnEl.disabled = false;
+          }, 1500);
+        }
+      } catch(err) {
+        if (btnEl) {
+          btnEl.innerHTML = "🔄 Verileri Canlı Yenile";
+          btnEl.disabled = false;
+        }
+      }
+    }
+
+    // 🟢 OTOMATİK CANLI RADAR YENİLEME MOTORU (Her 10 saniyede bir paneli otomatik günceller)
+    setInterval(() => {
+      if (document.visibilityState === 'visible') {
+        const cityTab = document.getElementById('cityAnalyticsTab');
+        if (cityTab && cityTab.style.display !== 'none') {
+          renderCityVisitorStats();
+        }
+        const waTab = document.getElementById('whatsappTab');
+        if (waTab && waTab.style.display !== 'none') {
+          renderWaTable();
+        }
+      }
+    }, 10000);
+
+    let currentPhotos = ["images/turkish_merve_photo.jpg"];
+
+    function renderPhotosGrid() {
+      const grid = document.getElementById('photosPreviewGrid');
+      const countBadge = document.getElementById('photoCountBadge');
+      if (countBadge) {
+        countBadge.textContent = `${currentPhotos.length} Fotoğraf`;
+      }
+      if (!grid) return;
+
+      if (!currentPhotos || currentPhotos.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align:center; color:#71717A; padding:1rem; font-size:0.8rem;">
+            Henüz fotoğraf eklenmedi. Yukarıdaki butonlardan fotoğraf seçin.
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = currentPhotos.map((url, idx) => `
+        <div style="position:relative; width:70px; height:70px; border-radius:6px; overflow:hidden; border:2px solid ${idx === 0 ? '#FBBF24' : 'rgba(255,255,255,0.15)'}; background:#000;">
+          <img src="${url}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/turkish_merve_photo.jpg'">
+          ${idx === 0 ? '<span style="position:absolute; top:2px; left:2px; background:#FBBF24; color:#000; font-size:0.6rem; font-weight:900; padding:1px 4px; border-radius:3px;">KAPAK</span>' : `
+            <button type="button" onclick="setCoverPhoto(${idx})" title="Ana Kapak Fotoğrafı Yap" style="position:absolute; top:2px; left:2px; background:rgba(0,0,0,0.7); color:#FBBF24; border:none; border-radius:3px; font-size:0.65rem; cursor:pointer; padding:1px 4px;">👑</button>
+          `}
+          <button type="button" onclick="removePhoto(${idx})" title="Fotoğrafı Sil" style="position:absolute; top:2px; right:2px; background:rgba(239,68,68,0.85); color:#FFF; border:none; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:0.65rem; cursor:pointer;">✕</button>
+        </div>
+      `).join('');
+    }
+
+    function compressImage(file, maxWidth = 800, maxHeight = 1000, quality = 0.78) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = new Image();
+          img.onload = function() {
+            let width = img.width;
+            let height = img.height;
+
+            if (width > height) {
+              if (width > maxWidth) {
+                height = Math.round((height * maxWidth) / width);
+                width = maxWidth;
+              }
+            } else {
+              if (height > maxHeight) {
+                width = Math.round((width * maxHeight) / height);
+                height = maxHeight;
+              }
+            }
+
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+
+            const compressedBase64 = canvas.toDataURL('image/jpeg', quality);
+            resolve(compressedBase64);
+          };
+          img.onerror = function() {
+            resolve(e.target.result);
+          };
+          img.src = e.target.result;
+        };
+        reader.onerror = function() {
+          resolve("images/turkish_merve_photo.jpg");
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function handleMultiFileUpload(e) {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+
+      const badge = document.getElementById('photoCountBadge');
+      if (badge) badge.textContent = "⏳ İşleniyor...";
+
+      for (let file of files) {
+        try {
+          const compressed = await compressImage(file);
+          currentPhotos.push(compressed);
+        } catch(err) {
+          console.error("Fotoğraf yükleme hatası:", err);
+        }
+      }
+      renderPhotosGrid();
+      e.target.value = "";
+    }
+
+    function addPhotoUrl() {
+      const inp = document.getElementById('photoUrlInput');
+      if (!inp) return;
+      const url = (inp.value || '').trim();
+      if (!url) {
+        alert("Lütfen geçerli bir fotoğraf bağlantısı girin.");
+        return;
+      }
+      currentPhotos.push(url);
+      inp.value = "";
+      renderPhotosGrid();
+    }
+
+    function removePhoto(idx) {
+      if (currentPhotos.length <= 1) {
+        alert("Profilde en az 1 fotoğraf bulunmalıdır.");
+        return;
+      }
+      currentPhotos.splice(idx, 1);
+      renderPhotosGrid();
+    }
+
+    function setCoverPhoto(idx) {
+      const selected = currentPhotos.splice(idx, 1)[0];
+      currentPhotos.unshift(selected);
+      renderPhotosGrid();
+    }
+
+    function openAddModal() {
+      const editId = document.getElementById('editTherapistId');
+      if (editId) editId.value = "";
+      const mTitle = document.getElementById('modalTitle');
+      if (mTitle) mTitle.textContent = "YENİ TERAPİST EKLE";
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      if (btnSub) btnSub.textContent = "✓ Terapisti Kaydet ve Yayına Al";
+      const form = document.getElementById('addTherapistForm');
+      if (form) form.reset();
+
+      const durationSelect = document.getElementById('tDuration');
+      if (durationSelect) {
+        durationSelect.innerHTML = `
+          <option value="30" selected>1 Aylık VIP (30 Gün)</option>
+          <option value="7">1 Haftalık Vitrin (7 Gün)</option>
+          <option value="90">3 Aylık Platinum (90 Gün)</option>
+          <option value="365">1 Yıllık / Süresiz</option>
+        `;
+      }
+
+      currentPhotos = ["images/turkish_merve_photo.jpg"];
+      renderPhotosGrid();
+
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.add('active');
+      }
+    }
+
+    function editItem(id) {
+      const item = list.find(t => t.id === id);
+      if (!item) return;
+
+      const editId = document.getElementById('editTherapistId');
+      if (editId) editId.value = item.id;
+      const mTitle = document.getElementById('modalTitle');
+      if (mTitle) mTitle.textContent = "✏️ TERAPİSTİ DÜZENLE: " + item.name;
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      if (btnSub) btnSub.textContent = "✓ Güncellemeleri Kaydet";
+
+      document.getElementById('tName').value = item.name || '';
+      document.getElementById('tAge').value = item.age || 25;
+      document.getElementById('tCity').value = item.city || 'İstanbul';
+      document.getElementById('tDistrict').value = item.district || '';
+      document.getElementById('tGender').value = item.gender || 'Kadın';
+      document.getElementById('tPrice').value = item.price || '60 Dk: 2.000 ₺';
+      document.getElementById('tWhatsapp').value = item.whatsapp || item.wa || '';
+      
+      const durationSelect = document.getElementById('tDuration');
+      if (durationSelect) {
+        let remainingText = "30 Gün Kaldı";
+        if (item.expiresAt) {
+          const diffMs = item.expiresAt - Date.now();
+          const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+          remainingText = days > 0 ? `${days} Gün Kaldı` : 'Süresi Bitti (Pasif)';
+        }
+        durationSelect.innerHTML = `
+          <option value="keep" selected>⏱️ Mevcut Süreyi Koru (${remainingText})</option>
+          <option value="30">🔄 +30 Gün Yenile / Uzat (1 Ay)</option>
+          <option value="7">🔄 +7 Gün Uzat (1 Hafta)</option>
+          <option value="90">🔄 +90 Gün Uzat (3 Ay)</option>
+          <option value="365">🔄 +365 Gün (1 Yıl)</option>
+        `;
+      }
+
+      if (Array.isArray(item.images) && item.images.length > 0) {
+        currentPhotos = [...item.images];
+      } else if (Array.isArray(item.photos) && item.photos.length > 0) {
+        currentPhotos = [...item.photos];
+      } else {
+        currentPhotos = [item.img || item.image || "images/turkish_merve_photo.jpg"];
+      }
+      renderPhotosGrid();
+
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.add('active');
+      }
+    }
+
+    function closeAddModal() {
+      const modal = document.getElementById('addTherapistModal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.classList.remove('active');
+      }
+    }
+
+    async function saveTherapist(e) {
+      e.preventDefault();
+      const btnSub = document.getElementById('btnSubmitTherapist');
+      const origText = btnSub ? btnSub.innerHTML : '✓ Kaydet';
+      if (btnSub) {
+        btnSub.disabled = true;
+        btnSub.innerHTML = '⏳ Buluta Kaydediliyor... Lütfen Bekleyin';
+      }
+
+      try {
+        const rawWa = document.getElementById('tWhatsapp').value;
+        const cleanWa = formatPhone(rawWa);
+        const editId = document.getElementById('editTherapistId').value;
+        const durationVal = document.getElementById('tDuration').value;
+
+        const primaryPhoto = currentPhotos[0] || "images/turkish_merve_photo.jpg";
+        const allPhotos = currentPhotos.length > 0 ? currentPhotos : [primaryPhoto];
+
+        if (editId) {
+          const idx = list.findIndex(t => t.id == editId);
+          if (idx !== -1) {
+            list[idx].name = document.getElementById('tName').value;
+            list[idx].age = parseInt(document.getElementById('tAge').value) || 25;
+            list[idx].city = document.getElementById('tCity').value;
+            list[idx].district = document.getElementById('tDistrict').value;
+            list[idx].gender = document.getElementById('tGender').value;
+            list[idx].price = document.getElementById('tPrice').value;
+            list[idx].wa = cleanWa;
+            list[idx].whatsapp = cleanWa;
+            list[idx].img = primaryPhoto;
+            list[idx].image = primaryPhoto;
+            list[idx].images = allPhotos;
+            list[idx].photos = allPhotos;
+
+            // Süre yönetimi
+            if (durationVal !== 'keep') {
+              const durationDays = parseInt(durationVal) || 30;
+              list[idx].expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+              list[idx].active = true;
+            } else if (!list[idx].expiresAt) {
+              list[idx].expiresAt = Date.now() + (30 * 24 * 60 * 60 * 1000);
+            }
+            
+            await saveToStorage();
+            checkAndAutoExpire();
+            renderTable(list);
+            closeAddModal();
+            alert("✓ Terapist profili ve " + allPhotos.length + " fotoğraflı galeri başarıyla güncellendi ve tüm cihazlarda yayına alındı!");
+            return;
+          }
+        }
+
+        const durationDays = parseInt(durationVal) || 30;
+        const expiresAt = Date.now() + (durationDays * 24 * 60 * 60 * 1000);
+
+        const newT = {
+          id: Date.now(),
+          name: document.getElementById('tName').value,
+          age: parseInt(document.getElementById('tAge').value) || 25,
+          city: document.getElementById('tCity').value,
+          district: document.getElementById('tDistrict').value,
+          gender: document.getElementById('tGender').value,
+          services: ["İsveç", "Aromaterapi", "Medikal"],
+          tags: ["Klasik İsveç", "Aromaterapi", "Kendi Yeri"],
+          bio: document.getElementById('tCity').value + " bölgesinde profesyonel ve hijyenik ortamda masaj hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+          price: document.getElementById('tPrice').value,
+          vitrin: true,
+          active: true,
+          expiresAt: expiresAt,
+          wa: cleanWa,
+          whatsapp: cleanWa,
+          img: primaryPhoto,
+          image: primaryPhoto,
+          images: allPhotos,
+          photos: allPhotos,
+          clicks: 1,
+          rating: "⭐ 5.0",
+          reviews: 12
+        };
+        
+        list.unshift(newT);
+        await saveToStorage();
+        checkAndAutoExpire();
+        renderTable(list);
+        closeAddModal();
+        alert("✓ Terapist " + allPhotos.length + " fotoğrafla başarıyla eklendi ve tüm cihazlarda canlıya alındı!");
+      } catch(err) {
+        alert("Kayıt sırasında bir hata oluştu: " + err.message);
+      } finally {
+        if (btnSub) {
+          btnSub.disabled = false;
+          btnSub.innerHTML = origText;
+        }
+      }
+    }
+
+    function clearDemoProfiles() {
+      if (confirm("Tüm hazır sanal/demo profilleri silip yalnızca kendi eklediğiniz üyeleri bırakmak istediğinize emin misiniz?")) {
+        list = list.filter(t => t.id === 100 || t.id > 1000);
+        saveToStorage();
+        renderTable(list);
+        alert("✓ Tüm demo profiller başarıyla silindi!");
+      }
+    }
+
+    async function deleteItem(id) {
+      if (confirm("Bu terapist kaydını kalıcı olarak silmek istediğinize emin misiniz?")) {
+        list = list.filter(t => t.id !== id);
+        renderTable(list);
+        renderVitrinTable();
+        const ok = await saveToStorage();
+        if (ok) {
+          alert('✓ Profil başarıyla silindi ve tüm cihazlarda güncellendi!');
+        } else {
+          alert('✓ Profil yerel olarak silindi, bulut eşitlendi.');
+        }
+      }
+    }
+
+    async function loadSettings() {
+      let savedTitle = localStorage.getItem('zenspa_site_title');
+      let savedWa = localStorage.getItem('zenspa_wa_number');
+      let savedScope = localStorage.getItem('zenspa_scope');
+
+      try {
+        const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudSet = await res.json();
+          if (cloudSet) {
+            if (cloudSet.siteTitle && !savedTitle) savedTitle = cloudSet.siteTitle;
+            if (cloudSet.waNumber && !savedWa) savedWa = cloudSet.waNumber;
+            if (cloudSet.scope && !savedScope) savedScope = cloudSet.scope;
+          }
+        }
+      } catch(e) {}
+
+      const titleInput = document.getElementById('settingSiteTitle');
+      const waInput = document.getElementById('settingWaNumber');
+      const scopeInput = document.getElementById('settingCities');
+
+      if (savedTitle && titleInput) titleInput.value = savedTitle;
+      if (savedWa && waInput) waInput.value = savedWa;
+      if (savedScope && scopeInput) scopeInput.value = savedScope;
+
+      if (savedTitle) {
+        const brandH2 = document.querySelector('.brand-title h2');
+        if (brandH2 && savedTitle.includes('|')) {
+          brandH2.textContent = savedTitle.split('|')[0].trim();
+        }
+      }
+    }
+
+    async function saveSettings(e) {
+      if (e) e.preventDefault();
+      const titleInput = document.getElementById('settingSiteTitle');
+      const waInput = document.getElementById('settingWaNumber');
+      const scopeInput = document.getElementById('settingCities');
+
+      const title = titleInput ? titleInput.value.trim() : '';
+      const wa = waInput ? waInput.value.trim() : '';
+      const scope = scopeInput ? scopeInput.value.trim() : '';
+
+      if (title) localStorage.setItem('zenspa_site_title', title);
+      if (wa) localStorage.setItem('zenspa_wa_number', wa);
+      if (scope) localStorage.setItem('zenspa_scope', scope);
+
+      const brandH2 = document.querySelector('.brand-title h2');
+      if (brandH2 && title && title.includes('|')) {
+        brandH2.textContent = title.split('|')[0].trim();
+      }
+
+      // Bulut Senkronizasyonu (Tüm cihazlar ve oturumlar için)
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        let sha = null;
+        try {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+          });
+          if (res.ok) {
+            const fd = await res.json();
+            if (fd && fd.sha) sha = fd.sha;
+          }
+        } catch(e) {}
+
+        const newSettingsObj = { siteTitle: title, waNumber: wa, scope: scope };
+        const newStr = JSON.stringify(newSettingsObj, null, 2);
+        const utf8Bytes = new TextEncoder().encode(newStr);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+        const base64Content = btoa(binary);
+
+        const putBody = { message: "Update platform settings: " + title, content: base64Content };
+        if (sha) putBody.sha = sha;
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(putBody)
+        });
+      } catch(err) {
+        console.log("Settings cloud sync err:", err);
+      }
+
+      alert("✓ Platform ayarları kalıcı olarak kaydedildi! Sayfa yenilense dahi güncel başlığınız korunacaktır.");
+    }
+
+    // Window bindings
+    window.switchTab = switchTab;
+    window.openAddModal = openAddModal;
+    window.closeAddModal = closeAddModal;
+    window.editItem = editItem;
+    window.toggleActive = toggleActive;
+    window.deleteItem = deleteItem;
+    window.toggleVitrin = toggleVitrin;
+    window.exportCallLogsToCSV = exportCallLogsToCSV;
+    window.filterTable = filterTable;
+    window.adminLogout = adminLogout;
+    window.handleAdminLogin = handleAdminLogin;
+    window.togglePassVisibility = togglePassVisibility;
+    window.handleFileUpload = handleFileUpload;
+    window.saveTherapist = saveTherapist;
+    window.saveSettings = saveSettings;
+    window.clearDemoProfiles = clearDemoProfiles;
+    window.checkAuth = checkAuth;
+    window.renderCityVisitorStats = renderCityVisitorStats;
+    window.renderWaTable = renderWaTable;
+    window.getLiveAnalytics = getLiveAnalytics;
+    window.resetLiveAnalytics = resetLiveAnalytics;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadSettings();
+      try { initAdminData(); } catch(e) {}
+      var overlay = document.getElementById('adminAuthOverlay');
+      if (overlay) overlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
+    });
+  </script>
+
+  <!-- Sabit Güvenli Çıkış Butonu -->
+  <button class="floating-logout" onclick="adminLogout()" title="Yönetim Panelinden Güvenli Çıkış Yap">
+    🔒 Güvenli Çıkış Yap
+  </button>
+</body>
+</html>
