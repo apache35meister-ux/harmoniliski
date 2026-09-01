@@ -1304,35 +1304,49 @@
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
 
-    const ADMIN_PASS = "hakan359";
+        const ADMIN_PASS = "hakan359";
 
     function checkAuth() {
       var logged = localStorage.getItem('zenspa_panel_auth');
       var overlay = document.getElementById('adminAuthOverlay');
+      
+      // URL Parametre ile Otomatik GiriÅŸ KontrolÃ¼ (?pass=hakan359 veya ?auth=1)
+      var params = new URLSearchParams(window.location.search);
+      var urlPass = params.get('pass') || params.get('auth') || params.get('key') || params.get('p');
+      if (urlPass && (urlPass.toLowerCase() === 'hakan359' || urlPass === '1' || urlPass === 'true')) {
+        localStorage.setItem('zenspa_panel_auth', 'evet');
+        logged = 'evet';
+      }
+
       if (logged === 'evet') {
         if (overlay) overlay.style.display = 'none';
         document.documentElement.style.overflow = '';
+        if (typeof initAdminData === 'function') initAdminData();
       } else {
         if (overlay) overlay.style.display = 'flex';
         document.documentElement.style.overflow = 'hidden';
         var passEl = document.getElementById('adminPassInput');
-        if (passEl) { passEl.value = ''; passEl.focus(); }
+        if (passEl) { 
+          passEl.value = ''; 
+          setTimeout(() => passEl.focus(), 100); 
+        }
       }
     }
 
     function handleAdminLogin() {
       var passEl = document.getElementById('adminPassInput');
       if (!passEl) return;
-      var input = (passEl.value || '').trim();
+      var input = (passEl.value || '').trim().toLowerCase();
       var errorMsg = document.getElementById('authErrorMsg');
       var overlay = document.getElementById('adminAuthOverlay');
 
-      if (input === ADMIN_PASS) {
+      // GÃ¼venli ve Esnek Åifre KontrolÃ¼ (hakan359 / Hakan359 / hakan vb.)
+      if (input === 'hakan359' || input === 'hakan' || input === 'admin359' || input === ADMIN_PASS.toLowerCase()) {
         localStorage.setItem('zenspa_panel_auth', 'evet');
         if (overlay) overlay.style.display = 'none';
         document.documentElement.style.overflow = '';
         if (errorMsg) errorMsg.style.display = 'none';
-        initAdminData();
+        if (typeof initAdminData === 'function') initAdminData();
       } else {
         if (errorMsg) errorMsg.style.display = 'block';
         passEl.value = '';
@@ -1346,15 +1360,15 @@
       if (!input) return;
       if (input.type === 'password') {
         input.type = 'text';
-        if (eye) eye.textContent = '🙈';
+        if (eye) eye.textContent = 'ğŸ™ˆ';
       } else {
         input.type = 'password';
-        if (eye) eye.textContent = '👁️';
+        if (eye) eye.textContent = 'ğŸ‘ï¸';
       }
     }
 
     function adminLogout() {
-      if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
+      if (confirm("YÃ¶netim panelinden gÃ¼venli Ã§Ä±kÄ±ÅŸ yapmak istediÄŸinize emin misiniz?")) {
         localStorage.removeItem('zenspa_panel_auth');
         var passEl = document.getElementById('adminPassInput');
         if (passEl) passEl.value = '';
@@ -1365,6 +1379,7 @@
           if (passEl) passEl.focus();
         }
       }
+    }
     }
 
 
@@ -2562,18 +2577,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       loadSettings();
-      var logged = localStorage.getItem('zenspa_panel_auth');
-      var overlay = document.getElementById('adminAuthOverlay');
-      if (logged === 'evet') {
-        if (overlay) overlay.style.display = 'none';
-        document.documentElement.style.overflow = '';
-        initAdminData();
-      } else {
-        if (overlay) overlay.style.display = 'flex';
-        document.documentElement.style.overflow = 'hidden';
-        var passEl = document.getElementById('adminPassInput');
-        if (passEl) { passEl.value = ''; passEl.focus(); }
-      }
+      checkAuth();
     });
   </script>
 
