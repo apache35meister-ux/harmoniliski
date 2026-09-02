@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "02.09.2026 15:01",
+      "city": "Paris (Ile-de-France)",
+      "country": "France",
+      "ip": "62.210.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "02.09.2026 11:40",
       "city": "Kane (Iowa)",
       "country": "United States",
@@ -60,17 +68,18 @@
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
-    "Kane": 1
+    "Kane": 1,
+    "Paris": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtk0yf5i_x0n7",
-      "city": "Kane",
+      "id": "v_mtk84uh0_r5a8",
+      "city": "Paris",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788349228148,
-      "time": "11:40"
+      "lastSeen": 1788361285285,
+      "time": "15:01"
     }
   ],
-  "totalVisits": 6
+  "totalVisits": 7
 }
