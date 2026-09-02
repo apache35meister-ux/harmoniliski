@@ -1635,6 +1635,53 @@
       .regional-hub-left { flex-direction: column; }
     }
   </style>
+
+  <!-- ğŸ¨ ZENSPA Dynamic Luxury Theme & Day/Night Engine -->
+  <script>
+    (function() {
+      const themes = {
+        gold: { primary: '#E6AF2E', light: '#FFE895', dark: '#BD8313', border: 'rgba(230, 175, 46, 0.35)', glow: 'rgba(230, 175, 46, 0.25)', bg: '#0A0A0C' },
+        sapphire: { primary: '#0284C7', light: '#38BDF8', dark: '#0369A1', border: 'rgba(56, 189, 248, 0.35)', glow: 'rgba(56, 189, 248, 0.25)', bg: '#060B14' },
+        ruby: { primary: '#E11D48', light: '#FB7185', dark: '#BE123C', border: 'rgba(251, 113, 133, 0.35)', glow: 'rgba(244, 63, 94, 0.25)', bg: '#10060A' },
+        emerald: { primary: '#059669', light: '#34D399', dark: '#047857', border: 'rgba(52, 211, 153, 0.35)', glow: 'rgba(16, 185, 129, 0.25)', bg: '#050F0A' }
+      };
+
+      function applyTheme(themeKey, isDay) {
+        const t = themes[themeKey] || themes.gold;
+        const root = document.documentElement;
+        root.style.setProperty('--gold-primary', t.primary);
+        root.style.setProperty('--gold-text', t.light);
+        root.style.setProperty('--gold-dark', t.dark);
+        root.style.setProperty('--border-gold', t.border);
+        root.style.setProperty('--border-gold-bright', t.border);
+        root.style.setProperty('--gold-glow', '0 0 25px ' + t.glow);
+        if (t.bg) {
+          root.style.setProperty('--bg-body', t.bg);
+        }
+      }
+
+      // 1. Instant check from localStorage
+      let cachedTheme = localStorage.getItem('zenspa_active_theme') || 'gold';
+      let autoDN = localStorage.getItem('zenspa_auto_dn') !== 'false';
+      
+      const hour = new Date().getHours();
+      const isDay = autoDN && (hour >= 8 && hour < 20);
+      applyTheme(cachedTheme, isDay);
+
+      // 2. Fetch latest from cloud
+      fetch('settings.json?t=' + Date.now())
+        .then(r => r.json())
+        .then(data => {
+          if (data.activeTheme) {
+            localStorage.setItem('zenspa_active_theme', data.activeTheme);
+            localStorage.setItem('zenspa_auto_dn', data.autoDayNight !== false);
+            applyTheme(data.activeTheme, data.autoDayNight && (hour >= 8 && hour < 20));
+          }
+        })
+        .catch(() => {});
+    })();
+  </script>
+
 </head>
 <body>
 
