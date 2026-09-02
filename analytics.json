@@ -12,6 +12,14 @@
       "page": "Ana Sayfa"
     },
     {
+      "time": "03.09.2026 01:54",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "03.09.2026 01:52",
       "city": "Izmir",
       "country": "Türkiye",
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 01:14",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 90,
+    "Izmir": 91,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -496,6 +496,14 @@
     "Paris": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtkogmj8_1gk8",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788389661695,
+      "time": "01:54"
+    },
     {
       "id": "v_mtkogmj8_1gk8",
       "city": "Izmir",
@@ -545,5 +553,5 @@
       "time": "01:51"
     }
   ],
-  "totalVisits": 95
+  "totalVisits": 96
 }
