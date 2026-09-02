@@ -9,6 +9,14 @@
       "country": "Türkiye",
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
+      "page": "buca-masaj.html"
+    },
+    {
+      "time": "03.09.2026 02:56",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
       "page": "nisantasi-masaj.html"
     },
     {
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 02:01",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 162,
+    "Izmir": 163,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -496,6 +496,14 @@
     "Paris": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtkr99ag_hlum",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788393403943,
+      "time": "02:56"
+    },
     {
       "id": "v_mtkr8qza_3aw2",
       "city": "Izmir",
@@ -535,15 +543,7 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788393262931,
       "time": "02:54"
-    },
-    {
-      "id": "v_mtkr57iu_ahj3",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393215690,
-      "time": "02:53"
     }
   ],
-  "totalVisits": 167
+  "totalVisits": 168
 }
