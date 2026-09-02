@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "03.09.2026 02:54",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
+      "page": "sisli-masaj.html"
+    },
+    {
       "time": "03.09.2026 02:53",
       "city": "Izmir",
       "country": "Türkiye",
@@ -474,21 +482,13 @@
       "ip": "212.253.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 02:00",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 157,
+    "Izmir": 158,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -497,29 +497,21 @@
   },
   "activeVisitors": [
     {
+      "id": "v_mtkr68b6_3ced",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788393262931,
+      "time": "02:54"
+    },
+    {
       "id": "v_mtkr57iu_ahj3",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788393215690,
       "time": "02:53"
-    },
-    {
-      "id": "v_mtkr1qyl_gytn",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393053971,
-      "time": "02:50"
-    },
-    {
-      "id": "v_mtkr1mz1_czvs",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393048416,
-      "time": "02:50"
     }
   ],
-  "totalVisits": 162
+  "totalVisits": 163
 }
