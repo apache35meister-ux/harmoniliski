@@ -1636,49 +1636,94 @@
     }
   </style>
 
-  <!-- ğŸ¨ ZENSPA Dynamic Luxury Theme & Day/Night Engine -->
+  
+
+
+  <!-- ğŸ¨ ZENSPA Dynamic Real-Time Theme Engine -->
+  <style id="zenspa-theme-styles">
+    :root {
+      --current-theme-grad: linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%);
+      --current-theme-text: #FDE047;
+      --current-theme-border: rgba(230, 175, 46, 0.35);
+      --current-theme-border-bright: rgba(255, 215, 0, 0.6);
+      --current-theme-glow: 0 0 35px rgba(230, 175, 46, 0.25);
+    }
+    
+    /* Dynamic Theme Overrides */
+    .theme-sapphire {
+      --gold-gradient: linear-gradient(135deg, #7DD3FC 0%, #0284C7 50%, #0369A1 100%) !important;
+      --gold-text: #38BDF8 !important;
+      --border-gold: rgba(56, 189, 248, 0.4) !important;
+      --border-gold-bright: rgba(56, 189, 248, 0.75) !important;
+      --gold-glow: 0 0 35px rgba(2, 132, 199, 0.35) !important;
+    }
+    .theme-sapphire body {
+      background-color: #030712 !important;
+      background-image: radial-gradient(circle at 50% 0%, #0C2340 0%, transparent 50%), radial-gradient(circle at 100% 30%, #081B2E 0%, transparent 40%) !important;
+    }
+
+    .theme-ruby {
+      --gold-gradient: linear-gradient(135deg, #FDA4AF 0%, #E11D48 50%, #9F1239 100%) !important;
+      --gold-text: #FB7185 !important;
+      --border-gold: rgba(251, 113, 133, 0.4) !important;
+      --border-gold-bright: rgba(244, 63, 94, 0.75) !important;
+      --gold-glow: 0 0 35px rgba(225, 29, 72, 0.35) !important;
+    }
+    .theme-ruby body {
+      background-color: #0A0205 !important;
+      background-image: radial-gradient(circle at 50% 0%, #2A0814 0%, transparent 50%), radial-gradient(circle at 100% 30%, #1F060F 0%, transparent 40%) !important;
+    }
+
+    .theme-emerald {
+      --gold-gradient: linear-gradient(135deg, #6EE7B7 0%, #059669 50%, #047857 100%) !important;
+      --gold-text: #34D399 !important;
+      --border-gold: rgba(52, 211, 153, 0.4) !important;
+      --border-gold-bright: rgba(16, 185, 129, 0.75) !important;
+      --gold-glow: 0 0 35px rgba(5, 150, 105, 0.35) !important;
+    }
+    .theme-emerald body {
+      background-color: #020805 !important;
+      background-image: radial-gradient(circle at 50% 0%, #072314 0%, transparent 50%), radial-gradient(circle at 100% 30%, #051A0F 0%, transparent 40%) !important;
+    }
+
+    /* Floating / Header Theme Bar */
+    .quick-theme-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid var(--border-gold);
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+    .quick-theme-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: transform 0.2s;
+    }
+    .quick-theme-dot:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
   <script>
-    (function() {
-      const themes = {
-        gold: { primary: '#E6AF2E', light: '#FFE895', dark: '#BD8313', border: 'rgba(230, 175, 46, 0.35)', glow: 'rgba(230, 175, 46, 0.25)', bg: '#0A0A0C' },
-        sapphire: { primary: '#0284C7', light: '#38BDF8', dark: '#0369A1', border: 'rgba(56, 189, 248, 0.35)', glow: 'rgba(56, 189, 248, 0.25)', bg: '#060B14' },
-        ruby: { primary: '#E11D48', light: '#FB7185', dark: '#BE123C', border: 'rgba(251, 113, 133, 0.35)', glow: 'rgba(244, 63, 94, 0.25)', bg: '#10060A' },
-        emerald: { primary: '#059669', light: '#34D399', dark: '#047857', border: 'rgba(52, 211, 153, 0.35)', glow: 'rgba(16, 185, 129, 0.25)', bg: '#050F0A' }
-      };
-
-      function applyTheme(themeKey, isDay) {
-        const t = themes[themeKey] || themes.gold;
-        const root = document.documentElement;
-        root.style.setProperty('--gold-primary', t.primary);
-        root.style.setProperty('--gold-text', t.light);
-        root.style.setProperty('--gold-dark', t.dark);
-        root.style.setProperty('--border-gold', t.border);
-        root.style.setProperty('--border-gold-bright', t.border);
-        root.style.setProperty('--gold-glow', '0 0 25px ' + t.glow);
-        if (t.bg) {
-          root.style.setProperty('--bg-body', t.bg);
-        }
+    function setGlobalTheme(tName) {
+      document.documentElement.className = '';
+      if (tName && tName !== 'gold') {
+        document.documentElement.classList.add('theme-' + tName);
       }
+      localStorage.setItem('zenspa_active_theme', tName);
+    }
 
-      // 1. Instant check from localStorage
-      let cachedTheme = localStorage.getItem('zenspa_active_theme') || 'gold';
-      let autoDN = localStorage.getItem('zenspa_auto_dn') !== 'false';
-      
-      const hour = new Date().getHours();
-      const isDay = autoDN && (hour >= 8 && hour < 20);
-      applyTheme(cachedTheme, isDay);
-
-      // 2. Fetch latest from cloud
-      fetch('settings.json?t=' + Date.now())
-        .then(r => r.json())
-        .then(data => {
-          if (data.activeTheme) {
-            localStorage.setItem('zenspa_active_theme', data.activeTheme);
-            localStorage.setItem('zenspa_auto_dn', data.autoDayNight !== false);
-            applyTheme(data.activeTheme, data.autoDayNight && (hour >= 8 && hour < 20));
-          }
-        })
-        .catch(() => {});
+    // Auto Apply On Load
+    (function() {
+      var saved = localStorage.getItem('zenspa_active_theme') || 'gold';
+      if (saved && saved !== 'gold') {
+        document.documentElement.classList.add('theme-' + saved);
+      }
     })();
   </script>
 
