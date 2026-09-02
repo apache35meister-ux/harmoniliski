@@ -1635,98 +1635,6 @@
       .regional-hub-left { flex-direction: column; }
     }
   </style>
-
-  
-
-
-  <!-- ğŸ¨ ZENSPA Dynamic Real-Time Theme Engine -->
-  <style id="zenspa-theme-styles">
-    :root {
-      --current-theme-grad: linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%);
-      --current-theme-text: #FDE047;
-      --current-theme-border: rgba(230, 175, 46, 0.35);
-      --current-theme-border-bright: rgba(255, 215, 0, 0.6);
-      --current-theme-glow: 0 0 35px rgba(230, 175, 46, 0.25);
-    }
-    
-    /* Dynamic Theme Overrides */
-    .theme-sapphire {
-      --gold-gradient: linear-gradient(135deg, #7DD3FC 0%, #0284C7 50%, #0369A1 100%) !important;
-      --gold-text: #38BDF8 !important;
-      --border-gold: rgba(56, 189, 248, 0.4) !important;
-      --border-gold-bright: rgba(56, 189, 248, 0.75) !important;
-      --gold-glow: 0 0 35px rgba(2, 132, 199, 0.35) !important;
-    }
-    .theme-sapphire body {
-      background-color: #030712 !important;
-      background-image: radial-gradient(circle at 50% 0%, #0C2340 0%, transparent 50%), radial-gradient(circle at 100% 30%, #081B2E 0%, transparent 40%) !important;
-    }
-
-    .theme-ruby {
-      --gold-gradient: linear-gradient(135deg, #FDA4AF 0%, #E11D48 50%, #9F1239 100%) !important;
-      --gold-text: #FB7185 !important;
-      --border-gold: rgba(251, 113, 133, 0.4) !important;
-      --border-gold-bright: rgba(244, 63, 94, 0.75) !important;
-      --gold-glow: 0 0 35px rgba(225, 29, 72, 0.35) !important;
-    }
-    .theme-ruby body {
-      background-color: #0A0205 !important;
-      background-image: radial-gradient(circle at 50% 0%, #2A0814 0%, transparent 50%), radial-gradient(circle at 100% 30%, #1F060F 0%, transparent 40%) !important;
-    }
-
-    .theme-emerald {
-      --gold-gradient: linear-gradient(135deg, #6EE7B7 0%, #059669 50%, #047857 100%) !important;
-      --gold-text: #34D399 !important;
-      --border-gold: rgba(52, 211, 153, 0.4) !important;
-      --border-gold-bright: rgba(16, 185, 129, 0.75) !important;
-      --gold-glow: 0 0 35px rgba(5, 150, 105, 0.35) !important;
-    }
-    .theme-emerald body {
-      background-color: #020805 !important;
-      background-image: radial-gradient(circle at 50% 0%, #072314 0%, transparent 50%), radial-gradient(circle at 100% 30%, #051A0F 0%, transparent 40%) !important;
-    }
-
-    /* Floating / Header Theme Bar */
-    .quick-theme-bar {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid var(--border-gold);
-      padding: 3px 8px;
-      border-radius: 999px;
-    }
-    .quick-theme-dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      cursor: pointer;
-      border: 1.5px solid rgba(255,255,255,0.4);
-      transition: transform 0.2s;
-    }
-    .quick-theme-dot:hover {
-      transform: scale(1.2);
-    }
-  </style>
-
-  <script>
-    function setGlobalTheme(tName) {
-      document.documentElement.className = '';
-      if (tName && tName !== 'gold') {
-        document.documentElement.classList.add('theme-' + tName);
-      }
-      localStorage.setItem('zenspa_active_theme', tName);
-    }
-
-    // Auto Apply On Load
-    (function() {
-      var saved = localStorage.getItem('zenspa_active_theme') || 'gold';
-      if (saved && saved !== 'gold') {
-        document.documentElement.classList.add('theme-' + saved);
-      }
-    })();
-  </script>
-
 </head>
 <body>
 
@@ -2088,15 +1996,7 @@
             <p style="color: #D4D4D8; font-size: 0.88rem; line-height: 1.5; margin: 0;">"İzmir seyahatimde otelime seans randevusu aldım. Klasik İsveç masajı ve kullanılan aromatik yağlar harikaydı. 10 numara hizmet kalitesi."</p>
           </div>
         </div>
-      
-        
-        
-
       </section>
-
-
-        
-
 
       <!-- SEO Rich Content & 81 İl Guide Section -->
       <section class="seo-section">
@@ -2162,18 +2062,10 @@
             <p>Klasik İsveç, Medikal Ağrı Terapisi, Rahatlatıcı Aromaterapi, Sıcak Taş, Thai Masajı ve Derin Doku Sporcu Masajı seçenekleri mevcuttur.</p>
           </div>
         </div>
-      
-        
-        
-
       </section>
 
     </div>
-  
-        
-        
-
-      </section>
+  </section>
 
   <!-- Modal: Vitrin İlan -->
     <!-- Modal: VIP İlan Fiyat Tarifesi & Paket Seçimi -->
@@ -2451,11 +2343,7 @@
       </div>
 
     </div>
-  
-        
-        
-
-      </section>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -2580,7 +2468,7 @@
       localStorage.setItem('zenspa_real_visits', visits.toString());
     }
 
-    // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASğŸŒ¿NU ---
+    // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
     function decodeGitHubBase64(base64Str) {
       try {
         const clean = (base64Str || '').replace(/\s/g, '');
@@ -3511,7 +3399,7 @@
 
 
 
-    // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASğŸŒ¿NU
+    // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASYONU
     let activeVisitorId = sessionStorage.getItem('zenspa_vis_id');
     if (!activeVisitorId) {
       activeVisitorId = 'v_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 6);
