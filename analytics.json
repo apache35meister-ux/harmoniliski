@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "03.09.2026 01:47",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "03.09.2026 01:45",
       "city": "Izmir",
       "country": "Türkiye",
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 01:04",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 71,
+    "Izmir": 72,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -496,6 +496,14 @@
     "Paris": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtkogmj8_1gk8",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788389257255,
+      "time": "01:47"
+    },
     {
       "id": "v_mtkogmj8_1gk8",
       "city": "Izmir",
@@ -543,31 +551,7 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788389083661,
       "time": "01:44"
-    },
-    {
-      "id": "v_mtkogmj8_1gk8",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788389076735,
-      "time": "01:44"
-    },
-    {
-      "id": "v_mtkogmj8_1gk8",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788389044395,
-      "time": "01:44"
-    },
-    {
-      "id": "v_mtkogmj8_1gk8",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788389042788,
-      "time": "01:44"
     }
   ],
-  "totalVisits": 76
+  "totalVisits": 77
 }
