@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "03.09.2026 02:28",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
+      "page": "alsancak-masaj.html"
+    },
+    {
       "time": "03.09.2026 02:27",
       "city": "Izmir",
       "country": "Türkiye",
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 01:50",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 142,
+    "Izmir": 143,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -496,6 +496,14 @@
     "Paris": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtkq92vp_pqhu",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788391717961,
+      "time": "02:28"
+    },
     {
       "id": "v_mtkq78t1_qlkd",
       "city": "Izmir",
@@ -519,23 +527,7 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788391556298,
       "time": "02:25"
-    },
-    {
-      "id": "v_mtkpjbq1_d8x2",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788391502260,
-      "time": "02:25"
-    },
-    {
-      "id": "v_mtkpjbq1_d8x2",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788391494497,
-      "time": "02:24"
     }
   ],
-  "totalVisits": 147
+  "totalVisits": 148
 }
