@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 66,
+  "totalVisits": 67,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 21:39",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "31.142.***.***",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "03.09.2026 20:57",
       "city": "Izmir",
@@ -478,30 +486,22 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "yalikavak-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:32",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "lara-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 62,
+    "Izmir": 63,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtley71j_6rdk",
+      "id": "v_mtlvdswt_x8dw",
       "city": "Izmir",
       "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788458240680,
-      "time": "20:57"
+      "lastSeen": 1788460800714,
+      "time": "21:40"
     }
   ]
 }
