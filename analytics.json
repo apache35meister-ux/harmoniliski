@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 38,
+  "totalVisits": 39,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 12:56",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:10a",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "03.09.2026 12:54",
       "city": "Izmir",
@@ -313,9 +321,17 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 38
+    "Izmir": 39
   },
   "activeVisitors": [
+    {
+      "id": "v_mtlcor2q_jc7o",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788429401141,
+      "time": "12:56"
+    },
     {
       "id": "v_mtlclik4_exku",
       "city": "Izmir",
@@ -331,102 +347,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788429225214,
       "time": "12:53"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429183645,
-      "time": "12:53"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429179131,
-      "time": "12:52"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429176315,
-      "time": "12:52"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429132135,
-      "time": "12:52"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429130505,
-      "time": "12:52"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429111948,
-      "time": "12:51"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429110447,
-      "time": "12:51"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429108783,
-      "time": "12:51"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429098748,
-      "time": "12:51"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429084340,
-      "time": "12:51"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429082732,
-      "time": "12:51"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429080007,
-      "time": "12:51"
     }
   ]
 }
