@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 62,
+  "totalVisits": 63,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 19:07",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "ip": "176.237.***.***",
+      "device": "iPhone 📱",
+      "page": "istanbul-masaj.html"
+    },
     {
       "time": "02.09.2026 17:00",
       "city": "İstanbul",
@@ -478,37 +486,22 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "karsiyaka-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:31",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "bornova-masaj.html"
     }
   ],
   "cityCounts": {
     "Izmir": 60,
     "Kane": 1,
-    "İstanbul": 1
+    "İstanbul": 1,
+    "Istanbul": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtkrdhcd_fnfb",
-      "city": "İstanbul",
-      "device": "Android 📱",
+      "id": "v_mtlpy061_gbgv",
+      "city": "Istanbul",
+      "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393600048,
-      "time": "17:00"
-    },
-    {
-      "id": "v_mtlig9t8_p7m3",
-      "city": "Kane",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788439080707,
-      "time": "12:38"
+      "lastSeen": 1788451665653,
+      "time": "19:07"
     }
   ]
 }
