@@ -1939,21 +1939,88 @@
       document.body.removeChild(link);
     }
 
-    function resetLiveAnalytics() {
-      if (confirm("Canlı istatistikleri sıfırlamak istediğinize emin misiniz?")) {
-        localStorage.setItem('zenspa_real_visits', '0');
-        localStorage.setItem('zenspa_real_wa_clicks', '0');
-        localStorage.setItem('zenspa_real_calls', '0');
-        localStorage.setItem('zenspa_t_clicks', '{}');
-        localStorage.setItem('zenspa_t_calls', '{}');
-        localStorage.setItem('zenspa_live_call_logs', '[]');
-        localStorage.setItem('zenspa_city_visits', '[]');
-        localStorage.setItem('zenspa_city_counts', '{}');
-        localStorage.setItem('zenspa_active_visitors', '[]');
-        renderWaTable();
-        renderCityVisitorStats();
-        alert("✓ İstatistikler sıfırlandı!");
+    async function resetLiveAnalytics() {
+      if (!confirm("Canlı istatistikleri, WhatsApp raporlarını ve ziyaretçi sayaçlarını tamamen sıfırlamak istediğinize emin misiniz?")) {
+        return;
       }
+
+      // 1. LocalStorage Sıfırla
+      localStorage.setItem('zenspa_real_visits', '0');
+      localStorage.setItem('zenspa_real_wa_clicks', '0');
+      localStorage.setItem('zenspa_real_calls', '0');
+      localStorage.setItem('zenspa_t_clicks', '{}');
+      localStorage.setItem('zenspa_t_calls', '{}');
+      localStorage.setItem('zenspa_live_call_logs', '[]');
+      localStorage.setItem('zenspa_city_visits', '[]');
+      localStorage.setItem('zenspa_city_counts', '{}');
+      localStorage.setItem('zenspa_active_visitors', '[]');
+
+      // 2. Arayüz Sayaçlarını Anında Sıfırla
+      const elWa = document.getElementById('realTotalWa');
+      if (elWa) elWa.textContent = '0';
+      const elCalls = document.getElementById('realTotalCalls');
+      if (elCalls) elCalls.textContent = '0';
+      const elVisits = document.getElementById('realTotalVisits');
+      if (elVisits) elVisits.textContent = '0';
+
+      // 3. GitHub Cloud analytics.json Sıfırlama
+      try {
+        const emptyAnalytics = {
+          totalWaClicks: 0,
+          totalCalls: 0,
+          totalVisits: 0,
+          lastUpdated: new Date().toISOString().replace('T', ' ').substring(0, 19),
+          tClicks: {},
+          tCalls: {},
+          logs: [],
+          cityVisits: [],
+          cityCounts: {},
+          activeVisitors: []
+        };
+
+        const str = JSON.stringify(emptyAnalytics, null, 2);
+        const utf8Bytes = new TextEncoder().encode(str);
+        let binary = '';
+        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+        const base64Content = btoa(binary);
+
+        let sha = null;
+        try {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Accept': 'application/vnd.github+json'
+            }
+          });
+          if (res.ok) {
+            const fd = await res.json();
+            if (fd && fd.sha) sha = fd.sha;
+          }
+        } catch(e) {}
+
+        const putBody = {
+          message: "Reset analytics and visitor statistics to zero",
+          content: base64Content,
+          branch: "main"
+        };
+        if (sha) putBody.sha = sha;
+
+        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(putBody)
+        });
+      } catch(err) {
+        console.warn("Analytics cloud reset error:", err);
+      }
+
+      await renderWaTable();
+      await renderCityVisitorStats();
+      alert("✓ Tüm istatistikler ve WhatsApp çağrı raporları sıfırlandı!");
     }
 
     function filterTable() {
