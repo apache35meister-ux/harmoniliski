@@ -9,6 +9,14 @@
       "country": "Türkiye",
       "ip": "2a09:bac1:72c0:10::150:6e",
       "device": "Masaüstü 💻",
+      "page": "alsancak-masaj.html"
+    },
+    {
+      "time": "03.09.2026 12:13",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72c0:10::150:6e",
+      "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
     },
     {
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "kadikoy-masaj.html"
-    },
-    {
-      "time": "03.09.2026 02:28",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "alsancak-masaj.html"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 202,
+    "Izmir": 203,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -496,6 +496,14 @@
     "Paris": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtlb5n2m_8j1m",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788426826975,
+      "time": "12:13"
+    },
     {
       "id": "v_mtlb2cvs_g6vq",
       "city": "Izmir",
@@ -553,5 +561,5 @@
       "time": "12:11"
     }
   ],
-  "totalVisits": 207
+  "totalVisits": 208
 }
