@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 77,
+  "totalVisits": 78,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03.09.2026 15:10",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "izmir-masaj.html"
+    },
     {
       "time": "03.09.2026 15:10",
       "city": "San Jose (California)",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:45",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -523,9 +523,17 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
-    "San Jose": 4
+    "San Jose": 5
   },
   "activeVisitors": [
+    {
+      "id": "v_mtm2vxqa_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788473403070,
+      "time": "15:10"
+    },
     {
       "id": "v_mtm2vxqa_n0ja",
       "city": "San Jose",
