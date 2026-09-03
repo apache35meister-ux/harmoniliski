@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 11,
+  "totalVisits": 12,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 12:36",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:102",
+      "device": "Masaüstü 💻",
+      "page": "sisli-masaj.html"
+    },
     {
       "time": "03.09.2026 12:35",
       "city": "Izmir",
@@ -97,9 +105,17 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 11
+    "Izmir": 12
   },
   "activeVisitors": [
+    {
+      "id": "v_mtlbyb4z_kvwk",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788428170339,
+      "time": "12:36"
+    },
     {
       "id": "v_mtlbv4su_wnko",
       "city": "Izmir",
