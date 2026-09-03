@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 85,
+  "totalVisits": 86,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 01:20",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58cc:d2d::150:67",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "03.09.2026 15:13",
       "city": "San Jose (California)",
@@ -508,18 +516,10 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 69,
+    "Izmir": 70,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
@@ -527,60 +527,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtm30frm_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473613056,
-      "time": "15:13"
-    },
-    {
-      "id": "v_mtm2zvpe_n0ja",
-      "city": "San Jose",
+      "id": "v_mtm38ww0_7ju2",
+      "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473587070,
-      "time": "15:13"
-    },
-    {
-      "id": "v_mtm2z70i_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473555030,
-      "time": "15:12"
-    },
-    {
-      "id": "v_mtm2y92y_alw3",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473511064,
-      "time": "15:11"
-    },
-    {
-      "id": "v_mtm2xpru_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473486072,
-      "time": "15:11"
-    },
-    {
-      "id": "v_mtm2x80y_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473463068,
-      "time": "15:11"
-    },
-    {
-      "id": "v_mtm2wkvm_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473433058,
-      "time": "15:10"
+      "lastSeen": 1788474009670,
+      "time": "01:20"
     }
   ]
 }
