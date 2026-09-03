@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 82,
+  "totalVisits": 83,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03.09.2026 15:12",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "cankaya-masaj.html"
+    },
     {
       "time": "03.09.2026 15:11",
       "city": "San Jose (California)",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:48",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -523,9 +523,17 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
-    "San Jose": 9
+    "San Jose": 10
   },
   "activeVisitors": [
+    {
+      "id": "v_mtm2z70i_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788473555030,
+      "time": "15:12"
+    },
     {
       "id": "v_mtm2y92y_alw3",
       "city": "San Jose",
@@ -580,22 +588,6 @@
       "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788473376070,
-      "time": "15:09"
-    },
-    {
-      "id": "v_mtm2uqiq_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473347067,
-      "time": "15:09"
-    },
-    {
-      "id": "v_mtm2uqiq_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788473347055,
       "time": "15:09"
     }
   ]
