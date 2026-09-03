@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 64,
+  "totalVisits": 65,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 19:32",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "31.142.***.***",
+      "device": "iPhone 📱",
+      "page": "index.html"
+    },
     {
       "time": "02.09.2026 17:00",
       "city": "İstanbul",
@@ -478,38 +486,22 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "nazilli-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:32",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "bornova-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 60,
+    "Izmir": 61,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtkrdhcd_fnfb",
-      "city": "İstanbul",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393600070,
-      "time": "17:00"
-    },
-    {
-      "id": "v_mtlpy061_gbgv",
-      "city": "Istanbul",
+      "id": "v_mtley71j_6rdk",
+      "city": "Izmir",
       "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788451665653,
-      "time": "19:07"
+      "lastSeen": 1788453152483,
+      "time": "19:32"
     }
   ]
 }
