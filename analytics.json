@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 84,
+  "totalVisits": 85,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03.09.2026 15:13",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "bursa-masaj.html"
+    },
     {
       "time": "03.09.2026 15:13",
       "city": "San Jose (California)",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -523,9 +523,17 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
-    "San Jose": 11
+    "San Jose": 12
   },
   "activeVisitors": [
+    {
+      "id": "v_mtm30frm_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788473613056,
+      "time": "15:13"
+    },
     {
       "id": "v_mtm2zvpe_n0ja",
       "city": "San Jose",
