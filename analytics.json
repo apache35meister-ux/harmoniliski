@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 12:30",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:102",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "03.09.2026 12:26",
       "city": "Izmir",
@@ -17,24 +25,16 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 1
+    "Izmir": 2
   },
   "activeVisitors": [
     {
-      "id": "v_mtlb2cvs_g6vq",
+      "id": "v_mtlb64n4_mjsq",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788427563798,
-      "time": "12:26"
-    },
-    {
-      "id": "v_mtlb2cvs_g6vq",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788427561498,
-      "time": "12:26"
+      "lastSeen": 1788427859656,
+      "time": "12:30"
     }
   ]
 }
