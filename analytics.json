@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 39,
+  "totalVisits": 40,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 12:56",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:10a",
+      "device": "Masaüstü 💻",
+      "page": "nazilli-masaj.html"
+    },
     {
       "time": "03.09.2026 12:56",
       "city": "Izmir",
@@ -321,9 +329,17 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 39
+    "Izmir": 40
   },
   "activeVisitors": [
+    {
+      "id": "v_mtlcoxgd_hl4r",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788429410466,
+      "time": "12:56"
+    },
     {
       "id": "v_mtlcor2q_jc7o",
       "city": "Izmir",
@@ -339,14 +355,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788429248156,
       "time": "12:54"
-    },
-    {
-      "id": "v_mtlcajxx_qhey",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429225214,
-      "time": "12:53"
     }
   ]
 }
