@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 79,
+  "totalVisits": 80,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03.09.2026 15:11",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Masaüstü 💻",
+      "page": "antalya-masaj.html"
+    },
     {
       "time": "03.09.2026 15:10",
       "city": "San Jose (California)",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:47",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -523,9 +523,17 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
-    "San Jose": 6
+    "San Jose": 7
   },
   "activeVisitors": [
+    {
+      "id": "v_mtm2x80y_n0ja",
+      "city": "San Jose",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788473463068,
+      "time": "15:11"
+    },
     {
       "id": "v_mtm2wkvm_n0ja",
       "city": "San Jose",
