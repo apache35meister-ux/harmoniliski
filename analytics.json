@@ -4,6 +4,14 @@
   "tClicks": {},
   "cityVisits": [
     {
+      "time": "03.09.2026 03:18",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
+      "page": "bodrum-masaj.html"
+    },
+    {
       "time": "03.09.2026 03:16",
       "city": "Izmir",
       "country": "Türkiye",
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 02:19",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 186,
+    "Izmir": 187,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -497,45 +497,21 @@
   },
   "activeVisitors": [
     {
+      "id": "v_mtks1840_gcgu",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788394708589,
+      "time": "03:18"
+    },
+    {
       "id": "v_mtkry7oh_jbk2",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788394568313,
       "time": "03:16"
-    },
-    {
-      "id": "v_mtkrwq85_or2p",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788394498962,
-      "time": "03:14"
-    },
-    {
-      "id": "v_mtkruqmo_uc6c",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788394405592,
-      "time": "03:13"
-    },
-    {
-      "id": "v_mtkrumj2_ajyx",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788394400245,
-      "time": "03:13"
-    },
-    {
-      "id": "v_mtkruh0p_55tl",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788394393137,
-      "time": "03:13"
     }
   ],
-  "totalVisits": 191
+  "totalVisits": 192
 }
