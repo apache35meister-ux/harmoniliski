@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 63,
+  "totalVisits": 64,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "02.09.2026 17:00",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "ip": "Gizli",
+      "device": "Android 📱",
+      "page": "besiktas-masaj.html"
+    },
     {
       "time": "03.09.2026 19:07",
       "city": "Istanbul",
@@ -478,23 +486,23 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "bornova-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:31",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "karsiyaka-masaj.html"
     }
   ],
   "cityCounts": {
     "Izmir": 60,
     "Kane": 1,
-    "İstanbul": 1,
+    "İstanbul": 2,
     "Istanbul": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtkrdhcd_fnfb",
+      "city": "İstanbul",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788393600070,
+      "time": "17:00"
+    },
     {
       "id": "v_mtlpy061_gbgv",
       "city": "Istanbul",
