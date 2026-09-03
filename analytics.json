@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 12:32",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:102",
+      "device": "Masaüstü 💻",
+      "page": "lara-masaj.html"
+    },
     {
       "time": "03.09.2026 12:32",
       "city": "Izmir",
@@ -57,9 +65,17 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 6
+    "Izmir": 7
   },
   "activeVisitors": [
+    {
+      "id": "v_mtlbtkor_2957",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788427944375,
+      "time": "12:32"
+    },
     {
       "id": "v_mtlbtcoe_4i4a",
       "city": "Izmir",
