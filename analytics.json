@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 57,
+  "totalVisits": 58,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 13:15",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:10a",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "03.09.2026 13:07",
       "city": "Izmir",
@@ -465,7 +473,7 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 57
+    "Izmir": 58
   },
   "activeVisitors": [
     {
@@ -473,56 +481,8 @@
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788430064159,
-      "time": "13:07"
-    },
-    {
-      "id": "v_mtlcor2q_jc7o",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788430024258,
-      "time": "13:07"
-    },
-    {
-      "id": "v_mtlcor2q_jc7o",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788430008617,
-      "time": "13:06"
-    },
-    {
-      "id": "v_mtlcor2q_jc7o",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788430006615,
-      "time": "13:06"
-    },
-    {
-      "id": "v_mtlcor2q_jc7o",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788430004451,
-      "time": "13:06"
-    },
-    {
-      "id": "v_mtlcor2q_jc7o",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429977511,
-      "time": "13:06"
-    },
-    {
-      "id": "v_mtlcor2q_jc7o",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788429972038,
-      "time": "13:06"
+      "lastSeen": 1788430541365,
+      "time": "13:15"
     }
   ]
 }
