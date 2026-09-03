@@ -1868,14 +1868,7 @@
 
       const tbody = document.getElementById('waStatsTableBody');
       if (tbody) {
-        const combinedMap = new Map();
-        (list || []).forEach(t => combinedMap.set(t.id, t));
-        if (typeof defaultTherapists !== 'undefined') {
-          defaultTherapists.forEach(t => {
-            if (!combinedMap.has(t.id)) combinedMap.set(t.id, t);
-          });
-        }
-        const fullList = Array.from(combinedMap.values());
+        const fullList = (list && list.length > 0) ? list : (typeof defaultTherapists !== 'undefined' ? defaultTherapists : []);
 
         tbody.innerHTML = fullList.map(t => {
           const waCount = stats.tClicks[t.id] || 0;
@@ -1885,7 +1878,7 @@
           <tr>
             <td>
               <div class="therapist-info">
-                <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=100&q=80'">
+                <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='images/turkish_merve_photo.jpg'">
                 <strong style="color:#FFF;">${t.name}</strong>
               </div>
             </td>
