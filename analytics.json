@@ -1,12 +1,20 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {},
   "tCalls": {},
   "logs": [],
   "cityVisits": [
+    {
+      "time": "03.09.2026 12:32",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "2a09:bac1:72a0:10::150:102",
+      "device": "Masaüstü 💻",
+      "page": "bornova-masaj.html"
+    },
     {
       "time": "03.09.2026 12:31",
       "city": "Izmir",
@@ -41,9 +49,17 @@
     }
   ],
   "cityCounts": {
-    "Izmir": 4
+    "Izmir": 5
   },
   "activeVisitors": [
+    {
+      "id": "v_mtlbt2ze_4yve",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788427921685,
+      "time": "12:32"
+    },
     {
       "id": "v_mtlbsl9q_0z07",
       "city": "Izmir",
