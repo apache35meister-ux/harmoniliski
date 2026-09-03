@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 86,
+  "totalVisits": 87,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 01:27",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "buca-masaj.html"
+    },
     {
       "time": "04.09.2026 01:20",
       "city": "Izmir",
@@ -508,18 +516,10 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 70,
+    "Izmir": 71,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
@@ -527,12 +527,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtm38ww0_7ju2",
+      "id": "v_mtm3i2z6_90zu",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788474009670,
-      "time": "01:20"
+      "lastSeen": 1788474436875,
+      "time": "01:27"
     }
   ]
 }
