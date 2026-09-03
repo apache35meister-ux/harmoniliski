@@ -7,6 +7,14 @@
       "time": "03.09.2026 03:08",
       "city": "Izmir",
       "country": "Türkiye",
+      "ip": "2a09:bac5:58ca:d2d::150:a0",
+      "device": "Masaüstü 💻",
+      "page": "levent-masaj.html"
+    },
+    {
+      "time": "03.09.2026 03:08",
+      "city": "Izmir",
+      "country": "Türkiye",
       "ip": "212.253.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
@@ -474,21 +482,13 @@
       "ip": "2a09:bac5:58ca:d2d::150:a0",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 02:08",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac5:58ca:d2d::150:a0",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "totalCalls": 0,
   "lastUpdated": "2026-09-01 13:07:12",
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 177,
+    "Izmir": 178,
     "Ankara": 1,
     "Warsaw": 1,
     "Washington": 1,
@@ -496,6 +496,14 @@
     "Paris": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtkroyo6_mvcr",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788394136535,
+      "time": "03:08"
+    },
     {
       "id": "v_mtkp8qfk_ayog",
       "city": "Izmir",
@@ -527,31 +535,7 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788394053080,
       "time": "03:07"
-    },
-    {
-      "id": "v_mtkrkwre_qief",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393947090,
-      "time": "03:05"
-    },
-    {
-      "id": "v_mtkrchk3_4zbu",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788393931678,
-      "time": "03:05"
-    },
-    {
-      "id": "v_mtkrchk3_4zbu",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788393929274,
-      "time": "03:05"
     }
   ],
-  "totalVisits": 182
+  "totalVisits": 183
 }
