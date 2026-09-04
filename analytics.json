@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 99,
+  "totalVisits": 100,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 16:41",
+      "city": "Osmangazi (Bursa)",
+      "country": "Türkiye",
+      "ip": "176.220.***.***",
+      "device": "Android 📱",
+      "page": "bursa-masaj.html"
+    },
     {
       "time": "04.09.2026 15:27",
       "city": "Prague",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:56",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "nazilli-masaj.html"
     }
   ],
   "cityCounts": {
@@ -525,16 +525,17 @@
     "Istanbul": 1,
     "San Jose": 12,
     "Ankara": 1,
-    "Prague": 1
+    "Prague": 1,
+    "Osmangazi": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtmxiy1i_6s3p",
-      "city": "Prague",
+      "id": "v_mtn05uff_kx9l",
+      "city": "Osmangazi",
       "device": "Android 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788524910788,
-      "time": "15:28"
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788529293736,
+      "time": "16:41"
     }
   ]
 }
