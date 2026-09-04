@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 96,
+  "totalVisits": 97,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 11:37",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "85.105.***.***",
+      "device": "Masaüstü 💻",
+      "page": "kusadasi-masaj.html"
+    },
     {
       "time": "04.09.2026 11:34",
       "city": "Izmir",
@@ -508,18 +516,10 @@
       "ip": "2a09:bac1:72a0:10::150:102",
       "device": "Masaüstü 💻",
       "page": "nazilli-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:53",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 80,
+    "Izmir": 81,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
@@ -527,12 +527,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtmp6dsl_zjm4",
+      "id": "v_mtmp6p1l_8b3y",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788510843141,
-      "time": "11:34"
+      "lastSeen": 1788511061038,
+      "time": "11:37"
     }
   ]
 }
