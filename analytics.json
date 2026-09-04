@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 194,
+  "totalVisits": 195,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:50",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "05.09.2026 02:49",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "bornova-masaj.html"
-    },
-    {
-      "time": "05.09.2026 01:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "levent-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 158,
+    "Izmir": 159,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -549,6 +549,14 @@
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788565830592,
+      "time": "02:50"
+    },
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788565752385,
       "time": "02:49"
     },
@@ -559,14 +567,6 @@
       "activity": "Sitede Aktif Geziniyor",
       "lastSeen": 1788565750671,
       "time": "02:49"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788565615984,
-      "time": "02:46"
     }
   ]
 }
