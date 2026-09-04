@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 151,
+  "totalVisits": 152,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 01:57",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "atasehir-masaj.html"
+    },
     {
       "time": "05.09.2026 01:57",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "zonguldak-masaj.html"
-    },
-    {
-      "time": "04.09.2026 01:31",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 115,
+    "Izmir": 116,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788562673358,
+      "time": "01:57"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
@@ -630,14 +638,6 @@
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788562499847,
-      "time": "01:54"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788562489185,
       "time": "01:54"
     }
   ]
