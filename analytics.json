@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 109,
+  "totalVisits": 110,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 14:17",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "uskudar-masaj.html"
+    },
     {
       "time": "05.09.2026 00:09",
       "city": "Izmir",
@@ -522,14 +530,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 13:01",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -537,7 +537,7 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 12,
+    "San Jose": 13,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
@@ -545,12 +545,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
+      "id": "v_mtnggmyi_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788556169888,
-      "time": "00:09"
+      "lastSeen": 1788556670063,
+      "time": "14:17"
     }
   ]
 }
