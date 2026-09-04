@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 156,
+  "totalVisits": 157,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:01",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "besiktas-masaj.html"
+    },
     {
       "time": "05.09.2026 02:01",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "2a00:1880:a10f:4d45:bdcb:c85f:b35:4815",
       "device": "iPhone 📱",
       "page": "cayyolu-masaj.html"
-    },
-    {
-      "time": "04.09.2026 11:37",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "85.105.***.***",
-      "device": "Masaüstü 💻",
-      "page": "kusadasi-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 120,
+    "Izmir": 121,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788562906445,
+      "time": "02:01"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
@@ -567,14 +575,6 @@
       "activity": "Sitede Aktif Geziniyor",
       "lastSeen": 1788562811723,
       "time": "02:00"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788562695043,
-      "time": "01:58"
     }
   ]
 }
