@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 133,
+  "totalVisits": 134,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 01:50",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "levent-masaj.html"
+    },
     {
       "time": "05.09.2026 01:49",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "66.249.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 15:09",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "66.249.***.***",
-      "device": "Android 📱",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 97,
+    "Izmir": 98,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788562207474,
+      "time": "01:50"
+    },
     {
       "id": "v_mtnjqjpc_0fmn",
       "city": "Izmir",
@@ -567,14 +575,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788562072387,
       "time": "01:47"
-    },
-    {
-      "id": "v_mtnjn33x_uk9q",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788562010423,
-      "time": "01:46"
     },
     {
       "id": "v_mtng5we8_i93u",
