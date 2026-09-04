@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 158,
+  "totalVisits": 159,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:02",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "fethiye-masaj.html"
+    },
     {
       "time": "05.09.2026 02:02",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "176.220.***.***",
       "device": "Android 📱",
       "page": "bursa-masaj.html"
-    },
-    {
-      "time": "04.09.2026 15:27",
-      "city": "Prague",
-      "country": "Czechia",
-      "ip": "195.181.***.***",
-      "device": "Android 📱",
-      "page": "istanbul-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 122,
+    "Izmir": 123,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788562932671,
+      "time": "02:02"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
