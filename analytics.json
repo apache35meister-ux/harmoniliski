@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 117,
+  "totalVisits": 118,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 15:27",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Masaüstü 💻",
+      "page": "buca-masaj.html"
+    },
     {
       "time": "04.09.2026 15:27",
       "city": "San Jose (California)",
@@ -522,14 +530,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 13:15",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -537,13 +537,21 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 17,
+    "San Jose": 18,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtniyhiy_n0ja",
+      "city": "San Jose",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788560862058,
+      "time": "15:27"
+    },
     {
       "id": "v_mtnixpqy_n0ja",
       "city": "San Jose",
