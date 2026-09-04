@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 161,
+  "totalVisits": 162,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:10",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "istanbul-masaj.html"
+    },
     {
       "time": "05.09.2026 02:05",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "5.24.***.***",
       "device": "iPhone 📱",
       "page": "index.html"
-    },
-    {
-      "time": "04.09.2026 17:15",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "5.24.***.***",
-      "device": "iPhone 📱",
-      "page": "karsiyaka-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 125,
+    "Izmir": 126,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788563435124,
+      "time": "02:10"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
