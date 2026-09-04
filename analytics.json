@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 123,
+  "totalVisits": 124,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 01:38",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "nazilli-masaj.html"
+    },
     {
       "time": "05.09.2026 01:36",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "31.142.***.***",
       "device": "iPhone 📱",
       "page": "index.html"
-    },
-    {
-      "time": "02.09.2026 17:00",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "ip": "Gizli",
-      "device": "Android 📱",
-      "page": "besiktas-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 90,
+    "Izmir": 91,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtnjc0g1_5d2b",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788561493886,
+      "time": "01:38"
+    },
     {
       "id": "v_mtni788a_81fx",
       "city": "Izmir",
