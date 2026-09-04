@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 116,
+  "totalVisits": 117,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 15:27",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Masaüstü 💻",
+      "page": "alsancak-masaj.html"
+    },
     {
       "time": "05.09.2026 01:06",
       "city": "Izmir",
@@ -522,14 +530,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 13:07",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -537,7 +537,7 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 16,
+    "San Jose": 17,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
@@ -545,12 +545,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtni788a_81fx",
-      "city": "Izmir",
+      "id": "v_mtnixpqy_n0ja",
+      "city": "San Jose",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788559591073,
-      "time": "01:06"
+      "lastSeen": 1788560826056,
+      "time": "15:27"
     }
   ]
 }
