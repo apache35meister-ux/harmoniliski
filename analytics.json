@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 110,
+  "totalVisits": 111,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 14:18",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "nilufer-masaj.html"
+    },
     {
       "time": "04.09.2026 14:17",
       "city": "San Jose (California)",
@@ -522,14 +530,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 13:06",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -537,13 +537,21 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 13,
+    "San Jose": 14,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtnghmga_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788556716065,
+      "time": "14:18"
+    },
     {
       "id": "v_mtnggmyi_n0ja",
       "city": "San Jose",
