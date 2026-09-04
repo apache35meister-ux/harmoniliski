@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 191,
+  "totalVisits": 192,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:46",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "05.09.2026 02:42",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "cesme-alacati-masaj.html"
-    },
-    {
-      "time": "05.09.2026 01:49",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 155,
+    "Izmir": 156,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -549,32 +549,8 @@
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788565374226,
-      "time": "02:42"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788565335626,
-      "time": "02:42"
-    },
-    {
-      "id": "v_mtnljbxh_03da",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788565252736,
-      "time": "02:40"
-    },
-    {
-      "id": "v_mtnljbxh_03da",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788565239592,
-      "time": "02:40"
+      "lastSeen": 1788565615984,
+      "time": "02:46"
     }
   ]
 }
