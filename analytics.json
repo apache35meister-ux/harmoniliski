@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 98,
+  "totalVisits": 99,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 15:27",
+      "city": "Prague",
+      "country": "Czechia",
+      "ip": "195.181.***.***",
+      "device": "Android 📱",
+      "page": "istanbul-masaj.html"
+    },
     {
       "time": "04.09.2026 14:26",
       "city": "Ankara",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "nazilli-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:56",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -524,16 +524,17 @@
     "İstanbul": 2,
     "Istanbul": 1,
     "San Jose": 12,
-    "Ankara": 1
+    "Ankara": 1,
+    "Prague": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtmvbzzx_b49w",
-      "city": "Ankara",
-      "device": "iPhone 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788521272887,
-      "time": "14:27"
+      "id": "v_mtmxiy1i_6s3p",
+      "city": "Prague",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788524866417,
+      "time": "15:27"
     }
   ]
 }
