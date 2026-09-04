@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 125,
+  "totalVisits": 126,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 15:41",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "konak-masaj.html"
+    },
     {
       "time": "05.09.2026 01:39",
       "city": "Izmir",
@@ -522,14 +530,6 @@
       "ip": "31.142.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 20:57",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "31.142.***.***",
-      "device": "iPhone 📱",
-      "page": "index.html"
     }
   ],
   "cityCounts": {
@@ -537,13 +537,21 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 22,
+    "San Jose": 23,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtnjfs7m_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788561669056,
+      "time": "15:41"
+    },
     {
       "id": "v_mtnjd8eo_c3vf",
       "city": "Izmir",
@@ -559,22 +567,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788561493886,
       "time": "01:38"
-    },
-    {
-      "id": "v_mtni788a_81fx",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788561397475,
-      "time": "01:36"
-    },
-    {
-      "id": "v_mtni788a_81fx",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788561392366,
-      "time": "01:36"
     }
   ]
 }
