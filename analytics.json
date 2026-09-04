@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 105,
+  "totalVisits": 106,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 23:02",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "151.135.***.***",
+      "device": "Android 📱",
+      "page": "buca-masaj.html"
+    },
     {
       "time": "04.09.2026 12:23",
       "city": "Atlanta (Georgia)",
@@ -508,18 +516,10 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 13:00",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 83,
+    "Izmir": 84,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -531,12 +531,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtncczbm_ugqv",
-      "city": "Atlanta",
-      "device": "Masaüstü 💻",
+      "id": "v_mtndro49_2b5e",
+      "city": "Izmir",
+      "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788549781900,
-      "time": "12:23"
+      "lastSeen": 1788552149073,
+      "time": "23:02"
     }
   ]
 }
