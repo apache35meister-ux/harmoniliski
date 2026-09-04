@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 120,
+  "totalVisits": 121,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 15:28",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "diyarbakir-masaj.html"
+    },
     {
       "time": "04.09.2026 15:28",
       "city": "San Jose (California)",
@@ -522,14 +530,6 @@
       "ip": "Gizli",
       "device": "Android 📱",
       "page": "besiktas-masaj.html"
-    },
-    {
-      "time": "03.09.2026 12:38",
-      "city": "Kane (Iowa)",
-      "country": "United States",
-      "ip": "34.123.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -537,13 +537,21 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 20,
+    "San Jose": 21,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtnizn6y_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788560916046,
+      "time": "15:28"
+    },
     {
       "id": "v_mtniz3wi_n0ja",
       "city": "San Jose",
