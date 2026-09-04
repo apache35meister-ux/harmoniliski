@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 97,
+  "totalVisits": 98,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 14:26",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "ip": "2a00:1880:a10f:4d45:bdcb:c85f:b35:4815",
+      "device": "iPhone 📱",
+      "page": "cayyolu-masaj.html"
+    },
     {
       "time": "04.09.2026 11:37",
       "city": "Izmir",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:54",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:102",
-      "device": "Masaüstü 💻",
-      "page": "nazilli-masaj.html"
     }
   ],
   "cityCounts": {
@@ -523,16 +523,17 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 1,
-    "San Jose": 12
+    "San Jose": 12,
+    "Ankara": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtmp6p1l_8b3y",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
+      "id": "v_mtmvbzzx_b49w",
+      "city": "Ankara",
+      "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788511061038,
-      "time": "11:37"
+      "lastSeen": 1788521182973,
+      "time": "14:26"
     }
   ]
 }
