@@ -188,7 +188,7 @@
       transition: all 0.2s;
     }
     .btn-add-therapist:hover {
-      transform: translateY(-2px);
+      transform: tranSılateY(-2px);
       box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
     }
 
@@ -612,7 +612,7 @@
       position: absolute;
       right: 12px;
       top: 50%;
-      transform: translateY(-50%);
+      transform: tranSılateY(-50%);
       background: none;
       border: none;
       color: #A1A1AA;
@@ -641,7 +641,7 @@
       transition: all 0.2s;
     }
     .btn-auth-submit:hover {
-      transform: translateY(-2px);
+      transform: tranSılateY(-2px);
       box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
     }
     .auth-error {
@@ -714,7 +714,7 @@
     .floating-logout:hover {
       background: #EF4444;
       color: #FFF;
-      transform: translateY(-2px);
+      transform: tranSılateY(-2px);
       box-shadow: 0 6px 25px rgba(239, 68, 68, 0.6);
     }
   </style>
@@ -757,7 +757,7 @@
       <div>
         <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
           <input type="password" id="adminPassInput" class="auth-input" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." onkeydown="if(event.key==='Enter') handleAdminLogin()" autofocus required>
-          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
+          <button type="button" class="btn-eye-toggle" onclick="togglePassVisibility()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:tranSılateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
             <span id="eyeIcon">👁️</span>
           </button>
         </div>
@@ -1300,7 +1300,104 @@
   </div>
 
   <script>
-    const defaultTherapists = [];
+    const defaultTherapists = [
+  {
+    id: 1787439999999, name: 'Merve', age: 26,
+    city: 'İzmir', district: 'Alsancak', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Medikal'],
+    tags: ['Klasik İsveç', 'Aromaterapi', 'Kendi Yeri'],
+    bio: 'İzmir Alsancak bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905398243593', whatsapp: '905398243593',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 1, rating: '⭐ 5.0', reviews: 14
+  },
+  {
+    id: 1787433739873, name: 'Peri', age: 32,
+    city: 'Aydın', district: 'Merkez', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Medikal'],
+    tags: ['Klasik İsveç', 'Aromaterapi', 'Kendi Yeri'],
+    bio: 'Aydın bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905446029277', whatsapp: '905446029277',
+    img: 'images/turkish_peri_photo.jpg', image: 'images/turkish_peri_photo.jpg',
+    images: ['images/turkish_peri_photo.jpg'], photos: ['images/turkish_peri_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 8
+  },
+  {
+    id: 1787433800000, name: 'Ayla', age: 28,
+    city: 'Aydın', district: 'Nazilli', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Derin Doku'],
+    tags: ['Aromaterapi', 'Derin Doku', 'Eve Gelen'],
+    bio: 'Aydın Nazilli bölgesinde eve gelen profesyonel masaj. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905300256187', whatsapp: '905300256187',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 6
+  },
+  {
+    id: 1787433900000, name: 'Nisa', age: 25,
+    city: 'İzmir', district: 'Buca', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Relaks'],
+    tags: ['Klasik İsveç', 'Relaks', 'Kendi Yeri'],
+    bio: 'İzmir Buca bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905416056033', whatsapp: '905416056033',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 5
+  },
+  {
+    id: 1787434000000, name: 'Pınar', age: 30,
+    city: 'Uşak', district: 'Merkez', gender: 'Kadın',
+    services: ['İsveç', 'Medikal', 'Relaks'],
+    tags: ['Medikal', 'Relaks', 'Kendi Yeri'],
+    bio: 'Uşak Merkez\'de profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905330593564', whatsapp: '905330593564',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 7
+  },
+  {
+    id: 1787434100000, name: 'Melis', age: 27,
+    city: 'İzmir', district: 'Alsancak', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'VIP'],
+    tags: ['VIP', 'Aromaterapi', 'Kendi Yeri'],
+    bio: 'İzmir Alsancak\'ta VIP masaj hizmeti. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.500 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905398243593', whatsapp: '905398243593',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 11
+  },
+  {
+    id: 1787434200000, name: 'Burçak', age: 29,
+    city: 'İzmir', district: 'Konak', gender: 'Kadın',
+    services: ['İsveç', 'Derin Doku', 'Relaks'],
+    tags: ['Derin Doku', 'Relaks', 'Kendi Yeri'],
+    bio: 'İzmir Konak bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905380586549', whatsapp: '905380586549',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 9
+  },
+  {
+    id: 1787434300000, name: 'Sıla', age: 24,
+    city: 'İstanbul', district: 'Kadıköy', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Medikal'],
+    tags: ['Klasik İsveç', 'Aromaterapi', 'Eve Gelen'],
+    bio: 'İstanbul Kadıköy\'de eve ve otel odasına gelen profesyonel masaj. WhatsApp\'tan randevu alın.',
+    price: '60 Dk: 2.500 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '6663937292', whatsapp: '6663937292',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 10
+  }
+];
     let list = [];
     let currentPhotoUrl = "images/turkish_selin_photo_1786793658243.jpg";
 
@@ -1802,11 +1899,11 @@
 
     
     async function resetLiveAnalytics() {
-      if (!confirm("TÃ¼m canlÄ± ziyaretÃ§i, tÄ±klama ve il analiz istatistiklerini sÄ±fÄ±rlamak istediÄŸinize emin misiniz?")) {
+      if (!confirm("Tüm canlı ziyaretçi, tıklama ve il analiz istatistiklerini sıfırlamak istediğinize emin misiniz?")) {
         return;
       }
       
-      // 1. Yerel Verileri SÄ±fÄ±rla
+      // 1. Yerel Verileri Sıfırla
       localStorage.setItem('zenspa_real_visits', '0');
       localStorage.setItem('zenspa_real_wa_clicks', '0');
       localStorage.setItem('zenspa_real_calls', '0');
@@ -1817,7 +1914,7 @@
       localStorage.setItem('zenspa_city_counts', '{}');
       localStorage.setItem('zenspa_active_visitors', '[]');
 
-      // 2. Bulut analytics.json DosyasÄ±nÄ± SÄ±fÄ±rla
+      // 2. Bulut analytics.json Dosyasını Sıfırla
       try {
         const p1 = "ghp_";
         const p2 = "zODf518H";
@@ -1868,27 +1965,27 @@
         console.log("Cloud reset err:", err);
       }
 
-      // 3. UI ArayÃ¼zÃ¼nÃ¼ CanlÄ± SÄ±fÄ±rla
+      // 3. UI Arayüzünü Canlı Sıfırla
       try {
         const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
-        if (elActiveKPI) elActiveKPI.textContent = '0 KiÅŸi CanlÄ±';
+        if (elActiveKPI) elActiveKPI.textContent = '0 Kişi Canlı';
         const elActiveBadge = document.getElementById('activeRadarBadge');
-        if (elActiveBadge) elActiveBadge.textContent = '0 CanlÄ± ZiyaretÃ§i';
+        if (elActiveBadge) elActiveBadge.textContent = '0 Canlı Ziyaretçi';
         const elTot = document.getElementById('cityTotalVisitsKPI');
         if (elTot) elTot.textContent = '0';
         const elUniq = document.getElementById('cityUniqueCountKPI');
-        if (elUniq) elUniq.textContent = '0 Ä°l';
+        if (elUniq) elUniq.textContent = '0 İl';
         const elTop = document.getElementById('cityTopCityKPI');
         if (elTop) elTop.textContent = '-';
         
         const tbodyActive = document.getElementById('activeVisitorsTableBody');
-        if (tbodyActive) tbodyActive.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem;">Ä°statistikler sÄ±fÄ±rlandÄ±. Yeni ziyaretÃ§iler bekleniyor.</td></tr>';
+        if (tbodyActive) tbodyActive.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#71717A; padding:1.2rem;">İstatistikler sıfırlandı. Yeni ziyaretçiler bekleniyor.</td></tr>';
         
         const tbodyCity = document.getElementById('cityVisitsTableBody');
-        if (tbodyCity) tbodyCity.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">Ä°statistikler sÄ±fÄ±rlandÄ±.</td></tr>';
+        if (tbodyCity) tbodyCity.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#71717A; padding:1.5rem;">İstatistikler sıfırlandı.</td></tr>';
 
         const prog = document.getElementById('cityStatsProgressList');
-        if (prog) prog.innerHTML = '<div style="text-align:center; color:#71717A; padding:1.2rem;">Ä°statistikler sÄ±fÄ±rlandÄ±.</div>';
+        if (prog) prog.innerHTML = '<div style="text-align:center; color:#71717A; padding:1.2rem;">İstatistikler sıfırlandı.</div>';
       } catch(e) {}
 
       if (typeof renderWaTable === 'function') renderWaTable();

@@ -22,10 +22,10 @@
   <link rel="apple-touch-icon" href="images/turkish_selin_photo_1786793658243.jpg">
 
   <!-- Primary SEO Meta Tags (High-CTR & 81 İl Turbo Sürüm) -->
-  <title>👑 Ankara Gölbaşı VIP Masöz & Masaj Terapistleri ⭐ Gölbaşı Rehberi | ZENSPA</title>
-  <meta name="title" content="👑 Ankara Gölbaşı VIP Masöz & Masaj Terapistleri ⭐ Gölbaşı Rehberi | ZENSPA">
-  <meta name="description" content="Ankara Gölbaşı genelinde onaylı VIP masöz ve masaj terapistleri rehberi. Tek tıkla doğrudan WhatsApp randevusu alın.">
-  <meta name="keywords" content="gölbaşı masaj, gölbaşı masöz, gölbaşı vip masaj, ankara gölbaşı masöz ilanları">
+  <title>🔥 Golbasi VIP Masözler & Özel Masaj Terapistleri ⭐ Doğrulanmış WhatsApp Randevusu</title>
+  <meta name="title" content="🔥 Golbasi VIP Masözler & Özel Masaj Terapistleri ⭐ Doğrulanmış WhatsApp Randevusu">
+  <meta name="description" content="✨ Golbasi genelinde en seçkin onaylı VIP masözler, bağımsız terapistler ve gerçek fotoğraflar! Eve ve otele özel relax terapi, güncel seans ücretleri & tek tıkla doğrudan WhatsApp randevusu.">
+  <meta name="keywords" content="golbasi masaj, golbasi masöz, golbasi vip masaj, golbasi masöz ilanları, golbasi eve masaj, golbasi otele masaj, golbasi masaj fiyatları 2026, golbasi özel masaj, golbasi bayan masöz, golbasi relax masaj, golbasi bağımsız masöz, golbasi doğrudan whatsapp masaj">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -50,8 +50,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://harmoniliski.com/golbasi-masaj.html">
-  <meta property="og:title" content="👑 Ankara Gölbaşı VIP Masöz & Masaj Terapistleri ⭐ Gölbaşı Rehberi | ZENSPA">
-  <meta property="og:description" content="Ankara Gölbaşı genelinde onaylı VIP masöz ve masaj terapistleri rehberi. Tek tıkla doğrudan WhatsApp randevusu alın.">
+  <meta property="og:title" content="🔥 Golbasi VIP Masözler & Özel Masaj Terapistleri ⭐ Doğrulanmış WhatsApp Randevusu">
+  <meta property="og:description" content="✨ Golbasi genelinde en seçkin onaylı VIP masözler, bağımsız terapistler ve gerçek fotoğraflar! Eve ve otele özel relax terapi, güncel seans ücretleri & tek tıkla doğrudan WhatsApp randevusu.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
   <meta property="og:site_name" content="ZENSPA VIP">
   <meta property="og:locale" content="tr_TR">
@@ -59,8 +59,8 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://harmoniliski.com/golbasi-masaj.html">
-  <meta name="twitter:title" content="👑 Ankara Gölbaşı VIP Masöz & Masaj Terapistleri ⭐ Gölbaşı Rehberi | ZENSPA">
-  <meta name="twitter:description" content="Ankara Gölbaşı genelinde onaylı VIP masöz ve masaj terapistleri rehberi. Tek tıkla doğrudan WhatsApp randevusu alın.">
+  <meta name="twitter:title" content="🔥 Golbasi VIP Masözler & Özel Masaj Terapistleri ⭐ Doğrulanmış WhatsApp Randevusu">
+  <meta name="twitter:description" content="✨ Golbasi genelinde en seçkin onaylı VIP masözler, bağımsız terapistler ve gerçek fotoğraflar! Eve ve otele özel relax terapi, güncel seans ücretleri & tek tıkla doğrudan WhatsApp randevusu.">
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
 
   <!-- Preconnect & Fast Crawler DNS Optimization -->
@@ -2916,7 +2916,7 @@
 
     function renderTherapists(rawList) {
       // Yalnizca aktif olan VE suresi dolmamis terapistleri yayinda goster (Otomatik Pasife Alma)
-      const list = (rawList || []).filter(t => {
+      let list = (rawList || []).filter(t => {
         if (t.active === false) return false;
         if (t.expiresAt && Date.now() >= t.expiresAt) return false;
         return true;
@@ -2927,38 +2927,32 @@
       const selectedDistrict = document.getElementById('districtSelect')?.value || 'all';
       
       // AKILLI VİTRİN KANCASI (Boş Şehirlerde & İlçelerde Terapist Çeken Altın Kart)
+            // AKILLI VİTRİN: İlçe veya filtrede özel üye yoksa vitrini boş bırakma, tüm onaylı üyeleri göster!
       if (!list || list.length === 0) {
-        let locationLabel = 'Türkiye Geneli';
-        if (selectedCity !== 'all' && selectedDistrict !== 'all') {
-          locationLabel = `${selectedCity} / ${selectedDistrict}`;
-        } else if (selectedCity !== 'all') {
-          locationLabel = selectedCity;
-        } else if (selectedDistrict !== 'all') {
-          locationLabel = selectedDistrict;
-        }
-
-        const waAdText = encodeURIComponent(`Merhaba, ${locationLabel} bölgesi için ZENSPA platformuna ilk VIP vitrin ilanını vermek istiyorum.`);
-        const waAdUrl = `https://api.whatsapp.com/send/?phone=15096204167&text=${waAdText}`;
-
-        container.innerHTML = `
-          <div class="empty-state-magnet">
-            <div class="empty-state-icon">👑</div>
-            <h4 class="empty-state-title">${locationLabel.toUpperCase()} VIP VİTRİNİ HENÜZ BOŞ!</h4>
-            <p class="empty-state-desc">
-              <strong>${locationLabel}</strong> bölgesinde hizmet veren masör veya masöz müsünüz? Bölgenizin <strong>1 numaralı VIP vitrininde</strong> yerinizi hemen ayırtın, bu bölgedeki tüm randevu talepleri doğrudan sizin WhatsApp'ınıza gelsin.
-            </p>
-            <div class="empty-state-actions">
-              <a href="${waAdUrl}" target="_blank" class="btn-vip-banner-cta" style="font-size: 1.05rem; padding: 1.1rem 2.2rem;">
-                💬 ${locationLabel} İçin İlk İlanı Sen Ver (+1 509 620 4167)
-              </a>
-              <button onclick="resetFilters()" style="background: #1C1C22; color: #FFF; border: 1px solid var(--border-gold); font-weight: 700; padding: 0.9rem 1.8rem; border-radius: var(--radius-full);">
-                Tüm İlleri Görüntüle
+        const fallbackList = (therapists || []).filter(t => t.active !== false);
+        if (fallbackList.length > 0) {
+          list = fallbackList;
+          if (countDisplay) countDisplay.innerHTML = `<span style="color:var(--accent-gold);">Tüm Onaylı Terapistler (${list.length})</span>`;
+        } else {
+          let locationLabel = 'Türkiye Geneli';
+          if (selectedCity !== 'all' && selectedDistrict !== 'all') {
+            locationLabel = `${selectedCity} / ${selectedDistrict}`;
+          } else if (selectedCity !== 'all') {
+            locationLabel = selectedCity;
+          }
+          container.innerHTML = `
+            <div class="empty-state-magnet" style="grid-column: 1 / -1; background: linear-gradient(145deg, rgba(28, 28, 34, 0.95), rgba(15, 15, 18, 0.98)); border: 2px dashed rgba(212, 175, 55, 0.4); border-radius: var(--radius-xl); padding: 3rem 1.5rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">👑</div>
+              <h3 style="color: var(--accent-gold); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem;">${locationLabel} VIP Masaj Vitrini</h3>
+              <p style="color: #ccc; margin-bottom: 1.5rem;">Tüm terapistlerimiz onaylı ve aktiftir.</p>
+              <button onclick="resetFilters()" style="background: #1C1C22; color: #FFF; border: 1px solid var(--border-gold); font-weight: 700; padding: 0.9rem 1.8rem; border-radius: var(--radius-full); cursor: pointer;">
+                Tüm Vitrini Görüntüle
               </button>
             </div>
-          </div>
-        `;
-        countDisplay.textContent = "0 Terapist";
-        return;
+          `;
+          if (countDisplay) countDisplay.textContent = "0 Terapist";
+          return;
+        }
       }
 
       countDisplay.textContent = `Toplam ${list.length} Terapist`;
