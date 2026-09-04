@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 184,
+  "totalVisits": 185,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:35",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "alacati-vip-masaj.html"
+    },
     {
       "time": "05.09.2026 02:33",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "66.249.***.***",
       "device": "Android 📱",
       "page": "konak-masaj.html"
-    },
-    {
-      "time": "05.09.2026 01:39",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "cankaya-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 148,
+    "Izmir": 149,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788564915295,
+      "time": "02:35"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
@@ -575,22 +583,6 @@
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788564738996,
       "time": "02:32"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788564730699,
-      "time": "02:32"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788564709082,
-      "time": "02:31"
     }
   ]
 }
