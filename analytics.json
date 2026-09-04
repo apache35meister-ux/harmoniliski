@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 100,
+  "totalVisits": 101,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 17:14",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "ip": "176.234.***.***",
+      "device": "Masaüstü 💻",
+      "page": "kadikoy-masaj.html"
+    },
     {
       "time": "04.09.2026 16:41",
       "city": "Osmangazi (Bursa)",
@@ -508,21 +516,13 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:58",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
     "Izmir": 81,
     "Kane": 1,
     "İstanbul": 2,
-    "Istanbul": 1,
+    "Istanbul": 2,
     "San Jose": 12,
     "Ankara": 1,
     "Prague": 1,
@@ -530,12 +530,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtn05uff_kx9l",
-      "city": "Osmangazi",
-      "device": "Android 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788529338620,
-      "time": "16:42"
+      "id": "v_mtn1bqvq_n31n",
+      "city": "Istanbul",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788531249368,
+      "time": "17:14"
     }
   ]
 }
