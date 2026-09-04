@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 164,
+  "totalVisits": 165,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:19",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "bornova-masaj.html"
+    },
     {
       "time": "05.09.2026 02:11",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "151.135.***.***",
       "device": "Android 📱",
       "page": "buca-masaj.html"
-    },
-    {
-      "time": "04.09.2026 12:23",
-      "city": "Atlanta (Georgia)",
-      "country": "United States",
-      "ip": "2a03:2880:f806:e::",
-      "device": "Masaüstü 💻",
-      "page": "alsancak-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 128,
+    "Izmir": 129,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -548,9 +548,9 @@
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
       "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788563626467,
-      "time": "02:13"
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788563974618,
+      "time": "02:19"
     }
   ]
 }
