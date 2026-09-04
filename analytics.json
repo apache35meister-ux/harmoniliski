@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 103,
+  "totalVisits": 104,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -37,6 +37,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 17:42",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "ip": "94.54.***.***",
+      "device": "iPhone 📱",
+      "page": "cankaya-masaj.html"
+    },
     {
       "time": "04.09.2026 17:16",
       "city": "Izmir",
@@ -508,14 +516,6 @@
       "ip": "2a09:bac1:72a0:10::150:10a",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 12:59",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "2a09:bac1:72a0:10::150:10a",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
@@ -524,34 +524,18 @@
     "İstanbul": 2,
     "Istanbul": 2,
     "San Jose": 12,
-    "Ankara": 1,
+    "Ankara": 2,
     "Prague": 1,
     "Osmangazi": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtn1e6vh_vo3c",
-      "city": "Izmir",
+      "id": "v_mtn2cv7s_42ji",
+      "city": "Ankara",
       "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788531362605,
-      "time": "17:16"
-    },
-    {
-      "id": "v_mtn1dp4a_2w42",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788531341411,
-      "time": "17:15"
-    },
-    {
-      "id": "v_mtn1bqvq_n31n",
-      "city": "Istanbul",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788531294046,
-      "time": "17:14"
+      "lastSeen": 1788532980775,
+      "time": "17:43"
     }
   ]
 }
