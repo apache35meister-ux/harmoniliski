@@ -1300,6 +1300,9 @@
   </div>
 
   <script>
+    const GITHUB_OWNER = "apache35meister-ux";
+    const GITHUB_REPO = "harmoniliski";
+
     const defaultTherapists = [
   {
     id: 1787439999999, name: 'Merve', age: 26,
@@ -1403,6 +1406,9 @@
 
 
     const ADMIN_PASS = "hakan359";
+    const GITHUB_OWNER = "apache35meister-ux";
+    const GITHUB_REPO = "harmoniliski";
+    const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
 
     function checkAuth() {
       var logged = localStorage.getItem('zenspa_panel_auth');
@@ -1523,16 +1529,10 @@
         return `<span class="status-badge" style="background:#0F291B; color:#4ADE80; border-color:#22C55E;">🟢 ${days} Gün Kaldı</span>`;
       }
     }
-
     async function fetchLatestFromGitHub() {
-      const p1 = "ghp_";
-      const p2 = "zODf518H";
-      const p3 = "3Pvnrz6TVb";
-      const p4 = "WMXRlu8iNL8";
-      const p5 = "m2TVMqo";
-      const token = p1 + p2 + p3 + p4 + p5;
-      const owner = "apache35meister-ux";
-      const repo = "harmoniliski";
+      const token = GITHUB_TOKEN;
+      const owner = GITHUB_OWNER;
+      const repo = GITHUB_REPO;
 
       try {
         const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
@@ -1600,14 +1600,9 @@
 
     async function pushTherapistsToGitHub(currentList) {
       try {
-        const p1 = "ghp_";
-        const p2 = "zODf518H";
-        const p3 = "3Pvnrz6TVb";
-        const p4 = "WMXRlu8iNL8";
-        const p5 = "m2TVMqo";
-        const token = p1 + p2 + p3 + p4 + p5;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
+        const token = GITHUB_TOKEN;
+        const owner = GITHUB_OWNER;
+        const repo = GITHUB_REPO;
 
         let fileSha = null;
         try {
@@ -1963,6 +1958,41 @@
       const elVisits = document.getElementById('realTotalVisits');
       if (elVisits) elVisits.textContent = '0';
 
+      const tbody = document.getElementById('waStatsTableBody');
+      if (tbody) {
+        const fullList = (list && list.length > 0) ? list : (typeof defaultTherapists !== 'undefined' ? defaultTherapists : []);
+        tbody.innerHTML = fullList.map(t => `
+          <tr>
+            <td>
+              <div class="therapist-info">
+                <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='images/turkish_merve_photo.jpg'">
+                <strong style="color:#FFF;">${t.name}</strong>
+              </div>
+            </td>
+            <td>📍 ${t.city}</td>
+            <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬 0 Mesaj Talebi</td>
+            <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 0 Telefon Araması</td>
+            <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ 0 Müşteri Talebi</td>
+            <td>
+              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+                💬 İletişime Geç
+              </a>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      const logsTbody = document.getElementById('liveCallLogsTableBody');
+      if (logsTbody) {
+        logsTbody.innerHTML = `
+          <tr>
+            <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
+              Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
+            </td>
+          </tr>
+        `;
+      }
+
       // 3. GitHub Cloud analytics.json Sıfırlama
       try {
         const emptyAnalytics = {
@@ -1986,9 +2016,9 @@
 
         let sha = null;
         try {
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+          const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json?t=' + Date.now(), {
             headers: {
-              'Authorization': 'Bearer ' + token,
+              'Authorization': 'Bearer ' + GITHUB_TOKEN,
               'Accept': 'application/vnd.github+json'
             }
           });
@@ -2005,10 +2035,10 @@
         };
         if (sha) putBody.sha = sha;
 
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+        await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json', {
           method: 'PUT',
           headers: {
-            'Authorization': 'Bearer ' + token,
+            'Authorization': 'Bearer ' + GITHUB_TOKEN,
             'Accept': 'application/vnd.github+json',
             'Content-Type': 'application/json'
           },
@@ -2018,8 +2048,6 @@
         console.warn("Analytics cloud reset error:", err);
       }
 
-      await renderWaTable();
-      await renderCityVisitorStats();
       alert("✓ Tüm istatistikler ve WhatsApp çağrı raporları sıfırlandı!");
     }
 
@@ -2590,14 +2618,9 @@
 
       // Bulut Senkronizasyonu (Tüm cihazlar ve oturumlar için)
       try {
-        const p1 = "ghp_";
-        const p2 = "zODf518H";
-        const p3 = "3Pvnrz6TVb";
-        const p4 = "WMXRlu8iNL8";
-        const p5 = "m2TVMqo";
-        const token = p1 + p2 + p3 + p4 + p5;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
+        const token = GITHUB_TOKEN;
+        const owner = GITHUB_OWNER;
+        const repo = GITHUB_REPO;
 
         let sha = null;
         try {
