@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 142,
+  "totalVisits": 143,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 01:55",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "kizilay-masaj.html"
+    },
     {
       "time": "05.09.2026 01:55",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "66.249.***.***",
       "device": "Masaüstü 💻",
       "page": "bodrum-masaj.html"
-    },
-    {
-      "time": "03.09.2026 15:12",
-      "city": "San Jose (California)",
-      "country": "United States",
-      "ip": "66.249.***.***",
-      "device": "Android 📱",
-      "page": "cankaya-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 106,
+    "Izmir": 107,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788562552940,
+      "time": "01:55"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
