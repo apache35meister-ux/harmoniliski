@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 122,
+  "totalVisits": 123,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 01:36",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "alsancak-masaj.html"
+    },
     {
       "time": "03.09.2026 17:00",
       "city": "San Jose (California)",
@@ -522,18 +530,10 @@
       "ip": "Gizli",
       "device": "Android 📱",
       "page": "besiktas-masaj.html"
-    },
-    {
-      "time": "03.09.2026 19:07",
-      "city": "Istanbul",
-      "country": "Türkiye",
-      "ip": "176.237.***.***",
-      "device": "iPhone 📱",
-      "page": "istanbul-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 89,
+    "Izmir": 90,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtni788a_81fx",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788561397475,
+      "time": "01:36"
+    },
     {
       "id": "v_mtni788a_81fx",
       "city": "Izmir",
