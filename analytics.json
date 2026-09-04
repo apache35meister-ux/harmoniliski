@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 154,
+  "totalVisits": 155,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 02:00",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "aydin-masaj.html"
+    },
     {
       "time": "05.09.2026 01:59",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "85.105.***.***",
       "device": "Masaüstü 💻",
       "page": "lara-masaj.html"
-    },
-    {
-      "time": "04.09.2026 01:44",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "yenisehir-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 118,
+    "Izmir": 119,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -544,6 +544,14 @@
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtng5we8_i93u",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788562844171,
+      "time": "02:00"
+    },
     {
       "id": "v_mtng5we8_i93u",
       "city": "Izmir",
@@ -574,30 +582,6 @@
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788562665391,
-      "time": "01:57"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788562654528,
-      "time": "01:57"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788562639245,
-      "time": "01:57"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788562632212,
       "time": "01:57"
     }
   ]
