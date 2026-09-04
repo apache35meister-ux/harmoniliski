@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 128,
+  "totalVisits": 129,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04.09.2026 15:43",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Android 📱",
+      "page": "cayyolu-masaj.html"
+    },
     {
       "time": "04.09.2026 15:44",
       "city": "San Jose (California)",
@@ -522,14 +530,6 @@
       "ip": "31.142.***.***",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "03.09.2026 21:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "31.142.***.***",
-      "device": "iPhone 📱",
-      "page": "index.html"
     }
   ],
   "cityCounts": {
@@ -537,13 +537,21 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
-    "San Jose": 24,
+    "San Jose": 25,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
     "Atlanta": 1
   },
   "activeVisitors": [
+    {
+      "id": "v_mtnjidkq_n0ja",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788561790030,
+      "time": "15:43"
+    },
     {
       "id": "v_mtnjk9hu_tz3d",
       "city": "San Jose",
