@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZENSPA | VIP Yönetim Paneli</title>
-  <meta name="description" content="ZENSPA VIP Yönetim Paneli – Güvenli oturum yönetimi, terapist listesi ve randevu takibi." />
+  <meta name="description" content="ZENSPA VIP Yönetim Paneli – Güvenli oturum yönetimi, escort listesi ve randevu takibi." />
   <meta name="robots" content="index, follow">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -785,7 +785,7 @@
         <li>
           <button class="nav-btn active" onclick="switchTab('therapistsTab', this)">
             <span>📊</span>
-            <span>Terapist Yönetimi</span>
+            <span>Escort Yönetimi</span>
           </button>
         </li>
         <li>
@@ -832,8 +832,8 @@
     <div id="therapistsTab" class="tab-section active">
       <div class="top-header">
         <div>
-          <h1>VIP Terapist & Profil Yönetimi</h1>
-          <p>Sitedeki aktif masör, masöz profillerini buradan yönetin, kalıcı olarak yeni terapistler ekleyin.</p>
+          <h1>VIP Escort & Profil Yönetimi</h1>
+          <p>Sitedeki aktif escort, escort profillerini buradan yönetin, kalıcı olarak yeni escortlar ekleyin.</p>
         </div>
 
         <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
@@ -842,7 +842,7 @@
           </button>
           <button class="btn-add-therapist" onclick="openAddModal()">
             <span>+</span>
-            <span>Yeni Terapist / İlan Ekle</span>
+            <span>Yeni Escort / İlan Ekle</span>
           </button>
           <button class="btn-logout-header" onclick="adminLogout()">
             🔒 Güvenli Çıkış Yap
@@ -854,7 +854,7 @@
       <div class="kpi-grid">
         <div class="kpi-card">
           <div>
-            <h4>Toplam Terapist</h4>
+            <h4>Toplam Escort</h4>
             <div class="number" id="kpiTotal">14</div>
           </div>
           <div class="kpi-icon">💆</div>
@@ -877,17 +877,17 @@
         </div>
       </div>
 
-      <!-- Terapist Listesi Tablosu -->
+      <!-- Escort Listesi Tablosu -->
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Yayındaki Tüm Terapistler (Kalıcı Kayıt)</h3>
-          <input type="text" class="search-input" id="tableSearch" placeholder="Terapist veya şehir ara..." onkeyup="filterTable()">
+          <h3>Yayındaki Tüm Escortlar (Kalıcı Kayıt)</h3>
+          <input type="text" class="search-input" id="tableSearch" placeholder="Escort veya şehir ara..." onkeyup="filterTable()">
         </div>
 
         <table>
           <thead>
             <tr>
-              <th>Terapist & Fotoğraf</th>
+              <th>Escort & Fotoğraf</th>
               <th>Şehir / Semt</th>
               <th>Seans Ücreti</th>
               <th>Yayın Durumu</th>
@@ -945,12 +945,12 @@
 
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Vitrinde Öne Çıkarılan Terapistler</h3>
+          <h3>Vitrinde Öne Çıkarılan Escortlar</h3>
         </div>
         <table>
           <thead>
             <tr>
-              <th>Terapist</th>
+              <th>Escort</th>
               <th>Şehir</th>
               <th>Vitrin Durumu</th>
               <th>Vitrin Sıralaması</th>
@@ -997,10 +997,10 @@
         </div>
       </div>
 
-      <!-- Terapist Bazlı İstatistik Tablosu -->
+      <!-- Escort Bazlı İstatistik Tablosu -->
       <div class="panel-box">
         <div class="panel-header">
-          <h3>Terapist Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
+          <h3>Escort Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
           <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
             🔄 İstatistikleri Sıfırla
           </button>
@@ -1008,7 +1008,7 @@
         <table>
           <thead>
             <tr>
-              <th>Terapist</th>
+              <th>Escort</th>
               <th>Şehir</th>
               <th>💬 WhatsApp Talebi</th>
               <th>📞 Telefon Araması</th>
@@ -1037,7 +1037,7 @@
           <thead>
             <tr>
               <th>Tarih & Saat</th>
-              <th>Aranan / Yazılan Terapist</th>
+              <th>Aranan / Yazılan Escort</th>
               <th>Şehir</th>
               <th>İşlem Türü</th>
               <th>Durum</th>
@@ -1199,11 +1199,11 @@
 
   </main>
 
-  <!-- Modal: Yeni Terapist Ekle -->
+  <!-- Modal: Yeni Escort Ekle -->
   <div class="modal-overlay" id="addTherapistModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeAddModal()">✕</button>
-      <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ TERAPİST EKLE</h3>
+      <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.25rem; color: #FFF;">YENİ ESCORT EKLE</h3>
 
       <form id="addTherapistForm" onsubmit="saveTherapist(event)">
         
@@ -1211,7 +1211,7 @@
         <div style="margin-bottom: 1.25rem; background: rgba(0,0,0,0.4); border: 1px dashed var(--border-gold); border-radius: var(--radius-md); padding: 1rem;">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.6rem;">
             <label style="font-size:0.85rem; color:#FFF; font-weight:800; display:flex; align-items:center; gap:6px;">
-              <span>📸 Terapist Fotoğraf Galerisi</span>
+              <span>📸 Escort Fotoğraf Galerisi</span>
               <span id="photoCountBadge" style="background:#FBBF24; color:#000; font-size:0.7rem; font-weight:900; padding:2px 8px; border-radius:999px;">0 Fotoğraf</span>
             </label>
             <span style="font-size:0.75rem; color:#A1A1AA;">Birden fazla fotoğraf yükleyebilirsiniz</span>
@@ -1241,7 +1241,7 @@
         <div class="form-row">
           <div class="form-group">
             <label>Ad & Ünvan *</label>
-            <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Masöz" required>
+            <input type="text" id="tName" class="form-control" placeholder="Örn: Melis Escort" required>
           </div>
           <div class="form-group">
             <label>Yaş *</label>
@@ -1264,8 +1264,8 @@
           <div class="form-group">
             <label>Cinsiyet</label>
             <select id="tGender" class="form-control">
-              <option value="Kadın">Kadın Masöz</option>
-              <option value="Erkek">Erkek Masör</option>
+              <option value="Kadın">Kadın Escort</option>
+              <option value="Erkek">Erkek Escort</option>
             </select>
           </div>
           <div class="form-group">
@@ -1293,7 +1293,7 @@
         </div>
 
         <button type="submit" id="btnSubmitTherapist" class="btn-add-therapist" style="width: 100%; justify-content: center; padding: 0.95rem; margin-top: 0.5rem; font-size: 1rem;">
-          ✓ Terapisti Kaydet ve Yayına Al
+          ✓ Escortu Kaydet ve Yayına Al
         </button>
       </form>
     </div>
@@ -1883,7 +1883,7 @@
         alert("İndirilecek arama veya mesaj kaydı bulunamadı.");
         return;
       }
-      let csvContent = "\uFEFFTarih & Saat,Terapist,Şehir,İşlem Türü,Durum\n";
+      let csvContent = "\uFEFFTarih & Saat,Escort,Şehir,İşlem Türü,Durum\n";
       stats.callLogs.forEach(l => {
         csvContent += `"${l.time}","${l.name}","${l.city}","${l.type}","İletişim Başlatıldı"\n`;
       });
@@ -2290,9 +2290,9 @@
       const editId = document.getElementById('editTherapistId');
       if (editId) editId.value = "";
       const mTitle = document.getElementById('modalTitle');
-      if (mTitle) mTitle.textContent = "YENİ TERAPİST EKLE";
+      if (mTitle) mTitle.textContent = "YENİ ESCORT EKLE";
       const btnSub = document.getElementById('btnSubmitTherapist');
-      if (btnSub) btnSub.textContent = "✓ Terapisti Kaydet ve Yayına Al";
+      if (btnSub) btnSub.textContent = "✓ Escortu Kaydet ve Yayına Al";
       const form = document.getElementById('addTherapistForm');
       if (form) form.reset();
 
@@ -2323,7 +2323,7 @@
       const editId = document.getElementById('editTherapistId');
       if (editId) editId.value = item.id;
       const mTitle = document.getElementById('modalTitle');
-      if (mTitle) mTitle.textContent = "✏️ TERAPİSTİ DÜZENLE: " + item.name;
+      if (mTitle) mTitle.textContent = "✏️ ESCORTU DÜZENLE: " + item.name;
       const btnSub = document.getElementById('btnSubmitTherapist');
       if (btnSub) btnSub.textContent = "✓ Güncellemeleri Kaydet";
 
@@ -2423,7 +2423,7 @@
             checkAndAutoExpire();
             renderTable(list);
             closeAddModal();
-            alert("✓ Terapist profili ve " + allPhotos.length + " fotoğraflı galeri başarıyla güncellendi ve tüm cihazlarda yayına alındı!");
+            alert("✓ Escort profili ve " + allPhotos.length + " fotoğraflı galeri başarıyla güncellendi ve tüm cihazlarda yayına alındı!");
             return;
           }
         }
@@ -2461,7 +2461,7 @@
         checkAndAutoExpire();
         renderTable(list);
         closeAddModal();
-        alert("✓ Terapist " + allPhotos.length + " fotoğrafla başarıyla eklendi ve tüm cihazlarda canlıya alındı!");
+        alert("✓ Escort " + allPhotos.length + " fotoğrafla başarıyla eklendi ve tüm cihazlarda canlıya alındı!");
       } catch(err) {
         alert("Kayıt sırasında bir hata oluştu: " + err.message);
       } finally {
@@ -2482,7 +2482,7 @@
     }
 
     async function deleteItem(id) {
-      if (confirm("Bu terapist kaydını kalıcı olarak silmek istediğinize emin misiniz?")) {
+      if (confirm("Bu escort kaydını kalıcı olarak silmek istediğinize emin misiniz?")) {
         list = list.filter(t => t.id !== id);
         renderTable(list);
         renderVitrinTable();
