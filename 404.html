@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yönlendiriliyorsunuz...</title>
+  <script>
+    var path = (window.location.pathname || '').toLowerCase();
+    if (path.includes('panel') || path.includes('admin') || path.includes('yonetim')) {
+      window.location.replace('https://harmoniliski.com/panel.html' + window.location.search);
+    } else {
+      window.location.replace('https://harmoniliski.com/');
+    }
+  </script>
+</head>
+<body style="background:#050507; color:#FFE895; font-family:sans-serif; text-align:center; padding:3rem;">
+  <h2>Sayfa Yükleniyor...</h2>
+  <p><a href="https://harmoniliski.com/panel.html" style="color:#FFF;">Yönetim Paneli için tıklayınız</a></p>
+  <p><a href="https://harmoniliski.com/" style="color:#A1A1AA;">Ana Sayfa için tıklayınız</a></p>
+</body>
+</html>
