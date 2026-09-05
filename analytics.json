@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 0,
-  "totalVisits": 217,
+  "totalVisits": 218,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -57,6 +57,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 05:35",
+      "city": "Gebze (Kocaeli)",
+      "country": "Türkiye",
+      "ip": "2a02:ff0:3d04:d0e9:b17e:e876:91d2:8aad",
+      "device": "iPhone 📱",
+      "page": "kadikoy-masaj.html"
+    },
     {
       "time": "05.09.2026 05:34",
       "city": "Gebze (Kocaeli)",
@@ -528,14 +536,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "fethiye-masaj.html"
-    },
-    {
-      "time": "05.09.2026 02:02",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "denizli-masaj.html"
     }
   ],
   "cityCounts": {
@@ -548,9 +548,17 @@
     "Prague": 1,
     "Osmangazi": 1,
     "Atlanta": 1,
-    "Gebze": 1
+    "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "v_mtnrs2hp_memn",
+      "city": "Gebze",
+      "device": "iPhone 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788575742156,
+      "time": "05:35"
+    },
     {
       "id": "v_mtnrs2hp_memn",
       "city": "Gebze",
