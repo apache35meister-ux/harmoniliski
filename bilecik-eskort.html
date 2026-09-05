@@ -1073,6 +1073,7 @@
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(230, 175, 46, 0.25);
     }
     .card-image-wrap {
+      cursor: pointer;
       position: relative;
       width: 100%;
       height: 360px;
@@ -1275,6 +1276,7 @@
     }
 
     .card-image-wrap {
+      cursor: pointer;
       position: relative;
       width: 100%;
       height: 350px;
@@ -1746,7 +1748,8 @@
       .vip-gold-banner { flex-direction: column; text-align: center; }
       .banner-left { flex-direction: column; }
       .btn-vip-banner-cta { width: 100%; justify-content: center; }
-      .card-image-wrap { height: 300px; }
+      .card-image-wrap {
+      cursor: pointer; height: 300px; }
       .regional-hub { flex-direction: column; text-align: center; }
       .regional-hub-left { flex-direction: column; }
     }
@@ -1882,8 +1885,7 @@
       <div class="filter-pills-bar">
         <button class="filter-pill-btn active" onclick="setQuickPill('all', this)">✨ Tüm Escortlar</button>
         <button class="filter-pill-btn" onclick="setQuickPill('vitrin', this)">👑 VIP Vitrin</button>
-        <button class="filter-pill-btn" onclick="setQuickPill('Kadın', this)">💆 Escortlar</button>
-        <button class="filter-pill-btn" onclick="setQuickPill('Erkek', this)">👨‍⚕️ Escortlar</button>
+        <button class="filter-pill-btn" onclick="setQuickPill('Kadın', this)">👑 Bayan Escortlar</button>
         <button class="filter-pill-btn" onclick="setQuickPill('İstanbul', this)">📍 İstanbul</button>
         <button class="filter-pill-btn" onclick="setQuickPill('Ankara', this)">📍 Ankara</button>
         <button class="filter-pill-btn" onclick="setQuickPill('Bilecik', this)">📍 Bilecik</button>
@@ -2300,6 +2302,105 @@
           Anladım & Kapat
         </button>
       </div>
+    </div>
+  </div>
+
+  <!-- VIP HD Fotoğraf & Profil Büyütme Modalı (Lightbox) -->
+  <div class="modal-overlay" id="photoViewerModal" onclick="handlePhotoModalBackdrop(event)" style="display: none; align-items: center; justify-content: center; z-index: 9999999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(5, 5, 8, 0.96); padding: 12px; position: fixed; inset: 0;">
+    <div class="photo-viewer-box" style="position: relative; max-width: 960px; width: 100%; max-height: 92vh; background: #0C0C12; border: 1.5px solid rgba(212, 175, 55, 0.6); border-radius: 20px; overflow: hidden; box-shadow: 0 25px 80px rgba(0,0,0,0.98), 0 0 50px rgba(212, 175, 55, 0.35); display: flex; flex-direction: column;">
+      
+      <!-- Kapat Butonu -->
+      <button onclick="closePhotoModal()" style="position: absolute; top: 14px; right: 14px; width: 42px; height: 42px; border-radius: 50%; background: rgba(0,0,0,0.8); border: 1.5px solid rgba(255,255,255,0.3); color: #FFF; font-size: 1.3rem; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 60; transition: all 0.2s;" onmouseover="this.style.background='#DC2626'; this.style.borderColor='#EF4444';" onmouseout="this.style.background='rgba(0,0,0,0.8)'; this.style.borderColor='rgba(255,255,255,0.3)';">✕</button>
+
+      <!-- Ana İçerik: Masaüstü Yan Yana, Mobil Alt Alta -->
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; max-height: 92vh; overflow-y: auto;">
+        
+        <!-- Sol: Büyük Fotoğraf Alanı & Navigasyon -->
+        <div id="pvImageWrapper" style="position: relative; flex: 1 1 480px; min-height: 380px; max-height: 72vh; background: #030306; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img id="pvImg" src="" alt="VIP Escort Fotoğrafı" style="width: 100%; height: 100%; max-height: 72vh; object-fit: contain; display: block; transition: opacity 0.2s ease;">
+          
+          <!-- Fotoğraf Sayacı -->
+          <div id="pvCounterBadge" style="display: none; position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.85); border: 1px solid rgba(212,175,55,0.6); color: #FDE047; font-size: 0.8rem; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 10;"></div>
+
+          <!-- Önceki Fotoğraf Butonu -->
+          <button id="pvPrevBtn" onclick="prevModalPhoto(event)" style="display: none; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(0,0,0,0.75); border: 1.5px solid rgba(212,175,55,0.7); color: #FFF; font-size: 1.6rem; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s;" onmouseover="this.style.background='#D4AF37'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,0,0,0.75)'; this.style.color='#FFF';">❮</button>
+
+          <!-- Sonraki Fotoğraf Butonu -->
+          <button id="pvNextBtn" onclick="nextModalPhoto(event)" style="display: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(0,0,0,0.75); border: 1.5px solid rgba(212,175,55,0.7); color: #FFF; font-size: 1.6rem; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s;" onmouseover="this.style.background='#D4AF37'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,0,0,0.75)'; this.style.color='#FFF';">❯</button>
+
+          <!-- Küçük Resimler (Thumbnails) -->
+          <div id="pvThumbnailsStrip" style="display: none; position: absolute; bottom: 10px; left: 0; right: 0; justify-content: center; gap: 8px; padding: 8px 12px; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); z-index: 10; overflow-x: auto;"></div>
+        </div>
+
+        <!-- Sağ: Profil Detayları & Butonlar -->
+        <div style="flex: 1 1 320px; padding: 1.75rem; background: #0D0D13; display: flex; flex-direction: column; justify-content: space-between; border-left: 1px solid rgba(255,255,255,0.08);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+              <span style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #000; font-size: 0.72rem; font-weight: 900; padding: 3px 8px; border-radius: 6px;">👑 VIP DOĞRULANMIŞ</span>
+              <span style="display: inline-flex; align-items: center; gap: 5px; color: #4ADE80; font-size: 0.75rem; font-weight: 700;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 8px #22C55E;"></span> Şu An Müsait</span>
+            </div>
+
+            <h3 id="pvName" style="color: #FFF; font-size: 1.55rem; font-weight: 800; font-family: 'Cinzel', serif; margin-bottom: 0.35rem;">-</h3>
+            <div id="pvLocation" style="color: #D4AF37; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">-</div>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 0.85rem 1rem; margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                <span style="color: #9CA3AF; font-size: 0.82rem;">⏱️ Seans Ücreti:</span>
+                <span id="pvPrice" style="color: #FDE047; font-weight: 900; font-size: 1.05rem;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #9CA3AF; font-size: 0.82rem;">⭐ Müşteri Puanı:</span>
+                <span id="pvRating" style="color: #60A5FA; font-weight: 700; font-size: 0.88rem;">-</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="color: #9CA3AF; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem;">Hakkında & Detaylar</div>
+              <p id="pvBio" style="color: #E4E4E7; font-size: 0.88rem; line-height: 1.6; margin: 0;"></p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <div style="color: #9CA3AF; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem;">Seans & Hizmetler</div>
+              <div id="pvTags" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+            </div>
+          </div>
+
+          <!-- Aksiyon Butonları -->
+          <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+            <a id="pvWaBtn" href="#" target="_blank" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #FFF; font-weight: 900; font-size: 0.95rem; padding: 0.9rem 1.2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+              <span style="font-size: 1.2rem;">💬</span> WhatsApp ile Randevu Al
+            </a>
+            <a id="pvCallBtn" href="#" style="background: #181822; border: 1.5px solid rgba(212,175,55,0.5); color: #FDE047; font-weight: 800; font-size: 0.92rem; padding: 0.85rem 1.2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.15)';" onmouseout="this.style.background='#181822';">
+              <span style="font-size: 1.1rem;">📞</span> Hemen Telefon ile Ara
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Vitrine İlan Ver Modalı -->
+  <div class="modal-overlay" id="vitrinModal" onclick="if(event.target.id==='vitrinModal') closeVitrinModal()" style="display: none; align-items: center; justify-content: center; z-index: 999999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(5, 5, 8, 0.95); padding: 12px; position: fixed; inset: 0;">
+    <div class="modal-box pricing-modal-box" style="position: relative; max-width: 580px; width: 100%; background: #0E0E14; border: 1.5px solid rgba(212,175,55,0.6); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.95);">
+      <button class="modal-close" onclick="closeVitrinModal()" style="position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #FFF; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer;">✕</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👑</div>
+        <h3 style="color: #FBBF24; font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">VIP Vitrinde Yerinizi Alın</h3>
+        <p style="color: #9CA3AF; font-size: 0.88rem; line-height: 1.5;">81 il genelinde binlerce potansiyel müşteriye anında ulaşın. Profilinizi vitrinde öne çıkarmak için hemen başvurun.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem;">
+        <div style="color: #FFF; font-size: 0.92rem; font-weight: 700; margin-bottom: 0.6rem;">✨ Vitrin Ayrıcalıkları:</div>
+        <ul style="color: #D4D4D8; font-size: 0.85rem; line-height: 1.8; padding-left: 1.2rem; margin: 0;">
+          <li>Şehir ve ilçe aramalarında en üst sırada listelenme</li>
+          <li>Doğrudan WhatsApp ve Telefon randevu yönlendirmesi</li>
+          <li>HD Çoklu Fotoğraf ve VIP Altın Rozet</li>
+          <li>7/24 Kesintisiz Yayın Garantisi</li>
+        </ul>
+      </div>
+      <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20sitenize%20escort%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank" style="width: 100%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #FFF; font-weight: 900; font-size: 1rem; padding: 1rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4);">
+        <span>💬</span> WhatsApp Vitrin İlan Hattına Yazın
+      </a>
     </div>
   </div>
 
