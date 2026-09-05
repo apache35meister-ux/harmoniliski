@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 199,
+  "totalVisits": 200,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 03:03",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "goynuk-masaj.html"
+    },
     {
       "time": "05.09.2026 03:01",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "levent-masaj.html"
-    },
-    {
-      "time": "05.09.2026 01:54",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "samsun-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 163,
+    "Izmir": 164,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -545,36 +545,20 @@
   },
   "activeVisitors": [
     {
+      "id": "v_mtnmdij1_h07q",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788566610802,
+      "time": "03:03"
+    },
+    {
       "id": "v_mtnmbn7y_b4p8",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788566515476,
       "time": "03:01"
-    },
-    {
-      "id": "v_mtnjd8eo_c3vf",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788566425114,
-      "time": "03:00"
-    },
-    {
-      "id": "v_mtni788a_81fx",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788566423765,
-      "time": "03:00"
-    },
-    {
-      "id": "v_mtng5we8_i93u",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788566341352,
-      "time": "02:59"
     }
   ]
 }
