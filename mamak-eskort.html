@@ -1902,25 +1902,12 @@
             </select>
           </div>
 
-          <div class="filter-item">
-            <label>✨ SEANS TÜRÜ</label>
-            <select class="filter-select" id="serviceSelect" onchange="filterTherapists()">
-              <option value="all">Tüm Seans Türleri</option>
-              <option value="İsveç">Klasik İsveç Seansı</option>
-              <option value="Medikal">Medikal & Derin Doku</option>
-              <option value="Özel Seans">Özel Relax Seansı</option>
-              <option value="Spor">Özel Dinlendirici Seans</option>
-              <option value="Sıcak Taş">Sıcak Taş Seansı</option>
-              <option value="Thai">Geleneksel Thai Seansı</option>
-            </select>
-          </div>
 
           <div class="filter-item">
             <label>👤 HİZMET VEREN</label>
             <select class="filter-select" id="genderSelect" onchange="filterTherapists()">
-              <option value="all">Tümü (Kadın & Erkek)</option>
+              <option value="all">Tümü (Bayan Escortlar)</option>
               <option value="Kadın">Kadın Escortlar</option>
-              <option value="Erkek">Erkek Escortlar</option>
             </select>
           </div>
 
@@ -2795,7 +2782,7 @@
       const city = citySelectEl ? citySelectEl.value : 'all';
       const districtSelectEl = document.getElementById('districtSelect');
       const district = districtSelectEl ? districtSelectEl.value : 'all';
-      const service = document.getElementById('serviceSelect').value;
+      const service = document.getElementById('serviceSelect') ? document.getElementById('serviceSelect').value : 'all';
       const gender = document.getElementById('genderSelect').value;
       const search = document.getElementById('searchInput').value.toLowerCase().trim();
 
