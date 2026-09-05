@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 201,
+  "totalVisits": 202,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 03:13",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "05.09.2026 03:04",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "kizilay-masaj.html"
-    },
-    {
-      "time": "05.09.2026 01:55",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "mersin-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 165,
+    "Izmir": 166,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -545,28 +545,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mtnmeubd_l8b7",
+      "id": "v_mtnmqj71_nyqy",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788566664911,
-      "time": "03:04"
-    },
-    {
-      "id": "v_mtnmdij1_h07q",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788566610802,
-      "time": "03:03"
-    },
-    {
-      "id": "v_mtnmbn7y_b4p8",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788566515476,
-      "time": "03:01"
+      "lastSeen": 1788567210232,
+      "time": "03:13"
     }
   ]
 }
