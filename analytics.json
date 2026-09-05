@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 0,
-  "totalVisits": 265,
+  "totalVisits": 266,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -57,6 +57,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 11:17",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "05.09.2026 11:12",
       "city": "Izmir",
@@ -528,18 +536,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "bahcesehir-masaj.html"
-    },
-    {
-      "time": "05.09.2026 03:25",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "goztepe-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 221,
+    "Izmir": 222,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 3,
@@ -552,44 +552,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mto1fsr9_ajhy",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788596042999,
-      "time": "11:14"
-    },
-    {
-      "id": "v_mto1jtji_0b9c",
+      "id": "v_mto40fm9_u0uz",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595977118,
-      "time": "11:12"
-    },
-    {
-      "id": "v_mto3td5u_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595895030,
-      "time": "01:11"
-    },
-    {
-      "id": "v_mto3sq0i_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595865070,
-      "time": "01:11"
-    },
-    {
-      "id": "v_mto3sq0i_n0ja",
-      "city": "San Jose",
-      "device": "Android 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595865070,
-      "time": "01:11"
+      "lastSeen": 1788596225442,
+      "time": "11:17"
     }
   ]
 }
