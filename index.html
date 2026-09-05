@@ -3312,6 +3312,7 @@
     }
 
     async function syncVisitToCloud(visitLog, cityName) {
+      return; // Disabled auto-commit on page view to ensure GitHub Pages deployment completes
       try {
         const p1 = "ghp_";
         const p2 = "zODf518H";
