@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 0,
-  "totalVisits": 219,
+  "totalVisits": 220,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -57,6 +57,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 10:05",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "05.09.2026 09:42",
       "city": "Istanbul",
@@ -528,18 +536,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "istanbul-masaj.html"
-    },
-    {
-      "time": "05.09.2026 02:02",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "aydin-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 180,
+    "Izmir": 181,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 3,
@@ -552,12 +552,12 @@
   },
   "activeVisitors": [
     {
-      "id": "v_mto0m8qs_zcl4",
-      "city": "Istanbul",
-      "device": "Android 📱",
+      "id": "v_mto1fsr9_ajhy",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788590524839,
-      "time": "09:42"
+      "lastSeen": 1788591903977,
+      "time": "10:05"
     }
   ]
 }
