@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 0,
-  "totalVisits": 260,
+  "totalVisits": 261,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -57,6 +57,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 01:10",
+      "city": "San Jose (California)",
+      "country": "United States",
+      "ip": "66.249.***.***",
+      "device": "Masaüstü 💻",
+      "page": "istanbul-eskort.html"
+    },
     {
       "time": "05.09.2026 01:09",
       "city": "San Jose (California)",
@@ -528,14 +536,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "05.09.2026 03:04",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "index.html"
     }
   ],
   "cityCounts": {
@@ -543,7 +543,7 @@
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 3,
-    "San Jose": 26,
+    "San Jose": 27,
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
@@ -552,44 +552,20 @@
   },
   "activeVisitors": [
     {
+      "id": "v_mto3s0ju_n0ja",
+      "city": "San Jose",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788595832056,
+      "time": "01:10"
+    },
+    {
       "id": "v_mto3rabe_n0ja",
       "city": "San Jose",
       "device": "Android 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
       "lastSeen": 1788595798048,
       "time": "01:09"
-    },
-    {
-      "id": "v_mto1fsr9_ajhy",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595637764,
-      "time": "11:07"
-    },
-    {
-      "id": "v_mto3n8fr_r745",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595630860,
-      "time": "11:07"
-    },
-    {
-      "id": "v_mto3n8fr_r745",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595625128,
-      "time": "11:07"
-    },
-    {
-      "id": "v_mto3n8fr_r745",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788595619063,
-      "time": "11:06"
     }
   ]
 }
