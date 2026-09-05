@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 202,
+  "totalVisits": 203,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 03:23",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "05.09.2026 03:13",
       "city": "Izmir",
@@ -522,18 +530,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "gaziantep-masaj.html"
-    },
-    {
-      "time": "05.09.2026 01:55",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "kizilay-masaj.html"
     }
   ],
   "cityCounts": {
-    "Izmir": 166,
+    "Izmir": 167,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 2,
@@ -548,9 +548,9 @@
       "id": "v_mtnmqj71_nyqy",
       "city": "Izmir",
       "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788567255240,
-      "time": "03:14"
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788567792513,
+      "time": "03:23"
     }
   ]
 }
