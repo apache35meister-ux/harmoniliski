@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 0,
-  "totalVisits": 248,
+  "totalVisits": 249,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -57,6 +57,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 10:52",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "ip": "212.253.***.***",
+      "device": "Masaüstü 💻",
+      "page": "goztepe-masaj.html"
+    },
     {
       "time": "05.09.2026 10:48",
       "city": "Izmir",
@@ -528,18 +536,10 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "alsancak-masaj.html"
-    },
-    {
-      "time": "05.09.2026 02:40",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "cityCounts": {
-    "Izmir": 209,
+    "Izmir": 210,
     "Kane": 1,
     "İstanbul": 2,
     "Istanbul": 3,
@@ -552,44 +552,20 @@
   },
   "activeVisitors": [
     {
+      "id": "v_mto1jtji_0b9c",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788594774907,
+      "time": "10:52"
+    },
+    {
       "id": "v_mto2d57z_xxbx",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Sitede Aktif Geziniyor",
       "lastSeen": 1788594611419,
       "time": "10:50"
-    },
-    {
-      "id": "v_mto2zdlz_hmep",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788594513105,
-      "time": "10:48"
-    },
-    {
-      "id": "v_mto2zdlz_hmep",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788594511699,
-      "time": "10:48"
-    },
-    {
-      "id": "v_mto2zdlz_hmep",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788594509651,
-      "time": "10:48"
-    },
-    {
-      "id": "v_mto2zdlz_hmep",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788594496606,
-      "time": "10:48"
     }
   ]
 }
