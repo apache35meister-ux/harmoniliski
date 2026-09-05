@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 0,
-  "totalVisits": 216,
+  "totalVisits": 217,
   "lastUpdated": "2026-09-03 12:20:00",
   "tClicks": {
     "1787133029944": 1,
@@ -51,6 +51,14 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05.09.2026 05:34",
+      "city": "Gebze (Kocaeli)",
+      "country": "Türkiye",
+      "ip": "2a02:ff0:3d04:d0e9:b17e:e876:91d2:8aad",
+      "device": "iPhone 📱",
+      "page": "kadikoy-masaj.html"
+    },
     {
       "time": "05.09.2026 03:32",
       "city": "Izmir",
@@ -522,14 +530,6 @@
       "ip": "212.253.***.***",
       "device": "Masaüstü 💻",
       "page": "denizli-masaj.html"
-    },
-    {
-      "time": "05.09.2026 02:01",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "ip": "212.253.***.***",
-      "device": "Masaüstü 💻",
-      "page": "besiktas-masaj.html"
     }
   ],
   "cityCounts": {
@@ -541,64 +541,17 @@
     "Ankara": 3,
     "Prague": 1,
     "Osmangazi": 1,
-    "Atlanta": 1
+    "Atlanta": 1,
+    "Gebze": 1
   },
   "activeVisitors": [
     {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
+      "id": "v_mtnrs2hp_memn",
+      "city": "Gebze",
       "device": "iPhone 📱",
       "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568333008,
-      "time": "03:32"
-    },
-    {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568265207,
-      "time": "03:31"
-    },
-    {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568257152,
-      "time": "03:30"
-    },
-    {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568241480,
-      "time": "03:30"
-    },
-    {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568228873,
-      "time": "03:30"
-    },
-    {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568200056,
-      "time": "03:30"
-    },
-    {
-      "id": "v_mtnn9vl2_apjq",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Ana Sayfa Vitrininde Geziyor",
-      "lastSeen": 1788568170345,
-      "time": "03:29"
+      "lastSeen": 1788575681895,
+      "time": "05:34"
     }
   ]
 }
