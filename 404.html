@@ -104,12 +104,37 @@
   </div>
 
   <script>
-    var path = (window.location.pathname || '').toLowerCase();
-    if (path.includes('panel') || path.includes('admin') || path.includes('yonetim')) {
-      window.location.replace('https://harmoniliski.com/panel.html' + window.location.search);
-    } else {
-      window.location.replace('https://harmoniliski.com/');
-    }
+    (function() {
+      var fullPath = (window.location.pathname || '').toLowerCase();
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+
+      // 1. Admin/Panel/Yönetim yönlendirmeleri
+      if (fullPath.indexOf('panel') !== -1 || fullPath.indexOf('admin') !== -1 || fullPath.indexOf('yonetim') !== -1) {
+        window.location.replace('https://harmoniliski.com/panel.html' + search + hash);
+        return;
+      }
+
+      // 2. Eski "-masaj.html" uzantılı URL'leri anında "-eskort.html" sayfasına yönlendir
+      if (fullPath.indexOf('-masaj.html') !== -1) {
+        var targetEscort = fullPath.replace('-masaj.html', '-eskort.html');
+        window.location.replace('https://harmoniliski.com' + targetEscort + search + hash);
+        return;
+      }
+
+      // 3. Şehir/bölge eşleştirmeleri (örn: /izmir, /istanbul, /ankara)
+      var knownCities = ['izmir', 'istanbul', 'ankara', 'antalya', 'bursa', 'adana', 'mugla', 'bodrum', 'alsancak', 'kadikoy', 'cankaya', 'karsiyaka', 'konak', 'aydin', 'kusadasi', 'didim', 'cesme', 'alacati', 'fethiye', 'marmaris', 'eskisehir', 'mersin', 'gaziantep', 'trabzon', 'samsun', 'kayseri', 'denizli', 'sanliurfa', 'adapazari', 'sakarya', 'kocaeli', 'izmit', 'tekirdag', 'balikesir', 'manisa'];
+      for (var i = 0; i < knownCities.length; i++) {
+        var c = knownCities[i];
+        if (fullPath.indexOf(c) !== -1) {
+          window.location.replace('https://harmoniliski.com/' + c + '-eskort.html' + search + hash);
+          return;
+        }
+      }
+
+      // 4. Diğer tüm geçersiz veya silinmiş yolları ana sayfaya yönlendir (0 Hata Garantisi)
+      window.location.replace('https://harmoniliski.com/' + search + hash);
+    })();
   </script>
 </head>
 <body style="background:#050507; color:#FFE895; font-family:sans-serif; text-align:center; padding:3rem;">

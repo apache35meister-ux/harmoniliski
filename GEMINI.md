@@ -31,3 +31,10 @@ Bu dosya, bu projede yapılacak tüm geliştirme, düzenleme ve bakım işlemler
 ## 4. Değişiklikleri Doğrulama ve Canlıya Aktarma
 - Herhangi bir kod değişikliği yapıldığında dosya sözdizimi (syntax) kontrol edilmeli.
 - Değişiklikler GitHub ana dalına (`main`) commit ve push edilerek canlı sitenin (`harmoniliski.com`) her zaman güncel kalması sağlanmalıdır.
+
+---
+
+## 5. Kesin 404 / 410 ve Kırık Link Engelleme Kuralı (Zero 404/410 Policy)
+- **Asla Kırık Link Bırakma:** Sitede silinen, taşınan veya değiştirilen eski tüm sayfalar (özellikle `-masaj.html` ve eski URL varyasyonları) daima ilgili yeni sayfaya veya ana sayfaya otomatik olarak yönlendirilmelidir.
+- **Akıllı 404 Kalkanı:** `404.html` sayfası; gelen tüm geçersiz, eski veya hatalı istekleri anında yakalayarak kullanıcıyı ve arama motoru botlarını 0 milisaniyede doğru hedef sayfaya (şehir sayfası, panel veya ana sayfa) aktaracak akıllı yönlendirme algoritmasını daima çalışır durumda tutmalıdır.
+- **Google Log Temizliği:** Google botlarına hiçbir zaman 404 (Bulunamadı) veya 410 (Kalıcı Olarak Silindi) yanıtı verdirilmemeli, Google Search Console ve sunucu loglarında %100 temiz durum korunmalıdır.
