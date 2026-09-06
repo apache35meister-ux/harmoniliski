@@ -2858,16 +2858,35 @@
       { kw: "guvenilir escort rehberi", city: "Türkiye Geneli", url: "guvenilir-escort-ilanlari-ve-dogrulama-kilavuzu.html", rank: 2, prev: 4, ctr: "%12.4", schema: "Aktif (FAQPage)" }
     ];
 
+    async function loadOfficialGscData() {
+      try {
+        const res = await fetch('./gsc_live_rankings.json?t=' + Date.now(), { cache: 'no-store' });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && Array.isArray(data.items) && data.items.length > 0) {
+            localStorage.setItem('zenspa_rank_keywords', JSON.stringify(data.items));
+            localStorage.setItem('zenspa_gsc_last_sync', data.updatedAt || '');
+            return data.items;
+          }
+        }
+      } catch(e) {}
+      return null;
+    }
+
     function getRankKeywords() {
       try {
         const stored = localStorage.getItem('zenspa_rank_keywords');
-        if (stored) return JSON.parse(stored);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
       } catch(e) {}
       return defaultRankKeywords;
     }
 
-    function renderRankTracker() {
-      const items = getRankKeywords();
+    async function renderRankTracker() {
+      const gscLive = await loadOfficialGscData();
+      const items = gscLive || getRankKeywords();
       const tbody = document.getElementById('rankTrackerTableBody');
       if (!tbody) return;
 
