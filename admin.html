@@ -738,9 +738,11 @@
   <script>
     (function() {
       try {
-        var logged = sessionStorage.getItem('zenspa_panel_auth');
-        if (logged === 'evet') {
+        var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+        if (logged) {
           document.documentElement.style.overflow = '';
+          var ov = document.getElementById('adminAuthOverlay');
+          if (ov) ov.style.display = 'none';
         } else {
           document.documentElement.style.overflow = 'hidden';
         }
@@ -1609,18 +1611,18 @@
     const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
 
     function checkAuth() {
-      // Eski kalıcı oturumu temizle ki doğrudan şifresiz girmesin
-      try { localStorage.removeItem('zenspa_panel_auth'); } catch(e) {}
       var logged = false;
       try {
-        logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet';
+        logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
       } catch(e) {}
 
       var overlay = document.getElementById('adminAuthOverlay');
       if (logged) {
         if (overlay) {
-          overlay.style.display = 'none';
-          overlay.style.pointerEvents = 'none';
+          overlay.style.setProperty('display', 'none', 'important');
+          overlay.style.setProperty('visibility', 'hidden', 'important');
+          overlay.style.setProperty('pointer-events', 'none', 'important');
+          overlay.classList.add('hidden');
         }
         document.documentElement.style.overflow = '';
         if (document.body) document.body.style.overflow = '';
@@ -1657,11 +1659,14 @@
 
       try {
         sessionStorage.setItem('zenspa_panel_auth', 'evet');
+        localStorage.setItem('zenspa_panel_auth', 'evet');
       } catch(err) {}
 
       if (overlay) {
-        overlay.style.display = 'none';
-        overlay.style.pointerEvents = 'none';
+        overlay.style.setProperty('display', 'none', 'important');
+        overlay.style.setProperty('visibility', 'hidden', 'important');
+        overlay.style.setProperty('pointer-events', 'none', 'important');
+        overlay.classList.add('hidden');
       }
       document.documentElement.style.overflow = '';
       if (document.body) document.body.style.overflow = '';
@@ -1670,7 +1675,7 @@
       try {
         initAdminData();
       } catch(err) {
-        console.error("initAdminData error:", err);
+        console.warn("initAdminData err:", err);
       }
       return false;
     }
