@@ -1812,6 +1812,18 @@
         return false;
       }
 
+      if (val !== ADMIN_PASS) {
+        if (errorMsg) {
+          errorMsg.style.display = 'block';
+          errorMsg.textContent = '❌ Hatalı şifre! Lütfen güncel şifrenizi giriniz.';
+        }
+        if (passEl) {
+          passEl.value = '';
+          passEl.focus();
+        }
+        return false;
+      }
+
       try {
         sessionStorage.setItem('zenspa_panel_auth', 'evet');
         localStorage.setItem('zenspa_panel_auth', 'evet');
