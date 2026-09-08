@@ -1095,9 +1095,14 @@
       <div class="panel-box">
         <div class="panel-header">
           <h3>Escort Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
-          <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:5px 12px; border-radius:6px; font-size:0.78rem; cursor:pointer;">
-            🔄 İstatistikleri Sıfırla
-          </button>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button onclick="renderWaTable()" style="background:#0F291B; color:#4ADE80; border:1px solid #22C55E; padding:6px 14px; border-radius:8px; font-size:0.82rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+              🔄 Canlı Verileri Yenile
+            </button>
+            <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:6px 12px; border-radius:8px; font-size:0.78rem; cursor:pointer;">
+              🗑️ Sıfırla
+            </button>
+          </div>
         </div>
         <table>
           <thead>
@@ -2426,13 +2431,45 @@
 
       try {
         let cloudStats = null;
-        // 1. Direct raw.githubusercontent.com (Zero Cache)
-        try {
-          const rawRes = await fetch('https://raw.githubusercontent.com/apache35meister-ux/harmoniliski/main/analytics.json?t=' + Date.now(), { cache: 'no-store' });
-          if (rawRes.ok) cloudStats = await rawRes.json();
-        } catch(e) {}
+        const token = GITHUB_TOKEN;
+        const owner = GITHUB_OWNER;
+        const repo = GITHUB_REPO;
 
-        // 2. Fallback to local ./analytics.json
+        // 1. Direct GitHub REST API with Token (Guarantees 0ms cache delay, always latest commit)
+        try {
+          const apiRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Accept': 'application/vnd.github+json'
+            },
+            cache: 'no-store'
+          });
+          if (apiRes.ok) {
+            const data = await apiRes.json();
+            if (data && data.content) {
+              const rawBase64 = data.content.replace(/\s/g, '');
+              const binary = atob(rawBase64);
+              const bytes = new Uint8Array(binary.length);
+              for (let i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+              }
+              const text = new TextDecoder('utf-8').decode(bytes);
+              cloudStats = JSON.parse(text);
+            }
+          }
+        } catch(e) {
+          console.warn("Direct GitHub API analytics error:", e);
+        }
+
+        // 2. Fallback to raw.githubusercontent.com
+        if (!cloudStats) {
+          try {
+            const rawRes = await fetch('https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/analytics.json?t=' + Date.now(), { cache: 'no-store' });
+            if (rawRes.ok) cloudStats = await rawRes.json();
+          } catch(e) {}
+        }
+
+        // 3. Fallback to local ./analytics.json
         if (!cloudStats) {
           try {
             const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-store' });
@@ -2441,7 +2478,6 @@
         }
 
         if (cloudStats) {
-          // Bulut verisi (GitHub) tek kesin referanstır. Sıfırlanmışsa sıfır değerleri doğrudan kabul edilir.
           stats.waClicks = cloudStats.totalWaClicks || 0;
           stats.callClicks = cloudStats.totalCalls || 0;
           stats.visits = cloudStats.totalVisits || 0;
@@ -2452,7 +2488,6 @@
           stats.cityCounts = cloudStats.cityCounts || {};
           stats.activeVisitors = Array.isArray(cloudStats.activeVisitors) ? cloudStats.activeVisitors : [];
 
-          // LocalStorage'ı da bulutla birebir senkronize et
           try {
             localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
             localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
