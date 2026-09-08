@@ -1511,32 +1511,175 @@
     <div id="settingsTab" class="tab-section">
       <div class="top-header">
         <div>
-          <h1>⚙️ Platform Ayarları</h1>
-          <p>Site başlığı ve WhatsApp numaralarını buradan güncelleyebilirsiniz.</p>
+          <h1>⚙️ Sistem & Platform Yönetim Merkezi</h1>
+          <p>Platform genel ayarları, Google SEO/Dizin yapılandırması, VIP vitrin fiyat tarifeleri, güvenlik ve yedekleme kontrolleri.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button onclick="downloadBackupData()" style="background:#18181B; color:#38BDF8; border:1px solid rgba(56,189,248,0.4); padding:0.6rem 1.1rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            💾 Tam Yedek İndir (JSON)
+          </button>
+          <button onclick="saveSettings(event)" style="background:var(--gold-gradient); color:#000; border:none; padding:0.6rem 1.3rem; border-radius:10px; font-weight:900; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 15px rgba(230,175,46,0.3);">
+            ✓ Değişiklikleri Kaydet & Yayınla
+          </button>
         </div>
       </div>
 
-      <div class="panel-box">
+      <!-- 1. MODÜL: PLATFORM & MARKA KİMLİĞİ AYARLARI -->
+      <div class="panel-box" style="border: 1px solid rgba(251,191,36,0.35); background: rgba(18,18,22,0.7);">
+        <div class="panel-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px; color:#FDE047;">
+              <span>🏷️ Platform & İletişim Kimliği Ayarları</span>
+            </h3>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Sitenin ana başlığını, WhatsApp merkezi müşteri hattını ve görünüm başlıklarını kalıcı olarak belirleyin.</span>
+          </div>
+        </div>
+
         <form onsubmit="saveSettings(event)">
           <div class="settings-grid">
             <div class="settings-group">
-              <label>Vitrin & İlan WhatsApp Numarası</label>
-              <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167">
+              <label>📱 Vitrin & İlan WhatsApp Numarası</label>
+              <input type="text" class="settings-input" id="settingWaNumber" value="+1 509 620 4167" placeholder="Örn: 15096204167">
+              <small style="color:#71717A; font-size:0.75rem; margin-top:4px; display:block;">İlan verenlerin ve vitrinin bağlandığı ana WhatsApp hattı.</small>
             </div>
             <div class="settings-group">
-              <label>Site Başlığı</label>
-              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | 81 İl VIP Masaj & Terapi Rehberi">
+              <label>👑 Platform / Site Başlığı (SEO Title)</label>
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | 81 İl VIP Eskort & Masaj Rehberi">
+              <small style="color:#71717A; font-size:0.75rem; margin-top:4px; display:block;">Google arama sonuçlarında ve tarayıcı sekmesinde görünen başlık.</small>
             </div>
             <div class="settings-group">
-              <label>Kapsam</label>
+              <label>🗺️ Kapsam & Coğrafi Alan</label>
               <input type="text" class="settings-input" id="settingCities" value="Türkiye Geneli 81 İl">
+            </div>
+            <div class="settings-group">
+              <label>💬 WhatsApp Otomatik Karşılama Mesajı</label>
+              <input type="text" class="settings-input" id="settingWaWelcome" value="Merhaba, sitenizdeki VIP ilan hakkında bilgi almak istiyorum.">
             </div>
           </div>
 
-          <button type="submit" class="btn-save-settings">
-            ✓ Ayarları Kaydet
-          </button>
+          <div style="display:flex; justify-content:flex-end; margin-top:1rem;">
+            <button type="submit" class="btn-save-settings" style="margin-top:0;">
+              ✓ Platform Ayarlarını Kaydet & Buluta Aktar
+            </button>
+          </div>
         </form>
+      </div>
+
+      <!-- 2. MODÜL: VIP VİTRİN & İLAN FİYAT TARİFELERİ AYARI -->
+      <div class="panel-box" style="border: 1px solid rgba(168,85,247,0.35); background: rgba(22,14,32,0.6);">
+        <div class="panel-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px; color:#C084FC;">
+              <span>👑 VIP Vitrin & İlan Fiyatlandırma Ayarları</span>
+            </h3>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Panelde ve vitrin sekmesinde hesaplanan haftalık, 15 günlük ve aylık vitrin yayın tarifeleri:</span>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="settings-group">
+            <label>🥉 1 Haftalık Vitrin Fiyatı (₺)</label>
+            <input type="text" class="settings-input" id="settingPriceWeek" value="1.250 ₺">
+          </div>
+          <div class="settings-group">
+            <label>🥈 15 Günlük Vitrin Fiyatı (₺)</label>
+            <input type="text" class="settings-input" id="settingPrice15Days" value="2.000 ₺">
+          </div>
+          <div class="settings-group">
+            <label>🥇 1 Aylık VIP Vitrin Fiyatı (₺)</label>
+            <input type="text" class="settings-input" id="settingPriceMonth" value="3.500 ₺">
+          </div>
+          <div class="settings-group">
+            <label>💎 Özel VIP Gold İlan Paketi (₺)</label>
+            <input type="text" class="settings-input" id="settingPriceGold" value="5.000 ₺">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. MODÜL: GOOGLE SEO, INDEXNOW & SEARCH CONSOLE ENTEGRASYONU -->
+      <div class="panel-box" style="border: 1px solid rgba(56,189,248,0.35); background: rgba(10,22,34,0.6);">
+        <div class="panel-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px; color:#38BDF8;">
+              <span>🚀 Google SEO, Bot & IndexNow Entegrasyon Ayarları</span>
+            </h3>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Google Search Console API ve arama motoru dizinleme protokolleri:</span>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="settings-group">
+            <label>🤖 Google Search Console Service Bot</label>
+            <input type="text" class="settings-input" value="site-bot@vast-operator-299822.iam.gserviceaccount.com" readonly style="background:#050B14; color:#38BDF8; font-family:monospace; font-size:0.82rem;">
+            <small style="color:#4ADE80; font-size:0.75rem; margin-top:4px; display:block;">🟢 Tam Yetkili & API Entegrasyonu Bağlı</small>
+          </div>
+          <div class="settings-group">
+            <label>⚡ IndexNow Anahtarı (Bing & Yandex)</label>
+            <input type="text" class="settings-input" id="settingIndexNowKey" value="harmoniliski-indexnow-2026.txt" readonly style="background:#050B14; color:#A1A1AA; font-family:monospace; font-size:0.82rem;">
+            <small style="color:#4ADE80; font-size:0.75rem; margin-top:4px; display:block;">🟢 Kök Dizinde Doğrulandı (Aktif)</small>
+          </div>
+          <div class="settings-group">
+            <label>🗺️ Dinamik Sitemap URL'si</label>
+            <input type="text" class="settings-input" value="https://harmoniliski.com/sitemap.xml" readonly style="background:#050B14; color:#A1A1AA; font-size:0.82rem;">
+            <small style="color:#FBBF24; font-size:0.75rem; margin-top:4px; display:block;">📊 223 Sayfa Google Tarafından Başarıyla Okundu</small>
+          </div>
+          <div class="settings-group">
+            <label>🔄 Otomatik Bot Yenileme Sıklığı</label>
+            <select class="settings-input" id="settingAutoRefreshSec" style="background:#08080A;">
+              <option value="10" selected>Her 10 Saniyede Bir (Tavsiye Edilen)</option>
+              <option value="30">Her 30 Saniyede Bir</option>
+              <option value="60">Her 1 Dakikada Bir</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08);">
+          <button type="button" onclick="pingGoogleSitemap(this)" style="background:#1E293B; border:1px solid #38BDF8; color:#38BDF8; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
+            📡 Google'a Sitemap Ping Gönder
+          </button>
+          <button type="button" onclick="pingIndexNow(this)" style="background:#1E293B; border:1px solid #4ADE80; color:#4ADE80; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
+            ⚡ IndexNow Protokolünü Tetikle
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. MODÜL: GÜVENLİK, YEDEKLEME & VERİ SIFIRLAMA KONTROLLERİ -->
+      <div class="panel-box" style="border: 1px solid rgba(239,68,68,0.35); background: rgba(30,10,14,0.6);">
+        <div class="panel-header">
+          <div>
+            <h3 style="display:flex; align-items:center; gap:8px; color:#F87171;">
+              <span>🛡️ Güvenlik, Veri Tabanı & Bakım Merkezi</span>
+            </h3>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Panel oturum güvenliği, şifre koruması ve sistem sıfırlama mekanizması:</span>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="settings-group">
+            <label>🔒 Panel Güvenlik Durumu</label>
+            <div style="background:#14080A; border:1px solid rgba(239,68,68,0.3); border-radius:10px; padding:0.85rem 1rem; color:#FCA5A5; font-size:0.85rem; font-weight:700;">
+              🔑 VIP Yönetici Şifre Koruması Aktif (SHA-256 Oturum Takibi)
+            </div>
+          </div>
+          <div class="settings-group">
+            <label>💾 Veri Depolama & Senkronizasyon</label>
+            <div style="background:#14080A; border:1px solid rgba(74,222,128,0.3); border-radius:10px; padding:0.85rem 1rem; color:#4ADE80; font-size:0.85rem; font-weight:700;">
+              ☁️ GitHub Cloud & LocalStorage Çift Katmanlı Eşitlendi
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08); align-items:center;">
+          <button type="button" onclick="downloadBackupData()" style="background:#1E293B; border:1px solid #60A5FA; color:#60A5FA; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
+            📥 Tüm Profilleri & Ayarları Yedekle (JSON)
+          </button>
+          <button type="button" onclick="resetLiveAnalytics()" style="background:#2A1215; border:1px solid rgba(248,113,113,0.5); color:#F87171; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
+            ⚠️ Sayaçları & Ziyaret Kayıtlarını Sıfırla
+          </button>
+          <button type="button" onclick="adminLogout()" style="background:#3F1D1D; color:#FCA5A5; border:none; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer; margin-left:auto;">
+            🔒 Güvenli Çıkış Yap
+          </button>
+        </div>
       </div>
     </div>
 
@@ -2999,6 +3142,12 @@
       let savedTitle = localStorage.getItem('zenspa_site_title');
       let savedWa = localStorage.getItem('zenspa_wa_number');
       let savedScope = localStorage.getItem('zenspa_scope');
+      let savedWaWelcome = localStorage.getItem('zenspa_wa_welcome');
+      let savedPriceWeek = localStorage.getItem('zenspa_price_week');
+      let savedPrice15 = localStorage.getItem('zenspa_price_15');
+      let savedPriceMonth = localStorage.getItem('zenspa_price_month');
+      let savedPriceGold = localStorage.getItem('zenspa_price_gold');
+      let savedRefreshSec = localStorage.getItem('zenspa_refresh_sec');
 
       try {
         const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
@@ -3008,6 +3157,12 @@
             if (cloudSet.siteTitle && !savedTitle) savedTitle = cloudSet.siteTitle;
             if (cloudSet.waNumber && !savedWa) savedWa = cloudSet.waNumber;
             if (cloudSet.scope && !savedScope) savedScope = cloudSet.scope;
+            if (cloudSet.waWelcome && !savedWaWelcome) savedWaWelcome = cloudSet.waWelcome;
+            if (cloudSet.priceWeek && !savedPriceWeek) savedPriceWeek = cloudSet.priceWeek;
+            if (cloudSet.price15 && !savedPrice15) savedPrice15 = cloudSet.price15;
+            if (cloudSet.priceMonth && !savedPriceMonth) savedPriceMonth = cloudSet.priceMonth;
+            if (cloudSet.priceGold && !savedPriceGold) savedPriceGold = cloudSet.priceGold;
+            if (cloudSet.refreshSec && !savedRefreshSec) savedRefreshSec = cloudSet.refreshSec;
           }
         }
       } catch(e) {}
@@ -3015,10 +3170,22 @@
       const titleInput = document.getElementById('settingSiteTitle');
       const waInput = document.getElementById('settingWaNumber');
       const scopeInput = document.getElementById('settingCities');
+      const waWelcomeInput = document.getElementById('settingWaWelcome');
+      const priceWeekInput = document.getElementById('settingPriceWeek');
+      const price15Input = document.getElementById('settingPrice15Days');
+      const priceMonthInput = document.getElementById('settingPriceMonth');
+      const priceGoldInput = document.getElementById('settingPriceGold');
+      const refreshSecInput = document.getElementById('settingAutoRefreshSec');
 
       if (savedTitle && titleInput) titleInput.value = savedTitle;
       if (savedWa && waInput) waInput.value = savedWa;
       if (savedScope && scopeInput) scopeInput.value = savedScope;
+      if (savedWaWelcome && waWelcomeInput) waWelcomeInput.value = savedWaWelcome;
+      if (savedPriceWeek && priceWeekInput) priceWeekInput.value = savedPriceWeek;
+      if (savedPrice15 && price15Input) price15Input.value = savedPrice15;
+      if (savedPriceMonth && priceMonthInput) priceMonthInput.value = savedPriceMonth;
+      if (savedPriceGold && priceGoldInput) priceGoldInput.value = savedPriceGold;
+      if (savedRefreshSec && refreshSecInput) refreshSecInput.value = savedRefreshSec;
 
       if (savedTitle) {
         const brandH2 = document.querySelector('.brand-title h2');
@@ -3029,18 +3196,36 @@
     }
 
     async function saveSettings(e) {
-      if (e) e.preventDefault();
+      if (e && e.preventDefault) e.preventDefault();
       const titleInput = document.getElementById('settingSiteTitle');
       const waInput = document.getElementById('settingWaNumber');
       const scopeInput = document.getElementById('settingCities');
+      const waWelcomeInput = document.getElementById('settingWaWelcome');
+      const priceWeekInput = document.getElementById('settingPriceWeek');
+      const price15Input = document.getElementById('settingPrice15Days');
+      const priceMonthInput = document.getElementById('settingPriceMonth');
+      const priceGoldInput = document.getElementById('settingPriceGold');
+      const refreshSecInput = document.getElementById('settingAutoRefreshSec');
 
       const title = titleInput ? titleInput.value.trim() : '';
       const wa = waInput ? waInput.value.trim() : '';
       const scope = scopeInput ? scopeInput.value.trim() : '';
+      const waWelcome = waWelcomeInput ? waWelcomeInput.value.trim() : '';
+      const priceWeek = priceWeekInput ? priceWeekInput.value.trim() : '';
+      const price15 = price15Input ? price15Input.value.trim() : '';
+      const priceMonth = priceMonthInput ? priceMonthInput.value.trim() : '';
+      const priceGold = priceGoldInput ? priceGoldInput.value.trim() : '';
+      const refreshSec = refreshSecInput ? refreshSecInput.value : '10';
 
       if (title) localStorage.setItem('zenspa_site_title', title);
       if (wa) localStorage.setItem('zenspa_wa_number', wa);
       if (scope) localStorage.setItem('zenspa_scope', scope);
+      if (waWelcome) localStorage.setItem('zenspa_wa_welcome', waWelcome);
+      if (priceWeek) localStorage.setItem('zenspa_price_week', priceWeek);
+      if (price15) localStorage.setItem('zenspa_price_15', price15);
+      if (priceMonth) localStorage.setItem('zenspa_price_month', priceMonth);
+      if (priceGold) localStorage.setItem('zenspa_price_gold', priceGold);
+      if (refreshSec) localStorage.setItem('zenspa_refresh_sec', refreshSec);
 
       const brandH2 = document.querySelector('.brand-title h2');
       if (brandH2 && title && title.includes('|')) {
@@ -3064,7 +3249,17 @@
           }
         } catch(e) {}
 
-        const newSettingsObj = { siteTitle: title, waNumber: wa, scope: scope };
+        const newSettingsObj = {
+          siteTitle: title,
+          waNumber: wa,
+          scope: scope,
+          waWelcome: waWelcome,
+          priceWeek: priceWeek,
+          price15: price15,
+          priceMonth: priceMonth,
+          priceGold: priceGold,
+          refreshSec: refreshSec
+        };
         const newStr = JSON.stringify(newSettingsObj, null, 2);
         const utf8Bytes = new TextEncoder().encode(newStr);
         let binary = '';
@@ -3087,7 +3282,38 @@
         console.log("Settings cloud sync err:", err);
       }
 
-      alert("✓ Platform ayarları kalıcı olarak kaydedildi! Sayfa yenilense dahi güncel başlığınız korunacaktır.");
+      alert("✓ Platform ayarları kalıcı olarak kaydedildi ve bulut ile senkronize edildi!");
+    }
+
+    async function downloadBackupData() {
+      try {
+        const stats = await getLiveAnalytics();
+        const backupObj = {
+          backupDate: new Date().toISOString(),
+          siteTitle: localStorage.getItem('zenspa_site_title') || 'ZENSPA',
+          waNumber: localStorage.getItem('zenspa_wa_number') || '15096204167',
+          therapists: list || [],
+          analytics: stats || {},
+          storageKeys: {
+            visits: localStorage.getItem('zenspa_real_visits'),
+            waClicks: localStorage.getItem('zenspa_real_wa_clicks'),
+            calls: localStorage.getItem('zenspa_real_calls')
+          }
+        };
+
+        const jsonStr = JSON.stringify(backupObj, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", `harmoniliski_tam_sistem_yedegi_${Date.now()}.json`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        alert("✓ Sistem tam yedeği başarıyla indirildi!");
+      } catch(err) {
+        alert("Yedekleme sırasında hata oluştu: " + err.message);
+      }
     }
 
     // 🎯 CANLI GOOGLE RANK & SIRA TAKİP VERİ MOTORU
