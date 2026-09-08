@@ -1731,7 +1731,7 @@
       </a>
 
       <div class="header-right">
-        <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20sitenize%20escort%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank"&text=Merhaba,%20canlı%20destek%20hattından%20randevu%20almak%20istiyorum." target="_blank" class="btn-contact-top">
+        <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20canlı%20destek%20hattından%20randevu%20almak%20istiyorum." target="_blank" class="btn-contact-top">
           <span>💬</span>
           <span>7/24 Canlı Destek</span>
         </a>
@@ -2289,7 +2289,7 @@
           <li>7/24 Kesintisiz Yayın Garantisi</li>
         </ul>
       </div>
-      <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20sitenize%20escort%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank" style="width: 100%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #FFF; font-weight: 900; font-size: 1rem; padding: 1rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4);">
+      <a id="vitrinModalWaLink" href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20sitenize%20escort%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank" style="width: 100%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #FFF; font-weight: 900; font-size: 1rem; padding: 1rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4);">
         <span>💬</span> WhatsApp Vitrin İlan Hattına Yazın
       </a>
     </div>
@@ -3745,16 +3745,21 @@
 
       if (savedWa) {
         const cleanWa = savedWa.replace(/\D/g, '');
-        // Üst kayan bant WhatsApp hattı
+        // Üst kayan bant VIP vitrin ilan hattı
         const topbarA = document.querySelector('.vip-topbar a');
         if (topbarA) {
-          topbarA.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba randevu almak istiyorum.");
-          topbarA.textContent = "💬 WhatsApp: " + savedWa;
+          topbarA.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, sitenize escort vitrin ilanı vermek istiyorum.");
+          topbarA.innerHTML = '<span>💬 İlan Verme Hattı:</span> <strong>' + savedWa + '</strong>';
         }
         // 7/24 Canlı Destek Butonu
         const btnContactTop = document.querySelector('.btn-contact-top');
         if (btnContactTop) {
           btnContactTop.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, canli destek hattindan randevu almak istiyorum.");
+        }
+        // Vitrin İlan Modalı Butonu
+        const vitrinModalBtn = document.getElementById('vitrinModalWaLink');
+        if (vitrinModalBtn) {
+          vitrinModalBtn.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, sitenize escort vitrin ilanı vermek istiyorum.");
         }
       }
     }
