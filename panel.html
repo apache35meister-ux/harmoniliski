@@ -802,9 +802,11 @@
             }
             document.documentElement.style.overflow = '';
             if (document.body) document.body.style.overflow = '';
-            if (typeof initAdminData === 'function') {
-              try { initAdminData(); } catch(ex) {}
-            }
+            try {
+              if (typeof initAdminData === 'function') initAdminData();
+              if (typeof renderTable === 'function' && typeof list !== 'undefined') renderTable(list);
+              if (typeof loadSettings === 'function') loadSettings();
+            } catch(ex) { console.warn(ex); }
             return false;
           } else {
             if (err) {
@@ -2364,7 +2366,7 @@
       const kpiV = document.getElementById('kpiVitrinCount');
       if (kpiV) kpiV.textContent = vitrinCount;
       const vTab = document.getElementById('vitrinTabCount');
-      if (vTab) vTab.textContent = vitrinCount;
+      if (vTab) { vTab.textContent = vitrinCount; }
     }
 
     function renderVitrinTable() {
@@ -2689,24 +2691,28 @@
     }
 
     function switchTab(tabId, btnEl) {
-      document.querySelectorAll('.tab-section').forEach(t => {
-        t.style.display = 'none';
-        t.classList.remove('active');
-      });
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      
-      const target = document.getElementById(tabId);
-      if (target) {
-        target.style.display = 'block';
-        target.classList.add('active');
-      }
-      if (btnEl) btnEl.classList.add('active');
+      try {
+        document.querySelectorAll('.tab-section').forEach(t => {
+          t.style.display = 'none';
+          t.classList.remove('active');
+        });
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        
+        const target = document.getElementById(tabId);
+        if (target) {
+          target.style.display = 'block';
+          target.classList.add('active');
+        }
+        if (btnEl) btnEl.classList.add('active');
 
-      if (tabId === 'vitrinTab') renderVitrinTable();
-      if (tabId === 'whatsappTab') renderWaTable();
-      if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
-      if (tabId === 'rankTrackerTab') renderRankTracker();
-      if (tabId === 'settingsTab') loadSettings();
+        if (tabId === 'vitrinTab') { try { renderVitrinTable(); } catch(e) { console.warn(e); } }
+        if (tabId === 'whatsappTab') { try { renderWaTable(); } catch(e) { console.warn(e); } }
+        if (tabId === 'cityAnalyticsTab') { try { renderCityVisitorStats(); } catch(e) { console.warn(e); } }
+        if (tabId === 'rankTrackerTab') { try { renderRankTracker(); } catch(e) { console.warn(e); } }
+        if (tabId === 'settingsTab') { try { loadSettings(); } catch(e) { console.warn(e); } }
+      } catch(err) {
+        console.error("switchTab error:", err);
+      }
     }
 
     async function renderCityVisitorStats(btnEl) {
@@ -3302,7 +3308,7 @@
     }
     window.quickPromptWaNumber = quickPromptWaNumber;
 
-    function saveQuickWaNumber(e) {
+    async function saveQuickWaNumber(e) {
       if (e && e.preventDefault) e.preventDefault();
       const quickInput = document.getElementById('vitrinQuickWaNumber');
       const waVal = quickInput ? quickInput.value.trim() : '';
