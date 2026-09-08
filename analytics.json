@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 15,
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "08.09.2026 14:20",
   "tClicks": {
     "1788429948834": 1,
@@ -14,7 +14,9 @@
     "1788393834126": 3
   },
   "tCalls": {},
-  "cityCounts": {},
+  "cityCounts": {
+    "Izmir": 1
+  },
   "logs": [
     {
       "time": "08.09.2026 15:08",
@@ -107,15 +109,23 @@
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "cityVisits": [],
+  "cityVisits": [
+    {
+      "time": "08.09.2026 15:09",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    }
+  ],
   "activeVisitors": [
     {
-      "id": "v_mtsliw3f_95y5",
+      "id": "v_mtsmn7ky_szac",
       "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788868216995,
-      "time": "14:50"
+      "device": "iPhone 📱",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1788869385781,
+      "time": "15:09"
     }
   ]
 }
