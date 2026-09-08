@@ -1,17 +1,25 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 3,
+  "totalVisits": 4,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
     "Kocaeli": 1,
     "Adana": 1,
-    "Gaziantep": 1
+    "Gaziantep": 1,
+    "Eskişehir": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:45",
+      "city": "Eskişehir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "bodrum-otel-randevusu-vip-eskort.html"
+    },
     {
       "time": "09.09.2026 00:45",
       "city": "Gaziantep",
@@ -35,6 +43,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788903938_216",
+      "city": "Eskişehir",
+      "device": "iPhone 📱",
+      "activity": "VIP Escort İlanlarını İnceliyor",
+      "lastSeen": 1788903938560,
+      "time": "00:45"
+    },
     {
       "id": "bot_v_1788903935_385",
       "city": "Gaziantep",
@@ -60,5 +76,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Gaziantep"
+  "lastCity": "Eskişehir"
 }
