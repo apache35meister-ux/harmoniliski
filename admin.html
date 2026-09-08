@@ -2721,20 +2721,10 @@
         const cityCounts = stats.cityCounts || {};
         const now = Date.now();
 
-        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Son 2 dakika içinde sitede olanlar veya son ziyaretçiler)
+        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Yalnızca son 2 dakika içinde aktif olan GERÇEK kullanıcılar)
         const rawActive = stats.activeVisitors || [];
-        let activeVisitors = rawActive.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 180000));
-        if (activeVisitors.length === 0 && rawActive.length > 0) {
-          activeVisitors = rawActive.slice(0, 4);
-        } else if (activeVisitors.length === 0 && cityVisits.length > 0) {
-          activeVisitors = cityVisits.slice(0, 3).map((cv, idx) => ({
-            city: cv.city,
-            device: cv.device,
-            activity: 'Escort Profillerini İnceliyor',
-            time: cv.time || '1 dk önce',
-            lastSeen: now - (idx * 35000 + 10000)
-          }));
-        }
+        // Kesin süre kontrolü: 3 dakikadan (180.000 ms) eski veya geçersiz olanlar ASLA canlı gösterilmez!
+        let activeVisitors = rawActive.filter(v => v.lastSeen && (now - v.lastSeen) > 0 && (now - v.lastSeen) < 180000);
 
         const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
         if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
