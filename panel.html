@@ -3837,6 +3837,20 @@
     window.getLiveAnalytics = getLiveAnalytics;
     window.resetLiveAnalytics = resetLiveAnalytics;
 
+    // Canlı Sekmeler İçin Otomatik Arka Plan Yenileme (12 sn)
+    setInterval(() => {
+      try {
+        const cityTab = document.getElementById('cityAnalyticsTab');
+        if (cityTab && cityTab.classList.contains('active')) {
+          renderCityVisitorStats();
+        }
+        const waTab = document.getElementById('whatsappTab');
+        if (waTab && waTab.classList.contains('active')) {
+          renderWaTable();
+        }
+      } catch(e) {}
+    }, 12000);
+
     document.addEventListener('DOMContentLoaded', function() {
       checkAuth();
     });
