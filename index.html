@@ -3987,9 +3987,10 @@
     }
 
     let detectedCityName = 'İstanbul';
+    let detectedCountryName = 'Türkiye';
     let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
 
-    async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor', isNewVisit = false) {
+    async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor', isVisitRecord = false) {
       try {
         const p1 = "ghp_";
         const p2 = "zODf518H";
@@ -4000,206 +4001,145 @@
         const owner = "apache35meister-ux";
         const repo = "harmoniliski";
 
-        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-          cache: 'no-store'
-        });
-        const fileData = await res.json();
-        if (!fileData || !fileData.content) return;
-
-        const decoded = decodeGitHubBase64(fileData.content);
-        const currentJson = JSON.parse(decoded || '{}');
-        const now = Date.now();
-        const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
-        const dateStr = new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
-
-        // 1. Ziyaret Sayacı ve Şehir Dağılımını Güncelle (Yeni Girişte)
-        if (isNewVisit || !sessionStorage.getItem('zenspa_counted_visit')) {
-          sessionStorage.setItem('zenspa_counted_visit', 'true');
-          currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
-          
-          currentJson.cityCounts = currentJson.cityCounts || {};
-          currentJson.cityCounts[detectedCityName] = (currentJson.cityCounts[detectedCityName] || 0) + 1;
-
-          currentJson.cityVisits = currentJson.cityVisits || [];
-          currentJson.cityVisits.unshift({
-            time: dateStr,
-            city: detectedCityName,
-            country: 'Türkiye',
-            device: detectedDevice,
-            page: window.location.pathname.split('/').pop() || 'Ana Sayfa'
+        const fetchLatestFile = async () => {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+            cache: 'no-store'
           });
-          if (currentJson.cityVisits.length > 50) currentJson.cityVisits = currentJson.cityVisits.slice(0, 50);
-        }
-
-        // 2. Canlı Aktif Radarı Güncelle
-        let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
-        
-        const existingIdx = activeList.findIndex(v => v.id === activeVisitorId);
-        const visitorObj = {
-          id: activeVisitorId,
-          city: detectedCityName,
-          device: detectedDevice,
-          activity: activityText,
-          lastSeen: now,
-          time: timeStr
+          return await res.json();
         };
 
-        if (existingIdx !== -1) {
-          activeList[existingIdx] = visitorObj;
-        } else {
-          activeList.unshift(visitorObj);
-        }
-        if (activeList.length > 25) activeList = activeList.slice(0, 25);
-        currentJson.activeVisitors = activeList;
+        let fileData = await fetchLatestFile();
+        if (!fileData || !fileData.content) return;
 
-        const newStr = JSON.stringify(currentJson, null, 2);
-        const base64Content = encodeGitHubBase64(newStr);
+        const executePush = async (currentFileData) => {
+          const decoded = decodeGitHubBase64(currentFileData.content);
+          const currentJson = JSON.parse(decoded || '{}');
+          const now = Date.now();
+          const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
+          const dateStr = new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+          const pageTitle = window.location.pathname.split('/').pop() || 'Ana Sayfa';
 
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: "Track visitor & live active session: " + detectedCityName,
-            content: base64Content,
-            sha: fileData.sha
-          })
-        });
+          // 1. Ziyaret Sayacı ve Şehir Dağılımını Güncelle (Yeni Giriş veya Açılışta)
+          if (isVisitRecord || !sessionStorage.getItem('zenspa_counted_visit')) {
+            sessionStorage.setItem('zenspa_counted_visit', 'true');
+            currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
+            
+            currentJson.cityCounts = currentJson.cityCounts || {};
+            currentJson.cityCounts[detectedCityName] = (currentJson.cityCounts[detectedCityName] || 0) + 1;
+
+            currentJson.cityVisits = currentJson.cityVisits || [];
+            currentJson.cityVisits.unshift({
+              time: dateStr,
+              city: detectedCityName,
+              country: detectedCountryName,
+              device: detectedDevice,
+              page: pageTitle
+            });
+            if (currentJson.cityVisits.length > 60) currentJson.cityVisits = currentJson.cityVisits.slice(0, 60);
+          }
+
+          // 2. Canlı Aktif Radarı Güncelle (Son 3 dakika)
+          let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
+          
+          const existingIdx = activeList.findIndex(v => v.id === activeVisitorId);
+          const visitorObj = {
+            id: activeVisitorId,
+            city: detectedCityName,
+            device: detectedDevice,
+            activity: activityText,
+            lastSeen: now,
+            time: timeStr
+          };
+
+          if (existingIdx !== -1) {
+            activeList[existingIdx] = visitorObj;
+          } else {
+            activeList.unshift(visitorObj);
+          }
+          if (activeList.length > 25) activeList = activeList.slice(0, 25);
+          currentJson.activeVisitors = activeList;
+
+          const newStr = JSON.stringify(currentJson, null, 2);
+          const base64Content = encodeGitHubBase64(newStr);
+
+          const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+            method: 'PUT',
+            keepalive: true,
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: "Track visitor & live active session: " + detectedCityName,
+              content: base64Content,
+              sha: currentFileData.sha
+            })
+          });
+
+          if (putRes && putRes.status === 409) {
+            const retryData = await fetchLatestFile();
+            if (retryData && retryData.content) {
+              await executePush(retryData);
+            }
+          }
+        };
+
+        await executePush(fileData);
       } catch(e) {
         console.log("Active radar sync error:", e);
       }
     }
 
-    async function syncVisitToCloud(visitLog, cityName) {
-      return; // Disabled auto-commit on page view to ensure GitHub Pages deployment completes
-      try {
-        const p1 = "ghp_";
-        const p2 = "zODf518H";
-        const p3 = "3Pvnrz6TVb";
-        const p4 = "WMXRlu8iNL8";
-        const p5 = "m2TVMqo";
-        const token = p1 + p2 + p3 + p4 + p5;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
-
-        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-        });
-        const fileData = await res.json();
-        if (!fileData || !fileData.content) return;
-
-        const decoded = decodeGitHubBase64(fileData.content);
-        const currentJson = JSON.parse(decoded || '{}');
-        currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
-        currentJson.cityVisits = currentJson.cityVisits || [];
-        currentJson.cityVisits.unshift(visitLog);
-        if (currentJson.cityVisits.length > 60) currentJson.cityVisits = currentJson.cityVisits.slice(0, 60);
-
-        currentJson.cityCounts = currentJson.cityCounts || {};
-        currentJson.cityCounts[cityName] = (currentJson.cityCounts[cityName] || 0) + 1;
-
-        // Canlı aktif listeye de ekle
-        const now = Date.now();
-        const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
-        let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
-        activeList.unshift({
-          id: activeVisitorId,
-          city: cityName,
-          device: detectedDevice,
-          activity: 'Ana Sayfa Vitrininde Geziyor',
-          lastSeen: now,
-          time: timeStr
-        });
-        if (activeList.length > 25) activeList = activeList.slice(0, 25);
-        currentJson.activeVisitors = activeList;
-
-        const newStr = JSON.stringify(currentJson, null, 2);
-        const base64Content = encodeGitHubBase64(newStr);
-
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: "Track live visitor: " + cityName,
-            content: base64Content,
-            sha: fileData.sha
-          })
-        });
-      } catch(e) {
-        console.log("Visit cloud sync:", e);
-      }
-    }
-
     // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
-    (async function() {
-      // 1. Bekletmeden hemen varsayılan ile anında canlı radara yaz
-      broadcastLiveVisitor('Escort Profillerini İnceliyor');
-
+    (async function initVisitorTracking() {
       try {
-        let data = null;
+        let geoData = null;
+
+        // 1. ipwho.is (En hızlı Türkçe şehir servis)
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 2000);
-          const r1 = await fetch('https://ipwho.is/', { signal: controller.signal });
-          clearTimeout(timeoutId);
-          if (r1.ok) data = await r1.json();
+          const tid = setTimeout(() => controller.abort(), 1800);
+          const res = await fetch('https://ipwho.is/', { signal: controller.signal });
+          clearTimeout(tid);
+          if (res.ok) {
+            const d = await res.json();
+            if (d && (d.city || d.region)) geoData = d;
+          }
         } catch(e) {}
 
-        if (!data || !data.city) {
+        // 2. ipapi.co (Yedek servis)
+        if (!geoData) {
           try {
             const controller2 = new AbortController();
-            const timeoutId2 = setTimeout(() => controller2.abort(), 2000);
-            const r2 = await fetch('https://ipapi.co/json/', { signal: controller2.signal });
-            clearTimeout(timeoutId2);
-            if (r2.ok) data = await r2.json();
+            const tid2 = setTimeout(() => controller2.abort(), 1800);
+            const res2 = await fetch('https://ipapi.co/json/', { signal: controller2.signal });
+            clearTimeout(tid2);
+            if (res2.ok) {
+              const d2 = await res2.json();
+              if (d2 && (d2.city || d2.region)) geoData = d2;
+            }
           } catch(e) {}
         }
 
-        const cityName = (data && (data.city || data.region)) ? (data.city || data.region) : 'İstanbul';
-        detectedCityName = cityName;
-        const regionName = (data && data.region) ? data.region : '';
-        const fullCity = cityName + (regionName && regionName !== cityName ? ' (' + regionName + ')' : '');
-        const visitLog = {
-          time: new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' }),
-          city: fullCity,
-          country: (data && (data.country || data.country_name)) ? (data.country || data.country_name) : 'Türkiye',
-          ip: (data && data.ip) ? data.ip.replace(/(\d+)\.(\d+)\.(\d+)\.(\d+)/, '$1.$2.***.***') : 'Gizli',
-          device: detectedDevice,
-          page: window.location.pathname.split('/').pop() || 'Ana Sayfa'
-        };
+        if (geoData) {
+          detectedCityName = geoData.city || geoData.region || 'İstanbul';
+          detectedCountryName = geoData.country || geoData.country_name || 'Türkiye';
+        }
 
-        // Yerel Tarayıcı Kaydı
-        let logs = JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]');
-        logs.unshift(visitLog);
-        if (logs.length > 60) logs = logs.slice(0, 60);
-        localStorage.setItem('zenspa_city_visits', JSON.stringify(logs));
+        // Ziyareti ve anlık şehri buluta kaydet
+        await broadcastLiveVisitor('Escort Profillerini İnceliyor', true);
 
-        let counts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}');
-        counts[cityName] = (counts[cityName] || 0) + 1;
-        localStorage.setItem('zenspa_city_counts', JSON.stringify(counts));
-
-        let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '0');
-        localStorage.setItem('zenspa_real_visits', (totalV + 1).toString());
-
-        // Şehir netleşince radarı güncel şehirle yenile
-        broadcastLiveVisitor('Escort Profillerini İnceliyor');
-
-        // Kullanıcı sayfada kaldığı sürece her 20 saniyede bir canlı nabız gönder
+        // Kullanıcı sitede aktif kaldığı sürece canlı nabız gönder (25 sn)
         setInterval(() => {
           if (document.visibilityState === 'visible') {
-            broadcastLiveVisitor('Sitede Aktif Geziniyor');
+            broadcastLiveVisitor('Sitede Aktif Geziniyor', false);
           }
-        }, 20000);
+        }, 25000);
       } catch(err) {
-        console.log('Geo track err:', err);
+        console.log('Visitor track err:', err);
+        broadcastLiveVisitor('Escort Profillerini İnceliyor', true);
       }
     })();
   </script>
