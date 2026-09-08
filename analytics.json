@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 3,
   "totalCalls": 1,
-  "totalVisits": 3,
+  "totalVisits": 4,
   "lastUpdated": "8.09.2026 15:22",
   "tClicks": {
     "1788393834126": 1,
@@ -14,7 +14,8 @@
   "cityCounts": {
     "The Dalles": 1,
     "Kane": 1,
-    "Izmir": 1
+    "Izmir": 1,
+    "Ankara": 1
   },
   "logs": [
     {
@@ -44,6 +45,13 @@
   ],
   "cityVisits": [
     {
+      "time": "08.09.2026 21:32",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "08.09.2026 18:44",
       "city": "Izmir",
       "country": "Türkiye",
@@ -67,12 +75,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mtsubk4i_mvrg",
-      "city": "Izmir",
-      "device": "iPhone 📱",
+      "id": "v_mtt0atzj_w6dq",
+      "city": "Ankara",
+      "device": "Android 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1788882279352,
-      "time": "18:44"
+      "lastSeen": 1788892323756,
+      "time": "21:32"
     }
   ]
 }
