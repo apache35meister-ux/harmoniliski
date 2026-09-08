@@ -188,7 +188,7 @@
       transition: all 0.2s;
     }
     .btn-add-therapist:hover {
-      transform: tranSılateY(-2px);
+      transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
     }
 
@@ -881,12 +881,13 @@
           <div class="kpi-icon">💎</div>
         </div>
 
-        <div class="kpi-card">
+        <div class="kpi-card" style="border: 1px solid rgba(74,222,128,0.4); background: linear-gradient(135deg, rgba(6,26,14,0.6), rgba(20,20,24,0.9));">
           <div>
-            <h4>WhatsApp İlan Hattı</h4>
-            <div class="number" style="font-size: 1.1rem; color: #4ADE80;">+1 509 620 4167</div>
+            <h4 style="color:#4ADE80;">👑 WhatsApp İlan Hattı</h4>
+            <div class="number" id="kpiWaNumber" style="font-size: 1.15rem; color: #4ADE80; font-weight:900;">+1 509 620 4167</div>
+            <button type="button" onclick="quickPromptWaNumber()" style="background:#128C7E; color:#FFF; border:none; padding:3px 10px; border-radius:6px; font-size:0.75rem; font-weight:800; cursor:pointer; margin-top:6px;">✏️ Numarayı Değiştir</button>
           </div>
-          <div class="kpi-icon">💬</div>
+          <div class="kpi-icon" style="cursor:pointer;" onclick="quickPromptWaNumber()" title="Numarayı Değiştir">📱</div>
         </div>
 
         <div class="kpi-card" style="border: 1px solid rgba(230,175,46,0.5); background: linear-gradient(135deg, #1C1605, #141418); cursor: pointer;" onclick="switchTab('rankTrackerTab', document.querySelector('.nav-btn[onclick*=\\'rankTrackerTab\\']'))" title="Tıkla ve Canlı Sıralamaları Gör">
@@ -1826,9 +1827,6 @@
   </div>
 
   <script>
-    const GITHUB_OWNER = "apache35meister-ux";
-    const GITHUB_REPO = "harmoniliski";
-
     const defaultTherapists = [
   {
     id: 1787439999999, name: 'Merve', age: 26,
@@ -3218,7 +3216,7 @@
       if (savedWa) {
         if (waInput) waInput.value = savedWa;
         if (quickWaInput) quickWaInput.value = savedWa;
-        const topHatt = document.querySelector('.kpi-card:nth-child(3) .number');
+        const topHatt = document.getElementById('kpiWaNumber') || document.querySelector('.kpi-card:nth-child(3) .number');
         if (topHatt && savedWa) topHatt.textContent = savedWa;
       }
       if (savedScope && scopeInput) scopeInput.value = savedScope;
@@ -3237,7 +3235,26 @@
       }
     }
 
-    async function saveQuickWaNumber(e) {
+    async 
+    function quickPromptWaNumber() {
+      const current = localStorage.getItem('zenspa_wa_number') || '15096204167';
+      const newVal = prompt("Vitrine ilan verecek kişilerin mesaj atacağı WhatsApp numaranızı yazınız:\n(Örn: 905xxxxxxxxx veya 15096204167)", current);
+      if (newVal !== null && newVal.trim() !== "") {
+        const clean = newVal.trim();
+        localStorage.setItem('zenspa_wa_number', clean);
+        const inp1 = document.getElementById('settingWaNumber');
+        if (inp1) inp1.value = clean;
+        const inp2 = document.getElementById('vitrinQuickWaNumber');
+        if (inp2) inp2.value = clean;
+        const kpi = document.getElementById('kpiWaNumber');
+        if (kpi) kpi.textContent = clean;
+        saveSettings(null);
+        alert("✓ WhatsApp numaranız güncellendi: " + clean);
+      }
+    }
+    window.quickPromptWaNumber = quickPromptWaNumber;
+
+    function saveQuickWaNumber(e) {
       if (e && e.preventDefault) e.preventDefault();
       const quickInput = document.getElementById('vitrinQuickWaNumber');
       const waVal = quickInput ? quickInput.value.trim() : '';
