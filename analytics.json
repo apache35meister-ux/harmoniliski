@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 9,
+  "totalVisits": 10,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
@@ -9,11 +9,18 @@
     "Kocaeli": 2,
     "Adana": 2,
     "Gaziantep": 1,
-    "Eskişehir": 3,
+    "Eskişehir": 4,
     "Muğla (Bodrum)": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:46",
+      "city": "Eskişehir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "09.09.2026 00:46",
       "city": "Muğla (Bodrum)",
@@ -79,6 +86,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788904013_460",
+      "city": "Eskişehir",
+      "device": "iPhone 📱",
+      "activity": "Fotoğraf Galerisinde Geziniyor",
+      "lastSeen": 1788904013578,
+      "time": "00:46"
+    },
     {
       "id": "bot_v_1788904010_594",
       "city": "Muğla (Bodrum)",
@@ -152,5 +167,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Muğla (Bodrum)"
+  "lastCity": "Eskişehir"
 }
