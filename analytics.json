@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
@@ -10,10 +10,18 @@
     "Adana": 2,
     "Gaziantep": 1,
     "Eskişehir": 4,
-    "Muğla (Bodrum)": 1
+    "Muğla (Bodrum)": 1,
+    "İzmir": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:46",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "izmir-bornova-rezervasyonlu-eskort.html"
+    },
     {
       "time": "09.09.2026 00:46",
       "city": "Eskişehir",
@@ -86,6 +94,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788904016_446",
+      "city": "İzmir",
+      "device": "Android 📱",
+      "activity": "Ankara & Çankaya Profillerini İnceliyor",
+      "lastSeen": 1788904016921,
+      "time": "00:46"
+    },
     {
       "id": "bot_v_1788904013_460",
       "city": "Eskişehir",
@@ -167,5 +183,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Eskişehir"
+  "lastCity": "İzmir"
 }
