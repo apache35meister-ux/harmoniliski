@@ -2443,33 +2443,29 @@
         }
 
         if (cloudStats) {
-          stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
-          stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
-          stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
-          if (cloudStats.tClicks) {
-            for (let k in cloudStats.tClicks) {
-              stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, cloudStats.tClicks[k]);
-            }
-          }
-          if (cloudStats.tCalls) {
-            for (let k in cloudStats.tCalls) {
-              stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, cloudStats.tCalls[k]);
-            }
-          }
-          if (cloudStats.logs && Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
-            stats.callLogs = cloudStats.logs;
-          }
-          if (cloudStats.cityVisits && Array.isArray(cloudStats.cityVisits) && cloudStats.cityVisits.length > 0) {
-            stats.cityVisits = cloudStats.cityVisits;
-          }
-          if (cloudStats.cityCounts && Object.keys(cloudStats.cityCounts).length > 0) {
-            for (let c in cloudStats.cityCounts) {
-              stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cloudStats.cityCounts[c]);
-            }
-          }
-          if (cloudStats.activeVisitors && Array.isArray(cloudStats.activeVisitors)) {
-            stats.activeVisitors = cloudStats.activeVisitors;
-          }
+          // Bulut verisi (GitHub) tek kesin referanstır. Sıfırlanmışsa sıfır değerleri doğrudan kabul edilir.
+          stats.waClicks = cloudStats.totalWaClicks || 0;
+          stats.callClicks = cloudStats.totalCalls || 0;
+          stats.visits = cloudStats.totalVisits || 0;
+          stats.tClicks = cloudStats.tClicks || {};
+          stats.tCalls = cloudStats.tCalls || {};
+          stats.callLogs = Array.isArray(cloudStats.logs) ? cloudStats.logs : [];
+          stats.cityVisits = Array.isArray(cloudStats.cityVisits) ? cloudStats.cityVisits : [];
+          stats.cityCounts = cloudStats.cityCounts || {};
+          stats.activeVisitors = Array.isArray(cloudStats.activeVisitors) ? cloudStats.activeVisitors : [];
+
+          // LocalStorage'ı da bulutla birebir senkronize et
+          try {
+            localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
+            localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
+            localStorage.setItem('zenspa_real_visits', stats.visits.toString());
+            localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
+            localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
+            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
+            localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
+            localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
+            localStorage.setItem('zenspa_active_visitors', JSON.stringify(stats.activeVisitors));
+          } catch(ex) {}
         }
       } catch(e) {}
       return stats;
