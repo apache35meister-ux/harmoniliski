@@ -1,16 +1,24 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
     "Kocaeli": 1,
-    "Adana": 1
+    "Adana": 1,
+    "Gaziantep": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:45",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "izmir-bornova-rezervasyonlu-eskort.html"
+    },
     {
       "time": "09.09.2026 00:45",
       "city": "Adana",
@@ -28,6 +36,14 @@
   ],
   "activeVisitors": [
     {
+      "id": "bot_v_1788903935_385",
+      "city": "Gaziantep",
+      "device": "iPhone 📱",
+      "activity": "Bursa Gece Seansı Fiyatlarına Bakıyor",
+      "lastSeen": 1788903935203,
+      "time": "00:45"
+    },
+    {
       "id": "bot_v_1788903926_748",
       "city": "Adana",
       "device": "iPad 📱",
@@ -44,5 +60,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Adana"
+  "lastCity": "Gaziantep"
 }
