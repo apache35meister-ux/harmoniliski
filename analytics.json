@@ -1,15 +1,23 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
-    "Kocaeli": 1
+    "Kocaeli": 1,
+    "Adana": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:45",
+      "city": "Adana",
+      "country": "Türkiye",
+      "device": "iPad 📱",
+      "page": "ankara-cankaya-kendi-yerinde-eskort.html"
+    },
     {
       "time": "09.09.2026 00:45",
       "city": "Kocaeli",
@@ -20,6 +28,14 @@
   ],
   "activeVisitors": [
     {
+      "id": "bot_v_1788903926_748",
+      "city": "Adana",
+      "device": "iPad 📱",
+      "activity": "WhatsApp Randevu Hattına Bakıyor",
+      "lastSeen": 1788903926639,
+      "time": "00:45"
+    },
+    {
       "id": "bot_v_1788903914_275",
       "city": "Kocaeli",
       "device": "iPhone 📱",
@@ -28,5 +44,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Kocaeli"
+  "lastCity": "Adana"
 }
