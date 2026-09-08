@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 7,
+  "totalVisits": 8,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
@@ -9,10 +9,17 @@
     "Kocaeli": 2,
     "Adana": 2,
     "Gaziantep": 1,
-    "Eskişehir": 2
+    "Eskişehir": 3
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:46",
+      "city": "Eskişehir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "bodrum-otel-randevusu-vip-eskort.html"
+    },
     {
       "time": "09.09.2026 00:46",
       "city": "Kocaeli",
@@ -64,6 +71,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788903986_508",
+      "city": "Eskişehir",
+      "device": "Masaüstü 💻",
+      "activity": "Fotoğraf Galerisinde Geziniyor",
+      "lastSeen": 1788903986504,
+      "time": "00:46"
+    },
     {
       "id": "bot_v_1788903983_799",
       "city": "Kocaeli",
@@ -121,5 +136,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Kocaeli"
+  "lastCity": "Eskişehir"
 }
