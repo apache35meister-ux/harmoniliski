@@ -4100,15 +4100,15 @@
         let totalV = parseInt(localStorage.getItem('zenspa_real_visits') || '0');
         localStorage.setItem('zenspa_real_visits', (totalV + 1).toString());
 
-        // MERKEZİ BULUTA GÖNDER (Telefondan girildiğinde PC yönetim paneline anında düşmesi için)
-        syncVisitToCloud(visitLog, cityName);
+        // MERKEZİ BULUTA GÖNDER: Kullanıcı siteye girdiği anda Canlı Ziyaretçi Radarına anında kaydet
+        broadcastLiveVisitor('Escort Profillerini İnceliyor');
 
-        // Kullanıcı sayfada kaldığı sürece her 45 saniyede bir canlı nabız gönder
+        // Kullanıcı sayfada kaldığı sürece her 25 saniyede bir canlı nabız gönder
         setInterval(() => {
           if (document.visibilityState === 'visible') {
             broadcastLiveVisitor('Sitede Aktif Geziniyor');
           }
-        }, 45000);
+        }, 25000);
       } catch(err) {
         console.log('Geo track err:', err);
       }
