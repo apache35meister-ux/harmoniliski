@@ -1,18 +1,25 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
     "Kocaeli": 1,
-    "Adana": 1,
+    "Adana": 2,
     "Gaziantep": 1,
     "Eskişehir": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:45",
+      "city": "Adana",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "cesme-alacati-gunluk-vip-eskort-rehberi.html"
+    },
     {
       "time": "09.09.2026 00:45",
       "city": "Eskişehir",
@@ -43,6 +50,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788903941_652",
+      "city": "Adana",
+      "device": "Masaüstü 💻",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788903941887,
+      "time": "00:45"
+    },
     {
       "id": "bot_v_1788903938_216",
       "city": "Eskişehir",
@@ -76,5 +91,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Eskişehir"
+  "lastCity": "Adana"
 }
