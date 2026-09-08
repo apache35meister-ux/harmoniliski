@@ -2566,7 +2566,7 @@
         return;
       }
 
-      // 1. LocalStorage Sıfırla
+      // 1. LocalStorage Kesin Sıfırlama
       localStorage.setItem('zenspa_real_visits', '0');
       localStorage.setItem('zenspa_real_wa_clicks', '0');
       localStorage.setItem('zenspa_real_calls', '0');
@@ -2626,17 +2626,17 @@
           totalWaClicks: 0,
           totalCalls: 0,
           totalVisits: 0,
-          lastUpdated: new Date().toISOString().replace('T', ' ').substring(0, 19),
+          lastUpdated: new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'}),
           tClicks: {},
           tCalls: {},
+          cityCounts: {},
           logs: [],
           cityVisits: [],
-          cityCounts: {},
           activeVisitors: []
         };
 
-        const str = JSON.stringify(emptyAnalytics, null, 2);
-        const utf8Bytes = new TextEncoder().encode(str);
+        const jsonStr = JSON.stringify(emptyAnalytics, null, 2);
+        const utf8Bytes = new TextEncoder().encode(jsonStr);
         let binary = '';
         for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
         const base64Content = btoa(binary);
@@ -2647,7 +2647,8 @@
             headers: {
               'Authorization': 'Bearer ' + GITHUB_TOKEN,
               'Accept': 'application/vnd.github+json'
-            }
+            },
+            cache: 'no-store'
           });
           if (res.ok) {
             const fd = await res.json();
@@ -2657,8 +2658,7 @@
 
         const putBody = {
           message: "Reset analytics and visitor statistics to zero",
-          content: base64Content,
-          branch: "main"
+          content: base64Content
         };
         if (sha) putBody.sha = sha;
 
