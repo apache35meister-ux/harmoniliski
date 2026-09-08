@@ -3020,50 +3020,71 @@
         const owner = "apache35meister-ux";
         const repo = "harmoniliski";
 
-        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-        });
-        const fileData = await res.json();
+        const fetchLatestFile = async () => {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+            cache: 'no-store'
+          });
+          return await res.json();
+        };
+
+        let fileData = await fetchLatestFile();
         if (!fileData || !fileData.content) return;
 
-        const decoded = decodeGitHubBase64(fileData.content);
-        const currentJson = JSON.parse(decoded || '{}');
-        
-        if (actionType.includes('WhatsApp')) {
-          currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
-          currentJson.tClicks = currentJson.tClicks || {};
-          currentJson.tClicks[tId] = (currentJson.tClicks[tId] || 0) + 1;
-        } else {
-          currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
-          currentJson.tCalls = currentJson.tCalls || {};
-          currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
-        }
+        const executePush = async (currentFileData) => {
+          const decoded = decodeGitHubBase64(currentFileData.content);
+          const currentJson = JSON.parse(decoded || '{}');
+          
+          if (actionType.includes('WhatsApp')) {
+            currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
+            currentJson.tClicks = currentJson.tClicks || {};
+            if (tId) {
+              currentJson.tClicks[tId] = (currentJson.tClicks[tId] || 0) + 1;
+            }
+          } else {
+            currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
+            currentJson.tCalls = currentJson.tCalls || {};
+            if (tId) {
+              currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
+            }
+          }
 
-        currentJson.logs = currentJson.logs || [];
-        currentJson.logs.unshift({
-          time: getFormattedTime(),
-          name: tName || 'VIP Escort',
-          city: city || 'İstanbul',
-          type: actionType
-        });
-        if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
+          currentJson.logs = currentJson.logs || [];
+          currentJson.logs.unshift({
+            time: getFormattedTime(),
+            name: tName || 'VIP Escort',
+            city: city || 'Türkiye',
+            type: actionType
+          });
+          if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
 
-        const newStr = JSON.stringify(currentJson, null, 2);
-        const base64Content = encodeGitHubBase64(newStr);
+          const newStr = JSON.stringify(currentJson, null, 2);
+          const base64Content = encodeGitHubBase64(newStr);
 
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: "Track live user interaction: " + tName,
-            content: base64Content,
-            sha: fileData.sha
-          })
-        });
+          const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+            method: 'PUT',
+            keepalive: true,
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: "Track user interaction: " + tName + " (" + actionType + ")",
+              content: base64Content,
+              sha: currentFileData.sha
+            })
+          });
+
+          if (putRes && putRes.status === 409) {
+            const retryData = await fetchLatestFile();
+            if (retryData && retryData.content) {
+              await executePush(retryData);
+            }
+          }
+        };
+
+        await executePush(fileData);
       } catch(e) {
         console.log("Bulut kayit sync:", e);
       }
@@ -3086,9 +3107,11 @@
       totalWa++;
       localStorage.setItem('zenspa_real_wa_clicks', totalWa.toString());
 
-      let tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
-      tClicks[tId] = (tClicks[tId] || 0) + 1;
-      localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
+      if (tId) {
+        let tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
+        tClicks[tId] = (tClicks[tId] || 0) + 1;
+        localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
+      }
 
       addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
       syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
@@ -3111,9 +3134,11 @@
       totalCalls++;
       localStorage.setItem('zenspa_real_calls', totalCalls.toString());
 
-      let tCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}');
-      tCalls[tId] = (tCalls[tId] || 0) + 1;
-      localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
+      if (tId) {
+        let tCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}');
+        tCalls[tId] = (tCalls[tId] || 0) + 1;
+        localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
+      }
 
       addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
       syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
@@ -3124,6 +3149,41 @@
       totalAd++;
       localStorage.setItem('zenspa_real_ad_clicks', totalAd.toString());
     }
+
+    // Global WhatsApp ve Telefon Tıklama Yakalayıcı (%100 Garanti Kapsama)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      
+      if (href.includes('whatsapp.com') || href.includes('wa.me')) {
+        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackWaAction')) {
+          const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
+          let tName = 'VIP İlan / Genel Randevu';
+          let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
+          let tId = 0;
+          if (card) {
+            const nameEl = card.querySelector('h3, .therapist-name, strong');
+            if (nameEl) tName = nameEl.textContent.trim();
+            const cityEl = card.querySelector('.badge-city, .location, [class*="city"]');
+            if (cityEl) tCity = cityEl.textContent.trim();
+          }
+          trackWaAction(tId, tName, tCity);
+        }
+      } else if (href.startsWith('tel:')) {
+        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackCallAction')) {
+          const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
+          let tName = 'VIP Telefon Araması';
+          let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
+          let tId = 0;
+          if (card) {
+            const nameEl = card.querySelector('h3, .therapist-name, strong');
+            if (nameEl) tName = nameEl.textContent.trim();
+          }
+          trackCallAction(tId, tName, tCity);
+        }
+      }
+    }, true);
 
     function getStoredTherapists() {
       try {
