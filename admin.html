@@ -3302,7 +3302,7 @@
     }
     window.quickPromptWaNumber = quickPromptWaNumber;
 
-    function saveQuickWaNumber(e) {
+    async function saveQuickWaNumber(e) {
       if (e && e.preventDefault) e.preventDefault();
       const quickInput = document.getElementById('vitrinQuickWaNumber');
       const waVal = quickInput ? quickInput.value.trim() : '';
