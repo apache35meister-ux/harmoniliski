@@ -1,37 +1,170 @@
 {
-  "totalWaClicks": 2,
-  "totalCalls": 0,
-  "totalVisits": 0,
-  "lastUpdated": "2026-09-07 09:03:47",
+  "totalWaClicks": 48,
+  "totalCalls": 29,
+  "totalVisits": 142,
+  "lastUpdated": "2026-09-08 04:10:09",
   "tClicks": {
-    "1788428841293": 1,
-    "1787133440430": 1
+    "1787439999999": 14,
+    "1788738592899": 9,
+    "1788429948834": 7,
+    "1788429487588": 6
   },
-  "tCalls": {},
+  "tCalls": {
+    "1787439999999": 8,
+    "1788738592899": 5,
+    "1788429948834": 4
+  },
   "logs": [
     {
-      "time": "08.09.2026 01:00",
-      "name": "Melis",
-      "city": "İzmir",
+      "time": "08.09.2026 03:46",
+      "name": "Merve",
+      "city": "İzmir / Alsancak",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "08.09.2026 00:59",
-      "name": "aysun",
-      "city": "izmir",
+      "time": "08.09.2026 02:52",
+      "name": "Zeynep",
+      "city": "Ankara / Merkez",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "08.09.2026 01:20",
+      "name": "yeliz",
+      "city": "İzmir / Konak",
+      "type": "📞 Doğrudan Telefon Araması"
+    },
+    {
+      "time": "07.09.2026 23:41",
+      "name": "Kumsal",
+      "city": "Aydın / Nazilli",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "cityVisits": [],
-  "cityCounts": {},
+  "cityVisits": [
+    {
+      "time": "08.09.2026 03:45",
+      "city": "İzmir (Konak)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "izmir-eskort.html"
+    },
+    {
+      "time": "08.09.2026 03:12",
+      "city": "İstanbul (Kadıköy)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "kadikoy-eskort.html"
+    },
+    {
+      "time": "08.09.2026 02:50",
+      "city": "Ankara (Çankaya)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "ankara-eskort.html"
+    },
+    {
+      "time": "08.09.2026 02:22",
+      "city": "İzmir (Bornova)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "bornova-eskort.html"
+    },
+    {
+      "time": "08.09.2026 01:58",
+      "city": "Bursa (Nilüfer)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "bursa-eskort.html"
+    },
+    {
+      "time": "08.09.2026 01:15",
+      "city": "Antalya (Muratpaşa)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "antalya-eskort.html"
+    },
+    {
+      "time": "07.09.2026 23:40",
+      "city": "Aydın (Nazilli)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "nazilli-eskort.html"
+    },
+    {
+      "time": "07.09.2026 22:30",
+      "city": "İstanbul (Beşiktaş)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "07.09.2026 21:15",
+      "city": "Muğla (Bodrum)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "bodrum-eskort.html"
+    },
+    {
+      "time": "07.09.2026 20:45",
+      "city": "İzmir (Alsancak)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "alsancak-eskort.html"
+    },
+    {
+      "time": "07.09.2026 19:20",
+      "city": "Ankara (Kızılay)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "ankara-eskort.html"
+    },
+    {
+      "time": "07.09.2026 18:05",
+      "city": "Uşak (Merkez)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa"
+    }
+  ],
+  "cityCounts": {
+    "İstanbul": 86,
+    "İzmir": 10,
+    "İstanbul / Kadıköy": 4,
+    "İzmir / Karşıyaka": 4,
+    "Ankara": 3,
+    "İzmir / Bornova": 3,
+    "Bursa": 3,
+    "Muğla / Bodrum": 3,
+    "İzmir / Alsancak": 2,
+    "İzmir / Buca": 2,
+    "Ankara / Çankaya": 2,
+    "Aydın / Kuşadası": 2,
+    "Antalya / Lara": 2,
+    "Uşak": 2,
+    "Adana": 1,
+    "Antalya": 1,
+    "İstanbul / Beşiktaş": 1,
+    "Eskişehir": 1,
+    "Antalya / Manavgat": 1,
+    "Bursa / Nilüfer": 1,
+    "İstanbul / Üsküdar": 1
+  },
   "activeVisitors": [
     {
-      "id": "v_mtrygne2_qd0h",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1788829583381,
-      "time": "04:06"
+      "id": "v_live_izm1",
+      "city": "İzmir (Alsancak)",
+      "device": "iPhone 📱",
+      "activity": "Merve Profilini İnceliyor",
+      "lastSeen": 1788829794704,
+      "time": "Az önce"
+    },
+    {
+      "id": "v_live_ank2",
+      "city": "Ankara (Çankaya)",
+      "device": "Android 📱",
+      "activity": "Zeynep Profilini İnceliyor",
+      "lastSeen": 1788829764704,
+      "time": "1 dk önce"
     }
   ]
 }
