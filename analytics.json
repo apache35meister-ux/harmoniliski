@@ -1,12 +1,32 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
-  "cityCounts": {},
+  "cityCounts": {
+    "Kocaeli": 1
+  },
   "logs": [],
-  "cityVisits": [],
-  "activeVisitors": []
+  "cityVisits": [
+    {
+      "time": "09.09.2026 00:45",
+      "city": "Kocaeli",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "bursa-gece-seansi-eskort-fiyatlari-2026.html"
+    }
+  ],
+  "activeVisitors": [
+    {
+      "id": "bot_v_1788903914_275",
+      "city": "Kocaeli",
+      "device": "iPhone 📱",
+      "activity": "İzmir & Alsancak Sayfasını Geziyor",
+      "lastSeen": 1788903914997,
+      "time": "00:45"
+    }
+  ],
+  "lastCity": "Kocaeli"
 }
