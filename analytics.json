@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 13,
+  "totalVisits": 14,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
@@ -11,10 +11,18 @@
     "Gaziantep": 2,
     "Eskişehir": 4,
     "Muğla (Bodrum)": 1,
-    "İzmir": 1
+    "İzmir": 1,
+    "İstanbul": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:47",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "antalya-lara-konaklamali-vip-eskort.html"
+    },
     {
       "time": "09.09.2026 00:47",
       "city": "Gaziantep",
@@ -108,6 +116,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788904030_857",
+      "city": "İstanbul",
+      "device": "Masaüstü 💻",
+      "activity": "VIP Escort İlanlarını İnceliyor",
+      "lastSeen": 1788904030727,
+      "time": "00:47"
+    },
     {
       "id": "bot_v_1788904027_120",
       "city": "Gaziantep",
@@ -213,5 +229,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Gaziantep"
+  "lastCity": "İstanbul"
 }
