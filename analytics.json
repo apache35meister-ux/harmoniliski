@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
@@ -9,10 +9,18 @@
     "Kocaeli": 2,
     "Adana": 2,
     "Gaziantep": 1,
-    "Eskişehir": 3
+    "Eskişehir": 3,
+    "Muğla (Bodrum)": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:46",
+      "city": "Muğla (Bodrum)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "antalya-lara-konaklamali-vip-eskort.html"
+    },
     {
       "time": "09.09.2026 00:46",
       "city": "Eskişehir",
@@ -71,6 +79,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788904010_594",
+      "city": "Muğla (Bodrum)",
+      "device": "Masaüstü 💻",
+      "activity": "İzmir & Alsancak Sayfasını Geziyor",
+      "lastSeen": 1788904010234,
+      "time": "00:46"
+    },
     {
       "id": "bot_v_1788903986_508",
       "city": "Eskişehir",
@@ -136,5 +152,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Eskişehir"
+  "lastCity": "Muğla (Bodrum)"
 }
