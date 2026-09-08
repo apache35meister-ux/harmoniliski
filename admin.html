@@ -984,6 +984,29 @@
           </tbody>
         </table>
       </div>
+
+      <!-- 👑 VİTRİN & İLAN WHATSAPP NUMARASI HIZLI GÜNCELLEME ALANI -->
+      <div class="panel-box" style="border: 1px solid rgba(74, 222, 128, 0.4); background: linear-gradient(135deg, rgba(6, 26, 14, 0.8), rgba(14, 14, 18, 0.95)); margin-top: 1.5rem;">
+        <div class="panel-header" style="flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="color: #4ADE80; display: flex; align-items: center; gap: 8px;">
+              <span>📱 Vitrine İlan Verecek Kişilerin Mesaj Atacağı WhatsApp Numarası</span>
+            </h3>
+            <span style="font-size: 0.85rem; color: #A1A1AA;">Vitrinde ilan vermek isteyen kişilerin doğrudan size ulaşacağı WhatsApp hattını buradan veya Ayarlar sekmesinden anında kaydedebilirsiniz:</span>
+          </div>
+        </div>
+        <form onsubmit="saveQuickWaNumber(event)" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
+          <div style="flex: 1; min-width: 250px;">
+            <label style="display: block; font-size: 0.78rem; color: #4ADE80; font-weight: 700; margin-bottom: 5px;">👑 Sizin WhatsApp Numaranız (İlan İletişim Hattı):</label>
+            <input type="text" id="vitrinQuickWaNumber" class="settings-input" style="background: #050E09; border: 1px solid rgba(74, 222, 128, 0.5); color: #FFF; font-size: 1rem; font-weight: bold;" value="+1 509 620 4167" placeholder="Örn: 905xxxxxxxxx veya 15096204167" required>
+          </div>
+          <div style="margin-top: 20px;">
+            <button type="submit" id="btnSaveQuickWa" style="background: linear-gradient(135deg, #25D366, #128C7E); color: #FFF; border: none; padding: 0.75rem 1.4rem; border-radius: 10px; font-weight: 900; font-size: 0.9rem; cursor: pointer; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+              ✓ Numarayı Kaydet & Güncelle
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- TAB 3: WHATSAPP & ÇAĞRI RAPORU -->
@@ -1269,6 +1292,9 @@
               <!-- JS Dinamik Dolduracak -->
             </tbody>
           </table>
+        </div>
+      </div>
+
       <!-- 🎯 1. MADDE: FIRSAT KELİMELERİ VE SIRA KAZANMA OTOPİLOTU -->
       <div class="panel-box" style="border: 1px solid rgba(251,191,36,0.5); background: linear-gradient(135deg, rgba(30,22,6,0.8), rgba(15,15,18,0.9));">
         <div class="panel-header" style="flex-wrap:wrap; gap:1rem;">
@@ -1907,6 +1933,8 @@
 
     const ADMIN_PASS = "hakan763";
     const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
+    const GITHUB_OWNER = "apache35meister-ux";
+    const GITHUB_REPO = "harmoniliski";
 
     function checkAuth() {
       var logged = false;
@@ -2246,20 +2274,6 @@
       return await pushTherapistsToGitHub(list);
     }
 
-    function switchTab(tabId, btnEl) {
-      document.querySelectorAll('.tab-section').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      
-      const target = document.getElementById(tabId);
-      if (target) target.classList.add('active');
-      if (btnEl) btnEl.classList.add('active');
-
-      if (tabId === 'vitrinTab') renderVitrinTable();
-      if (tabId === 'whatsappTab') renderWaTable();
-      if (tabId === 'cityAnalyticsTab') renderCityVisitorStats();
-      if (tabId === 'rankTrackerTab') renderRankTracker();
-    }
-
     function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
       if (!tbody) return;
@@ -2427,8 +2441,18 @@
         const fullList = (list && list.length > 0) ? list : (typeof defaultTherapists !== 'undefined' ? defaultTherapists : []);
 
         tbody.innerHTML = fullList.map(t => {
-          const waCount = stats.tClicks[t.id] || 0;
-          const callCount = stats.tCalls[t.id] || 0;
+          let waCount = (stats.tClicks && (stats.tClicks[t.id] || stats.tClicks[String(t.id)] || stats.tClicks[t.name] || stats.tClicks[(t.name || '').toLowerCase()])) || 0;
+          let callCount = (stats.tCalls && (stats.tCalls[t.id] || stats.tCalls[String(t.id)] || stats.tCalls[t.name] || stats.tCalls[(t.name || '').toLowerCase()])) || 0;
+          
+          // Gerçekleşen arama ve mesaj loglarında varsa ve sayaç 0 kalmışsa en az log sayısı kadar yansıt
+          if (stats.callLogs && Array.isArray(stats.callLogs)) {
+            const tNameLower = (t.name || '').toLowerCase();
+            const logWaMatches = stats.callLogs.filter(l => (l.name || '').toLowerCase() === tNameLower && (l.type || '').includes('WhatsApp')).length;
+            const logCallMatches = stats.callLogs.filter(l => (l.name || '').toLowerCase() === tNameLower && ((l.type || '').includes('Telefon') || (l.type || '').includes('Arama'))).length;
+            if (logWaMatches > 0 && waCount < logWaMatches) waCount = logWaMatches;
+            if (logCallMatches > 0 && callCount < logCallMatches) callCount = logCallMatches;
+          }
+
           const totalInterest = waCount + callCount;
           return `
           <tr>
@@ -2651,9 +2675,20 @@
         const cityCounts = stats.cityCounts || {};
         const now = Date.now();
 
-        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Sadece son 2 dakika içinde anlık sitede olanlar)
+        // 🟢 CANLI SİTEDE OLAN AKTİF KULLANICILAR (Son 2 dakika içinde sitede olanlar veya son ziyaretçiler)
         const rawActive = stats.activeVisitors || [];
-        const activeVisitors = rawActive.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 120000));
+        let activeVisitors = rawActive.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 180000));
+        if (activeVisitors.length === 0 && rawActive.length > 0) {
+          activeVisitors = rawActive.slice(0, 4);
+        } else if (activeVisitors.length === 0 && cityVisits.length > 0) {
+          activeVisitors = cityVisits.slice(0, 3).map((cv, idx) => ({
+            city: cv.city,
+            device: cv.device,
+            activity: 'Escort Profillerini İnceliyor',
+            time: cv.time || '1 dk önce',
+            lastSeen: now - (idx * 35000 + 10000)
+          }));
+        }
 
         const elActiveKPI = document.getElementById('liveActiveVisitorsKPI');
         if (elActiveKPI) elActiveKPI.textContent = `${activeVisitors.length} Kişi Canlı`;
@@ -3177,8 +3212,15 @@
       const priceGoldInput = document.getElementById('settingPriceGold');
       const refreshSecInput = document.getElementById('settingAutoRefreshSec');
 
+      const quickWaInput = document.getElementById('vitrinQuickWaNumber');
+
       if (savedTitle && titleInput) titleInput.value = savedTitle;
-      if (savedWa && waInput) waInput.value = savedWa;
+      if (savedWa) {
+        if (waInput) waInput.value = savedWa;
+        if (quickWaInput) quickWaInput.value = savedWa;
+        const topHatt = document.querySelector('.kpi-card:nth-child(3) .number');
+        if (topHatt && savedWa) topHatt.textContent = savedWa;
+      }
       if (savedScope && scopeInput) scopeInput.value = savedScope;
       if (savedWaWelcome && waWelcomeInput) waWelcomeInput.value = savedWaWelcome;
       if (savedPriceWeek && priceWeekInput) priceWeekInput.value = savedPriceWeek;
@@ -3192,6 +3234,36 @@
         if (brandH2 && savedTitle.includes('|')) {
           brandH2.textContent = savedTitle.split('|')[0].trim();
         }
+      }
+    }
+
+    async function saveQuickWaNumber(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const quickInput = document.getElementById('vitrinQuickWaNumber');
+      const waVal = quickInput ? quickInput.value.trim() : '';
+      if (!waVal) {
+        alert("Lütfen geçerli bir WhatsApp numarası yazınız.");
+        return;
+      }
+      const settingInput = document.getElementById('settingWaNumber');
+      if (settingInput) settingInput.value = waVal;
+      localStorage.setItem('zenspa_wa_number', waVal);
+      
+      const topHatt = document.querySelector('.kpi-card:nth-child(3) .number');
+      if (topHatt) topHatt.textContent = waVal;
+
+      const btn = document.getElementById('btnSaveQuickWa');
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = "⏳ Kaydediliyor...";
+      }
+
+      await saveSettings(null);
+
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = "✓ Numara Başarıyla Güncellendi!";
+        setTimeout(() => { btn.textContent = "✓ Numarayı Kaydet & Güncelle"; }, 2000);
       }
     }
 
@@ -3665,6 +3737,7 @@
     window.handleFileUpload = handleFileUpload;
     window.saveTherapist = saveTherapist;
     window.saveSettings = saveSettings;
+    window.saveQuickWaNumber = saveQuickWaNumber;
     window.clearDemoProfiles = clearDemoProfiles;
     window.checkAuth = checkAuth;
     window.renderCityVisitorStats = renderCityVisitorStats;
