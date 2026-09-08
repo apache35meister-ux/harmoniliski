@@ -1,12 +1,21 @@
 {
   "totalWaClicks": 0,
-  "totalCalls": 0,
+  "totalCalls": 1,
   "totalVisits": 0,
   "lastUpdated": "8.09.2026 15:22",
   "tClicks": {},
-  "tCalls": {},
+  "tCalls": {
+    "1788429487588": 1
+  },
   "cityCounts": {},
-  "logs": [],
+  "logs": [
+    {
+      "time": "08.09.2026 16:00",
+      "name": "nadya",
+      "city": "izmir",
+      "type": "📞 Doğrudan Telefon Araması"
+    }
+  ],
   "cityVisits": [],
   "activeVisitors": [
     {
