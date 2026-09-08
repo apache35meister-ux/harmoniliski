@@ -1,18 +1,25 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
-    "Kocaeli": 1,
+    "Kocaeli": 2,
     "Adana": 2,
     "Gaziantep": 1,
     "Eskişehir": 2
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:46",
+      "city": "Kocaeli",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "istanbul-kadikoy-bagimsiz-vip-eskort.html"
+    },
     {
       "time": "09.09.2026 00:46",
       "city": "Eskişehir",
@@ -57,6 +64,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788903983_799",
+      "city": "Kocaeli",
+      "device": "iPhone 📱",
+      "activity": "Ana Sayfa Vitrininde Geziyor",
+      "lastSeen": 1788903983180,
+      "time": "00:46"
+    },
     {
       "id": "bot_v_1788903979_948",
       "city": "Eskişehir",
@@ -106,5 +121,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Eskişehir"
+  "lastCity": "Kocaeli"
 }
