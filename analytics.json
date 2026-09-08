@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 5,
+  "totalVisits": 6,
   "lastUpdated": "09.09.2026 00:34",
   "tClicks": {},
   "tCalls": {},
@@ -9,10 +9,17 @@
     "Kocaeli": 1,
     "Adana": 2,
     "Gaziantep": 1,
-    "Eskişehir": 1
+    "Eskişehir": 2
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "09.09.2026 00:46",
+      "city": "Eskişehir",
+      "country": "Türkiye",
+      "device": "iPad 📱",
+      "page": "bursa-gece-seansi-eskort-fiyatlari-2026.html"
+    },
     {
       "time": "09.09.2026 00:45",
       "city": "Adana",
@@ -50,6 +57,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "bot_v_1788903979_948",
+      "city": "Eskişehir",
+      "device": "iPad 📱",
+      "activity": "Fotoğraf Galerisinde Geziniyor",
+      "lastSeen": 1788903979841,
+      "time": "00:46"
+    },
     {
       "id": "bot_v_1788903941_652",
       "city": "Adana",
@@ -91,5 +106,5 @@
       "time": "00:45"
     }
   ],
-  "lastCity": "Adana"
+  "lastCity": "Eskişehir"
 }
