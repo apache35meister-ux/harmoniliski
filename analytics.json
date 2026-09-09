@@ -1,6 +1,6 @@
 {
   "totalWaClicks": 0,
-  "totalCalls": 0,
+  "totalCalls": 1,
   "totalVisits": 6,
   "lastUpdated": "09.09.2026 01:06",
   "tClicks": {},
@@ -10,7 +10,14 @@
     "Amsterdam": 2,
     "Ankara": 1
   },
-  "logs": [],
+  "logs": [
+    {
+      "time": "09.09.2026 07:26",
+      "name": "VIP Telefon Araması",
+      "city": "Ankara",
+      "type": "📞 Doğrudan Telefon Araması"
+    }
+  ],
   "cityVisits": [
     {
       "time": "09.09.2026 07:24",
