@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 1,
   "totalCalls": 8,
-  "totalVisits": 9,
+  "totalVisits": 10,
   "lastUpdated": "09.09.2026 01:06",
   "tClicks": {
     "1787133632639": 1
@@ -12,7 +12,7 @@
   "cityCounts": {
     "Izmir": 6,
     "Amsterdam": 2,
-    "Ankara": 1
+    "Ankara": 2
   },
   "logs": [
     {
@@ -71,6 +71,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09.09.2026 14:10",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "09.09.2026 10:04",
       "city": "Izmir",
@@ -137,12 +144,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mttqshok_fn3b",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
+      "id": "v_mttzz6j8_hqyo",
+      "city": "Ankara",
+      "device": "Android 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1788937443067,
-      "time": "10:04"
+      "lastSeen": 1788952246344,
+      "time": "14:10"
     }
   ]
 }
