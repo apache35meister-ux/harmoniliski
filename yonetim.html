@@ -738,7 +738,7 @@
   <script>
     (function() {
       try {
-        var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+        var logged = sessionStorage.getItem('zenescort_panel_auth') === 'evet' || localStorage.getItem('zenescort_panel_auth') === 'evet';
         if (logged) {
           document.documentElement.style.overflow = '';
           var ov = document.getElementById('adminAuthOverlay');
@@ -790,8 +790,8 @@
           var err = document.getElementById('authErrorMsg');
           if (val === 'hakan763') {
             try {
-              sessionStorage.setItem('zenspa_panel_auth', 'evet');
-              localStorage.setItem('zenspa_panel_auth', 'evet');
+              sessionStorage.setItem('zenescort_panel_auth', 'evet');
+              localStorage.setItem('zenescort_panel_auth', 'evet');
             } catch(ex) {}
             var ov = document.getElementById('adminAuthOverlay');
             if (ov) {
@@ -1990,7 +1990,7 @@
     function checkAuth() {
       var logged = false;
       try {
-        logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+        logged = sessionStorage.getItem('zenescort_panel_auth') === 'evet' || localStorage.getItem('zenescort_panel_auth') === 'evet';
       } catch(e) {}
 
       var overlay = document.getElementById('adminAuthOverlay');
@@ -2047,8 +2047,8 @@
       }
 
       try {
-        sessionStorage.setItem('zenspa_panel_auth', 'evet');
-        localStorage.setItem('zenspa_panel_auth', 'evet');
+        sessionStorage.setItem('zenescort_panel_auth', 'evet');
+        localStorage.setItem('zenescort_panel_auth', 'evet');
       } catch(err) {}
 
       if (overlay) {
@@ -2085,8 +2085,8 @@
     function adminLogout() {
       if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
         try {
-          sessionStorage.removeItem('zenspa_panel_auth');
-          localStorage.removeItem('zenspa_panel_auth');
+          sessionStorage.removeItem('zenescort_panel_auth');
+          localStorage.removeItem('zenescort_panel_auth');
         } catch(e) {}
         var passEl = document.getElementById('adminPassInput');
         if (passEl) passEl.value = '';
@@ -2204,7 +2204,7 @@
     async function initAdminData() {
       try { loadSettings(); } catch(e) {}
       
-      const local = localStorage.getItem('zenspa_therapists');
+      const local = localStorage.getItem('zenescort_therapists');
       if (local) {
         try {
           const parsed = JSON.parse(local);
@@ -2220,7 +2220,7 @@
         if (liveList && Array.isArray(liveList) && liveList.length > 0) {
           list = liveList;
           try {
-            localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+            localStorage.setItem('zenescort_therapists', JSON.stringify(list));
           } catch(e) {}
         }
       } catch(e) {
@@ -2317,8 +2317,8 @@
 
     async function saveToStorage() {
       try {
-        localStorage.setItem('zenspa_admin_modified', 'true');
-        localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+        localStorage.setItem('zenescort_admin_modified', 'true');
+        localStorage.setItem('zenescort_therapists', JSON.stringify(list));
       } catch(e) {
         console.warn("LocalStorage kotasi dolu:", e);
       }
@@ -2418,15 +2418,15 @@
 
     async function getLiveAnalytics() {
       let stats = {
-        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0'),
-        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0'),
-        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0'),
-        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
-        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
-        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
-        cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
-        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'),
-        activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
+        visits: parseInt(localStorage.getItem('zenescort_real_visits') || '0'),
+        waClicks: parseInt(localStorage.getItem('zenescort_real_wa_clicks') || '0'),
+        callClicks: parseInt(localStorage.getItem('zenescort_real_calls') || '0'),
+        tClicks: JSON.parse(localStorage.getItem('zenescort_t_clicks') || '{}'),
+        tCalls: JSON.parse(localStorage.getItem('zenescort_t_calls') || '{}'),
+        callLogs: JSON.parse(localStorage.getItem('zenescort_live_call_logs') || '[]'),
+        cityVisits: JSON.parse(localStorage.getItem('zenescort_city_visits') || '[]'),
+        cityCounts: JSON.parse(localStorage.getItem('zenescort_city_counts') || '{}'),
+        activeVisitors: JSON.parse(localStorage.getItem('zenescort_active_visitors') || '[]')
       };
 
       try {
@@ -2489,15 +2489,15 @@
           stats.activeVisitors = Array.isArray(cloudStats.activeVisitors) ? cloudStats.activeVisitors : [];
 
           try {
-            localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
-            localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
-            localStorage.setItem('zenspa_real_visits', stats.visits.toString());
-            localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
-            localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
-            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
-            localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
-            localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
-            localStorage.setItem('zenspa_active_visitors', JSON.stringify(stats.activeVisitors));
+            localStorage.setItem('zenescort_real_wa_clicks', stats.waClicks.toString());
+            localStorage.setItem('zenescort_real_calls', stats.callClicks.toString());
+            localStorage.setItem('zenescort_real_visits', stats.visits.toString());
+            localStorage.setItem('zenescort_t_clicks', JSON.stringify(stats.tClicks));
+            localStorage.setItem('zenescort_t_calls', JSON.stringify(stats.tCalls));
+            localStorage.setItem('zenescort_live_call_logs', JSON.stringify(stats.callLogs));
+            localStorage.setItem('zenescort_city_visits', JSON.stringify(stats.cityVisits));
+            localStorage.setItem('zenescort_city_counts', JSON.stringify(stats.cityCounts));
+            localStorage.setItem('zenescort_active_visitors', JSON.stringify(stats.activeVisitors));
           } catch(ex) {}
         }
       } catch(e) {}
@@ -2602,15 +2602,15 @@
       }
 
       // 1. LocalStorage Kesin Sıfırlama
-      localStorage.setItem('zenspa_real_visits', '0');
-      localStorage.setItem('zenspa_real_wa_clicks', '0');
-      localStorage.setItem('zenspa_real_calls', '0');
-      localStorage.setItem('zenspa_t_clicks', '{}');
-      localStorage.setItem('zenspa_t_calls', '{}');
-      localStorage.setItem('zenspa_live_call_logs', '[]');
-      localStorage.setItem('zenspa_city_visits', '[]');
-      localStorage.setItem('zenspa_city_counts', '{}');
-      localStorage.setItem('zenspa_active_visitors', '[]');
+      localStorage.setItem('zenescort_real_visits', '0');
+      localStorage.setItem('zenescort_real_wa_clicks', '0');
+      localStorage.setItem('zenescort_real_calls', '0');
+      localStorage.setItem('zenescort_t_clicks', '{}');
+      localStorage.setItem('zenescort_t_calls', '{}');
+      localStorage.setItem('zenescort_live_call_logs', '[]');
+      localStorage.setItem('zenescort_city_visits', '[]');
+      localStorage.setItem('zenescort_city_counts', '{}');
+      localStorage.setItem('zenescort_active_visitors', '[]');
 
       // 2. Arayüz Sayaçlarını Anında Sıfırla
       const elWa = document.getElementById('realTotalWa');
@@ -3241,15 +3241,15 @@
     }
 
     async function loadSettings() {
-      let savedTitle = localStorage.getItem('zenspa_site_title');
-      let savedWa = localStorage.getItem('zenspa_wa_number');
-      let savedScope = localStorage.getItem('zenspa_scope');
-      let savedWaWelcome = localStorage.getItem('zenspa_wa_welcome');
-      let savedPriceWeek = localStorage.getItem('zenspa_price_week');
-      let savedPrice15 = localStorage.getItem('zenspa_price_15');
-      let savedPriceMonth = localStorage.getItem('zenspa_price_month');
-      let savedPriceGold = localStorage.getItem('zenspa_price_gold');
-      let savedRefreshSec = localStorage.getItem('zenspa_refresh_sec');
+      let savedTitle = localStorage.getItem('zenescort_site_title');
+      let savedWa = localStorage.getItem('zenescort_wa_number');
+      let savedScope = localStorage.getItem('zenescort_scope');
+      let savedWaWelcome = localStorage.getItem('zenescort_wa_welcome');
+      let savedPriceWeek = localStorage.getItem('zenescort_price_week');
+      let savedPrice15 = localStorage.getItem('zenescort_price_15');
+      let savedPriceMonth = localStorage.getItem('zenescort_price_month');
+      let savedPriceGold = localStorage.getItem('zenescort_price_gold');
+      let savedRefreshSec = localStorage.getItem('zenescort_refresh_sec');
 
       try {
         const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
@@ -3306,11 +3306,11 @@
 
     async 
     function quickPromptWaNumber() {
-      const current = localStorage.getItem('zenspa_wa_number') || '15096204167';
+      const current = localStorage.getItem('zenescort_wa_number') || '15096204167';
       const newVal = prompt("Vitrine ilan verecek kişilerin mesaj atacağı WhatsApp numaranızı yazınız:\n(Örn: 905xxxxxxxxx veya 15096204167)", current);
       if (newVal !== null && newVal.trim() !== "") {
         const clean = newVal.trim();
-        localStorage.setItem('zenspa_wa_number', clean);
+        localStorage.setItem('zenescort_wa_number', clean);
         const inp1 = document.getElementById('settingWaNumber');
         if (inp1) inp1.value = clean;
         const inp2 = document.getElementById('vitrinQuickWaNumber');
@@ -3333,7 +3333,7 @@
       }
       const settingInput = document.getElementById('settingWaNumber');
       if (settingInput) settingInput.value = waVal;
-      localStorage.setItem('zenspa_wa_number', waVal);
+      localStorage.setItem('zenescort_wa_number', waVal);
       
       const topHatt = document.querySelector('.kpi-card:nth-child(3) .number');
       if (topHatt) topHatt.textContent = waVal;
@@ -3375,15 +3375,15 @@
       const priceGold = priceGoldInput ? priceGoldInput.value.trim() : '';
       const refreshSec = refreshSecInput ? refreshSecInput.value : '10';
 
-      if (title) localStorage.setItem('zenspa_site_title', title);
-      if (wa) localStorage.setItem('zenspa_wa_number', wa);
-      if (scope) localStorage.setItem('zenspa_scope', scope);
-      if (waWelcome) localStorage.setItem('zenspa_wa_welcome', waWelcome);
-      if (priceWeek) localStorage.setItem('zenspa_price_week', priceWeek);
-      if (price15) localStorage.setItem('zenspa_price_15', price15);
-      if (priceMonth) localStorage.setItem('zenspa_price_month', priceMonth);
-      if (priceGold) localStorage.setItem('zenspa_price_gold', priceGold);
-      if (refreshSec) localStorage.setItem('zenspa_refresh_sec', refreshSec);
+      if (title) localStorage.setItem('zenescort_site_title', title);
+      if (wa) localStorage.setItem('zenescort_wa_number', wa);
+      if (scope) localStorage.setItem('zenescort_scope', scope);
+      if (waWelcome) localStorage.setItem('zenescort_wa_welcome', waWelcome);
+      if (priceWeek) localStorage.setItem('zenescort_price_week', priceWeek);
+      if (price15) localStorage.setItem('zenescort_price_15', price15);
+      if (priceMonth) localStorage.setItem('zenescort_price_month', priceMonth);
+      if (priceGold) localStorage.setItem('zenescort_price_gold', priceGold);
+      if (refreshSec) localStorage.setItem('zenescort_refresh_sec', refreshSec);
 
       const brandH2 = document.querySelector('.brand-title h2');
       if (brandH2 && title && title.includes('|')) {
@@ -3448,14 +3448,14 @@
         const stats = await getLiveAnalytics();
         const backupObj = {
           backupDate: new Date().toISOString(),
-          siteTitle: localStorage.getItem('zenspa_site_title') || 'ZenEscort',
-          waNumber: localStorage.getItem('zenspa_wa_number') || '15096204167',
+          siteTitle: localStorage.getItem('zenescort_site_title') || 'ZenEscort',
+          waNumber: localStorage.getItem('zenescort_wa_number') || '15096204167',
           therapists: list || [],
           analytics: stats || {},
           storageKeys: {
-            visits: localStorage.getItem('zenspa_real_visits'),
-            waClicks: localStorage.getItem('zenspa_real_wa_clicks'),
-            calls: localStorage.getItem('zenspa_real_calls')
+            visits: localStorage.getItem('zenescort_real_visits'),
+            waClicks: localStorage.getItem('zenescort_real_wa_clicks'),
+            calls: localStorage.getItem('zenescort_real_calls')
           }
         };
 
@@ -3521,8 +3521,8 @@
               const text = new TextDecoder('utf-8').decode(bytes);
               const parsed = JSON.parse(text);
               if (parsed && Array.isArray(parsed.items) && parsed.items.length > 0) {
-                localStorage.setItem('zenspa_rank_keywords', JSON.stringify(parsed.items));
-                localStorage.setItem('zenspa_gsc_last_sync', parsed.updatedAt || '');
+                localStorage.setItem('zenescort_rank_keywords', JSON.stringify(parsed.items));
+                localStorage.setItem('zenescort_gsc_last_sync', parsed.updatedAt || '');
                 return parsed.items;
               }
             }
@@ -3535,8 +3535,8 @@
           if (res.ok) {
             const data = await res.json();
             if (data && Array.isArray(data.items) && data.items.length > 0) {
-              localStorage.setItem('zenspa_rank_keywords', JSON.stringify(data.items));
-              localStorage.setItem('zenspa_gsc_last_sync', data.updatedAt || '');
+              localStorage.setItem('zenescort_rank_keywords', JSON.stringify(data.items));
+              localStorage.setItem('zenescort_gsc_last_sync', data.updatedAt || '');
               return data.items;
             }
           }
@@ -3547,7 +3547,7 @@
 
     function getRankKeywords() {
       try {
-        const stored = localStorage.getItem('zenspa_rank_keywords');
+        const stored = localStorage.getItem('zenescort_rank_keywords');
         if (stored) {
           const parsed = JSON.parse(stored);
           if (Array.isArray(parsed) && parsed.length > 0) return parsed;
