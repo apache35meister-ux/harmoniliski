@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 12,
   "totalCalls": 19,
-  "totalVisits": 116,
+  "totalVisits": 117,
   "lastUpdated": "09.09.2026 01:06",
   "tClicks": {
     "1787133632639": 2,
@@ -22,7 +22,7 @@
     "1788394289793": 1
   },
   "cityCounts": {
-    "Izmir": 102,
+    "Izmir": 103,
     "Amsterdam": 2,
     "Ankara": 2,
     "Kane": 1,
@@ -220,6 +220,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10.09.2026 15:03",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "index.html"
+    },
     {
       "time": "10.09.2026 13:53",
       "city": "Izmir",
@@ -632,31 +639,16 @@
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "09.09.2026 15:05",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "activeVisitors": [
     {
-      "id": "v_mtveqift_h0n2",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789037772115,
-      "time": "13:56"
-    },
-    {
-      "id": "v_mtvesgoi_cpob",
+      "id": "v_mtvhad1p_6uyu",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789037592647,
-      "time": "13:53"
+      "lastSeen": 1789041787158,
+      "time": "15:03"
     }
   ]
 }
