@@ -2972,7 +2972,7 @@
 
     function addLogEntry(tName, city, actionType) {
       try {
-        let logs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]');
+        let logs = JSON.parse(localStorage.getItem('zenescort_live_call_logs') || '[]');
         logs.unshift({
           time: getFormattedTime(),
           name: tName || 'VIP Escort',
@@ -2980,14 +2980,14 @@
           type: actionType
         });
         if (logs.length > 50) logs = logs.slice(0, 50); // son 50 arama ve mesaj kaydi
-        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(logs));
+        localStorage.setItem('zenescort_live_call_logs', JSON.stringify(logs));
       } catch(e) {}
     }
 
     function trackPageVisit() {
-      let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
+      let visits = parseInt(localStorage.getItem('zenescort_real_visits') || '1');
       visits++;
-      localStorage.setItem('zenspa_real_visits', visits.toString());
+      localStorage.setItem('zenescort_real_visits', visits.toString());
     }
 
     // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
@@ -3108,14 +3108,14 @@
       name = name || 'VIP Escort';
       c = c || 'Türkiye';
 
-      let totalWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0');
+      let totalWa = parseInt(localStorage.getItem('zenescort_real_wa_clicks') || '0');
       totalWa++;
-      localStorage.setItem('zenspa_real_wa_clicks', totalWa.toString());
+      localStorage.setItem('zenescort_real_wa_clicks', totalWa.toString());
 
       if (tId) {
-        let tClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}');
+        let tClicks = JSON.parse(localStorage.getItem('zenescort_t_clicks') || '{}');
         tClicks[tId] = (tClicks[tId] || 0) + 1;
-        localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
+        localStorage.setItem('zenescort_t_clicks', JSON.stringify(tClicks));
       }
 
       addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
@@ -3135,14 +3135,14 @@
       name = name || 'VIP Escort';
       c = c || 'Türkiye';
 
-      let totalCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '0');
+      let totalCalls = parseInt(localStorage.getItem('zenescort_real_calls') || '0');
       totalCalls++;
-      localStorage.setItem('zenspa_real_calls', totalCalls.toString());
+      localStorage.setItem('zenescort_real_calls', totalCalls.toString());
 
       if (tId) {
-        let tCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}');
+        let tCalls = JSON.parse(localStorage.getItem('zenescort_t_calls') || '{}');
         tCalls[tId] = (tCalls[tId] || 0) + 1;
-        localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
+        localStorage.setItem('zenescort_t_calls', JSON.stringify(tCalls));
       }
 
       addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
@@ -3150,9 +3150,9 @@
     }
 
     function trackAdClick() {
-      let totalAd = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '0');
+      let totalAd = parseInt(localStorage.getItem('zenescort_real_ad_clicks') || '0');
       totalAd++;
-      localStorage.setItem('zenspa_real_ad_clicks', totalAd.toString());
+      localStorage.setItem('zenescort_real_ad_clicks', totalAd.toString());
     }
 
     // Global WhatsApp ve Telefon Tıklama Yakalayıcı (%100 Garanti Kapsama)
@@ -3192,7 +3192,7 @@
 
     function getStoredTherapists() {
       try {
-        const local = localStorage.getItem('zenspa_therapists');
+        const local = localStorage.getItem('zenescort_therapists');
         if (local) {
           const parsed = JSON.parse(local);
           if (Array.isArray(parsed) && parsed.length >= 14) return parsed;
@@ -3221,14 +3221,14 @@
 
     async function loadLiveTherapists() {
       // Demo profilleri filtrele - eger cache'de eski demo profiller varsa hemen temizle
-      const local = localStorage.getItem('zenspa_therapists');
+      const local = localStorage.getItem('zenescort_therapists');
       if (local) {
         try {
           const parsed = JSON.parse(local);
           if (Array.isArray(parsed) && parsed.length > 0) {
             const hasDemo = parsed.some(t => ['Selin', 'Derya', 'Elif', 'Emre', 'Zeynep', 'Cansu', 'Burak', 'Gamze', 'Büşra', 'Mert', 'Ezgi', 'Hande', 'Nilay'].includes(t.name));
             if (hasDemo) {
-              localStorage.removeItem('zenspa_therapists');
+              localStorage.removeItem('zenescort_therapists');
             } else {
               therapists = parsed;
               renderTherapists(therapists);
@@ -3244,7 +3244,7 @@
           const liveList = await rawRes.json();
           if (Array.isArray(liveList) && liveList.length > 0) {
             therapists = liveList;
-            try { localStorage.setItem('zenspa_therapists', JSON.stringify(liveList)); } catch(e) {}
+            try { localStorage.setItem('zenescort_therapists', JSON.stringify(liveList)); } catch(e) {}
             renderTherapists(therapists);
             return;
           }
@@ -3258,7 +3258,7 @@
           const liveList = await res.json();
           if (Array.isArray(liveList) && liveList.length > 0) {
             therapists = liveList;
-            try { localStorage.setItem('zenspa_therapists', JSON.stringify(liveList)); } catch(e) {}
+            try { localStorage.setItem('zenescort_therapists', JSON.stringify(liveList)); } catch(e) {}
             renderTherapists(therapists);
             return;
           }
@@ -3911,9 +3911,9 @@
     }
 
     async function applySavedSettings() {
-      let savedTitle = localStorage.getItem('zenspa_site_title');
-      let savedWa = localStorage.getItem('zenspa_wa_number');
-      let savedScope = localStorage.getItem('zenspa_scope');
+      let savedTitle = localStorage.getItem('zenescort_site_title');
+      let savedWa = localStorage.getItem('zenescort_wa_number');
+      let savedScope = localStorage.getItem('zenescort_scope');
 
       try {
         const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
@@ -3985,10 +3985,10 @@
 
 
     // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASYONU
-    let activeVisitorId = sessionStorage.getItem('zenspa_vis_id');
+    let activeVisitorId = sessionStorage.getItem('zenescort_vis_id');
     if (!activeVisitorId) {
       activeVisitorId = 'v_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 6);
-      sessionStorage.setItem('zenspa_vis_id', activeVisitorId);
+      sessionStorage.setItem('zenescort_vis_id', activeVisitorId);
     }
 
     let detectedCityName = 'İstanbul';
@@ -4026,8 +4026,8 @@
           const pageTitle = window.location.pathname.split('/').pop() || 'Ana Sayfa';
 
           // 1. Ziyaret Sayacı ve Şehir Dağılımını Güncelle (Yeni Giriş veya Açılışta)
-          if (isVisitRecord || !sessionStorage.getItem('zenspa_counted_visit')) {
-            sessionStorage.setItem('zenspa_counted_visit', 'true');
+          if (isVisitRecord || !sessionStorage.getItem('zenescort_counted_visit')) {
+            sessionStorage.setItem('zenescort_counted_visit', 'true');
             currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
             
             currentJson.cityCounts = currentJson.cityCounts || {};
