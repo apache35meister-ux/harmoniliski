@@ -1,14 +1,23 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 5,
   "lastUpdated": "10.09.2026 15:29",
-  "tClicks": {},
+  "tClicks": {
+    "1788429948834": 1
+  },
   "tCalls": {},
   "cityCounts": {
     "Izmir": 5
   },
-  "logs": [],
+  "logs": [
+    {
+      "time": "10.09.2026 17:44",
+      "name": "yeliz",
+      "city": "izmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "10.09.2026 16:33",
