@@ -1314,7 +1314,7 @@
         <div class="kpi-card" style="background:linear-gradient(135deg,#0c1929,#050b14); border:1px solid #0284c7;">
           <div>
             <h4 style="color:#7DD3FC;">1. Sıra Liderliklerimiz</h4>
-            <div class="number" style="color:#4ADE80; font-size:1.8rem; font-weight:900;">18 Kelime</div>
+            <div class="number" style="color:#4ADE80; font-size:1.8rem; font-weight:900;">20 Sayfa</div>
             <span style="font-size:0.75rem; color:#4ADE80;">Tam Hakimiyet</span>
           </div>
           <div class="kpi-icon" style="color:#4ADE80;">⚡</div>
@@ -3944,16 +3944,26 @@
 
 // ⚔️ CANLI RAKİP ANALİZİ MOTORU
 const competitorData = [
-  { kw: "izmir escort", city: "İzmir", ourRank: 1, r1: 3, r2: 4, r3: 6 },
-  { kw: "ankara escort", city: "Ankara", ourRank: 1, r1: 2, r2: 5, r3: 8 },
-  { kw: "istanbul escort", city: "İstanbul", ourRank: 2, r1: 1, r2: 4, r3: 7 },
-  { kw: "antalya vip escort", city: "Antalya", ourRank: 1, r1: 3, r2: 2, r3: 5 },
-  { kw: "bursa escort", city: "Bursa", ourRank: 2, r1: 4, r2: 3, r3: 9 },
-  { kw: "alsancak escort", city: "İzmir / Alsancak", ourRank: 1, r1: 2, r2: 6, r3: 11 },
-  { kw: "kadikoy vip escort", city: "İstanbul / Kadıköy", ourRank: 1, r1: 3, r2: 5, r3: 8 },
-  { kw: "bodrum escort", city: "Muğla / Bodrum", ourRank: 1, r1: 2, r2: 4, r3: 10 },
-  { kw: "81 il escort", city: "Türkiye Geneli", ourRank: 1, r1: 5, r2: 8, r3: 14 },
-  { kw: "cankaya vip escort", city: "Ankara / Çankaya", ourRank: 1, r1: 3, r2: 7, r3: 12 }
+  { kw: "81 il escort", city: "Türkiye Geneli", url: "index.html", ourRank: 6, r1: 5, r2: 8, r3: 14 },
+  { kw: "izmir escort", city: "İzmir", url: "izmir-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 6 },
+  { kw: "ankara escort", city: "Ankara", url: "ankara-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 8 },
+  { kw: "istanbul escort", city: "İstanbul", url: "istanbul-eskort.html", ourRank: 2, r1: 1, r2: 4, r3: 7 },
+  { kw: "antalya vip escort", city: "Antalya", url: "antalya-eskort.html", ourRank: 1, r1: 3, r2: 2, r3: 5 },
+  { kw: "bursa escort", city: "Bursa", url: "bursa-eskort.html", ourRank: 2, r1: 4, r2: 3, r3: 9 },
+  { kw: "alsancak escort", city: "İzmir / Alsancak", url: "alsancak-eskort.html", ourRank: 1, r1: 2, r2: 6, r3: 11 },
+  { kw: "kadikoy vip escort", city: "İstanbul / Kadıköy", url: "kadikoy-eskort.html", ourRank: 1, r1: 3, r2: 5, r3: 8 },
+  { kw: "bodrum escort", city: "Muğla / Bodrum", url: "bodrum-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 10 },
+  { kw: "cankaya vip escort", city: "Ankara / Çankaya", url: "cankaya-eskort.html", ourRank: 1, r1: 3, r2: 7, r3: 12 },
+  { kw: "adana eskort", city: "Adana", url: "adana-eskort.html", ourRank: 2, r1: 3, r2: 5, r3: 8 },
+  { kw: "eskisehir escort", city: "Eskişehir", url: "eskisehir-eskort.html", ourRank: 3, r1: 4, r2: 6, r3: 11 },
+  { kw: "alanya escort", city: "Antalya / Alanya", url: "alanya-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 7 },
+  { kw: "bornova escort", city: "İzmir / Bornova", url: "bornova-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 9 },
+  { kw: "besiktas escort", city: "İstanbul / Beşiktaş", url: "besiktas-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 8 },
+  { kw: "konak escort", city: "İzmir / Konak", url: "konak-eskort.html", ourRank: 1, r1: 2, r2: 6, r3: 10 },
+  { kw: "bakirkoy escort", city: "İstanbul / Bakırköy", url: "bakirkoy-eskort.html", ourRank: 2, r1: 2, r2: 5, r3: 8 },
+  { kw: "cesme alacati escort", city: "İzmir / Çeşme", url: "cesme-alacati-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 6 },
+  { kw: "karsiyaka vip escort", city: "İzmir / Karşıyaka", url: "karsiyaka-eskort.html", ourRank: 1, r1: 3, r2: 5, r3: 9 },
+  { kw: "lara escort", city: "Antalya / Lara", url: "lara-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 7 }
 ];
 
 function renderCompetitors() {
@@ -3972,7 +3982,7 @@ function renderCompetitors() {
     tr.innerHTML = `
       <td style="padding:12px 10px;">
         <strong style="color:#FFF; font-size:0.95rem;">${item.kw}</strong>
-        <div style="color:#94A3B8; font-size:0.75rem;">${item.city}</div>
+        <div style="color:#94A3B8; font-size:0.75rem;">${item.city} • <a href="https://harmoniliski.com/${item.url || 'index.html'}" target="_blank" style="color:#38BDF8; text-decoration:none;">📄 Sayfayı Aç ↗</a></div>
       </td>
       <td style="padding:12px 10px;">
         <span style="font-size:1.1rem; font-weight:900; color:#38BDF8; background:rgba(56,189,248,0.15); padding:4px 10px; border-radius:8px;">#${item.ourRank}</span>
