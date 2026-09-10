@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 3,
   "totalCalls": 3,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "lastUpdated": "10.09.2026 15:29",
   "tClicks": {
     "1788429948834": 1,
@@ -13,7 +13,7 @@
     "1787254672367": 2
   },
   "cityCounts": {
-    "Izmir": 5,
+    "Izmir": 6,
     "Kane": 1
   },
   "logs": [
@@ -55,6 +55,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10.09.2026 21:05",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "index.html"
+    },
     {
       "time": "10.09.2026 15:39",
       "city": "Kane",
@@ -100,12 +107,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mtvp0w8u_13q6",
-      "city": "Kane",
-      "device": "Masaüstü 💻",
+      "id": "v_mtvu8ik7_k0ku",
+      "city": "Izmir",
+      "device": "iPhone 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789054782284,
-      "time": "15:39"
+      "lastSeen": 1789063535667,
+      "time": "21:05"
     }
   ]
 }
