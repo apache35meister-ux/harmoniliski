@@ -1,17 +1,25 @@
 {
   "totalWaClicks": 2,
-  "totalCalls": 0,
+  "totalCalls": 1,
   "totalVisits": 5,
   "lastUpdated": "10.09.2026 15:29",
   "tClicks": {
     "1788429948834": 1,
     "1787133029944": 1
   },
-  "tCalls": {},
+  "tCalls": {
+    "1787133029944": 1
+  },
   "cityCounts": {
     "Izmir": 5
   },
   "logs": [
+    {
+      "time": "10.09.2026 17:50",
+      "name": "Burçak",
+      "city": "İzmir",
+      "type": "📞 Doğrudan Telefon Araması"
+    },
     {
       "time": "10.09.2026 17:46",
       "name": "Burçak",
