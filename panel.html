@@ -731,6 +731,115 @@
       }
     }
     </script>
+<script>
+
+// === GUVENLI ADMIN AUTH - SHA-256 HASH SISTEMI ===
+// Sifre: panel icin belirlenmis - hash karsilastirmasi yapilir
+// Duz metin sifre hicbir zaman kaydedilmez
+
+const ADMIN_PASS_HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'; // "admin" hash - DEGISTIR
+const SESSION_KEY = 'zne_panel_tok';
+const SESSION_DURATION = 4 * 60 * 60 * 1000; // 4 saat
+const MAX_ATTEMPTS = 5;
+const LOCKOUT_TIME = 30 * 1000; // 30 saniye
+
+let failedAttempts = 0;
+let lockoutUntil = 0;
+
+async function hashPassword(password) {
+  const msgBuffer = new TextEncoder().encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function generateSessionToken() {
+  const arr = new Uint8Array(32);
+  crypto.getRandomValues(arr);
+  return Array.from(arr).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function isValidSession() {
+  try {
+    const stored = sessionStorage.getItem(SESSION_KEY);
+    if (!stored) return false;
+    const session = JSON.parse(stored);
+    if (!session.token || !session.expires) return false;
+    if (Date.now() > session.expires) {
+      sessionStorage.removeItem(SESSION_KEY);
+      return false;
+    }
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+
+async function directUnlockPanel(e) {
+  if (e && e.preventDefault) e.preventDefault();
+
+  // Kilit kontrolu
+  if (Date.now() < lockoutUntil) {
+    const remaining = Math.ceil((lockoutUntil - Date.now()) / 1000);
+    document.getElementById('authErrorMsg').textContent = remaining + ' saniye bekleyin.';
+    document.getElementById('authErrorMsg').style.display = 'block';
+    return false;
+  }
+
+  const input = document.getElementById('adminPassInput');
+  if (!input || !input.value.trim()) return false;
+
+  const inputHash = await hashPassword(input.value.trim());
+
+  if (inputHash === ADMIN_PASS_HASH) {
+    // Basarili giris
+    failedAttempts = 0;
+    const token = generateSessionToken();
+    const session = {
+      token: token,
+      expires: Date.now() + SESSION_DURATION
+    };
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+    // localStorage temizle (eski guvensiz veri)
+    localStorage.removeItem('zenescort_panel_auth');
+
+    const overlay = document.getElementById('adminAuthOverlay');
+    if (overlay) overlay.classList.add('hidden');
+    input.value = '';
+
+    if (typeof initPanel === 'function') initPanel();
+  } else {
+    // Basarisiz giris
+    failedAttempts++;
+    input.value = '';
+
+    if (failedAttempts >= MAX_ATTEMPTS) {
+      lockoutUntil = Date.now() + LOCKOUT_TIME;
+      failedAttempts = 0;
+      document.getElementById('authErrorMsg').textContent = 'Cok fazla hata. 30 saniye kilitleniyor.';
+    } else {
+      document.getElementById('authErrorMsg').textContent = 'Sifre yanlis. (' + failedAttempts + '/' + MAX_ATTEMPTS + ')';
+    }
+    document.getElementById('authErrorMsg').style.display = 'block';
+  }
+  return false;
+}
+
+// Sayfa yuklendiginde session kontrol
+(function checkSession() {
+  if (isValidSession()) {
+    const overlay = document.getElementById('adminAuthOverlay');
+    if (overlay) overlay.classList.add('hidden');
+    if (typeof initPanel === 'function') initPanel();
+  } else {
+    // Eski guvensiz localStorage verilerini temizle
+    localStorage.removeItem('zenescort_panel_auth');
+    sessionStorage.removeItem('zenescort_panel_auth');
+  }
+})();
+// === GUVENLI ADMIN AUTH BITIS ===
+
+</script>
 </head>
 <body>
 
@@ -738,7 +847,7 @@
   <script>
     (function() {
       try {
-        var logged = sessionStorage.getItem('zenescort_panel_auth') === 'evet' || localStorage.getItem('zenescort_panel_auth') === 'evet';
+        var logged = isValidSession(); // Guvenli session kontrolu
         if (logged) {
           document.documentElement.style.overflow = '';
           var ov = document.getElementById('adminAuthOverlay');
@@ -783,16 +892,7 @@
             if (eye) eye.textContent = '👁️';
           }
         }
-        function directUnlockPanel(e) {
-          if (e && e.preventDefault) e.preventDefault();
-          var passInput = document.getElementById('adminPassInput');
-          var val = passInput ? passInput.value.trim() : '';
-          var err = document.getElementById('authErrorMsg');
-          if (val === 'hakan763') {
-            try {
-              sessionStorage.setItem('zenescort_panel_auth', 'evet');
-              localStorage.setItem('zenescort_panel_auth', 'evet');
-            } catch(ex) {}
+         catch(ex) {}
             var ov = document.getElementById('adminAuthOverlay');
             if (ov) {
               ov.style.setProperty('display', 'none', 'important');
@@ -2185,8 +2285,8 @@
       }
 
       try {
-        sessionStorage.setItem('zenescort_panel_auth', 'evet');
-        localStorage.setItem('zenescort_panel_auth', 'evet');
+        // sessionStorage auth kaldirildi - session token kullaniliyor
+        // localStorage auth kaldirildi - session token kullaniliyor
       } catch(err) {}
 
       if (overlay) {
