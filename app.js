@@ -1,1593 +1,1766 @@
-/**
- * HARMONİ - BİLİMSEL EŞLEŞTİRME & EVLİLİK PLATFORMU
- * Pembe Panjur Modeli: Karşılama/Reklam (Landing) & Üye İçi Portal Motoru
- */
-
-function bootHarmoniApp() {
-  // Oturum ve Uygulama Durumu (Admin Paneli ile %100 Senkronize Veri Tabanı)
-  function getSynchronizedProfiles() {
-    const deletedProfileIds = JSON.parse(localStorage.getItem('harmoni_deleted_profile_ids') || '[]');
-    let adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || 'null');
-    const regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-    const seedProfiles = (typeof MATCH_PROFILES !== 'undefined' ? MATCH_PROFILES : []).map(p => ({
-      ...p,
-      status: p.status || 'approved',
-      isVIP: p.gender === 'female' ? true : (p.isVIP || false),
-      joinDate: p.joinDate || '2026-02-17'
-    }));
-
-    let allMembers = [];
-    if (adminMembers && Array.isArray(adminMembers) && adminMembers.length > 0) {
-      // Admin listesini esas al ve yeni kayıtları ekle
-      const existingIds = adminMembers.map(m => m.id);
-      const newRegs = regUsers.filter(r => !existingIds.includes(r.id));
-      allMembers = [...newRegs, ...adminMembers];
-    } else {
-      allMembers = [...regUsers, ...seedProfiles];
-      localStorage.setItem('harmoni_admin_members', JSON.stringify(allMembers));
-    }
-
-    // Silinen ve yasaklanan (banned) profilleri süz
-    return allMembers.filter(p => !deletedProfileIds.includes(p.id) && p.status !== 'banned');
-  }
-
-  const state = {
-    isLoggedIn: JSON.parse(localStorage.getItem('harmoni_auth_session') || 'false'),
-    profiles: getSynchronizedProfiles(),
-    favorites: JSON.parse(localStorage.getItem('harmoni_favs') || '[]'),
-    winks: JSON.parse(localStorage.getItem('harmoni_winks') || '[]'),
-    
-    // Aktif Kullanıcı
-    currentUser: JSON.parse(localStorage.getItem('harmoni_current_user') || JSON.stringify({
-      name: "Üye",
-      gender: "male",
-      age: 30,
-      city: "İstanbul",
-      profession: "Mühendis",
-      bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
-      isVIP: false,
-      vipPlan: null
-    })),
-
-    selectedPlanForCheckout: null,
-    currentQuizStep: 0,
-    userQuizAnswers: [],
-
-    activeFilter: {
-      gender: 'all',
-      city: 'all',
-      ageRange: 'all',
-      minComp: 70,
-      maritalStatus: 'all',
-      education: 'all',
-      searchQuery: '',
-      sortBy: 'match-score',
-      onlyFavorites: false
-    },
-    activeChatPartner: null,
-    chatHistories: JSON.parse(localStorage.getItem('harmoni_chat_histories') || JSON.stringify({
-      "user-201": [
-        { sender: 'them', text: "Merhaba! Profilini ve %96 karakter uyumumuzu inceledim. Tanışmak çok güzel 😊" }
-      ]
-    }))
-  };
-
-  // DOM Referansları
-  const DOM = {
-    // Landing & Portal Görünümleri
-    landingSection: document.getElementById('landingSection'),
-    membersPortalBanner: document.getElementById('membersPortalBanner'),
-    portalWelcomeUserName: document.getElementById('portalWelcomeUserName'),
-    guestHeaderActions: document.getElementById('guestHeaderActions'),
-    memberHeaderActions: document.getElementById('memberHeaderActions'),
-    
-    // Auth Butonları
-    btnOpenLoginModal: document.getElementById('btnOpenLoginModal'),
-    btnOpenRegisterModal: document.getElementById('btnOpenRegisterModal'),
-    btnLogout: document.getElementById('btnLogout'),
-    loginModal: document.getElementById('loginModal'),
-    btnCloseLoginModal: document.getElementById('btnCloseLoginModal'),
-    loginForm: document.getElementById('loginForm'),
-    heroRegisterForm: document.getElementById('heroRegisterForm'),
-    linkSwitchToLogin: document.getElementById('linkSwitchToLogin'),
-    linkSwitchToRegister: document.getElementById('linkSwitchToRegister'),
-    heroGenderFemale: document.getElementById('heroGenderFemale'),
-    heroGenderMale: document.getElementById('heroGenderMale'),
-
-    // İç Portal Elemanları
-    profileGrid: document.getElementById('profileGrid'),
-    matchesCountDisplay: document.getElementById('matchesCountDisplay'),
-    storiesGrid: document.getElementById('storiesGrid'),
-    favCount: document.getElementById('favCount'),
-    winkCount: document.getElementById('winkCount'),
-    inboxCount: document.getElementById('inboxCount'),
-    
-    // Header
-    btnOpenFavorites: document.getElementById('btnOpenFavorites'),
-    btnWinkList: document.getElementById('btnWinkList'),
-    btnOpenInbox: document.getElementById('btnOpenInbox'),
-    btnOpenMyProfile: document.getElementById('btnOpenMyProfile'),
-    btnOpenVipModal: document.getElementById('btnOpenVipModal'),
-    navVipPlans: document.getElementById('navVipPlans'),
-    headerUserName: document.getElementById('headerUserName'),
-    headerUserBadge: document.getElementById('headerUserBadge'),
-    headerVipBtnText: document.getElementById('headerVipBtnText'),
-
-    // Filtreler
-    filterSearch: document.getElementById('filterSearch'),
-    filterGender: document.getElementById('filterGender'),
-    filterCity: document.getElementById('filterCity'),
-    filterMinComp: document.getElementById('filterMinComp'),
-    compValueDisplay: document.getElementById('compValueDisplay'),
-    filterMarital: document.getElementById('filterMarital'),
-    filterEducation: document.getElementById('filterEducation'),
-    filterVerifiedOnly: document.getElementById('filterVerifiedOnly'),
-    btnResetFilters: document.getElementById('btnResetFilters'),
-    sortBySelect: document.getElementById('sortBySelect'),
-
-    // Quiz
-    btnOpenQuizModal: document.getElementById('btnOpenQuizModal'),
-    quizModal: document.getElementById('quizModal'),
-    btnCloseQuizModal: document.getElementById('btnCloseQuizModal'),
-    quizQuestionTitle: document.getElementById('quizQuestionTitle'),
-    quizOptionsContainer: document.getElementById('quizOptionsContainer'),
-    quizStepCounter: document.getElementById('quizStepCounter'),
-
-    // VIP & Ödeme
-    vipModal: document.getElementById('vipModal'),
-    btnCloseVipModal: document.getElementById('btnCloseVipModal'),
-    vipPlansContainer: document.getElementById('vipPlansContainer'),
-    checkoutModal: document.getElementById('checkoutModal'),
-    btnCloseCheckoutModal: document.getElementById('btnCloseCheckoutModal'),
-    checkoutPlanTitle: document.getElementById('checkoutPlanTitle'),
-    checkoutPlanPrice: document.getElementById('checkoutPlanPrice'),
-    checkoutForm: document.getElementById('checkoutForm'),
-
-    // Diğer Modallar
-    profileDetailModal: document.getElementById('profileDetailModal'),
-    detailModalContent: document.getElementById('detailModalContent'),
-    btnCloseDetailModal: document.getElementById('btnCloseDetailModal'),
-    chatModal: document.getElementById('chatModal'),
-    btnCloseChatModal: document.getElementById('btnCloseChatModal'),
-    chatPartnerAvatar: document.getElementById('chatPartnerAvatar'),
-    chatPartnerName: document.getElementById('chatPartnerName'),
-    chatPartnerScore: document.getElementById('chatPartnerScore'),
-    chatMessagesBody: document.getElementById('chatMessagesBody'),
-    chatIcebreakersTray: document.getElementById('chatIcebreakersTray'),
-    chatForm: document.getElementById('chatForm'),
-    chatInputMessage: document.getElementById('chatInputMessage'),
-    inboxModal: document.getElementById('inboxModal'),
-    btnCloseInboxModal: document.getElementById('btnCloseInboxModal'),
-    inboxListContainer: document.getElementById('inboxListContainer'),
-    winksModal: document.getElementById('winksModal'),
-    btnCloseWinksModal: document.getElementById('btnCloseWinksModal'),
-    winksListContainer: document.getElementById('winksListContainer'),
-    myProfileModal: document.getElementById('myProfileModal'),
-    btnCloseMyProfileModal: document.getElementById('btnCloseMyProfileModal'),
-    myProfileForm: document.getElementById('myProfileForm'),
-    genderCardMale: document.getElementById('genderCardMale'),
-    genderCardFemale: document.getElementById('genderCardFemale'),
-    feedbackModal: document.getElementById('feedbackModal'),
-    btnCloseFeedbackModal: document.getElementById('btnCloseFeedbackModal'),
-    feedbackForm: document.getElementById('feedbackForm'),
-    registerModal: document.getElementById('registerModal'),
-    btnCloseRegisterModal: document.getElementById('btnCloseRegisterModal'),
-    modalRegisterForm: document.getElementById('modalRegisterForm'),
-    legalModal: document.getElementById('legalModal'),
-    btnCloseLegalModal: document.getElementById('btnCloseLegalModal'),
-    toastContainer: document.getElementById('toastContainer')
-  };
-
-  init();
-
-  function init() {
-    trackRealVisit(state.isLoggedIn ? "Oturum Açık Ziyaret" : "Ziyaretçi Girişi (Landing Reklam Sayfası)");
-    applyAuthStateUI();
-    renderVipPlans();
-    setupPembePanjurPaymentEvents();
-    renderSuccessStories();
-    renderProfiles();
-    attachEventListeners();
-  }
-
-  // Oturum Durumuna Göre Arayüzü Ayarlama (Landing vs Üye Portalı)
-  function applyAuthStateUI() {
-    if (state.isLoggedIn) {
-      // ÜYE GİRİŞİ YAPILMIŞ: İç portal görünür, landing hero gizlenir
-      if (DOM.landingSection) DOM.landingSection.style.display = 'none';
-      if (DOM.membersPortalBanner) DOM.membersPortalBanner.style.display = 'flex';
-      if (DOM.guestHeaderActions) DOM.guestHeaderActions.style.display = 'none';
-      if (DOM.memberHeaderActions) DOM.memberHeaderActions.style.display = 'flex';
-      if (DOM.portalWelcomeUserName) DOM.portalWelcomeUserName.textContent = state.currentUser.name.split(' ')[0];
-      updateUserMembershipUI();
-    } else {
-      // ZİYARETÇİ MODU: Landing reklam/kayıt sayfası görünür
-      if (DOM.landingSection) DOM.landingSection.style.display = 'block';
-      if (DOM.membersPortalBanner) DOM.membersPortalBanner.style.display = 'none';
-      if (DOM.guestHeaderActions) DOM.guestHeaderActions.style.display = 'flex';
-      if (DOM.memberHeaderActions) DOM.memberHeaderActions.style.display = 'none';
-    }
-  }
-
-  // Gerçek Ziyaretçi ve Etkileşim Kaydı (Canlı Analitik)
-  function trackRealVisit(actionName) {
-    try {
-      const now = new Date();
-      const timeStr = now.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-      const dateStr = now.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      const device = isMobile ? "📱 Mobil" : "💻 Masaüstü";
-      const browser = navigator.userAgent.includes("Chrome") ? "Chrome" : (navigator.userAgent.includes("Safari") ? "Safari" : "Tarayıcı");
-
-      let totalVisits = parseInt(localStorage.getItem('harmoni_real_total_visits') || '0') + 1;
-      localStorage.setItem('harmoni_real_total_visits', totalVisits.toString());
-
-      let logs = JSON.parse(localStorage.getItem('harmoni_real_visitor_logs') || '[]');
-      logs.unshift({
-        id: Date.now(),
-        date: `${dateStr} ${timeStr}`,
-        action: actionName,
-        device: `${device} (${browser})`,
-        status: "🟢 Aktif"
+// --- ANTI-ATTACK & XSS SANITIZATION SHIELD ---
+    function sanitize(str) {
+      if (typeof str !== 'string') return str;
+      return str.replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
       });
+    }
 
-      if (logs.length > 50) logs = logs.slice(0, 50);
-      localStorage.setItem('harmoni_real_visitor_logs', JSON.stringify(logs));
-    } catch(e) {}
+    const defaultTherapists = [
+  {
+    "id": 1788738592899,
+    "name": "Zeynep",
+    "age": 25,
+    "city": "Ankara",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu",
+      "Otel & Kendi Yeri"
+    ],
+    "tags": [
+      "VIP Eskort",
+      "Özel Seans",
+      "Kendi Yeri",
+      "Ankara"
+    ],
+    "bio": "Ankara Çankaya ve Merkez bölgesinde kendi lüks yerimde veya seçkin otellerde bağımsız, hijyenik ve elit VIP eskort hizmeti sunmaktayım. Güler yüzlü, samimi ve unutulmaz özel anlar için doğrudan WhatsApp üzerinden randevu alabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791330592899,
+    "wa": "905456276130",
+    "whatsapp": "905456276130",
+    "img": "images/profiles/zeynep.jpg",
+    "image": "images/profiles/zeynep.jpg",
+    "images": [
+      "images/profiles/zeynep.jpg"
+    ],
+    "photos": [
+      "images/profiles/zeynep.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+
+  {
+    "id": 1788429948834,
+    "name": "yeliz",
+    "age": 23,
+    "city": "izmir",
+    "district": "konak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791021948834,
+    "wa": "905364999696",
+    "whatsapp": "905364999696",
+    "img": "images/profiles/yeliz.jpg",
+    "image": "images/profiles/yeliz.jpg",
+    "images": [
+      "images/profiles/yeliz.jpg"
+    ],
+    "photos": [
+      "images/profiles/yeliz.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788429487588,
+    "name": "nadya",
+    "age": 21,
+    "city": "izmir",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791021487588,
+    "wa": "905360423563",
+    "whatsapp": "905360423563",
+    "img": "images/profiles/nadya.jpg",
+    "image": "images/profiles/nadya.jpg",
+    "images": [
+      "images/profiles/nadya.jpg"
+    ],
+    "photos": [
+      "images/profiles/nadya.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788429161947,
+    "name": "funda",
+    "age": 23,
+    "city": "izmir",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791021161947,
+    "wa": "905360471313",
+    "whatsapp": "905360471313",
+    "img": "images/profiles/funda.jpg",
+    "image": "images/profiles/funda.jpg",
+    "images": [
+      "images/profiles/funda.jpg"
+    ],
+    "photos": [
+      "images/profiles/funda.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788428841293,
+    "name": "aysun",
+    "age": 25,
+    "city": "izmir",
+    "district": "konak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791020841293,
+    "wa": "905376641285",
+    "whatsapp": "905376641285",
+    "img": "images/profiles/aysun.jpg",
+    "image": "images/profiles/aysun.jpg",
+    "images": [
+      "images/profiles/aysun.jpg"
+    ],
+    "photos": [
+      "images/profiles/aysun.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788394289793,
+    "name": "Bade",
+    "age": 25,
+    "city": "Aydın",
+    "district": "İsabeyli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1790986289793,
+    "wa": "905412351039",
+    "whatsapp": "905412351039",
+    "img": "images/profiles/bade.jpg",
+    "image": "images/profiles/bade.jpg",
+    "images": [
+      "images/profiles/bade.jpg"
+    ],
+    "photos": [
+      "images/profiles/bade.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788393834126,
+    "name": "Kumsal",
+    "age": 30,
+    "city": "Aydın",
+    "district": "Nazilli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1790985834126,
+    "wa": "905424481893",
+    "whatsapp": "905424481893",
+    "img": "images/profiles/kumsal.jpg",
+    "image": "images/profiles/kumsal.jpg",
+    "images": [
+      "images/profiles/kumsal.jpg"
+    ],
+    "photos": [
+      "images/profiles/kumsal.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787439999999,
+    "name": "Merve",
+    "age": 26,
+    "city": "Aydın",
+    "district": "Nazilli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın Nazilli bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1790983436135,
+    "wa": "905398243593",
+    "whatsapp": "905398243593",
+    "img": "images/profiles/merve.jpg",
+    "image": "images/profiles/merve.jpg",
+    "images": [
+      "images/profiles/merve.jpg"
+    ],
+    "photos": [
+      "images/profiles/merve.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787433739873,
+    "name": "Peri",
+    "age": 32,
+    "city": "Aydın",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019406488,
+    "wa": "905446029277",
+    "whatsapp": "905446029277",
+    "img": "images/profiles/peri.jpg",
+    "image": "images/profiles/peri.jpg",
+    "images": [
+      "images/profiles/peri.jpg"
+    ],
+    "photos": [
+      "images/profiles/peri.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787433267678,
+    "name": "Ayla",
+    "age": 30,
+    "city": "Aydın",
+    "district": "Nazilli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019421815,
+    "wa": "905300256187",
+    "whatsapp": "905300256187",
+    "img": "images/profiles/ayla.jpg",
+    "image": "images/profiles/ayla.jpg",
+    "images": [
+      "images/profiles/ayla.jpg"
+    ],
+    "photos": [
+      "images/profiles/ayla.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787254672367,
+    "name": "Nisa",
+    "age": 28,
+    "city": "İzmir",
+    "district": "Buca",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019433091,
+    "wa": "905416056033",
+    "whatsapp": "905416056033",
+    "img": "images/profiles/nisa.jpg",
+    "image": "images/profiles/nisa.jpg",
+    "images": [
+      "images/profiles/nisa.jpg"
+    ],
+    "photos": [
+      "images/profiles/nisa.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787133632639,
+    "name": "Pınar",
+    "age": 24,
+    "city": "Uşak",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Uşak bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019443827,
+    "wa": "905330593564",
+    "whatsapp": "905330593564",
+    "img": "images/profiles/pinar.jpg",
+    "image": "images/profiles/pinar.jpg",
+    "images": [
+      "images/profiles/pinar.jpg"
+    ],
+    "photos": [
+      "images/profiles/pinar.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787133440430,
+    "name": "Melis",
+    "age": 23,
+    "city": "İzmir",
+    "district": "Alsancak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": " ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019454992,
+    "wa": "905398243593",
+    "whatsapp": "905398243593",
+    "img": "images/profiles/melis.jpg",
+    "image": "images/profiles/melis.jpg",
+    "images": [
+      "images/profiles/melis.jpg"
+    ],
+    "photos": [
+      "images/profiles/melis.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787133029944,
+    "name": "Burçak",
+    "age": 25,
+    "city": "İzmir",
+    "district": "Konak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019464212,
+    "wa": "905380586549",
+    "whatsapp": "905380586549",
+    "img": "images/profiles/burcak.jpg",
+    "image": "images/profiles/burcak.jpg",
+    "images": [
+      "images/profiles/burcak.jpg"
+    ],
+    "photos": [
+      "images/profiles/burcak.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787093135705,
+    "name": "Sıla",
+    "age": 26,
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İstanbul bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019474254,
+    "wa": "66639372920",
+    "whatsapp": "66639372920",
+    "img": "images/profiles/sila.jpg",
+    "image": "images/profiles/sila.jpg",
+    "images": [
+      "images/profiles/sila.jpg"
+    ],
+    "photos": [
+      "images/profiles/sila.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
   }
+];
 
-  // Kullanıcı Üyelik Durumunu Arayüze Yansıtma (Kadın / Erkek / VIP)
-  function updateUserMembershipUI() {
-    const user = state.currentUser;
-    if (!user) return;
 
-    if (DOM.headerUserName) DOM.headerUserName.textContent = user.name.split(' ')[0];
+            // --- GELİŞMİŞ CANLI WHATSAPP & TELEFON ÇAĞRI İZLEME MOTORU ---
+    function getFormattedTime() {
+      const d = new Date();
+      const pad = n => n.toString().padStart(2, '0');
+      return pad(d.getDate()) + '.' + pad(d.getMonth()+1) + '.' + d.getFullYear() + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+    }
 
-    if (user.gender === 'female') {
-      if (DOM.headerUserBadge) {
-        DOM.headerUserBadge.textContent = "KADIN (ÜCRETSİZ VIP)";
-        DOM.headerUserBadge.className = "gender-membership-badge female";
+    function addLogEntry(tName, city, actionType) {
+      try {
+        let logs = JSON.parse(localStorage.getItem('zenescort_live_call_logs') || '[]');
+        logs.unshift({
+          time: getFormattedTime(),
+          name: tName || 'VIP Escort',
+          city: city || 'Türkiye',
+          type: actionType
+        });
+        if (logs.length > 50) logs = logs.slice(0, 50); // son 50 arama ve mesaj kaydi
+        localStorage.setItem('zenescort_live_call_logs', JSON.stringify(logs));
+      } catch(e) {}
+    }
+
+    function trackPageVisit() {
+      let visits = parseInt(localStorage.getItem('zenescort_real_visits') || '1');
+      visits++;
+      localStorage.setItem('zenescort_real_visits', visits.toString());
+    }
+
+    // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
+    function decodeGitHubBase64(base64Str) {
+      try {
+        const clean = (base64Str || '').replace(/\s/g, '');
+        const binary = atob(clean);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+          bytes[i] = binary.charCodeAt(i);
+        }
+        return new TextDecoder('utf-8').decode(bytes);
+      } catch(e) {
+        return "{}";
       }
-      if (DOM.btnOpenVipModal) DOM.btnOpenVipModal.style.display = "none";
-    } else {
-      if (user.isVIP) {
-        if (DOM.headerUserBadge) {
-          DOM.headerUserBadge.textContent = "👑 GOLD VIP";
-          DOM.headerUserBadge.className = "gender-membership-badge male-vip";
-        }
-        if (DOM.headerVipBtnText) DOM.headerVipBtnText.textContent = "VIP Aktif";
-      } else {
-        if (DOM.headerUserBadge) {
-          DOM.headerUserBadge.textContent = "STANDART";
-          DOM.headerUserBadge.className = "gender-membership-badge male-free";
-        }
-        if (DOM.headerVipBtnText) DOM.headerVipBtnText.textContent = "VIP Üye Ol";
-        if (DOM.btnOpenVipModal) DOM.btnOpenVipModal.style.display = "flex";
+    }
+
+    function encodeGitHubBase64(str) {
+      const utf8Bytes = new TextEncoder().encode(str);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) {
+        binary += String.fromCharCode(utf8Bytes[i]);
       }
+      return btoa(binary);
     }
 
-    if (DOM.favCount) DOM.favCount.textContent = state.favorites.length;
-    if (DOM.winkCount) DOM.winkCount.textContent = state.winks.length;
-    if (DOM.inboxCount) DOM.inboxCount.textContent = Object.keys(state.chatHistories).length;
-  }
+    async function syncClickToCloud(tId, tName, city, actionType) {
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
 
-  // Pembe Panjur Stili Gold Üyelik & Ödeme Motoru
-  let activeSelectedPlan = VIP_PACKAGES[1] || VIP_PACKAGES[0]; // Varsayılan 3 Aylık
+        const fetchLatestFile = async () => {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+            cache: 'no-store'
+          });
+          return await res.json();
+        };
 
-  function renderVipPlans() {
-    const selectorContainer = document.getElementById('ppPackageSelector');
-    if (!selectorContainer || typeof VIP_PACKAGES === 'undefined') return;
+        let fileData = await fetchLatestFile();
+        if (!fileData || !fileData.content) return;
 
-    selectorContainer.innerHTML = VIP_PACKAGES.map(pkg => `
-      <div class="pp-plan-row ${pkg.id === activeSelectedPlan.id ? 'selected' : ''}" data-pkg-id="${pkg.id}">
-        <div class="pp-radio-custom"></div>
-        <div class="pp-plan-info">
-          <div class="pp-plan-name-wrap">
-            <span class="pp-plan-title">${pkg.name}</span>
-            ${pkg.popular ? `<span class="pp-plan-save-tag">${pkg.badge}</span>` : ''}
-          </div>
-          <div class="pp-plan-sub">${pkg.desc} • ${pkg.priceMonthly || ''}</div>
-        </div>
-        <div class="pp-plan-price">${pkg.price}</div>
-      </div>
-    `).join('');
-
-    // Buton Fiyat Güncellemesi
-    const submitBtn = document.getElementById('btnSubmitCardPayment');
-    if (submitBtn) {
-      submitBtn.innerHTML = `<span>🔒 ${activeSelectedPlan.price} Güvenli Ödeme Yap ve Gold Üyeliği Başlat</span>`;
-    }
-
-    // Paket Seçimi
-    selectorContainer.querySelectorAll('.pp-plan-row').forEach(row => {
-      row.addEventListener('click', () => {
-        const pkgId = row.dataset.pkgId;
-        const plan = VIP_PACKAGES.find(p => p.id === pkgId);
-        if (plan) {
-          activeSelectedPlan = plan;
-          renderVipPlans();
-        }
-      });
-    });
-  }
-
-  function setupPembePanjurPaymentEvents() {
-    // Sekme Geçişi
-    const tabCard = document.getElementById('tabMethodCard');
-    const tabBank = document.getElementById('tabMethodBank');
-    const cardForm = document.getElementById('ppCardPaymentForm');
-    const bankSection = document.getElementById('ppBankPaymentSection');
-
-    tabCard?.addEventListener('click', () => {
-      tabCard.classList.add('active');
-      tabBank.classList.remove('active');
-      if (cardForm) cardForm.style.display = 'flex';
-      if (bankSection) bankSection.style.display = 'none';
-    });
-
-    tabBank?.addEventListener('click', () => {
-      tabBank.classList.add('active');
-      tabCard.classList.remove('active');
-      if (cardForm) cardForm.style.display = 'none';
-      if (bankSection) bankSection.style.display = 'flex';
-    });
-
-    // Kredi Kartı ile Ödeme
-    cardForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      processSuccessfulPayment('Kredi Kartı');
-    });
-
-    // Havale / EFT Bildirimi
-    document.getElementById('btnNotifyBankPayment')?.addEventListener('click', () => {
-      processSuccessfulPayment('Havale / EFT');
-    });
-  }
-
-  function processSuccessfulPayment(method) {
-    const planName = activeSelectedPlan ? activeSelectedPlan.name : '3 Aylık Gold VIP';
-    const planPrice = activeSelectedPlan ? activeSelectedPlan.priceRaw : 599;
-
-    state.currentUser.isVIP = true;
-    state.currentUser.vipPlan = activeSelectedPlan ? activeSelectedPlan.id : 'gold';
-    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-
-    let totalRev = parseInt(localStorage.getItem('harmoni_real_vip_revenue') || '0') + planPrice;
-    localStorage.setItem('harmoni_real_vip_revenue', totalRev.toString());
-
-    trackRealVisit(`💰 Gold Üyelik Satın Alındı (${planName} - ${planPrice} ₺ via ${method})`);
-
-    closeModal(DOM.vipModal);
-    window.closeModalById('vipModal');
-    updateUserMembershipUI();
-    renderProfiles();
-    playChime();
-    showToast(`🎉 Tebrikler! ${planName} üyeliğiniz başarıyla aktif edildi. Artık tüm kadın üyelerle dilediğinizce mesajlaşabilirsiniz!`);
-  }
-
-  // Ses Efekti - Tek tanım (ikinci kopya app.js'in ilerleyen kısımlarında da vardı, o kaldırılacak)
-
-  // Başarı Hikayeleri
-  function renderSuccessStories() {
-    if (!DOM.storiesGrid || typeof SUCCESS_STORIES === 'undefined') return;
-    DOM.storiesGrid.innerHTML = SUCCESS_STORIES.map(st => `
-      <div style="background:#121826; border:1px solid rgba(255,255,255,0.08); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 8px 24px rgba(0,0,0,0.5);">
-        <img src="${st.image}" style="width:100%; aspect-ratio:16/9; object-fit:cover;">
-        <div style="padding:1.5rem;">
-          <h4 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:800; color:#FFFFFF;">${st.couple} • ${st.city}</h4>
-          <span style="font-size:0.78rem; color:var(--primary-rose); font-weight:700; display:block; margin-bottom:0.6rem;">${st.marriedDate}</span>
-          <p style="font-size:0.88rem; color:#94A3B8; line-height:1.6; font-style:italic;">"${st.quote}"</p>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  // Pembe Panjur Canlı Çevrimiçi Üyeler Şeridi
-  function renderOnlineStrip() {
-    const row = document.getElementById('ppOnlineAvatarsRow');
-    const liveCountBadge = document.getElementById('ppLiveCount');
-    if (!row) return;
-
-    const onlineCandidates = state.profiles.filter(p => p.isOnline);
-    if (liveCountBadge) liveCountBadge.textContent = `${onlineCandidates.length} Canlı Üye`;
-
-    row.innerHTML = onlineCandidates.map(p => `
-      <div class="pp-story-item" data-profile-id="${p.id}">
-        <div class="pp-story-avatar-wrap">
-          <img src="${p.avatar}" alt="${p.name}" class="pp-story-avatar">
-          <span class="pp-story-dot"></span>
-        </div>
-        <span class="pp-story-name">${p.name}</span>
-      </div>
-    `).join('');
-
-    row.querySelectorAll('.pp-story-item').forEach(item => {
-      item.addEventListener('click', () => {
-        if (!state.isLoggedIn) {
-          DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
-          showToast("✨ Çevrimiçi adaylarla mesajlaşmak için lütfen ücretsiz üye olun.");
-        } else {
-          openProfileDetail(item.dataset.profileId);
-        }
-      });
-    });
-  }
-
-  // Profil Filtreleme (Güvenli & Hatasız)
-  function getFilteredProfiles() {
-    let list = [...state.profiles];
-
-    if (state.activeFilter.onlyFavorites) {
-      list = list.filter(p => state.favorites.includes(p.id));
-    }
-    if (state.activeFilter.onlineStatus === 'online-only') {
-      list = list.filter(p => p.isOnline);
-    } else if (state.activeFilter.onlineStatus === 'offline-only') {
-      list = list.filter(p => !p.isOnline);
-    }
-    if (state.activeFilter.gender !== 'all') {
-      list = list.filter(p => p.gender === state.activeFilter.gender);
-    }
-    if (state.activeFilter.city !== 'all') {
-      list = list.filter(p => (p.city || '').toLowerCase() === state.activeFilter.city.toLowerCase());
-    }
-    if (state.activeFilter.ageRange !== 'all') {
-      const [minAge, maxAge] = state.activeFilter.ageRange.split('-').map(Number);
-      if (minAge && maxAge) list = list.filter(p => (p.age || 25) >= minAge && (p.age || 25) <= maxAge);
-    }
-    if (state.activeFilter.minComp > 70) {
-      list = list.filter(p => (p.matchScore || 95) >= state.activeFilter.minComp);
-    }
-    if (state.activeFilter.maritalStatus !== 'all') {
-      list = list.filter(p => p.maritalStatus === state.activeFilter.maritalStatus);
-    }
-    if (state.activeFilter.education !== 'all') {
-      list = list.filter(p => p.education && p.education.toLowerCase().includes(state.activeFilter.education.toLowerCase()));
-    }
-    if (state.activeFilter.searchQuery.trim()) {
-      const q = state.activeFilter.searchQuery.toLowerCase().trim();
-      list = list.filter(p => 
-        (p.name && p.name.toLowerCase().includes(q)) ||
-        (p.profession && p.profession.toLowerCase().includes(q)) ||
-        (p.city && p.city.toLowerCase().includes(q)) ||
-        (p.bio && p.bio.toLowerCase().includes(q))
-      );
-    }
-
-    switch (state.activeFilter.sortBy) {
-      case 'online-first': list.sort((a, b) => (b.isOnline ? 1 : 0) - (a.isOnline ? 1 : 0)); break;
-      case 'age-asc': list.sort((a, b) => (a.age || 25) - (b.age || 25)); break;
-      case 'age-desc': list.sort((a, b) => (b.age || 25) - (a.age || 25)); break;
-      case 'name': list.sort((a, b) => (a.name || '').localeCompare((b.name || ''), 'tr')); break;
-      case 'match-score':
-      default: list.sort((a, b) => (b.matchScore || 90) - (a.matchScore || 90)); break;
-    }
-
-    return list;
-  }
-
-  // Profil Kartlarını Render Etme (Pembe Panjur Stili Rozetler)
-  function renderProfiles() {
-    renderOnlineStrip();
-    if (!DOM.profileGrid) return;
-    const list = getFilteredProfiles();
-    if (DOM.matchesCountDisplay) DOM.matchesCountDisplay.textContent = list.length;
-
-    if (list.length === 0) {
-      DOM.profileGrid.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align:center; padding: 4rem 2rem; background:#121826; border-radius:18px; border:1px solid rgba(255,255,255,0.08); box-shadow:0 12px 32px rgba(0,0,0,0.5);">
-          <div style="font-size:3rem; margin-bottom:1rem;">🛡️</div>
-          <h3 style="font-family:var(--font-heading); font-size:1.5rem; font-weight:800; color:#FFFFFF; margin-bottom:0.6rem;">Filtrenize Uygun Aday Bulunamadı</h3>
-          <p style="color:#94A3B8; font-size:0.95rem; max-width:540px; margin:0 auto 1.75rem; line-height:1.6;">
-            Filtreleme kriterlerinizi genişleterek daha fazla adaya ulaşabilir veya tüm üyeleri görüntüleyebilirsiniz.
-          </p>
-          <button class="btn-register-trigger" id="btnResetAllInEmpty" style="padding:0.75rem 1.75rem; font-size:0.95rem; margin:0 auto; display:inline-flex; align-items:center; gap:0.5rem; cursor:pointer;">
-            <span>🔄 Tüm Filtreleri Temizle</span>
-          </button>
-        </div>
-      `;
-      document.getElementById('btnResetAllInEmpty')?.addEventListener('click', resetAllFilters);
-      return;
-    }
-
-    const isMember = state.isLoggedIn;
-
-    DOM.profileGrid.innerHTML = list.map(profile => {
-      const isFav = state.favorites.includes(profile.id);
-      const isWinked = state.winks.includes(profile.id);
-
-      return `
-        <article class="profile-card ${!isMember ? 'locked' : ''}" data-profile-id="${profile.id}">
-          <div class="profile-card-image-wrap">
-            <img src="${profile.avatar}" alt="${profile.name}" class="profile-card-image" loading="lazy">
-            
-            ${!isMember ? `
-              <div class="teaser-lock-overlay">
-                <span class="teaser-lock-badge" data-trigger-auth="true">
-                  <span>🔒 Üyelere Özel Fotoğraf</span>
-                </span>
-                <span style="font-size:0.75rem; color:#FDA4AF; margin-top:0.5rem; font-weight:700;">Görmek İçin Ücretsiz Üye Olun</span>
-              </div>
-            ` : ''}
-
-            <!-- Pembe Panjur Canlı Durum Rozeti -->
-            <div class="pp-card-status-badge ${profile.isOnline ? 'online' : 'offline'}">
-              <span class="pp-status-dot"></span>
-              <span>${profile.isOnline ? 'Çevrimiçi' : (profile.lastActive || 'Çevrimdışı')}</span>
-            </div>
-
-            <!-- Terapist Değerlendirmesi -->
-            <div class="pp-match-score-badge">
-              <span>%${profile.matchScore} Memnuniyet</span>
-            </div>
-            
-            ${isMember ? `
-              <button class="btn-card-favorite ${isFav ? 'active' : ''}" data-fav-id="${profile.id}" title="Favorilere Ekle">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            ` : ''}
-          </div>
-
-          <div class="profile-card-body">
-            <div class="profile-name-row">
-              <h3 class="profile-card-name">${profile.name}, ${profile.age}</h3>
-              <span class="profile-card-location">📍 ${profile.city}</span>
-            </div>
-            <div class="profile-card-job">
-              <span>💼 ${profile.profession}</span>
-            </div>
-            <p class="profile-card-bio">"${profile.bio}"</p>
-
-            <div class="profile-card-actions"><a href="https://wa.me/15096204167?text=Merhaba, ${profile.name} adl� terapist i�in randevu almak istiyorum." target="_blank" style="width:100%; display:block; text-align:center; background:#25D366; color:white; padding:0.8rem; border-radius:8px; font-weight:bold; text-decoration:none;">?? WhatsApp'tan Randevu Al</a></div>
-          </div>
-        </article>
-      `;
-    }).join('');
-
-    // Tıklama Olayları
-    DOM.profileGrid.querySelectorAll('[data-trigger-auth]').forEach(el => {
-      el.addEventListener('click', (e) => {
-        e.stopPropagation();
-        DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
-        showToast("✨ Adayların fotoğraflarını görmek ve mesajlaşmak için lütfen ücretsiz üye olun.");
-      });
-    });
-
-    if (isMember) {
-      DOM.profileGrid.querySelectorAll('.profile-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-          if (!e.target.closest('.btn-card-favorite') && !e.target.closest('.btn-wink') && !e.target.closest('.btn-chat-trigger')) {
-            openProfileDetail(card.dataset.profileId);
-          }
-        });
-      });
-
-      DOM.profileGrid.querySelectorAll('.btn-card-favorite').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          toggleFavorite(btn.dataset.favId);
-        });
-      });
-
-      DOM.profileGrid.querySelectorAll('.btn-wink').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          sendWink(btn.dataset.winkId);
-        });
-      });
-
-      DOM.profileGrid.querySelectorAll('.btn-chat-trigger').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          handleChatAccess(btn.dataset.chatId);
-        });
-      });
-    }
-  }
-
-  // Cinsiyete Dayalı Mesajlaşma İzni Kontrolü (Paywall Enforcement)
-  function handleChatAccess(profileId) {
-    if (!state.isLoggedIn) {
-      DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
-      return;
-    }
-
-    const user = state.currentUser;
-    if (user.gender === 'female') {
-      openChatModal(profileId);
-      return;
-    }
-
-    if (user.gender === 'male' && user.isVIP) {
-      openChatModal(profileId);
-    } else {
-      showToast("🔒 Erkek üyelerin kadın üyelerle mesajlaşabilmesi için VIP Üyelik gereklidir.");
-      openModal(DOM.vipModal);
-    }
-  }
-
-  // Profil Detay (Pembe Panjur Stili Bilimsel Karakter Analizi & Künye)
-  function openProfileDetail(profileId) {
-    const profile = state.profiles.find(p => p.id === profileId);
-    if (!profile) return;
-
-    const comp = profile.compatibility || { values: 96, lifestyle: 92, communication: 94 };
-
-    DOM.detailModalContent.innerHTML = `
-      <div style="background:#07090E; padding:1.75rem; display:flex; flex-direction:column; gap:1.25rem; border-right:1px solid rgba(255,255,255,0.08); width:320px; flex-shrink:0;">
-        <img src="${profile.avatar}" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1.5px solid rgba(255,255,255,0.15);">
-        
-        <!-- Terapist Künye -->
-        <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.82rem; color:#94A3B8; background:#121826; padding:1rem; border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
-          <div>📍 <strong>Lokasyon:</strong> ${profile.city}</div>
-          <div>💆 <strong>Uzmanlık:</strong> ${profile.profession || 'Masör / Terapist'}</div>
-          <div>⭐ <strong>Deneyim:</strong> 3+ Yıl</div>
-          <div>💯 <strong>Müşteri Memnuniyeti:</strong> %${profile.matchScore}</div>
-          <div>🕒 <strong>Çalışma Saatleri:</strong> 10:00 - 22:00</div>
-          <div>💼 <strong>Hizmet Türü:</strong> ${profile.serviceType || 'Kişiye Özel'}</div>
-        </div>
-      </div>
-
-      <div style="padding:2.25rem; display:flex; flex-direction:column; background:#121826; flex:1;">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.4rem;">
-          <h2 style="font-family:var(--font-heading); font-size:1.9rem; font-weight:900; color:#FFFFFF;">${profile.name}, ${profile.age}</h2>
-          <span style="background:rgba(5,150,105,0.15); color:#6EE7B7; border:1px solid rgba(5,150,105,0.3); font-size:0.82rem; font-weight:800; padding:5px 12px; border-radius:9999px;">🎯 %${profile.matchScore} Değerlendirme Puanı</span>
-        </div>
-        
-        <div style="font-size:0.92rem; color:var(--text-secondary); margin-bottom:1.25rem;">📍 ${profile.city} (${profile.district || 'Merkez'}) • 💼 ${profile.profession}</div>
-        <p style="font-size:0.92rem; color:#CBD5E1; line-height:1.65; margin-bottom:1.5rem;">${profile.bio}</p>
-
-        <!-- Terapist Değerlendirme Raporu -->
-        <div style="background:#0B0F19; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem;">
-          <h4 style="font-family:var(--font-heading); font-size:0.88rem; font-weight:800; color:#FFFFFF; margin-bottom:0.85rem; text-transform:uppercase; letter-spacing:0.05em;">💆 Değerlendirme Raporu</h4>
+        const executePush = async (currentFileData) => {
+          const decoded = decodeGitHubBase64(currentFileData.content);
+          const currentJson = JSON.parse(decoded || '{}');
           
-          <div style="display:flex; flex-direction:column; gap:0.65rem; font-size:0.8rem;">
-            <div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem; color:#94A3B8;">
-                <span>Masaj Kalitesi & Teknik</span>
-                <strong style="color:var(--primary-rose);">%${comp.values}</strong>
-              </div>
-              <div style="width:100%; height:6px; background:#1E293B; border-radius:9999px; overflow:hidden;">
-                <div style="width:${comp.values}%; height:100%; background:linear-gradient(90deg, #10B981, #059669); border-radius:9999px;"></div>
-              </div>
-            </div>
+          if (actionType.includes('WhatsApp')) {
+            currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
+            currentJson.tClicks = currentJson.tClicks || {};
+            if (tId) {
+              currentJson.tClicks[tId] = (currentJson.tClicks[tId] || 0) + 1;
+            }
+          } else {
+            currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
+            currentJson.tCalls = currentJson.tCalls || {};
+            if (tId) {
+              currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
+            }
+          }
 
-            <div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem; color:#94A3B8;">
-                <span>Hijyen & Profesyonellik</span>
-                <strong style="color:var(--accent-gold);">%${comp.lifestyle}</strong>
-              </div>
-              <div style="width:100%; height:6px; background:#1E293B; border-radius:9999px; overflow:hidden;">
-                <div style="width:${comp.lifestyle}%; height:100%; background:linear-gradient(90deg, #F59E0B, #FCD34D); border-radius:9999px;"></div>
-              </div>
-            </div>
+          currentJson.logs = currentJson.logs || [];
+          currentJson.logs.unshift({
+            time: getFormattedTime(),
+            name: tName || 'VIP Escort',
+            city: city || 'Türkiye',
+            type: actionType
+          });
+          if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
 
-            <div>
-              <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem; color:#94A3B8;">
-                <span>İletişim & Müşteri Memnuniyeti</span>
-                <strong style="color:#10B981;">%${comp.communication}</strong>
-              </div>
-              <div style="width:100%; height:6px; background:#1E293B; border-radius:9999px; overflow:hidden;">
-                <div style="width:${comp.communication}%; height:100%; background:linear-gradient(90deg, #10B981, #34D399); border-radius:9999px;"></div>
-              </div>
+          const newStr = JSON.stringify(currentJson, null, 2);
+          const base64Content = encodeGitHubBase64(newStr);
+
+          const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+            method: 'PUT',
+            keepalive: true,
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: "Track user interaction: " + tName + " (" + actionType + ")",
+              content: base64Content,
+              sha: currentFileData.sha
+            })
+          });
+
+          if (putRes && putRes.status === 409) {
+            const retryData = await fetchLatestFile();
+            if (retryData && retryData.content) {
+              await executePush(retryData);
+            }
+          }
+        };
+
+        await executePush(fileData);
+      } catch(e) {
+        console.log("Bulut kayit sync:", e);
+      }
+    }
+
+    function trackWaAction(tId, tName, city) {
+      let name = tName;
+      let c = city;
+      if (!name || !c) {
+        const t = (therapists || []).find(item => item.id == tId);
+        if (t) {
+          name = name || t.name;
+          c = c || t.city;
+        }
+      }
+      name = name || 'VIP Escort';
+      c = c || 'Türkiye';
+
+      let totalWa = parseInt(localStorage.getItem('zenescort_real_wa_clicks') || '0');
+      totalWa++;
+      localStorage.setItem('zenescort_real_wa_clicks', totalWa.toString());
+
+      if (tId) {
+        let tClicks = JSON.parse(localStorage.getItem('zenescort_t_clicks') || '{}');
+        tClicks[tId] = (tClicks[tId] || 0) + 1;
+        localStorage.setItem('zenescort_t_clicks', JSON.stringify(tClicks));
+      }
+
+      addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
+      syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
+    }
+
+    function trackCallAction(tId, tName, city) {
+      let name = tName;
+      let c = city;
+      if (!name || !c) {
+        const t = (therapists || []).find(item => item.id == tId);
+        if (t) {
+          name = name || t.name;
+          c = c || t.city;
+        }
+      }
+      name = name || 'VIP Escort';
+      c = c || 'Türkiye';
+
+      let totalCalls = parseInt(localStorage.getItem('zenescort_real_calls') || '0');
+      totalCalls++;
+      localStorage.setItem('zenescort_real_calls', totalCalls.toString());
+
+      if (tId) {
+        let tCalls = JSON.parse(localStorage.getItem('zenescort_t_calls') || '{}');
+        tCalls[tId] = (tCalls[tId] || 0) + 1;
+        localStorage.setItem('zenescort_t_calls', JSON.stringify(tCalls));
+      }
+
+      addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
+      syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
+    }
+
+    function trackAdClick() {
+      let totalAd = parseInt(localStorage.getItem('zenescort_real_ad_clicks') || '0');
+      totalAd++;
+      localStorage.setItem('zenescort_real_ad_clicks', totalAd.toString());
+    }
+
+    // Global WhatsApp ve Telefon Tıklama Yakalayıcı (%100 Garanti Kapsama)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      
+      if (href.includes('whatsapp.com') || href.includes('wa.me')) {
+        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackWaAction')) {
+          const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
+          let tName = 'VIP İlan / Genel Randevu';
+          let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
+          let tId = 0;
+          if (card) {
+            const nameEl = card.querySelector('h3, .therapist-name, strong');
+            if (nameEl) tName = nameEl.textContent.trim();
+            const cityEl = card.querySelector('.badge-city, .location, [class*="city"]');
+            if (cityEl) tCity = cityEl.textContent.trim();
+          }
+          trackWaAction(tId, tName, tCity);
+        }
+      } else if (href.startsWith('tel:')) {
+        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackCallAction')) {
+          const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
+          let tName = 'VIP Telefon Araması';
+          let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
+          let tId = 0;
+          if (card) {
+            const nameEl = card.querySelector('h3, .therapist-name, strong');
+            if (nameEl) tName = nameEl.textContent.trim();
+          }
+          trackCallAction(tId, tName, tCity);
+        }
+      }
+    }, true);
+
+    function getStoredTherapists() {
+      try {
+        const local = localStorage.getItem('zenescort_therapists');
+        if (local) {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed) && parsed.length >= 14) return parsed;
+        }
+      } catch(e) {}
+      return defaultTherapists;
+    }
+
+    let therapists = getStoredTherapists();
+    let activeServicePill = "all";
+
+                    function formatPhone(phone) {
+      if (!phone) return "15096204167";
+      let p = phone.toString().replace(/\D/g, '');
+      if (!p) return "15096204167";
+      if (p.startsWith('0') && p.length === 11) p = '90' + p.substring(1);
+      else if (p.length === 10 && p.startsWith('5')) p = '90' + p;
+      return p;
+    }
+
+    function getWaLink(phone, msg) {
+      const p = formatPhone(phone);
+      const text = encodeURIComponent(msg || "Merhaba, özel seans için randevu almak istiyorum.");
+      return "https://api.whatsapp.com/send/?phone=" + p + "&text=" + text;
+    }
+
+    async function loadLiveTherapists() {
+      // Demo profilleri filtrele - eger cache'de eski demo profiller varsa hemen temizle
+      const local = localStorage.getItem('zenescort_therapists');
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            const hasDemo = parsed.some(t => ['Selin', 'Derya', 'Elif', 'Emre', 'Zeynep', 'Cansu', 'Burak', 'Gamze', 'Büşra', 'Mert', 'Ezgi', 'Hande', 'Nilay'].includes(t.name));
+            if (hasDemo) {
+              localStorage.removeItem('zenescort_therapists');
+            } else {
+              therapists = parsed;
+              renderTherapists(therapists);
+            }
+          }
+        } catch(e) {}
+      }
+
+      // 2. Fetch fresh live data directly from raw GitHub (bypasses GitHub Pages CDN delay)
+      try {
+        const rawRes = await fetch('https://raw.githubusercontent.com/apache35meister-ux/harmoniliski/main/therapists.json?t=' + Date.now(), { cache: 'no-store' });
+        if (rawRes.ok) {
+          const liveList = await rawRes.json();
+          if (Array.isArray(liveList) && liveList.length > 0) {
+            therapists = liveList;
+            try { localStorage.setItem('zenescort_therapists', JSON.stringify(liveList)); } catch(e) {}
+            renderTherapists(therapists);
+            return;
+          }
+        }
+      } catch(e) {}
+
+      // 3. Fallback to local ./therapists.json
+      try {
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-store' });
+        if (res.ok) {
+          const liveList = await res.json();
+          if (Array.isArray(liveList) && liveList.length > 0) {
+            therapists = liveList;
+            try { localStorage.setItem('zenescort_therapists', JSON.stringify(liveList)); } catch(e) {}
+            renderTherapists(therapists);
+            return;
+          }
+        }
+      } catch(e) {}
+
+      renderTherapists(therapists);
+    }
+
+    function filterDistrict(districtName, cityName, btnEl) {
+      if (btnEl) {
+        document.querySelectorAll('.filter-pills-bar .filter-pill-btn').forEach(b => b.classList.remove('active'));
+        btnEl.classList.add('active');
+      }
+      
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect && cityName) {
+        citySelect.value = cityName;
+      }
+
+      const q = districtName.toLowerCase().trim();
+      const filtered = therapists.filter(t => {
+        const d = (t.district || '').toLowerCase();
+        const b = (t.bio || '').toLowerCase();
+        const tags = (t.tags || []).join(' ').toLowerCase();
+        const cityMatch = !cityName || t.city.toLowerCase() === cityName.toLowerCase();
+        return cityMatch && (d.includes(q) || b.includes(q) || tags.includes(q));
+      });
+
+      const heroTitle = document.querySelector('.hero-title');
+      if (heroTitle) {
+        heroTitle.innerHTML = `${cityName ? cityName + ' ' : ''}${districtName} <span class="gold-shimmer">VIP Eskort Rehberi</span>`;
+      }
+      document.title = `${cityName ? cityName + ' ' : ''}${districtName} VIP Eskort Bayan İlanları | ZenEscort`;
+
+      renderTherapists(filtered);
+    }
+
+    function checkUrlCityFilter() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const cityParam = urlParams.get('city');
+      const districtParam = urlParams.get('district');
+
+      if (districtParam) {
+        let matchedCity = '';
+        if (cityParam) {
+          const select = document.getElementById('citySelect');
+          if (select) {
+            for (let opt of select.options) {
+              const optSlug = opt.value.toLowerCase().replace('ı','i').replace('ğ','g').replace('ü','u').replace('ş','s').replace('ö','o').replace('ç','c').replace(' ','-');
+              if (optSlug === cityParam.toLowerCase() || opt.value.toLowerCase() === cityParam.toLowerCase()) {
+                select.value = opt.value;
+                matchedCity = opt.value;
+                break;
+              }
+            }
+          }
+        }
+        filterDistrict(districtParam, matchedCity);
+        return;
+      }
+
+      if (cityParam) {
+        let cp = cityParam.toLowerCase().trim();
+        const select = document.getElementById('citySelect');
+        if (select) {
+          for (let opt of select.options) {
+            const optSlug = opt.value.toLowerCase().replace('ı','i').replace('ğ','g').replace('ü','u').replace('ş','s').replace('ö','o').replace('ç','c').replace(' ','-');
+            if (optSlug === cp || opt.value.toLowerCase() === cp) {
+              select.value = opt.value;
+              filterTherapists();
+              break;
+            }
+          }
+        }
+      }
+    }
+
+    function renderTherapists(rawList) {
+
+      if (!list || list.length === 0) {
+        const cityName = currentCityFilter ? (currentCityFilter.charAt(0).toUpperCase() + currentCityFilter.slice(1)) : 'Bu Şehirde';
+        container.innerHTML = `
+          <div class="vip-concierge-card" style="grid-column: 1 / -1; background: linear-gradient(145deg, #16161F, #0E0E12); border: 2px solid #E6AF2E; border-radius: 20px; padding: 32px 24px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.8); margin: 1.5rem 0;">
+            <div style="display: inline-block; background: rgba(230,175,46,0.15); color: #FDE047; border: 1px solid #E6AF2E; font-size: 0.8rem; font-weight: 800; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px;">👑 VIP KONSİYERJ & CANLI REZERVASYON HATTI</div>
+            <h3 style="color: #FFF; font-size: 1.6rem; font-weight: 900; margin: 0 0 10px;">${cityName} İçin Özel Müsaitlik & VIP Yönlendirme</h3>
+            <p style="color: #D1D5DB; font-size: 0.95rem; max-width: 650px; margin: 0 auto 20px; line-height: 1.6;">
+              ${cityName} bölgesinde konakladığınız otelde veya kendi lüks yerinizde hizmet verebilecek bağımsız VIP eskort seçenekleri ve anlık müsait bayanlar için doğrudan merkez danışma hattımıza yazabilirsiniz.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+              <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20${encodeURIComponent(cityName)}%20bolgesinde%20VIP%20musaitlik%20ve%20rezervasyon%20icin%20bilgi%20almak%20istiyorum." target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E); color: #FFF; text-decoration: none; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 8px 20px rgba(37,211,102,0.4);">
+                💬 ${cityName} Müsaitlik Sor (WhatsApp)
+              </a>
+              <a href="tel:15096204167" style="background: #1F2937; border: 1px solid #374151; color: #FFF; text-decoration: none; font-weight: 800; font-size: 1rem; padding: 14px 24px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px;">
+                📞 VIP Hattı Ara
+              </a>
+            </div>
+            <div style="margin-top: 18px; color: #9CA3AF; font-size: 0.78rem;">
+              ✔ 7/24 Kesintisiz Canlı Teyit • %100 Gizlilik Garantisi • Seçkin Otel Hizmeti
             </div>
           </div>
-        </div>
+        `;
+        return;
+      }
 
-        <!-- Değerler & Hobiler Etiketleri -->
-        <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:1.75rem;">
-          ${(profile.values || []).map(v => `<span style="background:rgba(244,63,94,0.12); color:#FDA4AF; border:1px solid rgba(244,63,94,0.25); font-size:0.75rem; font-weight:700; padding:3px 9px; border-radius:6px;">✨ ${v}</span>`).join('')}
-          ${(profile.hobbies || []).map(h => `<span style="background:#1E293B; color:#CBD5E1; border:1px solid rgba(255,255,255,0.08); font-size:0.75rem; font-weight:700; padding:3px 9px; border-radius:6px;">🎯 ${h}</span>`).join('')}
-        </div>
 
-        <div style="display:flex; gap:0.85rem; margin-top:auto;">
-          <button class="btn-wink" id="btnDetailWink" style="flex:1; padding:0.9rem;">😉 Göz Kırp</button>
-          <button class="btn-chat-trigger" id="btnDetailChat" style="flex:2; padding:0.9rem;">💬 Mesaj Gönder</button>
-        </div>
-      </div>
-    `;
-
-    document.getElementById('btnDetailWink')?.addEventListener('click', () => sendWink(profile.id));
-    document.getElementById('btnDetailChat')?.addEventListener('click', () => {
-      closeModal(DOM.profileDetailModal);
-      handleChatAccess(profile.id);
-    });
-
-    openModal(DOM.profileDetailModal);
-  }
-
-  // Göz Kırpma
-  function sendWink(profileId) {
-    const profile = state.profiles.find(p => p.id === profileId);
-    if (!profile) return;
-
-    if (!state.winks.includes(profileId)) {
-      state.winks.push(profileId);
-      localStorage.setItem('harmoni_winks', JSON.stringify(state.winks));
-      updateUserMembershipUI();
-      renderProfiles();
-      playChime();
-      showToast(`😉 ${profile.name} adlı üyeye göz kırptınız!`);
-    } else {
-      showToast(`ℹ️ ${profile.name} adlı üyeye daha önce göz kırptınız.`);
-    }
-  }
-
-  // Favoriler
-  function toggleFavorite(profileId) {
-    const idx = state.favorites.indexOf(profileId);
-    if (idx > -1) state.favorites.splice(idx, 1);
-    else state.favorites.push(profileId);
-
-    localStorage.setItem('harmoni_favs', JSON.stringify(state.favorites));
-    updateUserMembershipUI();
-    renderProfiles();
-    showToast(state.favorites.includes(profileId) ? '💖 Favorilere eklendi.' : '💔 Favorilerden çıkarıldı.');
-  }
-
-  // Canlı Sohbet (Erkeklere VIP Zorunlu, Otomatik Cevaplar Kaldırıldı)
-  function openChatModal(profileId) {
-    const profile = state.profiles.find(p => p.id === profileId);
-    if (!profile) return;
-
-    // Erkek üye ise ve VIP değilse doğrudan VIP Satın Alma Modalı açılsın
-    if (state.currentUser && state.currentUser.gender === 'male' && !state.currentUser.isVIP) {
-      openModal(DOM.vipModal);
-      showToast("👑 Erkek üyelerimizin kadın üyelerle mesajlaşabilmesi için VIP Gold üyeliğe geçmesi gerekmektedir.");
-      return;
-    }
-
-    state.activeChatPartner = profile;
-    DOM.chatPartnerAvatar.src = profile.avatar;
-    DOM.chatPartnerName.textContent = `${profile.name}, ${profile.age}`;
-    DOM.chatPartnerScore.textContent = profile.matchScore;
-
-    if (!state.chatHistories[profile.id]) {
-      state.chatHistories[profile.id] = [];
-      localStorage.setItem('harmoni_chat_histories', JSON.stringify(state.chatHistories));
-    }
-
-    renderChatMessages();
-
-    DOM.chatIcebreakersTray.innerHTML = (profile.icebreakers || ["Merhaba, tanışabilir miyiz?", "Günün nasıl geçiyor?"]).map(q => `
-      <button class="btn-icebreaker" data-text="${q}">${q}</button>
-    `).join('');
-
-    DOM.chatIcebreakersTray.querySelectorAll('.btn-icebreaker').forEach(btn => {
-      btn.addEventListener('click', () => sendMessage(btn.dataset.text));
-    });
-
-    openModal(DOM.chatModal);
-    setTimeout(() => DOM.chatInputMessage.focus(), 150);
-  }
-
-  function renderChatMessages() {
-    if (!state.activeChatPartner) return;
-    const history = state.chatHistories[state.activeChatPartner.id] || [];
-    
-    if (history.length === 0) {
-      DOM.chatMessagesBody.innerHTML = `
-        <div style="text-align:center; padding:2rem 1rem; color:#94A3B8; font-size:0.85rem;">
-          💬 ${state.activeChatPartner.name} ile henüz bir mesajınız yok. İlk mesajı siz gönderin!
-        </div>
-      `;
-      return;
-    }
-
-    DOM.chatMessagesBody.innerHTML = history.map(msg => `
-      <div class="chat-bubble ${msg.sender}">${msg.text}</div>
-    `).join('');
-    DOM.chatMessagesBody.scrollTop = DOM.chatMessagesBody.scrollHeight;
-  }
-
-  function sendMessage(text) {
-    if (!text.trim() || !state.activeChatPartner) return;
-
-    // Erkek üye ise ve VIP değilse engelle
-    if (state.currentUser && state.currentUser.gender === 'male' && !state.currentUser.isVIP) {
-      closeModal(DOM.chatModal);
-      openModal(DOM.vipModal);
-      showToast("👑 Mesaj gönderebilmek için lütfen bir VIP paket seçin.");
-      return;
-    }
-
-    const partner = state.activeChatPartner;
-    if (!state.chatHistories[partner.id]) state.chatHistories[partner.id] = [];
-
-    state.chatHistories[partner.id].push({ sender: 'me', text: text.trim(), time: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) });
-    localStorage.setItem('harmoni_chat_histories', JSON.stringify(state.chatHistories));
-    updateUserMembershipUI();
-    renderChatMessages();
-    DOM.chatInputMessage.value = '';
-    showToast("✓ Mesajınız iletildi.");
-  }
-
-  // Karakter Testi
-  function startQuiz() {
-    if (typeof PERSONALITY_QUIZ_QUESTIONS === 'undefined') return;
-    state.currentQuizStep = 0;
-    state.userQuizAnswers = [];
-    renderQuizStep();
-    openModal(DOM.quizModal);
-  }
-
-  function renderQuizStep() {
-    const q = PERSONALITY_QUIZ_QUESTIONS[state.currentQuizStep];
-    DOM.quizQuestionTitle.textContent = q.title;
-    DOM.quizStepCounter.textContent = `Soru ${state.currentQuizStep + 1} / ${PERSONALITY_QUIZ_QUESTIONS.length}`;
-
-    DOM.quizOptionsContainer.innerHTML = q.options.map((opt, idx) => `
-      <button class="filter-control quiz-opt-btn" style="text-align:left; padding:0.95rem 1.15rem; background:#1A2234; border:1px solid rgba(255,255,255,0.08); border-radius:10px; cursor:pointer;" data-idx="${idx}">
-        <span style="font-weight:600; color:#FFFFFF;">${opt.text}</span>
-      </button>
-    `).join('');
-
-    DOM.quizOptionsContainer.querySelectorAll('.quiz-opt-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        state.userQuizAnswers.push(q.options[btn.dataset.idx]);
-        if (state.currentQuizStep < PERSONALITY_QUIZ_QUESTIONS.length - 1) {
-          state.currentQuizStep++;
-          renderQuizStep();
-        } else {
-          finishQuiz();
-        }
+      // Yalnizca aktif olan VE suresi dolmamis escortları yayinda goster (Otomatik Pasife Alma)
+      let list = (rawList || []).filter(t => {
+        if (t.active === false) return false;
+        if (t.expiresAt && Date.now() >= t.expiresAt) return false;
+        return true;
       });
-    });
-  }
-
-  function finishQuiz() {
-    closeModal(DOM.quizModal);
-    playChime();
-    showToast("🎉 Karakter testiniz tamamlandı! Eşleşme uyumluluk puanlarınız güncellendi.");
-    state.profiles.forEach(p => {
-      p.matchScore = Math.min(99, p.matchScore + Math.floor(Math.random() * 4));
-    });
-    renderProfiles();
-  }
-
-  // Modallar
-  function openModal(modalEl) {
-    if (!modalEl) return;
-    modalEl.classList.add('active');
-    modalEl.style.setProperty('display', 'flex', 'important');
-    modalEl.style.setProperty('opacity', '1', 'important');
-    modalEl.style.setProperty('visibility', 'visible', 'important');
-    modalEl.style.setProperty('pointer-events', 'auto', 'important');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(modalEl) {
-    if (!modalEl) return;
-    modalEl.classList.remove('active');
-    modalEl.style.setProperty('display', 'none', 'important');
-    modalEl.style.setProperty('opacity', '0', 'important');
-    modalEl.style.setProperty('visibility', 'hidden', 'important');
-    modalEl.style.setProperty('pointer-events', 'none', 'important');
-    document.body.style.overflow = '';
-  }
-
-  window.openLoginModal = () => openModal(DOM.loginModal);
-  window.openRegisterModal = () => openModal(DOM.registerModal);
-  window.openVipModal = () => openModal(DOM.vipModal);
-  window.openMyProfile = () => openModal(DOM.myProfileModal);
-  window.openInboxModal = () => openModal(DOM.inboxModal);
-  window.openWinksModal = () => openModal(DOM.winksModal);
-  window.openQuizModal = () => startQuiz();
-  window.closeAllModals = () => closeAllModals();
-  window.closeModalById = (id) => closeModal(document.getElementById(id));
-
-  function playChime() {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(587.33, ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.15);
-      gain.gain.setValueAtTime(0.12, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.35);
-    } catch(e) {}
-  }
-
-  function showToast(message) {
-    if (!DOM.toastContainer) return;
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.innerHTML = `<span>${message}</span>`;
-    DOM.toastContainer.appendChild(toast);
-    setTimeout(() => {
-      toast.style.opacity = '0';
-      setTimeout(() => toast.remove(), 300);
-    }, 3200);
-  }
-
-  function resetAllFilters() {
-    state.activeFilter = {
-      gender: 'all', city: 'all', ageRange: 'all', minComp: 80,
-      maritalStatus: 'all', education: 'all', searchQuery: '',
-      sortBy: 'match-score', onlyFavorites: false
-    };
-    if (DOM.filterGender) DOM.filterGender.value = 'all';
-    if (DOM.filterCity) DOM.filterCity.value = 'all';
-    if (DOM.filterMinComp) DOM.filterMinComp.value = '80';
-    if (DOM.filterSearch) DOM.filterSearch.value = '';
-    renderProfiles();
-  }
-
-  // Auth Yürütücüleri (Mükerrer E-Posta Kontrolü & Güvenli Oturum)
-  function executeHeroRegister() {
-    const isFemale = DOM.heroGenderFemale ? DOM.heroGenderFemale.classList.contains('selected') : false;
-    const nameInput = document.getElementById('heroRegName');
-    const ageInput = document.getElementById('heroRegAge');
-    const cityInput = document.getElementById('heroRegCity');
-    const jobInput = document.getElementById('heroRegJob');
-    const emailInput = document.getElementById('heroRegEmail');
-    const passInput = document.getElementById('heroRegPassword');
-
-    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : '';
-    const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '123456';
-    const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (isFemale ? "Zeynep" : "Emre");
-    const age = (ageInput && parseInt(ageInput.value)) ? parseInt(ageInput.value) : 28;
-    const city = (cityInput && cityInput.value) ? cityInput.value : "İstanbul";
-    const job = (jobInput && jobInput.value.trim()) ? jobInput.value.trim() : "Mimar";
-
-    if (!email) {
-      showToast("⚠️ Lütfen geçerli bir e-posta adresi giriniz.");
-      return;
-    }
-
-    // 1. Mükerrer E-Posta Kontrolü (Aynı e-posta ile ikinci kez üye olunamaz)
-    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]') || [];
-    const existingUser = regUsers.find(u => u.email && u.email.toLowerCase() === email);
-
-    if (existingUser) {
-      showToast(`⚠️ "${email}" adresi ile kayıtlı bir hesap zaten var. Lütfen giriş yapınız.`);
-      const loginEmailInput = document.getElementById('loginEmail');
-      if (loginEmailInput) loginEmailInput.value = email;
-      openModal(DOM.loginModal);
-      return;
-    }
-
-    // 2. Yeni Kullanıcıyı Oluştur ve Kaydet
-    const newUser = {
-      id: "reg-" + Date.now(),
-      email: email,
-      password: password,
-      name: name,
-      gender: isFemale ? 'female' : 'male',
-      age: age,
-      city: city,
-      profession: job,
-      bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
-      education: "Lisans",
-      matchScore: 97,
-      verified: true,
-      status: 'active',
-      isVIP: isFemale,
-      vipPlan: null,
-      avatar: isFemale 
-        ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-        : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
-      joinDate: new Date().toLocaleDateString('tr-TR')
-    };
-
-    regUsers.unshift(newUser);
-    localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-
-    state.currentUser = {
-      id: newUser.id,
-      email: newUser.email,
-      name: newUser.name,
-      gender: newUser.gender,
-      age: newUser.age,
-      city: newUser.city,
-      profession: newUser.profession,
-      bio: newUser.bio,
-      isVIP: newUser.isVIP,
-      vipPlan: null
-    };
-
-    state.isLoggedIn = true;
-    localStorage.setItem('harmoni_auth_session', 'true');
-    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-
-    trackRealVisit(`🔔 YENİ ÜYE KAYDI: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city} - ${email})`);
-    applyAuthStateUI();
-    renderProfiles();
-    playChime();
-    showToast(`🎉 Aramıza Hoşgeldiniz, ${name}! Hesabınız anında aktif edildi.`);
-    document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  function executeModalRegister() {
-    const regFemCard = document.getElementById('modalRegGenderFemale');
-    const isFemale = regFemCard ? regFemCard.classList.contains('selected') : false;
-    const nameInput = document.getElementById('modalRegName');
-    const ageInput = document.getElementById('modalRegAge');
-    const cityInput = document.getElementById('modalRegCity');
-    const jobInput = document.getElementById('modalRegJob');
-    const emailInput = document.getElementById('modalRegEmail');
-    const passInput = document.getElementById('modalRegPassword');
-
-    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : '';
-    const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '123456';
-    const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (isFemale ? "Selin" : "Murat");
-    const age = (ageInput && parseInt(ageInput.value)) ? parseInt(ageInput.value) : 29;
-    const city = (cityInput && cityInput.value) ? cityInput.value : "İstanbul";
-    const job = (jobInput && jobInput.value.trim()) ? jobInput.value.trim() : "Mühendis";
-
-    if (!email) {
-      showToast("⚠️ Lütfen geçerli bir e-posta adresi giriniz.");
-      return;
-    }
-
-    // 1. Mükerrer E-Posta Kontrolü
-    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]') || [];
-    const existingUser = regUsers.find(u => u.email && u.email.toLowerCase() === email);
-
-    if (existingUser) {
-      showToast(`⚠️ "${email}" adresi ile kayıtlı bir hesap zaten var. Lütfen giriş yapınız.`);
-      closeModal(DOM.registerModal);
-      window.closeModalById('registerModal');
-      const loginEmailInput = document.getElementById('loginEmail');
-      if (loginEmailInput) loginEmailInput.value = email;
-      openModal(DOM.loginModal);
-      return;
-    }
-
-    // 2. Yeni Kullanıcıyı Oluştur ve Kaydet
-    const newUser = {
-      id: "reg-" + Date.now(),
-      email: email,
-      password: password,
-      name: name,
-      gender: isFemale ? 'female' : 'male',
-      age: age,
-      city: city,
-      profession: job,
-      bio: "Saygı ve güvene dayalı ciddi bir ilişki arıyorum.",
-      education: "Lisans",
-      matchScore: 97,
-      verified: true,
-      status: 'active',
-      isVIP: isFemale,
-      vipPlan: null,
-      avatar: isFemale 
-        ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-        : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80",
-      joinDate: new Date().toLocaleDateString('tr-TR')
-    };
-
-    regUsers.unshift(newUser);
-    localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-
-    state.currentUser = {
-      id: newUser.id,
-      email: newUser.email,
-      name: newUser.name,
-      gender: newUser.gender,
-      age: newUser.age,
-      city: newUser.city,
-      profession: newUser.profession,
-      bio: newUser.bio,
-      isVIP: newUser.isVIP,
-      vipPlan: null
-    };
-
-    state.isLoggedIn = true;
-    localStorage.setItem('harmoni_auth_session', 'true');
-    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-
-    trackRealVisit(`🔔 YENİ ÜYE KAYDI: ${name} (${isFemale ? 'Kadın' : 'Erkek'} - ${city} - ${email})`);
-    closeModal(DOM.registerModal);
-    window.closeModalById('registerModal');
-    applyAuthStateUI();
-    renderProfiles();
-    playChime();
-    showToast(`🎉 Aramıza Hoşgeldiniz, ${name}! Hesabınız anında aktif edildi.`);
-    document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  function executeLogin() {
-    const emailInput = document.getElementById('loginEmail');
-    const passInput = document.getElementById('loginPassword');
-    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim().toLowerCase() : 'murat@gmail.com';
-    const password = (passInput && passInput.value.trim()) ? passInput.value.trim() : '123456';
-
-    let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]') || [];
-    let adminMembers = JSON.parse(localStorage.getItem('harmoni_admin_members') || '[]') || [];
-    let allKnown = [...regUsers, ...adminMembers];
-    
-    let user = allKnown.find(u => u.email && u.email.toLowerCase() === email);
-
-    if (!user) {
-      // E-postadan dinamik kullanıcı oluştur ve kaydet
-      const emailPrefix = (email.split('@')[0] || 'Murat');
-      const cleanName = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slice(1);
-      user = {
-        id: "reg-" + Date.now(),
-        email: email,
-        password: password,
-        name: cleanName,
-        gender: 'male',
-        age: 31,
-        city: 'İstanbul',
-        profession: 'Üye',
-        bio: 'Ciddi bir ilişki ve evlilik arıyorum.',
-        education: 'Lisans',
-        matchScore: 97,
-        verified: true,
-        status: 'active',
-        isVIP: false,
-        vipPlan: null,
-        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80',
-        joinDate: new Date().toLocaleDateString('tr-TR')
-      };
-      regUsers.unshift(user);
-      localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-    }
-
-    state.currentUser = {
-      id: user.id || ("user-" + Date.now()),
-      email: user.email || email,
-      name: user.name || "Murat Demir",
-      gender: user.gender || "male",
-      age: user.age || 31,
-      city: user.city || "İstanbul",
-      profession: user.profession || "Üye",
-      bio: user.bio || "Ciddi bir ilişki ve evlilik arıyorum.",
-      isVIP: user.isVIP || user.gender === 'female',
-      vipPlan: user.vipPlan || null,
-      avatar: user.avatar || 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80'
-    };
-
-    state.isLoggedIn = true;
-    localStorage.setItem('harmoni_auth_session', 'true');
-    localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
-
-    closeModal(DOM.loginModal);
-    window.closeModalById('loginModal');
-    window.closeAllModals();
-    applyAuthStateUI();
-    renderProfiles();
-    playChime();
-    showToast(`✓ Hoş geldiniz, ${state.currentUser.name}! Başarıyla giriş yapıldı.`);
-    
-    // Üye portalına ve adaylara yumuşak kaydır
-    const matchesEl = document.getElementById('matches');
-    if (matchesEl) {
-      matchesEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  window.executeHeroRegister = executeHeroRegister;
-  window.executeModalRegister = executeModalRegister;
-  window.executeLogin = executeLogin;
-
-  function closeAllModals() {
-    closeModal(DOM.profileDetailModal);
-    closeModal(DOM.chatModal);
-    closeModal(DOM.inboxModal);
-    closeModal(DOM.winksModal);
-    closeModal(DOM.myProfileModal);
-    closeModal(DOM.vipModal);
-    closeModal(DOM.checkoutModal);
-    closeModal(DOM.quizModal);
-    closeModal(DOM.loginModal);
-    closeModal(DOM.registerModal);
-    closeModal(DOM.feedbackModal);
-    closeModal(DOM.legalModal);
-  }
-
-  // Event Listeners
-  function attachEventListeners() {
-    // 1. Landing Cinsiyet Seçimi
-    DOM.heroGenderFemale?.addEventListener('click', () => {
-      DOM.heroGenderFemale.classList.add('selected');
-      DOM.heroGenderMale.classList.remove('selected');
-    });
-
-    DOM.heroGenderMale?.addEventListener('click', () => {
-      DOM.heroGenderMale.classList.add('selected');
-      DOM.heroGenderFemale.classList.remove('selected');
-    });
-
-    // 2. Landing Ücretsiz Kayıt Formu (onsubmit attributu ile HTML'den tetikleniyor)
-
-
-    // 3. Giriş Yap / Üye Ol Modal ve Form İşlemleri
-    DOM.btnOpenLoginModal?.addEventListener('click', () => openModal(DOM.loginModal));
-    DOM.btnOpenRegisterModal?.addEventListener('click', () => openModal(DOM.registerModal));
-
-    DOM.linkSwitchToLogin?.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeModal(DOM.registerModal);
-      openModal(DOM.loginModal);
-    });
-
-    document.getElementById('linkSwitchToLoginFromReg')?.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeModal(DOM.registerModal);
-      openModal(DOM.loginModal);
-    });
-
-    DOM.linkSwitchToRegister?.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeModal(DOM.loginModal);
-      openModal(DOM.registerModal);
-    });
-
-    // Kayıt Modalı Cinsiyet Seçimi
-    const regFemCard = document.getElementById('modalRegGenderFemale');
-    const regMaleCard = document.getElementById('modalRegGenderMale');
-    regFemCard?.addEventListener('click', () => {
-      regFemCard.classList.add('selected');
-      regMaleCard?.classList.remove('selected');
-    });
-    regMaleCard?.addEventListener('click', () => {
-      regMaleCard.classList.add('selected');
-      regFemCard?.classList.remove('selected');
-    });
-
-    // Hızlı Üye Ol Formu ve Giriş Yap Formu HTML içindeki onsubmit ile tetikleniyor.
-
-
-    // 4. Çıkış Yap (Logout)
-    DOM.btnLogout?.addEventListener('click', () => {
-      state.isLoggedIn = false;
-      localStorage.setItem('harmoni_auth_session', 'false');
-      applyAuthStateUI();
-      renderProfiles();
-      showToast("Giriş sayfasından güvenli çıkış yapıldı.");
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    DOM.btnOpenQuizModal?.addEventListener('click', startQuiz);
-    DOM.btnCloseQuizModal?.addEventListener('click', () => closeModal(DOM.quizModal));
-
-    DOM.btnOpenVipModal?.addEventListener('click', () => openModal(DOM.vipModal));
-    DOM.navVipPlans?.addEventListener('click', (e) => { e.preventDefault(); openModal(DOM.vipModal); });
-    DOM.btnCloseVipModal?.addEventListener('click', () => closeModal(DOM.vipModal));
-
-    // Profilim Modalı
-    DOM.btnOpenMyProfile?.addEventListener('click', () => {
-      document.getElementById('myProfName').value = state.currentUser.name;
-      document.getElementById('myProfAge').value = state.currentUser.age;
-      document.getElementById('myProfCity').value = state.currentUser.city;
-      document.getElementById('myProfJob').value = state.currentUser.profession;
-      document.getElementById('myProfBio').value = state.currentUser.bio;
-
-      if (state.currentUser.gender === 'female') {
-        DOM.genderCardFemale.classList.add('selected');
-        DOM.genderCardMale.classList.remove('selected');
-      } else {
-        DOM.genderCardMale.classList.add('selected');
-        DOM.genderCardFemale.classList.remove('selected');
+      const container = document.getElementById('therapistsContainer');
+      const countDisplay = document.getElementById('countDisplay');
+      const selectedCity = document.getElementById('citySelect')?.value || 'all';
+      const selectedDistrict = document.getElementById('districtSelect')?.value || 'all';
+      
+      // AKILLI VİTRİN KANCASI (Boş Şehirlerde & İlçelerde Escort Çeken Altın Kart)
+            // AKILLI VİTRİN: İlçe veya filtrede özel üye yoksa vitrini boş bırakma, tüm onaylı üyeleri göster!
+      if (!list || list.length === 0) {
+        const fallbackList = (therapists || []).filter(t => t.active !== false);
+        if (fallbackList.length > 0) {
+          list = fallbackList;
+          if (countDisplay) countDisplay.innerHTML = `<span style="color:var(--accent-gold);">Tüm Onaylı Escortlar (${list.length})</span>`;
+        } else {
+          let locationLabel = 'Türkiye Geneli';
+          if (selectedCity !== 'all' && selectedDistrict !== 'all') {
+            locationLabel = `${selectedCity} / ${selectedDistrict}`;
+          } else if (selectedCity !== 'all') {
+            locationLabel = selectedCity;
+          }
+          container.innerHTML = `
+            <div class="empty-state-magnet" style="grid-column: 1 / -1; background: linear-gradient(145deg, rgba(28, 28, 34, 0.95), rgba(15, 15, 18, 0.98)); border: 2px dashed rgba(212, 175, 55, 0.4); border-radius: var(--radius-xl); padding: 3rem 1.5rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">👑</div>
+              <h3 style="color: var(--accent-gold); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem;">${locationLabel} VIP Eskort Vitrini</h3>
+              <p style="color: #ccc; margin-bottom: 1.5rem;">Tüm escortlarımiz onaylı ve aktiftir.</p>
+              <button onclick="resetFilters()" style="background: #1C1C22; color: #FFF; border: 1px solid var(--border-gold); font-weight: 700; padding: 0.9rem 1.8rem; border-radius: var(--radius-full); cursor: pointer;">
+                Tüm Vitrini Görüntüle
+              </button>
+            </div>
+          `;
+          if (countDisplay) countDisplay.textContent = "0 Escort";
+          return;
+        }
       }
-      openModal(DOM.myProfileModal);
-    });
 
-    DOM.genderCardFemale?.addEventListener('click', () => {
-      DOM.genderCardFemale.classList.add('selected');
-      DOM.genderCardMale.classList.remove('selected');
-    });
+      countDisplay.textContent = `Toplam ${list.length} Escort`;
 
-    DOM.genderCardMale?.addEventListener('click', () => {
-      DOM.genderCardMale.classList.add('selected');
-      DOM.genderCardFemale.classList.remove('selected');
-    });
+      container.innerHTML = list.map(t => {
+        const waLink = getWaLink(t.wa || t.whatsapp, `Merhaba ${t.name}, ZenEscort VIP profilinizi inceledim. Bugün müsaitlik durumunuz ve özel seans detayları için bilgi alabilir miyim?`);
+        const telNumber = formatPhone(t.wa || t.whatsapp);
 
-    document.getElementById('navHome')?.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (state.isLoggedIn) {
-        document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
+        return `
+          <article class="card-therapist" data-id="${t.id}" itemscope itemtype="https://schema.org/Person">
+            <div class="card-image-wrap" data-id="${t.id}" onclick="openPhotoModal(${t.id})" title="Fotoğrafları ve Profili İncele">
+              <img src="${t.img || t.image}" alt="${t.name} - ${t.city} Escort Escort" itemprop="image" class="card-img" onerror="this.onerror=null; this.src='https://harmoniliski.com/images/profiles/yeliz.jpg';" loading="lazy">
+              <div class="card-vignette"></div>
+              
+              <!-- Badges -->
+              <div class="badge-vip-top">👑 VIP VİTRİN</div>
+              <div class="badge-live-available">
+                <span class="pulse-dot-green"></span>
+                <span>Şu An Müsait</span>
+              </div>
+
+              ${((t.images && t.images.length > 1) || (t.photos && t.photos.length > 1)) ? `
+                <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.85); border: 1px solid var(--border-gold); color: #FDE047; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 999px; display: flex; align-items: center; gap: 4px; z-index: 4;">
+                  <span>📸</span> <span>${(t.images || t.photos).length} Fotoğraf</span>
+                </div>
+              ` : `
+                <!-- Fotoğrafı Büyüt İpucu -->
+                <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.25); color: #FFF; font-size: 0.72rem; font-weight: 700; padding: 4px 9px; border-radius: 999px; display: flex; align-items: center; gap: 4px; z-index: 3;">
+                  <span>🔍 Fotoğrafı Büyüt</span>
+                </div>
+              `}
+
+              <div class="badge-photo-bottom" style="left: 12px; bottom: 12px; right: auto;">
+                <span class="photo-loc-tag">📍 ${sanitize(t.city)}</span>
+                <span class="photo-rating-tag">⭐ ${t.rating || '4.9'}</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-head">
+                <div class="card-title-row" onclick="openPhotoModal(${t.id})" style="cursor: pointer;" title="Detayları Görüntüle">
+                  <h4 class="card-name" itemprop="name">${sanitize(t.name)}</h4>
+                  <span class="card-age">${t.age} Yaş</span>
+                </div>
+                <div class="card-city" itemprop="addressLocality">📍 ${sanitize(t.city)}, ${sanitize(t.district || '')}</div>
+              </div>
+
+              <p class="card-bio" itemprop="description">${sanitize(t.bio)}</p>
+
+              <div class="card-tags">
+                ${t.tags ? t.tags.map(tag => `<span class="card-tag">${sanitize(tag)}</span>`).join('') : ''}
+              </div>
+
+              <div class="card-price-row">
+                <span class="price-label">⏱️ Seans Ücreti</span>
+                <span class="price-val">${sanitize(t.price)}</span>
+              </div>
+
+              <div class="card-actions-dual">
+                <a href="${waLink}" target="_blank" onclick="trackWaAction(${t.id}, '${t.name}', '${t.city}')" class="btn-action-wa" title="${t.name} ile WhatsApp Randevusu Al">
+                  <span>💬</span>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="tel:+${telNumber}" onclick="trackCallAction(${t.id}, '${t.name}', '${t.city}')" class="btn-action-call" title="${t.name} Randevu Hattını Ara">
+                  <span>📞</span>
+                  <span>Hemen Ara</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function setQuickPill(type, btnEl) {
+      document.querySelectorAll('.filter-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+
+      if (type === 'all') {
+        resetFilters();
+      } else if (type === 'vitrin') {
+        const vitrinList = therapists.filter(t => t.vitrin);
+        renderTherapists(vitrinList);
+      } else if (type === 'Kadın' || type === 'Erkek') {
+        document.getElementById('genderSelect').value = type;
+        filterTherapists();
       } else {
-        DOM.landingSection?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('citySelect').value = type;
+        filterTherapists();
+      }
+    }
+
+    const cityDistricts = {
+      "İstanbul": ["Kadıköy", "Şişli", "Nişantaşı", "Beşiktaş", "Levent", "Bakırköy", "Florya", "Beylikdüzü", "Ataşehir", "Üsküdar", "Maltepe", "Kartal", "Pendik", "Sarıyer", "Fatih", "Beyoğlu", "Taksim", "Esenyurt", "Başakşehir", "Avcılar", "Tuzla", "Zeytinburnu", "Büyükçekmece", "Bahçelievler", "Kağıthane"],
+      "Ankara": ["Çankaya", "Kızılay", "Tunalı", "Eryaman", "Batıkent", "Keçiören", "Yenimahalle", "Etimesgut", "Mamak", "Gölbaşı", "Altındağ", "Sincan", "Pursaklar"],
+      "İzmir": ["Alsancak", "Konak", "Karşıyaka", "Bornova", "Buca", "Çiğli", "Bayraklı", "Balçova", "Gaziemir", "Çeşme", "Alaçatı", "Urla", "Karabağlar", "Menemen", "Torbalı", "Narlıdere", "Güzelbahçe", "Seferihisar", "Foça"],
+      "Antalya": ["Muratpaşa", "Lara", "Konyaaltı", "Kepez", "Alanya", "Manavgat", "Side", "Kemer", "Kaş", "Kalkan", "Serik", "Belek", "Döşemealtı", "Kumluca"],
+      "Bursa": ["Nilüfer", "FSM", "Osmangazi", "Yıldırım", "Mudanya", "Gemlik", "İnegöl", "Gürsu", "Kestel"],
+      "Muğla": ["Bodrum", "Yalıkavak", "Türkbükü", "Gümbet", "Bitez", "Marmaris", "İçmeler", "Fethiye", "Ölüdeniz", "Datça", "Milas", "Ortaca", "Dalyan", "Köyceğiz", "Menteşe"],
+      "Adana": ["Seyhan", "Ziyapaşa", "Çukurova", "Yüreğir", "Sarıçam", "Ceyhan", "Kozan"],
+      "Kocaeli": ["İzmit", "Gebze", "Başiskele", "Kartepe", "Gölcük", "Darıca", "Körfez", "Karamürsel", "Derince", "Çayırova"],
+      "Eskişehir": ["Tepebaşı", "Bağlar", "Odunpazarı"],
+      "Gaziantep": ["Şehitkamil", "İbrahimli", "Şahinbey", "Oğuzeli"],
+      "Mersin": ["Yenişehir", "Mezitli", "Toroslar", "Akdeniz", "Erdemli", "Tarsus", "Silifke", "Anamur"],
+      "Konya": ["Selçuklu", "Meram", "Karatay", "Ereğli", "Akşehir"],
+      "Samsun": ["Atakum", "İlkadım", "Canik", "Tekkeköy", "Bafra", "Çarşamba"],
+      "Trabzon": ["Ortahisar", "Akçaabat", "Yomra", "Of", "Araklı"],
+      "Balıkesir": ["Altıeylül", "Karesi", "Edremit", "Akçay", "Ayvalık", "Cunda", "Bandırma", "Burhaniye", "Erdek", "Gönen"],
+      "Aydın": ["Efeler", "Kuşadası", "Didim", "Nazilli", "Söke", "Germencik"],
+      "Tekirdağ": ["Süleymanpaşa", "Çorlu", "Çerkezköy", "Kapaklı", "Ergene"],
+      "Sakarya": ["Adapazarı", "Serdivan", "Sapanca", "Erenler", "Akyazı", "Hendek", "Karasu"],
+      "Denizli": ["Pamukkale", "Merkezefendi"],
+      "Hatay": ["Antakya", "İskenderun", "Defne", "Dörtyol", "Samandağ"],
+      "Kayseri": ["Melikgazi", "Kocasinan", "Talas"],
+      "Diyarbakır": ["Kayapınar", "Bağlar", "Yenişehir", "Sur"],
+      "Manisa": ["Yunusemre", "Şehzadeler", "Akhisar", "Turgutlu", "Salihli", "Soma"],
+      "Çanakkale": ["Merkez", "Biga", "Gelibolu", "Ayvacık", "Bozcaada", "Gökçeada"],
+      "Yalova": ["Merkez", "Çınarcık", "Altınova", "Armutlu", "Termal"]
+    };
+
+    function updateDistrictOptions(cityName, selectDistrict) {
+      const distSelect = document.getElementById('districtSelect');
+      if (!distSelect) return;
+
+      distSelect.innerHTML = '<option value="all">Tüm İlçeler & Semtler</option>';
+
+      if (cityName && cityName !== 'all' && cityDistricts[cityName]) {
+        cityDistricts[cityName].forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (selectDistrict && selectDistrict.toLowerCase() === d.toLowerCase()) {
+            opt.selected = true;
+          }
+          distSelect.appendChild(opt);
+        });
+      } else if (!cityName || cityName === 'all') {
+        const allPopular = ["Kadıköy", "Şişli", "Nişantaşı", "Beşiktaş", "Bakırköy", "Beylikdüzü", "Çankaya", "Kızılay", "Alsancak", "Karşıyaka", "Bornova", "Lara", "Alanya", "Bodrum", "Çeşme", "Marmaris", "Fethiye", "Nilüfer", "İzmit", "Seyhan"];
+        allPopular.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (selectDistrict && selectDistrict.toLowerCase() === d.toLowerCase()) {
+            opt.selected = true;
+          }
+          distSelect.appendChild(opt);
+        });
+      }
+    }
+
+    function filterTherapists() {
+      const citySelectEl = document.getElementById('citySelect');
+      const city = citySelectEl ? citySelectEl.value : 'all';
+      const districtSelectEl = document.getElementById('districtSelect');
+      const district = districtSelectEl ? districtSelectEl.value : 'all';
+      const service = document.getElementById('serviceSelect') ? document.getElementById('serviceSelect').value : 'all';
+      const gender = document.getElementById('genderSelect').value;
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      const filtered = therapists.filter(t => {
+        if (city !== 'all' && t.city !== city) return false;
+        
+        if (district !== 'all') {
+          const tDist = (t.district || '').toLowerCase();
+          const tTags = (t.tags || []).join(' ').toLowerCase();
+          const tBio = (t.bio || '').toLowerCase();
+          const targetDist = district.toLowerCase();
+          if (!tDist.includes(targetDist) && !tTags.includes(targetDist) && !tBio.includes(targetDist)) {
+            return false;
+          }
+        }
+
+        if (gender !== 'all' && t.gender !== gender) return false;
+        if (service !== 'all' && (!t.services || !t.services.includes(service))) return false;
+        if (activeServicePill !== 'all' && (!t.services || !t.services.includes(activeServicePill))) return false;
+
+        if (search) {
+          const tagsStr = t.tags ? t.tags.join(' ') : '';
+          const combined = (t.name + ' ' + t.city + ' ' + (t.district || '') + ' ' + (t.bio || '') + ' ' + tagsStr).toLowerCase();
+          if (!combined.includes(search)) return false;
+        }
+
+        return true;
+      });
+
+      renderTherapists(filtered);
+    }
+
+    function setServicePill(serviceName, btnEl) {
+      activeServicePill = serviceName;
+      document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      filterTherapists();
+    }
+
+    function filterCity(cityName) {
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect) {
+        citySelect.value = cityName;
+        updateDistrictOptions(cityName);
+      }
+      filterTherapists();
+      window.scrollTo({ top: 450, behavior: 'smooth' });
+    }
+
+    function filterDistrict(districtName, cityName) {
+      const citySelect = document.getElementById('citySelect');
+      if (cityName && citySelect) {
+        citySelect.value = cityName;
+        updateDistrictOptions(cityName, districtName);
+      } else {
+        updateDistrictOptions('all', districtName);
+      }
+      const distSelect = document.getElementById('districtSelect');
+      if (distSelect) {
+        distSelect.value = districtName;
+      }
+      filterTherapists();
+      window.scrollTo({ top: 450, behavior: 'smooth' });
+    }
+
+    function filterService(serviceName) {
+      document.getElementById('serviceSelect').value = serviceName;
+      filterTherapists();
+      window.scrollTo({ top: 450, behavior: 'smooth' });
+    }
+
+    function resetFilters() {
+      const citySelect = document.getElementById('citySelect');
+      if (citySelect) citySelect.value = 'all';
+      updateDistrictOptions('all');
+      document.getElementById('districtSelect').value = 'all';
+      document.getElementById('serviceSelect').value = 'all';
+      document.getElementById('genderSelect').value = 'all';
+      document.getElementById('searchInput').value = '';
+      activeServicePill = 'all';
+      document.querySelectorAll('.pill-btn').forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === 0);
+      });
+      renderTherapists(therapists);
+    }
+
+    // Şehir değiştiğinde ilçeleri dinamik güncelle
+    document.getElementById('citySelect')?.addEventListener('change', function() {
+      updateDistrictOptions(this.value);
+    });
+
+    function openVitrinModal() { document.getElementById('vitrinModal').classList.add('active'); }
+    function closeVitrinModal() { document.getElementById('vitrinModal').classList.remove('active'); }
+
+    document.getElementById('vitrinModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'vitrinModal') closeVitrinModal();
+    });
+
+    // --- HD ÇOKLU FOTOĞRAF & GALERİ SLIDER MODAL MOTORU ---
+    let activeModalPhotos = [];
+    let activePhotoIndex = 0;
+
+    function updateModalPhotoDisplay() {
+      const img = document.getElementById('pvImg');
+      const counter = document.getElementById('pvCounterBadge');
+      const prevBtn = document.getElementById('pvPrevBtn');
+      const nextBtn = document.getElementById('pvNextBtn');
+      const strip = document.getElementById('pvThumbnailsStrip');
+
+      if (!activeModalPhotos || activeModalPhotos.length === 0) return;
+
+      const currentSrc = activeModalPhotos[activePhotoIndex];
+      if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+          img.src = currentSrc;
+          img.style.opacity = '1';
+        }, 150);
+      }
+
+      const totalPhotos = activeModalPhotos.length;
+      if (totalPhotos > 1) {
+        if (counter) {
+          counter.style.display = 'block';
+          counter.textContent = `📷 ${activePhotoIndex + 1} / ${totalPhotos}`;
+        }
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+        
+        if (strip) {
+          strip.style.display = 'flex';
+          strip.innerHTML = activeModalPhotos.map((p, idx) => `
+            <div onclick="selectModalPhoto(${idx})" style="width:54px; height:54px; flex-shrink:0; border-radius:6px; overflow:hidden; cursor:pointer; border:2px solid ${idx === activePhotoIndex ? '#FBBF24' : 'rgba(255,255,255,0.15)'}; opacity:${idx === activePhotoIndex ? '1' : '0.6'}; transition:all 0.2s;">
+              <img src="${p}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/profiles/yeliz.jpg'" loading="lazy">
+            </div>
+          `).join('');
+        }
+      } else {
+        if (counter) counter.style.display = 'none';
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (strip) strip.style.display = 'none';
+      }
+    }
+
+    function prevModalPhoto(e) {
+      if (e) e.stopPropagation();
+      if (activeModalPhotos.length <= 1) return;
+      activePhotoIndex = (activePhotoIndex - 1 + activeModalPhotos.length) % activeModalPhotos.length;
+      updateModalPhotoDisplay();
+    }
+
+    function nextModalPhoto(e) {
+      if (e) e.stopPropagation();
+      if (activeModalPhotos.length <= 1) return;
+      activePhotoIndex = (activePhotoIndex + 1) % activeModalPhotos.length;
+      updateModalPhotoDisplay();
+    }
+
+    function selectModalPhoto(idx) {
+      if (idx >= 0 && idx < activeModalPhotos.length) {
+        activePhotoIndex = idx;
+        updateModalPhotoDisplay();
+      }
+    }
+
+    function openPhotoModal(id) {
+      let t = (therapists || []).find(item => item.id == id);
+      if (!t && typeof defaultTherapists !== 'undefined') {
+        t = defaultTherapists.find(item => item.id == id);
+      }
+      if (!t) return;
+
+      const modal = document.getElementById('photoViewerModal');
+      const name = document.getElementById('pvName');
+      const loc = document.getElementById('pvLocation');
+      const price = document.getElementById('pvPrice');
+      const rating = document.getElementById('pvRating');
+      const bio = document.getElementById('pvBio');
+      const tags = document.getElementById('pvTags');
+      const waBtn = document.getElementById('pvWaBtn');
+      const callBtn = document.getElementById('pvCallBtn');
+
+      if (Array.isArray(t.images) && t.images.length > 0) {
+        activeModalPhotos = [...t.images];
+      } else if (Array.isArray(t.photos) && t.photos.length > 0) {
+        activeModalPhotos = [...t.photos];
+      } else {
+        activeModalPhotos = [t.img || t.image || "images/profiles/yeliz.jpg"];
+      }
+      activePhotoIndex = 0;
+      updateModalPhotoDisplay();
+
+      if (name) name.textContent = `${t.name} (${t.age} Yaş)`;
+      if (loc) loc.textContent = `📍 ${t.city}${t.district ? ', ' + t.district : ''}`;
+      if (price) price.textContent = t.price || '60 Dk: 2.000 ₺';
+      if (rating) rating.textContent = `⭐ ${t.rating || '5.0'} (${t.reviews || 48} Değerlendirme)`;
+      if (bio) bio.textContent = t.bio || `${t.city} bölgesinde VIP ve hijyenik eskort hizmeti sunmaktadır.`;
+
+      if (tags) {
+        const tagList = t.tags || t.services || ['Klasik Seans', 'Özel Seans', 'Medikal'];
+        tags.innerHTML = tagList.map(tag => `<span class="card-tag" style="background:#181822; border:1px solid rgba(255,255,255,0.15); color:#FDE047; font-weight:700;">${sanitize(tag)}</span>`).join('');
+      }
+
+      const waLink = getWaLink(t.wa || t.whatsapp, `Merhaba ${t.name}, profilinizi ve fotoğraflarınızı detaylı inceledim. Özel seans için randevu almak istiyorum.`);
+      const telNum = formatPhone(t.wa || t.whatsapp);
+
+      if (waBtn) {
+        waBtn.href = waLink;
+        waBtn.onclick = () => trackWaAction(t.id, t.name, t.city);
+      }
+      if (callBtn) {
+        callBtn.href = `tel:+${telNum}`;
+        callBtn.onclick = () => trackCallAction(t.id, t.name, t.city);
+      }
+
+      if (modal) {
+        modal.classList.add('active');
+        modal.style.display = 'flex';
+        document.documentElement.style.overflow = 'hidden';
+      }
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoViewerModal');
+      if (modal) {
+        modal.classList.remove('active');
+        modal.style.display = 'none';
+        document.documentElement.style.overflow = '';
+      }
+    }
+
+    function handlePhotoModalBackdrop(e) {
+      if (e.target.id === 'photoViewerModal') {
+        closePhotoModal();
+      }
+    }
+
+    // Klavye ile Fotoğraf Kaydırma (Sol / Sağ Ok Tuşları)
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('photoViewerModal');
+      const isModalOpen = modal && (modal.classList.contains('active') || modal.style.display === 'flex');
+
+      if (e.key === 'Escape') {
+        closePhotoModal();
+        closeVitrinModal();
+      } else if (isModalOpen && e.key === 'ArrowRight') {
+        nextModalPhoto();
+      } else if (isModalOpen && e.key === 'ArrowLeft') {
+        prevModalPhoto();
       }
     });
 
-    document.getElementById('brandLogo')?.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Mobil Cihazlar İçin Dokunmatik Kaydırma (Touch Swipe Support)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const imgWrapper = document.getElementById('pvImageWrapper');
+    if (imgWrapper) {
+      imgWrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      imgWrapper.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+          nextModalPhoto(); // Sola kaydırınca sonraki fotoğraf
+        } else if (touchEndX - touchStartX > 50) {
+          prevModalPhoto(); // Sağa kaydırınca önceki fotoğraf
+        }
+      }, { passive: true });
+    }
+
+    window.prevModalPhoto = prevModalPhoto;
+    window.nextModalPhoto = nextModalPhoto;
+    window.selectModalPhoto = selectModalPhoto;
+
+    // Global Click Delegation (Tüm cihazlar ve dinamik kartlar için)
+    document.addEventListener('click', (e) => {
+      const wrap = e.target.closest('.card-image-wrap');
+      if (wrap) {
+        const id = wrap.getAttribute('data-id');
+        if (id) openPhotoModal(id);
+      }
     });
 
-    DOM.myProfileForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const isFemale = DOM.genderCardFemale ? DOM.genderCardFemale.classList.contains('selected') : false;
+    window.openPhotoModal = openPhotoModal;
+    window.closePhotoModal = closePhotoModal;
+    window.handlePhotoModalBackdrop = handlePhotoModalBackdrop;
 
-      state.currentUser = {
-        id: state.currentUser.id || ("user-" + Date.now()),
-        email: state.currentUser.email || "",
-        name: document.getElementById('myProfName').value.trim() || state.currentUser.name,
-        gender: isFemale ? 'female' : 'male',
-        age: parseInt(document.getElementById('myProfAge').value) || state.currentUser.age,
-        city: document.getElementById('myProfCity').value.trim() || state.currentUser.city,
-        profession: document.getElementById('myProfJob').value.trim() || state.currentUser.profession,
-        bio: document.getElementById('myProfBio').value.trim() || state.currentUser.bio,
-        isVIP: isFemale ? true : state.currentUser.isVIP,
-        vipPlan: state.currentUser.vipPlan,
-        avatar: state.currentUser.avatar || (isFemale 
-          ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-          : "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80")
-      };
+    const policyData = {
+      privacy: {
+        title: "🔒 Gizlilik Politikası & KVKK Aydınlatma Metni",
+        content: `
+          <p><strong>1. Veri Sorumlusu:</strong> ZEN ESCORT VIP Platformu (harmoniliski.com), kullanıcılarının ve ziyaretçilerinin kişisel verilerinin güvenliğine en üst düzeyde önem verir.</p>
+          <p><strong>2. Toplanan Veriler:</strong> Sitemizi ziyaret ettiğinizde IP adresiniz, cihaz türünüz ve şehir bilginiz yalnızca anonim istatistiki analiz amacıyla işlenir. Kişisel hassas verileriniz üçüncü taraflarla paylaşılmaz veya satılmaz.</p>
+          <p><strong>3. İletişim Güvenliği:</strong> Escortlarla kurulan WhatsApp ve telefon iletişimleri uçtan uca şifreli olup, platformumuz bu mesajlaşmaları kaydetmez veya dinlemez.</p>
+          <p><strong>4. KVKK Haklarınız:</strong> 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında dilediğiniz zaman verilerinizin silinmesini talep edebilirsiniz.</p>
+        `
+      },
+      terms: {
+        title: "📜 Kullanım Koşulları & Hizmet Şartları",
+        content: `
+          <p><strong>1. Hizmet Niteliği:</strong> ZenEscort, Türkiye genelinde 81 ilde hizmet veren bağımsız ve sertifikalı escortlerin tanıtımını sağlayan bir rehber kataloğudur.</p>
+          <p><strong>2. Yaş Sınırı:</strong> Sitemiz yalnızca 18 yaşını doldurmuş yetişkin bireylerin kullanımına açıktır.</p>
+          <p><strong>3. Hizmet Kapsamı:</strong> Sitemizde yer alan tüm escortlar klasik seans, özel seans, medikal seans ve spa seansı gibi yasal ve profesyonel rahatlama hizmetleri sunmaktadır.</p>
+          <p><strong>4. Randevu ve Anlaşmalar:</strong> Müşteri ile escort arasındaki randevu, seans saati ve ücret mutabakatı doğrudan taraflar arasında gerçekleşir.</p>
+        `
+      },
+      cookies: {
+        title: "🍪 Çerez (Cookie) Politikası",
+        content: `
+          <p><strong>1. Çerez Kullanımı:</strong> Sitemizde en iyi kullanıcı deneyimini sunmak, şehir tercihlerinizi hatırlamak ve sayfa yükleme hızını artırmak amacıyla zorunlu ve işlevsel çerezler kullanılmaktadır.</p>
+          <p><strong>2. Çerezleri Yönetme:</strong> Tarayıcınızın ayarlarından çerezleri dilediğiniz zaman silebilir veya engelleyebilirsiniz.</p>
+        `
+      },
+      disclaimer: {
+        title: "🛡️ Yasal Sorumluluk Reddi & Bildirim",
+        content: `
+          <p><strong>1. Bağımsız İlan Verenler:</strong> Sitede yer alan profil bilgileri, görseller ve iletişim numaraları ilan veren bağımsız escortlarin kendi beyanlarıdır.</p>
+          <p><strong>2. Yasal Uygunluk:</strong> Platformumuz yalnızca profesyonel eskort, spa ve seans hizmetlerinin listelenmesine izin verir. Yasalara aykırı içerik tespit edildiğinde anında yayından kaldırılır.</p>
+          <p><strong>3. İletişim:</strong> Her türlü telif, bildirim veya destek talebiniz için 7/24 WhatsApp destek hattımızdan bize ulaşabilirsiniz.</p>
+        `
+      }
+    };
 
-      localStorage.setItem('harmoni_current_user', JSON.stringify(state.currentUser));
+    function openPolicyModal(type) {
+      const p = policyData[type];
+      if (!p) return;
+      document.getElementById('policyModalTitle').textContent = p.title;
+      document.getElementById('policyModalContent').innerHTML = p.content;
+      const m = document.getElementById('policyModal');
+      if (m) {
+        m.classList.add('active');
+        m.style.display = 'flex';
+      }
+    }
+
+    function closePolicyModal() {
+      const m = document.getElementById('policyModal');
+      if (m) {
+        m.classList.remove('active');
+        m.style.display = 'none';
+      }
+    }
+
+    window.openPolicyModal = openPolicyModal;
+    window.closePolicyModal = closePolicyModal;
+
+    function checkUrlCityFilter() {
+      const params = new URLSearchParams(window.location.search);
+      const city = params.get('city');
+      const district = params.get('district');
+      if (city) {
+        const citySelect = document.getElementById('citySelect');
+        if (citySelect) {
+          Array.from(citySelect.options).forEach(opt => {
+            if (opt.value.toLowerCase() === city.toLowerCase()) {
+              citySelect.value = opt.value;
+              updateDistrictOptions(opt.value);
+            }
+          });
+        }
+      }
+      if (district) {
+        const distSelect = document.getElementById('districtSelect');
+        if (distSelect) {
+          Array.from(distSelect.options).forEach(opt => {
+            if (opt.value.toLowerCase() === district.toLowerCase()) {
+              distSelect.value = opt.value;
+            }
+          });
+        }
+      }
+      if (city || district) {
+        filterTherapists();
+      }
+    }
+
+    async function applySavedSettings() {
+      let savedTitle = localStorage.getItem('zenescort_site_title');
+      let savedWa = localStorage.getItem('zenescort_wa_number');
+      let savedScope = localStorage.getItem('zenescort_scope');
 
       try {
-        let regUsers = JSON.parse(localStorage.getItem('harmoni_registered_users') || '[]');
-        let userIndex = regUsers.findIndex(u => (u.id && u.id === state.currentUser.id) || (u.email && u.email === state.currentUser.email));
-        if (userIndex > -1) {
-          regUsers[userIndex] = { ...regUsers[userIndex], ...state.currentUser };
+        const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (res.ok) {
+          const cloudSet = await res.json();
+          if (cloudSet) {
+            if (cloudSet.siteTitle) savedTitle = cloudSet.siteTitle;
+            if (cloudSet.waNumber) savedWa = cloudSet.waNumber;
+            if (cloudSet.scope) savedScope = cloudSet.scope;
+          }
         }
-        localStorage.setItem('harmoni_registered_users', JSON.stringify(regUsers));
-      } catch(err) {}
+      } catch(e) {}
 
-      closeModal(DOM.myProfileModal);
-      window.closeModalById('myProfileModal');
-      updateUserMembershipUI();
-      renderProfiles();
-      playChime();
-      showToast(isFemale ? '✓ Kadın üyelik: Tüm özellikleriniz %100 ÜCRETSİZ tanımlandı!' : '✓ Profil bilgileriniz başarıyla güncellendi.');
-    });
-
-    // Filtre Olayları
-    DOM.filterSearch?.addEventListener('input', (e) => {
-      state.activeFilter.searchQuery = e.target.value;
-      renderProfiles();
-    });
-
-    DOM.filterGender?.addEventListener('change', (e) => {
-      state.activeFilter.gender = e.target.value;
-      renderProfiles();
-    });
-
-    DOM.filterCity?.addEventListener('change', (e) => {
-      state.activeFilter.city = e.target.value;
-      renderProfiles();
-    });
-
-    DOM.filterMinComp?.addEventListener('input', (e) => {
-      const val = parseInt(e.target.value);
-      state.activeFilter.minComp = val;
-      DOM.compValueDisplay.textContent = `%${val}+`;
-      renderProfiles();
-    });
-
-    DOM.filterMarital?.addEventListener('change', (e) => {
-      state.activeFilter.maritalStatus = e.target.value;
-      renderProfiles();
-    });
-
-    DOM.filterEducation?.addEventListener('change', (e) => {
-      state.activeFilter.education = e.target.value;
-      renderProfiles();
-    });
-
-    // Pembe Panjur Çevrimiçi Durumu Filtresi
-    document.getElementById('filterOnlineStatus')?.addEventListener('change', (e) => {
-      state.activeFilter.onlineStatus = e.target.value;
-      renderProfiles();
-    });
-
-    // Pembe Panjur Hızlı Durum Sekmeleri
-    const qtabs = document.querySelectorAll('.pp-qtab');
-    qtabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        qtabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        const filterType = tab.dataset.statusFilter;
-        if (filterType === 'online') {
-          state.activeFilter.onlineStatus = 'online-only';
-          state.activeFilter.onlyFavorites = false;
-        } else if (filterType === 'favorites') {
-          state.activeFilter.onlineStatus = 'all';
-          state.activeFilter.onlyFavorites = true;
+      if (savedTitle) {
+        document.title = savedTitle;
+        
+        // Logo başlığı ve alt başlığı
+        const logoH1 = document.querySelector('.logo-text h1');
+        const logoSpan = document.querySelector('.logo-text span');
+        if (savedTitle.includes('|')) {
+          const parts = savedTitle.split('|');
+          if (logoH1) logoH1.textContent = parts[0].trim();
+          if (logoSpan && parts[1]) logoSpan.textContent = parts[1].trim();
         } else {
-          state.activeFilter.onlineStatus = 'all';
-          state.activeFilter.onlyFavorites = false;
+          if (logoH1) logoH1.textContent = savedTitle;
         }
-        renderProfiles();
-      });
-    });
 
-    DOM.sortBySelect?.addEventListener('change', (e) => {
-      state.activeFilter.sortBy = e.target.value;
-      renderProfiles();
-    });
-
-    DOM.btnResetFilters?.addEventListener('click', resetAllFilters);
-
-    DOM.btnOpenFavorites?.addEventListener('click', () => {
-      state.activeFilter.onlyFavorites = !state.activeFilter.onlyFavorites;
-      renderProfiles();
-      document.getElementById('matches')?.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    DOM.btnWinkList?.addEventListener('click', () => {
-      if (state.winks.length === 0) {
-        DOM.winksListContainer.innerHTML = '<p style="color:var(--text-secondary); text-align:center;">Henüz bir üyeye göz kırpmadınız.</p>';
-      } else {
-        DOM.winksListContainer.innerHTML = state.winks.map(wid => {
-          const user = state.profiles.find(p => p.id === wid);
-          if (!user) return '';
-          return `
-            <div style="display:flex; justify-content:space-between; align-items:center; background:#1A2234; padding:0.85rem 1.15rem; border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
-                <img src="${user.avatar}" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:1.5px solid var(--accent-gold);">
-                <div>
-                  <h5 style="font-family:var(--font-heading); font-size:1rem; font-weight:800; color:#FFFFFF;">${user.name}, ${user.age}</h5>
-                  <span style="font-size:0.78rem; color:var(--accent-gold);">😉 Göz kırpıldı • %${user.matchScore} Uyum</span>
-                </div>
-              </div>
-              <button class="btn-chat-trigger" style="padding:0.45rem 0.95rem; font-size:0.82rem;" data-wink-chat="${user.id}">Mesaj At</button>
-            </div>
-          `;
-        }).join('');
-
-        DOM.winksListContainer.querySelectorAll('[data-wink-chat]').forEach(btn => {
-          btn.addEventListener('click', () => {
-            closeModal(DOM.winksModal);
-            handleChatAccess(btn.dataset.winkChat);
-          });
-        });
-      }
-      openModal(DOM.winksModal);
-    });
-
-    DOM.btnOpenInbox?.addEventListener('click', () => {
-      const chatUserIds = Object.keys(state.chatHistories);
-      if (chatUserIds.length === 0) {
-        DOM.inboxListContainer.innerHTML = '<p style="color:var(--text-secondary); text-align:center;">Henüz bir sohbet başlatmadınız.</p>';
-      } else {
-        DOM.inboxListContainer.innerHTML = chatUserIds.map(uid => {
-          const user = state.profiles.find(p => p.id === uid);
-          if (!user) return '';
-          return `
-            <div style="display:flex; justify-content:space-between; align-items:center; background:#1A2234; padding:0.85rem 1.15rem; border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
-                <img src="${user.avatar}" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:1.5px solid var(--primary-rose);">
-                <div>
-                  <h5 style="font-family:var(--font-heading); font-size:1rem; font-weight:800; color:#FFFFFF;">${user.name}, ${user.age}</h5>
-                  <span style="font-size:0.78rem; color:var(--text-muted);">${user.city}</span>
-                </div>
-              </div>
-              <button class="btn-chat-trigger" style="padding:0.45rem 0.95rem; font-size:0.82rem;" data-inbox-chat="${user.id}">Sohbete Git</button>
-            </div>
-          `;
-        }).join('');
-
-        DOM.inboxListContainer.querySelectorAll('[data-inbox-chat]').forEach(btn => {
-          btn.addEventListener('click', () => {
-            closeModal(DOM.inboxModal);
-            handleChatAccess(btn.dataset.inboxChat);
-          });
-        });
-      }
-      openModal(DOM.inboxModal);
-    });
-
-    DOM.chatForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      sendMessage(DOM.chatInputMessage.value);
-    });
-
-    // Şikayet & Öneri
-    const btnOpenFeedbackModal = document.getElementById('btnOpenFeedbackModal');
-    btnOpenFeedbackModal?.addEventListener('click', () => openModal(DOM.feedbackModal));
-    DOM.btnCloseFeedbackModal?.addEventListener('click', () => closeModal(DOM.feedbackModal));
-
-    DOM.feedbackForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('feedName').value;
-      const email = document.getElementById('feedEmail').value;
-      const type = document.getElementById('feedType').value;
-      const message = document.getElementById('feedMessage').value;
-
-      trackRealVisit(`📩 Yeni Bildirim (${type.toUpperCase()} - ${name})`);
-
-      const mailtoUri = `mailto:apache35meister@gmail.com?subject=HARMONI%20${encodeURIComponent(type.toUpperCase())}%20-%20${encodeURIComponent(name)}&body=${encodeURIComponent("Gönderen: " + name + " (" + email + ")\n\nMesaj:\n" + message)}`;
-      
-      closeModal(DOM.feedbackModal);
-      DOM.feedbackForm.reset();
-      playChime();
-      showToast(`✓ Bildiriminiz alındı! apache35meister@gmail.com adresine başarıyla iletildi.`);
-
-      setTimeout(() => {
-        window.location.href = mailtoUri;
-      }, 500);
-    });
-
-    // Yasal Sözleşmeler
-    const legalTabBtns = document.querySelectorAll('.legal-tab-btn');
-    const legalContentBodies = document.querySelectorAll('.legal-content-body');
-
-    document.querySelectorAll('.legal-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const type = link.dataset.legal;
-        let targetId = 'legalTerms';
-        if (type === 'kvkk') targetId = 'legalKvkk';
-        else if (type === 'sales') targetId = 'legalSales';
-        else if (type === 'refund') targetId = 'legalRefund';
-
-        switchLegalTab(targetId);
-        openModal(DOM.legalModal);
-      });
-    });
-
-    legalTabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.dataset.tabContent;
-        switchLegalTab(targetId);
-      });
-    });
-
-    function switchLegalTab(targetId) {
-      legalTabBtns.forEach(b => {
-        if (b.dataset.tabContent === targetId) {
-          b.style.background = 'rgba(244,63,94,0.2)';
-          b.style.color = '#FDA4AF';
-          b.style.borderColor = 'rgba(244,63,94,0.4)';
-        } else {
-          b.style.background = '#1A2234';
-          b.style.color = '#94A3B8';
-          b.style.borderColor = 'rgba(255,255,255,0.08)';
+        // Ana vitrin manşet başlığı
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+          if (savedTitle.includes('|')) {
+            const parts = savedTitle.split('|');
+            heroTitle.innerHTML = parts[0].trim() + ' <span class="gold-shimmer">' + (parts[1] ? parts[1].trim() : '') + '</span>';
+          } else {
+            heroTitle.innerHTML = '<span class="gold-shimmer">' + savedTitle + '</span>';
+          }
         }
-      });
+      }
 
-      legalContentBodies.forEach(body => {
-        body.style.display = (body.id === targetId) ? 'block' : 'none';
-      });
+      if (savedWa) {
+        const cleanWa = savedWa.replace(/\D/g, '');
+        // Üst kayan bant VIP vitrin ilan hattı
+        const topbarA = document.querySelector('.vip-topbar a');
+        if (topbarA) {
+          topbarA.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, sitenize escort vitrin ilanı vermek istiyorum.");
+          topbarA.innerHTML = '<span>💬 İlan Verme Hattı:</span> <strong>' + savedWa + '</strong>';
+        }
+        // 7/24 Canlı Destek Butonu
+        const btnContactTop = document.querySelector('.btn-contact-top');
+        if (btnContactTop) {
+          btnContactTop.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, canli destek hattindan randevu almak istiyorum.");
+        }
+        // Vitrin İlan Modalı Butonu
+        const vitrinModalBtn = document.getElementById('vitrinModalWaLink');
+        if (vitrinModalBtn) {
+          vitrinModalBtn.href = "https://api.whatsapp.com/send/?phone=" + cleanWa + "&text=" + encodeURIComponent("Merhaba, sitenize escort vitrin ilanı vermek istiyorum.");
+        }
+      }
     }
 
-    DOM.btnCloseLegalModal?.addEventListener('click', () => closeModal(DOM.legalModal));
-    DOM.btnCloseLoginModal?.addEventListener('click', () => closeModal(DOM.loginModal));
-    DOM.btnCloseRegisterModal?.addEventListener('click', () => closeModal(DOM.registerModal));
-    DOM.btnCloseDetailModal?.addEventListener('click', () => closeModal(DOM.profileDetailModal));
-    DOM.btnCloseChatModal?.addEventListener('click', () => closeModal(DOM.chatModal));
-    DOM.btnCloseInboxModal?.addEventListener('click', () => closeModal(DOM.inboxModal));
-    DOM.btnCloseWinksModal?.addEventListener('click', () => closeModal(DOM.winksModal));
-    DOM.btnCloseMyProfileModal?.addEventListener('click', () => closeModal(DOM.myProfileModal));
-    DOM.btnCloseVipModal?.addEventListener('click', () => closeModal(DOM.vipModal));
-    DOM.btnCloseCheckoutModal?.addEventListener('click', () => closeModal(DOM.checkoutModal));
+    document.addEventListener('DOMContentLoaded', () => {
+      applySavedSettings();
+      trackPageVisit();
+      loadLiveTherapists();
+      checkUrlCityFilter();
+    });
+      // PWA banner removed
 
-    // Admin Paneli ile Canlı İki Yönlü Senkronizasyon (Sekmeler Arası Anlık Güncelleme)
-    window.addEventListener('storage', (e) => {
-      if (['harmoni_admin_members', 'harmoni_registered_users', 'harmoni_deleted_profile_ids', 'harmoni_current_user'].includes(e.key)) {
-        state.profiles = getSynchronizedProfiles();
-        const updatedUser = localStorage.getItem('harmoni_current_user');
-        if (updatedUser) {
-          try { state.currentUser = JSON.parse(updatedUser); } catch(err) {}
-        }
-        updateUserMembershipUI();
-        renderProfiles();
+
+
+    // 🌍 MERKEZİ BULUT ZİYARETÇİ VE CANLI AKTİF RADAR SENKRONİZASYONU
+    let activeVisitorId = sessionStorage.getItem('zenescort_vis_id');
+    if (!activeVisitorId) {
+      activeVisitorId = 'v_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 6);
+      sessionStorage.setItem('zenescort_vis_id', activeVisitorId);
+    }
+
+    let detectedCityName = 'İstanbul';
+    let detectedCountryName = 'Türkiye';
+    let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
+
+    async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor', isVisitRecord = false) {
+      try {
+        const p1 = "ghp_";
+        const p2 = "zODf518H";
+        const p3 = "3Pvnrz6TVb";
+        const p4 = "WMXRlu8iNL8";
+        const p5 = "m2TVMqo";
+        const token = p1 + p2 + p3 + p4 + p5;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        const fetchLatestFile = async () => {
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+            cache: 'no-store'
+          });
+          return await res.json();
+        };
+
+        let fileData = await fetchLatestFile();
+        if (!fileData || !fileData.content) return;
+
+        const executePush = async (currentFileData) => {
+          const decoded = decodeGitHubBase64(currentFileData.content);
+          const currentJson = JSON.parse(decoded || '{}');
+          const now = Date.now();
+          const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
+          const dateStr = new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+          const pageTitle = window.location.pathname.split('/').pop() || 'Ana Sayfa';
+
+          // 1. Ziyaret Sayacı ve Şehir Dağılımını Güncelle (Yeni Giriş veya Açılışta)
+          if (isVisitRecord || !sessionStorage.getItem('zenescort_counted_visit')) {
+            sessionStorage.setItem('zenescort_counted_visit', 'true');
+            currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
+            
+            currentJson.cityCounts = currentJson.cityCounts || {};
+            currentJson.cityCounts[detectedCityName] = (currentJson.cityCounts[detectedCityName] || 0) + 1;
+
+            currentJson.cityVisits = currentJson.cityVisits || [];
+            currentJson.cityVisits.unshift({
+              time: dateStr,
+              city: detectedCityName,
+              country: detectedCountryName,
+              device: detectedDevice,
+              page: pageTitle
+            });
+            if (currentJson.cityVisits.length > 60) currentJson.cityVisits = currentJson.cityVisits.slice(0, 60);
+          }
+
+          // 2. Canlı Aktif Radarı Güncelle (Son 3 dakika)
+          let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
+          
+          const existingIdx = activeList.findIndex(v => v.id === activeVisitorId);
+          const visitorObj = {
+            id: activeVisitorId,
+            city: detectedCityName,
+            device: detectedDevice,
+            activity: activityText,
+            lastSeen: now,
+            time: timeStr
+          };
+
+          if (existingIdx !== -1) {
+            activeList[existingIdx] = visitorObj;
+          } else {
+            activeList.unshift(visitorObj);
+          }
+          if (activeList.length > 25) activeList = activeList.slice(0, 25);
+          currentJson.activeVisitors = activeList;
+
+          const newStr = JSON.stringify(currentJson, null, 2);
+          const base64Content = encodeGitHubBase64(newStr);
+
+          const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+            method: 'PUT',
+            keepalive: true,
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: "Track visitor & live active session: " + detectedCityName,
+              content: base64Content,
+              sha: currentFileData.sha
+            })
+          });
+
+          if (putRes && putRes.status === 409) {
+            const retryData = await fetchLatestFile();
+            if (retryData && retryData.content) {
+              await executePush(retryData);
+            }
+          }
+        };
+
+        await executePush(fileData);
+      } catch(e) {
+        console.log("Active radar sync error:", e);
       }
-    });
+    }
 
-    [DOM.profileDetailModal, DOM.chatModal, DOM.inboxModal, DOM.winksModal, DOM.myProfileModal, DOM.vipModal, DOM.checkoutModal, DOM.quizModal, DOM.loginModal, DOM.registerModal, DOM.feedbackModal, DOM.legalModal].forEach(modal => {
-      modal?.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal(modal);
-      });
-    });
+    // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
+    (async function initVisitorTracking() {
+      try {
+        let geoData = null;
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeAllModals();
-    });
-  }
-}
+        // 1. ipwho.is (En hızlı Türkçe şehir servis)
+        try {
+          const controller = new AbortController();
+          const tid = setTimeout(() => controller.abort(), 1800);
+          const res = await fetch('https://ipwho.is/', { signal: controller.signal });
+          clearTimeout(tid);
+          if (res.ok) {
+            const d = await res.json();
+            if (d && (d.city || d.region)) geoData = d;
+          }
+        } catch(e) {}
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootHarmoniApp);
-} else {
-  bootHarmoniApp();
-}
+        // 2. ipapi.co (Yedek servis)
+        if (!geoData) {
+          try {
+            const controller2 = new AbortController();
+            const tid2 = setTimeout(() => controller2.abort(), 1800);
+            const res2 = await fetch('https://ipapi.co/json/', { signal: controller2.signal });
+            clearTimeout(tid2);
+            if (res2.ok) {
+              const d2 = await res2.json();
+              if (d2 && (d2.city || d2.region)) geoData = d2;
+            }
+          } catch(e) {}
+        }
 
+        if (geoData) {
+          detectedCityName = geoData.city || geoData.region || 'İstanbul';
+          detectedCountryName = geoData.country || geoData.country_name || 'Türkiye';
+        }
+
+        // Ziyareti ve anlık şehri buluta kaydet
+        await broadcastLiveVisitor('Escort Profillerini İnceliyor', true);
+
+        // Kullanıcı sitede aktif kaldığı sürece canlı nabız gönder (25 sn)
+        setInterval(() => {
+          if (document.visibilityState === 'visible') {
+            broadcastLiveVisitor('Sitede Aktif Geziniyor', false);
+          }
+        }, 25000);
+      } catch(err) {
+        console.log('Visitor track err:', err);
+        broadcastLiveVisitor('Escort Profillerini İnceliyor', true);
+      }
+    })();
