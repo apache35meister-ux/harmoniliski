@@ -3644,5 +3644,27 @@
     </nav>
     <p style="color:#aaa;font-size:12px;margin-top:15px">ZENSPA VIP - Turkiye'nin 81 ilinde onayli masoz ve terapist katalogu</p>
 </section>
+
+<script data-zenescort-conversion-tracking>
+  // Track static profile actions without double-counting inline handlers.
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest && event.target.closest('a.btn-action-wa, a.btn-action-call');
+    if (!link || link.getAttribute('onclick')) return;
+    const card = link.closest('.card-therapist');
+    if (!card) return;
+    const id = card.getAttribute('data-id') || '';
+    const nameEl = card.querySelector('[itemprop="name"]');
+    const cityEl = card.querySelector('[itemprop="addressLocality"]');
+    const name = nameEl ? nameEl.textContent.trim() : 'VIP Escort';
+    const city = cityEl ? cityEl.textContent.replace(/^📍\s*/, '').trim() : 'Türkiye';
+    if (link.classList.contains('btn-action-wa') && typeof trackWaAction === 'function') {
+      trackWaAction(id, name, city);
+      if (typeof gtag === 'function') gtag('event', 'whatsapp_click', { profile_id: String(id), city: city });
+    } else if (link.classList.contains('btn-action-call') && typeof trackCallAction === 'function') {
+      trackCallAction(id, name, city);
+      if (typeof gtag === 'function') gtag('event', 'phone_click', { profile_id: String(id), city: city });
+    }
+  });
+</script>
 </body>
 </html>
