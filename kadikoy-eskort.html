@@ -3652,30 +3652,7 @@
     let detectedCityName = 'İstanbul';
     let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
 
-    async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor', isVisitRecord = false) {
-      try {
-        const now = Date.now();
-        const timeStr = new Date(now).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-        const dateStr = new Date(now).toLocaleString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-        const pageTitle = window.location.pathname.split('/').pop() || 'Ana Sayfa';
-        if (isVisitRecord || !sessionStorage.getItem('zenescort_counted_visit')) {
-          sessionStorage.setItem('zenescort_counted_visit', 'true');
-          const cityCounts = JSON.parse(localStorage.getItem('zenescort_city_counts') || '{}');
-          cityCounts[detectedCityName] = (cityCounts[detectedCityName] || 0) + 1;
-          localStorage.setItem('zenescort_city_counts', JSON.stringify(cityCounts));
-          const cityVisits = JSON.parse(localStorage.getItem('zenescort_city_visits') || '[]');
-          cityVisits.unshift({ time: dateStr, city: detectedCityName, country: detectedCountryName, device: detectedDevice, page: pageTitle });
-          localStorage.setItem('zenescort_city_visits', JSON.stringify(cityVisits.slice(0, 60)));
-        }
-        const activeList = JSON.parse(localStorage.getItem('zenescort_active_visitors') || '[]')
-          .filter(v => (now - (v.lastSeen || 0)) < 180000);
-        const visitor = { id: activeVisitorId, city: detectedCityName, device: detectedDevice, activity: activityText, lastSeen: now, time: timeStr };
-        const existingIndex = activeList.findIndex(v => v.id === activeVisitorId);
-        if (existingIndex >= 0) activeList[existingIndex] = visitor;
-        else activeList.unshift(visitor);
-        localStorage.setItem('zenescort_active_visitors', JSON.stringify(activeList.slice(0, 25)));
-      } catch (e) {}
-    }
+    async function broadcastLiveVisitor() { return; }
 
     // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
     (async function() {
