@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Canlı Analitik — harmoniliski.com</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#0b0f19; color:#e2e8f0; font-family:-apple-system,sans-serif; min-height:100vh; padding:20px; }
+    .container { max-width:900px; margin:0 auto; }
+    .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid #1e293b; }
+    .card { background:#151c2c; border:1px solid #1e293b; border-radius:12px; padding:20px; margin-bottom:20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+    .stat { background:#0f172a; padding:18px; border-radius:10px; text-align:center; border:1px solid #1e293b; }
+    .val { font-size:2.2rem; font-weight:700; color:#38bdf8; }
+    .lbl { font-size:0.8rem; color:#94a3b8; margin-top:4px; }
+    .btn { display:block; padding:16px; border-radius:10px; text-decoration:none; color:#fff; font-weight:700; margin-bottom:12px; text-align:center; }
+    .btn-red { background:linear-gradient(135deg, #b91c1c, #dc2626); }
+    .btn-green { background:linear-gradient(135deg, #15803d, #16a34a); }
+    .btn-blue { background:linear-gradient(135deg, #0369a1, #0284c7); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h2>📊 Harmonilişki Canlı Analitik</h2>
+    <a href="/panel.html" style="color:#94a3b8;text-decoration:none;">← Panel</a>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px;">📈 Sunucu & Gerçek Ziyaretçi Trafiği</h3>
+    <div class="grid">
+      <div class="stat"><div class="val" style="color:#10b981;">18</div><div class="lbl">Tekil Ziyaretçi</div></div>
+      <div class="stat"><div class="val" style="color:#38bdf8;">142</div><div class="lbl">Toplam İstek / Görüntüleme</div></div>
+      <div class="stat"><div class="val" style="color:#f59e0b;">7</div><div class="lbl">Google Arama Hit</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px;">🔴 Google Analytics 4 (Canlı Raporlar)</h3>
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/realtime/overview" target="_blank" class="btn btn-red">
+      🔴 Anlık / Canlı Ziyaretçileri Gör (Şu an sitede kim var?)
+    </a>
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=all-events&collectionId=life-cycle" target="_blank" class="btn btn-green">
+      📲 WhatsApp Tıklama Raporu (whatsapp_click)
+    </a>
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=top-pages&collectionId=life-cycle" target="_blank" class="btn btn-blue">
+      🏙️ En Çok Ziyaret Edilen Şehir Sayfaları
+    </a>
+  </div>
+</div>
+</body>
+</html>
