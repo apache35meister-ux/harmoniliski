@@ -1088,7 +1088,7 @@ async function directUnlockPanel(e) {
       <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#fff" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></svg>
       Google ile Giris Yap
     </button>
-    <a href="https://analytics.google.com/analytics/web/#/p407764028/reports/intelligenthome" target="_blank" rel="noopener noreferrer" style="padding:10px 20px;background:#34a853;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:600;">📊 GA4 Panelini Ac</a>
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/intelligenthome" target="_blank" rel="noopener noreferrer" style="padding:10px 20px;background:#34a853;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:600;">📊 GA4 Panelini Ac</a>
   </div>
 </div>
 
@@ -1148,8 +1148,8 @@ async function loadGA4Data(accessToken) {
     
     // Property ID - Measurement ID'den al
     // Not: Property numeric ID gerekli, simdilik localStorage'dan al
-    var propId = '407764028'; // GA4 Property ID
-    localStorage.setItem('ga4_property_id', '407764028');
+    var propId = '553841732'; // GA4 Property ID
+    localStorage.setItem('ga4_property_id', '553841732');
 
     var response = await fetch(
       'https://analyticsdata.googleapis.com/v1beta/properties/' + propId + ':runReport',
@@ -1227,19 +1227,19 @@ if (localStorage.getItem('ga4_access_token')) {
 
   <!-- GA4 Hizli Erisim Linkleri -->
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;">
-    <a href="https://analytics.google.com/analytics/web/#/p407764028/realtime/overview" target="_blank" rel="noopener noreferrer"
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/realtime/overview" target="_blank" rel="noopener noreferrer"
       style="padding:8px 12px;background:#1565c0;color:#fff;border-radius:7px;text-decoration:none;font-size:0.8rem;text-align:center;display:block;">
       🔴 Canli Ziyaretciler
     </a>
-    <a href="https://analytics.google.com/analytics/web/#/p407764028/reports/explorer?params=_u..nav%3Dmaui&r=all-events&collectionId=life-cycle" target="_blank" rel="noopener noreferrer"
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?params=_u..nav%3Dmaui&r=all-events&collectionId=life-cycle" target="_blank" rel="noopener noreferrer"
       style="padding:8px 12px;background:#1b5e20;color:#fff;border-radius:7px;text-decoration:none;font-size:0.8rem;text-align:center;display:block;">
       📲 WA Tikalmalari
     </a>
-    <a href="https://analytics.google.com/analytics/web/#/p407764028/reports/explorer?r=traffic-acquisition&collectionId=life-cycle" target="_blank" rel="noopener noreferrer"
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=traffic-acquisition&collectionId=life-cycle" target="_blank" rel="noopener noreferrer"
       style="padding:8px 12px;background:#4a148c;color:#fff;border-radius:7px;text-decoration:none;font-size:0.8rem;text-align:center;display:block;">
       📈 Trafik Kaynaklari
     </a>
-    <a href="https://analytics.google.com/analytics/web/#/p407764028/reports/explorer?r=top-pages&collectionId=life-cycle" target="_blank" rel="noopener noreferrer"
+    <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=top-pages&collectionId=life-cycle" target="_blank" rel="noopener noreferrer"
       style="padding:8px 12px;background:#b71c1c;color:#fff;border-radius:7px;text-decoration:none;font-size:0.8rem;text-align:center;display:block;">
       🏙️ Populer Sayfalar
     </a>
