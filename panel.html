@@ -1625,8 +1625,8 @@ async function directUnlockPanel(e) {
         </div>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; padding:0.5rem 0;">
           <div style="background:#08140E; border:1px solid rgba(74,222,128,0.2); border-radius:10px; padding:1rem; text-align:center;">
-            <div style="font-size:0.75rem; color:#A1A1AA; text-transform:uppercase;">Resmi Toplam Gösterim</div>
-            <div style="font-size:1.6rem; font-weight:900; color:#FFF; margin-top:4px;">140+ Gösterim</div>
+            <div style="font-size:0.75rem; color:#A1A1AA; text-transform:uppercase;">Toplam Canlı Ziyaret</div>
+            <div style="font-size:1.6rem; font-weight:900; color:#FFF; margin-top:4px;"><span id='kpiRealVisitsCount'>44+ Ziyaret</span></div>
           </div>
           <div style="background:#08140E; border:1px solid rgba(74,222,128,0.2); border-radius:10px; padding:1rem; text-align:center;">
             <div style="font-size:0.75rem; color:#A1A1AA; text-transform:uppercase;">Ortalama Sıralama Trendi</div>
@@ -1651,7 +1651,7 @@ async function directUnlockPanel(e) {
               <span>🚨 Google Sıralama Alarmı & Pozisyon Radarı</span>
               <span id="rankAlertBadge" style="background:#EF4444; color:#FFF; font-size:0.7rem; padding:2px 8px; border-radius:999px; font-weight:800;">3 KRİTİK FIRSAT</span>
             </h3>
-            <span style="font-size:0.82rem; color:#A1A1AA;">Google Search Console API tarafından anlık tespit edilen düşüş/yükseliş uyarıları:</span>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Sistemimiz tarafından anlık tespit edilen düşüş/yükseliş uyarıları:</span>
           </div>
           <button onclick="runRankAuditAlarm()" style="background:#991B1B; color:#FFF; border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
             🔔 Alarmları Kontrol Et
@@ -3926,7 +3926,7 @@ async function directUnlockPanel(e) {
 
       try {
         await renderRankTracker();
-        alert("✓ Google Search Console verileri ve sıralama pozisyonları başarıyla güncellendi!");
+        alert("✓ Canlı analitik ve ziyaretçi verileri başarıyla senkronize edildi!");
       } catch(e) {
         alert("Sıralama verileri güncellendi.");
       } finally {
@@ -3968,10 +3968,10 @@ async function directUnlockPanel(e) {
     }
 
     function copyDailySeoReport() {
-      const text = `🔥 ZEN ESCORT VIP - GÜNLÜK GOOGLE SEO VE SIRALAMA RAPORU\\n` +
+      const text = `🔥 ZEN ESCORT VIP - GÜNLÜK CANLI ZİYARETÇİ VE DÖNÜŞÜM RAPORU\\n` +
         `🌐 Site: https://harmoniliski.com\\n` +
         `📅 Tarih: ${new Date().toLocaleDateString('tr-TR')}\\n` +
-        `📊 Toplam Gösterim: 140+ Gösterim\\n` +
+        `📊 Toplam Gösterim: <span id='kpiRealVisitsCount'>44+ Ziyaret</span>\\n` +
         `🏆 İlk Sayfadaki Kelimeler: 81 il escort (#6), ankara masaj escort (#8), bornova (%100 CTR)\\n` +
         `⚡ Googlebot Durumu: 440 Sayfa Aktif / 200 OK\\n` +
         `🎯 Trend: Sürekli Yükselişte`;
