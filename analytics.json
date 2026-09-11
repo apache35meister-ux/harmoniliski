@@ -1,14 +1,16 @@
 {
   "totalWaClicks": 2,
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "11.09.2026 10:15",
   "tClicks": {
     "1788428841293": 1,
     "1788394289793": 1
   },
   "tCalls": {},
-  "cityCounts": {},
+  "cityCounts": {
+    "Paris": 1
+  },
   "logs": [
     {
       "time": "11.09.2026 10:51",
@@ -23,15 +25,23 @@
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "cityVisits": [],
+  "cityVisits": [
+    {
+      "time": "11.09.2026 10:35",
+      "city": "Paris",
+      "country": "France",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    }
+  ],
   "activeVisitors": [
     {
-      "id": "v_mtwqsiv4_unm8",
-      "city": "Amsterdam",
+      "id": "v_mtwtl07l_4vhu",
+      "city": "Paris",
       "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789118262443,
-      "time": "12:17"
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789122907404,
+      "time": "10:35"
     }
   ]
 }
