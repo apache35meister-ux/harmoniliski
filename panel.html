@@ -1041,7 +1041,199 @@ async function directUnlockPanel(e) {
   </aside>
 
   <!-- Main Content -->
-  <main class="main-content">
+  
+<!-- ===== GERCEK GA4 ANALITIK WIDGET ===== -->
+<div id="ga4RealPanel" style="margin:0 0 24px 0;padding:20px;background:linear-gradient(135deg,#1a237e,#283593);border-radius:14px;border:1px solid #3949ab;">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+    <h3 style="margin:0;color:#fff;font-size:1rem;display:flex;align-items:center;gap:8px;">
+      <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" width="20" style="filter:brightness(10);" onerror="this.style.display='none'">
+      Google Analytics 4 — Gercek Veriler
+    </h3>
+    <button onclick="loadGA4Data()" style="padding:6px 14px;background:#3949ab;color:#fff;border:1px solid #5c6bc0;border-radius:6px;cursor:pointer;font-size:0.8rem;">&#x21bb; Yenile</button>
+  </div>
+  
+  <!-- Stat kartlari -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px;">
+    <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:14px;text-align:center;">
+      <div id="ga4TotalUsers" style="font-size:2rem;font-weight:700;color:#69f0ae;">—</div>
+      <div style="font-size:0.72rem;color:#b0bec5;margin-top:4px;">Toplam Kullanici</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:14px;text-align:center;">
+      <div id="ga4ActiveUsers" style="font-size:2rem;font-weight:700;color:#40c4ff;">—</div>
+      <div style="font-size:0.72rem;color:#b0bec5;margin-top:4px;">Bu Ay</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:14px;text-align:center;">
+      <div id="ga4WaClicks" style="font-size:2rem;font-weight:700;color:#ffd740;">—</div>
+      <div style="font-size:0.72rem;color:#b0bec5;margin-top:4px;">WA Tiklamalari</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:14px;text-align:center;">
+      <div id="ga4Sessions" style="font-size:2rem;font-weight:700;color:#ff6e40;">—</div>
+      <div style="font-size:0.72rem;color:#b0bec5;margin-top:4px;">Oturum</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:14px;text-align:center;">
+      <div id="ga4ConvRate" style="font-size:2rem;font-weight:700;color:#e040fb;">—</div>
+      <div style="font-size:0.72rem;color:#b0bec5;margin-top:4px;">Donusum %</div>
+    </div>
+  </div>
+
+  <!-- Durum mesaji -->
+  <div id="ga4Status" style="font-size:0.78rem;color:#90a4ae;text-align:center;margin-bottom:12px;">
+    Google hesabinizla giris yaparak gercek verileri yukleyin
+  </div>
+
+  <!-- Giris butonu -->
+  <div style="text-align:center;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+    <button onclick="signInAndLoadGA4()" id="ga4SignInBtn" 
+      style="padding:10px 20px;background:#4285f4;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:0.9rem;font-weight:600;display:flex;align-items:center;gap:8px;">
+      <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#fff" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></svg>
+      Google ile Giris Yap
+    </button>
+    <a href="https://analytics.google.com/analytics/web/#/p747J3DCKFK/reports/intelligenthome" target="_blank" rel="noopener noreferrer"
+      style="padding:10px 20px;background:#34a853;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:600;">
+      📊 GA4 Panelini Ac
+    </a>
+  </div>
+</div>
+
+<script>
+/* ===== GA4 OAUTH + DATA API ===== */
+var GA4_PROPERTY = 'G-747J3DCKFK';
+var GA4_CLIENT_ID = 'YOUR_OAUTH_CLIENT_ID'; // Google Cloud OAuth Client ID
+
+function signInAndLoadGA4() {
+  var btn = document.getElementById('ga4SignInBtn');
+  var status = document.getElementById('ga4Status');
+  
+  // Google Identity Services ile giris
+  if (typeof google !== 'undefined' && google.accounts) {
+    google.accounts.oauth2.initTokenClient({
+      client_id: GA4_CLIENT_ID,
+      scope: 'https://www.googleapis.com/auth/analytics.readonly',
+      callback: function(resp) {
+        if (resp.access_token) {
+          localStorage.setItem('ga4_access_token', resp.access_token);
+          localStorage.setItem('ga4_token_time', Date.now());
+          loadGA4Data(resp.access_token);
+          btn.textContent = 'Baglandi!';
+          btn.style.background = '#34a853';
+        }
+      }
+    }).requestAccessToken();
+  } else {
+    status.textContent = 'Google hesabinizda dogrudan goruntuleyin:';
+    window.open('https://analytics.google.com', '_blank');
+  }
+}
+
+async function loadGA4Data(accessToken) {
+  var token = accessToken || localStorage.getItem('ga4_access_token');
+  var status = document.getElementById('ga4Status');
+  
+  if (!token) {
+    status.textContent = 'Veri yuklemek icin Google ile giris yapin.';
+    return;
+  }
+  
+  // Token suresi kontrol (1 saat)
+  var tokenTime = parseInt(localStorage.getItem('ga4_token_time') || '0');
+  if (Date.now() - tokenTime > 3500000) {
+    status.textContent = 'Oturum suresi doldu. Tekrar giris yapin.';
+    localStorage.removeItem('ga4_access_token');
+    return;
+  }
+
+  status.textContent = 'Veriler yukleniyor...';
+  
+  try {
+    // GA4 Data API - son 30 gun
+    var endDate = new Date().toISOString().slice(0,10);
+    var startDate = new Date(Date.now() - 30*24*60*60*1000).toISOString().slice(0,10);
+    
+    // Property ID - Measurement ID'den al
+    // Not: Property numeric ID gerekli, simdilik localStorage'dan al
+    var propId = localStorage.getItem('ga4_property_id') || '';
+    if (!propId) {
+      propId = prompt('GA4 Property ID girin (Admin > Property > Property ID, sayi olarak):');
+      if (propId) localStorage.setItem('ga4_property_id', propId.trim());
+      else { status.textContent = 'Property ID girilmedi.'; return; }
+    }
+
+    var response = await fetch(
+      'https://analyticsdata.googleapis.com/v1beta/properties/' + propId + ':runReport',
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + token,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          dateRanges: [{ startDate: startDate, endDate: endDate }],
+          metrics: [
+            { name: 'totalUsers' },
+            { name: 'sessions' },
+            { name: 'eventCount' }
+          ],
+          dimensionFilter: {}
+        })
+      }
+    );
+    
+    if (!response.ok) throw new Error('API hatasi: ' + response.status);
+    
+    var data = await response.json();
+    var row = data.rows && data.rows[0] ? data.rows[0].metricValues : [];
+    
+    var totalUsers = row[0] ? parseInt(row[0].value).toLocaleString('tr-TR') : '0';
+    var sessions = row[1] ? parseInt(row[1].value).toLocaleString('tr-TR') : '0';
+    var events = row[2] ? parseInt(row[2].value).toLocaleString('tr-TR') : '0';
+    
+    // WA clicks icin ayri sorgu
+    var waResp = await fetch(
+      'https://analyticsdata.googleapis.com/v1beta/properties/' + propId + ':runReport',
+      {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dateRanges: [{ startDate: startDate, endDate: endDate }],
+          metrics: [{ name: 'eventCount' }],
+          dimensionFilter: {
+            filter: {
+              fieldName: 'eventName',
+              stringFilter: { value: 'whatsapp_click' }
+            }
+          }
+        })
+      }
+    );
+    var waData = await waResp.json();
+    var waClicks = waData.rows && waData.rows[0] ? parseInt(waData.rows[0].metricValues[0].value) : 0;
+    var convRate = row[0] && parseInt(row[0].value) > 0 
+      ? ((waClicks / parseInt(row[0].value)) * 100).toFixed(1) + '%' 
+      : '0%';
+    
+    document.getElementById('ga4TotalUsers').textContent = totalUsers;
+    document.getElementById('ga4ActiveUsers').textContent = totalUsers;
+    document.getElementById('ga4Sessions').textContent = sessions;
+    document.getElementById('ga4WaClicks').textContent = waClicks.toLocaleString('tr-TR');
+    document.getElementById('ga4ConvRate').textContent = convRate;
+    status.textContent = 'Son 30 gun | ' + startDate + ' - ' + endDate + ' | Gercek GA4 verisi';
+    status.style.color = '#69f0ae';
+    
+  } catch(e) {
+    status.textContent = 'Hata: ' + e.message + ' | Dogrudan GA4 panelini kullarin.';
+    status.style.color = '#ff5252';
+    console.error('GA4 API hatasi:', e);
+  }
+}
+
+// Sayfa yuklenince varsa token ile yukle
+if (localStorage.getItem('ga4_access_token')) {
+  loadGA4Data();
+}
+</script>
+<!-- ===== GA4 WIDGET SONU ===== -->
+
+<main class="main-content">
 
     <!-- TAB 1: TERAPİST YÖNETİMİ -->
     <div id="therapistsTab" class="tab-section active">
