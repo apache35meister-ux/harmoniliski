@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 ﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -3263,8 +3264,8 @@
         const telNumber = formatPhone(t.wa || t.whatsapp);
 
         return `
-          <article class="card-therapist" data-id="${t.id}" itemscope itemtype="https://schema.org/Person">
-            <div class="card-image-wrap" data-id="${t.id}" onclick="openPhotoModal(${t.id})" title="Fotoğrafları ve Profili İncele">
+          <article class="card-therapist" data-data-id="${t.id}" itemscope itemtype="https://schema.org/Person">
+            <div class="card-image-wrap" data-data-id="${t.id}" onclick="openPhotoModal(${t.id})" title="Fotoğrafları ve Profili İncele">
               <img src="${t.img || t.image}" alt="${t.name} - ${t.city} Escort Escort" itemprop="image" class="card-img" onerror="this.onerror=null; this.src='https://harmoniliski.com/images/profiles/yeliz.jpg';" loading="lazy">
               <div class="card-vignette"></div>
               
