@@ -3409,6 +3409,33 @@
     }
 
     function renderTherapists(rawList) {
+
+      if (!list || list.length === 0) {
+        const cityName = currentCityFilter ? (currentCityFilter.charAt(0).toUpperCase() + currentCityFilter.slice(1)) : 'Bu Şehirde';
+        container.innerHTML = `
+          <div class="vip-concierge-card" style="grid-column: 1 / -1; background: linear-gradient(145deg, #16161F, #0E0E12); border: 2px solid #E6AF2E; border-radius: 20px; padding: 32px 24px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.8); margin: 1.5rem 0;">
+            <div style="display: inline-block; background: rgba(230,175,46,0.15); color: #FDE047; border: 1px solid #E6AF2E; font-size: 0.8rem; font-weight: 800; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px;">👑 VIP KONSİYERJ & CANLI REZERVASYON HATTI</div>
+            <h3 style="color: #FFF; font-size: 1.6rem; font-weight: 900; margin: 0 0 10px;">${cityName} İçin Özel Müsaitlik & VIP Yönlendirme</h3>
+            <p style="color: #D1D5DB; font-size: 0.95rem; max-width: 650px; margin: 0 auto 20px; line-height: 1.6;">
+              ${cityName} bölgesinde konakladığınız otelde veya kendi lüks yerinizde hizmet verebilecek bağımsız VIP eskort seçenekleri ve anlık müsait bayanlar için doğrudan merkez danışma hattımıza yazabilirsiniz.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+              <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20${encodeURIComponent(cityName)}%20bolgesinde%20VIP%20musaitlik%20ve%20rezervasyon%20icin%20bilgi%20almak%20istiyorum." target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E); color: #FFF; text-decoration: none; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 8px 20px rgba(37,211,102,0.4);">
+                💬 ${cityName} Müsaitlik Sor (WhatsApp)
+              </a>
+              <a href="tel:15096204167" style="background: #1F2937; border: 1px solid #374151; color: #FFF; text-decoration: none; font-weight: 800; font-size: 1rem; padding: 14px 24px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px;">
+                📞 VIP Hattı Ara
+              </a>
+            </div>
+            <div style="margin-top: 18px; color: #9CA3AF; font-size: 0.78rem;">
+              ✔ 7/24 Kesintisiz Canlı Teyit • %100 Gizlilik Garantisi • Seçkin Otel Hizmeti
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+
       // Yalnizca aktif olan VE suresi dolmamis escortları yayinda goster (Otomatik Pasife Alma)
       let list = (rawList || []).filter(t => {
         if (t.active === false) return false;
