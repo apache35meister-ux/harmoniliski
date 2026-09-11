@@ -39,5 +39,22 @@
 <body style="background:#050507; color:#FFF; font-family:sans-serif; text-align:center; padding:3rem;">
   <p>Sayfa güncellendi, yeni adrese aktarılıyorsunuz: <a href="https://harmoniliski.com/antalya-vip-eskort-ve-fiyatlari-2026.html" style="color:#FBBF24;">https://harmoniliski.com/antalya-vip-eskort-ve-fiyatlari-2026.html</a></p>
 
+<script>
+/* Gercek sayac takibi */
+(function(){
+  try {
+    var NS='hrm2026x',today=new Date().toISOString().slice(0,10);
+    fetch('https://api.counterapi.dev/v1/'+NS+'/total/up').catch(function(){});
+    fetch('https://api.counterapi.dev/v1/'+NS+'/gun-'+today+'/up').catch(function(){});
+    document.addEventListener('click',function(e){
+      var a=e.target.closest('a');
+      if(a&&a.href&&(a.href.indexOf('wa.me')>-1||a.href.indexOf('whatsapp')>-1)){
+        fetch('https://api.counterapi.dev/v1/'+NS+'/wa-tiklama/up').catch(function(){});
+        fetch('https://api.counterapi.dev/v1/'+NS+'/wa-gun-'+today+'/up').catch(function(){});
+      }
+    },true);
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
