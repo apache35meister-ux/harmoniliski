@@ -961,7 +961,7 @@ async function directUnlockPanel(e) {
           } else {
             if (err) {
               err.style.display = 'block';
-              err.textContent = '❌ Hatalı şifre! (Şifreniz: hakan763)';
+              err.textContent = 'Hatali sifre girdiniz. Lutfen tekrar deneyin.';
             }
             if (passInput) passInput.focus();
             return false;
