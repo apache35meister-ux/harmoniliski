@@ -3493,6 +3493,14 @@
     window.deleteItem = deleteItem;
     window.toggleVitrin = toggleVitrin;
     window.exportCallLogsToCSV = exportCallLogsToCSV;
+    async function resetLiveAnalytics() {
+      if (!confirm('Canlı istatistikleri tamamen sıfırlamak istediğinize emin misiniz?')) return;
+      ['zenescort_real_visits', 'zenescort_real_wa_clicks', 'zenescort_real_calls', 'zenescort_t_clicks', 'zenescort_t_calls', 'zenescort_live_call_logs', 'zenescort_city_visits', 'zenescort_city_counts', 'zenescort_active_visitors'].forEach(key => localStorage.removeItem(key));
+      await renderCityVisitorStats();
+      await renderWaTable();
+      alert('✓ Bu tarayıcıdaki istatistikler sıfırlandı!');
+    }
+
     window.filterTable = filterTable;
     window.adminLogout = adminLogout;
     window.handleAdminLogin = handleAdminLogin;
