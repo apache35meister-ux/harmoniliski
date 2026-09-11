@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 5,
   "totalCalls": 0,
-  "totalVisits": 46,
+  "totalVisits": 47,
   "lastUpdated": "11.09.2026 10:15",
   "tClicks": {
     "1788428841293": 1,
@@ -14,7 +14,8 @@
     "Paris": 2,
     "Izmir": 42,
     "Washington": 1,
-    "Istanbul": 1
+    "Istanbul": 1,
+    "Mumbai": 1
   },
   "logs": [
     {
@@ -49,6 +50,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11.09.2026 14:22",
+      "city": "Mumbai",
+      "country": "IN",
+      "device": "Masaüstü 💻",
+      "page": "index.html"
+    },
     {
       "time": "11.09.2026 17:20",
       "city": "Izmir",
@@ -373,6 +381,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "v_mtx1q0ul_cx3y",
+      "city": "Mumbai",
+      "device": "Masaüstü 💻",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789136576476,
+      "time": "14:22"
+    },
     {
       "id": "v_mtwunug1_v0r7",
       "city": "Izmir",
