@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 3,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "lastUpdated": "10.09.2026 15:29",
   "tClicks": {
     "1788429948834": 1,
@@ -14,7 +14,8 @@
   },
   "cityCounts": {
     "Izmir": 11,
-    "Kane": 1
+    "Kane": 1,
+    "Milan": 1
   },
   "logs": [
     {
@@ -61,6 +62,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11.09.2026 07:28",
+      "city": "Milan",
+      "country": "Italy",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "11.09.2026 01:56",
       "city": "Izmir",
@@ -148,12 +156,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mtwaiowh_lv4h",
-      "city": "Ankara",
+      "id": "v_mtwghvtj_ki8k",
+      "city": "Milan",
       "device": "iPhone 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789090929544,
-      "time": "04:42"
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789100925774,
+      "time": "07:28"
     }
   ]
 }
