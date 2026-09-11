@@ -795,17 +795,17 @@ function isValidSession() {
     return false;
   }
 }
-
 async function directUnlockPanel(e) {
-  // Token girilmisse tarayiciya kaydet
+  // Guvenli otomatik token baglantisi
+async function directUnlockPanel(e) {
+  // Token tarayici hafizasinda varsa kullan
   const tokInput = document.getElementById('adminTokenInput');
   if (tokInput && tokInput.value.trim()) {
     setActiveGitHubToken(tokInput.value.trim());
-    GITHUB_TOKEN = getActiveGitHubToken();
   }
-
-  if (e && e.preventDefault) e.preventDefault();
-
+  GITHUB_TOKEN = getActiveGitHubToken();
+  setActiveGitHubToken(t);
+  GITHUB_TOKEN = t;
   // Kilit kontrolu
   if (Date.now() < lockoutUntil) {
     const remaining = Math.ceil((lockoutUntil - Date.now()) / 1000);
