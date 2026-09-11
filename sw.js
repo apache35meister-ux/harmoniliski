@@ -21,7 +21,6 @@ self.addEventListener('fetch', event => {
     event.request.method !== 'GET' ||
     event.request.url.includes('api.github.com') ||
     event.request.url.includes('therapists.json') ||
-    event.request.url.includes('analytics.json') ||
     event.request.url.includes('panel.html') ||
     event.request.url.includes('admin.html') ||
     event.request.url.includes('raw.githubusercontent') ||
