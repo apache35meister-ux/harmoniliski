@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-747J3DCKFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-747J3DCKFK');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -3881,6 +3889,21 @@
     }, true);
   } catch(e){}
 })();
+</script>
+<script>
+/* WhatsApp Tiklama Takibi - GA4 */
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (a && a.href && (a.href.indexOf('wa.me') > -1 || a.href.indexOf('whatsapp') > -1)) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'whatsapp_click', {
+        'event_category': 'iletisim',
+        'event_label': window.location.pathname.replace('.html','').replace('/','') || 'anasayfa',
+        'value': 1
+      });
+    }
+  }
+}, true);
 </script>
 </body>
 </html>
