@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 18,
   "totalCalls": 7,
-  "totalVisits": 142,
+  "totalVisits": 143,
   "lastUpdated": "12.09.2026 03:45",
   "tClicks": {
     "1788738592899": 3,
@@ -24,37 +24,202 @@
     "İstanbul": 41,
     "Ankara": 28,
     "Muğla (Bodrum)": 15,
-    "Antalya": 12
+    "Antalya": 12,
+    "Izmir": 1
   },
   "logs": [
-    { "time": "12.09.2026 03:50", "name": "Zeynep", "city": "Ankara", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "12.09.2026 03:28", "name": "Merve", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "12.09.2026 03:14", "name": "Peri", "city": "Muğla (Bodrum)", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "12.09.2026 02:55", "name": "Ayla", "city": "Ankara", "type": "📞 Telefon Görüşmesi" },
-    { "time": "12.09.2026 02:40", "name": "Nisa", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "12.09.2026 02:18", "name": "Pınar", "city": "Uşak", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "12.09.2026 01:50", "name": "Melis", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "12.09.2026 01:22", "name": "Burçak", "city": "Aydın", "type": "📞 Telefon Görüşmesi" },
-    { "time": "12.09.2026 00:48", "name": "Sıla", "city": "İstanbul", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "11.09.2026 23:35", "name": "Merve", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "11.09.2026 22:50", "name": "Peri", "city": "Muğla (Bodrum)", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "11.09.2026 22:15", "name": "Ayla", "city": "Ankara", "type": "💬 WhatsApp Randevu Talebi" },
-    { "time": "11.09.2026 21:40", "name": "Nisa", "city": "İzmir", "type": "📞 Telefon Görüşmesi" }
+    {
+      "time": "12.09.2026 03:50",
+      "name": "Zeynep",
+      "city": "Ankara",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "12.09.2026 03:28",
+      "name": "Merve",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "12.09.2026 03:14",
+      "name": "Peri",
+      "city": "Muğla (Bodrum)",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "12.09.2026 02:55",
+      "name": "Ayla",
+      "city": "Ankara",
+      "type": "📞 Telefon Görüşmesi"
+    },
+    {
+      "time": "12.09.2026 02:40",
+      "name": "Nisa",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "12.09.2026 02:18",
+      "name": "Pınar",
+      "city": "Uşak",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "12.09.2026 01:50",
+      "name": "Melis",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "12.09.2026 01:22",
+      "name": "Burçak",
+      "city": "Aydın",
+      "type": "📞 Telefon Görüşmesi"
+    },
+    {
+      "time": "12.09.2026 00:48",
+      "name": "Sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11.09.2026 23:35",
+      "name": "Merve",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11.09.2026 22:50",
+      "name": "Peri",
+      "city": "Muğla (Bodrum)",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11.09.2026 22:15",
+      "name": "Ayla",
+      "city": "Ankara",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11.09.2026 21:40",
+      "name": "Nisa",
+      "city": "İzmir",
+      "type": "📞 Telefon Görüşmesi"
+    }
   ],
   "cityVisits": [
-    { "time": "12.09.2026 03:32", "city": "İzmir (Konak)", "country": "Türkiye", "device": "Mobil 📱", "page": "izmir-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 03:25", "city": "İstanbul (Kadıköy)", "country": "Türkiye", "device": "Mobil 📱", "page": "kadikoy-moda-bagimsiz-vip-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 03:18", "city": "Muğla (Bodrum)", "country": "Türkiye", "device": "Mobil 📱", "page": "bodrum-yalikavak-turkbuku-vip-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 03:02", "city": "Ankara (Çankaya)", "country": "Türkiye", "device": "Masaüstü 💻", "page": "ankara-cankaya-kendi-yerinde-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 02:45", "city": "İzmir (Alsancak)", "country": "Türkiye", "device": "Mobil 📱", "page": "alsancak-kendi-yerinde-vip-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 02:30", "city": "Antalya (Lara)", "country": "Türkiye", "device": "Mobil 📱", "page": "antalya-lara-sirinyali-vip-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 02:10", "city": "Bursa (Nilüfer)", "country": "Türkiye", "device": "Masaüstü 💻", "page": "bursa-nilufer-ozluce-vip-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 01:45", "city": "Adana (Seyhan)", "country": "Türkiye", "device": "Mobil 📱", "page": "adana-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 01:15", "city": "Aydın (Kuşadası)", "country": "Türkiye", "device": "Mobil 📱", "page": "kusadasi-eskort.html", "status": "Tamamlandı" },
-    { "time": "12.09.2026 00:50", "city": "İstanbul (Beşiktaş)", "country": "Türkiye", "device": "Masaüstü 💻", "page": "besiktas-levent-etiler-vip-eskort.html", "status": "Tamamlandı" }
+    {
+      "time": "12.09.2026 03:58",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
+      "time": "12.09.2026 03:32",
+      "city": "İzmir (Konak)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "izmir-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 03:25",
+      "city": "İstanbul (Kadıköy)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "kadikoy-moda-bagimsiz-vip-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 03:18",
+      "city": "Muğla (Bodrum)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "bodrum-yalikavak-turkbuku-vip-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 03:02",
+      "city": "Ankara (Çankaya)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "ankara-cankaya-kendi-yerinde-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 02:45",
+      "city": "İzmir (Alsancak)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "alsancak-kendi-yerinde-vip-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 02:30",
+      "city": "Antalya (Lara)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "antalya-lara-sirinyali-vip-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 02:10",
+      "city": "Bursa (Nilüfer)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "bursa-nilufer-ozluce-vip-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 01:45",
+      "city": "Adana (Seyhan)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "adana-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 01:15",
+      "city": "Aydın (Kuşadası)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "kusadasi-eskort.html",
+      "status": "Tamamlandı"
+    },
+    {
+      "time": "12.09.2026 00:50",
+      "city": "İstanbul (Beşiktaş)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "besiktas-levent-etiler-vip-eskort.html",
+      "status": "Tamamlandı"
+    }
   ],
   "activeVisitors": [
-    { "id": "v_admin_radar", "city": "İzmir", "device": "Masaüstü 💻", "activity": "Yönetim Panelinde Canlı", "lastSeen": 1791019400000, "time": "Şu an sitede" },
-    { "id": "v_mob_ist", "city": "İstanbul (Kadıköy)", "device": "iPhone 📱", "activity": "Kadıköy VIP Profillerini İnceliyor", "lastSeen": 1791019380000, "time": "1 dk önce" }
+    {
+      "id": "v_mtxoew00_yjuv",
+      "city": "Izmir",
+      "device": "iPhone 📱",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789174687694,
+      "time": "03:58"
+    },
+    {
+      "id": "v_admin_radar",
+      "city": "İzmir",
+      "device": "Masaüstü 💻",
+      "activity": "Yönetim Panelinde Canlı",
+      "lastSeen": 1791019400000,
+      "time": "Şu an sitede"
+    },
+    {
+      "id": "v_mob_ist",
+      "city": "İstanbul (Kadıköy)",
+      "device": "iPhone 📱",
+      "activity": "Kadıköy VIP Profillerini İnceliyor",
+      "lastSeen": 1791019380000,
+      "time": "1 dk önce"
+    }
   ]
 }
