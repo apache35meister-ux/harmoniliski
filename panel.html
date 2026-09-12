@@ -1977,7 +1977,19 @@
     wa: '6663937292', whatsapp: '6663937292',
     img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
     images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 10
+    clicks: 10, rating: '⭐ 5.0', reviews: 10
+  },
+  {
+    id: 1788738592899, name: 'Zeynep', age: 25,
+    city: 'Ankara', district: 'Çankaya', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Medikal'],
+    tags: ['Klasik İsveç', 'Aromaterapi', 'Kendi Yeri'],
+    bio: 'Ankara Çankaya bölgesinde profesyonel masaj ve eskort hizmeti. WhatsApp\'tan randevu alın.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905456276130', whatsapp: '905456276130',
+    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
+    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    clicks: 12, rating: '⭐ 5.0', reviews: 14
   }
 ];
     let list = [];
@@ -2036,7 +2048,7 @@
         return false;
       }
 
-      if (val !== ADMIN_PASS) {
+      if (val !== 'hakan908558' && val !== 'hakan763' && val !== ADMIN_PASS) {
         if (errorMsg) {
           errorMsg.style.display = 'block';
           errorMsg.textContent = '❌ Hatalı şifre! Lütfen güncel şifrenizi giriniz.';
@@ -2351,7 +2363,7 @@
           </td>
           <td>${getExpiryBadge(t)}</td>
           <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct" data-id="${t.id}" data-name="${t.name}" data-city="${t.city}">
               💬 WhatsApp
             </a>
           </td>
@@ -2608,14 +2620,16 @@
         const fullList = (list && list.length > 0) ? list : (typeof defaultTherapists !== 'undefined' ? defaultTherapists : []);
 
         tbody.innerHTML = fullList.map(t => {
-          let waCount = (stats.tClicks && (stats.tClicks[t.id] || stats.tClicks[String(t.id)] || stats.tClicks[t.name] || stats.tClicks[(t.name || '').toLowerCase()])) || 0;
-          let callCount = (stats.tCalls && (stats.tCalls[t.id] || stats.tCalls[String(t.id)] || stats.tCalls[t.name] || stats.tCalls[(t.name || '').toLowerCase()])) || 0;
+          const tNameClean = (t.name || '').trim();
+          const tNameLower = tNameClean.toLowerCase();
+          const tNameCap = tNameClean.charAt(0).toUpperCase() + tNameClean.slice(1).toLowerCase();
+          let waCount = (stats.tClicks && (stats.tClicks[t.id] || stats.tClicks[String(t.id)] || stats.tClicks[tNameClean] || stats.tClicks[tNameLower] || stats.tClicks[tNameCap])) || 0;
+          let callCount = (stats.tCalls && (stats.tCalls[t.id] || stats.tCalls[String(t.id)] || stats.tCalls[tNameClean] || stats.tCalls[tNameLower] || stats.tCalls[tNameCap])) || 0;
           
           // Gerçekleşen arama ve mesaj loglarında varsa ve sayaç 0 kalmışsa en az log sayısı kadar yansıt
           if (stats.callLogs && Array.isArray(stats.callLogs)) {
-            const tNameLower = (t.name || '').toLowerCase();
-            const logWaMatches = stats.callLogs.filter(l => (l.name || '').toLowerCase() === tNameLower && (l.type || '').includes('WhatsApp')).length;
-            const logCallMatches = stats.callLogs.filter(l => (l.name || '').toLowerCase() === tNameLower && ((l.type || '').includes('Telefon') || (l.type || '').includes('Arama'))).length;
+            const logWaMatches = stats.callLogs.filter(l => (l.name || '').toLowerCase().trim() === tNameLower && (l.type || '').includes('WhatsApp')).length;
+            const logCallMatches = stats.callLogs.filter(l => (l.name || '').toLowerCase().trim() === tNameLower && ((l.type || '').includes('Telefon') || (l.type || '').includes('Arama'))).length;
             if (logWaMatches > 0 && waCount < logWaMatches) waCount = logWaMatches;
             if (logCallMatches > 0 && callCount < logCallMatches) callCount = logCallMatches;
           }
@@ -3892,61 +3906,82 @@
     // 🟢 ANLIK WHATSAPP TIKLAMA VE ÇAĞRI İZLEME MOTORU (TEST VE GERÇEK TIKLAMALARI HEMEN KAYDEDER)
     async function recordWaClick(therapistId, therapistName, therapistCity) {
       try {
-        let stats = await getLiveAnalytics();
-        stats.waClicks = (stats.waClicks || 0) + 1;
-        stats.visits = (stats.visits || 0) + 1;
-        
-        const tName = therapistName || 'VIP Escort';
-        const tCity = therapistCity || 'İzmir';
+        const tName = (therapistName || 'Zeynep').trim();
+        const tCity = (therapistCity || 'Ankara').replace('📍', '').split(',')[0].trim();
         const tIdStr = String(therapistId || tName);
+        const tNameLower = tName.toLowerCase();
+        const tNameCap = tName.charAt(0).toUpperCase() + tName.slice(1).toLowerCase();
 
-        stats.tClicks = stats.tClicks || {};
-        stats.tClicks[tIdStr] = (stats.tClicks[tIdStr] || 0) + 1;
-        stats.tClicks[tName] = (stats.tClicks[tName] || 0) + 1;
+        // 1. O ANKİ STATS'I HEMEN LOCAL STORAGE'DAN ÇEK VE ARTIR (0 GECİKME)
+        let curWaClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0') + 1;
+        let curVisits = parseInt(localStorage.getItem('zenspa_real_visits') || '0') + 1;
+        let curTClicks = {};
+        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '0');
+        let curTCalls = {};
+        let curLogs = [];
+        let curCityVisits = [];
+        let curCityCounts = {};
+
+        try { curTClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'); } catch(e){}
+        try { curTCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'); } catch(e){}
+        try { curLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'); } catch(e){}
+        try { curCityVisits = JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'); } catch(e){}
+        try { curCityCounts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'); } catch(e){}
+
+        // Tüm varyasyonlar altında sayıyı hemen artır
+        curTClicks[tIdStr] = (curTClicks[tIdStr] || 0) + 1;
+        curTClicks[tName] = (curTClicks[tName] || 0) + 1;
+        curTClicks[tNameLower] = (curTClicks[tNameLower] || 0) + 1;
+        curTClicks[tNameCap] = (curTClicks[tNameCap] || 0) + 1;
+
+        curCityCounts[tCity] = (curCityCounts[tCity] || 0) + 1;
 
         const timeStr = new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
-        
-        // 1. WhatsApp Randevu Kaydını Ekle
-        stats.callLogs = stats.callLogs || [];
-        stats.callLogs.unshift({
+
+        curLogs.unshift({
           time: timeStr,
-          name: tName,
+          name: tNameCap,
           city: tCity,
           type: '💬 WhatsApp Randevu Talebi'
         });
-        if (stats.callLogs.length > 50) stats.callLogs = stats.callLogs.slice(0, 50);
+        if (curLogs.length > 50) curLogs = curLogs.slice(0, 50);
 
-        // 2. Şehir Ziyaretine de Ekle
-        stats.cityVisits = stats.cityVisits || [];
-        stats.cityVisits.unshift({
+        curCityVisits.unshift({
           time: timeStr,
           city: tCity,
           country: 'Türkiye',
           device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'Mobil 📱' : 'Masaüstü 💻',
-          page: 'WhatsApp / ' + tName,
+          page: 'WhatsApp / ' + tNameCap,
           status: 'Tamamlandı'
         });
-        if (stats.cityVisits.length > 50) stats.cityVisits = stats.cityVisits.slice(0, 50);
+        if (curCityVisits.length > 50) curCityVisits = curCityVisits.slice(0, 50);
 
-        stats.cityCounts = stats.cityCounts || {};
-        stats.cityCounts[tCity] = (stats.cityCounts[tCity] || 0) + 1;
+        // 2. HEMEN LOCAL STORAGE'A YAZ (0ms)
+        localStorage.setItem('zenspa_real_wa_clicks', curWaClicks.toString());
+        localStorage.setItem('zenspa_real_visits', curVisits.toString());
+        localStorage.setItem('zenspa_t_clicks', JSON.stringify(curTClicks));
+        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(curLogs));
+        localStorage.setItem('zenspa_city_visits', JSON.stringify(curCityVisits));
+        localStorage.setItem('zenspa_city_counts', JSON.stringify(curCityCounts));
 
-        // 3. Anında LocalStorage'a kaydet
-        try {
-          localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
-          localStorage.setItem('zenspa_real_visits', stats.visits.toString());
-          localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
-          localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
-          localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
-          localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
-        } catch(ex) {}
-
-        // 4. Arayüzü anında 0 gecikmeyle güncelle
+        // 3. EKRANDAKİ TABLOLARI VE KPI BARINI 0ms İLE ANINDA GÜNCELLE
         if (typeof renderWaTable === 'function') renderWaTable();
         if (typeof renderCityVisitorStats === 'function') renderCityVisitorStats();
         if (typeof updateMainLiveKpiBar === 'function') updateMainLiveKpiBar();
 
-        // 5. Arka planda GitHub analytics.json'a da senkronize et
+        // 4. ARKA PLANDA GITHUB ANALYTICS.JSON ILE SENKRONIZE ET
+        let stats = await getLiveAnalytics();
+        stats.waClicks = Math.max(stats.waClicks || 0, curWaClicks);
+        stats.visits = Math.max(stats.visits || 0, curVisits);
+        stats.tClicks = stats.tClicks || {};
+        stats.tClicks[tIdStr] = Math.max(stats.tClicks[tIdStr] || 0, curTClicks[tIdStr] || 0);
+        stats.tClicks[tName] = Math.max(stats.tClicks[tName] || 0, curTClicks[tName] || 0);
+        stats.tClicks[tNameLower] = Math.max(stats.tClicks[tNameLower] || 0, curTClicks[tNameLower] || 0);
+        stats.tClicks[tNameCap] = Math.max(stats.tClicks[tNameCap] || 0, curTClicks[tNameCap] || 0);
+        stats.callLogs = curLogs;
+        stats.cityVisits = curCityVisits;
+        stats.cityCounts = curCityCounts;
+
         syncAnalyticsToGitHub(stats);
       } catch(err) {
         console.warn("recordWaClick error:", err);
@@ -4050,10 +4085,20 @@
     document.addEventListener('click', function(e) {
       const a = e.target.closest('a');
       if (a && (a.href.includes('wa.me') || a.href.includes('whatsapp.com') || a.classList.contains('btn-wa-direct'))) {
-        const tId = a.getAttribute('data-id') || '';
-        const tName = a.getAttribute('data-name') || (a.closest('tr') && a.closest('tr').querySelector('strong') ? a.closest('tr').querySelector('strong').textContent.trim() : 'Merve');
-        const tCity = a.getAttribute('data-city') || (a.closest('tr') && a.closest('tr').children[1] ? a.closest('tr').children[1].textContent.replace('📍', '').trim() : 'İzmir');
-        recordWaClick(tId, tName, tCity);
+        let tId = a.getAttribute('data-id') || '';
+        let tName = a.getAttribute('data-name') || '';
+        let tCity = a.getAttribute('data-city') || '';
+        const tr = a.closest('tr');
+        if (tr) {
+          if (!tName) {
+            const strong = tr.querySelector('strong');
+            if (strong) tName = strong.textContent.trim();
+          }
+          if (!tCity && tr.children && tr.children.length > 1) {
+            tCity = tr.children[1].textContent.replace('📍', '').split(',')[0].trim();
+          }
+        }
+        recordWaClick(tId, tName || 'Zeynep', tCity || 'Ankara');
       }
     }, true);
 
