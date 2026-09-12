@@ -2560,16 +2560,6 @@
           } catch(ex) {}
         }
       } catch(e) {}
-            localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
-            localStorage.setItem('zenspa_real_visits', stats.visits.toString());
-            localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
-            localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
-            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
-            localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
-            localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
-          } catch(ex) {}
-        }
-      } catch(e) {}
 
       // 4. Canli Aktif Ziyaretci Radari: En az su anki yonetici oturumu aktif gosterilsin
       const now = Date.now();
