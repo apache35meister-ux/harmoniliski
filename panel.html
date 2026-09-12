@@ -2510,27 +2510,51 @@
         }
 
         if (cloudStats) {
-          if (typeof cloudStats.totalWaClicks === 'number') stats.waClicks = cloudStats.totalWaClicks;
-          if (typeof cloudStats.totalCalls === 'number') stats.callClicks = cloudStats.totalCalls;
-          if (typeof cloudStats.totalVisits === 'number') stats.visits = cloudStats.totalVisits;
+          // Sayilari yerel ve bulut arasinda en guncel ve yuksek olanla koru (Asla taze tiklamayi 0 ile ezme!)
+          stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
+          stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
+          stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
 
           if (cloudStats.tClicks && typeof cloudStats.tClicks === 'object') {
-            stats.tClicks = cloudStats.tClicks;
+            for (const [k, v] of Object.entries(cloudStats.tClicks)) {
+              stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, v || 0);
+            }
           }
           if (cloudStats.tCalls && typeof cloudStats.tCalls === 'object') {
-            stats.tCalls = cloudStats.tCalls;
+            for (const [k, v] of Object.entries(cloudStats.tCalls)) {
+              stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, v || 0);
+            }
           }
 
+          // Arama ve mesaj loglarini birlestir (Yerel yeni loglar asla kaybolmasin!)
+          const seenKeys = new Set();
+          const mergedLogs = [];
+          (stats.callLogs || []).forEach(l => {
+            const key = (l.time||'') + (l.name||'') + (l.type||'');
+            if (!seenKeys.has(key)) {
+              seenKeys.add(key);
+              mergedLogs.push(l);
+            }
+          });
           if (Array.isArray(cloudStats.logs)) {
-            stats.callLogs = cloudStats.logs;
+            cloudStats.logs.forEach(l => {
+              const key = (l.time||'') + (l.name||'') + (l.type||'');
+              if (!seenKeys.has(key)) {
+                seenKeys.add(key);
+                mergedLogs.push(l);
+              }
+            });
           }
+          stats.callLogs = mergedLogs.slice(0, 50);
 
           if (Array.isArray(cloudStats.cityVisits)) {
             stats.cityVisits = cloudStats.cityVisits;
           }
 
           if (cloudStats.cityCounts && typeof cloudStats.cityCounts === 'object') {
-            stats.cityCounts = cloudStats.cityCounts;
+            for (const [c, cnt] of Object.entries(cloudStats.cityCounts)) {
+              stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cnt || 0);
+            }
           }
 
           // Canli aktif ziyaretcileri birlestir
