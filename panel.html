@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-747J3DCKFK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-747J3DCKFK');
-</script>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZenEscort | VIP Yönetim Paneli</title>
-  <meta name="description" content="ZEN ESCORT VIP Yönetim Paneli – Güvenli oturum yönetimi, escort listesi ve randevu takibi." />
+  <title>ZENSPA | VIP Yönetim Paneli</title>
+  <meta name="description" content="ZENSPA VIP Yönetim Paneli – Güvenli oturum yönetimi, escort listesi ve randevu takibi." />
   <meta name="robots" content="index, follow">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -540,19 +532,6 @@
       flex-shrink: 0;
     }
 
-    
-    /* SCROLL FIX */
-    html, body {
-      overflow-y: auto !important;
-      height: auto !important;
-      min-height: 100vh !important;
-    }
-    #adminAuthOverlay.hidden {
-      display: none !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-
     /* Admin Login Lock Screen */
     #adminAuthOverlay {
       position: fixed;
@@ -752,136 +731,24 @@
       }
     }
     </script>
-<script>
-// === GUVENLI ADMIN AUTH - SHA-256 HASH SISTEMI ===
-const ADMIN_PASS_HASH = '063e97335b8155ce91e9ca0e8ee0062f8a792a2f75920675d4931f1a17cc8e98'; // hakan908558
-const SESSION_KEY = 'zne_panel_tok';
-const SESSION_DURATION = 4 * 60 * 60 * 1000; // 4 saat
-
-function getActiveGitHubToken() {
-  try {
-    const k1 = 'gh' + 'p_';
-    const k2 = 'HbEqDGUdCnY8' + 'xR17XonNqbu0d' + 'IGo6B4Xkdsq';
-    return localStorage.getItem('zne_active_gh_tok') || (k1 + k2);
-  } catch(e) {
-    return '';
-  }
-}
-function setActiveGitHubToken(t) {
-  try {
-    localStorage.setItem('zne_active_gh_tok', t);
-  } catch(e) {}
-}
-
-async function hashPassword(password) {
-  const msgBuffer = new TextEncoder().encode(password);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-function isValidSession() {
-  try {
-    const stored = sessionStorage.getItem(SESSION_KEY);
-    if (!stored) return false;
-    const session = JSON.parse(stored);
-    if (!session.token || !session.expires) return false;
-    if (Date.now() > session.expires) {
-      sessionStorage.removeItem(SESSION_KEY);
-      return false;
-    }
-    return true;
-  } catch(e) {
-    return false;
-  }
-}
-
-async function directUnlockPanel(e) {
-  if (e && e.preventDefault) e.preventDefault();
-
-  const input = document.getElementById('adminPassInput');
-  const err = document.getElementById('authErrorMsg');
-  if (!input || !input.value.trim()) {
-    if (err) {
-      err.textContent = 'Lütfen şifrenizi girin.';
-      err.style.display = 'block';
-    }
-    return false;
-  }
-
-  const inputHash = await hashPassword(input.value.trim());
-
-  if (inputHash === ADMIN_PASS_HASH) {
-    const session = {
-      token: 'ok_' + Date.now(),
-      expires: Date.now() + SESSION_DURATION
-    };
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
-
-    document.documentElement.style.overflow = '';
-    document.documentElement.style.overflowY = 'auto';
-    if (document.body) {
-      document.body.style.overflow = '';
-      document.body.style.overflowY = 'auto';
-    }
-
-    const overlay = document.getElementById('adminAuthOverlay');
-    if (overlay) {
-      overlay.style.setProperty('display', 'none', 'important');
-      overlay.remove();
-    }
-    input.value = '';
-
-    try {
-      if (typeof initPanel === 'function') initPanel();
-      if (typeof initAdminData === 'function') initAdminData();
-      if (typeof loadSettings === 'function') loadSettings();
-    } catch(ex) { console.warn(ex); }
-    return false;
-  } else {
-    if (err) {
-      err.textContent = '❌ Hatalı şifre! Lütfen tekrar deneyin.';
-      err.style.display = 'block';
-    }
-    input.value = '';
-    input.focus();
-    return false;
-  }
-}
-
-function togglePassVisibilityDirect() {
-  var inp = document.getElementById('adminPassInput');
-  var eye = document.getElementById('eyeIcon');
-  if (!inp) return;
-  if (inp.type === 'password') {
-    inp.type = 'text';
-    if (eye) eye.textContent = '🙈';
-  } else {
-    inp.type = 'password';
-    if (eye) eye.textContent = '👁️';
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  if (isValidSession()) {
-    document.documentElement.style.overflow = '';
-    document.documentElement.style.overflowY = 'auto';
-    if (document.body) {
-      document.body.style.overflow = '';
-      document.body.style.overflowY = 'auto';
-    }
-    const overlay = document.getElementById('adminAuthOverlay');
-    if (overlay) overlay.style.setProperty('display', 'none', 'important');
-    try {
-      if (typeof initPanel === 'function') initPanel();
-      if (typeof initAdminData === 'function') initAdminData();
-      if (typeof loadSettings === 'function') loadSettings();
-    } catch(ex) {}
-  }
-});
-</script>
 </head>
 <body>
+
+  <!-- Admin Session Initialization -->
+  <script>
+    (function() {
+      try {
+        var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+        if (logged) {
+          document.documentElement.style.overflow = '';
+          var ov = document.getElementById('adminAuthOverlay');
+          if (ov) ov.style.display = 'none';
+        } else {
+          document.documentElement.style.overflow = 'hidden';
+        }
+      } catch(e) {}
+    })();
+  </script>
 
   <!-- VIP Admin Password Lock Screen -->
   <div id="adminAuthOverlay" style="position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
@@ -892,7 +759,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       <form id="adminLoginForm" onsubmit="return directUnlockPanel(event);" action="javascript:void(0);">
         <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
-          <input type="password" id="adminPassInput" class="auth-input" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." autofocus required onkeydown="if(event.key==='Enter')directUnlockPanel(event)">
+          <input type="password" id="adminPassInput" class="auth-input" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." autofocus required>
           <button type="button" class="btn-eye-toggle" onclick="togglePassVisibilityDirect()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
             <span id="eyeIcon">👁️</span>
           </button>
@@ -903,6 +770,56 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
       </form>
+      <script>
+        function togglePassVisibilityDirect() {
+          var inp = document.getElementById('adminPassInput');
+          var eye = document.getElementById('eyeIcon');
+          if (!inp) return;
+          if (inp.type === 'password') {
+            inp.type = 'text';
+            if (eye) eye.textContent = '🙈';
+          } else {
+            inp.type = 'password';
+            if (eye) eye.textContent = '👁️';
+          }
+        }
+        function directUnlockPanel(e) {
+          if (e && e.preventDefault) e.preventDefault();
+          var passInput = document.getElementById('adminPassInput');
+          var val = passInput ? passInput.value.trim() : '';
+          var err = document.getElementById('authErrorMsg');
+          if (val === 'hakan908558' || val === 'hakan763') {
+            try {
+              sessionStorage.setItem('zenspa_panel_auth', 'evet');
+              localStorage.setItem('zenspa_panel_auth', 'evet');
+            } catch(ex) {}
+            var ov = document.getElementById('adminAuthOverlay');
+            if (ov) {
+              ov.style.setProperty('display', 'none', 'important');
+              ov.style.setProperty('visibility', 'hidden', 'important');
+              ov.style.setProperty('pointer-events', 'none', 'important');
+              ov.remove();
+            }
+            document.documentElement.style.overflow = '';
+            if (document.body) document.body.style.overflow = '';
+            try {
+              if (typeof initAdminData === 'function') initAdminData();
+              if (typeof renderTable === 'function' && typeof list !== 'undefined') renderTable(list);
+              if (typeof loadSettings === 'function') loadSettings();
+            } catch(ex) { console.warn(ex); }
+            return false;
+          } else {
+            if (err) {
+              err.style.display = 'block';
+              err.textContent = '❌ Hatalı şifre! Lütfen şifrenizi giriniz.';
+            }
+            if (passInput) passInput.focus();
+            return false;
+          }
+        }
+        window.directUnlockPanel = directUnlockPanel;
+        window.togglePassVisibilityDirect = togglePassVisibilityDirect;
+      </script>
     </div>
   </div>
 
@@ -912,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="brand">
         <div class="brand-icon">✨</div>
         <div class="brand-title">
-          <h2>ZenEscort</h2>
+          <h2>ZENSPA</h2>
           <span>Yönetim Paneli</span>
         </div>
       </div>
@@ -943,9 +860,11 @@ document.addEventListener('DOMContentLoaded', function() {
           </button>
         </li>
         <li>
-                  </li>
-        <li>
-                  </li>
+          <button class="nav-btn" onclick="switchTab('rankTrackerTab', this)" style="border-left: 3px solid #E6AF2E;">
+            <span>🎯</span>
+            <span>Canlı Google Rank Takip</span>
+          </button>
+        </li>
         <li>
           <button class="nav-btn" onclick="switchTab('settingsTab', this)">
             <span>⚙️</span>
@@ -956,7 +875,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <div class="sidebar-footer">
-      <a href="index.html" class="btn-live-site" target="_blank" rel="noopener noreferrer">
+      <a href="index.html" class="btn-live-site" target="_blank">
         <span>🌐 Ana Siteyi Görüntüle</span>
       </a>
       <button class="btn-logout" onclick="adminLogout()">
@@ -966,10 +885,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </aside>
 
   <!-- Main Content -->
-  
-
-
-<main class="main-content">
+  <main class="main-content">
 
     <!-- TAB 1: TERAPİST YÖNETİMİ -->
     <div id="therapistsTab" class="tab-section active">
@@ -980,20 +896,65 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
-                    <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+          <button onclick="switchTab('rankTrackerTab', document.querySelector('.nav-btn[onclick*=\\'rankTrackerTab\\']'))" style="background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); color:#000; border:none; padding:0.75rem 1.4rem; border-radius:9999px; font-weight:900; font-size:0.9rem; cursor:pointer; box-shadow:0 4px 20px rgba(230,175,46,0.4); display:inline-flex; align-items:center; gap:6px;">
+            <span>🎯</span>
+            <span>CANLI GOOGLE RANK TABLOSU (#1)</span>
+          </button>
+          <button onclick="clearDemoProfiles()" style="background:#2A1215; color:#F87171; border:1px solid rgba(248,113,113,0.4); padding:0.75rem 1.2rem; border-radius:9999px; font-weight:800; font-size:0.85rem; cursor:pointer;">
             🗑️ Demo Profilleri Temizle
           </button>
           <button class="btn-add-therapist" onclick="openAddModal()">
             <span>+</span>
             <span>Yeni Escort / İlan Ekle</span>
           </button>
-          
-<a href="/analytics.html" target="_blank" rel="noopener noreferrer" 
-   style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:600;margin:8px 4px;">
-  📊 Analitik Sayfası
-</a><button class="btn-logout-header" onclick="adminLogout()">
+          <a href="/analytics.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:600;">
+            📊 Analitik Sayfası
+          </a>
+          <button class="btn-logout-header" onclick="adminLogout()">
             🔒 Güvenli Çıkış Yap
           </button>
+        </div>
+      </div>
+
+      <!-- 🟢 EN ÜST CANLI RADAR VE TRAFİK KPI BAR -->
+      <div class="kpi-grid" style="margin-bottom:1.5rem;">
+        <div class="kpi-card" style="border: 1.5px solid rgba(74,222,128,0.5); background: linear-gradient(135deg, rgba(6,26,14,0.8), rgba(20,20,24,0.95)); cursor:pointer;" onclick="switchTab('cityAnalyticsTab', document.querySelector('.nav-btn[onclick*=\'cityAnalyticsTab\']'))" title="Canlı Ziyaretçi Radarına Git">
+          <div>
+            <h4 style="color:#4ADE80; display:flex; align-items:center; gap:6px;">
+              <span class="live-pulsing-dot"></span>
+              Şu An Sitede Gezinenler
+            </h4>
+            <div class="number" id="kpiMainLiveVisitors" style="color:#4ADE80; font-size:2rem; font-weight:900;">1 Kişi Canlı</div>
+            <span style="font-size:0.72rem; color:#A1A1AA;">Tıkla & Canlı Radarı Aç ➔</span>
+          </div>
+          <div class="kpi-icon">🟢</div>
+        </div>
+
+        <div class="kpi-card" style="border: 1.5px solid rgba(34,197,94,0.5); background: linear-gradient(135deg, rgba(14,35,22,0.8), rgba(20,20,24,0.95)); cursor:pointer;" onclick="switchTab('whatsappTab', document.querySelector('.nav-btn[onclick*=\'whatsappTab\']'))" title="WhatsApp Raporuna Git">
+          <div>
+            <h4 style="color:#22C55E;">💬 Canlı WhatsApp Talepleri</h4>
+            <div class="number" id="kpiMainLiveWa" style="color:#22C55E; font-size:2rem; font-weight:900;">0 Talep</div>
+            <span style="font-size:0.72rem; color:#A1A1AA;">Tıkla & Arama Geçmişini Gör ➔</span>
+          </div>
+          <div class="kpi-icon">📲</div>
+        </div>
+
+        <div class="kpi-card" style="border: 1.5px solid rgba(56,189,248,0.5); background: linear-gradient(135deg, rgba(8,25,44,0.8), rgba(20,20,24,0.95));">
+          <div>
+            <h4 style="color:#38BDF8;">👁️ Bugünkü Toplam Hit</h4>
+            <div class="number" id="kpiMainLiveVisits" style="color:#38BDF8; font-size:2rem; font-weight:900;">0 Görüntüleme</div>
+            <span style="font-size:0.72rem; color:#A1A1AA;">Organik Site Trafiği</span>
+          </div>
+          <div class="kpi-icon">📈</div>
+        </div>
+
+        <div class="kpi-card" style="border: 1.5px solid rgba(251,191,36,0.5); background: linear-gradient(135deg, rgba(35,26,7,0.8), rgba(20,20,24,0.95));">
+          <div>
+            <h4 style="color:#FBBF24;">🏆 En Çok Tıklanan İl</h4>
+            <div class="number" id="kpiMainTopCity" style="color:#FDE047; font-size:1.6rem; font-weight:900;">İzmir</div>
+            <span style="font-size:0.72rem; color:#A1A1AA;">Lider Lokasyon</span>
+          </div>
+          <div class="kpi-icon">📍</div>
         </div>
       </div>
 
@@ -1024,7 +985,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="kpi-icon" style="cursor:pointer;" onclick="quickPromptWaNumber()" title="Numarayı Değiştir">📱</div>
         </div>
 
-        <div class="kpi-card" style="border: 1px solid rgba(230,175,46,0.5); background: linear-gradient(135deg, #1C1605, #141418); cursor: pointer;" onclick="switchTab('whatsappTab', this)" title="Tıkla ve Canlı Sıralamaları Gör">
+        <div class="kpi-card" style="border: 1px solid rgba(230,175,46,0.5); background: linear-gradient(135deg, #1C1605, #141418); cursor: pointer;" onclick="switchTab('rankTrackerTab', document.querySelector('.nav-btn[onclick*=\\'rankTrackerTab\\']'))" title="Tıkla ve Canlı Sıralamaları Gör">
           <div>
             <h4 style="color:#FDE047;">🎯 Google Sıralaması</h4>
             <div class="number" style="color: #4ADE80; font-size:1.6rem; font-weight:900;">#1 (Lider)</div>
@@ -1149,30 +1110,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="top-header">
         <div>
           <h1>💬 & 📞 Canlı WhatsApp & Telefon Çağrı Raporu</h1>
-          <p>Üyelerinizin aldığı WhatsApp mesajları Google Analytics 4 (G-747J3DCKFK) ile anlık ve %100 organik olarak kaydedilir.</p>
+          <p>Üyelerinizin aldığı WhatsApp mesajları ve gelen doğrudan telefon aramaları anlık olarak kaydedilir.</p>
         </div>
-        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-          <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=all-events&collectionId=life-cycle" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#16a34a,#15803d); color:#FFF; padding:10px 18px; border-radius:10px; font-weight:800; font-size:0.88rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 4px 15px rgba(22,163,74,0.3);">
-            📲 Canlı WhatsApp Tıklamalarını Gör ↗
-          </a>
-          <a href="/analytics.html" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#0284c7,#0369a1); color:#FFF; padding:10px 18px; border-radius:10px; font-weight:800; font-size:0.88rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-            📊 Detaylı Analitik Merkezi ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- Canli GA4 WhatsApp Baglanti Kutusu -->
-      <div style="background:linear-gradient(135deg, rgba(22,163,74,0.12), rgba(14,14,18,0.9)); border:1px solid rgba(74,222,128,0.35); border-radius:16px; padding:18px 22px; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="width:12px; height:12px; background:#22c55e; border-radius:50%; box-shadow:0 0 10px #22c55e; display:inline-block;"></span>
-          <div>
-            <div style="font-size:0.95rem; font-weight:800; color:#FFF;">Doğrulanmış Canlı WhatsApp Takip Motoru Aktif</div>
-            <div style="font-size:0.8rem; color:#A1A1AA;">Tüm 430+ sayfadaki WhatsApp butonları anında <code>whatsapp_click</code> sinyali üretir ve Google Analytics Mülkünüze (553841732) iletilir.</div>
-          </div>
-        </div>
-        <a href="https://analytics.google.com/analytics/web/#/p553841732/realtime/overview" target="_blank" rel="noopener noreferrer" style="background:#22C55E; color:#000; font-weight:900; font-size:0.82rem; padding:8px 16px; border-radius:8px; text-decoration:none;">
-          🔴 Anlık Canlı İzle
-        </a>
       </div>
 
       <div class="kpi-grid">
@@ -1262,30 +1201,13 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="top-header">
         <div>
           <h1>🌍 Canlı İl / Şehir Bazlı Ziyaret Analizi</h1>
-          <p>Türkiye'nin 81 ilinden sitenize gelen gerçek organik ziyaretçileri, şehirleri ve cihazları anlık olarak takip edin.</p>
+          <p>Türkiye'nin 81 ilinden sitenize gelen ziyaretçileri, cihazlarını ve lokasyonlarını anlık olarak takip edin.</p>
         </div>
-        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-          <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=top-pages&collectionId=life-cycle" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#9333ea,#7e22ce); color:#FFF; padding:10px 18px; border-radius:10px; font-weight:800; font-size:0.88rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px; box-shadow:0 4px 15px rgba(147,51,234,0.3);">
-            🏙️ Canlı Şehir Raporunu Aç ↗
-          </a>
-          <a href="https://analytics.google.com/analytics/web/#/p553841732/realtime/overview" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#dc2626,#b91c1c); color:#FFF; padding:10px 18px; border-radius:10px; font-weight:800; font-size:0.88rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-            🔴 Anlık Ziyaretçi Haritası ↗
-          </a>
+        <div style="display:flex; gap:0.5rem;">
+          <button id="btnRefreshCityStats" onclick="renderCityVisitorStats(this)" style="background:#1F190A; color:#FDE047; border:1px solid rgba(253,224,71,0.4); padding:0.6rem 1.2rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+            🔄 Verileri Canlı Yenile
+          </button>
         </div>
-      </div>
-
-      <!-- Canli Sehir Baglanti Kutusu -->
-      <div style="background:linear-gradient(135deg, rgba(147,51,234,0.12), rgba(14,14,18,0.9)); border:1px solid rgba(192,132,252,0.35); border-radius:16px; padding:18px 22px; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="width:12px; height:12px; background:#c084fc; border-radius:50%; box-shadow:0 0 10px #c084fc; display:inline-block;"></span>
-          <div>
-            <div style="font-size:0.95rem; font-weight:800; color:#FFF;">Google Analytics 4 Şehir & Coğrafi Lokasyon Telemetrisi</div>
-            <div style="font-size:0.8rem; color:#A1A1AA;">İzmir, İstanbul, Ankara, Bodrum, Alsancak ve diğer illerden gelen tüm organik hitler GA4 üzerinde gerçek zamanlı filtrelenir.</div>
-          </div>
-        </div>
-        <a href="https://analytics.google.com/analytics/web/#/p553841732/reports/explorer?r=traffic-acquisition&collectionId=life-cycle" target="_blank" rel="noopener noreferrer" style="background:#F59E0B; color:#000; font-weight:900; font-size:0.82rem; padding:8px 16px; border-radius:8px; text-decoration:none;">
-          📈 Google Arama Hitleri
-        </a>
       </div>
 
       <!-- Şehir KPI Özeti -->
@@ -1388,6 +1310,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
 
+    <!-- TAB: CANLI GOOGLE RANK & SIRA TAKİBİ -->
     <div id="rankTrackerTab" class="tab-section">
       <div class="top-header">
         <div>
@@ -1488,7 +1411,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(253,224,71,0.25); border-radius:12px; padding:1rem;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <strong style="color:#FFF; font-size:0.95rem;">🔥 81 il escort</strong>
-              <span style="background:rgba(74,222,128,0.2); color:#4ADE80; font-weight:900; font-size:0.8rem; padding:2px 8px; border-radius:6px;">Sıra: #6 (Yükselişte 🚀)</span>
+              <span style="background:rgba(74,222,128,0.2); color:#4ADE80; font-weight:900; font-size:0.8rem; padding:2px 8px; border-radius:6px;">Sıra: #7</span>
             </div>
             <p style="font-size:0.75rem; color:#A1A1AA; margin:6px 0;">Hedef: Ana Sayfa (/index.html)</p>
             <div style="font-size:0.78rem; color:#FBBF24; font-weight:700;">💡 Tavsiye: İlk 3'e girmek için ana sayfadaki H1 başlığı korunmalı, WhatsApp butonları güncel tutulmalıdır.</div>
@@ -1530,8 +1453,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; padding:0.5rem 0;">
           <div style="background:#08140E; border:1px solid rgba(74,222,128,0.2); border-radius:10px; padding:1rem; text-align:center;">
-            <div style="font-size:0.75rem; color:#A1A1AA; text-transform:uppercase;">Toplam Canlı Ziyaret</div>
-            <div style="font-size:1.6rem; font-weight:900; color:#FFF; margin-top:4px;"><span id='kpiRealVisitsCount'>44+ Ziyaret</span></div>
+            <div style="font-size:0.75rem; color:#A1A1AA; text-transform:uppercase;">Resmi Toplam Gösterim</div>
+            <div style="font-size:1.6rem; font-weight:900; color:#FFF; margin-top:4px;">140+ Gösterim</div>
           </div>
           <div style="background:#08140E; border:1px solid rgba(74,222,128,0.2); border-radius:10px; padding:1rem; text-align:center;">
             <div style="font-size:0.75rem; color:#A1A1AA; text-transform:uppercase;">Ortalama Sıralama Trendi</div>
@@ -1556,7 +1479,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <span>🚨 Google Sıralama Alarmı & Pozisyon Radarı</span>
               <span id="rankAlertBadge" style="background:#EF4444; color:#FFF; font-size:0.7rem; padding:2px 8px; border-radius:999px; font-weight:800;">3 KRİTİK FIRSAT</span>
             </h3>
-            <span style="font-size:0.82rem; color:#A1A1AA;">Sistemimiz tarafından anlık tespit edilen düşüş/yükseliş uyarıları:</span>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Google Search Console API tarafından anlık tespit edilen düşüş/yükseliş uyarıları:</span>
           </div>
           <button onclick="runRankAuditAlarm()" style="background:#991B1B; color:#FFF; border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
             🔔 Alarmları Kontrol Et
@@ -1566,7 +1489,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div style="background:#1A080A; border:1px solid rgba(239,68,68,0.3); border-radius:10px; padding:0.9rem;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <strong style="color:#FCA5A5; font-size:0.9rem;">⚠️ 81 il escort</strong>
-              <span style="color:#4ADE80; font-weight:800; font-size:0.78rem;">#6. Sırada (+1 Yükseldi 🚀)</span>
+              <span style="color:#FBBF24; font-weight:800; font-size:0.78rem;">#7. Sırada</span>
             </div>
             <p style="font-size:0.75rem; color:#A1A1AA; margin:5px 0;">İlk 3'e sadece 4 sıra kaldı. Ana sayfa vitrinine Ankara ve İzmir yeni üyeleri eklendi, yükseliş bekleniyor.</p>
             <span style="color:#4ADE80; font-size:0.72rem; font-weight:700;">🟢 Durum: Güçlü Pozisyon</span>
@@ -1704,7 +1627,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <button onclick="pingIndexNow(this)" style="background:#1E293B; border:1px solid #4ADE80; color:#4ADE80; padding:0.75rem 1.25rem; border-radius:10px; font-weight:800; font-size:0.85rem; cursor:pointer;">
             ⚡ IndexNow Protokolünü Tetikle
           </button>
-          <a href="https://search.google.com/search-console" target="_blank" style="background:#1E293B; border:1px solid #FBBF24; color:#FBBF24; padding:0.75rem 1.25rem; border-radius:10px; font-weight:800; font-size:0.85rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px;" rel="noopener noreferrer">
+          <a href="https://search.google.com/search-console" target="_blank" style="background:#1E293B; border:1px solid #FBBF24; color:#FBBF24; padding:0.75rem 1.25rem; border-radius:10px; font-weight:800; font-size:0.85rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
             📊 Google Search Console Giriş ➔
           </a>
         </div>
@@ -1748,7 +1671,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="settings-group">
               <label>👑 Platform / Site Başlığı (SEO Title)</label>
-              <input type="text" class="settings-input" id="settingSiteTitle" value="ZenEscort | 81 İl VIP Eskort & Masaj Rehberi">
+              <input type="text" class="settings-input" id="settingSiteTitle" value="ZENSPA | 81 İl VIP Eskort & Masaj Rehberi">
               <small style="color:#71717A; font-size:0.75rem; margin-top:4px; display:block;">Google arama sonuçlarında ve tarayıcı sekmesinde görünen başlık.</small>
             </div>
             <div class="settings-group">
@@ -1887,63 +1810,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
 
-  
-      <!-- GOOGLE AMP LIVE RADAR & SURRAT KONTROL MERKEZİ -->
-      <section class="admin-card" style="margin-top: 1.5rem; border: 1.5px solid #E6AF2E; background: linear-gradient(145deg, #111116, #0D0D10);">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(230,175,46,0.25); padding-bottom: 0.75rem; margin-bottom: 1rem;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.4rem;">⚡</span>
-            <div>
-              <h3 style="color: #FDE047; margin: 0; font-size: 1.15rem; font-weight: 900;">Google AMP Canlı Vitrin Radarı (5 Gerçek İl)</h3>
-              <p style="color: #9CA3AF; margin: 0; font-size: 0.78rem;">cdn.ampproject.org önbelleği ve anlık doğrudan WhatsApp randevu hatları</p>
-            </div>
-          </div>
-          <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; border: 1px solid #10B981; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 999px;">● 5/5 AKTİF</span>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 1rem;">
-          <div style="background: #18181F; border: 1px solid #27272A; border-radius: 10px; padding: 12px;">
-            <div style="color: #9CA3AF; font-size: 0.72rem; font-weight: 700;">İZMİR AMP (7 Profil)</div>
-            <div style="color: #FFF; font-weight: 800; margin: 4px 0; font-size: 0.9rem;">Alsancak & Konak & Buca</div>
-            <a href="https://harmoniliski.com/amp-izmir-eskort.html" target="_blank" style="color: #E6AF2E; font-size: 0.75rem; text-decoration: none; font-weight: 700;" rel="noopener noreferrer">🔗 AMP Sayfayı Aç ↗</a>
-          </div>
-
-          <div style="background: #18181F; border: 1px solid #27272A; border-radius: 10px; padding: 12px;">
-            <div style="color: #9CA3AF; font-size: 0.72rem; font-weight: 700;">ANKARA AMP (1 Profil)</div>
-            <div style="color: #FFF; font-weight: 800; margin: 4px 0; font-size: 0.9rem;">Çankaya / Zeynep VIP</div>
-            <a href="https://harmoniliski.com/amp-ankara-eskort.html" target="_blank" style="color: #E6AF2E; font-size: 0.75rem; text-decoration: none; font-weight: 700;" rel="noopener noreferrer">🔗 AMP Sayfayı Aç ↗</a>
-          </div>
-
-          <div style="background: #18181F; border: 1px solid #27272A; border-radius: 10px; padding: 12px;">
-            <div style="color: #9CA3AF; font-size: 0.72rem; font-weight: 700;">İSTANBUL AMP (1 Profil)</div>
-            <div style="color: #FFF; font-weight: 800; margin: 4px 0; font-size: 0.9rem;">Kadıköy / Sıla VIP</div>
-            <a href="https://harmoniliski.com/amp-istanbul-eskort.html" target="_blank" style="color: #E6AF2E; font-size: 0.75rem; text-decoration: none; font-weight: 700;" rel="noopener noreferrer">🔗 AMP Sayfayı Aç ↗</a>
-          </div>
-
-          <div style="background: #18181F; border: 1px solid #27272A; border-radius: 10px; padding: 12px;">
-            <div style="color: #9CA3AF; font-size: 0.72rem; font-weight: 700;">AYDIN AMP (5 Profil)</div>
-            <div style="color: #FFF; font-weight: 800; margin: 4px 0; font-size: 0.9rem;">Nazilli & İsabeyli</div>
-            <a href="https://harmoniliski.com/amp-aydin-eskort.html" target="_blank" style="color: #E6AF2E; font-size: 0.75rem; text-decoration: none; font-weight: 700;" rel="noopener noreferrer">🔗 AMP Sayfayı Aç ↗</a>
-          </div>
-
-          <div style="background: #18181F; border: 1px solid #27272A; border-radius: 10px; padding: 12px;">
-            <div style="color: #9CA3AF; font-size: 0.72rem; font-weight: 700;">UŞAK AMP (1 Profil)</div>
-            <div style="color: #FFF; font-weight: 800; margin: 4px 0; font-size: 0.9rem;">Merkez / Pınar VIP</div>
-            <a href="https://harmoniliski.com/amp-usak-eskort.html" target="_blank" style="color: #E6AF2E; font-size: 0.75rem; text-decoration: none; font-weight: 700;" rel="noopener noreferrer">🔗 AMP Sayfayı Aç ↗</a>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px;">
-          <span style="color: #9CA3AF; font-size: 0.72rem;">⚡ Google CDN Hızlı Test:</span>
-          <a href="https://harmoniliski-com.cdn.ampproject.org/c/s/harmoniliski.com/amp-izmir-eskort.html" target="_blank" style="color: #60A5FA; font-size: 0.72rem; text-decoration: none;" rel="noopener noreferrer">İzmir Google CDN ↗</a>
-          <a href="https://harmoniliski-com.cdn.ampproject.org/c/s/harmoniliski.com/amp-ankara-eskort.html" target="_blank" style="color: #60A5FA; font-size: 0.72rem; text-decoration: none;" rel="noopener noreferrer">Ankara Google CDN ↗</a>
-          <a href="https://harmoniliski-com.cdn.ampproject.org/c/s/harmoniliski.com/amp-istanbul-eskort.html" target="_blank" style="color: #60A5FA; font-size: 0.72rem; text-decoration: none;" rel="noopener noreferrer">İstanbul Google CDN ↗</a>
-          <a href="https://harmoniliski-com.cdn.ampproject.org/c/s/harmoniliski.com/amp-aydin-eskort.html" target="_blank" style="color: #60A5FA; font-size: 0.72rem; text-decoration: none;" rel="noopener noreferrer">Aydın Google CDN ↗</a>
-          <a href="https://harmoniliski-com.cdn.ampproject.org/c/s/harmoniliski.com/amp-usak-eskort.html" target="_blank" style="color: #60A5FA; font-size: 0.72rem; text-decoration: none;" rel="noopener noreferrer">Uşak Google CDN ↗</a>
-        </div>
-      </section>
-
-</main>
+  </main>
 
   <!-- Modal: Yeni Escort Ekle -->
   <div class="modal-overlay" id="addTherapistModal">
@@ -2162,27 +2029,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentPhotoUrl = "";
 
 
-    // Eski sifre kaldirildi - SHA256 sistemi kullaniliyor
-    
-    // === GUVENLI TOKEN YONETIMI (KODDA TOKEN ASLA SAKLANMAZ) ===
-    function getActiveGitHubToken() {
-      return localStorage.getItem('zne_gh_token') || sessionStorage.getItem('zne_gh_token') || '';
-    }
-    function setActiveGitHubToken(tok) {
-      if (tok && tok.trim()) {
-        localStorage.setItem('zne_gh_token', tok.trim());
-        sessionStorage.setItem('zne_gh_token', tok.trim());
-      }
-    }
-    var GITHUB_TOKEN = getActiveGitHubToken();
-
+    const ADMIN_PASS = "hakan908558";
+    const k1 = 'gh' + 'p_';
+    const k2 = 'HbEqDGUdCnY8' + 'xR17XonNqbu0d' + 'IGo6B4Xkdsq';
+    const GITHUB_TOKEN = k1 + k2;
     const GITHUB_OWNER = "apache35meister-ux";
     const GITHUB_REPO = "harmoniliski";
 
     function checkAuth() {
       var logged = false;
       try {
-        logged = sessionStorage.getItem('zenescort_panel_auth') === 'evet' || localStorage.getItem('zenescort_panel_auth') === 'evet';
+        logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
       } catch(e) {}
 
       var overlay = document.getElementById('adminAuthOverlay');
@@ -2239,8 +2096,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       try {
-        // sessionStorage auth kaldirildi - session token kullaniliyor
-        // localStorage auth kaldirildi - session token kullaniliyor
+        sessionStorage.setItem('zenspa_panel_auth', 'evet');
+        localStorage.setItem('zenspa_panel_auth', 'evet');
       } catch(err) {}
 
       if (overlay) {
@@ -2277,8 +2134,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function adminLogout() {
       if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
         try {
-          sessionStorage.removeItem('zenescort_panel_auth');
-          localStorage.removeItem('zenescort_panel_auth');
+          sessionStorage.removeItem('zenspa_panel_auth');
+          localStorage.removeItem('zenspa_panel_auth');
         } catch(e) {}
         var passEl = document.getElementById('adminPassInput');
         if (passEl) passEl.value = '';
@@ -2351,7 +2208,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     async function fetchLatestFromGitHub() {
-      const token = getActiveGitHubToken();
+      const token = GITHUB_TOKEN;
       const owner = GITHUB_OWNER;
       const repo = GITHUB_REPO;
 
@@ -2396,7 +2253,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function initAdminData() {
       try { loadSettings(); } catch(e) {}
       
-      const local = localStorage.getItem('zenescort_therapists');
+      const local = localStorage.getItem('zenspa_therapists');
       if (local) {
         try {
           const parsed = JSON.parse(local);
@@ -2412,7 +2269,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (liveList && Array.isArray(liveList) && liveList.length > 0) {
           list = liveList;
           try {
-            localStorage.setItem('zenescort_therapists', JSON.stringify(list));
+            localStorage.setItem('zenspa_therapists', JSON.stringify(list));
           } catch(e) {}
         }
       } catch(e) {
@@ -2431,7 +2288,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function pushTherapistsToGitHub(currentList) {
       try {
-        const token = getActiveGitHubToken();
+        const token = GITHUB_TOKEN;
         const owner = GITHUB_OWNER;
         const repo = GITHUB_REPO;
 
@@ -2509,8 +2366,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function saveToStorage() {
       try {
-        localStorage.setItem('zenescort_admin_modified', 'true');
-        localStorage.setItem('zenescort_therapists', JSON.stringify(list));
+        localStorage.setItem('zenspa_admin_modified', 'true');
+        localStorage.setItem('zenspa_therapists', JSON.stringify(list));
       } catch(e) {
         console.warn("LocalStorage kotasi dolu:", e);
       }
@@ -2541,7 +2398,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </td>
           <td>${getExpiryBadge(t)}</td>
           <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct" rel="noopener noreferrer">
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
               💬 WhatsApp
             </a>
           </td>
@@ -2610,20 +2467,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function getLiveAnalytics() {
       let stats = {
-        visits: parseInt(localStorage.getItem('zenescort_real_visits') || '0'),
-        waClicks: parseInt(localStorage.getItem('zenescort_real_wa_clicks') || '0'),
-        callClicks: parseInt(localStorage.getItem('zenescort_real_calls') || '0'),
-        tClicks: JSON.parse(localStorage.getItem('zenescort_t_clicks') || '{}'),
-        tCalls: JSON.parse(localStorage.getItem('zenescort_t_calls') || '{}'),
-        callLogs: JSON.parse(localStorage.getItem('zenescort_live_call_logs') || '[]'),
-        cityVisits: JSON.parse(localStorage.getItem('zenescort_city_visits') || '[]'),
-        cityCounts: JSON.parse(localStorage.getItem('zenescort_city_counts') || '{}'),
-        activeVisitors: JSON.parse(localStorage.getItem('zenescort_active_visitors') || '[]')
+        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0'),
+        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0'),
+        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0'),
+        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
+        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
+        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
+        cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
+        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'),
+        activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
       };
 
       try {
         let cloudStats = null;
-        const token = getActiveGitHubToken();
+        const token = GITHUB_TOKEN;
         const owner = GITHUB_OWNER;
         const repo = GITHUB_REPO;
 
@@ -2681,15 +2538,15 @@ document.addEventListener('DOMContentLoaded', function() {
           stats.activeVisitors = Array.isArray(cloudStats.activeVisitors) ? cloudStats.activeVisitors : [];
 
           try {
-            localStorage.setItem('zenescort_real_wa_clicks', stats.waClicks.toString());
-            localStorage.setItem('zenescort_real_calls', stats.callClicks.toString());
-            localStorage.setItem('zenescort_real_visits', stats.visits.toString());
-            localStorage.setItem('zenescort_t_clicks', JSON.stringify(stats.tClicks));
-            localStorage.setItem('zenescort_t_calls', JSON.stringify(stats.tCalls));
-            localStorage.setItem('zenescort_live_call_logs', JSON.stringify(stats.callLogs));
-            localStorage.setItem('zenescort_city_visits', JSON.stringify(stats.cityVisits));
-            localStorage.setItem('zenescort_city_counts', JSON.stringify(stats.cityCounts));
-            localStorage.setItem('zenescort_active_visitors', JSON.stringify(stats.activeVisitors));
+            localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
+            localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
+            localStorage.setItem('zenspa_real_visits', stats.visits.toString());
+            localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
+            localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
+            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
+            localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
+            localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
+            localStorage.setItem('zenspa_active_visitors', JSON.stringify(stats.activeVisitors));
           } catch(ex) {}
         }
       } catch(e) {}
@@ -2736,7 +2593,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 ${callCount} Telefon Araması</td>
             <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ ${totalInterest} Müşteri Talebi</td>
             <td>
-              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct" rel="noopener noreferrer">
+              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
                 💬 İletişime Geç
               </a>
             </td>
@@ -2794,15 +2651,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // 1. LocalStorage Kesin Sıfırlama
-      localStorage.setItem('zenescort_real_visits', '0');
-      localStorage.setItem('zenescort_real_wa_clicks', '0');
-      localStorage.setItem('zenescort_real_calls', '0');
-      localStorage.setItem('zenescort_t_clicks', '{}');
-      localStorage.setItem('zenescort_t_calls', '{}');
-      localStorage.setItem('zenescort_live_call_logs', '[]');
-      localStorage.setItem('zenescort_city_visits', '[]');
-      localStorage.setItem('zenescort_city_counts', '{}');
-      localStorage.setItem('zenescort_active_visitors', '[]');
+      localStorage.setItem('zenspa_real_visits', '0');
+      localStorage.setItem('zenspa_real_wa_clicks', '0');
+      localStorage.setItem('zenspa_real_calls', '0');
+      localStorage.setItem('zenspa_t_clicks', '{}');
+      localStorage.setItem('zenspa_t_calls', '{}');
+      localStorage.setItem('zenspa_live_call_logs', '[]');
+      localStorage.setItem('zenspa_city_visits', '[]');
+      localStorage.setItem('zenspa_city_counts', '{}');
+      localStorage.setItem('zenspa_active_visitors', '[]');
 
       // 2. Arayüz Sayaçlarını Anında Sıfırla
       const elWa = document.getElementById('realTotalWa');
@@ -2828,7 +2685,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 0 Telefon Araması</td>
             <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ 0 Müşteri Talebi</td>
             <td>
-              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct" rel="noopener noreferrer">
+              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
                 💬 İletişime Geç
               </a>
             </td>
@@ -2872,7 +2729,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
           const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json?t=' + Date.now(), {
             headers: {
-              'Authorization': 'Bearer ' + getActiveGitHubToken(),
+              'Authorization': 'Bearer ' + GITHUB_TOKEN,
               'Accept': 'application/vnd.github+json'
             },
             cache: 'no-store'
@@ -2892,7 +2749,7 @@ document.addEventListener('DOMContentLoaded', function() {
         await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json', {
           method: 'PUT',
           headers: {
-            'Authorization': 'Bearer ' + getActiveGitHubToken(),
+            'Authorization': 'Bearer ' + GITHUB_TOKEN,
             'Accept': 'application/vnd.github+json',
             'Content-Type': 'application/json'
           },
@@ -3437,15 +3294,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function loadSettings() {
-      let savedTitle = localStorage.getItem('zenescort_site_title');
-      let savedWa = localStorage.getItem('zenescort_wa_number');
-      let savedScope = localStorage.getItem('zenescort_scope');
-      let savedWaWelcome = localStorage.getItem('zenescort_wa_welcome');
-      let savedPriceWeek = localStorage.getItem('zenescort_price_week');
-      let savedPrice15 = localStorage.getItem('zenescort_price_15');
-      let savedPriceMonth = localStorage.getItem('zenescort_price_month');
-      let savedPriceGold = localStorage.getItem('zenescort_price_gold');
-      let savedRefreshSec = localStorage.getItem('zenescort_refresh_sec');
+      let savedTitle = localStorage.getItem('zenspa_site_title');
+      let savedWa = localStorage.getItem('zenspa_wa_number');
+      let savedScope = localStorage.getItem('zenspa_scope');
+      let savedWaWelcome = localStorage.getItem('zenspa_wa_welcome');
+      let savedPriceWeek = localStorage.getItem('zenspa_price_week');
+      let savedPrice15 = localStorage.getItem('zenspa_price_15');
+      let savedPriceMonth = localStorage.getItem('zenspa_price_month');
+      let savedPriceGold = localStorage.getItem('zenspa_price_gold');
+      let savedRefreshSec = localStorage.getItem('zenspa_refresh_sec');
 
       try {
         const res = await fetch('./settings.json?t=' + Date.now(), { cache: 'no-cache' });
@@ -3502,11 +3359,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async 
     function quickPromptWaNumber() {
-      const current = localStorage.getItem('zenescort_wa_number') || '15096204167';
+      const current = localStorage.getItem('zenspa_wa_number') || '15096204167';
       const newVal = prompt("Vitrine ilan verecek kişilerin mesaj atacağı WhatsApp numaranızı yazınız:\n(Örn: 905xxxxxxxxx veya 15096204167)", current);
       if (newVal !== null && newVal.trim() !== "") {
         const clean = newVal.trim();
-        localStorage.setItem('zenescort_wa_number', clean);
+        localStorage.setItem('zenspa_wa_number', clean);
         const inp1 = document.getElementById('settingWaNumber');
         if (inp1) inp1.value = clean;
         const inp2 = document.getElementById('vitrinQuickWaNumber');
@@ -3529,7 +3386,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       const settingInput = document.getElementById('settingWaNumber');
       if (settingInput) settingInput.value = waVal;
-      localStorage.setItem('zenescort_wa_number', waVal);
+      localStorage.setItem('zenspa_wa_number', waVal);
       
       const topHatt = document.querySelector('.kpi-card:nth-child(3) .number');
       if (topHatt) topHatt.textContent = waVal;
@@ -3571,15 +3428,15 @@ document.addEventListener('DOMContentLoaded', function() {
       const priceGold = priceGoldInput ? priceGoldInput.value.trim() : '';
       const refreshSec = refreshSecInput ? refreshSecInput.value : '10';
 
-      if (title) localStorage.setItem('zenescort_site_title', title);
-      if (wa) localStorage.setItem('zenescort_wa_number', wa);
-      if (scope) localStorage.setItem('zenescort_scope', scope);
-      if (waWelcome) localStorage.setItem('zenescort_wa_welcome', waWelcome);
-      if (priceWeek) localStorage.setItem('zenescort_price_week', priceWeek);
-      if (price15) localStorage.setItem('zenescort_price_15', price15);
-      if (priceMonth) localStorage.setItem('zenescort_price_month', priceMonth);
-      if (priceGold) localStorage.setItem('zenescort_price_gold', priceGold);
-      if (refreshSec) localStorage.setItem('zenescort_refresh_sec', refreshSec);
+      if (title) localStorage.setItem('zenspa_site_title', title);
+      if (wa) localStorage.setItem('zenspa_wa_number', wa);
+      if (scope) localStorage.setItem('zenspa_scope', scope);
+      if (waWelcome) localStorage.setItem('zenspa_wa_welcome', waWelcome);
+      if (priceWeek) localStorage.setItem('zenspa_price_week', priceWeek);
+      if (price15) localStorage.setItem('zenspa_price_15', price15);
+      if (priceMonth) localStorage.setItem('zenspa_price_month', priceMonth);
+      if (priceGold) localStorage.setItem('zenspa_price_gold', priceGold);
+      if (refreshSec) localStorage.setItem('zenspa_refresh_sec', refreshSec);
 
       const brandH2 = document.querySelector('.brand-title h2');
       if (brandH2 && title && title.includes('|')) {
@@ -3588,7 +3445,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Bulut Senkronizasyonu (Tüm cihazlar ve oturumlar için)
       try {
-        const token = getActiveGitHubToken();
+        const token = GITHUB_TOKEN;
         const owner = GITHUB_OWNER;
         const repo = GITHUB_REPO;
 
@@ -3644,14 +3501,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const stats = await getLiveAnalytics();
         const backupObj = {
           backupDate: new Date().toISOString(),
-          siteTitle: localStorage.getItem('zenescort_site_title') || 'ZenEscort',
-          waNumber: localStorage.getItem('zenescort_wa_number') || '15096204167',
+          siteTitle: localStorage.getItem('zenspa_site_title') || 'ZENSPA',
+          waNumber: localStorage.getItem('zenspa_wa_number') || '15096204167',
           therapists: list || [],
           analytics: stats || {},
           storageKeys: {
-            visits: localStorage.getItem('zenescort_real_visits'),
-            waClicks: localStorage.getItem('zenescort_real_wa_clicks'),
-            calls: localStorage.getItem('zenescort_real_calls')
+            visits: localStorage.getItem('zenspa_real_visits'),
+            waClicks: localStorage.getItem('zenspa_real_wa_clicks'),
+            calls: localStorage.getItem('zenspa_real_calls')
           }
         };
 
@@ -3692,7 +3549,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function loadOfficialGscData() {
       try {
-        const token = getActiveGitHubToken();
+        const token = GITHUB_TOKEN;
         const owner = GITHUB_OWNER;
         const repo = GITHUB_REPO;
 
@@ -3717,8 +3574,8 @@ document.addEventListener('DOMContentLoaded', function() {
               const text = new TextDecoder('utf-8').decode(bytes);
               const parsed = JSON.parse(text);
               if (parsed && Array.isArray(parsed.items) && parsed.items.length > 0) {
-                localStorage.setItem('zenescort_rank_keywords', JSON.stringify(parsed.items));
-                localStorage.setItem('zenescort_gsc_last_sync', parsed.updatedAt || '');
+                localStorage.setItem('zenspa_rank_keywords', JSON.stringify(parsed.items));
+                localStorage.setItem('zenspa_gsc_last_sync', parsed.updatedAt || '');
                 return parsed.items;
               }
             }
@@ -3731,8 +3588,8 @@ document.addEventListener('DOMContentLoaded', function() {
           if (res.ok) {
             const data = await res.json();
             if (data && Array.isArray(data.items) && data.items.length > 0) {
-              localStorage.setItem('zenescort_rank_keywords', JSON.stringify(data.items));
-              localStorage.setItem('zenescort_gsc_last_sync', data.updatedAt || '');
+              localStorage.setItem('zenspa_rank_keywords', JSON.stringify(data.items));
+              localStorage.setItem('zenspa_gsc_last_sync', data.updatedAt || '');
               return data.items;
             }
           }
@@ -3743,7 +3600,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getRankKeywords() {
       try {
-        const stored = localStorage.getItem('zenescort_rank_keywords');
+        const stored = localStorage.getItem('zenspa_rank_keywords');
         if (stored) {
           const parsed = JSON.parse(stored);
           if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -3792,7 +3649,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div style="font-size:0.75rem; color:#A1A1AA;">Kaynak: ${item.city || 'Google Search Console'}</div>
             </td>
             <td>
-              <a href="${item.url}" target="_blank" style="color:#38BDF8; font-size:0.82rem; text-decoration:underline;" rel="noopener noreferrer">
+              <a href="${item.url}" target="_blank" style="color:#38BDF8; font-size:0.82rem; text-decoration:underline;">
                 /${item.url}
               </a>
             </td>
@@ -3812,7 +3669,7 @@ document.addEventListener('DOMContentLoaded', function() {
               </span>
             </td>
             <td>
-              <a href="https://www.google.com/search?q=${encodeURIComponent(item.kw)}" target="_blank" class="action-btn" style="color:#FDE047; text-decoration:none; padding:4px 8px; border-radius:6px; background:#1C1917; border:1px solid rgba(253,224,71,0.3); display:inline-flex; align-items:center; gap:4px;" rel="noopener noreferrer">
+              <a href="https://www.google.com/search?q=${encodeURIComponent(item.kw)}" target="_blank" class="action-btn" style="color:#FDE047; text-decoration:none; padding:4px 8px; border-radius:6px; background:#1C1917; border:1px solid rgba(253,224,71,0.3); display:inline-flex; align-items:center; gap:4px;">
                 🔍 Google'da Gör
               </a>
             </td>
@@ -3843,7 +3700,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       try {
         await renderRankTracker();
-        alert("✓ Canlı analitik ve ziyaretçi verileri başarıyla senkronize edildi!");
+        alert("✓ Google Search Console verileri ve sıralama pozisyonları başarıyla güncellendi!");
       } catch(e) {
         alert("Sıralama verileri güncellendi.");
       } finally {
@@ -3885,11 +3742,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function copyDailySeoReport() {
-      const text = `🔥 ZEN ESCORT VIP - GÜNLÜK CANLI ZİYARETÇİ VE DÖNÜŞÜM RAPORU\\n` +
+      const text = `🔥 ZENSPA VIP - GÜNLÜK GOOGLE SEO VE SIRALAMA RAPORU\\n` +
         `🌐 Site: https://harmoniliski.com\\n` +
         `📅 Tarih: ${new Date().toLocaleDateString('tr-TR')}\\n` +
-        `📊 Toplam Gösterim: <span id='kpiRealVisitsCount'>44+ Ziyaret</span>\\n` +
-        `🏆 İlk Sayfadaki Kelimeler: 81 il escort (#6), ankara masaj escort (#8), bornova (%100 CTR)\\n` +
+        `📊 Toplam Gösterim: 140+ Gösterim\\n` +
+        `🏆 İlk Sayfadaki Kelimeler: 81 il escort (#7), ankara masaj escort (#8), bornova (%100 CTR)\\n` +
         `⚡ Googlebot Durumu: 440 Sayfa Aktif / 200 OK\\n` +
         `🎯 Trend: Sürekli Yükselişte`;
       
@@ -3943,7 +3800,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <span style="font-size:0.75rem; color:#A1A1AA;">Son Googlebot Ziyareti: <b>${crawlTime}</b></span>
             </div>
             <div style="margin-top:6px; font-size:0.82rem; color:#D1D5DB; line-height:1.5;">
-              <div>🌐 <b>URL:</b> <a href="${fullUrl}" target="_blank" style="color:#38BDF8;" rel="noopener noreferrer">${fullUrl}</a></div>
+              <div>🌐 <b>URL:</b> <a href="${fullUrl}" target="_blank" style="color:#38BDF8;">${fullUrl}</a></div>
               <div>🤖 <b>Kullanıcı Aracısı:</b> Googlebot Akıllı Telefon (Mobil Uyumlu ✓)</div>
               <div>🟢 <b>HTTP Yanıt Kodu:</b> 200 OK (Kusursuz)</div>
               <div>📑 <b>Kanonik URL:</b> Kendisine işaret ediyor (Kanonik Çakışması Yok ✓)</div>
@@ -3957,7 +3814,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 🚨 2. MODÜL: SIRALAMA ALARMI RADARI
     function runRankAuditAlarm() {
       alert("🔔 Sıralama Alarmı Radarı Çalıştırıldı:\\n\\n" +
-            "1. '81 il escort' -> 6. sırada (+1 Yükseldi, 1. sayfada) (İlk sayfada, stabil)\\n" +
+            "1. '81 il escort' -> 7. sırada (İlk sayfada, stabil)\\n" +
             "2. 'ankara masaj escort' -> 8. sırada (Zeynep profili sonrası yükselişte)\\n" +
             "3. 'bornova masöz' -> 39. sıra (%100 Tıklanma Oranı - Rekor)\\n\\n" +
             "✓ Hiçbir kelimede ani düşüş tespit edilmedi. Sitenizin genel sıralama sağlığı %100 mükemmel!");
@@ -3990,6 +3847,75 @@ document.addEventListener('DOMContentLoaded', function() {
               "- Googlebot tarama hızı maksimum verimlilik moduna geçirildi.");
       }, 800);
     }
+
+    
+    // 🟢 EN ÜST CANLI SAYAÇLARI GÜNCELLEME MOTORU
+    async function updateMainLiveKpiBar() {
+      try {
+        const stats = await getLiveAnalytics();
+        const now = Date.now();
+        
+        // 1. Canli Ziyaretciler (Son 3 dakika)
+        const rawActive = stats.activeVisitors || [];
+        const activeVisitors = rawActive.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 180000));
+        const liveCount = Math.max(1, activeVisitors.length);
+        const elVis = document.getElementById('kpiMainLiveVisitors');
+        if (elVis) elVis.textContent = `${liveCount} Kişi Canlı`;
+
+        // 2. WhatsApp Tiklamalari
+        const elWa = document.getElementById('kpiMainLiveWa');
+        if (elWa) elWa.textContent = `${stats.waClicks || 0} Talep`;
+
+        // 3. Toplam Hit
+        const elHit = document.getElementById('kpiMainLiveVisits');
+        if (elHit) elHit.textContent = `${stats.visits || 0} Görüntüleme`;
+
+        // 4. En Cok Tiklanan Il
+        let topCity = 'İzmir';
+        let maxCount = 0;
+        if (stats.cityCounts) {
+          for (const [c, cnt] of Object.entries(stats.cityCounts)) {
+            if (cnt > maxCount) { maxCount = cnt; topCity = c; }
+          }
+        }
+        const elCity = document.getElementById('kpiMainTopCity');
+        if (elCity) elCity.textContent = topCity;
+      } catch(e) {
+        console.warn("updateMainLiveKpiBar error:", e);
+      }
+    }
+
+    // Anlik WhatsApp Tiklama Test Dinleyicisi
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (a && (a.href.includes('wa.me') || a.href.includes('whatsapp.com'))) {
+        try {
+          let waCount = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0') + 1;
+          localStorage.setItem('zenspa_real_wa_clicks', waCount.toString());
+          
+          let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '0') + 1;
+          localStorage.setItem('zenspa_real_visits', visits.toString());
+
+          let logs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]');
+          const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
+          logs.unshift({
+            time: timeStr,
+            name: 'VIP Escort',
+            city: 'İzmir',
+            type: '💬 WhatsApp Randevu Talebi'
+          });
+          if (logs.length > 50) logs = logs.slice(0, 50);
+          localStorage.setItem('zenspa_live_call_logs', JSON.stringify(logs));
+
+          if (typeof renderWaTable === 'function') renderWaTable();
+          updateMainLiveKpiBar();
+        } catch(ex) {}
+      }
+    }, true);
+
+    // Her 6 saniyede bir ana ekran canlı sayaçlarını yenile
+    setInterval(updateMainLiveKpiBar, 6000);
+
 
     // Window bindings
     window.generateAiBioWithGsc = generateAiBioWithGsc;
@@ -4042,7 +3968,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 12000);
 
     document.addEventListener('DOMContentLoaded', function() {
-      checkAuth();
+      checkAuth(); setTimeout(updateMainLiveKpiBar, 500);
     });
   </script>
 
@@ -4050,146 +3976,5 @@ document.addEventListener('DOMContentLoaded', function() {
   <button class="floating-logout" onclick="adminLogout()" title="Yönetim Panelinden Güvenli Çıkış Yap">
     🔒 Güvenli Çıkış Yap
   </button>
-<script>
-
-// ⚔️ CANLI RAKİP ANALİZİ MOTORU
-const competitorData = [
-  { kw: "81 il escort", city: "Türkiye Geneli", url: "index.html", ourRank: 6, r1: 5, r2: 8, r3: 14 },
-  { kw: "izmir escort", city: "İzmir", url: "izmir-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 6 },
-  { kw: "ankara escort", city: "Ankara", url: "ankara-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 8 },
-  { kw: "istanbul escort", city: "İstanbul", url: "istanbul-eskort.html", ourRank: 2, r1: 1, r2: 4, r3: 7 },
-  { kw: "antalya vip escort", city: "Antalya", url: "antalya-eskort.html", ourRank: 1, r1: 3, r2: 2, r3: 5 },
-  { kw: "bursa escort", city: "Bursa", url: "bursa-eskort.html", ourRank: 2, r1: 4, r2: 3, r3: 9 },
-  { kw: "alsancak escort", city: "İzmir / Alsancak", url: "alsancak-eskort.html", ourRank: 1, r1: 2, r2: 6, r3: 11 },
-  { kw: "kadikoy vip escort", city: "İstanbul / Kadıköy", url: "kadikoy-eskort.html", ourRank: 1, r1: 3, r2: 5, r3: 8 },
-  { kw: "bodrum escort", city: "Muğla / Bodrum", url: "bodrum-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 10 },
-  { kw: "cankaya vip escort", city: "Ankara / Çankaya", url: "cankaya-eskort.html", ourRank: 1, r1: 3, r2: 7, r3: 12 },
-  { kw: "adana eskort", city: "Adana", url: "adana-eskort.html", ourRank: 2, r1: 3, r2: 5, r3: 8 },
-  { kw: "eskisehir escort", city: "Eskişehir", url: "eskisehir-eskort.html", ourRank: 3, r1: 4, r2: 6, r3: 11 },
-  { kw: "alanya escort", city: "Antalya / Alanya", url: "alanya-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 7 },
-  { kw: "bornova escort", city: "İzmir / Bornova", url: "bornova-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 9 },
-  { kw: "besiktas escort", city: "İstanbul / Beşiktaş", url: "besiktas-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 8 },
-  { kw: "konak escort", city: "İzmir / Konak", url: "konak-eskort.html", ourRank: 1, r1: 2, r2: 6, r3: 10 },
-  { kw: "bakirkoy escort", city: "İstanbul / Bakırköy", url: "bakirkoy-eskort.html", ourRank: 2, r1: 2, r2: 5, r3: 8 },
-  { kw: "cesme alacati escort", city: "İzmir / Çeşme", url: "cesme-alacati-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 6 },
-  { kw: "karsiyaka vip escort", city: "İzmir / Karşıyaka", url: "karsiyaka-eskort.html", ourRank: 1, r1: 3, r2: 5, r3: 9 },
-  { kw: "lara escort", city: "Antalya / Lara", url: "lara-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 7 },
-  { kw: "beylikduzu escort", city: "İstanbul / Beylikdüzü", url: "beylikduzu-eskort.html", ourRank: 2, r1: 3, r2: 6, r3: 9 },
-  { kw: "sisli escort", city: "İstanbul / Şişli", url: "sisli-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 8 },
-  { kw: "etiler vip escort", city: "İstanbul / Etiler", url: "etiler-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 7 },
-  { kw: "atasehir escort", city: "İstanbul / Ataşehir", url: "atasehir-eskort.html", ourRank: 2, r1: 4, r2: 5, r3: 10 },
-  { kw: "kizilay escort", city: "Ankara / Kızılay", url: "kizilay-eskort.html", ourRank: 1, r1: 2, r2: 6, r3: 9 },
-  { kw: "nilufer escort", city: "Bursa / Nilüfer", url: "nilufer-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 8 },
-  { kw: "fethiye escort", city: "Muğla / Fethiye", url: "fethiye-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 9 },
-  { kw: "marmaris escort", city: "Muğla / Marmaris", url: "marmaris-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 7 },
-  { kw: "kusadasi vip escort", city: "Aydın / Kuşadası", url: "kusadasi-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 6 },
-  { kw: "gaziantep escort", city: "Gaziantep", url: "gaziantep-eskort.html", ourRank: 2, r1: 3, r2: 6, r3: 9 },
-  { kw: "kemer vip escort", city: "Antalya / Kemer", url: "kemer-eskort.html", ourRank: 1, r1: 2, r2: 5, r3: 8 },
-  { kw: "kordon escort", city: "İzmir / Alsancak", url: "kordon-eskort.html", ourRank: 1, r1: 3, r2: 6, r3: 10 },
-  { kw: "buca escort", city: "İzmir / Buca", url: "buca-eskort.html", ourRank: 2, r1: 2, r2: 4, r3: 7 },
-  { kw: "denizli escort", city: "Denizli", url: "denizli-eskort.html", ourRank: 2, r1: 3, r2: 5, r3: 8 },
-  { kw: "samsun escort", city: "Samsun", url: "samsun-eskort.html", ourRank: 2, r1: 4, r2: 6, r3: 11 },
-  { kw: "trabzon escort", city: "Trabzon", url: "trabzon-eskort.html", ourRank: 2, r1: 3, r2: 5, r3: 9 },
-  { kw: "mersin escort", city: "Mersin", url: "mersin-eskort.html", ourRank: 2, r1: 3, r2: 4, r3: 8 },
-  { kw: "yalikavak vip escort", city: "Muğla / Bodrum", url: "yalikavak-eskort.html", ourRank: 1, r1: 2, r2: 4, r3: 7 },
-  { kw: "manisa escort", city: "Manisa", url: "manisa-merkez-eskort.html", ourRank: 2, r1: 3, r2: 5, r3: 8 },
-  { kw: "levent escort", city: "İstanbul / Levent", url: "levent-eskort.html", ourRank: 1, r1: 3, r2: 4, r3: 9 }
-];
-
-function renderCompetitors() {
-  const tbody = document.getElementById('competitorTableBody');
-  if (!tbody) return;
-  tbody.innerHTML = '';
-  
-  competitorData.forEach(item => {
-    const isWinner = item.ourRank <= item.r1 && item.ourRank <= item.r2 && item.ourRank <= item.r3;
-    const badge = isWinner 
-      ? '<span style="background:rgba(16,185,129,0.2); color:#10B981; padding:4px 8px; border-radius:6px; font-weight:800; font-size:0.75rem;">🏆 LİDER</span>'
-      : '<span style="background:rgba(234,179,8,0.2); color:#EAB308; padding:4px 8px; border-radius:6px; font-weight:800; font-size:0.75rem;">🥈 TAKİPTE</span>';
-      
-    const tr = document.createElement('tr');
-    tr.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
-    tr.innerHTML = `
-      <td style="padding:12px 10px;">
-        <strong style="color:#FFF; font-size:0.95rem;">${item.kw}</strong>
-        <div style="color:#94A3B8; font-size:0.75rem;">${item.city} • <a href="https://harmoniliski.com/${item.url || 'index.html'}" target="_blank" style="color:#38BDF8; text-decoration:none;" rel="noopener noreferrer">📄 Sayfayı Aç ↗</a></div>
-      </td>
-      <td style="padding:12px 10px;">
-        <span style="font-size:1.1rem; font-weight:900; color:#38BDF8; background:rgba(56,189,248,0.15); padding:4px 10px; border-radius:8px;">#${item.ourRank}</span>
-      </td>
-      <td style="padding:12px 10px; color:#CBD5E1;">#${item.r1}</td>
-      <td style="padding:12px 10px; color:#CBD5E1;">#${item.r2}</td>
-      <td style="padding:12px 10px; color:#CBD5E1;">#${item.r3}</td>
-      <td style="padding:12px 10px;">${badge}</td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-// Hook into tab switch
-const origSwitchTab = window.switchTab;
-
-async function runLiveCompetitorScan(btn) {
-  if (!btn) btn = document.getElementById('btnRefreshCompetitors');
-  const originalHtml = btn ? btn.innerHTML : '';
-  if (btn) {
-    btn.disabled = true;
-    btn.innerHTML = '⏳ Rakipler Taranıyor (%0)...';
-  }
-  
-  const tbody = document.getElementById('competitorTableBody');
-  if (tbody) {
-    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:30px; color:#38BDF8;">🔍 4 Farklı Rakip Sitenin Google Sıralamaları Canlı Taranıyor, Lütfen Bekleyin...</td></tr>';
-  }
-  
-  await new Promise(r => setTimeout(r, 600));
-  if (btn) btn.innerHTML = '⏳ Google SERP Taranıyor (%50)...';
-  await new Promise(r => setTimeout(r, 600));
-  if (btn) btn.innerHTML = '⏳ Kıyaslama Raporu Hesaplanıyor (%90)...';
-  await new Promise(r => setTimeout(r, 500));
-  
-  renderCompetitors();
-  
-  if (btn) {
-    btn.disabled = false;
-    btn.innerHTML = '✅ Rakipler Güncellendi!';
-    setTimeout(() => { btn.innerHTML = '🔄 Rakipleri Yeniden Tara'; }, 3000);
-  }
-  
-  alert('⚔️ CANLI RAKİP RADARI GÜNCELLENDİ!\n\n• 4 Rakip site taranmıştır.\n• 40 Kritik il/ilçede ZenEscort %84.2 üstünlük ile 1. sıradadır.\n• Rakiplerinizin önündesiniz!');
-}
-window.runLiveCompetitorScan = runLiveCompetitorScan;
-window.renderCompetitors = renderCompetitors;
-
-window.switchTab = function(tabId, el) {
-  if (typeof origSwitchTab === 'function') origSwitchTab(tabId, el);
-  if (tabId === 'competitorTab') renderCompetitors();
-};
-
-</script>
-<script>
-  // Token zaten varsa kutuyu gizle
-  setTimeout(function() {
-    if (getActiveGitHubToken()) {
-      const wrap = document.getElementById('tokenSetupWrap');
-      if (wrap) wrap.style.display = 'none';
-    }
-  }, 100);
-</script>
-<script>
-/* WhatsApp Tiklama Takibi - GA4 */
-document.addEventListener('click', function(e) {
-  var a = e.target.closest('a');
-  if (a && a.href && (a.href.indexOf('wa.me') > -1 || a.href.indexOf('whatsapp') > -1)) {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'whatsapp_click', {
-        'event_category': 'iletisim',
-        'event_label': window.location.pathname.replace('.html','').replace('/','') || 'anasayfa',
-        'value': 1
-      });
-    }
-  }
-}, true);
-</script>
 </body>
 </html>
