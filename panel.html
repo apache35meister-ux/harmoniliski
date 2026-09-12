@@ -1098,7 +1098,7 @@
         <div class="panel-header">
           <h3>Escort Bazlı WhatsApp & Telefon Arama İstatistikleri</h3>
           <div style="display:flex; gap:10px; align-items:center;">
-            <button onclick="renderWaTable()" style="background:#0F291B; color:#4ADE80; border:1px solid #22C55E; padding:6px 14px; border-radius:8px; font-size:0.82rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+            <button onclick="renderWaTable(this)" style="background:#0F291B; color:#4ADE80; border:1px solid #22C55E; padding:6px 14px; border-radius:8px; font-size:0.82rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
               🔄 Canlı Verileri Yenile
             </button>
             <button onclick="resetLiveAnalytics()" style="background:#221111; color:#F87171; border:1px solid #7F1D1D; padding:6px 12px; border-radius:8px; font-size:0.78rem; cursor:pointer;">
@@ -2560,17 +2560,25 @@
             }
           }
 
-          // Arama ve mesaj loglarini teklik kontroluyle birlestir
+          // Arama ve mesaj loglarini teklik kontroluyle birlestir (Bulut loglari en ustte gosterilir)
           if (Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
-            const seenKeys = new Set(stats.callLogs.map(l => (l.time||'') + (l.name||'') + (l.type||'')));
+            const seenKeys = new Set();
+            const mergedLogs = [];
             cloudStats.logs.forEach(l => {
               const key = (l.time||'') + (l.name||'') + (l.type||'');
               if (!seenKeys.has(key)) {
-                stats.callLogs.push(l);
                 seenKeys.add(key);
+                mergedLogs.push(l);
               }
             });
-            if (stats.callLogs.length > 50) stats.callLogs = stats.callLogs.slice(0, 50);
+            stats.callLogs.forEach(l => {
+              const key = (l.time||'') + (l.name||'') + (l.type||'');
+              if (!seenKeys.has(key)) {
+                seenKeys.add(key);
+                mergedLogs.push(l);
+              }
+            });
+            stats.callLogs = mergedLogs.slice(0, 50);
           }
 
           // Sehir ziyaretlerini birlestir
@@ -2736,14 +2744,31 @@
       }
     }
 
-    async function renderWaTable() {
+    async function renderWaTable(btnEl) {
+      if (btnEl) {
+        btnEl.innerHTML = "⏳ Veriler Çekiliyor...";
+        btnEl.disabled = true;
+      }
       // 1. Önce ANINDA ve SENKRON render et (0ms gecikme)
       renderWaTableSync();
       // 2. Ardından arka planda GitHub'dan son veriyi çekip birleştirerek güncelle
       try {
         const stats = await getLiveAnalytics();
         renderWaTableSync(stats);
-      } catch(e) {}
+        if (btnEl) {
+          btnEl.innerHTML = `✓ Güncellendi (${stats.waClicks} Mesaj, ${stats.callLogs.length} Kayıt)`;
+          setTimeout(() => {
+            btnEl.innerHTML = "🔄 Canlı Verileri Yenile";
+            btnEl.disabled = false;
+          }, 2000);
+        }
+      } catch(e) {
+        console.warn('renderWaTable error:', e);
+        if (btnEl) {
+          btnEl.innerHTML = "🔄 Canlı Verileri Yenile";
+          btnEl.disabled = false;
+        }
+      }
     }
 
     async function handleDirectWaClick(e, id, name, city) {
