@@ -2462,10 +2462,14 @@
 
     async function getLiveAnalytics() {
       // 1. LocalStorage'dan oku
+      let rawVisits = localStorage.getItem('zenspa_real_visits');
+      let rawWa = localStorage.getItem('zenspa_real_wa_clicks');
+      let rawCalls = localStorage.getItem('zenspa_real_calls');
+
       let stats = {
-        visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0'),
-        waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0'),
-        callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0'),
+        visits: rawVisits !== null ? (parseInt(rawVisits, 10) || 0) : 0,
+        waClicks: rawWa !== null ? (parseInt(rawWa, 10) || 0) : 0,
+        callClicks: rawCalls !== null ? (parseInt(rawCalls, 10) || 0) : 0,
         tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
         tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
         callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
@@ -2474,44 +2478,7 @@
         activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
       };
 
-      // 2. Eger veriler tamamen bossa, gercek baslangic taban verileriyle guclendir
-      if (stats.visits === 0 && stats.waClicks === 0 && stats.callLogs.length === 0) {
-        stats.visits = 142;
-        stats.waClicks = 18;
-        stats.callClicks = 7;
-        stats.tClicks = { "1787133989390": 5, "1787133887229": 4, "1787133762615": 3, "1787133632639": 2, "1787133440430": 2, "1787093135705": 2 };
-        stats.tCalls = { "1787133762615": 3, "1787133534882": 2, "1787133887229": 2 };
-        stats.cityCounts = { "İzmir": 48, "İstanbul": 41, "Ankara": 26, "Muğla (Bodrum)": 15, "Antalya": 12 };
-        stats.callLogs = [
-          { "time": "12.09.2026 03:28", "name": "Merve", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-          { "time": "12.09.2026 03:14", "name": "Peri", "city": "Muğla (Bodrum)", "type": "💬 WhatsApp Randevu Talebi" },
-          { "time": "12.09.2026 02:55", "name": "Ayla", "city": "Ankara", "type": "📞 Telefon Görüşmesi" },
-          { "time": "12.09.2026 02:40", "name": "Nisa", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-          { "time": "12.09.2026 02:18", "name": "Pınar", "city": "Uşak", "type": "💬 WhatsApp Randevu Talebi" },
-          { "time": "12.09.2026 01:50", "name": "Melis", "city": "İzmir", "type": "💬 WhatsApp Randevu Talebi" },
-          { "time": "12.09.2026 01:22", "name": "Burçak", "city": "Aydın", "type": "📞 Telefon Görüşmesi" },
-          { "time": "12.09.2026 00:48", "name": "Sıla", "city": "İstanbul", "type": "💬 WhatsApp Randevu Talebi" }
-        ];
-        stats.cityVisits = [
-          { "time": "12.09.2026 03:32", "city": "İzmir (Konak)", "country": "Türkiye", "device": "Mobil 📱", "page": "izmir-eskort.html", "status": "Tamamlandı" },
-          { "time": "12.09.2026 03:25", "city": "İstanbul (Kadıköy)", "country": "Türkiye", "device": "Mobil 📱", "page": "kadikoy-moda-bagimsiz-vip-eskort.html", "status": "Tamamlandı" },
-          { "time": "12.09.2026 03:18", "city": "Muğla (Bodrum)", "country": "Türkiye", "device": "Mobil 📱", "page": "bodrum-yalikavak-turkbuku-vip-eskort.html", "status": "Tamamlandı" },
-          { "time": "12.09.2026 03:02", "city": "Ankara (Çankaya)", "country": "Türkiye", "device": "Masaüstü 💻", "page": "ankara-cankaya-kendi-yerinde-eskort.html", "status": "Tamamlandı" },
-          { "time": "12.09.2026 02:45", "city": "İzmir (Alsancak)", "country": "Türkiye", "device": "Mobil 📱", "page": "alsancak-kendi-yerinde-vip-eskort.html", "status": "Tamamlandı" }
-        ];
-        try {
-          localStorage.setItem('zenspa_real_visits', stats.visits.toString());
-          localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
-          localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
-          localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
-          localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
-          localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
-          localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
-          localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
-        } catch(e) {}
-      }
-
-      // 3. Buluttan (GitHub analytics.json) cek ve ASLA SIFIRLAMADAN BIRLESTIR (MERGE)
+      // 3. Buluttan (GitHub analytics.json) cek ve guncel resmi verileri yansit
       try {
         let cloudStats = null;
         const token = GITHUB_TOKEN;
@@ -2543,62 +2510,27 @@
         }
 
         if (cloudStats) {
-          // Sayilari Math.max ile birlestir, ASLA 0 ile ezme!
-          stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
-          stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
-          stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
+          if (typeof cloudStats.totalWaClicks === 'number') stats.waClicks = cloudStats.totalWaClicks;
+          if (typeof cloudStats.totalCalls === 'number') stats.callClicks = cloudStats.totalCalls;
+          if (typeof cloudStats.totalVisits === 'number') stats.visits = cloudStats.totalVisits;
 
           if (cloudStats.tClicks && typeof cloudStats.tClicks === 'object') {
-            for (const [k, v] of Object.entries(cloudStats.tClicks)) {
-              stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, v || 0);
-            }
+            stats.tClicks = cloudStats.tClicks;
           }
-
           if (cloudStats.tCalls && typeof cloudStats.tCalls === 'object') {
-            for (const [k, v] of Object.entries(cloudStats.tCalls)) {
-              stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, v || 0);
-            }
+            stats.tCalls = cloudStats.tCalls;
           }
 
-          // Arama ve mesaj loglarini teklik kontroluyle birlestir (Bulut loglari en ustte gosterilir)
-          if (Array.isArray(cloudStats.logs) && cloudStats.logs.length > 0) {
-            const seenKeys = new Set();
-            const mergedLogs = [];
-            cloudStats.logs.forEach(l => {
-              const key = (l.time||'') + (l.name||'') + (l.type||'');
-              if (!seenKeys.has(key)) {
-                seenKeys.add(key);
-                mergedLogs.push(l);
-              }
-            });
-            stats.callLogs.forEach(l => {
-              const key = (l.time||'') + (l.name||'') + (l.type||'');
-              if (!seenKeys.has(key)) {
-                seenKeys.add(key);
-                mergedLogs.push(l);
-              }
-            });
-            stats.callLogs = mergedLogs.slice(0, 50);
+          if (Array.isArray(cloudStats.logs)) {
+            stats.callLogs = cloudStats.logs;
           }
 
-          // Sehir ziyaretlerini birlestir
-          if (Array.isArray(cloudStats.cityVisits) && cloudStats.cityVisits.length > 0) {
-            const seenCityKeys = new Set(stats.cityVisits.map(v => (v.time||'') + (v.city||'')));
-            cloudStats.cityVisits.forEach(v => {
-              const key = (v.time||'') + (v.city||'');
-              if (!seenCityKeys.has(key)) {
-                stats.cityVisits.push(v);
-                seenCityKeys.add(key);
-              }
-            });
-            if (stats.cityVisits.length > 50) stats.cityVisits = stats.cityVisits.slice(0, 50);
+          if (Array.isArray(cloudStats.cityVisits)) {
+            stats.cityVisits = cloudStats.cityVisits;
           }
 
-          // Sehir sayaclarini birlestir
           if (cloudStats.cityCounts && typeof cloudStats.cityCounts === 'object') {
-            for (const [c, cnt] of Object.entries(cloudStats.cityCounts)) {
-              stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cnt || 0);
-            }
+            stats.cityCounts = cloudStats.cityCounts;
           }
 
           // Canli aktif ziyaretcileri birlestir
@@ -2615,9 +2547,19 @@
             });
           }
 
-          // Birlestirilmis guvenli veriyi localStorage'a yaz
+          // Guncel resmi veriyi localStorage'a da yaz
           try {
             localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
+            localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
+            localStorage.setItem('zenspa_real_visits', stats.visits.toString());
+            localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
+            localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
+            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
+            localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
+            localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
+          } catch(ex) {}
+        }
+      } catch(e) {}
             localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
             localStorage.setItem('zenspa_real_visits', stats.visits.toString());
             localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
@@ -2647,22 +2589,18 @@
     function renderWaTableSync(statsOverride) {
       let stats = statsOverride;
       if (!stats) {
-        let curWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '18');
-        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '7');
-        let curVisits = parseInt(localStorage.getItem('zenspa_real_visits') || '142');
+        let rawWa = localStorage.getItem('zenspa_real_wa_clicks');
+        let rawCalls = localStorage.getItem('zenspa_real_calls');
+        let rawVisits = localStorage.getItem('zenspa_real_visits');
+        let curWa = rawWa !== null ? (parseInt(rawWa, 10) || 0) : 0;
+        let curCalls = rawCalls !== null ? (parseInt(rawCalls, 10) || 0) : 0;
+        let curVisits = rawVisits !== null ? (parseInt(rawVisits, 10) || 0) : 0;
         let curTClicks = {};
         let curTCalls = {};
         let curLogs = [];
         try { curTClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'); } catch(e){}
         try { curTCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'); } catch(e){}
         try { curLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'); } catch(e){}
-        
-        // Zeynep için başlangıç garantisi
-        if (!curTClicks['1788738592899'] && !curTClicks['Zeynep']) {
-          curTClicks['1788738592899'] = 3;
-          curTClicks['Zeynep'] = 3;
-          curTClicks['zeynep'] = 3;
-        }
 
         stats = {
           waClicks: curWa,
@@ -3025,11 +2963,18 @@
           },
           body: JSON.stringify(putBody)
         });
+
+        try {
+          const liveSyncCh = new BroadcastChannel('zenspa_live_sync');
+          liveSyncCh.postMessage({ type: 'RESET' });
+        } catch(e) {}
+
+        renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
       } catch(err) {
         console.warn("Analytics cloud reset error:", err);
       }
 
-      alert("✓ Tüm istatistikler ve WhatsApp çağrı raporları sıfırlandı!");
+      alert("✓ Tüm istatistikler ve WhatsApp çağrı raporları tamamen sıfırlandı!");
     }
 
     function filterTable() {
@@ -4375,6 +4320,8 @@
           // Anında ve gecikmesiz güncelle (0 milisaniye)
           renderWaTableSync();
           renderWaTable();
+        } else if (ev.data && ev.data.type === 'RESET') {
+          renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
         }
       };
     } catch(e) {}
