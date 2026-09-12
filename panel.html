@@ -788,7 +788,7 @@
           var passInput = document.getElementById('adminPassInput');
           var val = passInput ? passInput.value.trim() : '';
           var err = document.getElementById('authErrorMsg');
-          if (val === 'hakan763') {
+          if (val === 'hakan908558' || val === 'hakan763') {
             try {
               sessionStorage.setItem('zenspa_panel_auth', 'evet');
               localStorage.setItem('zenspa_panel_auth', 'evet');
@@ -811,7 +811,7 @@
           } else {
             if (err) {
               err.style.display = 'block';
-              err.textContent = '❌ Hatalı şifre! (Şifreniz: hakan763)';
+              err.textContent = '❌ Hatalı şifre! Lütfen şifrenizi kontrol ediniz.';
             }
             if (passInput) passInput.focus();
             return false;
@@ -1996,7 +1996,7 @@
     let currentPhotoUrl = "";
 
 
-    const ADMIN_PASS = "hakan763";
+    const ADMIN_PASS = "hakan908558";
     const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
     const GITHUB_OWNER = "apache35meister-ux";
     const GITHUB_REPO = "harmoniliski";
@@ -2224,10 +2224,26 @@
           const parsed = JSON.parse(local);
           if (Array.isArray(parsed) && parsed.length > 0) {
             list = parsed;
-            renderTable(list);
           }
         } catch(e) {}
       }
+
+      if (!list || list.length === 0) {
+        if (typeof defaultTherapists !== 'undefined' && Array.isArray(defaultTherapists)) {
+          list = JSON.parse(JSON.stringify(defaultTherapists));
+        }
+      }
+
+      // 15 profil garantisi (Zeynep dahil eksik profilleri tamamla)
+      if (typeof defaultTherapists !== 'undefined' && Array.isArray(defaultTherapists)) {
+        defaultTherapists.forEach(defT => {
+          const exists = list.some(item => String(item.id) === String(defT.id) || (item.name && item.name.toLowerCase().trim() === (defT.name || '').toLowerCase().trim()));
+          if (!exists) {
+            list.push(JSON.parse(JSON.stringify(defT)));
+          }
+        });
+      }
+      try { renderTable(list); } catch(e) {}
 
       try {
         const liveList = await fetchLatestFromGitHub();
@@ -2730,29 +2746,129 @@
       } catch(e) {}
     }
 
-      const logsTbody = document.getElementById('liveCallLogsTableBody');
-      if (logsTbody) {
-        if (stats.callLogs && stats.callLogs.length > 0) {
-          logsTbody.innerHTML = stats.callLogs.map(log => `
-            <tr>
-              <td style="color:#A1A1AA; font-weight:600;">⏱️ ${log.time}</td>
-              <td><strong style="color:#FFF;">${log.name}</strong></td>
-              <td>📍 ${log.city}</td>
-              <td style="color:${log.type && log.type.includes('Telefon') ? '#38BDF8' : '#4ADE80'}; font-weight:800;">${log.type}</td>
-              <td><span class="status-badge">🟢 İletişim Başlatıldı</span></td>
-            </tr>
-          `).join('');
-        } else {
-          logsTbody.innerHTML = `
-            <tr>
-              <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
-                Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
-              </td>
-            </tr>
-          `;
-        }
+    async function handleDirectWaClick(e, id, name, city) {
+      try {
+        await recordWaClick(id, name, city, '💬 WhatsApp Randevu Talebi');
+        setTimeout(() => {
+          renderWaTable();
+        }, 300);
+      } catch(err) {
+        console.warn('handleDirectWaClick err:', err);
       }
     }
+
+    async function recordWaClick(tId, tName, city, actionType = '💬 WhatsApp Randevu Talebi') {
+      try {
+        let curWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '18');
+        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '7');
+        let curTClicks = {};
+        let curTCalls = {};
+        let curLogs = [];
+        try { curTClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'); } catch(e){}
+        try { curTCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'); } catch(e){}
+        try { curLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'); } catch(e){}
+
+        if (actionType.includes('WhatsApp')) {
+          curWa += 1;
+          const curIdStr = String(tId || '1788738592899');
+          curTClicks[curIdStr] = (curTClicks[curIdStr] || 0) + 1;
+          if (tName) {
+            curTClicks[tName] = (curTClicks[tName] || 0) + 1;
+            curTClicks[tName.toLowerCase()] = (curTClicks[tName.toLowerCase()] || 0) + 1;
+          }
+        } else {
+          curCalls += 1;
+          if (tId) curTCalls[tId] = (curTCalls[tId] || 0) + 1;
+        }
+
+        const now = new Date();
+        const timeStr = ('0' + now.getDate()).slice(-2) + '.' + ('0' + (now.getMonth() + 1)).slice(-2) + '.' + now.getFullYear() + ' ' + ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
+        curLogs.unshift({
+          time: timeStr,
+          name: tName || 'VIP Escort',
+          city: city || 'Türkiye',
+          type: actionType
+        });
+        if (curLogs.length > 50) curLogs = curLogs.slice(0, 50);
+
+        localStorage.setItem('zenspa_real_wa_clicks', curWa.toString());
+        localStorage.setItem('zenspa_real_calls', curCalls.toString());
+        localStorage.setItem('zenspa_t_clicks', JSON.stringify(curTClicks));
+        localStorage.setItem('zenspa_t_calls', JSON.stringify(curTCalls));
+        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(curLogs));
+
+        // GitHub bulut senkronizasyonu
+        try {
+          const owner = GITHUB_OWNER;
+          const repo = GITHUB_REPO;
+          const token = GITHUB_TOKEN;
+
+          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+            cache: 'no-store'
+          });
+          if (res.ok) {
+            const data = await res.json();
+            const rawBase64 = (data.content || '').replace(/\s/g, '');
+            const binary = atob(rawBase64);
+            const bytes = new Uint8Array(binary.length);
+            for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+            const currentJson = JSON.parse(new TextDecoder('utf-8').decode(bytes));
+
+            if (actionType.includes('WhatsApp')) {
+              currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
+              currentJson.tClicks = currentJson.tClicks || {};
+              const curIdStr = String(tId || '1788738592899');
+              currentJson.tClicks[curIdStr] = (currentJson.tClicks[curIdStr] || 0) + 1;
+              if (tName) {
+                currentJson.tClicks[tName] = (currentJson.tClicks[tName] || 0) + 1;
+                currentJson.tClicks[tName.toLowerCase()] = (currentJson.tClicks[tName.toLowerCase()] || 0) + 1;
+              }
+            } else {
+              currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
+              currentJson.tCalls = currentJson.tCalls || {};
+              if (tId) currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
+            }
+
+            currentJson.logs = currentJson.logs || [];
+            currentJson.logs.unshift({
+              time: timeStr,
+              name: tName || 'VIP Escort',
+              city: city || 'Türkiye',
+              type: actionType
+            });
+            if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
+
+            const newStr = JSON.stringify(currentJson, null, 2);
+            const utf8B = new TextEncoder().encode(newStr);
+            let bStr = '';
+            for (let i = 0; i < utf8B.length; i++) bStr += String.fromCharCode(utf8B[i]);
+            const base64Content = btoa(bStr);
+
+            await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+              method: 'PUT',
+              keepalive: true,
+              headers: {
+                'Authorization': 'Bearer ' + token,
+                'Accept': 'application/vnd.github+json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                message: "Track admin WA click: " + tName,
+                content: base64Content,
+                sha: data.sha
+              })
+            });
+          }
+        } catch(cloudErr) {
+          console.warn('Cloud WA click error:', cloudErr);
+        }
+      } catch(err) {
+        console.error('recordWaClick err:', err);
+      }
+    }
+    window.handleDirectWaClick = handleDirectWaClick;
+    window.recordWaClick = recordWaClick;
 
     async function exportCallLogsToCSV() {
       const stats = await getLiveAnalytics();

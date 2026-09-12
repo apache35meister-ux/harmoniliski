@@ -788,7 +788,7 @@
           var passInput = document.getElementById('adminPassInput');
           var val = passInput ? passInput.value.trim() : '';
           var err = document.getElementById('authErrorMsg');
-          if (val === 'hakan763') {
+          if (val === 'hakan908558' || val === 'hakan763') {
             try {
               sessionStorage.setItem('zenspa_panel_auth', 'evet');
               localStorage.setItem('zenspa_panel_auth', 'evet');
@@ -809,7 +809,7 @@
           } else {
             if (err) {
               err.style.display = 'block';
-              err.textContent = '❌ Hatalı şifre! (Şifreniz: hakan763)';
+              err.textContent = '❌ Hatalı şifre! Lütfen şifrenizi kontrol ediniz.';
             }
             if (passInput) passInput.focus();
             return false;
@@ -1975,14 +1975,26 @@
     wa: '6663937292', whatsapp: '6663937292',
     img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
     images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 10
+    clicks: 10, rating: '⭐ 5.0', reviews: 10
+  },
+  {
+    id: 1788738592899, name: 'Zeynep', age: 25,
+    city: 'Ankara', district: 'Çankaya', gender: 'Kadın',
+    services: ['İsveç', 'Aromaterapi', 'Medikal'],
+    tags: ['Klasik İsveç', 'Aromaterapi', 'Kendi Yeri'],
+    bio: 'Ankara Çankaya bölgesinde profesyonel masaj ve eskort hizmeti. WhatsApp\'tan randevu alın.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1798000000000,
+    wa: '905456276130', whatsapp: '905456276130',
+    img: 'images/profiles/zeynep.jpg', image: 'images/profiles/zeynep.jpg',
+    images: ['images/profiles/zeynep.jpg'], photos: ['images/profiles/zeynep.jpg'],
+    clicks: 12, rating: '⭐ 5.0', reviews: 14
   }
 ];
     let list = [];
     let currentPhotoUrl = "";
 
 
-    const ADMIN_PASS = "hakan763";
+    const ADMIN_PASS = "hakan908558";
     const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
     const GITHUB_OWNER = "apache35meister-ux";
     const GITHUB_REPO = "harmoniliski";
@@ -2034,10 +2046,10 @@
         return false;
       }
 
-      if (val !== ADMIN_PASS) {
+      if (val !== 'hakan908558' && val !== 'hakan763' && val !== ADMIN_PASS) {
         if (errorMsg) {
           errorMsg.style.display = 'block';
-          errorMsg.textContent = '❌ Hatalı şifre! Lütfen güncel şifrenizi giriniz.';
+          errorMsg.textContent = '❌ Hatalı şifre! Lütfen şifrenizi kontrol ediniz.';
         }
         if (passEl) {
           passEl.value = '';
@@ -2210,10 +2222,26 @@
           const parsed = JSON.parse(local);
           if (Array.isArray(parsed) && parsed.length > 0) {
             list = parsed;
-            renderTable(list);
           }
         } catch(e) {}
       }
+
+      if (!list || list.length === 0) {
+        if (typeof defaultTherapists !== 'undefined' && Array.isArray(defaultTherapists)) {
+          list = JSON.parse(JSON.stringify(defaultTherapists));
+        }
+      }
+
+      // 15 profil garantisi (Zeynep dahil)
+      if (typeof defaultTherapists !== 'undefined' && Array.isArray(defaultTherapists)) {
+        defaultTherapists.forEach(defT => {
+          const exists = list.some(item => String(item.id) === String(defT.id) || (item.name && item.name.toLowerCase().trim() === (defT.name || '').toLowerCase().trim()));
+          if (!exists) {
+            list.push(JSON.parse(JSON.stringify(defT)));
+          }
+        });
+      }
+      try { renderTable(list); } catch(e) {}
 
       try {
         const liveList = await fetchLatestFromGitHub();
@@ -2358,7 +2386,7 @@
           </td>
           <td>${getExpiryBadge(t)}</td>
           <td>
-            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+            <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct" data-id="${t.id}" data-name="${t.name}" data-city="${t.city}" onclick="handleDirectWaClick(event, '${t.id}', '${t.name}', '${t.city}')">
               💬 WhatsApp
             </a>
           </td>
@@ -2553,7 +2581,7 @@
             <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 ${callCount} Telefon Araması</td>
             <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ ${totalInterest} Müşteri Talebi</td>
             <td>
-              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
+              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct" data-id="${t.id}" data-name="${t.name}" data-city="${t.city}" onclick="handleDirectWaClick(event, '${t.id}', '${t.name}', '${t.city}')">
                 💬 İletişime Geç
               </a>
             </td>
@@ -2584,6 +2612,63 @@
         }
       }
     }
+
+    async function handleDirectWaClick(e, id, name, city) {
+      try {
+        await recordWaClick(id, name, city, '💬 WhatsApp Randevu Talebi');
+        setTimeout(() => {
+          renderWaTable();
+        }, 300);
+      } catch(err) {
+        console.warn('handleDirectWaClick err:', err);
+      }
+    }
+
+    async function recordWaClick(tId, tName, city, actionType = '💬 WhatsApp Randevu Talebi') {
+      try {
+        let curWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '18');
+        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '7');
+        let curTClicks = {};
+        let curTCalls = {};
+        let curLogs = [];
+        try { curTClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'); } catch(e){}
+        try { curTCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'); } catch(e){}
+        try { curLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'); } catch(e){}
+
+        if (actionType.includes('WhatsApp')) {
+          curWa += 1;
+          const curIdStr = String(tId || '1788738592899');
+          curTClicks[curIdStr] = (curTClicks[curIdStr] || 0) + 1;
+          if (tName) {
+            curTClicks[tName] = (curTClicks[tName] || 0) + 1;
+            curTClicks[tName.toLowerCase()] = (curTClicks[tName.toLowerCase()] || 0) + 1;
+          }
+        } else {
+          curCalls += 1;
+          if (tId) curTCalls[tId] = (curTCalls[tId] || 0) + 1;
+        }
+
+        const now = new Date();
+        const timeStr = ('0' + now.getDate()).slice(-2) + '.' + ('0' + (now.getMonth() + 1)).slice(-2) + '.' + now.getFullYear() + ' ' + ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
+        curLogs.unshift({
+          time: timeStr,
+          name: tName || 'VIP Escort',
+          city: city || 'Türkiye',
+          type: actionType
+        });
+        if (curLogs.length > 50) curLogs = curLogs.slice(0, 50);
+
+        localStorage.setItem('zenspa_real_wa_clicks', curWa.toString());
+        localStorage.setItem('zenspa_real_calls', curCalls.toString());
+        localStorage.setItem('zenspa_t_clicks', JSON.stringify(curTClicks));
+        localStorage.setItem('zenspa_t_calls', JSON.stringify(curTCalls));
+        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(curLogs));
+      } catch(err) {
+        console.error('recordWaClick err:', err);
+      }
+    }
+    window.handleDirectWaClick = handleDirectWaClick;
+    window.recordWaClick = recordWaClick;
 
     async function exportCallLogsToCSV() {
       const stats = await getLiveAnalytics();
