@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 2,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "12.09.2026 18:45",
   "tClicks": {
     "1788429948834": 3,
@@ -15,7 +15,9 @@
     "1788429948834": 1,
     "yeliz": 1
   },
-  "cityCounts": {},
+  "cityCounts": {
+    "Dalaman": 1
+  },
   "logs": [
     {
       "time": "12.09.2026 19:17",
@@ -66,15 +68,23 @@
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "cityVisits": [],
+  "cityVisits": [
+    {
+      "time": "12.09.2026 19:50",
+      "city": "Dalaman",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    }
+  ],
   "activeVisitors": [
     {
-      "id": "v_mtyk0ytu_pm7j",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789229829966,
-      "time": "19:17"
+      "id": "v_mtymf1e4_umpd",
+      "city": "Dalaman",
+      "device": "iPhone 📱",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789231801994,
+      "time": "19:50"
     }
   ]
 }
