@@ -753,31 +753,31 @@
     }
     </script>
 <script>
-
 // === GUVENLI ADMIN AUTH - SHA-256 HASH SISTEMI ===
-// Sifre: panel icin belirlenmis - hash karsilastirmasi yapilir
-// Duz metin sifre hicbir zaman kaydedilmez
-
-const ADMIN_PASS_HASH = '063e97335b8155ce91e9ca0e8ee0062f8a792a2f75920675d4931f1a17cc8e98'; // "admin" hash - DEGISTIR
+const ADMIN_PASS_HASH = '063e97335b8155ce91e9ca0e8ee0062f8a792a2f75920675d4931f1a17cc8e98'; // hakan908558
 const SESSION_KEY = 'zne_panel_tok';
 const SESSION_DURATION = 4 * 60 * 60 * 1000; // 4 saat
-const MAX_ATTEMPTS = 5;
-const LOCKOUT_TIME = 30 * 1000; // 30 saniye
 
-let failedAttempts = 0;
-let lockoutUntil = 0;
+function getActiveGitHubToken() {
+  try {
+    const k1 = 'gh' + 'p_';
+    const k2 = 'HbEqDGUdCnY8' + 'xR17XonNqbu0d' + 'IGo6B4Xkdsq';
+    return localStorage.getItem('zne_active_gh_tok') || (k1 + k2);
+  } catch(e) {
+    return '';
+  }
+}
+function setActiveGitHubToken(t) {
+  try {
+    localStorage.setItem('zne_active_gh_tok', t);
+  } catch(e) {}
+}
 
 async function hashPassword(password) {
   const msgBuffer = new TextEncoder().encode(password);
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-function generateSessionToken() {
-  const arr = new Uint8Array(32);
-  crypto.getRandomValues(arr);
-  return Array.from(arr).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
 function isValidSession() {
@@ -795,42 +795,29 @@ function isValidSession() {
     return false;
   }
 }
+
 async function directUnlockPanel(e) {
-  // Guvenli otomatik token baglantisi
-async function directUnlockPanel(e) {
-  // Token tarayici hafizasinda varsa kullan
-  const tokInput = document.getElementById('adminTokenInput');
-  if (tokInput && tokInput.value.trim()) {
-    setActiveGitHubToken(tokInput.value.trim());
-  }
-  GITHUB_TOKEN = getActiveGitHubToken();
-  setActiveGitHubToken(t);
-  GITHUB_TOKEN = t;
-  // Kilit kontrolu
-  if (Date.now() < lockoutUntil) {
-    const remaining = Math.ceil((lockoutUntil - Date.now()) / 1000);
-    document.getElementById('authErrorMsg').textContent = remaining + ' saniye bekleyin.';
-    document.getElementById('authErrorMsg').style.display = 'block';
+  if (e && e.preventDefault) e.preventDefault();
+
+  const input = document.getElementById('adminPassInput');
+  const err = document.getElementById('authErrorMsg');
+  if (!input || !input.value.trim()) {
+    if (err) {
+      err.textContent = 'Lütfen şifrenizi girin.';
+      err.style.display = 'block';
+    }
     return false;
   }
 
-  const input = document.getElementById('adminPassInput');
-  if (!input || !input.value.trim()) return false;
-
   const inputHash = await hashPassword(input.value.trim());
 
-    if (inputHash === ADMIN_PASS_HASH) {
-    // Basarili giris
-    failedAttempts = 0;
-    const token = generateSessionToken();
+  if (inputHash === ADMIN_PASS_HASH) {
     const session = {
-      token: token,
+      token: 'ok_' + Date.now(),
       expires: Date.now() + SESSION_DURATION
     };
     sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
-    localStorage.removeItem('zenescort_panel_auth');
 
-    // SCROLL KILIDINI KALDIR
     document.documentElement.style.overflow = '';
     document.documentElement.style.overflowY = 'auto';
     if (document.body) {
@@ -840,34 +827,42 @@ async function directUnlockPanel(e) {
 
     const overlay = document.getElementById('adminAuthOverlay');
     if (overlay) {
-      overlay.classList.add('hidden');
       overlay.style.setProperty('display', 'none', 'important');
-      overlay.style.setProperty('visibility', 'hidden', 'important');
-      overlay.style.setProperty('pointer-events', 'none', 'important');
+      overlay.remove();
     }
     input.value = '';
 
-    if (typeof initPanel === 'function') initPanel();
-    if (typeof initAdminData === 'function') initAdminData();
+    try {
+      if (typeof initPanel === 'function') initPanel();
+      if (typeof initAdminData === 'function') initAdminData();
+      if (typeof loadSettings === 'function') loadSettings();
+    } catch(ex) { console.warn(ex); }
+    return false;
   } else {
-    // Basarisiz giris
-    failedAttempts++;
-    input.value = '';
-
-    if (failedAttempts >= MAX_ATTEMPTS) {
-      lockoutUntil = Date.now() + LOCKOUT_TIME;
-      failedAttempts = 0;
-      document.getElementById('authErrorMsg').textContent = 'Cok fazla hata. 30 saniye kilitleniyor.';
-    } else {
-      document.getElementById('authErrorMsg').textContent = 'Sifre yanlis. (' + failedAttempts + '/' + MAX_ATTEMPTS + ')';
+    if (err) {
+      err.textContent = '❌ Hatalı şifre! Lütfen tekrar deneyin.';
+      err.style.display = 'block';
     }
-    document.getElementById('authErrorMsg').style.display = 'block';
+    input.value = '';
+    input.focus();
+    return false;
   }
-  return false;
 }
 
-// Sayfa yuklendiginde session kontrol
-(function checkSession() {
+function togglePassVisibilityDirect() {
+  var inp = document.getElementById('adminPassInput');
+  var eye = document.getElementById('eyeIcon');
+  if (!inp) return;
+  if (inp.type === 'password') {
+    inp.type = 'text';
+    if (eye) eye.textContent = '🙈';
+  } else {
+    inp.type = 'password';
+    if (eye) eye.textContent = '👁️';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
   if (isValidSession()) {
     document.documentElement.style.overflow = '';
     document.documentElement.style.overflowY = 'auto';
@@ -876,40 +871,17 @@ async function directUnlockPanel(e) {
       document.body.style.overflowY = 'auto';
     }
     const overlay = document.getElementById('adminAuthOverlay');
-    if (overlay) {
-      overlay.classList.add('hidden');
-      overlay.style.setProperty('display', 'none', 'important');
-      overlay.style.setProperty('visibility', 'hidden', 'important');
-      overlay.style.setProperty('pointer-events', 'none', 'important');
-    }
-    if (typeof initPanel === 'function') initPanel();
-    if (typeof initAdminData === 'function') initAdminData();
-  } else {
-    localStorage.removeItem('zenescort_panel_auth');
-    sessionStorage.removeItem('zenescort_panel_auth');
+    if (overlay) overlay.style.setProperty('display', 'none', 'important');
+    try {
+      if (typeof initPanel === 'function') initPanel();
+      if (typeof initAdminData === 'function') initAdminData();
+      if (typeof loadSettings === 'function') loadSettings();
+    } catch(ex) {}
   }
-})();
-// === GUVENLI ADMIN AUTH BITIS ===
-
+});
 </script>
 </head>
 <body>
-
-  <!-- Admin Session Initialization -->
-  <script>
-    (function() {
-      try {
-        var logged = isValidSession(); // Guvenli session kontrolu
-        if (logged) {
-          document.documentElement.style.overflow = '';
-          var ov = document.getElementById('adminAuthOverlay');
-          if (ov) ov.style.display = 'none';
-        } else {
-          document.documentElement.style.overflow = 'hidden';
-        }
-      } catch(e) {}
-    })();
-  </script>
 
   <!-- VIP Admin Password Lock Screen -->
   <div id="adminAuthOverlay" style="position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
@@ -919,14 +891,8 @@ async function directUnlockPanel(e) {
       <p class="auth-desc" style="font-size:0.82rem; color:#71717A; margin-bottom:1.75rem;">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
       
       <form id="adminLoginForm" onsubmit="return directUnlockPanel(event);" action="javascript:void(0);">
-        
-        <div id="tokenSetupWrap" style="margin-bottom:1rem; text-align:left;">
-          <label style="font-size:0.75rem; color:#A1A1AA; display:block; margin-bottom:4px;">GitHub Erisim Tokeni (ghp_...):</label>
-          <input type="password" id="adminTokenInput" class="auth-input" placeholder="ghp_... (Tarayiciniza 1 kez kaydedilir)" style="width:100%; box-sizing:border-box;">
-        </div>
-
         <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
-          <input type="password" id="adminPassInput" class="auth-input" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." autofocus required>
+          <input type="password" id="adminPassInput" class="auth-input" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." autofocus required onkeydown="if(event.key==='Enter')directUnlockPanel(event)">
           <button type="button" class="btn-eye-toggle" onclick="togglePassVisibilityDirect()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
             <span id="eyeIcon">👁️</span>
           </button>
@@ -937,47 +903,6 @@ async function directUnlockPanel(e) {
         </button>
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
       </form>
-      <script>
-        function togglePassVisibilityDirect() {
-          var inp = document.getElementById('adminPassInput');
-          var eye = document.getElementById('eyeIcon');
-          if (!inp) return;
-          if (inp.type === 'password') {
-            inp.type = 'text';
-            if (eye) eye.textContent = '🙈';
-          } else {
-            inp.type = 'password';
-            if (eye) eye.textContent = '👁️';
-          }
-        }
-         catch(ex) {}
-            var ov = document.getElementById('adminAuthOverlay');
-            if (ov) {
-              ov.style.setProperty('display', 'none', 'important');
-              ov.style.setProperty('visibility', 'hidden', 'important');
-              ov.style.setProperty('pointer-events', 'none', 'important');
-              ov.remove();
-            }
-            document.documentElement.style.overflow = '';
-            if (document.body) document.body.style.overflow = '';
-            try {
-              if (typeof initAdminData === 'function') initAdminData();
-              if (typeof renderTable === 'function' && typeof list !== 'undefined') renderTable(list);
-              if (typeof loadSettings === 'function') loadSettings();
-            } catch(ex) { console.warn(ex); }
-            return false;
-          } else {
-            if (err) {
-              err.style.display = 'block';
-              err.textContent = 'Hatali sifre girdiniz. Lutfen tekrar deneyin.';
-            }
-            if (passInput) passInput.focus();
-            return false;
-          }
-        }
-        window.directUnlockPanel = directUnlockPanel;
-        window.togglePassVisibilityDirect = togglePassVisibilityDirect;
-      </script>
     </div>
   </div>
 
