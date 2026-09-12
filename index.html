@@ -3202,6 +3202,13 @@
         localStorage.setItem('zenspa_t_clicks', JSON.stringify(tClicks));
 
         addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
+
+        // 0ms Anında Canlı İletim (Açık olan Admin Paneline anında bildir)
+        try {
+          const ch = new BroadcastChannel('zenspa_live_sync');
+          ch.postMessage({ type: 'WA_CLICK', tId: tId, tName: name, city: c, totalWa: totalWa });
+        } catch(e) {}
+
         syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
       } catch(err) {
         console.warn('trackWaAction error:', err);
@@ -3236,6 +3243,13 @@
         localStorage.setItem('zenspa_t_calls', JSON.stringify(tCalls));
 
         addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
+
+        // 0ms Anında Canlı İletim
+        try {
+          const ch = new BroadcastChannel('zenspa_live_sync');
+          ch.postMessage({ type: 'CALL_CLICK', tId: tId, tName: name, city: c, totalCalls: totalCalls });
+        } catch(e) {}
+
         syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
       } catch(err) {
         console.warn('trackCallAction error:', err);

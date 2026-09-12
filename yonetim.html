@@ -4367,23 +4367,41 @@
     window.getLiveAnalytics = getLiveAnalytics;
     window.resetLiveAnalytics = resetLiveAnalytics;
 
-    // Canlı Sekmeler İçin Otomatik Arka Plan Yenileme (12 sn)
-    setInterval(() => {
-      try {
-        const cityTab = document.getElementById('cityAnalyticsTab');
-        if (cityTab && cityTab.classList.contains('active')) {
-          renderCityVisitorStats();
-        }
-        const waTab = document.getElementById('whatsappTab');
-        if (waTab && waTab.classList.contains('active')) {
+    // --- 0ms ANINDA CANLI SENKRONİZASYON (BroadcastChannel & Storage Event) ---
+    try {
+      const liveSyncCh = new BroadcastChannel('zenspa_live_sync');
+      liveSyncCh.onmessage = function(ev) {
+        if (ev.data && (ev.data.type === 'WA_CLICK' || ev.data.type === 'CALL_CLICK')) {
+          // Anında ve gecikmesiz güncelle (0 milisaniye)
+          renderWaTableSync();
           renderWaTable();
         }
+      };
+    } catch(e) {}
+
+    window.addEventListener('storage', function(e) {
+      if (e.key && (e.key.includes('wa') || e.key.includes('call') || e.key.includes('t_clicks') || e.key.includes('log'))) {
+        renderWaTableSync();
+      }
+    });
+
+    // Canlı Sekmeler İçin Hızlı Otomatik Arka Plan Yenileme (2.5 saniye - Gecikmesiz Anlık Senkron)
+    setInterval(() => {
+      try {
+        const waTab = document.getElementById('whatsappTab');
+        if (waTab && (waTab.classList.contains('active') || waTab.style.display === 'block')) {
+          renderWaTable();
+        }
+        const cityTab = document.getElementById('cityAnalyticsTab');
+        if (cityTab && (cityTab.classList.contains('active') || cityTab.style.display === 'block')) {
+          renderCityVisitorStats();
+        }
       } catch(e) {}
-    }, 12000);
+    }, 2500);
 
     document.addEventListener('DOMContentLoaded', function() {
       checkAuth();
-      setTimeout(updateMainLiveKpiBar, 500);
+      setTimeout(updateMainLiveKpiBar, 300);
     });
   </script>
 
