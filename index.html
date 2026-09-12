@@ -2971,6 +2971,43 @@
     "rating": "⭐ 5.0",
     "reviews": 12
   }
+,
+  {
+    "id": 1788738592899,
+    "name": "Zeynep",
+    "age": 25,
+    "city": "Ankara",
+    "district": "Çankaya",
+    "gender": "Kadın",
+    "services": [
+      "İsveç",
+      "Aromaterapi",
+      "Medikal"
+    ],
+    "tags": [
+      "Klasik İsveç",
+      "Aromaterapi",
+      "Kendi Yeri"
+    ],
+    "bio": "Ankara Çankaya bölgesinde profesyonel ve hijyenik ortamda masaj ve eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1798000000000,
+    "wa": "905456276130",
+    "whatsapp": "905456276130",
+    "img": "images/turkish_merve_photo.jpg",
+    "image": "images/turkish_merve_photo.jpg",
+    "images": [
+      "images/turkish_merve_photo.jpg"
+    ],
+    "photos": [
+      "images/turkish_merve_photo.jpg"
+    ],
+    "clicks": 15,
+    "rating": "⭐ 5.0",
+    "reviews": 16
+  }
 ];
 
 
@@ -3053,9 +3090,13 @@
           if (actionType.includes('WhatsApp')) {
             currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
             currentJson.tClicks = currentJson.tClicks || {};
-            if (tId) {
-              currentJson.tClicks[tId] = (currentJson.tClicks[tId] || 0) + 1;
+            const curIdStr = String(tId || '1788738592899');
+            currentJson.tClicks[curIdStr] = (currentJson.tClicks[curIdStr] || 0) + 1;
+            if (tName) {
+              currentJson.tClicks[tName] = (currentJson.tClicks[tName] || 0) + 1;
+              currentJson.tClicks[tName.toLowerCase()] = (currentJson.tClicks[tName.toLowerCase()] || 0) + 1;
             }
+          }
           } else {
             currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
             currentJson.tCalls = currentJson.tCalls || {};
@@ -3236,7 +3277,7 @@
         try {
           const parsed = JSON.parse(local);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            const hasDemo = parsed.some(t => ['Selin', 'Derya', 'Elif', 'Emre', 'Zeynep', 'Cansu', 'Burak', 'Gamze', 'Büşra', 'Mert', 'Ezgi', 'Hande', 'Nilay'].includes(t.name));
+            const hasDemo = parsed.some(t => ['Selin', 'Derya', 'Elif', 'Emre', 'Cansu', 'Burak', 'Gamze', 'Büşra', 'Mert', 'Ezgi', 'Hande', 'Nilay'].includes(t.name));
             if (hasDemo) {
               localStorage.removeItem('zenspa_therapists');
             } else {
