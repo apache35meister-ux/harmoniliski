@@ -3172,27 +3172,41 @@
     window.getLiveAnalytics = getLiveAnalytics;
     window.resetLiveAnalytics = resetLiveAnalytics;
 
-    // --- 0ms ANINDA CANLI SENKRONİZASYON (BroadcastChannel & Storage Event) ---
-    try {
-      const liveSyncCh = new BroadcastChannel('zenspa_live_sync');
-      liveSyncCh.onmessage = function(ev) {
-        if (ev.data && (ev.data.type === 'WA_CLICK' || ev.data.type === 'CALL_CLICK')) {
-          // Anında ve gecikmesiz güncelle (0 milisaniye)
-          renderWaTableSync();
-          renderWaTable();
-        } else if (ev.data && ev.data.type === 'RESET') {
-          renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
-        }
-      };
-    } catch(e) {}
-
-    window.addEventListener('storage', function(e) {
-      if (e.key && (e.key.includes('wa') || e.key.includes('call') || e.key.includes('t_clicks') || e.key.includes('log'))) {
+    // --- AYNI TARAYICIDA ANINDA ANALİTİK SENKRONİZASYONU ---
+      let lastLegacyAnalyticsNonce = '';
+      function refreshLegacyAnalyticsViews(event) {
+        const nonce = event && event.nonce;
+        if (nonce && nonce === lastLegacyAnalyticsNonce) return;
+        if (nonce) lastLegacyAnalyticsNonce = nonce;
         renderWaTableSync();
+        renderWaTable();
+        updateMainLiveKpiBar();
+        const cityTab = document.getElementById('cityAnalyticsTab');
+        if (cityTab && (cityTab.classList.contains('active') || cityTab.style.display === 'block')) {
+          renderCityVisitorStats();
+        }
       }
-    });
 
-    // Canlı Sekmeler İçin Hızlı Otomatik Arka Plan Yenileme (2.5 saniye - Gecikmesiz Anlık Senkron)
+      try {
+        const liveSyncCh = new BroadcastChannel('zenspa_live_sync');
+        liveSyncCh.onmessage = function(ev) {
+          if (ev.data && (ev.data.type === 'WA_CLICK' || ev.data.type === 'CALL_CLICK' || ev.data.type === 'PAGE_VISIT')) {
+            refreshLegacyAnalyticsViews(ev.data);
+          } else if (ev.data && ev.data.type === 'RESET') {
+            renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
+          }
+        };
+      } catch(e) {}
+
+      window.addEventListener('storage', function(e) {
+        if (e.key === 'zenspa_live_sync_event' && e.newValue) {
+          try { refreshLegacyAnalyticsViews(JSON.parse(e.newValue)); } catch (err) { refreshLegacyAnalyticsViews(); }
+        } else if (e.key && (e.key.includes('wa') || e.key.includes('call') || e.key.includes('t_clicks') || e.key.includes('log'))) {
+          renderWaTableSync();
+        }
+      });
+
+        // Canlı Sekmeler İçin Hızlı Otomatik Arka Plan Yenileme (2.5 saniye - Gecikmesiz Anlık Senkron)
     setInterval(() => {
       try {
         const waTab = document.getElementById('whatsappTab');

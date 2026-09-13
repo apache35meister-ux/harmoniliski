@@ -3032,11 +3032,27 @@
       } catch(e) {}
     }
 
-    function trackPageVisit() {
-      let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
-      visits++;
-      localStorage.setItem('zenspa_real_visits', visits.toString());
-    }
+    function notifyLegacyAnalyticsUpdate(type, data) {
+        const event = Object.assign({
+          type: type || 'ANALYTICS_UPDATED',
+          nonce: Date.now().toString(36) + '-' + Math.random().toString(36).slice(2)
+        }, data || {});
+        try {
+          localStorage.setItem('zenspa_live_sync_event', JSON.stringify(event));
+        } catch (e) {}
+        try {
+          const ch = new BroadcastChannel('zenspa_live_sync');
+          ch.postMessage(event);
+          ch.close();
+        } catch (e) {}
+      }
+
+        function trackPageVisit() {
+        let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
+        visits++;
+        localStorage.setItem('zenspa_real_visits', visits.toString());
+        notifyLegacyAnalyticsUpdate('PAGE_VISIT', { totalVisits: visits });
+      }
 
     // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
     function getFormattedTime() {
@@ -3117,11 +3133,8 @@
 
         addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
 
-        // 0ms Anında Canlı İletim (Açık olan Admin Paneline anında bildir)
-        try {
-          const ch = new BroadcastChannel('zenspa_live_sync');
-          ch.postMessage({ type: 'WA_CLICK', tId: tId, tName: name, city: c, totalWa: totalWa });
-        } catch(e) {}
+        // Panel açık olsa da olmasa da aynı tarayıcıdaki diğer sekmelere bildir.
+        notifyLegacyAnalyticsUpdate('WA_CLICK', { tId: tId, tName: name, city: c, totalWa: totalWa });
 
         syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
       } catch(err) {
@@ -3158,11 +3171,8 @@
 
         addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
 
-        // 0ms Anında Canlı İletim
-        try {
-          const ch = new BroadcastChannel('zenspa_live_sync');
-          ch.postMessage({ type: 'CALL_CLICK', tId: tId, tName: name, city: c, totalCalls: totalCalls });
-        } catch(e) {}
+        // Panel açık olsa da olmasa da aynı tarayıcıdaki diğer sekmelere bildir.
+        notifyLegacyAnalyticsUpdate('CALL_CLICK', { tId: tId, tName: name, city: c, totalCalls: totalCalls });
 
         syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
       } catch(err) {
