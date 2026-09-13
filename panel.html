@@ -1685,7 +1685,7 @@
         }
         if (button) button.disabled = true;
         try {
-          var response = await fetch(legacyAuthUrl('/api/legacy-auth/login'), {
+          var response = await fetch(legacyAuthUrl('/api/legacy-auth/signin'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'Accept': 'application/json' },
             cache: 'no-store',
