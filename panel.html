@@ -760,7 +760,7 @@
           </button>
         </div>
         
-        <button type="submit" id="btnAdminLoginSubmit" class="btn-auth-submit" style="width:100%; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); color:#000; font-weight:900; font-size:0.95rem; padding:0.95rem; border-radius:12px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(230, 175, 46, 0.35);">
+        <button type="button" onclick="window.__legacyAdminLoginClick()" id="btnAdminLoginSubmit" class="btn-auth-submit" style="width:100%; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); color:#000; font-weight:900; font-size:0.95rem; padding:0.95rem; border-radius:12px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(230, 175, 46, 0.35);">
           GİRİŞ YAP ➔
         </button>
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
@@ -3199,6 +3199,10 @@
         }
       } catch(e) {}
     }, 2500);
+    window.__legacyAdminLoginClick = function() {
+      void submitLegacyAdminLogin();
+    };
+
     document.addEventListener('DOMContentLoaded', function() {
       var loginForm = document.getElementById('adminLoginForm');
       if (loginForm) {
