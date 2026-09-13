@@ -3128,7 +3128,39 @@
         async function syncAnalyticsToGitHub() { return false; }
 
         // 🟢 EN ÜST CANLI SAYAÇLARI GÜNCELLEME MOTORU
-    async function updateMainLiveKpiBar() {
+    function repairDuplicateLegacyWhatsAppCounter() {
+        try {
+          const repairKey = 'zenspa_wa_dedupe_repaired_v1';
+          if (localStorage.getItem(repairKey)) return;
+          const total = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0', 10) || 0;
+          const logs = readLegacyAnalyticsJson('zenspa_live_call_logs', []);
+          const genericNames = new Set(['VIP İlan / Genel Randevu', 'VIP Escort']);
+          const isWa = (log) => log && typeof log.type === 'string' && log.type.includes('WhatsApp');
+          const profileLogs = logs.filter((log) => isWa(log) && !genericNames.has(String(log.name || '').trim()));
+          const profileTimes = new Set(profileLogs.map((log) => String(log.time || '')));
+          let duplicateCount = 0;
+          const repairedLogs = logs.map((log) => {
+            const isDuplicate = duplicateCount < 10 && isWa(log) && genericNames.has(String(log.name || '').trim()) && profileTimes.has(String(log.time || ''));
+            if (!isDuplicate) return log;
+            duplicateCount += 1;
+            return null;
+          }).filter(Boolean);
+          if (duplicateCount > 0 && total >= duplicateCount) {
+            localStorage.setItem('zenspa_real_wa_clicks', String(total - duplicateCount));
+            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(repairedLogs.slice(0, 50)));
+            const clicks = readLegacyAnalyticsJson('zenspa_t_clicks', {});
+            ['0', 'VIP İlan / Genel Randevu', 'vip ilan / genel randevu'].forEach((key) => {
+              if (Number(clicks[key]) > 0) clicks[key] = Math.max(0, Number(clicks[key]) - duplicateCount);
+            });
+            localStorage.setItem('zenspa_t_clicks', JSON.stringify(clicks));
+          }
+          localStorage.setItem(repairKey, '1');
+        } catch (error) {
+          console.warn('WhatsApp sayaç onarımı başarısız:', error);
+        }
+      }
+
+        async function updateMainLiveKpiBar() {
       try {
         const stats = await getLiveAnalytics();
         const now = Date.now();
