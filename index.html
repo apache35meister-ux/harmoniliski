@@ -3032,6 +3032,20 @@
       } catch(e) {}
     }
 
+    const LEGACY_ANALYTICS_API_BASE = 'https://5b0112ff-94c4-4986-8604-50291a44910e-00-386bb2a2yhdcy.sisko.replit.dev/api';
+    function getLegacyAnalyticsSessionId() {
+      try {
+        const key = 'zenspa_legacy_analytics_session';
+        let value = localStorage.getItem(key);
+        if (!value) { value = (Date.now().toString(36) + '-' + Math.random().toString(36).slice(2)); localStorage.setItem(key, value); }
+        return value;
+      } catch (e) { return undefined; }
+    }
+    function sendLegacyAnalyticsEvent(eventName, eventPath) {
+      try {
+        fetch(LEGACY_ANALYTICS_API_BASE + '/analytics/events', { method: 'POST', headers: { 'Content-Type': 'application/json' }, keepalive: true, body: JSON.stringify({ eventName: eventName, path: eventPath || location.pathname, sessionId: getLegacyAnalyticsSessionId(), consent: true }) }).catch(function () {});
+      } catch (e) {}
+    }
     function notifyLegacyAnalyticsUpdate(type, data) {
         const event = Object.assign({
           type: type || 'ANALYTICS_UPDATED',
@@ -3135,6 +3149,7 @@
 
         // Panel açık olsa da olmasa da aynı tarayıcıdaki diğer sekmelere bildir.
         notifyLegacyAnalyticsUpdate('WA_CLICK', { tId: tId, tName: name, city: c, totalWa: totalWa });
+        sendLegacyAnalyticsEvent('whatsapp_click', location.pathname);
 
         syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
       } catch(err) {
@@ -3173,6 +3188,7 @@
 
         // Panel açık olsa da olmasa da aynı tarayıcıdaki diğer sekmelere bildir.
         notifyLegacyAnalyticsUpdate('CALL_CLICK', { tId: tId, tName: name, city: c, totalCalls: totalCalls });
+        sendLegacyAnalyticsEvent('phone_click', location.pathname);
 
         syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
       } catch(err) {

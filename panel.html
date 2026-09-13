@@ -1657,6 +1657,40 @@
     const GITHUB_OWNER = "apache35meister-ux";
     const GITHUB_REPO = "harmoniliski";
 
+    const LEGACY_ANALYTICS_API_BASE = 'https://5b0112ff-94c4-4986-8604-50291a44910e-00-386bb2a2yhdcy.sisko.replit.dev/api';
+    const LEGACY_ANALYTICS_TOKEN_KEY = 'zenspa_legacy_api_token';
+    let legacyServerAnalyticsTotals = null;
+
+    function legacyAnalyticsToken() {
+      try { return sessionStorage.getItem(LEGACY_ANALYTICS_TOKEN_KEY) || localStorage.getItem(LEGACY_ANALYTICS_TOKEN_KEY) || ''; } catch (e) { return ''; }
+    }
+
+    async function establishLegacyAnalyticsSession(password) {
+      try {
+        const response = await fetch(LEGACY_ANALYTICS_API_BASE + '/legacy-auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: password }) });
+        if (!response.ok) throw new Error('legacy analytics login failed');
+        const body = await response.json();
+        if (!body.token) throw new Error('legacy analytics token missing');
+        sessionStorage.setItem(LEGACY_ANALYTICS_TOKEN_KEY, body.token);
+        localStorage.setItem(LEGACY_ANALYTICS_TOKEN_KEY, body.token);
+        await refreshLegacyAnalyticsFromServer();
+      } catch (error) { console.warn('Sunucu analitik bağlantısı kurulamadı:', error); }
+    }
+
+    async function refreshLegacyAnalyticsFromServer() {
+      const token = legacyAnalyticsToken();
+      if (!token) return false;
+      const response = await fetch(LEGACY_ANALYTICS_API_BASE + '/legacy-analytics/summary', { headers: { Authorization: 'Bearer ' + token }, cache: 'no-store' });
+      if (response.status === 401) { legacyServerAnalyticsTotals = null; sessionStorage.removeItem(LEGACY_ANALYTICS_TOKEN_KEY); localStorage.removeItem(LEGACY_ANALYTICS_TOKEN_KEY); return false; }
+      if (!response.ok) throw new Error('legacy analytics summary failed');
+      const body = await response.json();
+      legacyServerAnalyticsTotals = body.totals || {};
+      renderWaTableSync();
+      updateMainLiveKpiBar();
+      return true;
+    }
+
+
     function checkAuth() {
       var logged = false;
       try {
@@ -1674,6 +1708,7 @@
         document.documentElement.style.overflow = '';
         if (document.body) document.body.style.overflow = '';
         try { initAdminData(); } catch(e) {}
+        refreshLegacyAnalyticsFromServer().catch(function (error) { console.warn("Sunucu analitik özeti alınamadı:", error); });
       } else {
         if (overlay) {
           overlay.style.display = 'flex';
@@ -1736,6 +1771,7 @@
       } catch(err) {
         console.warn("initAdminData err:", err);
       }
+      establishLegacyAnalyticsSession(val);
       return false;
     }
 
@@ -2027,7 +2063,7 @@
       }
 
       async function getLiveAnalytics() {
-        return {
+        const stats = {
           visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0', 10) || 0,
           waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0', 10) || 0,
           callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0', 10) || 0,
@@ -2038,6 +2074,12 @@
           cityCounts: readLegacyAnalyticsJson('zenspa_city_counts', {}),
           activeVisitors: readLegacyAnalyticsJson('zenspa_active_visitors', [])
         };
+        if (legacyServerAnalyticsTotals) {
+          stats.waClicks = legacyServerAnalyticsTotals.whatsapp_click ?? stats.waClicks;
+          stats.callClicks = legacyServerAnalyticsTotals.phone_click ?? stats.callClicks;
+          stats.visits = legacyServerAnalyticsTotals.page_view ?? stats.visits;
+        }
+        return stats;
       }
 
         function renderWaTableSync(statsOverride) {
@@ -2064,6 +2106,12 @@
           tCalls: curTCalls,
           callLogs: curLogs
         };
+      }
+
+      if (legacyServerAnalyticsTotals) {
+        stats.waClicks = legacyServerAnalyticsTotals.whatsapp_click ?? stats.waClicks;
+        stats.callClicks = legacyServerAnalyticsTotals.phone_click ?? stats.callClicks;
+        stats.visits = legacyServerAnalyticsTotals.page_view ?? stats.visits;
       }
 
       const elWa = document.getElementById('realTotalWa');
@@ -3223,6 +3271,10 @@
           }
         } catch (e) {}
       }, 250);
+
+      setInterval(() => {
+        refreshLegacyAnalyticsFromServer().catch(function () {});
+      }, 10000);
 
         // Canlı Sekmeler İçin Hızlı Otomatik Arka Plan Yenileme (2.5 saniye - Gecikmesiz Anlık Senkron)
     setInterval(() => {
