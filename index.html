@@ -3062,13 +3062,18 @@
       }
 
         function trackPageVisit() {
-        let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
-        visits++;
-        localStorage.setItem('zenspa_real_visits', visits.toString());
-        notifyLegacyAnalyticsUpdate('PAGE_VISIT', { totalVisits: visits });
-      }
+          try {
+            if (sessionStorage.getItem('zenspa_counted_visit')) return;
+            sessionStorage.setItem('zenspa_counted_visit', 'true');
+          } catch (e) {}
+          let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '0', 10) || 0;
+          visits++;
+          localStorage.setItem('zenspa_real_visits', visits.toString());
+          notifyLegacyAnalyticsUpdate('PAGE_VISIT', { totalVisits: visits });
+          sendLegacyAnalyticsEvent('page_view', location.pathname);
+        }
 
-    // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
+        // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
     function getFormattedTime() {
       const now = new Date();
       const d = ('0' + now.getDate()).slice(-2);
