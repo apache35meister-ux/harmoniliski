@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 6,
   "totalCalls": 2,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "lastUpdated": "12.09.2026 18:45",
   "tClicks": {
     "1788429948834": 3,
@@ -16,7 +16,8 @@
     "yeliz": 1
   },
   "cityCounts": {
-    "Dalaman": 1
+    "Dalaman": 1,
+    "Izmir": 1
   },
   "logs": [
     {
@@ -70,6 +71,13 @@
   ],
   "cityVisits": [
     {
+      "time": "14.09.2026 02:05",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "12.09.2026 19:50",
       "city": "Dalaman",
       "country": "Türkiye",
@@ -79,12 +87,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mtymf1e4_umpd",
-      "city": "Dalaman",
-      "device": "iPhone 📱",
+      "id": "v_mu0f99zx_1otd",
+      "city": "Izmir",
+      "device": "Masaüstü 💻",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789231801994,
-      "time": "19:50"
+      "lastSeen": 1789340708233,
+      "time": "02:05"
     }
   ]
 }
