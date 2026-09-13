@@ -3209,7 +3209,7 @@
       const href = a.getAttribute('href') || '';
       
       if (href.includes('whatsapp.com') || href.includes('wa.me')) {
-        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackWaAction')) {
+        if (!a.getAttribute('onclick') && typeof a.onclick !== 'function') {
           const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
           let tName = 'VIP İlan / Genel Randevu';
           let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
@@ -3223,7 +3223,7 @@
           trackWaAction(tId, tName, tCity);
         }
       } else if (href.startsWith('tel:')) {
-        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackCallAction')) {
+        if (!a.getAttribute('onclick') && typeof a.onclick !== 'function') {
           const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
           let tName = 'VIP Telefon Araması';
           let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
