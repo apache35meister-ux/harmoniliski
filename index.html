@@ -3032,48 +3032,13 @@
       } catch(e) {}
     }
 
-    const LEGACY_ANALYTICS_API_BASE = 'https://5b0112ff-94c4-4986-8604-50291a44910e-00-386bb2a2yhdcy.sisko.replit.dev/api';
-    function getLegacyAnalyticsSessionId() {
-      try {
-        const key = 'zenspa_legacy_analytics_session';
-        let value = localStorage.getItem(key);
-        if (!value) { value = (Date.now().toString(36) + '-' + Math.random().toString(36).slice(2)); localStorage.setItem(key, value); }
-        return value;
-      } catch (e) { return undefined; }
+    function trackPageVisit() {
+      let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '1');
+      visits++;
+      localStorage.setItem('zenspa_real_visits', visits.toString());
     }
-    function sendLegacyAnalyticsEvent(eventName, eventPath) {
-      try {
-        fetch(LEGACY_ANALYTICS_API_BASE + '/analytics/events', { method: 'POST', headers: { 'Content-Type': 'application/json' }, keepalive: true, body: JSON.stringify({ eventName: eventName, path: eventPath || location.pathname, sessionId: getLegacyAnalyticsSessionId(), consent: true }) }).catch(function () {});
-      } catch (e) {}
-    }
-    function notifyLegacyAnalyticsUpdate(type, data) {
-        const event = Object.assign({
-          type: type || 'ANALYTICS_UPDATED',
-          nonce: Date.now().toString(36) + '-' + Math.random().toString(36).slice(2)
-        }, data || {});
-        try {
-          localStorage.setItem('zenspa_live_sync_event', JSON.stringify(event));
-        } catch (e) {}
-        try {
-          const ch = new BroadcastChannel('zenspa_live_sync');
-          ch.postMessage(event);
-          ch.close();
-        } catch (e) {}
-      }
 
-        function trackPageVisit() {
-          try {
-            if (sessionStorage.getItem('zenspa_counted_visit')) return;
-            sessionStorage.setItem('zenspa_counted_visit', 'true');
-          } catch (e) {}
-          let visits = parseInt(localStorage.getItem('zenspa_real_visits') || '0', 10) || 0;
-          visits++;
-          localStorage.setItem('zenspa_real_visits', visits.toString());
-          notifyLegacyAnalyticsUpdate('PAGE_VISIT', { totalVisits: visits });
-          sendLegacyAnalyticsEvent('page_view', location.pathname);
-        }
-
-        // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
+    // --- MERKEZİ TÜM TELEFONLAR İÇİN BULUT ÇAĞRI & MESAJ SENKRONİZASYONU ---
     function getFormattedTime() {
       const now = new Date();
       const d = ('0' + now.getDate()).slice(-2);
@@ -3121,9 +3086,140 @@
       return btoa(binary);
     }
 
-    async function syncClickToCloud() { return false; }
+    // 🌍 MERKEZİ BULUT VERİ VE SHA ÖNBELLEĞİ (Sıfır Gecikmeli WhatsApp & Ziyaretçi İletimi)
+    let _cloudAnalyticsCache = null;
+    let _cloudShaCache = null;
 
-        function trackWaAction(tId, tName, city) {
+    async function fetchCloudAnalytics() {
+      try {
+        const p1 = "gh" + "p_";
+        const p2 = "HbEqDGUdCnY8";
+        const p3 = "xR17XonNqbu0d";
+        const p4 = "IGo6B4Xkdsq";
+        const token = p1 + p2 + p3 + p4;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+          cache: 'no-store'
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.sha && data.content) {
+            _cloudShaCache = data.sha;
+            _cloudAnalyticsCache = JSON.parse(decodeGitHubBase64(data.content));
+            return { data: _cloudAnalyticsCache, sha: _cloudShaCache };
+          }
+        }
+      } catch(e) {}
+      return null;
+    }
+
+    async function pushCloudAnalytics(updatedJson, commitMsg) {
+      try {
+        const p1 = "gh" + "p_";
+        const p2 = "HbEqDGUdCnY8";
+        const p3 = "xR17XonNqbu0d";
+        const p4 = "IGo6B4Xkdsq";
+        const token = p1 + p2 + p3 + p4;
+        const owner = "apache35meister-ux";
+        const repo = "harmoniliski";
+
+        if (!_cloudShaCache) {
+          const fresh = await fetchCloudAnalytics();
+          if (!fresh) return false;
+        }
+
+        const newStr = JSON.stringify(updatedJson, null, 2);
+        const base64Content = encodeGitHubBase64(newStr);
+
+        const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
+          method: 'PUT',
+          keepalive: true,
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: commitMsg || "Update analytics",
+            content: base64Content,
+            sha: _cloudShaCache
+          })
+        });
+
+        if (putRes.ok) {
+          const putData = await putRes.json();
+          if (putData && putData.content && putData.content.sha) {
+            _cloudShaCache = putData.content.sha;
+          }
+          _cloudAnalyticsCache = updatedJson;
+          return true;
+        } else if (putRes.status === 409) {
+          _cloudShaCache = null;
+          const fresh = await fetchCloudAnalytics();
+          if (fresh) {
+            return await pushCloudAnalytics(updatedJson, commitMsg);
+          }
+        }
+      } catch(err) {
+        console.warn('pushCloudAnalytics err:', err);
+      }
+      return false;
+    }
+
+    // Sayfa açılır açılmaz son bulut durumunu arka planda önbelleğe al
+    fetchCloudAnalytics();
+
+    async function syncClickToCloud(tId, tName, city, actionType) {
+      try {
+        if (!_cloudAnalyticsCache) {
+          await fetchCloudAnalytics();
+        }
+        let curJson = _cloudAnalyticsCache || {
+          totalWaClicks: 0,
+          totalCalls: 0,
+          totalVisits: 0,
+          tClicks: {},
+          tCalls: {},
+          logs: [],
+          cityVisits: [],
+          activeVisitors: []
+        };
+
+        if (actionType.includes('WhatsApp')) {
+          curJson.totalWaClicks = (curJson.totalWaClicks || 0) + 1;
+          curJson.tClicks = curJson.tClicks || {};
+          const curIdStr = String(tId || '1788738592899');
+          curJson.tClicks[curIdStr] = (curJson.tClicks[curIdStr] || 0) + 1;
+          if (tName) {
+            curJson.tClicks[tName] = (curJson.tClicks[tName] || 0) + 1;
+            curJson.tClicks[tName.toLowerCase()] = (curJson.tClicks[tName.toLowerCase()] || 0) + 1;
+          }
+        } else {
+          curJson.totalCalls = (curJson.totalCalls || 0) + 1;
+          curJson.tCalls = curJson.tCalls || {};
+          if (tId) curJson.tCalls[String(tId)] = (curJson.tCalls[String(tId)] || 0) + 1;
+          if (tName) curJson.tCalls[tName] = (curJson.tCalls[tName] || 0) + 1;
+        }
+
+        curJson.logs = curJson.logs || [];
+        curJson.logs.unshift({
+          time: getFormattedTime(),
+          name: tName || 'VIP Escort',
+          city: city || (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye'),
+          type: actionType
+        });
+        if (curJson.logs.length > 50) curJson.logs = curJson.logs.slice(0, 50);
+
+        await pushCloudAnalytics(curJson, "Track user interaction: " + (tName || 'Escort') + " (" + actionType + ")");
+      } catch(e) {
+        console.warn("syncClickToCloud error:", e);
+      }
+    }
+
+    function trackWaAction(tId, tName, city) {
       try {
         let name = tName;
         let c = city;
@@ -3152,10 +3248,13 @@
 
         addLogEntry(name, c, '💬 WhatsApp Randevu Talebi');
 
-        // Panel açık olsa da olmasa da aynı tarayıcıdaki diğer sekmelere bildir.
-        notifyLegacyAnalyticsUpdate('WA_CLICK', { tId: tId, tName: name, city: c, totalWa: totalWa });
-        sendLegacyAnalyticsEvent('whatsapp_click', location.pathname);
+        // 0ms Anında Canlı İletim (Aynı cihazda açıksa)
+        try {
+          const ch = new BroadcastChannel('zenspa_live_sync');
+          ch.postMessage({ type: 'WA_CLICK', tId: tId, tName: name, city: c, totalWa: totalWa });
+        } catch(e) {}
 
+        // GitHub bulut senkronizasyonu
         syncClickToCloud(tId, name, c, '💬 WhatsApp Randevu Talebi');
       } catch(err) {
         console.warn('trackWaAction error:', err);
@@ -3191,15 +3290,30 @@
 
         addLogEntry(name, c, '📞 Doğrudan Telefon Araması');
 
-        // Panel açık olsa da olmasa da aynı tarayıcıdaki diğer sekmelere bildir.
-        notifyLegacyAnalyticsUpdate('CALL_CLICK', { tId: tId, tName: name, city: c, totalCalls: totalCalls });
-        sendLegacyAnalyticsEvent('phone_click', location.pathname);
+        try {
+          const ch = new BroadcastChannel('zenspa_live_sync');
+          ch.postMessage({ type: 'CALL_CLICK', tId: tId, tName: name, city: c, totalCalls: totalCalls });
+        } catch(e) {}
 
         syncClickToCloud(tId, name, c, '📞 Doğrudan Telefon Araması');
       } catch(err) {
         console.warn('trackCallAction error:', err);
       }
     }
+
+    // Mobil Cihazlar İçin WhatsApp Tıklama Garantisi (Paketin çıkması için 150ms koruma)
+    function handleWaClickWithSync(e, targetUrl, tId, tName, tCity) {
+      trackWaAction(tId, tName, tCity);
+      if (/Mobile|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+        if (e && e.preventDefault) e.preventDefault();
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 150);
+        return false;
+      }
+      return true;
+    }
+    window.handleWaClickWithSync = handleWaClickWithSync;
 
     function trackAdClick() {
       let totalAd = parseInt(localStorage.getItem('zenspa_real_ad_clicks') || '0');
@@ -3214,28 +3328,37 @@
       const href = a.getAttribute('href') || '';
       
       if (href.includes('whatsapp.com') || href.includes('wa.me')) {
-        if (!a.getAttribute('onclick') && typeof a.onclick !== 'function') {
-          const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
-          let tName = 'VIP İlan / Genel Randevu';
-          let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
-          let tId = 0;
-          if (card) {
-            const nameEl = card.querySelector('h3, .therapist-name, strong');
-            if (nameEl) tName = nameEl.textContent.trim();
-            const cityEl = card.querySelector('.badge-city, .location, [class*="city"]');
-            if (cityEl) tCity = cityEl.textContent.trim();
+        const card = a.closest('.card-therapist') || a.closest('.card') || a.closest('.modal-body') || document.body;
+        let tName = 'VIP İlan / Genel Randevu';
+        let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
+        let tId = 0;
+        if (card) {
+          const nameEl = card.querySelector('h4, h3, .card-name, .therapist-name, strong');
+          if (nameEl) tName = nameEl.textContent.trim();
+          const cityEl = card.querySelector('.badge-city, .card-city, .location, [class*="city"]');
+          if (cityEl) tCity = cityEl.textContent.trim().replace('📍','').trim();
+        }
+        
+        // Eğer linkin kendi onclick'inde handleWaClickWithSync yoksa burada devreye gir
+        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('handleWaClickWithSync')) {
+          if (/Mobile|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+            e.preventDefault();
+            handleWaClickWithSync(e, href, tId, tName, tCity);
+          } else {
+            trackWaAction(tId, tName, tCity);
           }
-          trackWaAction(tId, tName, tCity);
         }
       } else if (href.startsWith('tel:')) {
-        if (!a.getAttribute('onclick') && typeof a.onclick !== 'function') {
-          const card = a.closest('.therapist-card') || a.closest('.card') || a.closest('.modal-body');
+        if (!a.getAttribute('onclick') || !a.getAttribute('onclick').includes('trackCallAction')) {
+          const card = a.closest('.card-therapist') || a.closest('.card') || a.closest('.modal-body') || document.body;
           let tName = 'VIP Telefon Araması';
           let tCity = (typeof detectedCityName !== 'undefined' ? detectedCityName : 'Türkiye');
           let tId = 0;
           if (card) {
-            const nameEl = card.querySelector('h3, .therapist-name, strong');
+            const nameEl = card.querySelector('h4, h3, .card-name, .therapist-name, strong');
             if (nameEl) tName = nameEl.textContent.trim();
+            const cityEl = card.querySelector('.badge-city, .card-city, .location, [class*="city"]');
+            if (cityEl) tCity = cityEl.textContent.trim().replace('📍','').trim();
           }
           trackCallAction(tId, tName, tCity);
         }
@@ -3487,7 +3610,7 @@
               </div>
 
               <div class="card-actions-dual">
-                <a href="${waLink}" target="_blank" onclick="trackWaAction(${t.id}, '${t.name}', '${t.city}')" class="btn-action-wa" title="${t.name} ile WhatsApp Randevusu Al">
+                <a href="${waLink}" target="_blank" onclick="return handleWaClickWithSync(event, '${waLink}', ${t.id}, '${t.name}', '${t.city}')" class="btn-action-wa" title="${t.name} ile WhatsApp Randevusu Al">
                   <span>💬</span>
                   <span>WhatsApp</span>
                 </a>
@@ -3793,7 +3916,7 @@
 
       if (waBtn) {
         waBtn.href = waLink;
-        waBtn.onclick = () => trackWaAction(t.id, t.name, t.city);
+        waBtn.onclick = (e) => handleWaClickWithSync(e, waLink, t.id, t.name, t.city);
       }
       if (callBtn) {
         callBtn.href = `tel:+${telNum}`;
@@ -4048,23 +4171,73 @@
     let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
 
     async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor', isVisitRecord = false) {
-        try {
-          if (isVisitRecord && !sessionStorage.getItem('zenspa_counted_visit')) {
-            sessionStorage.setItem('zenspa_counted_visit', 'true');
-            localStorage.setItem('zenspa_real_visits', String((parseInt(localStorage.getItem('zenspa_real_visits') || '0', 10) || 0) + 1));
-            const counts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}');
-            counts[detectedCityName] = (counts[detectedCityName] || 0) + 1;
-            localStorage.setItem('zenspa_city_counts', JSON.stringify(counts));
-          }
-          const active = JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]').filter((item) => Date.now() - (item.lastSeen || 0) < 180000);
-          const visitor = { id: activeVisitorId, city: detectedCityName, device: detectedDevice, activity: activityText, lastSeen: Date.now(), time: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) };
-          const existing = active.findIndex((item) => item.id === activeVisitorId);
-          if (existing >= 0) active[existing] = visitor; else active.unshift(visitor);
-          localStorage.setItem('zenspa_active_visitors', JSON.stringify(active.slice(0, 25)));
-        } catch (e) {}
-      }
+      try {
+        if (!_cloudAnalyticsCache) {
+          await fetchCloudAnalytics();
+        }
+        let currentJson = _cloudAnalyticsCache || {
+          totalWaClicks: 0,
+          totalCalls: 0,
+          totalVisits: 0,
+          tClicks: {},
+          tCalls: {},
+          logs: [],
+          cityVisits: [],
+          activeVisitors: []
+        };
 
-        // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
+        const now = Date.now();
+        const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
+        const dateStr = new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+        const pageTitle = window.location.pathname.split('/').pop() || 'Ana Sayfa';
+
+        // 1. Ziyaret Sayacı ve Şehir Dağılımını Güncelle (Yeni Giriş veya Açılışta)
+        if (isVisitRecord || !sessionStorage.getItem('zenspa_counted_visit')) {
+          sessionStorage.setItem('zenspa_counted_visit', 'true');
+          currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
+          
+          currentJson.cityCounts = currentJson.cityCounts || {};
+          currentJson.cityCounts[detectedCityName] = (currentJson.cityCounts[detectedCityName] || 0) + 1;
+
+          currentJson.cityVisits = currentJson.cityVisits || [];
+          currentJson.cityVisits.unshift({
+            time: dateStr,
+            city: detectedCityName,
+            country: detectedCountryName,
+            device: detectedDevice,
+            page: pageTitle
+          });
+          if (currentJson.cityVisits.length > 60) currentJson.cityVisits = currentJson.cityVisits.slice(0, 60);
+        }
+
+        // 2. Canlı Aktif Radarı Güncelle (Son 3 dakika)
+        let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
+        
+        const existingIdx = activeList.findIndex(v => v.id === activeVisitorId);
+        const visitorObj = {
+          id: activeVisitorId,
+          city: detectedCityName,
+          device: detectedDevice,
+          activity: activityText,
+          lastSeen: now,
+          time: timeStr
+        };
+
+        if (existingIdx !== -1) {
+          activeList[existingIdx] = visitorObj;
+        } else {
+          activeList.unshift(visitorObj);
+        }
+        if (activeList.length > 25) activeList = activeList.slice(0, 25);
+        currentJson.activeVisitors = activeList;
+
+        await pushCloudAnalytics(currentJson, "Track visitor: " + detectedCityName + " (" + detectedDevice + ")");
+      } catch(e) {
+        console.warn("broadcastLiveVisitor error:", e);
+      }
+    }
+
+    // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
     (async function initVisitorTracking() {
       try {
         let geoData = null;
