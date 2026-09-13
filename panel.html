@@ -3178,8 +3178,9 @@
         const nonce = event && event.nonce;
         if (nonce && nonce === lastLegacyAnalyticsNonce) return;
         if (nonce) lastLegacyAnalyticsNonce = nonce;
+        // Olay geldiğinde localStorage'daki son değeri doğrudan ve senkron göster.
+        // Asenkron tam tablo yenilemesi burada ilk yükleme durumuyla yarışmamalı.
         renderWaTableSync();
-        renderWaTable();
         updateMainLiveKpiBar();
         const cityTab = document.getElementById('cityAnalyticsTab');
         if (cityTab && (cityTab.classList.contains('active') || cityTab.style.display === 'block')) {
