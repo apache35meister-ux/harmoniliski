@@ -734,23 +734,18 @@
 </head>
 <body>
 
-  <!-- Admin Session Initialization -->
-  <script>
-    (function() {
-      try {
-        var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
-        if (logged) {
-          document.documentElement.style.overflow = '';
-          var ov = document.getElementById('adminAuthOverlay');
-          if (ov) ov.style.display = 'none';
-        } else {
+  <!-- Secure Admin Session Initialization -->
+    <script>
+      (function() {
+        try {
+          sessionStorage.removeItem('zenspa_panel_auth');
+          localStorage.removeItem('zenspa_panel_auth');
           document.documentElement.style.overflow = 'hidden';
-        }
-      } catch(e) {}
-    })();
-  </script>
+        } catch(e) {}
+      })();
+    </script>
 
-  <!-- VIP Admin Password Lock Screen -->
+      <!-- VIP Admin Password Lock Screen -->
   <div id="adminAuthOverlay" style="position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;">
     <div class="auth-card" style="background:#0E0E12; border:1.5px solid rgba(255, 215, 0, 0.6); box-shadow:0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8); border-radius:24px; max-width:420px; width:100%; padding:2.5rem 2rem; text-align:center; position:relative;">
       <div class="auth-logo" style="width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg, #2A1F05, #0A0A0A); border:1.5px solid rgba(230, 175, 46, 0.35); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.25rem; box-shadow:0 0 25px rgba(251, 191, 36, 0.3);">🔐</div>
@@ -784,40 +779,11 @@
           }
         }
         function directUnlockPanel(e) {
-          if (e && e.preventDefault) e.preventDefault();
-          var passInput = document.getElementById('adminPassInput');
-          var val = passInput ? passInput.value.trim() : '';
-          var err = document.getElementById('authErrorMsg');
-          if (val === 'hakan908558' || val === 'hakan763') {
-            try {
-              sessionStorage.setItem('zenspa_panel_auth', 'evet');
-              localStorage.setItem('zenspa_panel_auth', 'evet');
-            } catch(ex) {}
-            var ov = document.getElementById('adminAuthOverlay');
-            if (ov) {
-              ov.style.setProperty('display', 'none', 'important');
-              ov.style.setProperty('visibility', 'hidden', 'important');
-              ov.style.setProperty('pointer-events', 'none', 'important');
-              ov.classList.add('hidden');
-            }
-            document.documentElement.style.overflow = '';
-            if (document.body) document.body.style.overflow = '';
-            try {
-              if (typeof initAdminData === 'function') initAdminData();
-              if (typeof renderTable === 'function' && typeof list !== 'undefined') renderTable(list);
-              if (typeof loadSettings === 'function') loadSettings();
-            } catch(ex) { console.warn(ex); }
-            return false;
-          } else {
-            if (err) {
-              err.style.display = 'block';
-              err.textContent = '❌ Hatalı şifre! Lütfen şifrenizi kontrol ediniz.';
-            }
-            if (passInput) passInput.focus();
+            if (e && e.preventDefault) e.preventDefault();
+            void submitLegacyAdminLogin();
             return false;
           }
-        }
-        window.directUnlockPanel = directUnlockPanel;
+            window.directUnlockPanel = directUnlockPanel;
         window.togglePassVisibilityDirect = togglePassVisibilityDirect;
       </script>
     </div>
@@ -1655,114 +1621,27 @@
     let currentPhotoUrl = "";
 
 
-    const ADMIN_PASS = "hakan908558";
-    const GITHUB_OWNER = "apache35meister-ux";
-    const GITHUB_REPO = "harmoniliski";
+    const LEGACY_AUTH_API_BASE = 'https://5b0112ff-94c4-4986-8604-50291a44910e-00-386bb2a2yhdcy.sisko.replit.dev';
+      const LEGACY_SESSION_KEY = 'zenspa_legacy_admin_session';
+      const GITHUB_OWNER = "apache35meister-ux";
+      const GITHUB_REPO = "harmoniliski";
 
-    function checkAuth() {
-      var logged = false;
-      try {
-        logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
-      } catch(e) {}
-
-      var overlay = document.getElementById('adminAuthOverlay');
-      if (logged) {
-        if (overlay) {
-          overlay.style.setProperty('display', 'none', 'important');
-          overlay.style.setProperty('visibility', 'hidden', 'important');
-          overlay.style.setProperty('pointer-events', 'none', 'important');
-          overlay.classList.add('hidden');
-        }
-        document.documentElement.style.overflow = '';
-        if (document.body) document.body.style.overflow = '';
-        try { initAdminData(); } catch(e) {}
-      } else {
-        if (overlay) {
-          overlay.style.display = 'flex';
-          overlay.style.pointerEvents = 'auto';
-        }
-        document.documentElement.style.overflow = 'hidden';
-        var passEl = document.getElementById('adminPassInput');
-        if (passEl) {
-          passEl.value = '';
-          setTimeout(function() { passEl.focus(); }, 150);
-        }
-      }
-    }
-
-    function handleAdminLogin(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      var passEl = document.getElementById('adminPassInput');
-      var val = passEl ? (passEl.value || '').trim() : '';
-      var errorMsg = document.getElementById('authErrorMsg');
-      var overlay = document.getElementById('adminAuthOverlay');
-
-      if (!val) {
-        if (errorMsg) {
-          errorMsg.style.display = 'block';
-          errorMsg.textContent = '❌ Lütfen şifrenizi giriniz.';
-        }
-        if (passEl) passEl.focus();
-        return false;
+      function legacyAuthUrl(path) {
+        return LEGACY_AUTH_API_BASE.replace(/\/$/, '') + path;
       }
 
-      if (val !== 'hakan908558' && val !== 'hakan763' && val !== ADMIN_PASS) {
-        if (errorMsg) {
-          errorMsg.style.display = 'block';
-          errorMsg.textContent = '❌ Hatalı şifre! Lütfen güncel şifrenizi giriniz.';
-        }
-        if (passEl) {
-          passEl.value = '';
-          passEl.focus();
-        }
-        return false;
+      function getLegacySessionToken() {
+        try { return sessionStorage.getItem(LEGACY_SESSION_KEY) || ''; } catch(e) { return ''; }
       }
 
-      try {
-        sessionStorage.setItem('zenspa_panel_auth', 'evet');
-        localStorage.setItem('zenspa_panel_auth', 'evet');
-      } catch(err) {}
-
-      if (overlay) {
-        overlay.style.setProperty('display', 'none', 'important');
-        overlay.style.setProperty('visibility', 'hidden', 'important');
-        overlay.style.setProperty('pointer-events', 'none', 'important');
-        overlay.classList.add('hidden');
+      function clearLegacySessionToken() {
+        try { sessionStorage.removeItem(LEGACY_SESSION_KEY); } catch(e) {}
       }
-      document.documentElement.style.overflow = '';
-      if (document.body) document.body.style.overflow = '';
-      if (errorMsg) errorMsg.style.display = 'none';
 
-      try {
-        initAdminData();
-      } catch(err) {
-        console.warn("initAdminData err:", err);
-      }
-      return false;
-    }
-
-    function togglePassVisibility() {
-      var input = document.getElementById('adminPassInput');
-      var eye = document.getElementById('eyeIcon');
-      if (!input) return;
-      if (input.type === 'password') {
-        input.type = 'text';
-        if (eye) eye.textContent = '🙈';
-      } else {
-        input.type = 'password';
-        if (eye) eye.textContent = '👁️';
-      }
-    }
-
-    function adminLogout() {
-      if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
-        try {
-          sessionStorage.removeItem('zenspa_panel_auth');
-          localStorage.removeItem('zenspa_panel_auth');
-        } catch(e) {}
-        var passEl = document.getElementById('adminPassInput');
-        if (passEl) passEl.value = '';
+      function setAuthOverlayVisible(visible) {
         var overlay = document.getElementById('adminAuthOverlay');
+        var passEl = document.getElementById('adminPassInput');
+        if (visible) {
           if (overlay) {
             overlay.classList.remove('hidden');
             overlay.style.setProperty('display', 'flex', 'important');
@@ -1770,17 +1649,130 @@
             overlay.style.setProperty('opacity', '1', 'important');
             overlay.style.setProperty('pointer-events', 'auto', 'important');
             overlay.style.zIndex = '999999';
-            document.documentElement.style.overflow = 'hidden';
-            if (document.body) document.body.style.overflow = 'hidden';
-            if (passEl) setTimeout(function() { passEl.focus(); }, 150);
-          } else {
-            window.location.reload();
           }
+          document.documentElement.style.overflow = 'hidden';
+          if (document.body) document.body.style.overflow = 'hidden';
+          if (passEl) setTimeout(function() { passEl.focus(); }, 150);
+        } else {
+          if (overlay) {
+            overlay.classList.add('hidden');
+            overlay.style.setProperty('display', 'none', 'important');
+            overlay.style.setProperty('visibility', 'hidden', 'important');
+            overlay.style.setProperty('pointer-events', 'none', 'important');
           }
-    }
+          document.documentElement.style.overflow = '';
+          if (document.body) document.body.style.overflow = '';
+        }
+      }
 
+      function showAuthError(message) {
+        var errorMsg = document.getElementById('authErrorMsg');
+        if (errorMsg) {
+          errorMsg.style.display = 'block';
+          errorMsg.textContent = message;
+        }
+      }
 
-    function formatPhone(phone) {
+      async function submitLegacyAdminLogin() {
+        var passEl = document.getElementById('adminPassInput');
+        var errorMsg = document.getElementById('authErrorMsg');
+        var button = document.querySelector('#adminAuthOverlay button[type="submit"]');
+        var password = passEl ? (passEl.value || '') : '';
+        if (!password) {
+          showAuthError('❌ Lütfen şifrenizi giriniz.');
+          if (passEl) passEl.focus();
+          return false;
+        }
+        if (button) button.disabled = true;
+        try {
+          var response = await fetch(legacyAuthUrl('/api/legacy-auth/login'), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            cache: 'no-store',
+            body: JSON.stringify({ password: password })
+          });
+          var data = await response.json().catch(function() { return {}; });
+          if (!response.ok || !data.token) {
+            if (response.status === 429) showAuthError('❌ Çok fazla deneme yapıldı. Lütfen birkaç dakika bekleyiniz.');
+            else if (response.status === 503) showAuthError('❌ Güvenli giriş servisi henüz hazır değil.');
+            else showAuthError('❌ Hatalı şifre!');
+            if (passEl) { passEl.value = ''; passEl.focus(); }
+            return false;
+          }
+          sessionStorage.setItem(LEGACY_SESSION_KEY, data.token);
+          if (errorMsg) errorMsg.style.display = 'none';
+          if (passEl) passEl.value = '';
+          setAuthOverlayVisible(false);
+          try { await initAdminData(); } catch(err) { console.warn('initAdminData err:', err); }
+          return true;
+        } catch(err) {
+          showAuthError('❌ Güvenli giriş sunucusuna ulaşılamadı.');
+          return false;
+        } finally {
+          if (button) button.disabled = false;
+        }
+      }
+
+      async function checkAuth() {
+        const token = getLegacySessionToken();
+        if (!token) {
+          setAuthOverlayVisible(true);
+          return false;
+        }
+        try {
+          const response = await fetch(legacyAuthUrl('/api/legacy-auth/session'), {
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/json' },
+            cache: 'no-store'
+          });
+          if (!response.ok) throw new Error('Session expired');
+          setAuthOverlayVisible(false);
+          try { await initAdminData(); } catch(e) { console.warn('initAdminData err:', e); }
+          return true;
+        } catch(err) {
+          clearLegacySessionToken();
+          setAuthOverlayVisible(true);
+          showAuthError('❌ Oturum süresi doldu. Lütfen tekrar giriş yapınız.');
+          return false;
+        }
+      }
+
+      function handleAdminLogin(e) {
+        if (e && e.preventDefault) e.preventDefault();
+        void submitLegacyAdminLogin();
+        return false;
+      }
+
+      function togglePassVisibility() {
+        var input = document.getElementById('adminPassInput');
+        var eye = document.getElementById('eyeIcon');
+        if (!input) return;
+        if (input.type === 'password') {
+          input.type = 'text';
+          if (eye) eye.textContent = '🙈';
+        } else {
+          input.type = 'password';
+          if (eye) eye.textContent = '👁️';
+        }
+      }
+
+      function adminLogout() {
+        if (!confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) return;
+        const token = getLegacySessionToken();
+        clearLegacySessionToken();
+        if (token) {
+          fetch(legacyAuthUrl('/api/legacy-auth/logout'), {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/json' },
+            cache: 'no-store',
+            keepalive: true
+          }).catch(function() {});
+        }
+        var passEl = document.getElementById('adminPassInput');
+        if (passEl) passEl.value = '';
+        setAuthOverlayVisible(true);
+      }
+
+        function formatPhone(phone) {
       if (!phone) return "15096204167";
       let p = phone.toString().replace(/\D/g, '');
       if (!p) return "15096204167";
@@ -3207,9 +3199,8 @@
         }
       } catch(e) {}
     }, 2500);
-
     document.addEventListener('DOMContentLoaded', function() {
-      checkAuth();
+      void checkAuth();
       setTimeout(updateMainLiveKpiBar, 300);
     });
   </script>
