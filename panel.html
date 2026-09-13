@@ -752,7 +752,7 @@
       <h2 class="auth-title" style="font-family:'Cinzel', serif; font-size:1.5rem; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.4rem;">VIP YÖNETİCİ GİRİŞİ</h2>
       <p class="auth-desc" style="font-size:0.82rem; color:#71717A; margin-bottom:1.75rem;">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
       
-      <form id="adminLoginForm" onsubmit="return handleAdminLogin(event);" action="javascript:void(0);">
+      <form id="adminLoginForm" action="javascript:void(0);">
         <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
           <input type="password" id="adminPassInput" class="auth-input" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." autofocus required>
           <button type="button" class="btn-eye-toggle" onclick="togglePassVisibilityDirect()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
@@ -3200,6 +3200,13 @@
       } catch(e) {}
     }, 2500);
     document.addEventListener('DOMContentLoaded', function() {
+      var loginForm = document.getElementById('adminLoginForm');
+      if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          void submitLegacyAdminLogin();
+        });
+      }
       void checkAuth();
       setTimeout(updateMainLiveKpiBar, 300);
     });
