@@ -798,7 +798,7 @@
               ov.style.setProperty('display', 'none', 'important');
               ov.style.setProperty('visibility', 'hidden', 'important');
               ov.style.setProperty('pointer-events', 'none', 'important');
-              ov.remove();
+              ov.classList.add('hidden');
             }
             document.documentElement.style.overflow = '';
             if (document.body) document.body.style.overflow = '';
@@ -1763,13 +1763,20 @@
         var passEl = document.getElementById('adminPassInput');
         if (passEl) passEl.value = '';
         var overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) {
-          overlay.style.display = 'flex';
-          overlay.style.pointerEvents = 'auto';
-          document.documentElement.style.overflow = 'hidden';
-          if (passEl) setTimeout(function() { passEl.focus(); }, 150);
-        }
-      }
+          if (overlay) {
+            overlay.classList.remove('hidden');
+            overlay.style.setProperty('display', 'flex', 'important');
+            overlay.style.setProperty('visibility', 'visible', 'important');
+            overlay.style.setProperty('opacity', '1', 'important');
+            overlay.style.setProperty('pointer-events', 'auto', 'important');
+            overlay.style.zIndex = '999999';
+            document.documentElement.style.overflow = 'hidden';
+            if (document.body) document.body.style.overflow = 'hidden';
+            if (passEl) setTimeout(function() { passEl.focus(); }, 150);
+          } else {
+            window.location.reload();
+          }
+          }
     }
 
 
