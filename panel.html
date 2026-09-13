@@ -1673,47 +1673,83 @@
         }
       }
 
-      async function submitLegacyAdminLogin() {
-        var passEl = document.getElementById('adminPassInput');
-        var errorMsg = document.getElementById('authErrorMsg');
-        var button = document.querySelector('#adminAuthOverlay button[type="submit"]');
-        var password = passEl ? (passEl.value || '').trim() : '';
-        if (!password) {
-          showAuthError('❌ Lütfen şifrenizi giriniz.');
-          if (passEl) passEl.focus();
-          return false;
-        }
-        if (button) button.disabled = true;
-        try {
-          var response = await fetch(legacyAuthUrl('/api/legacy-auth/signin'), {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'Accept': 'application/json' },
-            cache: 'no-store',
-            body: new URLSearchParams({ password: password }).toString()
-          });
-          var data = await response.json().catch(function() { return {}; });
-          if (!response.ok || !data.token) {
-            if (response.status === 429) showAuthError('❌ Çok fazla deneme yapıldı. Lütfen birkaç dakika bekleyiniz.');
-            else if (response.status === 503) showAuthError('❌ Güvenli giriş servisi henüz hazır değil.');
-            else showAuthError('❌ Hatalı şifre!');
-            if (passEl) { passEl.value = ''; passEl.focus(); }
-            return false;
+      function ensureLegacyAuthFrame() {
+          var frame = document.getElementById('legacyAuthFormFrame');
+          if (!frame) {
+            frame = document.createElement('iframe');
+            frame.id = 'legacyAuthFormFrame';
+            frame.name = 'legacyAuthFormFrame';
+            frame.setAttribute('aria-hidden', 'true');
+            frame.style.display = 'none';
+            document.body.appendChild(frame);
           }
-          sessionStorage.setItem(LEGACY_SESSION_KEY, data.token);
-          if (errorMsg) errorMsg.style.display = 'none';
-          if (passEl) passEl.value = '';
-          setAuthOverlayVisible(false);
-          try { await initAdminData(); } catch(err) { console.warn('initAdminData err:', err); }
-          return true;
-        } catch(err) {
-          showAuthError('❌ Güvenli giriş sunucusuna ulaşılamadı.');
-          return false;
-        } finally {
+          return frame;
+        }
+
+        function finishLegacyAuthForm() {
+          if (window.__legacyAuthPendingForm && window.__legacyAuthPendingForm.parentNode) {
+            window.__legacyAuthPendingForm.parentNode.removeChild(window.__legacyAuthPendingForm);
+          }
+          window.__legacyAuthPendingForm = null;
+          var button = document.getElementById('btnAdminLoginSubmit');
           if (button) button.disabled = false;
         }
-      }
 
-      async function checkAuth() {
+        function handleLegacyAuthFormMessage(event) {
+          if (event.origin !== LEGACY_AUTH_API_BASE || !event.data || event.data.type !== 'legacy-auth-result') return;
+          var frame = document.getElementById('legacyAuthFormFrame');
+          if (frame && event.source !== frame.contentWindow) return;
+          var data = event.data;
+          var passEl = document.getElementById('adminPassInput');
+          if (!data.authenticated || !data.token) {
+            showAuthError(data.error === 'Too many login attempts'
+              ? '❌ Çok fazla deneme yapıldı. Lütfen birkaç dakika bekleyiniz.'
+              : '❌ Hatalı şifre!');
+            if (passEl) { passEl.value = ''; passEl.focus(); }
+            finishLegacyAuthForm();
+            return;
+          }
+          sessionStorage.setItem(LEGACY_SESSION_KEY, data.token);
+          var errorMsg = document.getElementById('authErrorMsg');
+          if (errorMsg) errorMsg.style.display = 'none';
+          if (passEl) passEl.value = '';
+          finishLegacyAuthForm();
+          setAuthOverlayVisible(false);
+          void initAdminData();
+        }
+
+        function submitLegacyAdminLogin() {
+          var passEl = document.getElementById('adminPassInput');
+          var password = passEl ? (passEl.value || '').trim() : '';
+          var button = document.getElementById('btnAdminLoginSubmit');
+          if (!password) {
+            showAuthError('❌ Lütfen şifrenizi giriniz.');
+            if (passEl) passEl.focus();
+            return false;
+          }
+          if (button) button.disabled = true;
+          if (!window.__legacyAuthMessageBound) {
+            window.addEventListener('message', handleLegacyAuthFormMessage);
+            window.__legacyAuthMessageBound = true;
+          }
+          var frame = ensureLegacyAuthFrame();
+          var form = document.createElement('form');
+          form.method = 'POST';
+          form.action = legacyAuthUrl('/api/legacy-auth/login-form');
+          form.target = frame.name;
+          form.style.display = 'none';
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = 'password';
+          input.value = password;
+          form.appendChild(input);
+          document.body.appendChild(form);
+          window.__legacyAuthPendingForm = form;
+          form.submit();
+          return false;
+        }
+
+          async function checkAuth() {
         const token = getLegacySessionToken();
         if (!token) {
           setAuthOverlayVisible(true);
