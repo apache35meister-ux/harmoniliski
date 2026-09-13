@@ -3086,95 +3086,9 @@
       return btoa(binary);
     }
 
-    async function syncClickToCloud(tId, tName, city, actionType) {
-      try {
-        const p1 = "gh" + "p_";
-        const p2 = "HbEqDGUdCnY8";
-        const p3 = "xR17XonNqbu0d";
-        const p4 = "IGo6B4Xkdsq";
-        const token = p1 + p2 + p3 + p4;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
+    async function syncClickToCloud() { return false; }
 
-        const fetchLatestFile = async () => {
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (!res.ok) return null;
-          return await res.json();
-        };
-
-        let fileData = await fetchLatestFile();
-        if (!fileData || !fileData.content) return;
-
-        const executePush = async (currentFileData) => {
-          const decoded = decodeGitHubBase64(currentFileData.content);
-          const currentJson = JSON.parse(decoded || '{}');
-          
-          if (actionType.includes('WhatsApp')) {
-            currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
-            currentJson.tClicks = currentJson.tClicks || {};
-            const curIdStr = String(tId || '1788738592899');
-            currentJson.tClicks[curIdStr] = (currentJson.tClicks[curIdStr] || 0) + 1;
-            if (tName) {
-              currentJson.tClicks[tName] = (currentJson.tClicks[tName] || 0) + 1;
-              currentJson.tClicks[tName.toLowerCase()] = (currentJson.tClicks[tName.toLowerCase()] || 0) + 1;
-            }
-          } else {
-            currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
-            currentJson.tCalls = currentJson.tCalls || {};
-            if (tId) {
-              const curIdStr = String(tId);
-              currentJson.tCalls[curIdStr] = (currentJson.tCalls[curIdStr] || 0) + 1;
-            }
-            if (tName) {
-              currentJson.tCalls[tName] = (currentJson.tCalls[tName] || 0) + 1;
-            }
-          }
-
-          currentJson.logs = currentJson.logs || [];
-          currentJson.logs.unshift({
-            time: getFormattedTime(),
-            name: tName || 'VIP Escort',
-            city: city || 'Türkiye',
-            type: actionType
-          });
-          if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
-
-          const newStr = JSON.stringify(currentJson, null, 2);
-          const base64Content = encodeGitHubBase64(newStr);
-
-          const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-            method: 'PUT',
-            keepalive: true,
-            headers: {
-              'Authorization': 'Bearer ' + token,
-              'Accept': 'application/vnd.github+json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              message: "Track user interaction: " + (tName || 'Escort') + " (" + actionType + ")",
-              content: base64Content,
-              sha: currentFileData.sha
-            })
-          });
-
-          if (putRes && putRes.status === 409) {
-            const retryData = await fetchLatestFile();
-            if (retryData && retryData.content) {
-              await executePush(retryData);
-            }
-          }
-        };
-
-        await executePush(fileData);
-      } catch(e) {
-        console.log("Bulut kayit sync:", e);
-      }
-    }
-
-    function trackWaAction(tId, tName, city) {
+        function trackWaAction(tId, tName, city) {
       try {
         let name = tName;
         let c = city;
@@ -4103,107 +4017,23 @@
     let detectedDevice = /Mobile|Android|iPhone|iPad/i.test(navigator.userAgent) ? (/iPhone|iPad/i.test(navigator.userAgent) ? 'iPhone 📱' : 'Android 📱') : 'Masaüstü 💻';
 
     async function broadcastLiveVisitor(activityText = 'Ana Sayfa Vitrinini Geziyor', isVisitRecord = false) {
-      try {
-        const p1 = "gh" + "p_";
-        const p2 = "HbEqDGUdCnY8";
-        const p3 = "xR17XonNqbu0d";
-        const p4 = "IGo6B4Xkdsq";
-        const token = p1 + p2 + p3 + p4;
-        const owner = "apache35meister-ux";
-        const repo = "harmoniliski";
-
-        const fetchLatestFile = async () => {
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          return await res.json();
-        };
-
-        let fileData = await fetchLatestFile();
-        if (!fileData || !fileData.content) return;
-
-        const executePush = async (currentFileData) => {
-          const decoded = decodeGitHubBase64(currentFileData.content);
-          const currentJson = JSON.parse(decoded || '{}');
-          const now = Date.now();
-          const timeStr = new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
-          const dateStr = new Date().toLocaleString('tr-TR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
-          const pageTitle = window.location.pathname.split('/').pop() || 'Ana Sayfa';
-
-          // 1. Ziyaret Sayacı ve Şehir Dağılımını Güncelle (Yeni Giriş veya Açılışta)
-          if (isVisitRecord || !sessionStorage.getItem('zenspa_counted_visit')) {
+        try {
+          if (isVisitRecord && !sessionStorage.getItem('zenspa_counted_visit')) {
             sessionStorage.setItem('zenspa_counted_visit', 'true');
-            currentJson.totalVisits = (currentJson.totalVisits || 0) + 1;
-            
-            currentJson.cityCounts = currentJson.cityCounts || {};
-            currentJson.cityCounts[detectedCityName] = (currentJson.cityCounts[detectedCityName] || 0) + 1;
-
-            currentJson.cityVisits = currentJson.cityVisits || [];
-            currentJson.cityVisits.unshift({
-              time: dateStr,
-              city: detectedCityName,
-              country: detectedCountryName,
-              device: detectedDevice,
-              page: pageTitle
-            });
-            if (currentJson.cityVisits.length > 60) currentJson.cityVisits = currentJson.cityVisits.slice(0, 60);
+            localStorage.setItem('zenspa_real_visits', String((parseInt(localStorage.getItem('zenspa_real_visits') || '0', 10) || 0) + 1));
+            const counts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}');
+            counts[detectedCityName] = (counts[detectedCityName] || 0) + 1;
+            localStorage.setItem('zenspa_city_counts', JSON.stringify(counts));
           }
-
-          // 2. Canlı Aktif Radarı Güncelle (Son 3 dakika)
-          let activeList = (currentJson.activeVisitors || []).filter(v => (now - (v.lastSeen || 0)) < 180000);
-          
-          const existingIdx = activeList.findIndex(v => v.id === activeVisitorId);
-          const visitorObj = {
-            id: activeVisitorId,
-            city: detectedCityName,
-            device: detectedDevice,
-            activity: activityText,
-            lastSeen: now,
-            time: timeStr
-          };
-
-          if (existingIdx !== -1) {
-            activeList[existingIdx] = visitorObj;
-          } else {
-            activeList.unshift(visitorObj);
-          }
-          if (activeList.length > 25) activeList = activeList.slice(0, 25);
-          currentJson.activeVisitors = activeList;
-
-          const newStr = JSON.stringify(currentJson, null, 2);
-          const base64Content = encodeGitHubBase64(newStr);
-
-          const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-            method: 'PUT',
-            keepalive: true,
-            headers: {
-              'Authorization': 'Bearer ' + token,
-              'Accept': 'application/vnd.github+json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              message: "Track visitor & live active session: " + detectedCityName,
-              content: base64Content,
-              sha: currentFileData.sha
-            })
-          });
-
-          if (putRes && putRes.status === 409) {
-            const retryData = await fetchLatestFile();
-            if (retryData && retryData.content) {
-              await executePush(retryData);
-            }
-          }
-        };
-
-        await executePush(fileData);
-      } catch(e) {
-        console.log("Active radar sync error:", e);
+          const active = JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]').filter((item) => Date.now() - (item.lastSeen || 0) < 180000);
+          const visitor = { id: activeVisitorId, city: detectedCityName, device: detectedDevice, activity: activityText, lastSeen: Date.now(), time: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) };
+          const existing = active.findIndex((item) => item.id === activeVisitorId);
+          if (existing >= 0) active[existing] = visitor; else active.unshift(visitor);
+          localStorage.setItem('zenspa_active_visitors', JSON.stringify(active.slice(0, 25)));
+        } catch (e) {}
       }
-    }
 
-    // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
+        // 🌍 Otomatik İl / Şehir Bazlı Ziyaretçi Tespit & Canlı Kayıt Motoru
     (async function initVisitorTracking() {
       try {
         let geoData = null;

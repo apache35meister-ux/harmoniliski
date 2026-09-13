@@ -1746,7 +1746,7 @@
           <div class="settings-group">
             <label>💾 Veri Depolama & Senkronizasyon</label>
             <div style="background:#14080A; border:1px solid rgba(74,222,128,0.3); border-radius:10px; padding:0.85rem 1rem; color:#4ADE80; font-size:0.85rem; font-weight:700;">
-              ☁️ GitHub Cloud & LocalStorage Çift Katmanlı Eşitlendi
+              ⚠️ Eski panel: analitik yalnızca bu tarayıcıda
             </div>
           </div>
         </div>
@@ -1997,7 +1997,6 @@
 
 
     const ADMIN_PASS = "hakan908558";
-    const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
     const GITHUB_OWNER = "apache35meister-ux";
     const GITHUB_REPO = "harmoniliski";
 
@@ -2173,49 +2172,18 @@
       }
     }
     async function fetchLatestFromGitHub() {
-      const token = GITHUB_TOKEN;
-      const owner = GITHUB_OWNER;
-      const repo = GITHUB_REPO;
-
-      try {
-        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-          cache: 'no-store'
-        });
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.content) {
-            const rawBase64 = data.content.replace(/\s/g, '');
-            const binary = atob(rawBase64);
-            const bytes = new Uint8Array(binary.length);
-            for (let i = 0; i < binary.length; i++) {
-              bytes[i] = binary.charCodeAt(i);
-            }
-            const text = new TextDecoder('utf-8').decode(bytes);
-            const arr = JSON.parse(text);
-            if (Array.isArray(arr) && arr.length > 0) {
-              return arr;
-            }
-          }
+        try {
+          const rawRes = await fetch('https://raw.githubusercontent.com/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/main/therapists.json?t=' + Date.now(), { cache: 'no-store' });
+          if (!rawRes.ok) return null;
+          const data = await rawRes.json();
+          return Array.isArray(data) ? data : (Array.isArray(data.therapists) ? data.therapists : null);
+        } catch (e) {
+          console.warn('Public profile read error:', e);
+          return null;
         }
-      } catch(e) {
-        console.warn("Direct GitHub API fetch error:", e);
       }
 
-      try {
-        const rawRes = await fetch('https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/therapists.json?t=' + Date.now(), { cache: 'no-store' });
-        if (rawRes.ok) {
-          const rawArr = await rawRes.json();
-          if (Array.isArray(rawArr) && rawArr.length > 0) {
-            return rawArr;
-          }
-        }
-      } catch(e) {}
-
-      return null;
-    }
-
-    async function initAdminData() {
+        async function initAdminData() {
       try { loadSettings(); } catch(e) {}
       
       const local = localStorage.getItem('zenspa_therapists');
@@ -2281,95 +2249,20 @@
       try { renderTable(list); } catch(e) {}
     }
 
-    async function pushTherapistsToGitHub(currentList) {
-      try {
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
+    async function pushTherapistsToGitHub() { return false; }
 
-        let fileSha = null;
+        async function saveToStorage() {
         try {
-          const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (fileRes.ok) {
-            const fileData = await fileRes.json();
-            if (fileData && fileData.sha) fileSha = fileData.sha;
-          }
-        } catch(e) {}
-
-        if (!fileSha) {
-          try {
-            const refRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/ref/heads/main?t=' + Date.now(), {
-              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-              cache: 'no-store'
-            });
-            const refData = await refRes.json();
-            const commitRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/commits/' + refData.object.sha, {
-              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-            });
-            const commitData = await commitRes.json();
-            const treeRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/trees/' + commitData.tree.sha, {
-              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-            });
-            const treeData = await treeRes.json();
-            const item = (treeData.tree || []).find(f => f.path === 'therapists.json');
-            if (item) fileSha = item.sha;
-          } catch(e) {}
-        }
-
-        if (!fileSha) {
-          console.warn("SHA alınamadı, bulut güncellenemedi.");
+          localStorage.setItem('zenspa_admin_modified', 'true');
+          localStorage.setItem('zenspa_therapists', JSON.stringify(list));
+          return true;
+        } catch (e) {
+          console.warn('LocalStorage kotasi dolu:', e);
           return false;
         }
-
-        const jsonStr = JSON.stringify(currentList, null, 2);
-        const utf8Bytes = new TextEncoder().encode(jsonStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) {
-          binary += String.fromCharCode(utf8Bytes[i]);
-        }
-        const base64Content = btoa(binary);
-
-        const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: "Admin: Sync therapist catalog to cloud",
-            content: base64Content,
-            sha: fileSha
-          })
-        });
-
-        if (!putRes.ok) {
-          const errData = await putRes.json().catch(() => ({}));
-          console.error("GitHub PUT error:", putRes.status, errData);
-          return false;
-        }
-
-        return true;
-      } catch(err) {
-        console.error("Bulut sync hatasi:", err);
-        return false;
       }
-    }
 
-    async function saveToStorage() {
-      try {
-        localStorage.setItem('zenspa_admin_modified', 'true');
-        localStorage.setItem('zenspa_therapists', JSON.stringify(list));
-      } catch(e) {
-        console.warn("LocalStorage kotasi dolu:", e);
-      }
-      return await pushTherapistsToGitHub(list);
-    }
-
-    function renderTable(items) {
+        function renderTable(items) {
       const tbody = document.getElementById('therapistTableBody');
       if (!tbody) return;
       tbody.innerHTML = (items || []).map(t => {
@@ -2460,147 +2353,30 @@
       }
     }
 
-    async function getLiveAnalytics() {
-      // 1. LocalStorage'dan oku
-      let rawVisits = localStorage.getItem('zenspa_real_visits');
-      let rawWa = localStorage.getItem('zenspa_real_wa_clicks');
-      let rawCalls = localStorage.getItem('zenspa_real_calls');
-
-      let stats = {
-        visits: rawVisits !== null ? (parseInt(rawVisits, 10) || 0) : 0,
-        waClicks: rawWa !== null ? (parseInt(rawWa, 10) || 0) : 0,
-        callClicks: rawCalls !== null ? (parseInt(rawCalls, 10) || 0) : 0,
-        tClicks: JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'),
-        tCalls: JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'),
-        callLogs: JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'),
-        cityVisits: JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'),
-        cityCounts: JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'),
-        activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
-      };
-
-      // 3. Buluttan (GitHub analytics.json) cek ve guncel resmi verileri yansit
-      try {
-        let cloudStats = null;
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
+    function readLegacyAnalyticsJson(key, fallback) {
         try {
-          const apiRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (apiRes.ok) {
-            const data = await apiRes.json();
-            if (data && data.content) {
-              const rawBase64 = data.content.replace(/\s/g, '');
-              const binary = atob(rawBase64);
-              const bytes = new Uint8Array(binary.length);
-              for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-              cloudStats = JSON.parse(new TextDecoder('utf-8').decode(bytes));
-            }
-          }
-        } catch(e) {}
-
-        if (!cloudStats) {
-          try {
-            const rawRes = await fetch('https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/analytics.json?t=' + Date.now(), { cache: 'no-store' });
-            if (rawRes.ok) cloudStats = await rawRes.json();
-          } catch(e) {}
+          const value = JSON.parse(localStorage.getItem(key) || '');
+          return value ?? fallback;
+        } catch (e) {
+          return fallback;
         }
-
-        if (cloudStats) {
-          // Sayilari yerel ve bulut arasinda en guncel ve yuksek olanla koru (Asla taze tiklamayi 0 ile ezme!)
-          stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
-          stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
-          stats.visits = Math.max(stats.visits, cloudStats.totalVisits || 0);
-
-          if (cloudStats.tClicks && typeof cloudStats.tClicks === 'object') {
-            for (const [k, v] of Object.entries(cloudStats.tClicks)) {
-              stats.tClicks[k] = Math.max(stats.tClicks[k] || 0, v || 0);
-            }
-          }
-          if (cloudStats.tCalls && typeof cloudStats.tCalls === 'object') {
-            for (const [k, v] of Object.entries(cloudStats.tCalls)) {
-              stats.tCalls[k] = Math.max(stats.tCalls[k] || 0, v || 0);
-            }
-          }
-
-          // Arama ve mesaj loglarini birlestir (Yerel yeni loglar asla kaybolmasin!)
-          const seenKeys = new Set();
-          const mergedLogs = [];
-          (stats.callLogs || []).forEach(l => {
-            const key = (l.time||'') + (l.name||'') + (l.type||'');
-            if (!seenKeys.has(key)) {
-              seenKeys.add(key);
-              mergedLogs.push(l);
-            }
-          });
-          if (Array.isArray(cloudStats.logs)) {
-            cloudStats.logs.forEach(l => {
-              const key = (l.time||'') + (l.name||'') + (l.type||'');
-              if (!seenKeys.has(key)) {
-                seenKeys.add(key);
-                mergedLogs.push(l);
-              }
-            });
-          }
-          stats.callLogs = mergedLogs.slice(0, 50);
-
-          if (Array.isArray(cloudStats.cityVisits)) {
-            stats.cityVisits = cloudStats.cityVisits;
-          }
-
-          if (cloudStats.cityCounts && typeof cloudStats.cityCounts === 'object') {
-            for (const [c, cnt] of Object.entries(cloudStats.cityCounts)) {
-              stats.cityCounts[c] = Math.max(stats.cityCounts[c] || 0, cnt || 0);
-            }
-          }
-
-          // Canli aktif ziyaretcileri birlestir
-          if (Array.isArray(cloudStats.activeVisitors) && cloudStats.activeVisitors.length > 0) {
-            const now = Date.now();
-            const validCloud = cloudStats.activeVisitors.filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 180000));
-            const seenIds = new Set(stats.activeVisitors.map(v => v.id || v.time));
-            validCloud.forEach(v => {
-              const id = v.id || v.time;
-              if (!seenIds.has(id)) {
-                stats.activeVisitors.push(v);
-                seenIds.add(id);
-              }
-            });
-          }
-
-          // Guncel resmi veriyi localStorage'a da yaz
-          try {
-            localStorage.setItem('zenspa_real_wa_clicks', stats.waClicks.toString());
-            localStorage.setItem('zenspa_real_calls', stats.callClicks.toString());
-            localStorage.setItem('zenspa_real_visits', stats.visits.toString());
-            localStorage.setItem('zenspa_t_clicks', JSON.stringify(stats.tClicks));
-            localStorage.setItem('zenspa_t_calls', JSON.stringify(stats.tCalls));
-            localStorage.setItem('zenspa_live_call_logs', JSON.stringify(stats.callLogs));
-            localStorage.setItem('zenspa_city_visits', JSON.stringify(stats.cityVisits));
-            localStorage.setItem('zenspa_city_counts', JSON.stringify(stats.cityCounts));
-          } catch(ex) {}
-        }
-      } catch(e) {}
-
-      // 4. Canli Aktif Ziyaretci Radari: En az su anki yonetici oturumu aktif gosterilsin
-      const now = Date.now();
-      let liveActive = (stats.activeVisitors || []).filter(v => v.lastSeen && (Math.abs(now - v.lastSeen) < 180000));
-      if (liveActive.length === 0) {
-        liveActive = [
-          { id: 'v_admin_panel', city: 'İzmir', device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'Mobil 📱' : 'Masaüstü 💻', activity: 'Canlı Yönetim Panelinde', lastSeen: now, time: 'Şu an aktif' },
-          { id: 'v_client_mob', city: 'İstanbul (Kadıköy)', device: 'iPhone 📱', activity: 'Kadıköy VIP Profillerini İnceliyor', lastSeen: now - 40000, time: '1 dk önce' }
-        ];
       }
-      stats.activeVisitors = liveActive;
-      try { localStorage.setItem('zenspa_active_visitors', JSON.stringify(stats.activeVisitors)); } catch(e) {}
 
-      return stats;
-    }
+      async function getLiveAnalytics() {
+        return {
+          visits: parseInt(localStorage.getItem('zenspa_real_visits') || '0', 10) || 0,
+          waClicks: parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0', 10) || 0,
+          callClicks: parseInt(localStorage.getItem('zenspa_real_calls') || '0', 10) || 0,
+          tClicks: readLegacyAnalyticsJson('zenspa_t_clicks', {}),
+          tCalls: readLegacyAnalyticsJson('zenspa_t_calls', {}),
+          callLogs: readLegacyAnalyticsJson('zenspa_live_call_logs', []),
+          cityVisits: readLegacyAnalyticsJson('zenspa_city_visits', []),
+          cityCounts: readLegacyAnalyticsJson('zenspa_city_counts', {}),
+          activeVisitors: readLegacyAnalyticsJson('zenspa_active_visitors', [])
+        };
+      }
 
-    function renderWaTableSync(statsOverride) {
+        function renderWaTableSync(statsOverride) {
       let stats = statsOverride;
       if (!stats) {
         let rawWa = localStorage.getItem('zenspa_real_wa_clicks');
@@ -2735,116 +2511,29 @@
     }
 
     async function recordWaClick(tId, tName, city, actionType = '💬 WhatsApp Randevu Talebi') {
-      try {
-        let curWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '18');
-        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '7');
-        let curTClicks = {};
-        let curTCalls = {};
-        let curLogs = [];
-        try { curTClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'); } catch(e){}
-        try { curTCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'); } catch(e){}
-        try { curLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'); } catch(e){}
-
-        if (actionType.includes('WhatsApp')) {
-          curWa += 1;
-          const curIdStr = String(tId || '1788738592899');
-          curTClicks[curIdStr] = (curTClicks[curIdStr] || 0) + 1;
-          if (tName) {
-            curTClicks[tName] = (curTClicks[tName] || 0) + 1;
-            curTClicks[tName.toLowerCase()] = (curTClicks[tName.toLowerCase()] || 0) + 1;
-          }
-        } else {
-          curCalls += 1;
-          if (tId) curTCalls[tId] = (curTCalls[tId] || 0) + 1;
-        }
-
-        const now = new Date();
-        const timeStr = ('0' + now.getDate()).slice(-2) + '.' + ('0' + (now.getMonth() + 1)).slice(-2) + '.' + now.getFullYear() + ' ' + ('0' + now.getHours()).slice(-2) + ':' + ('0' + now.getMinutes()).slice(-2);
-        curLogs.unshift({
-          time: timeStr,
-          name: tName || 'VIP Escort',
-          city: city || 'Türkiye',
-          type: actionType
-        });
-        if (curLogs.length > 50) curLogs = curLogs.slice(0, 50);
-
-        localStorage.setItem('zenspa_real_wa_clicks', curWa.toString());
-        localStorage.setItem('zenspa_real_calls', curCalls.toString());
-        localStorage.setItem('zenspa_t_clicks', JSON.stringify(curTClicks));
-        localStorage.setItem('zenspa_t_calls', JSON.stringify(curTCalls));
-        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(curLogs));
-
-        // GitHub bulut senkronizasyonu
         try {
-          const owner = GITHUB_OWNER;
-          const repo = GITHUB_REPO;
-          const token = GITHUB_TOKEN;
-
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (res.ok) {
-            const data = await res.json();
-            const rawBase64 = (data.content || '').replace(/\s/g, '');
-            const binary = atob(rawBase64);
-            const bytes = new Uint8Array(binary.length);
-            for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-            const currentJson = JSON.parse(new TextDecoder('utf-8').decode(bytes));
-
-            if (actionType.includes('WhatsApp')) {
-              currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
-              currentJson.tClicks = currentJson.tClicks || {};
-              const curIdStr = String(tId || '1788738592899');
-              currentJson.tClicks[curIdStr] = (currentJson.tClicks[curIdStr] || 0) + 1;
-              if (tName) {
-                currentJson.tClicks[tName] = (currentJson.tClicks[tName] || 0) + 1;
-                currentJson.tClicks[tName.toLowerCase()] = (currentJson.tClicks[tName.toLowerCase()] || 0) + 1;
-              }
-            } else {
-              currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
-              currentJson.tCalls = currentJson.tCalls || {};
-              if (tId) currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
-            }
-
-            currentJson.logs = currentJson.logs || [];
-            currentJson.logs.unshift({
-              time: timeStr,
-              name: tName || 'VIP Escort',
-              city: city || 'Türkiye',
-              type: actionType
-            });
-            if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
-
-            const newStr = JSON.stringify(currentJson, null, 2);
-            const utf8B = new TextEncoder().encode(newStr);
-            let bStr = '';
-            for (let i = 0; i < utf8B.length; i++) bStr += String.fromCharCode(utf8B[i]);
-            const base64Content = btoa(bStr);
-
-            await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-              method: 'PUT',
-              keepalive: true,
-              headers: {
-                'Authorization': 'Bearer ' + token,
-                'Accept': 'application/vnd.github+json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                message: "Track admin WA click: " + tName,
-                content: base64Content,
-                sha: data.sha
-              })
-            });
-          }
-        } catch(cloudErr) {
-          console.warn('Cloud WA click error:', cloudErr);
+          const id = String(tId || tName || 'unknown');
+          const name = tName || 'VIP Escort';
+          const place = city || 'Türkiye';
+          const clicksKey = actionType.includes('WhatsApp') ? 'zenspa_real_wa_clicks' : 'zenspa_real_calls';
+          const clicks = parseInt(localStorage.getItem(clicksKey) || '0', 10) || 0;
+          const perProfileKey = actionType.includes('WhatsApp') ? 'zenspa_t_clicks' : 'zenspa_t_calls';
+          const perProfile = readLegacyAnalyticsJson(perProfileKey, {});
+          const logs = readLegacyAnalyticsJson('zenspa_live_call_logs', []);
+          perProfile[id] = (perProfile[id] || 0) + 1;
+          logs.unshift({ time: new Date().toLocaleString('tr-TR'), name, city: place, type: actionType });
+          localStorage.setItem(clicksKey, String(clicks + 1));
+          localStorage.setItem(perProfileKey, JSON.stringify(perProfile));
+          localStorage.setItem('zenspa_live_call_logs', JSON.stringify(logs.slice(0, 50)));
+          if (typeof renderWaTableSync === 'function') renderWaTableSync();
+          if (typeof renderWaTable === 'function') renderWaTable();
+          if (typeof renderCityVisitorStats === 'function') renderCityVisitorStats();
+          if (typeof updateMainLiveKpiBar === 'function') updateMainLiveKpiBar();
+        } catch (err) {
+          console.warn('recordWaClick error:', err);
         }
-      } catch(err) {
-        console.error('recordWaClick err:', err);
       }
-    }
-    window.handleDirectWaClick = handleDirectWaClick;
+        window.handleDirectWaClick = handleDirectWaClick;
     window.recordWaClick = recordWaClick;
 
     async function exportCallLogsToCSV() {
@@ -2868,130 +2557,18 @@
     }
 
     async function resetLiveAnalytics() {
-      if (!confirm("Canlı istatistikleri, WhatsApp raporlarını ve ziyaretçi sayaçlarını tamamen sıfırlamak istediğinize emin misiniz?")) {
-        return;
+        if (!confirm('Bu panelin yerel WhatsApp ve şehir sayaçları sıfırlansın mı?')) return;
+        ['zenspa_real_visits', 'zenspa_real_wa_clicks', 'zenspa_real_calls', 'zenspa_t_clicks', 'zenspa_t_calls', 'zenspa_live_call_logs', 'zenspa_city_visits', 'zenspa_city_counts', 'zenspa_active_visitors'].forEach((key) => localStorage.removeItem(key));
+        const zero = { waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] };
+        renderWaTableSync(zero);
+        try { await renderWaTable(); } catch (e) {}
+        try { await renderCityVisitorStats(); } catch (e) {}
+        try { await updateMainLiveKpiBar(); } catch (e) {}
+        try { const liveSyncCh = new BroadcastChannel('zenspa_live_sync'); liveSyncCh.postMessage({ type: 'RESET' }); liveSyncCh.close(); } catch (e) {}
+        alert('✓ WhatsApp ve şehir ziyaret sayaçları sıfırlandı. Eski analytics.json artık okunmuyor veya yazılmıyor.');
       }
 
-      // 1. LocalStorage Kesin Sıfırlama
-      localStorage.setItem('zenspa_real_visits', '0');
-      localStorage.setItem('zenspa_real_wa_clicks', '0');
-      localStorage.setItem('zenspa_real_calls', '0');
-      localStorage.setItem('zenspa_t_clicks', '{}');
-      localStorage.setItem('zenspa_t_calls', '{}');
-      localStorage.setItem('zenspa_live_call_logs', '[]');
-      localStorage.setItem('zenspa_city_visits', '[]');
-      localStorage.setItem('zenspa_city_counts', '{}');
-      localStorage.setItem('zenspa_active_visitors', '[]');
-
-      // 2. Arayüz Sayaçlarını Anında Sıfırla
-      const elWa = document.getElementById('realTotalWa');
-      if (elWa) elWa.textContent = '0';
-      const elCalls = document.getElementById('realTotalCalls');
-      if (elCalls) elCalls.textContent = '0';
-      const elVisits = document.getElementById('realTotalVisits');
-      if (elVisits) elVisits.textContent = '0';
-
-      const tbody = document.getElementById('waStatsTableBody');
-      if (tbody) {
-        const fullList = (list && list.length > 0) ? list : (typeof defaultTherapists !== 'undefined' ? defaultTherapists : []);
-        tbody.innerHTML = fullList.map(t => `
-          <tr>
-            <td>
-              <div class="therapist-info">
-                <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='images/turkish_merve_photo.jpg'">
-                <strong style="color:#FFF;">${t.name}</strong>
-              </div>
-            </td>
-            <td>📍 ${t.city}</td>
-            <td style="color:#4ADE80; font-weight:800; font-size:0.95rem;">💬 0 Mesaj Talebi</td>
-            <td style="color:#38BDF8; font-weight:800; font-size:0.95rem;">📞 0 Telefon Araması</td>
-            <td style="color:#FDE047; font-weight:900; font-size:1rem;">⚡ 0 Müşteri Talebi</td>
-            <td>
-              <a href="${getWaLink(t.wa || t.whatsapp, 'Merhaba')}" target="_blank" class="btn-wa-direct">
-                💬 İletişime Geç
-              </a>
-            </td>
-          </tr>
-        `).join('');
-      }
-
-      const logsTbody = document.getElementById('liveCallLogsTableBody');
-      if (logsTbody) {
-        logsTbody.innerHTML = `
-          <tr>
-            <td colspan="5" style="text-align:center; color:#71717A; padding:1.5rem;">
-              Henüz yeni bir çağrı veya WhatsApp mesaj kaydı bulunmuyor. Ziyaretçiler arama yaptıkça burada anlık olarak listelenecektir.
-            </td>
-          </tr>
-        `;
-      }
-
-      // 3. GitHub Cloud analytics.json Sıfırlama
-      try {
-        const emptyAnalytics = {
-          totalWaClicks: 0,
-          totalCalls: 0,
-          totalVisits: 0,
-          lastUpdated: new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'}),
-          tClicks: {},
-          tCalls: {},
-          cityCounts: {},
-          logs: [],
-          cityVisits: [],
-          activeVisitors: []
-        };
-
-        const jsonStr = JSON.stringify(emptyAnalytics, null, 2);
-        const utf8Bytes = new TextEncoder().encode(jsonStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
-        const base64Content = btoa(binary);
-
-        let sha = null;
-        try {
-          const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json?t=' + Date.now(), {
-            headers: {
-              'Authorization': 'Bearer ' + GITHUB_TOKEN,
-              'Accept': 'application/vnd.github+json'
-            },
-            cache: 'no-store'
-          });
-          if (res.ok) {
-            const fd = await res.json();
-            if (fd && fd.sha) sha = fd.sha;
-          }
-        } catch(e) {}
-
-        const putBody = {
-          message: "Reset analytics and visitor statistics to zero",
-          content: base64Content
-        };
-        if (sha) putBody.sha = sha;
-
-        await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + GITHUB_TOKEN,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(putBody)
-        });
-
-        try {
-          const liveSyncCh = new BroadcastChannel('zenspa_live_sync');
-          liveSyncCh.postMessage({ type: 'RESET' });
-        } catch(e) {}
-
-        renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
-      } catch(err) {
-        console.warn("Analytics cloud reset error:", err);
-      }
-
-      alert("✓ Tüm istatistikler ve WhatsApp çağrı raporları tamamen sıfırlandı!");
-    }
-
-    function filterTable() {
+        function filterTable() {
       const q = (document.getElementById('tableSearch').value || '').toLowerCase();
       const filtered = list.filter(t => t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q) || (t.district && t.district.toLowerCase().includes(q)));
       renderTable(filtered);
@@ -3636,96 +3213,13 @@
     }
 
     async function saveSettings(e) {
-      if (e && e.preventDefault) e.preventDefault();
-      const titleInput = document.getElementById('settingSiteTitle');
-      const waInput = document.getElementById('settingWaNumber');
-      const scopeInput = document.getElementById('settingCities');
-      const waWelcomeInput = document.getElementById('settingWaWelcome');
-      const priceWeekInput = document.getElementById('settingPriceWeek');
-      const price15Input = document.getElementById('settingPrice15Days');
-      const priceMonthInput = document.getElementById('settingPriceMonth');
-      const priceGoldInput = document.getElementById('settingPriceGold');
-      const refreshSecInput = document.getElementById('settingAutoRefreshSec');
-
-      const title = titleInput ? titleInput.value.trim() : '';
-      const wa = waInput ? waInput.value.trim() : '';
-      const scope = scopeInput ? scopeInput.value.trim() : '';
-      const waWelcome = waWelcomeInput ? waWelcomeInput.value.trim() : '';
-      const priceWeek = priceWeekInput ? priceWeekInput.value.trim() : '';
-      const price15 = price15Input ? price15Input.value.trim() : '';
-      const priceMonth = priceMonthInput ? priceMonthInput.value.trim() : '';
-      const priceGold = priceGoldInput ? priceGoldInput.value.trim() : '';
-      const refreshSec = refreshSecInput ? refreshSecInput.value : '10';
-
-      if (title) localStorage.setItem('zenspa_site_title', title);
-      if (wa) localStorage.setItem('zenspa_wa_number', wa);
-      if (scope) localStorage.setItem('zenspa_scope', scope);
-      if (waWelcome) localStorage.setItem('zenspa_wa_welcome', waWelcome);
-      if (priceWeek) localStorage.setItem('zenspa_price_week', priceWeek);
-      if (price15) localStorage.setItem('zenspa_price_15', price15);
-      if (priceMonth) localStorage.setItem('zenspa_price_month', priceMonth);
-      if (priceGold) localStorage.setItem('zenspa_price_gold', priceGold);
-      if (refreshSec) localStorage.setItem('zenspa_refresh_sec', refreshSec);
-
-      const brandH2 = document.querySelector('.brand-title h2');
-      if (brandH2 && title && title.includes('|')) {
-        brandH2.textContent = title.split('|')[0].trim();
+        if (e && e.preventDefault) e.preventDefault();
+        const fields = { settingSiteTitle: 'zenspa_site_title', settingWaNumber: 'zenspa_wa_number', settingScope: 'zenspa_scope', settingWaWelcome: 'zenspa_wa_welcome', settingPriceWeek: 'zenspa_price_week', settingPrice15: 'zenspa_price_15', settingPriceMonth: 'zenspa_price_month', settingPriceGold: 'zenspa_price_gold', settingRefreshSec: 'zenspa_refresh_sec' };
+        Object.entries(fields).forEach(([elementId, storageKey]) => { const element = document.getElementById(elementId); if (element) localStorage.setItem(storageKey, element.value || ''); });
+        alert('✓ Ayarlar bu tarayıcıya kaydedildi.');
       }
 
-      // Bulut Senkronizasyonu (Tüm cihazlar ve oturumlar için)
-      try {
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
-        let sha = null;
-        try {
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-          });
-          if (res.ok) {
-            const fd = await res.json();
-            if (fd && fd.sha) sha = fd.sha;
-          }
-        } catch(e) {}
-
-        const newSettingsObj = {
-          siteTitle: title,
-          waNumber: wa,
-          scope: scope,
-          waWelcome: waWelcome,
-          priceWeek: priceWeek,
-          price15: price15,
-          priceMonth: priceMonth,
-          priceGold: priceGold,
-          refreshSec: refreshSec
-        };
-        const newStr = JSON.stringify(newSettingsObj, null, 2);
-        const utf8Bytes = new TextEncoder().encode(newStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
-        const base64Content = btoa(binary);
-
-        const putBody = { message: "Update platform settings: " + title, content: base64Content };
-        if (sha) putBody.sha = sha;
-
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(putBody)
-        });
-      } catch(err) {
-        console.log("Settings cloud sync err:", err);
-      }
-
-      alert("✓ Platform ayarları kalıcı olarak kaydedildi ve bulut ile senkronize edildi!");
-    }
-
-    async function downloadBackupData() {
+        async function downloadBackupData() {
       try {
         const stats = await getLiveAnalytics();
         const backupObj = {
@@ -3777,57 +3271,18 @@
     ];
 
     async function loadOfficialGscData() {
-      try {
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
-        // 1. Direct GitHub REST API with Token (0ms cache)
         try {
-          const apiRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/gsc_live_rankings.json?t=' + Date.now(), {
-            headers: {
-              'Authorization': 'Bearer ' + token,
-              'Accept': 'application/vnd.github+json'
-            },
-            cache: 'no-store'
-          });
-          if (apiRes.ok) {
-            const data = await apiRes.json();
-            if (data && data.content) {
-              const rawBase64 = data.content.replace(/\s/g, '');
-              const binary = atob(rawBase64);
-              const bytes = new Uint8Array(binary.length);
-              for (let i = 0; i < binary.length; i++) {
-                bytes[i] = binary.charCodeAt(i);
-              }
-              const text = new TextDecoder('utf-8').decode(bytes);
-              const parsed = JSON.parse(text);
-              if (parsed && Array.isArray(parsed.items) && parsed.items.length > 0) {
-                localStorage.setItem('zenspa_rank_keywords', JSON.stringify(parsed.items));
-                localStorage.setItem('zenspa_gsc_last_sync', parsed.updatedAt || '');
-                return parsed.items;
-              }
-            }
-          }
-        } catch(e) {}
+          const response = await fetch('https://raw.githubusercontent.com/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/main/gsc_live_rankings.json?t=' + Date.now(), { cache: 'no-store' });
+          if (!response.ok) return null;
+          const parsed = await response.json();
+          if (!parsed || !Array.isArray(parsed.items)) return null;
+          localStorage.setItem('zenspa_rank_keywords', JSON.stringify(parsed.items));
+          localStorage.setItem('zenspa_gsc_last_sync', parsed.updatedAt || '');
+          return parsed.items;
+        } catch (e) { return null; }
+      }
 
-        // 2. Fallback to local ./gsc_live_rankings.json
-        try {
-          const res = await fetch('./gsc_live_rankings.json?t=' + Date.now(), { cache: 'no-store' });
-          if (res.ok) {
-            const data = await res.json();
-            if (data && Array.isArray(data.items) && data.items.length > 0) {
-              localStorage.setItem('zenspa_rank_keywords', JSON.stringify(data.items));
-              localStorage.setItem('zenspa_gsc_last_sync', data.updatedAt || '');
-              return data.items;
-            }
-          }
-        } catch(e) {}
-      } catch(e) {}
-      return null;
-    }
-
-    function getRankKeywords() {
+        function getRankKeywords() {
       try {
         const stored = localStorage.getItem('zenspa_rank_keywords');
         if (stored) {
@@ -4089,148 +3544,29 @@
     window.handleDirectWaClick = handleDirectWaClick;
 
     async function recordWaClick(therapistId, therapistName, therapistCity) {
-      try {
-        const tName = (therapistName || 'Zeynep').trim();
-        const tCity = (therapistCity || 'Ankara').replace('📍', '').split(',')[0].trim();
-        const tIdStr = String(therapistId || tName);
-        const tNameLower = tName.toLowerCase();
-        const tNameCap = tName.charAt(0).toUpperCase() + tName.slice(1).toLowerCase();
-
-        // 1. O ANKİ STATS'I HEMEN LOCAL STORAGE'DAN ÇEK VE ARTIR (0 GECİKME)
-        let curWaClicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0') + 1;
-        let curVisits = parseInt(localStorage.getItem('zenspa_real_visits') || '0') + 1;
-        let curTClicks = {};
-        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '0');
-        let curTCalls = {};
-        let curLogs = [];
-        let curCityVisits = [];
-        let curCityCounts = {};
-
-        try { curTClicks = JSON.parse(localStorage.getItem('zenspa_t_clicks') || '{}'); } catch(e){}
-        try { curTCalls = JSON.parse(localStorage.getItem('zenspa_t_calls') || '{}'); } catch(e){}
-        try { curLogs = JSON.parse(localStorage.getItem('zenspa_live_call_logs') || '[]'); } catch(e){}
-        try { curCityVisits = JSON.parse(localStorage.getItem('zenspa_city_visits') || '[]'); } catch(e){}
-        try { curCityCounts = JSON.parse(localStorage.getItem('zenspa_city_counts') || '{}'); } catch(e){}
-
-        // Tüm varyasyonlar altında sayıyı hemen artır
-        curTClicks[tIdStr] = (curTClicks[tIdStr] || 0) + 1;
-        curTClicks[tName] = (curTClicks[tName] || 0) + 1;
-        curTClicks[tNameLower] = (curTClicks[tNameLower] || 0) + 1;
-        curTClicks[tNameCap] = (curTClicks[tNameCap] || 0) + 1;
-
-        curCityCounts[tCity] = (curCityCounts[tCity] || 0) + 1;
-
-        const timeStr = new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
-
-        curLogs.unshift({
-          time: timeStr,
-          name: tNameCap,
-          city: tCity,
-          type: '💬 WhatsApp Randevu Talebi'
-        });
-        if (curLogs.length > 50) curLogs = curLogs.slice(0, 50);
-
-        curCityVisits.unshift({
-          time: timeStr,
-          city: tCity,
-          country: 'Türkiye',
-          device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'Mobil 📱' : 'Masaüstü 💻',
-          page: 'WhatsApp / ' + tNameCap,
-          status: 'Tamamlandı'
-        });
-        if (curCityVisits.length > 50) curCityVisits = curCityVisits.slice(0, 50);
-
-        // 2. HEMEN LOCAL STORAGE'A YAZ (0ms)
-        localStorage.setItem('zenspa_real_wa_clicks', curWaClicks.toString());
-        localStorage.setItem('zenspa_real_visits', curVisits.toString());
-        localStorage.setItem('zenspa_t_clicks', JSON.stringify(curTClicks));
-        localStorage.setItem('zenspa_live_call_logs', JSON.stringify(curLogs));
-        localStorage.setItem('zenspa_city_visits', JSON.stringify(curCityVisits));
-        localStorage.setItem('zenspa_city_counts', JSON.stringify(curCityCounts));
-
-        // 3. EKRANDAKİ TABLOLARI VE KPI BARINI 0ms İLE ANINDA GÜNCELLE
-        if (typeof renderWaTableSync === 'function') renderWaTableSync();
-        if (typeof renderWaTable === 'function') renderWaTable();
-        if (typeof renderCityVisitorStats === 'function') renderCityVisitorStats();
-        if (typeof updateMainLiveKpiBar === 'function') updateMainLiveKpiBar();
-
-        // 4. ARKA PLANDA GITHUB ANALYTICS.JSON ILE SENKRONIZE ET
-        let stats = await getLiveAnalytics();
-        stats.waClicks = Math.max(stats.waClicks || 0, curWaClicks);
-        stats.visits = Math.max(stats.visits || 0, curVisits);
-        stats.tClicks = stats.tClicks || {};
-        stats.tClicks[tIdStr] = Math.max(stats.tClicks[tIdStr] || 0, curTClicks[tIdStr] || 0);
-        stats.tClicks[tName] = Math.max(stats.tClicks[tName] || 0, curTClicks[tName] || 0);
-        stats.tClicks[tNameLower] = Math.max(stats.tClicks[tNameLower] || 0, curTClicks[tNameLower] || 0);
-        stats.tClicks[tNameCap] = Math.max(stats.tClicks[tNameCap] || 0, curTClicks[tNameCap] || 0);
-        stats.callLogs = curLogs;
-        stats.cityVisits = curCityVisits;
-        stats.cityCounts = curCityCounts;
-
-        syncAnalyticsToGitHub(stats);
-      } catch(err) {
-        console.warn("recordWaClick error:", err);
-      }
-    }
-
-    async function syncAnalyticsToGitHub(updatedStats) {
-      try {
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
-        let currentSha = null;
         try {
-          const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (fileRes.ok) {
-            const fd = await fileRes.json();
-            if (fd && fd.sha) currentSha = fd.sha;
-          }
-        } catch(e) {}
-
-        const payload = {
-          totalWaClicks: updatedStats.waClicks || 0,
-          totalCalls: updatedStats.callClicks || 0,
-          totalVisits: updatedStats.visits || 0,
-          lastUpdated: new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'}),
-          tClicks: updatedStats.tClicks || {},
-          tCalls: updatedStats.tCalls || {},
-          cityCounts: updatedStats.cityCounts || {},
-          logs: (updatedStats.callLogs || []).slice(0, 50),
-          cityVisits: (updatedStats.cityVisits || []).slice(0, 50),
-          activeVisitors: updatedStats.activeVisitors || []
-        };
-
-        const jsonStr = JSON.stringify(payload, null, 2);
-        const utf8Bytes = new TextEncoder().encode(jsonStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
-        const base64Content = btoa(binary);
-
-        const putBody = {
-          message: "Live analytics sync: WhatsApp click & visit",
-          content: base64Content
-        };
-        if (currentSha) putBody.sha = currentSha;
-
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(putBody)
-        });
-      } catch(e) {
-        console.warn("syncAnalyticsToGitHub error:", e);
+          const id = String(therapistId || therapistName || 'unknown');
+          const name = therapistName || 'VIP Escort';
+          const place = therapistCity || 'Türkiye';
+          const clicks = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0', 10) || 0;
+          const perProfile = readLegacyAnalyticsJson('zenspa_t_clicks', {});
+          const logs = readLegacyAnalyticsJson('zenspa_live_call_logs', []);
+          perProfile[id] = (perProfile[id] || 0) + 1;
+          logs.unshift({ time: new Date().toLocaleString('tr-TR'), name, city: place, type: '💬 WhatsApp Randevu Talebi' });
+          localStorage.setItem('zenspa_real_wa_clicks', String(clicks + 1));
+          localStorage.setItem('zenspa_t_clicks', JSON.stringify(perProfile));
+          localStorage.setItem('zenspa_live_call_logs', JSON.stringify(logs.slice(0, 50)));
+          if (typeof renderWaTableSync === 'function') renderWaTableSync();
+          if (typeof renderWaTable === 'function') renderWaTable();
+          if (typeof renderCityVisitorStats === 'function') renderCityVisitorStats();
+          if (typeof updateMainLiveKpiBar === 'function') updateMainLiveKpiBar();
+        } catch (err) {
+          console.warn('recordWaClick error:', err);
+        }
       }
-    }
+        async function syncAnalyticsToGitHub() { return false; }
 
-    // 🟢 EN ÜST CANLI SAYAÇLARI GÜNCELLEME MOTORU
+        // 🟢 EN ÜST CANLI SAYAÇLARI GÜNCELLEME MOTORU
     async function updateMainLiveKpiBar() {
       try {
         const stats = await getLiveAnalytics();
