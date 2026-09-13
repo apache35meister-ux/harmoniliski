@@ -3203,6 +3203,28 @@
         }
       });
 
+        // Olay teslimi tarayıcıya göre değişebileceği için KPI'ları doğrudan da izle.
+      // Bu yalnızca aynı origin'deki localStorage'ı okur; başka cihaza veri göndermez.
+      setInterval(() => {
+        try {
+          const metrics = [
+            ['realTotalWa', 'zenspa_real_wa_clicks'],
+            ['realTotalCalls', 'zenspa_real_calls'],
+            ['realTotalVisits', 'zenspa_real_visits']
+          ];
+          const stale = metrics.some(([elementId, storageKey]) => {
+            const el = document.getElementById(elementId);
+            if (!el) return false;
+            const value = parseInt(localStorage.getItem(storageKey) || '0', 10) || 0;
+            return el.textContent !== String(value);
+          });
+          if (stale) {
+            renderWaTableSync();
+            updateMainLiveKpiBar();
+          }
+        } catch (e) {}
+      }, 250);
+
         // Canlı Sekmeler İçin Hızlı Otomatik Arka Plan Yenileme (2.5 saniye - Gecikmesiz Anlık Senkron)
     setInterval(() => {
       try {
