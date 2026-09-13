@@ -2279,6 +2279,7 @@
 
       try { checkAndAutoExpire(); } catch(e) {}
       try { renderTable(list); } catch(e) {}
+      try { autoPollLiveAnalytics(); } catch(e) {}
     }
 
     async function pushTherapistsToGitHub(currentList) {
@@ -2722,6 +2723,57 @@
         }
       }
     }
+
+    // 🟢 OTOMATİK CANLI RADAR & GITHUB SENKRONİZASYONU (Her 3 saniyede bir PC ekranını otomatik yenile)
+    let _lastStats = { wa: null, calls: null, visits: null, logsCount: null };
+    let _isPolling = false;
+
+    async function autoPollLiveAnalytics() {
+      if (_isPolling) return;
+      _isPolling = true;
+      try {
+        const stats = await getLiveAnalytics();
+        renderWaTableSync(stats);
+
+        // Canlı bildirim efekti: Yeni ziyaretçi veya WhatsApp tıklaması gelirse kartı parlat
+        if (_lastStats.wa !== null && stats.waClicks > _lastStats.wa) {
+          flashKpi('realTotalWa');
+        }
+        if (_lastStats.visits !== null && stats.visits > _lastStats.visits) {
+          flashKpi('realTotalVisits');
+        }
+        if (_lastStats.calls !== null && stats.callClicks > _lastStats.calls) {
+          flashKpi('realTotalCalls');
+        }
+        _lastStats = { wa: stats.waClicks, calls: stats.callClicks, visits: stats.visits, logsCount: (stats.callLogs || []).length };
+
+        // Şehir tabı açıksa orayı da yenile
+        const cityTab = document.getElementById('cityAnalyticsTab');
+        if (cityTab && (cityTab.style.display !== 'none' || cityTab.classList.contains('active'))) {
+          renderCityVisitorStats();
+        }
+      } catch(e) {
+      } finally {
+        _isPolling = false;
+      }
+    }
+
+    function flashKpi(elementId) {
+      const el = document.getElementById(elementId);
+      if (el && el.parentElement) {
+        const card = el.parentElement;
+        card.style.transition = 'box-shadow 0.3s ease, transform 0.3s ease';
+        card.style.boxShadow = '0 0 30px rgba(34, 197, 94, 0.9)';
+        card.style.transform = 'scale(1.03)';
+        setTimeout(() => {
+          card.style.boxShadow = '';
+          card.style.transform = '';
+        }, 1200);
+      }
+    }
+
+    // Her 3 saniyede bir PC panelini arka planda canlı güncelle
+    setInterval(autoPollLiveAnalytics, 3000);
 
     async function handleDirectWaClick(e, id, name, city) {
       try {
