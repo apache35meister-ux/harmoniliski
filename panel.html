@@ -3173,13 +3173,9 @@
     window.resetLiveAnalytics = resetLiveAnalytics;
 
     // --- AYNI TARAYICIDA ANINDA ANALİTİK SENKRONİZASYONU ---
-      let lastLegacyAnalyticsNonce = '';
       function refreshLegacyAnalyticsViews(event) {
-        const nonce = event && event.nonce;
-        if (nonce && nonce === lastLegacyAnalyticsNonce) return;
-        if (nonce) lastLegacyAnalyticsNonce = nonce;
         // Olay geldiğinde localStorage'daki son değeri doğrudan ve senkron göster.
-        // Asenkron tam tablo yenilemesi burada ilk yükleme durumuyla yarışmamalı.
+        // Aynı olay BroadcastChannel ve storage üzerinden gelebilir; iki render da güvenlidir.
         renderWaTableSync();
         updateMainLiveKpiBar();
         const cityTab = document.getElementById('cityAnalyticsTab');
