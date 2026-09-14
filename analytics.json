@@ -1,14 +1,24 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 1,
   "lastUpdated": "14.09.2026 14:25",
-  "tClicks": {},
+  "tClicks": {
+    "1788738592899": 1,
+    "15096204167": 2
+  },
   "tCalls": {},
   "cityCounts": {
     "Izmir": 1
   },
-  "logs": [],
+  "logs": [
+    {
+      "time": "14.09.2026 14:25",
+      "name": "15096204167",
+      "city": "izmir, konak",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "14.09.2026 14:25",
