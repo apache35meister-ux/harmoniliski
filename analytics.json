@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 2,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "lastUpdated": "12.09.2026 18:45",
   "tClicks": {
     "1788429948834": 3,
@@ -20,7 +20,7 @@
   "cityCounts": {
     "Dalaman": 1,
     "Izmir": 1,
-    "Istanbul": 1,
+    "Istanbul": 2,
     "Kyiv": 1
   },
   "logs": [
@@ -81,6 +81,13 @@
   ],
   "cityVisits": [
     {
+      "time": "14.09.2026 11:52",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "14.09.2026 07:50",
       "city": "Kyiv",
       "country": "Ukraine",
@@ -111,12 +118,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu0y1921_kxiq",
-      "city": "Kyiv",
+      "id": "v_mu108uz0_f747",
+      "city": "Istanbul",
       "device": "Android 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789372298380,
-      "time": "07:51"
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789375961359,
+      "time": "11:52"
     }
   ]
 }
