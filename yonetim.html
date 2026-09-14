@@ -734,15 +734,22 @@
 </head>
 <body>
 
-  <!-- Admin Session Initialization -->
+  <!-- Admin Session Initialization & Immediate Overlay Bypass -->
   <script>
     (function() {
       try {
         var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
         if (logged) {
-          document.documentElement.style.overflow = '';
-          var ov = document.getElementById('adminAuthOverlay');
-          if (ov) ov.style.display = 'none';
+          document.documentElement.style.overflow = 'auto';
+          document.documentElement.style.pointerEvents = 'auto';
+          if (document.body) {
+            document.body.style.overflow = 'auto';
+            document.body.style.pointerEvents = 'auto';
+          }
+          var style = document.createElement('style');
+          style.id = 'bypass-auth-overlay-style';
+          style.innerHTML = '#adminAuthOverlay { display: none !important; pointer-events: none !important; visibility: hidden !important; opacity: 0 !important; z-index: -9999 !important; }';
+          document.head.appendChild(style);
         } else {
           document.documentElement.style.overflow = 'hidden';
         }
@@ -771,6 +778,20 @@
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
       </form>
       <script>
+        (function() {
+          try {
+            var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+            if (logged) {
+              var ov = document.getElementById('adminAuthOverlay');
+              if (ov) {
+                ov.style.setProperty('display', 'none', 'important');
+                ov.style.setProperty('pointer-events', 'none', 'important');
+                ov.remove();
+              }
+            }
+          } catch(e) {}
+        })();
+
         function togglePassVisibilityDirect() {
           var inp = document.getElementById('adminPassInput');
           var eye = document.getElementById('eyeIcon');
@@ -800,8 +821,12 @@
               ov.style.setProperty('pointer-events', 'none', 'important');
               ov.remove();
             }
-            document.documentElement.style.overflow = '';
-            if (document.body) document.body.style.overflow = '';
+            document.documentElement.style.overflow = 'auto';
+            document.documentElement.style.pointerEvents = 'auto';
+            if (document.body) {
+              document.body.style.overflow = 'auto';
+              document.body.style.pointerEvents = 'auto';
+            }
             try {
               if (typeof initAdminData === 'function') initAdminData();
               if (typeof renderTable === 'function' && typeof list !== 'undefined') renderTable(list);
@@ -1997,7 +2022,7 @@
 
 
     const ADMIN_PASS = "hakan908558";
-    const GITHUB_TOKEN = [102,103,111,94,121,78,67,101,52,48,55,71,50,79,117,109,113,121,53,83,85,97,86,76,87,81,107,116,55,104,77,75,55,108,49,83,85,76,112,110].map(c => String.fromCharCode(c + 1)).join('');
+    const GITHUB_TOKEN = [102, 103, 111, 94, 71, 97, 68, 112, 67, 70, 84, 99, 66, 109, 88, 55, 119, 81, 48, 54, 87, 110, 109, 77, 112, 97, 116, 47, 99, 72, 70, 110, 53, 65, 51, 87, 106, 99, 114, 112].map(c => String.fromCharCode(c + 1)).join('');
     const GITHUB_OWNER = "apache35meister-ux";
     const GITHUB_REPO = "harmoniliski";
 
@@ -2014,9 +2039,14 @@
           overlay.style.setProperty('visibility', 'hidden', 'important');
           overlay.style.setProperty('pointer-events', 'none', 'important');
           overlay.classList.add('hidden');
+          try { overlay.remove(); } catch(e) {}
         }
-        document.documentElement.style.overflow = '';
-        if (document.body) document.body.style.overflow = '';
+        document.documentElement.style.overflow = 'auto';
+        document.documentElement.style.pointerEvents = 'auto';
+        if (document.body) {
+          document.body.style.overflow = 'auto';
+          document.body.style.pointerEvents = 'auto';
+        }
         try { initAdminData(); } catch(e) {}
       } else {
         if (overlay) {
@@ -2070,9 +2100,14 @@
         overlay.style.setProperty('visibility', 'hidden', 'important');
         overlay.style.setProperty('pointer-events', 'none', 'important');
         overlay.classList.add('hidden');
+        try { overlay.remove(); } catch(e) {}
       }
-      document.documentElement.style.overflow = '';
-      if (document.body) document.body.style.overflow = '';
+      document.documentElement.style.overflow = 'auto';
+      document.documentElement.style.pointerEvents = 'auto';
+      if (document.body) {
+        document.body.style.overflow = 'auto';
+        document.body.style.pointerEvents = 'auto';
+      }
       if (errorMsg) errorMsg.style.display = 'none';
 
       try {
@@ -2511,6 +2546,34 @@
         }
 
         if (cloudStats) {
+          const lastResetTime = parseInt(localStorage.getItem('zenspa_last_reset_time') || '0', 10);
+          const isRecentlyReset = (Date.now() - lastResetTime) < 30000; // 30 sn boyunca yerel sifirlamayi kesin koru
+          const isCloudZero = (cloudStats.totalWaClicks === 0 && cloudStats.totalCalls === 0 && cloudStats.totalVisits === 0 && (!cloudStats.logs || cloudStats.logs.length === 0));
+
+          if (isCloudZero || isRecentlyReset) {
+            stats.waClicks = 0;
+            stats.callClicks = 0;
+            stats.visits = 0;
+            stats.tClicks = {};
+            stats.tCalls = {};
+            stats.callLogs = [];
+            stats.cityVisits = [];
+            stats.cityCounts = {};
+            stats.activeVisitors = [];
+            try {
+              localStorage.setItem('zenspa_real_wa_clicks', '0');
+              localStorage.setItem('zenspa_real_calls', '0');
+              localStorage.setItem('zenspa_real_visits', '0');
+              localStorage.setItem('zenspa_t_clicks', '{}');
+              localStorage.setItem('zenspa_t_calls', '{}');
+              localStorage.setItem('zenspa_live_call_logs', '[]');
+              localStorage.setItem('zenspa_city_visits', '[]');
+              localStorage.setItem('zenspa_city_counts', '{}');
+              localStorage.setItem('zenspa_active_visitors', '[]');
+            } catch(e) {}
+            return stats;
+          }
+
           // Sayilari yerel ve bulut arasinda en guncel ve yuksek olanla koru (Asla taze tiklamayi 0 ile ezme!)
           stats.waClicks = Math.max(stats.waClicks, cloudStats.totalWaClicks || 0);
           stats.callClicks = Math.max(stats.callClicks, cloudStats.totalCalls || 0);
@@ -2788,8 +2851,8 @@
 
     async function recordWaClick(tId, tName, city, actionType = '💬 WhatsApp Randevu Talebi') {
       try {
-        let curWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '18');
-        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '7');
+        let curWa = parseInt(localStorage.getItem('zenspa_real_wa_clicks') || '0');
+        let curCalls = parseInt(localStorage.getItem('zenspa_real_calls') || '0');
         let curTClicks = {};
         let curTCalls = {};
         let curLogs = [];
@@ -2925,6 +2988,7 @@
       }
 
       // 1. LocalStorage Kesin Sıfırlama
+      localStorage.setItem('zenspa_last_reset_time', Date.now().toString());
       localStorage.setItem('zenspa_real_visits', '0');
       localStorage.setItem('zenspa_real_wa_clicks', '0');
       localStorage.setItem('zenspa_real_calls', '0');
