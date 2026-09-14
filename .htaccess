@@ -7,7 +7,27 @@ RewriteBase /
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect old .html requests to .php with 301 Permanent Redirect for SEO
+# P0 FIX: Block direct web access to sensitive JSON and config files (KVKK & Data Leak Prevention)
+<FilesMatch "\.(json|log|ini|env|md|txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow public feed/manifest exceptions
+<Files "manifest.json">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Redirect old .html requests to .php with 301 Permanent Redirect
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html
 RewriteRule ^/?(.*)\.html$ /$1.php [L,R=301]
 
