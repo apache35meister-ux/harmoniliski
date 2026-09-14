@@ -1,4 +1,145 @@
-<?php
-require_once __DIR__ . '/php_app/config/config.php';
-include __DIR__ . '/ilceler-varyantlari.html';
-?>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ Özel İlçe Konsept ve Randevu Varyantları ⭐ 2026 VIP</title>
+  <meta name="description" content="Eve gelen, kendi yerinde, otele ve rezidansa özel VIP randevu konseptleri ve bölgesel eskort seçenekleri.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://harmoniliski.com/ilceler-varyantlari.php">
+  <meta property="og:title" content="⚡ Özel İlçe Konsept ve Randevu Varyantları 2026">
+  <meta property="og:description" content="Kendi yerinde, eve gelen ve rezidansa özel VIP randevu çeşitleri.">
+  <meta property="og:image" content="https://harmoniliski.com/images/profiles/yeliz.jpg">
+  <meta property="og:url" content="https://harmoniliski.com/ilceler-varyantlari.php">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0b0f19; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; padding: 40px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .header h1 { font-family: 'Cinzel', serif; color: #38bdf8; font-size: 2.2rem; margin-bottom: 12px; letter-spacing: 0.5px; }
+    .header p { color: #94a3b8; font-size: 1.05rem; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+    .nav-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 35px; }
+    .nav-tabs a { background: #1e293b; color: #38bdf8; text-decoration: none; padding: 10px 20px; border-radius: 9999px; font-weight: 600; border: 1px solid #334155; transition: all 0.2s ease; }
+    .nav-tabs a.active, .nav-tabs a:hover { background: #0284c7; color: #fff; border-color: #0284c7; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+    .card { background: #131b2e; border: 1px solid #1e293b; border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: #f8fafc; transition: all 0.2s ease; }
+    .card:hover { background: #1e293b; border-color: #38bdf8; transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(56,189,248,0.2); }
+    .card-title { font-weight: 600; font-size: 0.95rem; }
+    .badge { background: rgba(56,189,248,0.15); color: #38bdf8; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; font-weight: 700; text-transform: uppercase; }
+    .footer { text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid #1e293b; color: #64748b; font-size: 0.9rem; }
+    .footer a { color: #38bdf8; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>⚡ ÖZEL RANDEVU VE İLÇE VARYANTLARI</h1>
+      <p>Eve gelen, otele gelen, kendi yerinde ve konaklamalı özel seans ve randevu konseptleri.</p>
+    </div>
+
+    <div class="nav-tabs">
+      <a href="index.php">🏠 Ana Sayfa</a>
+      <a href="ilceler.php">📍 İlçe ve Semtler (147)</a>
+      <a href="ilceler-varyantlari.php" class="active">⚡ Konsept & Özel Varyantlar (22)</a>
+      <a href="site-haritasi.php">🗺️ 81 İl Haritası</a>
+    </div>
+
+    <div class="grid">
+      <a href="alsancak-eve-gelen-vip-eskort.php" class="card">
+        <span class="card-title">✨ Alsancak Eve Gelen</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="alsancak-kendi-yerinde-vip-eskort.php" class="card">
+        <span class="card-title">✨ Alsancak Kendi Yerinde</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="ankara-cankaya-kendi-yerinde-eskort.php" class="card">
+        <span class="card-title">✨ Ankara Cankaya Kendi Yerinde</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="antalya-lara-konaklamali-vip-eskort.php" class="card">
+        <span class="card-title">✨ Antalya Lara Konaklamali</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="antalya-lara-sirinyali-vip-eskort.php" class="card">
+        <span class="card-title">✨ Antalya Lara Sirinyali</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="antalya-vip-eskort-ve-fiyatlari-2026.php" class="card">
+        <span class="card-title">✨ Antalya Ve Fiyatlari 2026</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="atasehir-umraniye-bagimsiz-vip-eskort.php" class="card">
+        <span class="card-title">✨ Atasehir Umraniye Bagimsiz</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="bakirkoy-florya-yesilyurt-vip-eskort.php" class="card">
+        <span class="card-title">✨ Bakirkoy Florya Yesilyurt</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="blog-bagimsiz-vip-rehber-kullanim-rehberi.php" class="card">
+        <span class="card-title">✨ Blog Bagimsiz Rehber Kullanim Rehberi</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="bursa-eskort-fiyatlari-ve-rehberi.php" class="card">
+        <span class="card-title">✨ Bursa Fiyatlari Ve Rehberi</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="bursa-gece-seansi-eskort-fiyatlari-2026.php" class="card">
+        <span class="card-title">✨ Bursa Gece Seansi Fiyatlari 2026</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="eskort-seans-cesitleri-ve-faydalari.php" class="card">
+        <span class="card-title">✨ Eskort Seans Cesitleri Ve Faydalari</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="florya-eskort.php" class="card">
+        <span class="card-title">✨ Florya</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="istanbul-eskort-fiyatlari-2026.php" class="card">
+        <span class="card-title">✨ Istanbul Fiyatlari 2026</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="istanbul-kadikoy-bagimsiz-vip-eskort.php" class="card">
+        <span class="card-title">✨ Istanbul Kadikoy Bagimsiz</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="izmir-bornova-rezervasyonlu-eskort.php" class="card">
+        <span class="card-title">✨ Izmir Bornova Rezervasyonlu</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="izmir-eskort-fiyatlari-2026.php" class="card">
+        <span class="card-title">✨ Izmir Fiyatlari 2026</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="kadikoy-eskort-ipuclari.php" class="card">
+        <span class="card-title">✨ Kadikoy Ipuclari</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="kadikoy-moda-bagimsiz-vip-eskort.php" class="card">
+        <span class="card-title">✨ Kadikoy Moda Bagimsiz</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="nisantasi-eskort.php" class="card">
+        <span class="card-title">✨ Nisantasi</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="sisli-nisantasi-mecidiyekoy-vip-eskort.php" class="card">
+        <span class="card-title">✨ Sisli Nisantasi Mecidiyekoy</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+      <a href="turkiye-81-il-vip-eskort-fiyatlari-2026.php" class="card">
+        <span class="card-title">✨ Turkiye 81 Il Fiyatlari 2026</span>
+        <span class="badge">Özel Konsept</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 ZENSPA VIP Platformu. Tüm hakları saklıdır. | <a href="index.php">Ana Sayfa</a> | <a href="ilceler.php">İlçe Kataloğu</a></p>
+    </div>
+  </div>
+</body>
+</html>
