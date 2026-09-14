@@ -37,3 +37,12 @@ RewriteRule ^(admin|yonetim|panel)/?$ panel.php [L,QSA]
 # API Routing
 RewriteRule ^api/therapists/?$ php_app/api/therapists.php [L,QSA]
 RewriteRule ^api/analytics/?$ php_app/api/analytics.php [L,QSA]
+
+# Block direct access to database files
+<FilesMatch "\.(sqlite|sqlite3|db)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Route track-contact API
+RewriteRule ^api/track-contact/?$ api/track-contact.php [L,QSA]
