@@ -1,3 +1,30 @@
+<?php
+// Strict Session & Anti-Hijacking Security
+ini_set('session.cookie_httponly', 1);
+ini_set('session.use_only_cookies', 1);
+session_start();
+
+require_once __DIR__ . '/php_app/config/config.php';
+
+// Auth Processing
+$auth_error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_password'])) {
+    if (verify_admin_password($_POST['login_password'])) {
+        $_SESSION['admin_auth_user'] = 'authorized';
+        $_SESSION['admin_auth_time'] = time();
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        $auth_error = '❌ Hatalı şifre!';
+    }
+}
+
+if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    session_destroy();
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
