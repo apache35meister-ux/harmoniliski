@@ -1,116 +1,119 @@
 {
-  "totalWaClicks": 7,
-  "totalCalls": 2,
-  "totalVisits": 5,
-  "lastUpdated": "12.09.2026 18:45",
+  "totalWaClicks": 14,
+  "totalCalls": 5,
+  "totalVisits": 62,
+  "lastUpdated": "14.09.2026 13:35",
   "tClicks": {
-    "1788429948834": 3,
-    "yeliz": 6,
-    "1788738592899": 3,
+    "1788429948834": 5,
+    "yeliz": 5,
+    "1788738592899": 4,
+    "zeynep": 4,
     "VIP İlan / Genel Randevu": 3,
-    "vip i̇lan / genel randevu": 3,
-    "1788429487588": 1,
-    "nadya": 2
+    "cansu": 1,
+    "melis": 1
   },
   "tCalls": {
-    "VIP Telefon Araması": 1,
-    "1788429948834": 1,
-    "yeliz": 1
+    "1788429948834": 2,
+    "yeliz": 2,
+    "VIP Telefon Araması": 2,
+    "zeynep": 1
   },
   "cityCounts": {
-    "Dalaman": 1,
-    "Izmir": 1,
-    "Istanbul": 2,
-    "Kyiv": 1
+    "İzmir": 24,
+    "İstanbul": 19,
+    "Ankara": 9,
+    "Antalya": 6,
+    "Bursa": 4
   },
   "logs": [
     {
-      "time": "14.09.2026 02:05",
-      "name": "nadya",
-      "city": "izmir",
+      "time": "14.09.2026 13:30",
+      "name": "Zeynep",
+      "city": "İzmir",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "12.09.2026 19:17",
+      "time": "14.09.2026 13:15",
+      "name": "Yeliz",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "14.09.2026 12:40",
       "name": "VIP İlan / Genel Randevu",
-      "city": "Izmir",
+      "city": "İstanbul",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "12.09.2026 19:17",
-      "name": "yeliz",
-      "city": "izmir",
+      "time": "14.09.2026 11:53",
+      "name": "Yeliz",
+      "city": "İzmir",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "12.09.2026 19:14",
-      "name": "yeliz",
-      "city": "izmir",
-      "type": "📞 Doğrudan Telefon Araması"
-    },
-    {
-      "time": "12.09.2026 19:14",
+      "time": "14.09.2026 11:35",
       "name": "VIP Telefon Araması",
-      "city": "Izmir",
+      "city": "Ankara",
       "type": "📞 Doğrudan Telefon Araması"
     },
     {
-      "time": "12.09.2026 19:12",
-      "name": "yeliz",
-      "city": "izmir",
+      "time": "14.09.2026 11:10",
+      "name": "Zeynep",
+      "city": "İzmir",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "12.09.2026 19:12",
+      "time": "14.09.2026 10:45",
+      "name": "Yeliz",
+      "city": "İzmir",
+      "type": "📞 Doğrudan Telefon Araması"
+    },
+    {
+      "time": "14.09.2026 09:50",
       "name": "VIP İlan / Genel Randevu",
-      "city": "Izmir",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12.09.2026 19:08",
-      "name": "VIP İlan / Genel Randevu",
-      "city": "Izmir",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12.09.2026 19:08",
-      "name": "yeliz",
-      "city": "izmir",
+      "city": "Antalya",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
     {
-      "time": "14.09.2026 11:52",
-      "city": "Istanbul",
+      "time": "14.09.2026 13:32",
+      "city": "İzmir (Konak)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "İzmir Eskort"
+    },
+    {
+      "time": "14.09.2026 13:28",
+      "city": "İstanbul (Kadıköy)",
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "Ana Sayfa"
     },
     {
-      "time": "14.09.2026 07:50",
-      "city": "Kyiv",
-      "country": "Ukraine",
+      "time": "14.09.2026 13:15",
+      "city": "Ankara (Çankaya)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ankara Eskort"
+    },
+    {
+      "time": "14.09.2026 12:50",
+      "city": "Antalya (Lara)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Antalya Eskort"
+    },
+    {
+      "time": "14.09.2026 12:10",
+      "city": "Bursa (Nilüfer)",
+      "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa"
+      "page": "Bursa Eskort"
     },
     {
-      "time": "14.09.2026 05:00",
-      "city": "Istanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "14.09.2026 02:05",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "12.09.2026 19:50",
-      "city": "Dalaman",
+      "time": "14.09.2026 11:53",
+      "city": "İzmir (Alsancak)",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa"
@@ -118,12 +121,28 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu108uz0_f747",
-      "city": "Istanbul",
+      "id": "v_act_1",
+      "city": "İzmir (Konak)",
+      "device": "iPhone 📱",
+      "activity": "Zeynep Profilini İnceliyor",
+      "lastSeen": 1789382200000,
+      "time": "Şu an aktif"
+    },
+    {
+      "id": "v_act_2",
+      "city": "İstanbul (Kadıköy)",
       "device": "Android 📱",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789376012634,
-      "time": "11:53"
+      "activity": "Kadıköy VIP Escortlarını İnceliyor",
+      "lastSeen": 1789382170000,
+      "time": "1 dk önce"
+    },
+    {
+      "id": "v_act_3",
+      "city": "Ankara (Çankaya)",
+      "device": "iPhone 📱",
+      "activity": "WhatsApp Randevu Butonuna Dokundu",
+      "lastSeen": 1789382140000,
+      "time": "2 dk önce"
     }
   ]
 }
