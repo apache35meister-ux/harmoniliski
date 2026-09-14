@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteBase /
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Panel & Admin Aliases
+RewriteRule ^(admin|yonetim|panel)/?$ panel.php [L,QSA]
+RewriteRule ^(admin|yonetim|panel)\.html$ panel.php [L,QSA]
+
+# API Routing
+RewriteRule ^api/therapists/?$ php_app/api/therapists.php [L,QSA]
+RewriteRule ^api/analytics/?$ php_app/api/analytics.php [L,QSA]
+
+# Dynamic City/District Routing (e.g. izmir-eskort.html -> city.php?slug=izmir-eskort)
+RewriteRule ^([a-zA-Z0-9_-]+)-eskort\.html$ city.php?slug=$1-eskort [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)-eskort/?$ city.php?slug=$1-eskort [L,QSA]
+
+# Default HTML fallback if file doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)\.html$ city.php?slug=$1 [L,QSA]
