@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 7,
   "totalCalls": 2,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "lastUpdated": "12.09.2026 18:45",
   "tClicks": {
     "1788429948834": 3,
@@ -19,7 +19,8 @@
   },
   "cityCounts": {
     "Dalaman": 1,
-    "Izmir": 1
+    "Izmir": 1,
+    "Istanbul": 1
   },
   "logs": [
     {
@@ -79,6 +80,13 @@
   ],
   "cityVisits": [
     {
+      "time": "14.09.2026 05:00",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "14.09.2026 02:05",
       "city": "Izmir",
       "country": "Türkiye",
@@ -95,12 +103,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu0f99zx_1otd",
-      "city": "Izmir",
+      "id": "v_mu0liemq_zqmm",
+      "city": "Istanbul",
       "device": "Masaüstü 💻",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789340708233,
-      "time": "02:05"
+      "lastSeen": 1789351212976,
+      "time": "05:00"
     }
   ]
 }
