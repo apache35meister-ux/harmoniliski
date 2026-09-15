@@ -1,18 +1,27 @@
 {
-  "totalWaClicks": 4,
+  "totalWaClicks": 5,
   "totalCalls": 0,
   "totalVisits": 2,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
     "Sıla": 4,
-    "sıla": 4
+    "sıla": 4,
+    "1787133440430": 1,
+    "Melis": 1,
+    "melis": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Izmir": 2
   },
   "logs": [
+    {
+      "time": "15.09.2026 15:15",
+      "name": "Melis",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15.09.2026 15:15",
       "name": "Sıla",
