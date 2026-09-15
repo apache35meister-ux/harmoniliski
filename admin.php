@@ -961,7 +961,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <div class="kpi-card">
           <div>
             <h4>Toplam Escort</h4>
-            <div class="number" id="kpiTotal">14</div>
+            <div class="number" id="kpiTotal">15</div>
           </div>
           <div class="kpi-icon">💆</div>
         </div>
