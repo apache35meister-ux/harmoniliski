@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 10,
   "totalCalls": 0,
-  "totalVisits": 15,
+  "totalVisits": 16,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
@@ -23,7 +23,8 @@
   "cityCounts": {
     "Izmir": 3,
     "Kane": 1,
-    "Washington": 11
+    "Washington": 11,
+    "Ashburn": 1
   },
   "logs": [
     {
@@ -88,6 +89,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15.09.2026 22:07",
+      "city": "Ashburn",
+      "country": "US",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "15.09.2026 21:30",
       "city": "Izmir",
@@ -196,12 +204,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu30c31i_bx84",
-      "city": "Izmir",
+      "id": "v_mu3831lp_8y3n",
+      "city": "Ashburn",
       "device": "iPhone 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789497043214,
-      "time": "21:30"
+      "lastSeen": 1789510059226,
+      "time": "22:07"
     }
   ]
 }
