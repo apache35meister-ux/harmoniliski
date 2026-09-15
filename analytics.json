@@ -1,15 +1,23 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 22,
+  "totalVisits": 23,
   "lastUpdated": "15.09.2026 13:50",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 22
+    "Izmir": 22,
+    "San Jose": 1
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "15.09.2026 05:37",
+      "city": "San Jose",
+      "country": "United States",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "15.09.2026 15:36",
       "city": "Izmir",
@@ -167,20 +175,20 @@
   ],
   "activeVisitors": [
     {
+      "id": "v_mu2npusz_alw3",
+      "city": "San Jose",
+      "device": "Android 📱",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789475850057,
+      "time": "05:37"
+    },
+    {
       "id": "v_mu2np6of_yiq1",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Escort Profillerini İnceliyor",
       "lastSeen": 1789475819884,
       "time": "15:36"
-    },
-    {
-      "id": "v_mu2m27ge_izfk",
-      "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789475649589,
-      "time": "15:34"
     }
   ]
 }
