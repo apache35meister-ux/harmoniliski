@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 1,
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 1,
@@ -10,7 +10,7 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 2
+    "Izmir": 3
   },
   "logs": [
     {
@@ -21,6 +21,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15.09.2026 15:13",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "index.php"
+    },
     {
       "time": "15.09.2026 15:12",
       "city": "Izmir",
@@ -42,8 +49,8 @@
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789474376089,
-      "time": "15:12"
+      "lastSeen": 1789474393750,
+      "time": "15:13"
     }
   ]
 }
