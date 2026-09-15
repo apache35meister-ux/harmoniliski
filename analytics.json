@@ -1,24 +1,18 @@
 {
-  "totalWaClicks": 2,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 2,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
-    "1787093135705": 2,
-    "Sıla": 2,
-    "sıla": 2
+    "1787093135705": 1,
+    "Sıla": 1,
+    "sıla": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Izmir": 2
   },
   "logs": [
-    {
-      "time": "15.09.2026 15:02",
-      "name": "Sıla",
-      "city": "İstanbul",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
     {
       "time": "15.09.2026 15:01",
       "name": "Sıla",
@@ -28,11 +22,11 @@
   ],
   "cityVisits": [
     {
-      "time": "15.09.2026 15:02",
+      "time": "15.09.2026 15:12",
       "city": "Izmir",
       "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa"
+      "device": "Masaüstü 💻",
+      "page": "index.php"
     },
     {
       "time": "15.09.2026 15:01",
@@ -44,20 +38,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu2kak2v_1b4r",
-      "city": "Izmir",
-      "device": "iPhone 📱",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789473736080,
-      "time": "15:02"
-    },
-    {
       "id": "v_mu2mflpl_8jxu",
       "city": "Izmir",
       "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789473692840,
-      "time": "15:01"
+      "activity": "Sitede Aktif Geziniyor",
+      "lastSeen": 1789474376089,
+      "time": "15:12"
     }
   ]
 }
