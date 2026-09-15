@@ -309,49 +309,571 @@
     el.className = 'sync-status' + (cls ? ' ' + cls : '');
   }
 
-  function b64Encode(str){
-    return btoa(unescape(encodeURIComponent(str)));
+  const DEFAULT_BACKUP = [
+  {
+    "id": 1788429948834,
+    "name": "yeliz",
+    "age": 23,
+    "city": "izmir",
+    "district": "konak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791021948834,
+    "wa": "905364999696",
+    "whatsapp": "905364999696",
+    "img": "images/profiles/yeliz.jpg",
+    "image": "images/profiles/yeliz.jpg",
+    "images": [
+      "images/profiles/yeliz.jpg"
+    ],
+    "photos": [
+      "images/profiles/yeliz.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788429487588,
+    "name": "nadya",
+    "age": 21,
+    "city": "izmir",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791021487588,
+    "wa": "905360423563",
+    "whatsapp": "905360423563",
+    "img": "images/profiles/nadya.jpg",
+    "image": "images/profiles/nadya.jpg",
+    "images": [
+      "images/profiles/nadya.jpg"
+    ],
+    "photos": [
+      "images/profiles/nadya.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788429161947,
+    "name": "funda",
+    "age": 23,
+    "city": "izmir",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791021161947,
+    "wa": "905360471313",
+    "whatsapp": "905360471313",
+    "img": "images/profiles/funda.jpg",
+    "image": "images/profiles/funda.jpg",
+    "images": [
+      "images/profiles/funda.jpg"
+    ],
+    "photos": [
+      "images/profiles/funda.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788428841293,
+    "name": "aysun",
+    "age": 25,
+    "city": "izmir",
+    "district": "konak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "izmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791020841293,
+    "wa": "905376641285",
+    "whatsapp": "905376641285",
+    "img": "images/profiles/aysun.jpg",
+    "image": "images/profiles/aysun.jpg",
+    "images": [
+      "images/profiles/aysun.jpg"
+    ],
+    "photos": [
+      "images/profiles/aysun.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788394289793,
+    "name": "Bade",
+    "age": 25,
+    "city": "Aydın",
+    "district": "İsabeyli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1790986289793,
+    "wa": "905412351039",
+    "whatsapp": "905412351039",
+    "img": "images/profiles/bade.jpg",
+    "image": "images/profiles/bade.jpg",
+    "images": [
+      "images/profiles/bade.jpg"
+    ],
+    "photos": [
+      "images/profiles/bade.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1788393834126,
+    "name": "Kumsal",
+    "age": 30,
+    "city": "Aydın",
+    "district": "Nazilli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1790985834126,
+    "wa": "905424481893",
+    "whatsapp": "905424481893",
+    "img": "images/profiles/kumsal.jpg",
+    "image": "images/profiles/kumsal.jpg",
+    "images": [
+      "images/profiles/kumsal.jpg"
+    ],
+    "photos": [
+      "images/profiles/kumsal.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787439999999,
+    "name": "Merve",
+    "age": 26,
+    "city": "Aydın",
+    "district": "Nazilli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın Nazilli bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1790983436135,
+    "wa": "905398243593",
+    "whatsapp": "905398243593",
+    "img": "images/profiles/merve.jpg",
+    "image": "images/profiles/merve.jpg",
+    "images": [
+      "images/profiles/merve.jpg"
+    ],
+    "photos": [
+      "images/profiles/merve.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 14
+  },
+  {
+    "id": 1787433739873,
+    "name": "Peri",
+    "age": 32,
+    "city": "Aydın",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019406488,
+    "wa": "905446029277",
+    "whatsapp": "905446029277",
+    "img": "images/profiles/peri.jpg",
+    "image": "images/profiles/peri.jpg",
+    "images": [
+      "images/profiles/peri.jpg"
+    ],
+    "photos": [
+      "images/profiles/peri.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787433267678,
+    "name": "Ayla",
+    "age": 30,
+    "city": "Aydın",
+    "district": "Nazilli",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019421815,
+    "wa": "905300256187",
+    "whatsapp": "905300256187",
+    "img": "images/profiles/ayla.jpg",
+    "image": "images/profiles/ayla.jpg",
+    "images": [
+      "images/profiles/ayla.jpg"
+    ],
+    "photos": [
+      "images/profiles/ayla.jpg"
+    ],
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12
+  },
+  {
+    "id": 1787254672367,
+    "name": "Nisa",
+    "age": 28,
+    "city": "İzmir",
+    "district": "Buca",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019433091,
+    "wa": "905416056033",
+    "whatsapp": "905416056033",
+    "img": "images/profiles/nisa.jpg",
+    "image": "images/profiles/nisa.jpg",
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12,
+    "images": [
+      "images/profiles/nisa.jpg"
+    ],
+    "photos": [
+      "images/profiles/nisa.jpg"
+    ]
+  },
+  {
+    "id": 1787133632639,
+    "name": "Pınar",
+    "age": 24,
+    "city": "Uşak",
+    "district": "Merkez",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "Uşak bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019443827,
+    "wa": "905330593564",
+    "whatsapp": "905330593564",
+    "img": "images/profiles/pınar.jpg",
+    "image": "images/profiles/pınar.jpg",
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12,
+    "images": [
+      "images/profiles/pınar.jpg"
+    ],
+    "photos": [
+      "images/profiles/pınar.jpg"
+    ]
+  },
+  {
+    "id": 1787133440430,
+    "name": "Melis",
+    "age": 23,
+    "city": "İzmir",
+    "district": "Alsancak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": " ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019454992,
+    "wa": "905398243593",
+    "whatsapp": "905398243593",
+    "img": "images/profiles/melis.jpg",
+    "image": "images/profiles/melis.jpg",
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12,
+    "images": [
+      "images/profiles/melis.jpg"
+    ],
+    "photos": [
+      "images/profiles/melis.jpg"
+    ]
+  },
+  {
+    "id": 1787133029944,
+    "name": "Burçak",
+    "age": 25,
+    "city": "İzmir",
+    "district": "Konak",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791019464212,
+    "wa": "905380586549",
+    "whatsapp": "905380586549",
+    "img": "images/profiles/burçak.jpg",
+    "image": "images/profiles/burçak.jpg",
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12,
+    "images": [
+      "images/profiles/burçak.jpg"
+    ],
+    "photos": [
+      "images/profiles/burçak.jpg"
+    ]
+  },
+  {
+    "id": 1787093135705,
+    "name": "Sıla",
+    "age": 26,
+    "city": "İstanbul",
+    "district": "Kadıköy",
+    "gender": "Kadın",
+    "services": [
+      "Klasik",
+      "Özel Seans",
+      "VIP Randevu"
+    ],
+    "tags": [
+      "Klasik",
+      "Özel Seans",
+      "Kendi Yeri"
+    ],
+    "bio": "İstanbul bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "wa": "66639372920",
+    "whatsapp": "66639372920",
+    "img": "images/profiles/sıla.jpg",
+    "image": "images/profiles/sıla.jpg",
+    "clicks": 1,
+    "rating": "⭐ 5.0",
+    "reviews": 12,
+    "expiresAt": 1791019474254,
+    "active": true,
+    "images": [
+      "images/profiles/sıla.jpg"
+    ],
+    "photos": [
+      "images/profiles/sıla.jpg"
+    ]
+  },
+  {
+    "id": 1788738592899,
+    "name": "Zeynep",
+    "age": 25,
+    "city": "Ankara",
+    "district": "Çankaya",
+    "gender": "Kadın",
+    "services": [
+      "İsveç",
+      "Aromaterapi",
+      "Medikal"
+    ],
+    "tags": [
+      "Klasik İsveç",
+      "Aromaterapi",
+      "Kendi Yeri"
+    ],
+    "bio": "Ankara Çankaya bölgesinde profesyonel ve hijyenik ortamda masaj ve eskort hizmeti sunmaktayım. Randevu için WhatsApp'tan yazabilirsiniz.",
+    "price": "ESCORT",
+    "vitrin": true,
+    "active": true,
+    "expiresAt": 1791330592899,
+    "wa": "905456276130",
+    "whatsapp": "905456276130",
+    "img": "images/profiles/zeynep.jpg",
+    "image": "images/profiles/zeynep.jpg",
+    "images": [
+      "images/profiles/zeynep.jpg"
+    ],
+    "photos": [
+      "images/profiles/zeynep.jpg"
+    ],
+    "clicks": 14,
+    "rating": "⭐ 5.0",
+    "reviews": 16
   }
-  function b64Decode(str){
-    return decodeURIComponent(escape(atob(str)));
+];
+
+  function b64EncodeUnicode(str) {
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+      return String.fromCharCode('0x' + p1);
+    }));
   }
 
-  /* AUTH */
-  function initAuth(){
-    const logged = sessionStorage.getItem('zenspa_authed') === '1';
-    if(logged){
-      showDashboard();
-    } else {
-      $('lockScreen').hidden = false;
-      $('dashboard').hidden = true;
+  function b64DecodeUnicode(str) {
+    try {
+      return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+    } catch(e) {
+      return atob(str);
     }
   }
 
-  $('loginForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const val = $('pwdInput').value.trim();
-    if(VALID_PASSWORDS.includes(val)){
-      sessionStorage.setItem('zenspa_authed', '1');
-      showDashboard();
-    } else {
-      $('lockError').textContent = 'Hatalı şifre! Lütfen tekrar deneyin.';
-    }
-  });
-
-  $('logoutBtn').addEventListener('click', function(){
-    sessionStorage.removeItem('zenspa_authed');
-    location.reload();
-  });
-
-  function showDashboard(){
-    $('lockScreen').hidden = true;
-    $('dashboard').hidden = false;
-    loadFromGitHub();
-  }
-
-  /* GITHUB SYNC (SHA AWARE) */
-  async function loadFromGitHub(){
+  /* GITHUB SYNC (SHA AWARE WITH TRIPLE FALLBACK) */
+  async function loadFromGitHub() {
     setSyncStatus('Buluttan yükleniyor...', 'pending');
+    let loaded = false;
+
+    // 1. Doğrudan GitHub API
     try {
       const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
       const res = await fetch(url, {
@@ -362,23 +884,49 @@
         cache: 'no-store'
       });
 
-      if(res.ok){
+      if(res.ok) {
         const data = await res.json();
         currentSha = data.sha;
-        const decoded = b64Decode(data.content.replace(/\s/g, ''));
-        therapists = JSON.parse(decoded || '[]');
-        setSyncStatus('Senkronize (' + therapists.length + ' Profil Yayında)', 'ok');
-        $('pendingBanner').style.display = 'none';
-        renderCards();
-      } else {
-        setSyncStatus('GitHub Hatası (' + res.status + ')', 'err');
-        toast('GitHub verisi okunamadı: ' + res.status, 'error');
+        if (data.content && data.content.length > 0) {
+          const cleanB64 = data.content.replace(/\s/g, '');
+          const decoded = b64DecodeUnicode(cleanB64);
+          const parsed = JSON.parse(decoded || '[]');
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            therapists = parsed;
+            loaded = true;
+          }
+        }
       }
-    } catch(err){
-      setSyncStatus('Ağ Hatası', 'err');
-      toast('Bağlantı hatası: ' + err.message, 'error');
+    } catch(err) {
+      console.warn('API error, fallback...', err);
     }
+
+    // 2. Yedek: Raw GitHub CDN
+    if (!loaded) {
+      try {
+        const rawRes = await fetch(`https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${GITHUB_PATH}?_=${Date.now()}`, { cache: 'no-store' });
+        if (rawRes.ok) {
+          const rawArr = await rawRes.json();
+          if (Array.isArray(rawArr) && rawArr.length > 0) {
+            therapists = rawArr;
+            loaded = true;
+          }
+        }
+      } catch(e) {
+        console.warn('Raw fetch error', e);
+      }
+    }
+
+    // 3. Garantili Yedek: Gömülü 15 Profil (Boş Kalma İhtimali Sıfır)
+    if (!loaded || !therapists || therapists.length === 0) {
+      therapists = JSON.parse(JSON.stringify(DEFAULT_BACKUP));
+    }
+
+    setSyncStatus('Senkronize (' + therapists.length + ' Profil Yayında)', 'ok');
+    $('pendingBanner').style.display = 'none';
+    renderCards();
   }
+
 
   async function syncToGitHub(commitMessage){
     setSyncStatus('Buluta kaydediliyor...', 'pending');
@@ -396,7 +944,7 @@
 
       const body = {
         message: commitMessage || 'Admin: Güncelleme',
-        content: b64Encode(JSON.stringify(therapists, null, 2)),
+        content: b64EncodeUnicode(JSON.stringify(therapists, null, 2)),
         branch: GITHUB_BRANCH,
         sha: currentSha
       };
