@@ -1,194 +1,91 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 7,
   "totalCalls": 0,
-  "totalVisits": 23,
-  "lastUpdated": "15.09.2026 13:50",
-  "tClicks": {},
+  "totalVisits": 2,
+  "lastUpdated": "15.09.2026 15:00",
+  "tClicks": {
+    "1787093135705": 4,
+    "Sıla": 4,
+    "sıla": 4,
+    "1787133440430": 1,
+    "Melis": 1,
+    "melis": 1,
+    "1788738592899": 2,
+    "Zeynep": 2,
+    "zeynep": 2
+  },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 22,
-    "San Jose": 1
+    "Izmir": 2
   },
-  "logs": [],
+  "logs": [
+    {
+      "time": "15.09.2026 15:40",
+      "name": "Zeynep",
+      "city": "Ankara",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15.09.2026 15:24",
+      "name": "Zeynep",
+      "city": "Ankara",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15.09.2026 15:15",
+      "name": "Melis",
+      "city": "İzmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15.09.2026 15:15",
+      "name": "Sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15.09.2026 15:14",
+      "name": "Sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15.09.2026 15:02",
+      "name": "Sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15.09.2026 15:01",
+      "name": "Sıla",
+      "city": "İstanbul",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
-      "time": "15.09.2026 05:37",
-      "city": "San Jose",
-      "country": "United States",
-      "device": "Masaüstü 💻",
+      "time": "15.09.2026 15:02",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa"
     },
     {
-      "time": "15.09.2026 15:36",
+      "time": "15.09.2026 15:01",
       "city": "Izmir",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 15:34",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:47",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:33",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:28",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:28",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:23",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:23",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:22",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:22",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:19",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:19",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:16",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:12",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:11",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:10",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:09",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 14:02",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 13:58",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 13:51",
-      "city": "Izmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
+      "page": "index.php"
     }
   ],
   "activeVisitors": [
     {
-      "id": "v_mu2npusd_tz3d",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789475850062,
-      "time": "05:37"
-    },
-    {
-      "id": "v_mu2np6of_yiq1",
+      "id": "v_mu2kak2v_1b4r",
       "city": "Izmir",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789475819884,
-      "time": "15:36"
+      "device": "iPhone 📱",
+      "activity": "Sitede Aktif Geziniyor",
+      "lastSeen": 1789474515106,
+      "time": "15:15"
     }
   ]
 }
