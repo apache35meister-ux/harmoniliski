@@ -66,6 +66,14 @@
   }
   .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
   .btn.secondary { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
+  .btn.master-reset {
+    background: linear-gradient(135deg, #c0392b, #7a1f1f);
+    border: 1.5px solid var(--gold);
+    color: var(--gold-soft);
+    font-weight: 800;
+    box-shadow: 0 0 15px rgba(212,175,55,0.25);
+  }
+  .btn.master-reset:hover { filter: brightness(1.15); transform: translateY(-1px); }
   .btn.danger { background: linear-gradient(145deg,#EF4444,#B91C1C); border-color:#991B1B; color:#fff; }
   .btn.small { padding: 7px 12px; font-size: 12.5px; }
   .error-msg { color: var(--danger); font-size: 13px; margin-top: 10px; font-weight: 600; }
@@ -266,6 +274,7 @@
 
       <div style="margin-top:18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
         <button class="btn small" id="exportCsvBtn">📥 Tüm Raporu Excel/CSV Olarak İndir</button>
+        <button class="btn master-reset small" id="masterResetBtn">⟲ Tüm Sayaçları Sıfırla (Master Reset)</button>
         <span style="font-size:12px; color:var(--text-dim);">💡 Tüm tıklamalar anlık ve gerçek zamanlı kaydedilir.</span>
       </div>
     </div>
@@ -1207,6 +1216,68 @@
     toast('Excel/CSV raporu başarıyla indirildi.', 'success');
   }
   $('exportCsvBtn').addEventListener('click', exportCsv);
+
+  async function masterResetClicks() {
+    if(!confirm('Tüm uzman ve profillerin WhatsApp ve telefon tıklama sayaçları sıfırlanacak. Emin misiniz?')) return;
+
+    // 1. Tüm profillerin sayaçlarını sıfırla
+    therapists.forEach(p => {
+      p.clicks = 0;
+      p.whatsappClicks = 0;
+      p.phoneClicks = 0;
+      p.clickLog = [];
+    });
+
+    // 2. analytics.json dosyasını da bulutta sıfırla
+    try {
+      const emptyAnalytics = {
+        totalWaClicks: 0,
+        totalCalls: 0,
+        totalVisits: 0,
+        lastUpdated: new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR'),
+        tClicks: {},
+        tCalls: {},
+        cityCounts: {},
+        logs: []
+      };
+
+      const aUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/analytics.json?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
+      const aRes = await fetch(aUrl, {
+        headers: { 'Authorization': 'Bearer ' + GITHUB_TOKEN, 'Accept': 'application/vnd.github+json' },
+        cache: 'no-store'
+      });
+      let aSha = null;
+      if (aRes.ok) {
+        const aData = await aRes.json();
+        aSha = aData.sha;
+      }
+
+      await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/analytics.json`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': 'Bearer ' + GITHUB_TOKEN,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: "Master reset: analytics.json sifirlandi",
+          content: b64EncodeUnicode(JSON.stringify(emptyAnalytics, null, 2)),
+          sha: aSha,
+          branch: GITHUB_BRANCH
+        })
+      });
+    } catch(err) {
+      console.warn("analytics.json reset err:", err);
+    }
+
+    renderAnalytics();
+    renderCards();
+    await syncToGitHub('Master reset: tüm iletişim sayaçları sıfırlandı');
+    toast('Tüm profil sayaçları ve bulut veritabanı başarıyla sıfırlandı!', 'success');
+  }
+
+  $('masterResetBtn').addEventListener('click', masterResetClicks);
+
 
   /* RENDER CARDS */
   function renderCards(){
