@@ -823,9 +823,13 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         </button>
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
       </form>
+      <script>
         (function() {
           try {
-            var isLoggedOut = window.location.search.indexOf('logged_out=1') !== -1 || window.location.search.indexOf('action=logout') !== -1;
+            var isLoggedOut = window.location.search.indexOf('logged_out=1') !== -1 ||
+                              window.location.search.indexOf('action=logout') !== -1 ||
+                              sessionStorage.getItem('zenspa_logged_out') === '1' ||
+                              localStorage.getItem('zenspa_logged_out') === '1';
             var logged = !isLoggedOut && (sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet');
             var ov = document.getElementById('adminAuthOverlay');
             if (logged) {
@@ -864,6 +868,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           var err = document.getElementById('authErrorMsg');
           if (val === 'hakan908558' || val === 'hakan763') {
             try {
+              sessionStorage.removeItem('zenspa_logged_out');
+              localStorage.removeItem('zenspa_logged_out');
               sessionStorage.setItem('zenspa_panel_auth', 'evet');
               localStorage.setItem('zenspa_panel_auth', 'evet');
             } catch(ex) {}
@@ -1843,7 +1849,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     function checkAuth() {
       var logged = false;
       try {
-        logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+        var isLoggedOut = window.location.search.indexOf('logged_out=1') !== -1 ||
+                          window.location.search.indexOf('action=logout') !== -1 ||
+                          sessionStorage.getItem('zenspa_logged_out') === '1' ||
+                          localStorage.getItem('zenspa_logged_out') === '1';
+        logged = !isLoggedOut && (sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet');
       } catch(e) {}
 
       var overlay = document.getElementById('adminAuthOverlay');
@@ -1864,8 +1874,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         try { initAdminData(); } catch(e) {}
       } else {
         if (overlay) {
-          overlay.style.display = 'flex';
-          overlay.style.pointerEvents = 'auto';
+          overlay.style.setProperty('display', 'flex', 'important');
+          overlay.style.setProperty('visibility', 'visible', 'important');
+          overlay.style.setProperty('opacity', '1', 'important');
+          overlay.style.setProperty('pointer-events', 'auto', 'important');
         }
         document.documentElement.style.overflow = 'hidden';
         var passEl = document.getElementById('adminPassInput');
@@ -1905,6 +1917,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       }
 
       try {
+        sessionStorage.removeItem('zenspa_logged_out');
+        localStorage.removeItem('zenspa_logged_out');
         sessionStorage.setItem('zenspa_panel_auth', 'evet');
         localStorage.setItem('zenspa_panel_auth', 'evet');
       } catch(err) {}
@@ -1947,10 +1961,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
     function adminLogout() {
       try {
-        sessionStorage.clear();
-        localStorage.clear();
         sessionStorage.removeItem('zenspa_panel_auth');
         localStorage.removeItem('zenspa_panel_auth');
+        sessionStorage.setItem('zenspa_logged_out', '1');
+        localStorage.setItem('zenspa_logged_out', '1');
       } catch(e) {}
       var st = document.getElementById('bypass-auth-overlay-style');
       if (st) st.remove();
@@ -1961,7 +1975,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         ov.style.setProperty('opacity', '1', 'important');
         ov.style.setProperty('pointer-events', 'auto', 'important');
       }
-      window.location.href = 'panel.php?action=logout';
+      window.location.href = 'panel.php?action=logout&logged_out=1';
     }
 
 
