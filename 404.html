@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yönlendiriliyorsunuz... ⭐ 2026 VIP Seçkin Katalog</title>
+  
+  <!-- VIP HD Fotoğraf & Profil Büyütme Modalı (Lightbox) -->
+  <div class="modal-overlay" id="photoViewerModal" onclick="handlePhotoModalBackdrop(event)" style="display: none; align-items: center; justify-content: center; z-index: 9999999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(5, 5, 8, 0.96); padding: 12px; position: fixed; inset: 0;">
+    <div class="photo-viewer-box" style="position: relative; max-width: 960px; width: 100%; max-height: 92vh; background: #0C0C12; border: 1.5px solid rgba(212, 175, 55, 0.6); border-radius: 20px; overflow: hidden; box-shadow: 0 25px 80px rgba(0,0,0,0.98), 0 0 50px rgba(212, 175, 55, 0.35); display: flex; flex-direction: column;">
+      
+      <!-- Kapat Butonu -->
+      <button onclick="closePhotoModal()" style="position: absolute; top: 14px; right: 14px; width: 42px; height: 42px; border-radius: 50%; background: rgba(0,0,0,0.8); border: 1.5px solid rgba(255,255,255,0.3); color: #FFF; font-size: 1.3rem; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 60; transition: all 0.2s;" onmouseover="this.style.background='#DC2626'; this.style.borderColor='#EF4444';" onmouseout="this.style.background='rgba(0,0,0,0.8)'; this.style.borderColor='rgba(255,255,255,0.3)';">✕</button>
+
+      <!-- Ana İçerik: Masaüstü Yan Yana, Mobil Alt Alta -->
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; max-height: 92vh; overflow-y: auto;">
+        
+        <!-- Sol: Büyük Fotoğraf Alanı & Navigasyon -->
+        <div id="pvImageWrapper" style="position: relative; flex: 1 1 480px; min-height: 380px; max-height: 72vh; background: #030306; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img id="pvImg" src="" alt="VIP Escort Fotoğrafı" style="width: 100%; height: 100%; max-height: 72vh; object-fit: contain; display: block; transition: opacity 0.2s ease;">
+          
+          <!-- Fotoğraf Sayacı -->
+          <div id="pvCounterBadge" style="display: none; position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.85); border: 1px solid rgba(212,175,55,0.6); color: #FDE047; font-size: 0.8rem; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 10;"></div>
+
+          <!-- Önceki Fotoğraf Butonu -->
+          <button id="pvPrevBtn" onclick="prevModalPhoto(event)" style="display: none; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(0,0,0,0.75); border: 1.5px solid rgba(212,175,55,0.7); color: #FFF; font-size: 1.6rem; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s;" onmouseover="this.style.background='#D4AF37'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,0,0,0.75)'; this.style.color='#FFF';">❮</button>
+
+          <!-- Sonraki Fotoğraf Butonu -->
+          <button id="pvNextBtn" onclick="nextModalPhoto(event)" style="display: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(0,0,0,0.75); border: 1.5px solid rgba(212,175,55,0.7); color: #FFF; font-size: 1.6rem; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s;" onmouseover="this.style.background='#D4AF37'; this.style.color='#000';" onmouseout="this.style.background='rgba(0,0,0,0.75)'; this.style.color='#FFF';">❯</button>
+
+          <!-- Küçük Resimler (Thumbnails) -->
+          <div id="pvThumbnailsStrip" style="display: none; position: absolute; bottom: 10px; left: 0; right: 0; justify-content: center; gap: 8px; padding: 8px 12px; background: rgba(0,0,0,0.75); backdrop-filter: blur(10px); z-index: 10; overflow-x: auto;"></div>
+        </div>
+
+        <!-- Sağ: Profil Detayları & Butonlar -->
+        <div style="flex: 1 1 320px; padding: 1.75rem; background: #0D0D13; display: flex; flex-direction: column; justify-content: space-between; border-left: 1px solid rgba(255,255,255,0.08);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+              <span style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #000; font-size: 0.72rem; font-weight: 900; padding: 3px 8px; border-radius: 6px;">👑 VIP DOĞRULANMIŞ</span>
+              <span style="display: inline-flex; align-items: center; gap: 5px; color: #4ADE80; font-size: 0.75rem; font-weight: 700;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 8px #22C55E;"></span> Şu An Müsait</span>
+            </div>
+
+            <h3 id="pvName" style="color: #FFF; font-size: 1.55rem; font-weight: 800; font-family: 'Cinzel', serif; margin-bottom: 0.35rem;">-</h3>
+            <div id="pvLocation" style="color: #D4AF37; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">-</div>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 0.85rem 1rem; margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                <span style="color: #9CA3AF; font-size: 0.82rem;">⏱️ Seans Ücreti:</span>
+                <span id="pvPrice" style="color: #FDE047; font-weight: 900; font-size: 1.05rem;">-</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: #9CA3AF; font-size: 0.82rem;">⭐ Müşteri Puanı:</span>
+                <span id="pvRating" style="color: #60A5FA; font-weight: 700; font-size: 0.88rem;">-</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="color: #9CA3AF; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem;">Hakkında & Detaylar</div>
+              <p id="pvBio" style="color: #E4E4E7; font-size: 0.88rem; line-height: 1.6; margin: 0;"></p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <div style="color: #9CA3AF; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem;">Seans & Hizmetler</div>
+              <div id="pvTags" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+            </div>
+          </div>
+
+          <!-- Aksiyon Butonları -->
+          <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+            <a id="pvWaBtn" href="#" target="_blank" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #FFF; font-weight: 900; font-size: 0.95rem; padding: 0.9rem 1.2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+              <span style="font-size: 1.2rem;">💬</span> WhatsApp ile Randevu Al
+            </a>
+            <a id="pvCallBtn" href="#" style="background: #181822; border: 1.5px solid rgba(212,175,55,0.5); color: #FDE047; font-weight: 800; font-size: 0.92rem; padding: 0.85rem 1.2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.15)';" onmouseout="this.style.background='#181822';">
+              <span style="font-size: 1.1rem;">📞</span> Hemen Telefon ile Ara
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Vitrine İlan Ver Modalı -->
+  <div class="modal-overlay" id="vitrinModal" onclick="if(event.target.id==='vitrinModal') closeVitrinModal()" style="display: none; align-items: center; justify-content: center; z-index: 999999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(5, 5, 8, 0.95); padding: 12px; position: fixed; inset: 0;">
+    <div class="modal-box pricing-modal-box" style="position: relative; max-width: 580px; width: 100%; background: #0E0E14; border: 1.5px solid rgba(212,175,55,0.6); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.95);">
+      <button class="modal-close" onclick="closeVitrinModal()" style="position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #FFF; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer;">✕</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👑</div>
+        <h3 style="color: #FBBF24; font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">VIP Vitrinde Yerinizi Alın</h3>
+        <p style="color: #9CA3AF; font-size: 0.88rem; line-height: 1.5;">81 il genelinde binlerce potansiyel müşteriye anında ulaşın. Profilinizi vitrinde öne çıkarmak için hemen başvurun.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem;">
+        <div style="color: #FFF; font-size: 0.92rem; font-weight: 700; margin-bottom: 0.6rem;">✨ Vitrin Ayrıcalıkları:</div>
+        <ul style="color: #D4D4D8; font-size: 0.85rem; line-height: 1.8; padding-left: 1.2rem; margin: 0;">
+          <li>Şehir ve ilçe aramalarında en üst sırada listelenme</li>
+          <li>Doğrudan WhatsApp ve Telefon randevu yönlendirmesi</li>
+          <li>HD Çoklu Fotoğraf ve VIP Altın Rozet</li>
+          <li>7/24 Kesintisiz Yayın Garantisi</li>
+        </ul>
+      </div>
+      <a href="https://api.whatsapp.com/send/?phone=15096204167&text=Merhaba,%20sitenize%20escort%20vitrin%20ilanı%20vermek%20istiyorum." target="_blank" style="width: 100%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #FFF; font-weight: 900; font-size: 1rem; padding: 1rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4);">
+        <span>💬</span> WhatsApp Vitrin İlan Hattına Yazın
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var fullPath = (window.location.pathname || '').toLowerCase();
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+
+      // 1. Admin/Panel/Yönetim yönlendirmeleri
+      if (fullPath.indexOf('panel') !== -1 || fullPath.indexOf('admin') !== -1 || fullPath.indexOf('yonetim') !== -1) {
+        window.location.replace('https://harmoniliski.com/panel.php' + search + hash);
+        return;
+      }
+
+      // 2. Eski "-masaj.php" uzantılı URL'leri anında "-eskort.php" sayfasına yönlendir
+      if (fullPath.indexOf('-masaj.php') !== -1) {
+        var targetEscort = fullPath.replace('-masaj.php', '-eskort.php');
+        window.location.replace('https://harmoniliski.com' + targetEscort + search + hash);
+        return;
+      }
+
+      // 3. Şehir/bölge eşleştirmeleri (örn: /izmir, /istanbul, /ankara)
+      var knownCities = ['izmir', 'istanbul', 'ankara', 'antalya', 'bursa', 'adana', 'mugla', 'bodrum', 'alsancak', 'kadikoy', 'cankaya', 'karsiyaka', 'konak', 'aydin', 'kusadasi', 'didim', 'cesme', 'alacati', 'fethiye', 'marmaris', 'eskisehir', 'mersin', 'gaziantep', 'trabzon', 'samsun', 'kayseri', 'denizli', 'sanliurfa', 'adapazari', 'sakarya', 'kocaeli', 'izmit', 'tekirdag', 'balikesir', 'manisa'];
+      for (var i = 0; i < knownCities.length; i++) {
+        var c = knownCities[i];
+        if (fullPath.indexOf(c) !== -1) {
+          window.location.replace('https://harmoniliski.com/' + c + '-eskort.php' + search + hash);
+          return;
+        }
+      }
+
+      // 4. Diğer tüm geçersiz veya silinmiş yolları ana sayfaya yönlendir (0 Hata Garantisi)
+      window.location.replace('https://harmoniliski.com/' + search + hash);
+    })();
+  </script>
+
+    <!-- Schema.org Rating & LocalBusiness Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Harmoni İlişki VIP Rehberi 2026",
+      "image": "https://harmoniliski.com/favicon.png",
+      "url": "https://harmoniliski.com/",
+      "telephone": "+905000000000",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "248",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+
+    <meta name="revisit-after" content="1 days">
+    <meta name="geo.region" content="TR">
+    <meta name="geo.placename" content="Türkiye">
+
+    <link rel="canonical" href="https://harmoniliski.com/404.php">
+
+    <!-- Enhanced Social Sharing (WhatsApp, Telegram, Twitter/X) -->
+    <meta property="og:site_name" content="Harmoni İlişki VIP Rehber">
+    <meta property="og:image" content="https://harmoniliski.com/images/profiles/yeliz.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://harmoniliski.com/images/profiles/yeliz.jpg">
+
+</head>
+<body style="background:#050507; color:#FFE895; font-family:sans-serif; text-align:center; padding:3rem;">
+  <h2>Sayfa Yükleniyor...</h2>
+  <p><a href="https://harmoniliski.com/panel.php" style="color:#FFF;">Yönetim Paneli için tıklayınız</a></p>
+  <p><a href="https://harmoniliski.com/" style="color:#A1A1AA;">Ana Sayfa için tıklayınız</a></p>
+<!-- SEO: VIP Rehber & Snippet Bilgi Merkezi (Google Position 0 & Internal Linking) -->
+<section style="max-width:1100px;margin:30px auto;padding:25px 20px;background:linear-gradient(135deg,#0c0a06 0%,#18140b 50%,#0f0f14 100%);border-radius:16px;border:1.5px solid rgba(223,168,74,0.4);box-shadow:0 8px 30px rgba(0,0,0,0.7)">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:20px;border-bottom:1px solid rgba(223,168,74,0.2);padding-bottom:12px">
+    <div>
+      <span style="background:linear-gradient(135deg,#dfa84a,#f7d58b);color:#000;font-size:11px;font-weight:900;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px">⭐ 2026 VIP Rehber & Blog</span>
+      <h2 style="color:#dfa84a;font-size:20px;margin-top:6px;font-family:'Cinzel',serif;letter-spacing:0.5px">Google Onaylı VIP Rehber & Seans Bilgi Merkezi</h2>
+    </div>
+    <a href="rehber.php" style="color:#f7d58b;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px">Tüm Rehberleri İncele ➔</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px">
+    <a href="turkiye-81-il-vip-eskort-fiyatlari-2026.php" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
+      <div>
+        <div style="color:#dfa84a;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px">📊 Fiyat Tablosu & Snippet</div>
+        <h3 style="font-size:15px;color:#fff;margin-bottom:8px;line-height:1.4">🔥 2026 Türkiye 81 İl VIP Fiyat Listesi & Seans Ücretleri</h3>
+        <p style="color:#a0a0b2;font-size:12px;line-height:1.5">İstanbul, İzmir, Ankara ve Antalya dahil 81 ilde saatlik & gece seans ücretleri karşılaştırma tablosu.</p>
+      </div>
+      <div style="margin-top:12px;color:#dfa84a;font-size:12px;font-weight:700">Fiyat Tablosunu İncele ➔</div>
+    </a>
+    <a href="vip-eskort-seciminde-dikkat-edilmesi-gerekenler.php" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
+      <div>
+        <div style="color:#dfa84a;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px">🛡️ Güvenlik & Doğrulama</div>
+        <h3 style="font-size:15px;color:#fff;margin-bottom:8px;line-height:1.4">🔥 VIP Seçiminde Dikkat Edilmesi Gereken 5 Altın Kural</h3>
+        <p style="color:#a0a0b2;font-size:12px;line-height:1.5">Gerçek fotoğraf teyidi, kapora dolandırıcılığına karşı önlemler, hijyen ve güvenli WhatsApp iletişimi.</p>
+      </div>
+      <div style="margin-top:12px;color:#dfa84a;font-size:12px;font-weight:700">Güvenlik Rehberini Oku ➔</div>
+    </a>
+    <a href="otel-ve-eve-vip-eskort-cagirma-rehberi.php" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
+      <div>
+        <div style="color:#dfa84a;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px">🏨 Seans & Konaklama Rehberi</div>
+        <h3 style="font-size:15px;color:#fff;margin-bottom:8px;line-height:1.4">🔥 Otel ve Eve VIP Çağırma: 4 Adımda Kusursuz Seans</h3>
+        <p style="color:#a0a0b2;font-size:12px;line-height:1.5">Resepsiyon giriş kuralları, oda hazırlığı ve randevu öncesi net iletişim prensipleri.</p>
+      </div>
+      <div style="margin-top:12px;color:#dfa84a;font-size:12px;font-weight:700">Adım Adım Kılavuzu Oku ➔</div>
+    </a>
+  </div>
+</section>
+
+
+    <!-- STEP 1 & 2: Unique Local Content & Cross-Internal Linking Mesh -->
+    <div style="background:#0f172a; border:1px solid #334155; padding:25px; border-radius:12px; margin:40px auto; max-width:1000px; color:#cbd5e1; font-size:0.95rem;">
+        <h3 style="color:#e91e63; margin-bottom:12px; font-size:1.3rem;">📍 Bölgesel VIP Konaklama & Şehir Rehberi İpuçları</h3>
+        <p style="margin-bottom:15px;">Türkiye genelinde lüks otel, rezidans ve özel daire konaklamalarında gizlilik, kalite ve güvenilirlik ön plandadır. Şehir ve semt bazlı aramalarda doğrudan doğrulanmış profillere ulaşmak için aşağıdaki popüler bölge rehberlerimizi inceleyebilirsiniz.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:15px;">
+            <a href="https://harmoniliski.com/alsancak-kendi-yerinde-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Alsancak VIP</a>
+            <a href="https://harmoniliski.com/kadikoy-moda-bagimsiz-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Kadıköy Moda VIP</a>
+            <a href="https://harmoniliski.com/cankaya-gaziosmanpasa-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Çankaya GOP VIP</a>
+            <a href="https://harmoniliski.com/antalya-lara-sirinyali-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Lara Şirinyalı VIP</a>
+            <a href="https://harmoniliski.com/bursa-nilufer-ozluce-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Nilüfer Özlüce VIP</a>
+            <a href="https://harmoniliski.com/karsiyaka-mavisehir-vip-eskort-rehberi.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Karşıyaka VIP</a>
+            <a href="https://harmoniliski.com/besiktas-levent-etiler-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Beşiktaş Levent VIP</a>
+            <a href="https://harmoniliski.com/bodrum-yalikavak-turkbuku-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Bodrum Yalıkavak VIP</a>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
