@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 12,
   "totalCalls": 0,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "lastUpdated": "15.09.2026 05:04:40",
   "tClicks": {
     "1788429948834": 12,
@@ -9,7 +9,7 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 1
+    "Izmir": 2
   },
   "logs": [
     {
@@ -87,6 +87,13 @@
   ],
   "cityVisits": [
     {
+      "time": "15.09.2026 10:45",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "15.09.2026 05:24",
       "city": "Izmir",
       "country": "Türkiye",
@@ -96,12 +103,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu1r0z2h_qqmd",
+      "id": "v_mu2da6k3_fwx5",
       "city": "Izmir",
       "device": "iPhone 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789439051521,
-      "time": "05:24"
+      "lastSeen": 1789458323403,
+      "time": "10:45"
     }
   ]
 }
