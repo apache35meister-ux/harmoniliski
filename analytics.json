@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 8,
   "totalCalls": 0,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
@@ -19,7 +19,7 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 2,
+    "Izmir": 3,
     "Kane": 1,
     "Washington": 11
   },
@@ -74,6 +74,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15.09.2026 21:30",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "15.09.2026 17:42",
       "city": "Washington",
@@ -175,84 +182,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu2ymnz4_2fue",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
+      "id": "v_mu30c31i_bx84",
+      "city": "Izmir",
+      "device": "iPhone 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494177792,
-      "time": "17:42"
-    },
-    {
-      "id": "v_mu2ymcje_7uxa",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494162832,
-      "time": "17:42"
-    },
-    {
-      "id": "v_mu2ylxwr_k9xy",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494143974,
-      "time": "17:42"
-    },
-    {
-      "id": "v_mu2ylhwk_d34z",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494123073,
-      "time": "17:42"
-    },
-    {
-      "id": "v_mu2yl0kk_vt86",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494100647,
-      "time": "17:41"
-    },
-    {
-      "id": "v_mu2ykngk_m4gs",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494083892,
-      "time": "17:41"
-    },
-    {
-      "id": "v_mu2yk6ry_t72x",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494062171,
-      "time": "17:41"
-    },
-    {
-      "id": "v_mu2yjtjt_5l8x",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494044866,
-      "time": "17:40"
-    },
-    {
-      "id": "v_mu2yjfpd_m7hj",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494027005,
-      "time": "17:40"
-    },
-    {
-      "id": "v_mu2yizia_4kqq",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789494006057,
-      "time": "17:40"
+      "lastSeen": 1789497043214,
+      "time": "21:30"
     }
   ]
 }
