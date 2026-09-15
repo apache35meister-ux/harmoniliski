@@ -1,16 +1,23 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "lastUpdated": "15.09.2026 13:47",
   "tClicks": {},
   "tCalls": {},
   "cityCounts": {
     "Izmir": 1,
-    "Warsaw": 1
+    "Warsaw": 2
   },
   "logs": [],
   "cityVisits": [
+    {
+      "time": "15.09.2026 10:48",
+      "city": "Warsaw",
+      "country": "Poland",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "15.09.2026 10:48",
       "city": "Warsaw",
@@ -28,11 +35,19 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu2jt13o_fdra",
+      "id": "v_mu2jt3kj_k34m",
       "city": "Warsaw",
       "device": "Masaüstü 💻",
       "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789469309338,
+      "lastSeen": 1789469315221,
+      "time": "10:48"
+    },
+    {
+      "id": "v_mu2jt13o_fdra",
+      "city": "Warsaw",
+      "device": "Masaüstü 💻",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789469283124,
       "time": "10:48"
     },
     {
