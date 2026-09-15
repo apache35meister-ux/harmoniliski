@@ -111,13 +111,13 @@
 
       // 1. Admin/Panel/Yönetim yönlendirmeleri
       if (fullPath.indexOf('panel') !== -1 || fullPath.indexOf('admin') !== -1 || fullPath.indexOf('yonetim') !== -1) {
-        window.location.replace('https://harmoniliski.com/panel.php' + search + hash);
+        window.location.replace('https://harmoniliski.com/panel.html' + search + hash);
         return;
       }
 
-      // 2. Eski "-masaj.php" uzantılı URL'leri anında "-eskort.php" sayfasına yönlendir
-      if (fullPath.indexOf('-masaj.php') !== -1) {
-        var targetEscort = fullPath.replace('-masaj.php', '-eskort.php');
+      // 2. Eski "-masaj.html" uzantılı URL'leri anında "-eskort.html" sayfasına yönlendir
+      if (fullPath.indexOf('-masaj.html') !== -1) {
+        var targetEscort = fullPath.replace('-masaj.html', '-eskort.html');
         window.location.replace('https://harmoniliski.com' + targetEscort + search + hash);
         return;
       }
@@ -127,7 +127,7 @@
       for (var i = 0; i < knownCities.length; i++) {
         var c = knownCities[i];
         if (fullPath.indexOf(c) !== -1) {
-          window.location.replace('https://harmoniliski.com/' + c + '-eskort.php' + search + hash);
+          window.location.replace('https://harmoniliski.com/' + c + '-eskort.html' + search + hash);
           return;
         }
       }
@@ -161,7 +161,7 @@
     <meta name="geo.region" content="TR">
     <meta name="geo.placename" content="Türkiye">
 
-    <link rel="canonical" href="https://harmoniliski.com/404.php">
+    <link rel="canonical" href="https://harmoniliski.com/404.html">
 
     <!-- Enhanced Social Sharing (WhatsApp, Telegram, Twitter/X) -->
     <meta property="og:site_name" content="Harmoni İlişki VIP Rehber">
@@ -174,7 +174,7 @@
 </head>
 <body style="background:#050507; color:#FFE895; font-family:sans-serif; text-align:center; padding:3rem;">
   <h2>Sayfa Yükleniyor...</h2>
-  <p><a href="https://harmoniliski.com/panel.php" style="color:#FFF;">Yönetim Paneli için tıklayınız</a></p>
+  <p><a href="https://harmoniliski.com/panel.html" style="color:#FFF;">Yönetim Paneli için tıklayınız</a></p>
   <p><a href="https://harmoniliski.com/" style="color:#A1A1AA;">Ana Sayfa için tıklayınız</a></p>
 <!-- SEO: VIP Rehber & Snippet Bilgi Merkezi (Google Position 0 & Internal Linking) -->
 <section style="max-width:1100px;margin:30px auto;padding:25px 20px;background:linear-gradient(135deg,#0c0a06 0%,#18140b 50%,#0f0f14 100%);border-radius:16px;border:1.5px solid rgba(223,168,74,0.4);box-shadow:0 8px 30px rgba(0,0,0,0.7)">
@@ -183,10 +183,10 @@
       <span style="background:linear-gradient(135deg,#dfa84a,#f7d58b);color:#000;font-size:11px;font-weight:900;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px">⭐ 2026 VIP Rehber & Blog</span>
       <h2 style="color:#dfa84a;font-size:20px;margin-top:6px;font-family:'Cinzel',serif;letter-spacing:0.5px">Google Onaylı VIP Rehber & Seans Bilgi Merkezi</h2>
     </div>
-    <a href="rehber.php" style="color:#f7d58b;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px">Tüm Rehberleri İncele ➔</a>
+    <a href="rehber.html" style="color:#f7d58b;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px">Tüm Rehberleri İncele ➔</a>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px">
-    <a href="turkiye-81-il-vip-eskort-fiyatlari-2026.php" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
+    <a href="turkiye-81-il-vip-eskort-fiyatlari-2026.html" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
       <div>
         <div style="color:#dfa84a;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px">📊 Fiyat Tablosu & Snippet</div>
         <h3 style="font-size:15px;color:#fff;margin-bottom:8px;line-height:1.4">🔥 2026 Türkiye 81 İl VIP Fiyat Listesi & Seans Ücretleri</h3>
@@ -194,7 +194,7 @@
       </div>
       <div style="margin-top:12px;color:#dfa84a;font-size:12px;font-weight:700">Fiyat Tablosunu İncele ➔</div>
     </a>
-    <a href="vip-eskort-seciminde-dikkat-edilmesi-gerekenler.php" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
+    <a href="vip-eskort-seciminde-dikkat-edilmesi-gerekenler.html" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
       <div>
         <div style="color:#dfa84a;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px">🛡️ Güvenlik & Doğrulama</div>
         <h3 style="font-size:15px;color:#fff;margin-bottom:8px;line-height:1.4">🔥 VIP Seçiminde Dikkat Edilmesi Gereken 5 Altın Kural</h3>
@@ -202,7 +202,7 @@
       </div>
       <div style="margin-top:12px;color:#dfa84a;font-size:12px;font-weight:700">Güvenlik Rehberini Oku ➔</div>
     </a>
-    <a href="otel-ve-eve-vip-eskort-cagirma-rehberi.php" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
+    <a href="otel-ve-eve-vip-eskort-cagirma-rehberi.html" style="background:rgba(18,18,24,0.85);border:1px solid rgba(223,168,74,0.25);border-radius:12px;padding:16px;text-decoration:none;color:#f0f0f5;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s ease">
       <div>
         <div style="color:#dfa84a;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px">🏨 Seans & Konaklama Rehberi</div>
         <h3 style="font-size:15px;color:#fff;margin-bottom:8px;line-height:1.4">🔥 Otel ve Eve VIP Çağırma: 4 Adımda Kusursuz Seans</h3>
@@ -219,14 +219,14 @@
         <h3 style="color:#e91e63; margin-bottom:12px; font-size:1.3rem;">📍 Bölgesel VIP Konaklama & Şehir Rehberi İpuçları</h3>
         <p style="margin-bottom:15px;">Türkiye genelinde lüks otel, rezidans ve özel daire konaklamalarında gizlilik, kalite ve güvenilirlik ön plandadır. Şehir ve semt bazlı aramalarda doğrudan doğrulanmış profillere ulaşmak için aşağıdaki popüler bölge rehberlerimizi inceleyebilirsiniz.</p>
         <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:15px;">
-            <a href="https://harmoniliski.com/alsancak-kendi-yerinde-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Alsancak VIP</a>
-            <a href="https://harmoniliski.com/kadikoy-moda-bagimsiz-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Kadıköy Moda VIP</a>
-            <a href="https://harmoniliski.com/cankaya-gaziosmanpasa-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Çankaya GOP VIP</a>
-            <a href="https://harmoniliski.com/antalya-lara-sirinyali-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Lara Şirinyalı VIP</a>
-            <a href="https://harmoniliski.com/bursa-nilufer-ozluce-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Nilüfer Özlüce VIP</a>
-            <a href="https://harmoniliski.com/karsiyaka-mavisehir-vip-eskort-rehberi.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Karşıyaka VIP</a>
-            <a href="https://harmoniliski.com/besiktas-levent-etiler-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Beşiktaş Levent VIP</a>
-            <a href="https://harmoniliski.com/bodrum-yalikavak-turkbuku-vip-eskort.php" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Bodrum Yalıkavak VIP</a>
+            <a href="https://harmoniliski.com/alsancak-kendi-yerinde-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Alsancak VIP</a>
+            <a href="https://harmoniliski.com/kadikoy-moda-bagimsiz-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Kadıköy Moda VIP</a>
+            <a href="https://harmoniliski.com/cankaya-gaziosmanpasa-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Çankaya GOP VIP</a>
+            <a href="https://harmoniliski.com/antalya-lara-sirinyali-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Lara Şirinyalı VIP</a>
+            <a href="https://harmoniliski.com/bursa-nilufer-ozluce-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Nilüfer Özlüce VIP</a>
+            <a href="https://harmoniliski.com/karsiyaka-mavisehir-vip-eskort-rehberi.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Karşıyaka VIP</a>
+            <a href="https://harmoniliski.com/besiktas-levent-etiler-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Beşiktaş Levent VIP</a>
+            <a href="https://harmoniliski.com/bodrum-yalikavak-turkbuku-vip-eskort.html" style="background:#1e293b; color:#38bdf8; padding:6px 12px; border-radius:6px; text-decoration:none; border:1px solid #334155;">Bodrum Yalıkavak VIP</a>
         </div>
     </div>
 
