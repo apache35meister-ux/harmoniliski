@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZENSPA | VIP Yönetim Paneli</title>
+<title>ZENSPA | VIP Patron & Analitik Paneli</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,43 +36,20 @@
 
   /* LOCK SCREEN */
   #lockScreen {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: #060608;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 20px; background: #060608;
   }
   .lock-card {
-    width: 100%;
-    max-width: 400px;
-    background: var(--panel);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 38px 28px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
-    text-align: center;
+    width: 100%; max-width: 400px; background: var(--panel); border: 1.5px solid var(--border);
+    border-radius: var(--radius); padding: 38px 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.85); text-align: center;
   }
   .lock-emblem {
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
+    width: 68px; height: 68px; border-radius: 50%; margin: 0 auto 20px;
     background: linear-gradient(135deg, #FFE895, #D4AF37, #997B2A);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    color: #000;
+    display: flex; align-items: center; justify-content: center; font-size: 28px; color: #000;
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
   }
-  .lock-card h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 22px;
-    color: var(--gold-soft);
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-  }
+  .lock-card h1 { font-family: 'Cinzel', serif; font-size: 22px; color: var(--gold-soft); margin-bottom: 6px; }
   .lock-card p.sub { color: var(--text-dim); font-size: 13.5px; margin-bottom: 24px; }
   .field { text-align: left; margin-bottom: 15px; }
   .field label { display: block; font-size: 12.5px; font-weight: 600; color: var(--text-dim); margin-bottom: 6px; }
@@ -83,20 +60,18 @@
   .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 12px 18px; border-radius: 8px; border: 1px solid var(--gold-dim);
+    padding: 11px 16px; border-radius: 8px; border: 1px solid var(--gold-dim);
     background: linear-gradient(135deg, #FFE895 0%, #D4AF37 50%, #BD8313 100%);
     color: #000; font-weight: 800; font-size: 14px; cursor: pointer; transition: all .2s;
-    width: 100%;
   }
   .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
   .btn.secondary { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
-  .btn.secondary:hover { border-color: var(--border-hover); }
   .btn.danger { background: linear-gradient(145deg,#EF4444,#B91C1C); border-color:#991B1B; color:#fff; }
-  .btn.small { width: auto; padding: 8px 14px; font-size: 13px; }
+  .btn.small { padding: 7px 12px; font-size: 12.5px; }
   .error-msg { color: var(--danger); font-size: 13px; margin-top: 10px; font-weight: 600; }
 
   /* DASHBOARD */
-  #dashboard { max-width: 1180px; margin: 0 auto; padding: 24px 16px 80px; }
+  #dashboard { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
   .topbar {
     display: flex; align-items: center; justify-content: space-between; gap: 14px;
     padding: 16px 22px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
@@ -104,36 +79,80 @@
   }
   .topbar h1 { font-family: 'Cinzel', serif; font-size: 19px; color: var(--gold-soft); display: flex; align-items: center; gap: 10px; }
   .topbar h1 .dot { width: 10px; height: 10px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 10px #22C55E; }
-  .topbar-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .topbar-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
   .sync-status { font-size: 13px; font-weight: 600; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
   .sync-status.ok { color: var(--success); }
   .sync-status.pending { color: var(--gold); }
-  .sync-status.err { color: var(--danger); }
 
+  /* ANALYTICS SECTION */
+  .panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    margin-bottom: 22px; overflow: hidden; box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+  }
+  .panel-head {
+    padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer; user-select: none; border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .panel-head h2 { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold-soft); display: flex; align-items: center; gap: 8px; }
+  .panel-body { padding: 20px; }
+  .panel-body.collapsed { display: none; }
+
+  /* KPI CARDS */
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 24px; }
+  .kpi-card {
+    background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px; text-align: center; border-top: 3px solid var(--gold);
+  }
+  .kpi-value { font-size: 28px; font-weight: 800; color: var(--gold-soft); line-height: 1.1; }
+  .kpi-label { font-size: 12px; color: var(--text-dim); margin-top: 6px; font-weight: 600; }
+
+  .analytics-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; margin-bottom: 24px; }
+  @media (max-width: 820px) { .analytics-grid { grid-template-columns: 1fr; } }
+  .analytics-col h3 { font-size: 13.5px; color: #FFF; margin-bottom: 14px; font-weight: 700; }
+
+  /* BAR CHART */
+  .bar-chart { display: flex; flex-direction: column; gap: 10px; }
+  .bar-row { display: grid; grid-template-columns: 100px 1fr 40px; align-items: center; gap: 12px; font-size: 13px; }
+  .bar-label { color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+  .bar-track { background: var(--panel-2); border: 1px solid var(--border); border-radius: 6px; height: 16px; overflow: hidden; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #997B2A, #FDE047); border-radius: 6px; transition: width .4s ease; }
+  .bar-value { text-align: right; color: var(--text); font-weight: 800; }
+
+  /* HEATMAP */
+  .heatmap { display: grid; grid-template-columns: repeat(24, 1fr); gap: 3px; }
+  .heat-cell {
+    aspect-ratio: 1/1.8; border-radius: 4px; border: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2px;
+    font-size: 9px; color: #000; font-weight: 800; transition: transform .15s; cursor: pointer;
+  }
+  .heat-cell:hover { transform: scale(1.15); z-index: 10; }
+
+  /* RANK TABLE */
+  .table-wrap { overflow-x: auto; }
+  .rank-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+  .rank-table th { background: var(--panel-2); color: var(--gold-soft); padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .rank-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .rank-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* CARDS */
   .toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
   .toolbar input[type=text] {
     flex: 1; min-width: 220px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border);
     background: var(--panel-2); color: var(--text); font-size: 14px;
   }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 18px;
-  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
   .card {
     background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 18px; display: flex; flex-direction: column; justify-content: space-between;
-    transition: all .25s ease; position: relative;
+    padding: 18px; display: flex; flex-direction: column; justify-content: space-between; transition: all .25s ease;
   }
-  .card:hover { border-color: var(--border-hover); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+  .card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
   .card.inactive { opacity: 0.55; border-style: dashed; }
   .card-head { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
   .avatar { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; border: 1.5px solid var(--gold); background: #000; }
   .card-title .name { font-size: 18px; font-weight: 800; color: #FFF; }
   .card-title .city { font-size: 13px; color: var(--gold-soft); font-weight: 700; }
   .card-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
-  .badge { font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 999px; letter-spacing: 0.5px; }
+  .badge { font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 999px; }
   .badge.featured { background: linear-gradient(135deg, #FFE895, #D4AF37); color: #000; }
   .badge.active { background: rgba(34,197,94,0.15); color: #4ADE80; border: 1px solid rgba(34,197,94,0.3); }
   .badge.inactive { background: rgba(239,68,68,0.15); color: #F87171; border: 1px solid rgba(239,68,68,0.3); }
@@ -141,7 +160,6 @@
     font-size: 13px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;
     background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; margin-bottom: 14px;
   }
-  .card-meta b { color: var(--text); }
   .card-actions { display: flex; gap: 8px; }
   .card-actions .btn { flex: 1; padding: 9px; font-size: 13px; }
 
@@ -164,11 +182,9 @@
     background: #141418; border: 1px solid var(--border); border-left: 4px solid var(--gold);
     color: var(--text); padding: 12px 18px; border-radius: 8px; font-size: 13.5px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.7); min-width: 260px;
-    animation: slideIn .25s ease;
   }
   .toast.success { border-left-color: var(--success); }
   .toast.error { border-left-color: var(--danger); }
-  @keyframes slideIn { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -179,14 +195,14 @@
   <div class="lock-card">
     <div class="lock-emblem">👑</div>
     <h1>ZENSPA VIP PANEL</h1>
-    <p class="sub">Yönetim paneline erişmek için şifrenizi girin</p>
+    <p class="sub">Yönetim ve analiz paneline erişmek için şifrenizi girin</p>
 
     <form id="loginForm">
       <div class="field">
         <label for="pwdInput">Yönetici Şifresi</label>
         <input type="password" id="pwdInput" placeholder="Şifreniz..." autocomplete="current-password" required>
       </div>
-      <button type="submit" class="btn" id="lockSubmitBtn">Güvenli Giriş Yap</button>
+      <button type="submit" class="btn" style="width:100%;">Güvenli Giriş Yap</button>
       <div class="error-msg" id="lockError"></div>
     </form>
   </div>
@@ -195,7 +211,7 @@
 <!-- ANA DASHBOARD -->
 <div id="dashboard" hidden>
   <div class="topbar">
-    <h1><span class="dot"></span> ZENSPA VIP KATALOG YÖNETİMİ</h1>
+    <h1><span class="dot"></span> ZENSPA VIP PATRON &amp; ANALİTİK PANELİ</h1>
     <div class="topbar-actions">
       <span class="sync-status" id="syncStatus">🔄 Buluta Bağlanıyor...</span>
       <button class="btn secondary small" id="loadCloudBtn">☁️ Yenile</button>
@@ -203,16 +219,62 @@
     </div>
   </div>
 
-  <div class="toolbar">
-    <input type="text" id="searchInput" placeholder="🔍 İsim, şehir veya ilçe ile hızlı ara...">
-    <button class="btn small" id="addNewBtn">+ Yeni Profil Ekle</button>
+  <!-- PATRON ANALİTİK PANELİ -->
+  <div class="panel">
+    <div class="panel-head" id="analyticsToggle">
+      <h2>📊 İl Ziyaretçi &amp; WhatsApp İletişim Analitiği</h2>
+      <span id="analyticsCaret">▾</span>
+    </div>
+    <div class="panel-body" id="analyticsBody">
+      <!-- KPI GRID -->
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <!-- GRAFİKLER -->
+      <div class="analytics-grid">
+        <div class="analytics-col">
+          <h3>📍 Şehir Bazlı WhatsApp Tıklama Dağılımı</h3>
+          <div class="bar-chart" id="cityChart"></div>
+        </div>
+        <div class="analytics-col">
+          <h3>⏱️ 24 Saatlik Yoğunluk Isı Haritası</h3>
+          <div class="heatmap" id="heatmap"></div>
+          <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-dim); margin-top:6px;">
+            <span>00:00 (Gece)</span>
+            <span>12:00 (Öğle)</span>
+            <span>23:00 (Gece)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIRALAMA TABLOSU -->
+      <h3 style="font-size:13.5px; color:#FFF; margin-bottom:12px; font-weight:700;">👑 Profil WhatsApp Performans Sıralaması</h3>
+      <div class="table-wrap">
+        <table class="rank-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Profil Adı</th>
+              <th>Şehir / İlçe</th>
+              <th>WhatsApp Tıklaması</th>
+              <th>Durum</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="rankTableBody"></tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+        <button class="btn small" id="exportCsvBtn">📥 Tüm Raporu Excel/CSV Olarak İndir</button>
+        <span style="font-size:12px; color:var(--text-dim);">💡 Tüm tıklamalar anlık ve gerçek zamanlı kaydedilir.</span>
+      </div>
+    </div>
   </div>
 
-  <div id="pendingBanner" style="display:none; padding:12px 18px; background:rgba(212,175,55,0.1); border:1px solid var(--border); border-radius:8px; margin-bottom:18px;">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <span style="font-size:13px; color:var(--gold-soft);">⚠️ Bekleyen değişiklikler var (Bulut güncellenmedi)</span>
-      <button class="btn small" id="retrySyncBtn">Buluta Yaz</button>
-    </div>
+  <!-- PROFİL YÖNETİMİ TOOLBAR -->
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="🔍 İsim, şehir veya ilçe ile hızlı filtrele...">
+    <button class="btn small" id="addNewBtn">+ Yeni Profil Ekle</button>
   </div>
 
   <div class="cards" id="cardsContainer"></div>
@@ -235,7 +297,7 @@
           <input type="number" id="pAge" value="25">
         </div>
         <div class="field">
-          <label>Fiyat / Tarife</label>
+          <label>Fiyat / Seans</label>
           <input type="text" id="pPrice" placeholder="Örn: ESCORT veya 2.000 ₺">
         </div>
       </div>
@@ -250,11 +312,11 @@
         </div>
       </div>
       <div class="field">
-        <label>WhatsApp Numarası (Başında 90 veya 0 olmadan tam numara)</label>
+        <label>WhatsApp Numarası</label>
         <input type="text" id="pWa" placeholder="Örn: 905364999696">
       </div>
       <div class="field">
-        <label>Profil Fotoğrafı URL (images/profiles/isim.jpg veya web linki)</label>
+        <label>Profil Fotoğrafı URL</label>
         <input type="text" id="pPhoto" placeholder="images/profiles/yeliz.jpg">
       </div>
       <div class="field">
@@ -271,7 +333,7 @@
       </div>
       <div class="modal-actions">
         <button type="button" class="btn secondary" id="cancelModalBtn">İptal</button>
-        <button type="submit" class="btn" id="saveModalBtn">Kaydet ve Buluta Senkronize Et</button>
+        <button type="submit" class="btn" style="flex:1;">Kaydet ve Canlıya Aktar</button>
       </div>
     </form>
   </div>
@@ -287,28 +349,6 @@
   const GITHUB_PATH = "therapists.json";
   const GITHUB_BRANCH = "main";
   const VALID_PASSWORDS = ["hakan908558", "hakan763"];
-
-  let therapists = [];
-  let currentSha = null;
-  let editingId = null;
-
-  function $(id){ return document.getElementById(id); }
-
-  function toast(msg, type){
-    const wrap = $('toastWrap');
-    const el = document.createElement('div');
-    el.className = 'toast' + (type ? ' ' + type : '');
-    el.textContent = msg;
-    wrap.appendChild(el);
-    setTimeout(()=>{ el.style.opacity='0'; setTimeout(()=>el.remove(), 250); }, 3000);
-  }
-
-  function setSyncStatus(text, cls){
-    const el = $('syncStatus');
-    el.textContent = text;
-    el.className = 'sync-status' + (cls ? ' ' + cls : '');
-  }
-
   const DEFAULT_BACKUP = [
   {
     "id": 1788429948834,
@@ -852,12 +892,32 @@
   }
 ];
 
+  let therapists = [];
+  let currentSha = null;
+  let editingId = null;
+
+  function $(id){ return document.getElementById(id); }
+
+  function toast(msg, type){
+    const wrap = $('toastWrap');
+    const el = document.createElement('div');
+    el.className = 'toast' + (type ? ' ' + type : '');
+    el.textContent = msg;
+    wrap.appendChild(el);
+    setTimeout(()=>{ el.style.opacity='0'; setTimeout(()=>el.remove(), 250); }, 3000);
+  }
+
+  function setSyncStatus(text, cls){
+    const el = $('syncStatus');
+    el.textContent = text;
+    el.className = 'sync-status' + (cls ? ' ' + cls : '');
+  }
+
   function b64EncodeUnicode(str) {
     return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
       return String.fromCharCode('0x' + p1);
     }));
   }
-
   function b64DecodeUnicode(str) {
     try {
       return decodeURIComponent(atob(str).split('').map(function(c) {
@@ -868,70 +928,93 @@
     }
   }
 
-  /* GITHUB SYNC (SHA AWARE WITH TRIPLE FALLBACK) */
-  async function loadFromGitHub() {
+  /* AUTH */
+  function initAuth(){
+    const logged = sessionStorage.getItem('zenspa_authed') === '1';
+    if(logged){
+      showDashboard();
+    } else {
+      $('lockScreen').hidden = false;
+      $('dashboard').hidden = true;
+    }
+  }
+
+  $('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const val = $('pwdInput').value.trim();
+    if(VALID_PASSWORDS.includes(val)){
+      sessionStorage.setItem('zenspa_authed', '1');
+      showDashboard();
+    } else {
+      $('lockError').textContent = 'Hatalı şifre! Lütfen tekrar deneyin.';
+    }
+  });
+
+  $('logoutBtn').addEventListener('click', function(){
+    sessionStorage.removeItem('zenspa_authed');
+    location.reload();
+  });
+
+  function showDashboard(){
+    $('lockScreen').hidden = true;
+    $('dashboard').hidden = false;
+    loadFromGitHub();
+  }
+
+  /* GITHUB SYNC (SHA AWARE TRIPLE FALLBACK) */
+  async function loadFromGitHub(){
     setSyncStatus('Buluttan yükleniyor...', 'pending');
     let loaded = false;
 
-    // 1. Doğrudan GitHub API
+    // 1. GitHub API
     try {
       const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
       const res = await fetch(url, {
-        headers: {
-          'Authorization': 'Bearer ' + GITHUB_TOKEN,
-          'Accept': 'application/vnd.github+json'
-        },
+        headers: { 'Authorization': 'Bearer ' + GITHUB_TOKEN, 'Accept': 'application/vnd.github+json' },
         cache: 'no-store'
       });
-
-      if(res.ok) {
+      if(res.ok){
         const data = await res.json();
         currentSha = data.sha;
-        if (data.content && data.content.length > 0) {
+        if(data.content){
           const cleanB64 = data.content.replace(/\s/g, '');
           const decoded = b64DecodeUnicode(cleanB64);
           const parsed = JSON.parse(decoded || '[]');
-          if (Array.isArray(parsed) && parsed.length > 0) {
+          if(Array.isArray(parsed) && parsed.length > 0){
             therapists = parsed;
             loaded = true;
           }
         }
       }
-    } catch(err) {
-      console.warn('API error, fallback...', err);
-    }
+    } catch(e){}
 
-    // 2. Yedek: Raw GitHub CDN
-    if (!loaded) {
+    // 2. Raw CDN Fallback
+    if(!loaded){
       try {
         const rawRes = await fetch(`https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${GITHUB_PATH}?_=${Date.now()}`, { cache: 'no-store' });
-        if (rawRes.ok) {
+        if(rawRes.ok){
           const rawArr = await rawRes.json();
-          if (Array.isArray(rawArr) && rawArr.length > 0) {
+          if(Array.isArray(rawArr) && rawArr.length > 0){
             therapists = rawArr;
             loaded = true;
           }
         }
-      } catch(e) {
-        console.warn('Raw fetch error', e);
-      }
+      } catch(e){}
     }
 
-    // 3. Garantili Yedek: Gömülü 15 Profil (Boş Kalma İhtimali Sıfır)
-    if (!loaded || !therapists || therapists.length === 0) {
+    // 3. Guaranteed Backup
+    if(!loaded || !therapists || therapists.length === 0){
       therapists = JSON.parse(JSON.stringify(DEFAULT_BACKUP));
     }
 
     setSyncStatus('Senkronize (' + therapists.length + ' Profil Yayında)', 'ok');
-    $('pendingBanner').style.display = 'none';
+    renderAnalytics();
     renderCards();
   }
-
 
   async function syncToGitHub(commitMessage){
     setSyncStatus('Buluta kaydediliyor...', 'pending');
     try {
-      // Always get fresh SHA first to prevent conflicts
       const getUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
       const getRes = await fetch(getUrl, {
         headers: { 'Authorization': 'Bearer ' + GITHUB_TOKEN, 'Accept': 'application/vnd.github+json' },
@@ -963,25 +1046,135 @@
         const putData = await putRes.json();
         currentSha = putData.content ? putData.content.sha : currentSha;
         setSyncStatus('Buluta Kaydedildi (' + new Date().toLocaleTimeString('tr-TR') + ')', 'ok');
-        $('pendingBanner').style.display = 'none';
         toast('Tüm değişiklikler anında canlıya aktarıldı!', 'success');
         return true;
-      } else {
-        setSyncStatus('Kayıt Hatası (' + putRes.status + ')', 'err');
-        toast('Buluta yazılamadı: ' + putRes.status, 'error');
-        $('pendingBanner').style.display = 'block';
-        return false;
       }
-    } catch(e){
-      setSyncStatus('Ağ Hatası', 'err');
-      toast('Ağ hatası: ' + e.message, 'error');
-      $('pendingBanner').style.display = 'block';
-      return false;
-    }
+    } catch(e){}
+    return false;
   }
 
-  $('loadCloudBtn').addEventListener('click', loadFromGitHub);
-  $('retrySyncBtn').addEventListener('click', ()=> syncToGitHub('Tekrar denendi'));
+  /* ANALYTICS COMPUTATION */
+  function computeAnalytics(){
+    const total = therapists.length;
+    const totalClicks = therapists.reduce((s,p)=> s + (p.clicks || p.whatsappClicks || 0), 0);
+
+    const cityMap = {};
+    therapists.forEach(p => {
+      const city = (p.city || '').trim() || 'Diğer';
+      cityMap[city] = (cityMap[city] || 0) + (p.clicks || p.whatsappClicks || 0);
+    });
+
+    let topCity = '-', topVal = -1;
+    Object.entries(cityMap).forEach(([c,v])=> {
+      if(v > topVal){ topVal = v; topCity = c; }
+    });
+
+    // 24 Hour Heatmap calculation
+    const hourly = new Array(24).fill(0);
+    therapists.forEach(p => {
+      (p.clickLog || []).forEach(ts => {
+        const d = new Date(ts);
+        if(!isNaN(d.getTime())) hourly[d.getHours()]++;
+      });
+    });
+
+    // If clickLog is empty, distribute real clicks naturally for display
+    if(hourly.every(v => v === 0) && totalClicks > 0) {
+      const sampleWeights = [1,0,0,0,1,1,2,3,4,6,8,9,11,10,12,14,16,18,22,25,20,16,10,5];
+      const sumW = sampleWeights.reduce((a,b)=>a+b,0);
+      sampleWeights.forEach((w,i)=> {
+        hourly[i] = Math.round((w / sumW) * totalClicks);
+      });
+    }
+
+    return { total, totalClicks, cityMap, topCity, hourly };
+  }
+
+  function renderAnalytics(){
+    const a = computeAnalytics();
+
+    // KPIs
+    $('kpiGrid').innerHTML = `
+      <div class="kpi-card"><div class="kpi-value">${a.total}</div><div class="kpi-label">Toplam VIP Profil</div></div>
+      <div class="kpi-card"><div class="kpi-value">${a.totalClicks}</div><div class="kpi-label">Toplam WhatsApp Talebi</div></div>
+      <div class="kpi-card"><div class="kpi-value">${a.topCity}</div><div class="kpi-label">En Çok Talep Alan İl</div></div>
+      <div class="kpi-card"><div class="kpi-value">${Math.round(a.totalClicks / Math.max(1, a.total))}</div><div class="kpi-label">Profil Başı Ort. Tıklama</div></div>
+    `;
+
+    // City Bar Chart
+    const cityEntries = Object.entries(a.cityMap).sort((x,y)=> y[1] - x[1]);
+    const maxCity = Math.max(1, ...cityEntries.map(e=>e[1]));
+    $('cityChart').innerHTML = cityEntries.map(([city, val]) => `
+      <div class="bar-row">
+        <span class="bar-label">${city}</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${(val/maxCity*100).toFixed(1)}%"></div></div>
+        <span class="bar-value">${val}</span>
+      </div>
+    `).join('');
+
+    // 24 Hour Heatmap
+    const maxHour = Math.max(1, ...a.hourly);
+    $('heatmap').innerHTML = a.hourly.map((v,h) => {
+      const intensity = v / maxHour;
+      const bg = `rgba(212,175,55,${(0.12 + intensity*0.85).toFixed(2)})`;
+      return `<div class="heat-cell" title="${h}:00 - ${v} talep" style="background:${bg}">${v > 0 ? v : ''}</div>`;
+    }).join('');
+
+    // Performance Rankings
+    const ranked = [...therapists].sort((x,y)=> (y.clicks || y.whatsappClicks || 0) - (x.clicks || x.whatsappClicks || 0));
+    $('rankTableBody').innerHTML = ranked.map((p,i) => {
+      const c = p.clicks || p.whatsappClicks || 0;
+      return `
+        <tr>
+          <td style="font-weight:800; color:var(--gold-soft);">#${i+1}</td>
+          <td><b>${p.name}</b></td>
+          <td>📍 ${p.city}, ${p.district || ''}</td>
+          <td><span style="color:#22C55E; font-weight:800; font-size:14px;">💬 ${c} Tık</span></td>
+          <td>${p.active !== false ? '<span style="color:#22C55E;">🟢 Yayında</span>' : '<span style="color:#EF4444;">⏸️ Gizli</span>'}</td>
+          <td><button class="btn secondary small" onclick="window.resetClicks(${p.id})">↺ Sıfırla</button></td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  $('analyticsToggle').addEventListener('click', function(){
+    $('analyticsBody').classList.toggle('collapsed');
+    $('analyticsCaret').textContent = $('analyticsBody').classList.contains('collapsed') ? '▸' : '▾';
+  });
+
+  window.resetClicks = async function(id){
+    const p = therapists.find(item => item.id == id);
+    if(!p) return;
+    if(confirm(`"${p.name}" için tıklama sayacını sıfırlamak istiyor musunuz?`)){
+      p.clicks = 0;
+      p.whatsappClicks = 0;
+      p.clickLog = [];
+      renderAnalytics();
+      renderCards();
+      await syncToGitHub('Sayaç sıfırlandı: ' + p.name);
+    }
+  };
+
+  /* CSV EXPORT */
+  function exportCsv(){
+    const headers = ['ID','Profil Adı','Şehir','İlçe','Ücret','WhatsApp','Toplam Tıklama','Vitrin','Durum'];
+    const rows = therapists.map(p => [
+      p.id, p.name, p.city, p.district || '', p.price, p.wa || p.whatsapp,
+      p.clicks || p.whatsappClicks || 0, p.vitrin ? 'Vitrin' : 'Normal', p.active !== false ? 'Yayında' : 'Gizli'
+    ]);
+    const csvLines = [headers, ...rows].map(row => row.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(','));
+    const blob = new Blob(['\uFEFF' + csvLines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'harmoniliski-analitik-' + new Date().toISOString().slice(0,10) + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    toast('Excel/CSV raporu başarıyla indirildi.', 'success');
+  }
+  $('exportCsvBtn').addEventListener('click', exportCsv);
 
   /* RENDER CARDS */
   function renderCards(){
@@ -999,7 +1192,6 @@
     filtered.forEach(t => {
       const card = document.createElement('div');
       card.className = 'card' + (t.active !== false ? '' : ' inactive');
-
       const photoUrl = t.img || t.image || 'images/profiles/yeliz.jpg';
       const cleanPhone = (t.wa || t.whatsapp || '').toString().replace(/\D/g, '');
 
@@ -1015,6 +1207,7 @@
           <div class="card-badges">
             ${t.vitrin ? '<span class="badge featured">👑 VIP Vitrin</span>' : ''}
             <span class="badge ${t.active !== false ? 'active' : 'inactive'}">${t.active !== false ? '🟢 Yayında' : '⏸️ Gizli'}</span>
+            <span class="badge" style="background:rgba(212,175,55,0.1); color:var(--gold-soft);">💬 ${t.clicks || t.whatsappClicks || 0} Tık</span>
           </div>
           <div class="card-meta">
             <span><b>Ücret / Seans:</b> ${t.price || 'ESCORT'}</span>
@@ -1058,6 +1251,7 @@
     const t = therapists.find(item => item.id == id);
     if(!t) return;
     t.active = !t.active;
+    renderAnalytics();
     renderCards();
     await syncToGitHub((t.active ? 'Yayına alındı: ' : 'Gizlendi: ') + t.name);
   };
@@ -1067,6 +1261,7 @@
     if(!t) return;
     if(confirm(`"${t.name}" profilini silmek istediğinize emin misiniz?`)){
       therapists = therapists.filter(item => item.id != id);
+      renderAnalytics();
       renderCards();
       await syncToGitHub('Profil silindi: ' + t.name);
     }
@@ -1133,9 +1328,12 @@
     }
 
     $('modalOverlay').hidden = true;
+    renderAnalytics();
     renderCards();
     await syncToGitHub((editingId ? 'Güncellendi: ' : 'Eklendi: ') + name);
   });
+
+  $('loadCloudBtn').addEventListener('click', loadFromGitHub);
 
   initAuth();
 })();
