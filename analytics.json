@@ -1,14 +1,16 @@
 {
   "totalWaClicks": 5,
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "15.09.2026 11:10:15",
   "tClicks": {
     "1788429948834": 5,
     "yeliz": 10
   },
   "tCalls": {},
-  "cityCounts": {},
+  "cityCounts": {
+    "Izmir": 1
+  },
   "logs": [
     {
       "time": "15.09.2026 11:31",
@@ -47,8 +49,17 @@
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789461067339,
-      "time": "11:31"
+      "lastSeen": 1789461380620,
+      "time": "11:36"
+    }
+  ],
+  "cityVisits": [
+    {
+      "time": "15.09.2026 11:36",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
     }
   ]
 }
