@@ -4,18 +4,6 @@ ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
 session_start();
 
-// Auto-Sync Bridge: Automatically updates Alexhost hosting file from GitHub main branch
-if (!isset($_GET['raw_exec'])) {
-    $gh_url = 'https://raw.githubusercontent.com/apache35meister-ux/harmoniliski/main/panel.php?raw_exec=1';
-    $ctx = stream_context_create(['http' => ['timeout' => 3]]);
-    $latest_code = @file_get_contents($gh_url, false, $ctx);
-    if ($latest_code && strpos($latest_code, 'ZENSPA | VIP') !== false && strlen($latest_code) > 5000) {
-        if (md5($latest_code) !== @md5_file(__FILE__)) {
-            @file_put_contents(__FILE__, $latest_code);
-        }
-    }
-}
-
 require_once __DIR__ . '/php_app/config/config.php';
 
 // Auth Processing
@@ -41,7 +29,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         );
     }
     session_destroy();
-    header('Location: panel.php?logged_out=1');
+    header('Cache-Control: no-cache, no-store, must-revalidate');
+    header('Pragma: no-cache');
+    header('Expires: 0');
+    header('Location: panel.php?logged_out=1&_r=' . time());
     exit;
 }
 ?>
@@ -2005,8 +1996,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
     function adminLogout() {
       try {
-        sessionStorage.removeItem('zenspa_panel_auth');
-        localStorage.removeItem('zenspa_panel_auth');
+        sessionStorage.clear();
+        localStorage.clear();
+      } catch(e) {}
+      try {
         sessionStorage.setItem('zenspa_logged_out', '1');
         localStorage.setItem('zenspa_logged_out', '1');
       } catch(e) {}
@@ -2018,9 +2011,15 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         ov.style.setProperty('visibility', 'visible', 'important');
         ov.style.setProperty('opacity', '1', 'important');
         ov.style.setProperty('pointer-events', 'auto', 'important');
+        ov.style.setProperty('z-index', '99999999', 'important');
       }
       document.documentElement.style.overflow = 'hidden';
-      window.location.replace('panel.php?action=logout&logged_out=1&_t=' + Date.now());
+      if (document.body) {
+        document.body.style.overflow = 'hidden';
+      }
+      var passEl = document.getElementById('adminPassInput');
+      if (passEl) passEl.value = '';
+      window.location.href = 'panel.php?action=logout&logged_out=1&_nocache=' + Date.now();
     }
 
 
