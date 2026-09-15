@@ -1032,10 +1032,8 @@
           if(analyticsObj && analyticsObj.tClicks) {
             therapists.forEach(t => {
               const byId = analyticsObj.tClicks[String(t.id)] || 0;
-              const byName = analyticsObj.tClicks[t.name] || 0;
-              const byNameLower = analyticsObj.tClicks[(t.name || '').toLowerCase()] || 0;
-              const liveC = Math.max(byId, byName, byNameLower);
-              if (liveC > (t.clicks || 0)) {
+              const liveC = byId;
+              if (liveC !== undefined && liveC !== null) {
                 t.clicks = liveC;
                 t.whatsappClicks = liveC;
               }
@@ -1097,12 +1095,12 @@
   /* ANALYTICS COMPUTATION */
   function computeAnalytics(){
     const total = therapists.length;
-    const totalClicks = therapists.reduce((s,p)=> s + (p.clicks || p.whatsappClicks || 0), 0);
+    const totalClicks = therapists.reduce((s,p)=> s + (p.clicks || 0), 0);
 
     const cityMap = {};
     therapists.forEach(p => {
       const city = (p.city || '').trim() || 'Diğer';
-      cityMap[city] = (cityMap[city] || 0) + (p.clicks || p.whatsappClicks || 0);
+      cityMap[city] = (cityMap[city] || 0) + (p.clicks || 0);
     });
 
     let topCity = '-', topVal = -1;
@@ -1162,9 +1160,9 @@
     }).join('');
 
     // Performance Rankings
-    const ranked = [...therapists].sort((x,y)=> (y.clicks || y.whatsappClicks || 0) - (x.clicks || x.whatsappClicks || 0));
+    const ranked = [...therapists].sort((x,y)=> (y.clicks || 0) - (x.clicks || 0));
     $('rankTableBody').innerHTML = ranked.map((p,i) => {
-      const c = p.clicks || p.whatsappClicks || 0;
+      const c = p.clicks || 0;
       return `
         <tr>
           <td style="font-weight:800; color:var(--gold-soft);">#${i+1}</td>
@@ -1189,10 +1187,52 @@
     if(confirm(`"${p.name}" için tıklama sayacını sıfırlamak istiyor musunuz?`)){
       p.clicks = 0;
       p.whatsappClicks = 0;
+      p.phoneClicks = 0;
       p.clickLog = [];
+      
+      // analytics.json dosyasından da bu hekimin/profilin sayacını temizle
+      try {
+        const aUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/analytics.json?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
+        const aRes = await fetch(aUrl, {
+          headers: { 'Authorization': 'Bearer ' + GITHUB_TOKEN, 'Accept': 'application/vnd.github+json' },
+          cache: 'no-store'
+        });
+        if (aRes.ok) {
+          const aData = await aRes.json();
+          if (aData.content) {
+            const aDecoded = b64DecodeUnicode(aData.content.replace(/\s/g, ''));
+            const aObj = JSON.parse(aDecoded || '{}');
+            if (aObj.tClicks) {
+              delete aObj.tClicks[String(id)];
+              delete aObj.tClicks[String(p.name)];
+            }
+            if (aObj.tCalls) {
+              delete aObj.tCalls[String(id)];
+            }
+            await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/analytics.json`, {
+              method: 'PUT',
+              headers: {
+                'Authorization': 'Bearer ' + GITHUB_TOKEN,
+                'Accept': 'application/vnd.github+json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                message: "Reset clicks for: " + p.name,
+                content: b64EncodeUnicode(JSON.stringify(aObj, null, 2)),
+                sha: aData.sha,
+                branch: GITHUB_BRANCH
+              })
+            });
+          }
+        }
+      } catch(err) {
+        console.warn("analytics.json reset item err:", err);
+      }
+
       renderAnalytics();
       renderCards();
       await syncToGitHub('Sayaç sıfırlandı: ' + p.name);
+      toast(`"${p.name}" sayacı başarıyla sıfırlandı!`, 'success');
     }
   };
 
