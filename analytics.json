@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 9,
   "totalCalls": 0,
-  "totalVisits": 69,
+  "totalVisits": 70,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
@@ -23,7 +23,7 @@
   "cityCounts": {
     "Izmir": 7,
     "Kane": 1,
-    "Washington": 61
+    "Washington": 62
   },
   "logs": [
     {
@@ -82,6 +82,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15.09.2026 21:15",
+      "city": "Washington",
+      "country": "United States",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "15.09.2026 21:15",
       "city": "Washington",
@@ -494,16 +501,17 @@
       "country": "United States",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 17:41",
-      "city": "Washington",
-      "country": "United States",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "activeVisitors": [
+    {
+      "id": "v_mu368lyq_jx37",
+      "city": "Washington",
+      "device": "Masaüstü 💻",
+      "activity": "Escort Profillerini İnceliyor",
+      "lastSeen": 1789506958714,
+      "time": "21:15"
+    },
     {
       "id": "v_mu368b7t_p50d",
       "city": "Washington",
@@ -583,14 +591,6 @@
       "activity": "Escort Profillerini İnceliyor",
       "lastSeen": 1789506793941,
       "time": "21:13"
-    },
-    {
-      "id": "v_mu364osw_ts91",
-      "city": "Washington",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789506775844,
-      "time": "21:12"
     }
   ]
 }
