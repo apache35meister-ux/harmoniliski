@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 9,
   "totalCalls": 0,
-  "totalVisits": 73,
+  "totalVisits": 72,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
@@ -23,8 +23,7 @@
   "cityCounts": {
     "Izmir": 12,
     "Kane": 1,
-    "Washington": 59,
-    "San Jose": 1
+    "Washington": 59
   },
   "logs": [
     {
@@ -83,13 +82,6 @@
     }
   ],
   "cityVisits": [
-    {
-      "time": "15.09.2026 15:38",
-      "city": "San Jose",
-      "country": "United States",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
     {
       "time": "16.09.2026 01:34",
       "city": "Izmir",
@@ -502,24 +494,23 @@
       "country": "United States",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
+    },
+    {
+      "time": "15.09.2026 17:42",
+      "city": "Washington",
+      "country": "United States",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
     }
   ],
   "activeVisitors": [
-    {
-      "id": "v_mu397d8j_n0ja",
-      "city": "San Jose",
-      "device": "Masaüstü 💻",
-      "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789511939030,
-      "time": "15:38"
-    },
     {
       "id": "v_mu38vb5c_jjws",
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789511887727,
-      "time": "01:38"
+      "lastSeen": 1789512673325,
+      "time": "01:51"
     }
   ]
 }
