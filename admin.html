@@ -1007,7 +1007,39 @@
       therapists = JSON.parse(JSON.stringify(DEFAULT_BACKUP));
     }
 
-    setSyncStatus('Senkronize (' + therapists.length + ' Profil Yayında)', 'ok');
+    
+    // 4. CANLI ANALİTİK KÖPRÜSÜ: analytics.json'dan gerçek kullanıcı tıklamalarını çek ve profillere işle
+    try {
+      const aUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/analytics.json?ref=${GITHUB_BRANCH}&_=${Date.now()}`;
+      const aRes = await fetch(aUrl, {
+        headers: { 'Authorization': 'Bearer ' + GITHUB_TOKEN, 'Accept': 'application/vnd.github+json' },
+        cache: 'no-store'
+      });
+      if(aRes.ok) {
+        const aData = await aRes.json();
+        if(aData.content) {
+          const aDecoded = b64DecodeUnicode(aData.content.replace(/\s/g, ''));
+          const analyticsObj = JSON.parse(aDecoded || '{}');
+          if(analyticsObj && analyticsObj.tClicks) {
+            therapists.forEach(t => {
+              const byId = analyticsObj.tClicks[String(t.id)] || 0;
+              const byName = analyticsObj.tClicks[t.name] || 0;
+              const byNameLower = analyticsObj.tClicks[(t.name || '').toLowerCase()] || 0;
+              const liveC = Math.max(byId, byName, byNameLower);
+              if (liveC > (t.clicks || 0)) {
+                t.clicks = liveC;
+                t.whatsappClicks = liveC;
+              }
+            });
+          }
+        }
+      }
+    } catch(e) {
+      console.warn('Analytics merge notice:', e);
+    }
+
+    setSyncStatus('Senkronize (' + therapists.length + ' Profil Yayında - Canlı İzleme Açık)', 'ok');
+
     renderAnalytics();
     renderCards();
   }
@@ -1336,6 +1368,8 @@
   $('loadCloudBtn').addEventListener('click', loadFromGitHub);
 
   initAuth();
+  // 15 Saniyede Bir Canlı Otomatik Yenileme (Auto-Refresh)
+  setInterval(loadFromGitHub, 15000);
 })();
 </script>
 </body>
