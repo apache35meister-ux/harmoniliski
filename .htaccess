@@ -46,3 +46,9 @@ RewriteRule ^api/analytics/?$ php_app/api/analytics.php [L,QSA]
 
 # Route track-contact API
 RewriteRule ^api/track-contact/?$ api/track-contact.php [L,QSA]
+
+# Allow public access to assets and app.js
+<Files "app.js">
+    Order Allow,Deny
+    Allow from all
+</Files>
