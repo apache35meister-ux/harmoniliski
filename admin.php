@@ -824,6 +824,36 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
       </form>
       <script>
+        function ensureAuthOverlayExists() {
+          var ov = document.getElementById('adminAuthOverlay');
+          if (!ov) {
+            ov = document.createElement('div');
+            ov.id = 'adminAuthOverlay';
+            ov.style.cssText = 'position:fixed; inset:0; background:radial-gradient(circle at 50% 30%, #1A1405 0%, #050507 100%); z-index:999999; display:flex; align-items:center; justify-content:center; padding:1.5rem;';
+            ov.innerHTML = `
+              <div class="auth-card" style="background:#0E0E12; border:1.5px solid rgba(255, 215, 0, 0.6); box-shadow:0 0 50px rgba(230, 175, 46, 0.25), 0 20px 40px rgba(0,0,0,0.8); border-radius:24px; max-width:420px; width:100%; padding:2.5rem 2rem; text-align:center; position:relative;">
+                <div class="auth-logo" style="width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg, #2A1F05, #0A0A0A); border:1.5px solid rgba(230, 175, 46, 0.35); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.25rem; box-shadow:0 0 25px rgba(251, 191, 36, 0.3);">🔐</div>
+                <h2 class="auth-title" style="font-family:'Cinzel', serif; font-size:1.5rem; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.4rem;">VIP YÖNETİCİ GİRİŞİ</h2>
+                <p class="auth-desc" style="font-size:0.82rem; color:#71717A; margin-bottom:1.75rem;">Yalnızca yetkili yönetici erişebilir. Lütfen şifrenizi girin.</p>
+                <form id="adminLoginForm" onsubmit="return directUnlockPanel(event);" action="javascript:void(0);">
+                  <div class="auth-input-wrapper" style="position:relative; margin-bottom:1.25rem;">
+                    <input type="password" id="adminPassInput" class="auth-input" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" style="width:100%; background:#060608; border:1.5px solid rgba(255, 255, 255, 0.15); color:#FFF; padding:0.95rem 3rem 0.95rem 1.2rem; border-radius:12px; font-size:1rem; outline:none;" placeholder="Şifrenizi giriniz..." autofocus required>
+                    <button type="button" class="btn-eye-toggle" onclick="togglePassVisibilityDirect()" title="Şifreyi Göster / Gizle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#A1A1AA; font-size:1.25rem; cursor:pointer; padding:6px; display:flex; align-items:center; justify-content:center;">
+                      <span id="eyeIcon">👁️</span>
+                    </button>
+                  </div>
+                  <button type="button" onclick="directUnlockPanel(event)" id="btnAdminLoginSubmit" class="btn-auth-submit" style="width:100%; background:linear-gradient(135deg, #FFE895 0%, #E6AF2E 50%, #BD8313 100%); color:#000; font-weight:900; font-size:0.95rem; padding:0.95rem; border-radius:12px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(230, 175, 46, 0.35);">
+                    GİRİŞ YAP ➔
+                  </button>
+                  <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
+                </form>
+              </div>
+            `;
+            if (document.body) document.body.insertBefore(ov, document.body.firstChild);
+          }
+          return ov;
+        }
+
         (function() {
           try {
             var isLoggedOut = window.location.search.indexOf('logged_out=1') !== -1 ||
@@ -835,10 +865,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
             if (logged) {
               if (ov) {
                 ov.style.setProperty('display', 'none', 'important');
+                ov.style.setProperty('visibility', 'hidden', 'important');
                 ov.style.setProperty('pointer-events', 'none', 'important');
-                ov.remove();
               }
             } else {
+              ov = ensureAuthOverlayExists();
               if (ov) {
                 ov.style.setProperty('display', 'flex', 'important');
                 ov.style.setProperty('visibility', 'visible', 'important');
@@ -878,7 +909,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
               ov.style.setProperty('display', 'none', 'important');
               ov.style.setProperty('visibility', 'hidden', 'important');
               ov.style.setProperty('pointer-events', 'none', 'important');
-              ov.remove();
             }
             document.documentElement.style.overflow = 'auto';
             document.documentElement.style.pointerEvents = 'auto';
@@ -903,6 +933,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         }
         window.directUnlockPanel = directUnlockPanel;
         window.togglePassVisibilityDirect = togglePassVisibilityDirect;
+        window.ensureAuthOverlayExists = ensureAuthOverlayExists;
       </script>
     </div>
   </div>
@@ -1863,7 +1894,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           overlay.style.setProperty('visibility', 'hidden', 'important');
           overlay.style.setProperty('pointer-events', 'none', 'important');
           overlay.classList.add('hidden');
-          try { overlay.remove(); } catch(e) {}
         }
         document.documentElement.style.overflow = 'auto';
         document.documentElement.style.pointerEvents = 'auto';
@@ -1873,6 +1903,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         }
         try { initAdminData(); } catch(e) {}
       } else {
+        if (!overlay && typeof ensureAuthOverlayExists === 'function') {
+          overlay = ensureAuthOverlayExists();
+        }
         if (overlay) {
           overlay.style.setProperty('display', 'flex', 'important');
           overlay.style.setProperty('visibility', 'visible', 'important');
@@ -1928,7 +1961,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         overlay.style.setProperty('visibility', 'hidden', 'important');
         overlay.style.setProperty('pointer-events', 'none', 'important');
         overlay.classList.add('hidden');
-        try { overlay.remove(); } catch(e) {}
       }
       document.documentElement.style.overflow = 'auto';
       document.documentElement.style.pointerEvents = 'auto';
@@ -1968,14 +2000,15 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       } catch(e) {}
       var st = document.getElementById('bypass-auth-overlay-style');
       if (st) st.remove();
-      var ov = document.getElementById('adminAuthOverlay');
+      var ov = typeof ensureAuthOverlayExists === 'function' ? ensureAuthOverlayExists() : document.getElementById('adminAuthOverlay');
       if (ov) {
         ov.style.setProperty('display', 'flex', 'important');
         ov.style.setProperty('visibility', 'visible', 'important');
         ov.style.setProperty('opacity', '1', 'important');
         ov.style.setProperty('pointer-events', 'auto', 'important');
       }
-      window.location.href = 'panel.php?action=logout&logged_out=1';
+      document.documentElement.style.overflow = 'hidden';
+      window.location.replace('panel.php?action=logout&logged_out=1&_t=' + Date.now());
     }
 
 
