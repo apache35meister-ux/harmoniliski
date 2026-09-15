@@ -1922,7 +1922,7 @@
           <p id="sectionSub">Yüksek puanlı, sertifikalı ve doğrulanmış uzman escort profilleri</p>
         </div>
         <div class="live-count-badge" id="countDisplay">
-          Toplam 14 Escort
+          Toplam 15 Escort
         </div>
       </div>
 
