@@ -20,8 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_password'])) {
 }
 
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    $_SESSION = array();
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+            $params["path"], $params["domain"],
+            $params["secure"], $params["httponly"]
+        );
+    }
     session_destroy();
-    header('Location: ' . $_SERVER['PHP_SELF']);
+    header('Location: panel.php?logged_out=1');
     exit;
 }
 ?>
@@ -765,7 +773,16 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
   <script>
     (function() {
       try {
-        var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+        var isLoggedOut = window.location.search.indexOf('logged_out=1') !== -1 || window.location.search.indexOf('action=logout') !== -1;
+        if (isLoggedOut) {
+          try {
+            sessionStorage.clear();
+            localStorage.clear();
+            sessionStorage.removeItem('zenspa_panel_auth');
+            localStorage.removeItem('zenspa_panel_auth');
+          } catch(e) {}
+        }
+        var logged = !isLoggedOut && (sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet');
         if (logged) {
           document.documentElement.style.overflow = 'auto';
           document.documentElement.style.pointerEvents = 'auto';
@@ -779,6 +796,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           document.head.appendChild(style);
         } else {
           document.documentElement.style.overflow = 'hidden';
+          var st = document.getElementById('bypass-auth-overlay-style');
+          if (st) st.remove();
         }
       } catch(e) {}
     })();
@@ -804,16 +823,23 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         </button>
         <div id="authErrorMsg" style="display:none; color:#EF4444; margin-top:10px; font-weight:bold; font-size:0.85rem;">❌ Lütfen şifrenizi girin.</div>
       </form>
-      <script>
         (function() {
           try {
-            var logged = sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet';
+            var isLoggedOut = window.location.search.indexOf('logged_out=1') !== -1 || window.location.search.indexOf('action=logout') !== -1;
+            var logged = !isLoggedOut && (sessionStorage.getItem('zenspa_panel_auth') === 'evet' || localStorage.getItem('zenspa_panel_auth') === 'evet');
+            var ov = document.getElementById('adminAuthOverlay');
             if (logged) {
-              var ov = document.getElementById('adminAuthOverlay');
               if (ov) {
                 ov.style.setProperty('display', 'none', 'important');
                 ov.style.setProperty('pointer-events', 'none', 'important');
                 ov.remove();
+              }
+            } else {
+              if (ov) {
+                ov.style.setProperty('display', 'flex', 'important');
+                ov.style.setProperty('visibility', 'visible', 'important');
+                ov.style.setProperty('opacity', '1', 'important');
+                ov.style.setProperty('pointer-events', 'auto', 'important');
               }
             }
           } catch(e) {}
@@ -1597,15 +1623,87 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
   <script>
     const defaultTherapists = [
   {
+    id: 1788429948834, name: 'Yeliz', age: 23,
+    city: 'İzmir', district: 'Konak', gender: 'Kadın',
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791021948834,
+    wa: '905364999696', whatsapp: '905364999696',
+    img: 'images/profiles/yeliz.jpg', image: 'images/profiles/yeliz.jpg',
+    images: ['images/profiles/yeliz.jpg'], photos: ['images/profiles/yeliz.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
+  },
+  {
+    id: 1788429487588, name: 'Nadya', age: 21,
+    city: 'İzmir', district: 'Merkez', gender: 'Kadın',
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791021487588,
+    wa: '905360423563', whatsapp: '905360423563',
+    img: 'images/profiles/nadya.jpg', image: 'images/profiles/nadya.jpg',
+    images: ['images/profiles/nadya.jpg'], photos: ['images/profiles/nadya.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
+  },
+  {
+    id: 1788429161947, name: 'Funda', age: 23,
+    city: 'İzmir', district: 'Merkez', gender: 'Kadın',
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791021161947,
+    wa: '905360471313', whatsapp: '905360471313',
+    img: 'images/profiles/funda.jpg', image: 'images/profiles/funda.jpg',
+    images: ['images/profiles/funda.jpg'], photos: ['images/profiles/funda.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
+  },
+  {
+    id: 1788428841293, name: 'Aysun', age: 25,
+    city: 'İzmir', district: 'Konak', gender: 'Kadın',
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791020841293,
+    wa: '905376641285', whatsapp: '905376641285',
+    img: 'images/profiles/aysun.jpg', image: 'images/profiles/aysun.jpg',
+    images: ['images/profiles/aysun.jpg'], photos: ['images/profiles/aysun.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
+  },
+  {
+    id: 1788394289793, name: 'Bade', age: 25,
+    city: 'Aydın', district: 'İsabeyli', gender: 'Kadın',
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1790986289793,
+    wa: '905412351039', whatsapp: '905412351039',
+    img: 'images/profiles/bade.jpg', image: 'images/profiles/bade.jpg',
+    images: ['images/profiles/bade.jpg'], photos: ['images/profiles/bade.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
+  },
+  {
+    id: 1788393834126, name: 'Kumsal', age: 30,
+    city: 'Aydın', district: 'Nazilli', gender: 'Kadın',
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1790985834126,
+    wa: '905424481893', whatsapp: '905424481893',
+    img: 'images/profiles/kumsal.jpg', image: 'images/profiles/kumsal.jpg',
+    images: ['images/profiles/kumsal.jpg'], photos: ['images/profiles/kumsal.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
+  },
+  {
     id: 1787439999999, name: 'Merve', age: 26,
-    city: 'İzmir', district: 'Alsancak', gender: 'Kadın',
+    city: 'Aydın', district: 'Nazilli', gender: 'Kadın',
     services: ['İsveç', 'Aromaterapi', 'Medikal'],
     tags: ['Klasik İsveç', 'Aromaterapi', 'Kendi Yeri'],
-    bio: 'İzmir Alsancak bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    bio: 'Aydın Nazilli bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1790983436135,
     wa: '905398243593', whatsapp: '905398243593',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
+    img: 'images/profiles/merve.jpg', image: 'images/profiles/merve.jpg',
+    images: ['images/profiles/merve.jpg'], photos: ['images/profiles/merve.jpg'],
     clicks: 1, rating: '⭐ 5.0', reviews: 14
   },
   {
@@ -1613,84 +1711,84 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     city: 'Aydın', district: 'Merkez', gender: 'Kadın',
     services: ['İsveç', 'Aromaterapi', 'Medikal'],
     tags: ['Klasik İsveç', 'Aromaterapi', 'Kendi Yeri'],
-    bio: 'Aydın bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    bio: 'Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019406488,
     wa: '905446029277', whatsapp: '905446029277',
-    img: 'images/turkish_peri_photo.jpg', image: 'images/turkish_peri_photo.jpg',
-    images: ['images/turkish_peri_photo.jpg'], photos: ['images/turkish_peri_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 8
+    img: 'images/profiles/peri.jpg', image: 'images/profiles/peri.jpg',
+    images: ['images/profiles/peri.jpg'], photos: ['images/profiles/peri.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
   },
   {
-    id: 1787433800000, name: 'Ayla', age: 28,
+    id: 1787433267678, name: 'Ayla', age: 30,
     city: 'Aydın', district: 'Nazilli', gender: 'Kadın',
-    services: ['İsveç', 'Aromaterapi', 'Derin Doku'],
-    tags: ['Aromaterapi', 'Derin Doku', 'Eve Gelen'],
-    bio: 'Aydın Nazilli bölgesinde eve gelen profesyonel masaj. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'Aydın bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019421815,
     wa: '905300256187', whatsapp: '905300256187',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 6
+    img: 'images/profiles/ayla.jpg', image: 'images/profiles/ayla.jpg',
+    images: ['images/profiles/ayla.jpg'], photos: ['images/profiles/ayla.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
   },
   {
-    id: 1787433900000, name: 'Nisa', age: 25,
+    id: 1787254672367, name: 'Nisa', age: 28,
     city: 'İzmir', district: 'Buca', gender: 'Kadın',
-    services: ['İsveç', 'Aromaterapi', 'Relaks'],
-    tags: ['Klasik İsveç', 'Relaks', 'Kendi Yeri'],
-    bio: 'İzmir Buca bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019433091,
     wa: '905416056033', whatsapp: '905416056033',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 5
+    img: 'images/profiles/nisa.jpg', image: 'images/profiles/nisa.jpg',
+    images: ['images/profiles/nisa.jpg'], photos: ['images/profiles/nisa.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
   },
   {
-    id: 1787434000000, name: 'Pınar', age: 30,
+    id: 1787133632639, name: 'Pınar', age: 24,
     city: 'Uşak', district: 'Merkez', gender: 'Kadın',
-    services: ['İsveç', 'Medikal', 'Relaks'],
-    tags: ['Medikal', 'Relaks', 'Kendi Yeri'],
-    bio: 'Uşak Merkez\'de profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'Uşak bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019443827,
     wa: '905330593564', whatsapp: '905330593564',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 7
+    img: 'images/profiles/pinar.jpg', image: 'images/profiles/pinar.jpg',
+    images: ['images/profiles/pinar.jpg'], photos: ['images/profiles/pinar.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
   },
   {
-    id: 1787434100000, name: 'Melis', age: 27,
+    id: 1787133440430, name: 'Melis', age: 23,
     city: 'İzmir', district: 'Alsancak', gender: 'Kadın',
-    services: ['İsveç', 'Aromaterapi', 'VIP'],
-    tags: ['VIP', 'Aromaterapi', 'Kendi Yeri'],
-    bio: 'İzmir Alsancak\'ta VIP masaj hizmeti. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.500 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019454992,
     wa: '905398243593', whatsapp: '905398243593',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 11
+    img: 'images/profiles/melis.jpg', image: 'images/profiles/melis.jpg',
+    images: ['images/profiles/melis.jpg'], photos: ['images/profiles/melis.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
   },
   {
-    id: 1787434200000, name: 'Burçak', age: 29,
+    id: 1787133029944, name: 'Burçak', age: 25,
     city: 'İzmir', district: 'Konak', gender: 'Kadın',
-    services: ['İsveç', 'Derin Doku', 'Relaks'],
-    tags: ['Derin Doku', 'Relaks', 'Kendi Yeri'],
-    bio: 'İzmir Konak bölgesinde profesyonel masaj hizmeti. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.000 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İzmir bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019464212,
     wa: '905380586549', whatsapp: '905380586549',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 0, rating: '⭐ 5.0', reviews: 9
+    img: 'images/profiles/burcak.jpg', image: 'images/profiles/burcak.jpg',
+    images: ['images/profiles/burcak.jpg'], photos: ['images/profiles/burcak.jpg'],
+    clicks: 0, rating: '⭐ 5.0', reviews: 12
   },
   {
-    id: 1787434300000, name: 'Sıla', age: 24,
+    id: 1787093135705, name: 'Sıla', age: 26,
     city: 'İstanbul', district: 'Kadıköy', gender: 'Kadın',
-    services: ['İsveç', 'Aromaterapi', 'Medikal'],
-    tags: ['Klasik İsveç', 'Aromaterapi', 'Eve Gelen'],
-    bio: 'İstanbul Kadıköy\'de eve ve otel odasına gelen profesyonel masaj. WhatsApp\'tan randevu alın.',
-    price: '60 Dk: 2.500 ₺', vitrin: true, active: true, expiresAt: 1798000000000,
-    wa: '6663937292', whatsapp: '6663937292',
-    img: 'images/turkish_merve_photo.jpg', image: 'images/turkish_merve_photo.jpg',
-    images: ['images/turkish_merve_photo.jpg'], photos: ['images/turkish_merve_photo.jpg'],
-    clicks: 10, rating: '⭐ 5.0', reviews: 10
+    services: ['Klasik', 'Özel Seans', 'VIP Randevu'],
+    tags: ['Klasik', 'Özel Seans', 'Kendi Yeri'],
+    bio: 'İstanbul bölgesinde profesyonel ve hijyenik ortamda eskort hizmeti sunmaktayım. Randevu için WhatsApp\'tan yazabilirsiniz.',
+    price: 'ESCORT', vitrin: true, active: true, expiresAt: 1791019474254,
+    wa: '66639372920', whatsapp: '66639372920',
+    img: 'images/profiles/sila.jpg', image: 'images/profiles/sila.jpg',
+    images: ['images/profiles/sila.jpg'], photos: ['images/profiles/sila.jpg'],
+    clicks: 10, rating: '⭐ 5.0', reviews: 12
   },
   {
     id: 1788738592899, name: 'Zeynep', age: 25,
@@ -1705,6 +1803,34 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     clicks: 12, rating: '⭐ 5.0', reviews: 14
   }
 ];
+
+    function getProfileImg(t) {
+      if (!t) return 'images/profiles/yeliz.jpg';
+      var raw = (t.name || '').toLowerCase().trim();
+      var norm = raw.replace(/ı/g, 'i').replace(/ç/g, 'c').replace(/ş/g, 's').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o');
+      var photoMap = {
+        'yeliz': 'images/profiles/yeliz.jpg',
+        'nadya': 'images/profiles/nadya.jpg',
+        'funda': 'images/profiles/funda.jpg',
+        'aysun': 'images/profiles/aysun.jpg',
+        'bade': 'images/profiles/bade.jpg',
+        'kumsal': 'images/profiles/kumsal.jpg',
+        'merve': 'images/profiles/merve.jpg',
+        'peri': 'images/profiles/peri.jpg',
+        'ayla': 'images/profiles/ayla.jpg',
+        'nisa': 'images/profiles/nisa.jpg',
+        'pinar': 'images/profiles/pinar.jpg',
+        'melis': 'images/profiles/melis.jpg',
+        'burcak': 'images/profiles/burcak.jpg',
+        'sila': 'images/profiles/sila.jpg',
+        'zeynep': 'images/profiles/zeynep.jpg'
+      };
+      if (photoMap[norm]) return photoMap[norm];
+      if (photoMap[raw]) return photoMap[raw];
+      if (t.img && !t.img.includes('turkish_merve_photo') && !t.img.includes('pınar') && !t.img.includes('burçak') && !t.img.includes('sıla')) return t.img;
+      if (t.image && !t.image.includes('turkish_merve_photo')) return t.image;
+      return 'images/profiles/yeliz.jpg';
+    }
     let list = [];
     let currentPhotoUrl = "";
 
@@ -1820,21 +1946,22 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     }
 
     function adminLogout() {
-      if (confirm("Yönetim panelinden güvenli çıkış yapmak istediğinize emin misiniz?")) {
-        try {
-          sessionStorage.removeItem('zenspa_panel_auth');
-          localStorage.removeItem('zenspa_panel_auth');
-        } catch(e) {}
-        var passEl = document.getElementById('adminPassInput');
-        if (passEl) passEl.value = '';
-        var overlay = document.getElementById('adminAuthOverlay');
-        if (overlay) {
-          overlay.style.display = 'flex';
-          overlay.style.pointerEvents = 'auto';
-          document.documentElement.style.overflow = 'hidden';
-          if (passEl) setTimeout(function() { passEl.focus(); }, 150);
-        }
+      try {
+        sessionStorage.clear();
+        localStorage.clear();
+        sessionStorage.removeItem('zenspa_panel_auth');
+        localStorage.removeItem('zenspa_panel_auth');
+      } catch(e) {}
+      var st = document.getElementById('bypass-auth-overlay-style');
+      if (st) st.remove();
+      var ov = document.getElementById('adminAuthOverlay');
+      if (ov) {
+        ov.style.setProperty('display', 'flex', 'important');
+        ov.style.setProperty('visibility', 'visible', 'important');
+        ov.style.setProperty('opacity', '1', 'important');
+        ov.style.setProperty('pointer-events', 'auto', 'important');
       }
+      window.location.href = 'panel.php?action=logout';
     }
 
 
@@ -1964,13 +2091,31 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           if (!exists) {
             list.push(JSON.parse(JSON.stringify(defT)));
           }
+      // GARANTİ: Resim yollarını ilk render öncesi hemen sanitize et
+      if (Array.isArray(list)) {
+        list.forEach(item => {
+          item.img = getProfileImg(item);
+          item.image = item.img;
+          item.images = [item.img];
+          item.photos = [item.img];
         });
       }
       try { renderTable(list); } catch(e) {}
 
       try {
+        const localRes = await fetch('therapists.json?t=' + Date.now(), { cache: 'no-store' });
+        if (localRes.ok) {
+          const localArr = await localRes.json();
+          if (Array.isArray(localArr) && localArr.length >= 15) {
+            list = localArr;
+            try { localStorage.setItem('zenspa_therapists', JSON.stringify(list)); } catch(e) {}
+          }
+        }
+      } catch(e) {}
+
+      try {
         const liveList = await fetchLatestFromGitHub();
-        if (liveList && Array.isArray(liveList) && liveList.length > 0) {
+        if (liveList && Array.isArray(liveList) && liveList.length >= 15) {
           list = liveList;
           try {
             localStorage.setItem('zenspa_therapists', JSON.stringify(list));
@@ -1986,13 +2131,23 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         }
       }
 
-      // GARANTİ: Zeynep ve default listesindeki tüm üyelerin list içinde olduğundan emin ol
+      // GARANTİ: 15 profilin tamamının listede olduğundan emin ol
       if (typeof defaultTherapists !== 'undefined' && Array.isArray(defaultTherapists)) {
         defaultTherapists.forEach(defT => {
           const exists = list.some(item => String(item.id) === String(defT.id) || (item.name && item.name.toLowerCase().trim() === (defT.name || '').toLowerCase().trim()));
           if (!exists) {
             list.push(JSON.parse(JSON.stringify(defT)));
           }
+        });
+      }
+
+      // GARANTİ: Resim yollarını sanitize et (her üyenin kendi orijinal fotoğrafı olsun)
+      if (Array.isArray(list)) {
+        list.forEach(item => {
+          item.img = getProfileImg(item);
+          item.image = item.img;
+          item.images = [item.img];
+          item.photos = [item.img];
         });
       }
 
@@ -2102,7 +2257,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <tr style="opacity: ${isAct ? '1' : '0.6'};">
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='images/turkish_merve_photo.jpg'">
+              <img src="${getProfileImg(t)}" class="therapist-avatar" onerror="this.src='images/profiles/yeliz.jpg'">
               <div>
                 <strong style="color:#FFF;">${t.name}</strong>
                 <div style="font-size:0.75rem; color:#A1A1AA;">${t.age || 25} Yaş • ${t.gender || 'Kadın'}</div>
@@ -2147,7 +2302,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <tr>
           <td>
             <div class="therapist-info">
-              <img src="${t.img || t.image}" class="therapist-avatar">
+              <img src="${getProfileImg(t)}" class="therapist-avatar" onerror="this.src='images/profiles/yeliz.jpg'">
               <strong style="color:#FFF;">${t.name}</strong>
             </div>
           </td>
@@ -2415,7 +2570,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           <tr>
             <td>
               <div class="therapist-info">
-                <img src="${t.img || t.image}" class="therapist-avatar" onerror="this.src='images/turkish_merve_photo.jpg'">
+                <img src="${getProfileImg(t)}" class="therapist-avatar" onerror="this.src='images/profiles/yeliz.jpg'">
                 <strong style="color:#FFF;">${t.name}</strong>
               </div>
             </td>
