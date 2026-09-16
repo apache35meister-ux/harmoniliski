@@ -1,14 +1,25 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 1,
   "lastUpdated": "16.09.2026 13:54",
-  "tClicks": {},
+  "tClicks": {
+    "1788500000008": 1,
+    "Aylin": 1,
+    "aylin": 1
+  },
   "tCalls": {},
   "cityCounts": {
     "Izmir": 1
   },
-  "logs": [],
+  "logs": [
+    {
+      "time": "16.09.2026 14:35",
+      "name": "Aylin",
+      "city": "Bursa",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "16.09.2026 14:35",
