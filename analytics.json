@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "lastUpdated": "16.09.2026 13:54",
   "tClicks": {
     "1788500000008": 1,
@@ -12,7 +12,8 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 1
+    "Izmir": 1,
+    "Amsterdam": 1
   },
   "logs": [
     {
@@ -42,6 +43,13 @@
   ],
   "cityVisits": [
     {
+      "time": "16.09.2026 15:45",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "device": "Android 📱",
+      "page": "Ana Sayfa"
+    },
+    {
       "time": "16.09.2026 14:35",
       "city": "Izmir",
       "country": "Türkiye",
@@ -51,12 +59,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu30c31i_bx84",
-      "city": "Izmir",
-      "device": "iPhone 📱",
+      "id": "v_mu43girc_24py",
+      "city": "Amsterdam",
+      "device": "Android 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789558552140,
-      "time": "14:35"
+      "lastSeen": 1789562755531,
+      "time": "15:45"
     }
   ]
 }
