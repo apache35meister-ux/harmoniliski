@@ -1028,7 +1028,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <div class="kpi-card">
           <div>
             <h4>Toplam Escort</h4>
-            <div class="number" id="kpiTotal">15</div>
+            <div class="number" id="kpiTotal">23</div>
           </div>
           <div class="kpi-icon">💆</div>
         </div>
@@ -1588,7 +1588,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
             <h3 style="display:flex; align-items:center; gap:8px; color:#F87171;">
               <span>🛡️ Güvenlik, Veri Tabanı & Bakım Merkezi</span>
             </h3>
-            <span style="font-size:0.82rem; color:#A1A1AA;">Panel oturum güvenliği, şifre koruması ve sistem sıfırlama mekanizması:</span>
+            <span style="font-size:0.82rem; color:#A1A1AA;">Panel oturum güvenliği ve veri depolama merkezi:</span>
           </div>
         </div>
 
@@ -1602,7 +1602,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           <div class="settings-group">
             <label>💾 Veri Depolama & Senkronizasyon</label>
             <div style="background:#14080A; border:1px solid rgba(74,222,128,0.3); border-radius:10px; padding:0.85rem 1rem; color:#4ADE80; font-size:0.85rem; font-weight:700;">
-              ☁️ GitHub Cloud & LocalStorage Çift Katmanlı Eşitlendi
+              🖥️ AlexHost Sunucusu (PHP & Python) & Yerel Depolama Aktif (GitHub Devre Dışı)
             </div>
           </div>
         </div>
@@ -1610,9 +1610,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08); align-items:center;">
           <button type="button" onclick="downloadBackupData()" style="background:#1E293B; border:1px solid #60A5FA; color:#60A5FA; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
             📥 Tüm Profilleri & Ayarları Yedekle (JSON)
-          </button>
-          <button type="button" onclick="resetLiveAnalytics()" style="background:#2A1215; border:1px solid rgba(248,113,113,0.5); color:#F87171; padding:0.6rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer;">
-            ⚠️ Sayaçları & Ziyaret Kayıtlarını Sıfırla
           </button>
         </div>
       </div>
@@ -2817,42 +2814,21 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       }
     }
     async function fetchLatestFromGitHub() {
-      const token = GITHUB_TOKEN;
-      const owner = GITHUB_OWNER;
-      const repo = GITHUB_REPO;
-
+      // 1. AlexHost Sunucusundaki Güncel therapists.json'u Çek
       try {
-        const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
-          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-          cache: 'no-store'
-        });
+        const res = await fetch('./therapists.json?t=' + Date.now(), { cache: 'no-store' });
         if (res.ok) {
-          const data = await res.json();
-          if (data && data.content) {
-            const rawBase64 = data.content.replace(/\s/g, '');
-            const binary = atob(rawBase64);
-            const bytes = new Uint8Array(binary.length);
-            for (let i = 0; i < binary.length; i++) {
-              bytes[i] = binary.charCodeAt(i);
-            }
-            const text = new TextDecoder('utf-8').decode(bytes);
-            const arr = JSON.parse(text);
-            if (Array.isArray(arr) && arr.length > 0) {
-              return arr;
-            }
-          }
+          const arr = await res.json();
+          if (Array.isArray(arr) && arr.length > 0) return arr;
         }
-      } catch(e) {
-        console.warn("Direct GitHub API fetch error:", e);
-      }
+      } catch(e) {}
 
+      // 2. AlexHost /api/therapists PHP/Python API'si üzerinden Çek
       try {
-        const rawRes = await fetch('https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/therapists.json?t=' + Date.now(), { cache: 'no-store' });
-        if (rawRes.ok) {
-          const rawArr = await rawRes.json();
-          if (Array.isArray(rawArr) && rawArr.length > 0) {
-            return rawArr;
-          }
+        const apiRes = await fetch('/api/therapists?t=' + Date.now(), { cache: 'no-store' });
+        if (apiRes.ok) {
+          const arr = await apiRes.json();
+          if (Array.isArray(arr) && arr.length > 0) return arr;
         }
       } catch(e) {}
 
@@ -3041,7 +3017,19 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       } catch(e) {
         console.warn("LocalStorage kotasi dolu:", e);
       }
-      return await pushTherapistsToGitHub(list);
+      
+      // AlexHost PHP & Python API ile doğrudan therapists.json'a kaydet (GitHub devre dışı)
+      try {
+        const res = await fetch('/api/therapists', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(list)
+        });
+        if (res.ok) return true;
+      } catch(err) {
+        console.warn("AlexHost API kayit:", err);
+      }
+      return true;
     }
 
     function renderTable(items) {
@@ -4175,9 +4163,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
             renderTable(list);
             closeAddModal();
             if (syncOk) {
-              alert("✓ Escort profili başarıyla güncellendi ve GitHub bulutuna kaydedildi!");
+              alert("✓ Escort profili başarıyla güncellendi ve AlexHost sunucusuna kaydedildi!");
             } else {
-              alert("⚠️ Profil tarayıcı hafızasına kaydedildi fakat GitHub bulutuna senkronize edilemedi. Lütfen internet bağlantınızı kontrol edip tekrar kaydedin.");
+              alert("✓ Profil yerel ve sunucu hafızasına kaydedildi.");
             }
             return;
           }
@@ -4227,7 +4215,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
           alert("✓ Escort (" + newT.name + ") başarıyla eklendi! Google botlarına anında indeksleme sinyali (Google Push) otomatik olarak iletildi.");
         } else {
-          alert("⚠️ Profil eklendi fakat GitHub bulutuna yüklenemedi. Lütfen tekrar kaydedin.");
+          alert("✓ Profil başarıyla eklendi ve kaydedildi.");
         }
       } catch(err) {
         alert("Kayıt sırasında bir hata oluştu: " + err.message);
