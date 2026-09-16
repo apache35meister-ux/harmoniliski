@@ -1,21 +1,26 @@
 {
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 1,
   "lastUpdated": "16.09.2026 13:54",
   "tClicks": {
     "1788500000008": 1,
     "Aylin": 1,
     "aylin": 1,
-    "1788429948834": 2,
-    "yeliz": 4
+    "1788429948834": 3,
+    "yeliz": 6
   },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 1,
-    "Warsaw": 1
+    "Izmir": 1
   },
   "logs": [
+    {
+      "time": "16.09.2026 15:38",
+      "name": "yeliz",
+      "city": "izmir",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16.09.2026 14:56",
       "name": "yeliz",
@@ -37,13 +42,6 @@
   ],
   "cityVisits": [
     {
-      "time": "16.09.2026 12:34",
-      "city": "Warsaw",
-      "country": "Poland",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
-    },
-    {
       "time": "16.09.2026 14:35",
       "city": "Izmir",
       "country": "Türkiye",
@@ -53,12 +51,12 @@
   ],
   "activeVisitors": [
     {
-      "id": "v_mu431vzk_qtne",
-      "city": "Warsaw",
-      "device": "Masaüstü 💻",
+      "id": "v_mu30c31i_bx84",
+      "city": "Izmir",
+      "device": "iPhone 📱",
       "activity": "Escort Profillerini İnceliyor",
-      "lastSeen": 1789562072720,
-      "time": "12:34"
+      "lastSeen": 1789558552140,
+      "time": "14:35"
     }
   ]
 }
