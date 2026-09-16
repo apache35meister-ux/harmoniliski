@@ -991,9 +991,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       <a href="index.php" class="btn-live-site" target="_blank">
         <span>🌐 Ana Siteyi Görüntüle</span>
       </a>
-      <button class="btn-logout" onclick="adminLogout()">
-        <span>🔒 Güvenli Çıkış Yap</span>
-      </button>
     </div>
   </aside>
 
@@ -1016,9 +1013,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
           <button class="btn-add-therapist" onclick="openAddModal()">
             <span>+</span>
             <span>Yeni Escort / İlan Ekle</span>
-          </button>
-          <button class="btn-logout-header" onclick="adminLogout()">
-            🔒 Güvenli Çıkış Yap
           </button>
         </div>
       </div>
@@ -2609,9 +2603,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
 
     const ADMIN_PASS = "hakan908558";
-    const GITHUB_TOKEN = [102, 103, 111, 94, 71, 97, 68, 112, 67, 70, 84, 99, 66, 109, 88, 55, 119, 81, 48, 54, 87, 110, 109, 77, 112, 97, 116, 47, 99, 72, 70, 110, 53, 65, 51, 87, 106, 99, 114, 112].map(c => String.fromCharCode(c + 1)).join('');
-    const GITHUB_OWNER = "apache35meister-ux";
-    const GITHUB_REPO = "harmoniliski";
+    const GITHUB_TOKEN = "";
+    const GITHUB_OWNER = "";
+    const GITHUB_REPO = "";
 
     function checkAuth() {
       var logged = false;
@@ -2933,81 +2927,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     }
 
     async function pushTherapistsToGitHub(currentList) {
-      try {
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
-        let fileSha = null;
-        try {
-          const fileRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (fileRes.ok) {
-            const fileData = await fileRes.json();
-            if (fileData && fileData.sha) fileSha = fileData.sha;
-          }
-        } catch(e) {}
-
-        if (!fileSha) {
-          try {
-            const refRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/ref/heads/main?t=' + Date.now(), {
-              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-              cache: 'no-store'
-            });
-            const refData = await refRes.json();
-            const commitRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/commits/' + refData.object.sha, {
-              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-            });
-            const commitData = await commitRes.json();
-            const treeRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/git/trees/' + commitData.tree.sha, {
-              headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-            });
-            const treeData = await treeRes.json();
-            const item = (treeData.tree || []).find(f => f.path === 'therapists.json');
-            if (item) fileSha = item.sha;
-          } catch(e) {}
-        }
-
-        if (!fileSha) {
-          console.warn("SHA alınamadı, bulut güncellenemedi.");
-          return false;
-        }
-
-        const jsonStr = JSON.stringify(currentList, null, 2);
-        const utf8Bytes = new TextEncoder().encode(jsonStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) {
-          binary += String.fromCharCode(utf8Bytes[i]);
-        }
-        const base64Content = btoa(binary);
-
-        const putRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/therapists.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: "Admin: Sync therapist catalog to cloud",
-            content: base64Content,
-            sha: fileSha
-          })
-        });
-
-        if (!putRes.ok) {
-          const errData = await putRes.json().catch(() => ({}));
-          console.error("GitHub PUT error:", putRes.status, errData);
-          return false;
-        }
-
-        return true;
-      } catch(err) {
-        console.error("Bulut sync hatasi:", err);
-        return false;
-      }
+      // GitHub devre dışı - AlexHost sunucusunda /api/therapists kullanılır
+      return true;
     }
 
     async function saveToStorage() {
@@ -3141,34 +3062,18 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         activeVisitors: JSON.parse(localStorage.getItem('zenspa_active_visitors') || '[]')
       };
 
-      // 3. Buluttan (GitHub analytics.json) cek ve guncel resmi verileri yansit
+      // 3. AlexHost Sunucusundan (analytics.json & /api/analytics) çek ve güncel resmi verileri yansıt
       try {
         let cloudStats = null;
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
         try {
-          const apiRes = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (apiRes.ok) {
-            const data = await apiRes.json();
-            if (data && data.content) {
-              const rawBase64 = data.content.replace(/\s/g, '');
-              const binary = atob(rawBase64);
-              const bytes = new Uint8Array(binary.length);
-              for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-              cloudStats = JSON.parse(new TextDecoder('utf-8').decode(bytes));
-            }
-          }
+          const res = await fetch('./analytics.json?t=' + Date.now(), { cache: 'no-store' });
+          if (res.ok) cloudStats = await res.json();
         } catch(e) {}
 
         if (!cloudStats) {
           try {
-            const rawRes = await fetch('https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/analytics.json?t=' + Date.now(), { cache: 'no-store' });
-            if (rawRes.ok) cloudStats = await rawRes.json();
+            const apiRes = await fetch('/api/analytics?t=' + Date.now(), { cache: 'no-store' });
+            if (apiRes.ok) cloudStats = await apiRes.json();
           } catch(e) {}
         }
 
@@ -3516,71 +3421,20 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         localStorage.setItem('zenspa_t_calls', JSON.stringify(curTCalls));
         localStorage.setItem('zenspa_live_call_logs', JSON.stringify(curLogs));
 
-        // GitHub bulut senkronizasyonu
+        // AlexHost PHP & Python sunucu senkronizasyonu
         try {
-          const owner = GITHUB_OWNER;
-          const repo = GITHUB_REPO;
-          const token = GITHUB_TOKEN;
-
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json?t=' + Date.now(), {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
-            cache: 'no-store'
-          });
-          if (res.ok) {
-            const data = await res.json();
-            const rawBase64 = (data.content || '').replace(/\s/g, '');
-            const binary = atob(rawBase64);
-            const bytes = new Uint8Array(binary.length);
-            for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-            const currentJson = JSON.parse(new TextDecoder('utf-8').decode(bytes));
-
-            if (actionType.includes('WhatsApp')) {
-              currentJson.totalWaClicks = (currentJson.totalWaClicks || 0) + 1;
-              currentJson.tClicks = currentJson.tClicks || {};
-              const curIdStr = String(tId || '1788738592899');
-              currentJson.tClicks[curIdStr] = (currentJson.tClicks[curIdStr] || 0) + 1;
-              if (tName) {
-                currentJson.tClicks[tName] = (currentJson.tClicks[tName] || 0) + 1;
-                currentJson.tClicks[tName.toLowerCase()] = (currentJson.tClicks[tName.toLowerCase()] || 0) + 1;
-              }
-            } else {
-              currentJson.totalCalls = (currentJson.totalCalls || 0) + 1;
-              currentJson.tCalls = currentJson.tCalls || {};
-              if (tId) currentJson.tCalls[tId] = (currentJson.tCalls[tId] || 0) + 1;
-            }
-
-            currentJson.logs = currentJson.logs || [];
-            currentJson.logs.unshift({
-              time: timeStr,
+          await fetch('/api/analytics', {
+            method: 'POST',
+            keepalive: true,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              type: actionType.includes('WhatsApp') ? 'whatsapp' : 'call',
               name: tName || 'VIP Escort',
-              city: city || 'Türkiye',
-              type: actionType
-            });
-            if (currentJson.logs.length > 50) currentJson.logs = currentJson.logs.slice(0, 50);
-
-            const newStr = JSON.stringify(currentJson, null, 2);
-            const utf8B = new TextEncoder().encode(newStr);
-            let bStr = '';
-            for (let i = 0; i < utf8B.length; i++) bStr += String.fromCharCode(utf8B[i]);
-            const base64Content = btoa(bStr);
-
-            await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/analytics.json', {
-              method: 'PUT',
-              keepalive: true,
-              headers: {
-                'Authorization': 'Bearer ' + token,
-                'Accept': 'application/vnd.github+json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                message: "Track admin WA click: " + tName,
-                content: base64Content,
-                sha: data.sha
-              })
-            });
-          }
+              city: city || 'Türkiye'
+            })
+          });
         } catch(cloudErr) {
-          console.warn('Cloud WA click error:', cloudErr);
+          console.warn('AlexHost click tracking error:', cloudErr);
         }
       } catch(err) {
         console.error('recordWaClick err:', err);
@@ -3635,56 +3489,12 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       // 2. Arayüz Sayaçlarını Anında Sıfırla
       renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
 
-      // 3. GitHub Cloud analytics.json Sıfırlama
+      // 3. AlexHost Sunucusunda analytics.json Sıfırlama
       try {
-        const emptyAnalytics = {
-          totalWaClicks: 0,
-          totalCalls: 0,
-          totalVisits: 0,
-          lastUpdated: new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', {hour:'2-digit', minute:'2-digit'}),
-          tClicks: {},
-          tCalls: {},
-          cityCounts: {},
-          logs: [],
-          cityVisits: [],
-          activeVisitors: []
-        };
-
-        const jsonStr = JSON.stringify(emptyAnalytics, null, 2);
-        const utf8Bytes = new TextEncoder().encode(jsonStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
-        const base64Content = btoa(binary);
-
-        let sha = null;
-        try {
-          const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json?t=' + Date.now(), {
-            headers: {
-              'Authorization': 'Bearer ' + GITHUB_TOKEN,
-              'Accept': 'application/vnd.github+json'
-            },
-            cache: 'no-store'
-          });
-          if (res.ok) {
-            const fd = await res.json();
-            if (fd && fd.sha) sha = fd.sha;
-          }
-        } catch(e) {}
-
-        const putBody = {
-          message: "Reset analytics and visitor statistics to zero",
-          content: base64Content
-        };
-        if (sha) putBody.sha = sha;
-
-        await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/analytics.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + GITHUB_TOKEN,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(putBody)
+        await fetch('/api/analytics', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'reset' })
         });
 
         try {
@@ -3694,7 +3504,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
         renderWaTableSync({ waClicks: 0, callClicks: 0, visits: 0, tClicks: {}, tCalls: {}, callLogs: [] });
       } catch(err) {
-        console.warn("Analytics cloud reset error:", err);
+        console.warn("AlexHost analytics reset error:", err);
       } finally {
         setTimeout(() => { _isPolling = false; }, 2000);
       }
@@ -4430,57 +4240,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         brandH2.textContent = title.split('|')[0].trim();
       }
 
-      // Bulut Senkronizasyonu (Tüm cihazlar ve oturumlar için)
-      try {
-        const token = GITHUB_TOKEN;
-        const owner = GITHUB_OWNER;
-        const repo = GITHUB_REPO;
-
-        let sha = null;
-        try {
-          const res = await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
-            headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
-          });
-          if (res.ok) {
-            const fd = await res.json();
-            if (fd && fd.sha) sha = fd.sha;
-          }
-        } catch(e) {}
-
-        const newSettingsObj = {
-          siteTitle: title,
-          waNumber: wa,
-          scope: scope,
-          waWelcome: waWelcome,
-          priceWeek: priceWeek,
-          price15: price15,
-          priceMonth: priceMonth,
-          priceGold: priceGold,
-          refreshSec: refreshSec
-        };
-        const newStr = JSON.stringify(newSettingsObj, null, 2);
-        const utf8Bytes = new TextEncoder().encode(newStr);
-        let binary = '';
-        for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
-        const base64Content = btoa(binary);
-
-        const putBody = { message: "Update platform settings: " + title, content: base64Content };
-        if (sha) putBody.sha = sha;
-
-        await fetch('https://api.github.com/repos/' + owner + '/' + repo + '/contents/settings.json', {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'Bearer ' + token,
-            'Accept': 'application/vnd.github+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(putBody)
-        });
-      } catch(err) {
-        console.log("Settings cloud sync err:", err);
-      }
-
-      alert("✓ Platform ayarları kalıcı olarak kaydedildi ve bulut ile senkronize edildi!");
+      alert("✓ Platform ayarları kalıcı olarak kaydedildi!");
     }
 
     async function downloadBackupData() {
@@ -4867,10 +4627,5 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
       setTimeout(updateMainLiveKpiBar, 300);
     });
   </script>
-
-  <!-- Sabit Güvenli Çıkış Butonu -->
-  <button class="floating-logout" onclick="adminLogout()" title="Yönetim Panelinden Güvenli Çıkış Yap">
-    🔒 Güvenli Çıkış Yap
-  </button>
 </body>
 </html>
