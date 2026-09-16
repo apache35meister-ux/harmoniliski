@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 29,
   "totalCalls": 0,
-  "totalVisits": 108,
+  "totalVisits": 109,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
@@ -28,7 +28,7 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Izmir": 46,
+    "Izmir": 47,
     "Kane": 1,
     "Washington": 60,
     "San Jose": 1
@@ -210,6 +210,13 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16.09.2026 19:14",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa"
+    },
     {
       "time": "16.09.2026 15:59",
       "city": "Izmir",
@@ -622,13 +629,6 @@
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa"
-    },
-    {
-      "time": "15.09.2026 18:39",
-      "city": "Washington",
-      "country": "United States",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa"
     }
   ],
   "activeVisitors": [
@@ -637,8 +637,8 @@
       "city": "Izmir",
       "device": "Masaüstü 💻",
       "activity": "Sitede Aktif Geziniyor",
-      "lastSeen": 1789571854757,
-      "time": "18:17"
+      "lastSeen": 1789575280249,
+      "time": "19:14"
     }
   ]
 }
