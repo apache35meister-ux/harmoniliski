@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 2,
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "15.11.2026 01:56:32",
   "tClicks": {
     "1794900000001": 1,
@@ -12,8 +12,19 @@
     "damla": 1
   },
   "tCalls": {},
-  "cityCounts": {},
+  "cityCounts": {
+    "Bursa": 1
+  },
   "logs": [
+    {
+      "time": "01:57",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:57",
       "timestamp": 1794697050246,
@@ -31,5 +42,14 @@
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "activeVisitors": []
+  "activeVisitors": [
+    {
+      "id": "v_yaa7o37",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "activity": "Sitede Aktif Geziniyor",
+      "lastSeen": 1794697066252,
+      "time": "01:57"
+    }
+  ]
 }
