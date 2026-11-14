@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 33,
   "totalCalls": 0,
-  "totalVisits": 111,
+  "totalVisits": 112,
   "lastUpdated": "15.09.2026 15:00",
   "tClicks": {
     "1787093135705": 4,
@@ -32,9 +32,17 @@
     "Kane": 1,
     "Washington": 60,
     "San Jose": 1,
-    "Bursa": 1
+    "Bursa": 2
   },
   "logs": [
+    {
+      "time": "01:51",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:50",
       "city": "Bursa",
@@ -665,6 +673,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "v_c4c3a5x",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "activity": "Sitede Aktif Geziniyor",
+      "lastSeen": 1794696675049,
+      "time": "01:51"
+    },
     {
       "id": "v_vbk9ulj",
       "city": "Bursa",
