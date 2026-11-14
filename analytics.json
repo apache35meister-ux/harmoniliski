@@ -1,11 +1,24 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 0,
   "lastUpdated": "15.11.2026 01:56:32",
-  "tClicks": {},
+  "tClicks": {
+    "1794900000001": 1,
+    "Selin": 1,
+    "selin": 1
+  },
   "tCalls": {},
   "cityCounts": {},
-  "logs": [],
+  "logs": [
+    {
+      "time": "01:57",
+      "timestamp": 1794697044555,
+      "name": "Selin",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "activeVisitors": []
 }
