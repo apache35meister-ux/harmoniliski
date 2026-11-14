@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 3,
   "totalCalls": 0,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "lastUpdated": "15.11.2026 02:04:14",
   "tClicks": {
     "Damla": 1,
@@ -14,9 +14,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 2
+    "Bursa": 3
   },
   "logs": [
+    {
+      "time": "02:24",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:12",
       "timestamp": 1794697931728,
@@ -59,6 +68,14 @@
     }
   ],
   "activeVisitors": [
+    {
+      "id": "v_gze57yw",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "activity": "Sitede Aktif Geziniyor",
+      "lastSeen": 1794698644016,
+      "time": "02:24"
+    },
     {
       "id": "v_zs54rp9",
       "city": "Bursa",
