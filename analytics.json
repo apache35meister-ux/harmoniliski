@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 47,
   "totalCalls": 0,
-  "totalVisits": 345,
+  "totalVisits": 346,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
@@ -59,9 +59,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 345
+    "Bursa": 346
   },
   "logs": [
+    {
+      "time": "01:00",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:59",
       "name": "Ziyaretçi (Android 📱)",
@@ -755,14 +764,6 @@
       "device": "iPhone 📱",
       "page": "/nilufer-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:24",
-      "timestamp": 1794777895423,
-      "name": "Tuba",
-      "city": "Bursa / Kent Meydanı",
-      "device": "iPhone 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
