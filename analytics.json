@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 13,
+  "totalWaClicks": 14,
   "totalCalls": 0,
   "totalVisits": 224,
   "lastUpdated": "15.11.2026 09:16:38",
@@ -19,7 +19,7 @@
     "Sena": 1,
     "sena": 1,
     "1788500000003": 1,
-    "905358873382": 3,
+    "905358873382": 4,
     "Melisa": 1,
     "melisa": 1,
     "1794900000002": 2,
@@ -27,13 +27,24 @@
     "damla": 2,
     "1790000000335": 1,
     "İzel": 1,
-    "i̇zel": 1
+    "i̇zel": 1,
+    "1794900000025": 1,
+    "Bahar": 1,
+    "bahar": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 224
   },
   "logs": [
+    {
+      "time": "23:51",
+      "timestamp": 1794775907161,
+      "name": "Bahar",
+      "city": "Kocaeli / Başiskele",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:51",
       "name": "Ziyaretçi (Android 📱)",
@@ -733,15 +744,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/gorukle-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:22",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
