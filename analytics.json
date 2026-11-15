@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 13,
   "totalCalls": 0,
-  "totalVisits": 219,
+  "totalVisits": 220,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
@@ -31,9 +31,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 219
+    "Bursa": 220
   },
   "logs": [
+    {
+      "time": "16:00",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:47",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -734,14 +743,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:55",
-      "timestamp": 1794740137859,
-      "name": "Açelya",
-      "city": "Bursa / Osmangazi",
-      "device": "iPhone 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
