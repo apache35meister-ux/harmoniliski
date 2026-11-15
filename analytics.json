@@ -1,14 +1,27 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 6,
   "lastUpdated": "15.11.2026 09:16:38",
-  "tClicks": {},
+  "tClicks": {
+    "1788500000006": 1,
+    "905319222689": 1,
+    "Rus ESC": 1,
+    "rus esc": 1
+  },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 6
   },
   "logs": [
+    {
+      "time": "09:46",
+      "timestamp": 1794725180782,
+      "name": "Rus ESC",
+      "city": "Bursa / İnegöl",
+      "device": "Masaüstü 💻",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
