@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 23,
   "totalCalls": 0,
-  "totalVisits": 260,
+  "totalVisits": 261,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
@@ -44,9 +44,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 260
+    "Bursa": 261
   },
   "logs": [
+    {
+      "time": "00:17",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:17",
       "timestamp": 1794777431844,
@@ -742,15 +751,6 @@
       "city": "Bursa / Görükle",
       "device": "Android 📱",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:17",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "activeVisitors": []
