@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 21,
+  "totalWaClicks": 22,
   "totalCalls": 0,
   "totalVisits": 68,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -9,7 +9,7 @@
     "Damla": 5,
     "damla": 5,
     "1790000000325": 1,
-    "905542027476": 1,
+    "905542027476": 2,
     "Şebnem": 1,
     "şebnem": 1,
     "1794900000001": 3,
@@ -31,13 +31,24 @@
     "simge": 1,
     "1794780704622": 3,
     "Ece": 3,
-    "ece": 3
+    "ece": 3,
+    "1794900000003": 1,
+    "Açelya": 1,
+    "açelya": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 68
   },
   "logs": [
+    {
+      "time": "02:30",
+      "timestamp": 1794785431334,
+      "name": "Açelya",
+      "city": "Bursa / Osmangazi",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:30",
       "name": "Ziyaretçi (Android 📱)",
@@ -729,14 +740,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:10",
-      "timestamp": 1794780601080,
-      "name": "Şebnem",
-      "city": "Bursa / Kestel",
-      "device": "iPhone 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
