@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 38,
   "totalCalls": 0,
-  "totalVisits": 338,
+  "totalVisits": 339,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
@@ -56,9 +56,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 338
+    "Bursa": 339
   },
   "logs": [
+    {
+      "time": "00:56",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:56",
       "timestamp": 1794779804662,
@@ -759,14 +768,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:20",
-      "timestamp": 1794777633385,
-      "name": "Nergis",
-      "city": "Bursa / Nilüfer",
-      "device": "iPhone 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
