@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 27,
+  "totalWaClicks": 28,
   "totalCalls": 0,
   "totalVisits": 269,
   "lastUpdated": "15.11.2026 09:16:38",
@@ -19,7 +19,7 @@
     "Sena": 1,
     "sena": 1,
     "1788500000003": 1,
-    "905358873382": 4,
+    "905358873382": 5,
     "Melisa": 1,
     "melisa": 1,
     "1794900000002": 2,
@@ -46,13 +46,24 @@
     "gül": 1,
     "1790000000329": 1,
     "Su": 1,
-    "su": 1
+    "su": 1,
+    "1790000000333": 1,
+    "Nergis": 1,
+    "nergis": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 269
   },
   "logs": [
+    {
+      "time": "00:20",
+      "timestamp": 1794777633385,
+      "name": "Nergis",
+      "city": "Bursa / Nilüfer",
+      "device": "iPhone 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:20",
       "timestamp": 1794777625358,
@@ -745,15 +756,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:51",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/nilufer-eskort",
       "type": "👁️ Site Ziyareti"
     }
   ],
