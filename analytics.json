@@ -1,11 +1,11 @@
 {
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "totalVisits": 227,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
-    "905319222689": 6,
+    "905319222689": 7,
     "Rus ESC": 1,
     "rus esc": 1,
     "1794900000001": 3,
@@ -35,13 +35,24 @@
     "Aylin": 1,
     "aylin": 1,
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "1794900000004": 1,
+    "Eylül": 1,
+    "eylül": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 227
   },
   "logs": [
+    {
+      "time": "00:07",
+      "timestamp": 1794776852449,
+      "name": "Eylül",
+      "city": "Bursa / Özlüce",
+      "device": "iPhone 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:07",
       "timestamp": 1794776833647,
@@ -731,15 +742,6 @@
     },
     {
       "time": "14:49",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:48",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
       "country": "Türkiye",
