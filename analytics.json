@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 36,
   "totalCalls": 0,
-  "totalVisits": 322,
+  "totalVisits": 323,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
@@ -56,9 +56,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 322
+    "Bursa": 323
   },
   "logs": [
+    {
+      "time": "00:49",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:48",
       "name": "Ziyaretçi (Android 📱)",
@@ -755,14 +764,6 @@
       "device": "Android 📱",
       "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:16",
-      "timestamp": 1794777383870,
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "iPhone 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
