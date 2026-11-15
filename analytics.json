@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 20,
   "totalCalls": 0,
-  "totalVisits": 230,
+  "totalVisits": 231,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
@@ -42,9 +42,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 230
+    "Bursa": 231
   },
   "logs": [
+    {
+      "time": "00:09",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:08",
       "name": "Ziyaretçi (Android 📱)",
@@ -738,15 +747,6 @@
       "city": "Bursa / Osmangazi",
       "device": "iPhone 📱",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:35",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/fomara-eskort",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "activeVisitors": []
