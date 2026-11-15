@@ -1,13 +1,13 @@
 {
-  "totalWaClicks": 22,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "totalVisits": 260,
   "lastUpdated": "15.11.2026 09:16:38",
   "tClicks": {
     "1788500000006": 1,
     "905319222689": 7,
-    "Rus ESC": 1,
-    "rus esc": 1,
+    "Rus ESC": 2,
+    "rus esc": 2,
     "1794900000001": 3,
     "Selin": 5,
     "selin": 5,
@@ -47,6 +47,14 @@
     "Bursa": 260
   },
   "logs": [
+    {
+      "time": "00:17",
+      "timestamp": 1794777431844,
+      "name": "Rus ESC",
+      "city": "Bursa / Nilüfer",
+      "device": "iPhone 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:16",
       "name": "Ziyaretçi (Android 📱)",
@@ -741,15 +749,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:08",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
