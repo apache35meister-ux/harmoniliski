@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "totalVisits": 65,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -28,13 +28,24 @@
     "nergis": 1,
     "1794900000021": 1,
     "Simge": 1,
-    "simge": 1
+    "simge": 1,
+    "1794780704622": 1,
+    "Ece": 1,
+    "ece": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 65
   },
   "logs": [
+    {
+      "time": "02:08",
+      "timestamp": 1794784109285,
+      "name": "Ece",
+      "city": "Bursa, Görükle",
+      "device": "iPhone 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:07",
       "timestamp": 1794784070790,
@@ -726,15 +737,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:05",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
