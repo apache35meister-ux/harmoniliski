@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "totalVisits": 124,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -42,8 +42,8 @@
     "Melis": 3,
     "melis": 3,
     "1788500000006": 2,
-    "Rus ESC": 2,
-    "rus esc": 2,
+    "Rus ESC": 3,
+    "rus esc": 3,
     "1790000000336": 1,
     "Gülce": 1,
     "gülce": 1,
@@ -69,6 +69,14 @@
     "Bursa": 124
   },
   "logs": [
+    {
+      "time": "15:58",
+      "timestamp": 1794833931555,
+      "name": "Rus ESC",
+      "city": "Bursa / İnegöl",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:58",
       "name": "Ziyaretçi (Android 📱)",
@@ -748,14 +756,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:32",
-      "timestamp": 1794796341209,
-      "name": "Damla",
-      "city": "Bursa / Görükle",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
