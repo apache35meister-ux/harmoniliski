@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794854733040,
-  "totalVisits": 153,
-  "totalWaClicks": 21,
+  "totalVisits": 154,
+  "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 5,
-    "selin": 5,
+    "Selin": 6,
+    "selin": 6,
     "Damla": 3,
     "damla": 3,
     "Açelya": 4,
@@ -29,8 +29,16 @@
   "logs": [
     {
       "time": "02:44",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "02:44",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -722,18 +730,17 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:44",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "02:44",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:23",
       "name": "Açelya",
@@ -859,7 +866,7 @@
     {
       "time": "02:44",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -1429,15 +1436,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:44",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
