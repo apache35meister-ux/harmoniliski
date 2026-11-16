@@ -1,10 +1,66 @@
 {
-  "totalVisits": 24,
-  "totalWaClicks": 0,
+  "totalVisits": 27,
+  "totalWaClicks": 3,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "VIP Escort": 2,
+    "vip escort": 2,
+    "Eylül": 1,
+    "eylül": 1
+  },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:09",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:07",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:07",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -78,8 +134,60 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "21:09",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:07",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:07",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
+    {
+      "time": "21:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -154,8 +262,8 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 12,
-    "İstanbul": 12
+    "Bursa": 13,
+    "İstanbul": 14
   },
   "activeVisitors": [
     {
@@ -174,10 +282,10 @@
     },
     {
       "id": "212.252.116.222",
-      "city": "İstanbul",
+      "city": "Bursa",
       "device": "Masaüstü 💻",
-      "page": "/",
-      "lastSeen": 1794852465768
+      "page": "Ana Sayfa",
+      "lastSeen": 1794852466950
     }
   ]
 }
