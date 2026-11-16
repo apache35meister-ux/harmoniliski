@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 52,
+  "totalWaClicks": 53,
   "totalCalls": 0,
   "totalVisits": 120,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -9,7 +9,7 @@
     "Damla": 7,
     "damla": 7,
     "1790000000325": 2,
-    "905542027476": 5,
+    "905542027476": 6,
     "Şebnem": 3,
     "şebnem": 3,
     "1794900000001": 7,
@@ -32,9 +32,9 @@
     "1794780704622": 5,
     "Ece": 5,
     "ece": 5,
-    "1794900000003": 3,
-    "Açelya": 3,
-    "açelya": 3,
+    "1794900000003": 4,
+    "Açelya": 4,
+    "açelya": 4,
     "1788500000003": 1,
     "Melisa": 1,
     "melisa": 1,
@@ -69,6 +69,14 @@
     "Bursa": 120
   },
   "logs": [
+    {
+      "time": "15:56",
+      "timestamp": 1794833772284,
+      "name": "Açelya",
+      "city": "Bursa / Osmangazi",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:56",
       "name": "Ziyaretçi (Android 📱)",
@@ -750,15 +758,6 @@
       "city": "Bursa / Gemlik",
       "device": "Android 📱",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:31",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "activeVisitors": []
