@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 64,
+  "totalWaClicks": 65,
   "totalCalls": 0,
   "totalVisits": 132,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -9,7 +9,7 @@
     "Damla": 8,
     "damla": 8,
     "1790000000325": 3,
-    "905542027476": 7,
+    "905542027476": 8,
     "Şebnem": 4,
     "şebnem": 4,
     "1794900000001": 7,
@@ -69,13 +69,24 @@
     "nehir": 1,
     "1788500000001": 1,
     "Yaren": 1,
-    "yaren": 1
+    "yaren": 1,
+    "1790000000328": 1,
+    "Sena": 1,
+    "sena": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 132
   },
   "logs": [
+    {
+      "time": "16:27",
+      "timestamp": 1794835622436,
+      "name": "Sena",
+      "city": "Bursa / Orhangazi",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:26",
       "name": "Ziyaretçi (Android 📱)",
@@ -753,14 +764,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:46",
-      "timestamp": 1794804409229,
-      "name": "Nergis",
-      "city": "Bursa / Nilüfer",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
