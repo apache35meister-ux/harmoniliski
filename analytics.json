@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 33,
+  "totalWaClicks": 34,
   "totalCalls": 0,
   "totalVisits": 91,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -13,13 +13,13 @@
     "Şebnem": 2,
     "şebnem": 2,
     "1794900000001": 5,
-    "905319222689": 10,
+    "905319222689": 11,
     "Selin": 6,
     "selin": 6,
     "VIP Escort": 4,
     "vip escort": 4,
-    "Dila": 3,
-    "dila": 3,
+    "Dila": 4,
+    "dila": 4,
     "1788500000004": 1,
     "Gül": 1,
     "gül": 1,
@@ -47,13 +47,21 @@
     "1790000000336": 1,
     "Gülce": 1,
     "gülce": 1,
-    "1790000000326": 2
+    "1790000000326": 3
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 91
   },
   "logs": [
+    {
+      "time": "09:39",
+      "timestamp": 1794811146085,
+      "name": "Dila",
+      "city": "Bursa / Karacabey",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:38",
       "timestamp": 1794811132194,
@@ -739,14 +747,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:38",
-      "timestamp": 1794782316285,
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
