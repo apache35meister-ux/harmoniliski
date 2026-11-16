@@ -1,5 +1,5 @@
 {
-  "totalVisits": 18,
+  "totalVisits": 20,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -11,12 +11,13 @@
   "tCalls": {},
   "logs": [
     {
-      "time": "21:19",
-      "name": "Eylül",
-      "city": "Görükle",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
+      "time": "21:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "21:08",
@@ -54,6 +55,14 @@
       "type": "👁️ Site Ziyareti"
     },
     {
+      "time": "21:19",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "21:16",
       "name": "Eylül",
       "city": "Görükle",
@@ -82,18 +91,18 @@
   ],
   "callLogs": [
     {
-      "time": "21:19",
-      "name": "Eylül",
-      "city": "Görükle",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
       "time": "21:08",
       "name": "VIP Escort",
       "city": "Bursa / Nilüfer",
       "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:19",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     },
@@ -107,6 +116,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:08",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -158,5 +176,13 @@
     "İstanbul": 2,
     "Izmir": 1
   },
-  "activeVisitors": []
+  "activeVisitors": [
+    {
+      "id": "212.252.116.222",
+      "city": "İstanbul",
+      "device": "Masaüstü 💻",
+      "page": "/",
+      "lastSeen": 1794852491547
+    }
+  ]
 }
