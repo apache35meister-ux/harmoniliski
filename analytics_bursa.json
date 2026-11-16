@@ -1,16 +1,26 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 62,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
     "selin": 1,
     "Damla": 1,
-    "damla": 1
+    "damla": 1,
+    "Açelya": 1,
+    "açelya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:28",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:28",
       "name": "Damla",
@@ -335,6 +345,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:28",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:28",
       "name": "Damla",
