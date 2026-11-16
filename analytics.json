@@ -1,11 +1,23 @@
 {
   "totalWaClicks": 0,
   "totalCalls": 0,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "lastUpdated": "16.11.2026 18:36:22",
   "tClicks": {},
   "tCalls": {},
-  "cityCounts": {},
-  "logs": [],
+  "cityCounts": {
+    "Bursa": 1
+  },
+  "logs": [
+    {
+      "time": "18:37",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    }
+  ],
   "activeVisitors": []
 }
