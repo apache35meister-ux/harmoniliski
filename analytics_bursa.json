@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 98,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
     "selin": 1,
     "Damla": 1,
     "damla": 1,
-    "Açelya": 2,
-    "açelya": 2,
+    "Açelya": 3,
+    "açelya": 3,
     "VIP Escort": 1,
     "vip escort": 1
   },
@@ -17,6 +17,23 @@
   "logs": [
     {
       "time": "23:39",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "23:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:37",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -25,21 +42,30 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "23:39",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "time": "23:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "23:36",
       "name": "VIP Escort",
-      "city": "Bursa",
+      "city": "Bursa / Nilüfer",
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "23:36",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "23:27",
@@ -488,25 +514,7 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "23:36",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:37",
+      "time": "23:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -535,9 +543,17 @@
   ],
   "callLogs": [
     {
+      "time": "23:39",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "23:36",
       "name": "VIP Escort",
-      "city": "Bursa",
+      "city": "Bursa / Nilüfer",
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
@@ -578,6 +594,15 @@
   "cityVisits": [
     {
       "time": "23:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:37",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -586,11 +611,20 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "23:39",
-      "name": "Ziyaretçi (iPhone 📱)",
+      "time": "23:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:36",
+      "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -1009,25 +1043,7 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "23:36",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:37",
+      "time": "23:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
