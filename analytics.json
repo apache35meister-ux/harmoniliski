@@ -1,14 +1,26 @@
 {
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
   "totalVisits": 5,
   "lastUpdated": "16.11.2026 19:12:50",
-  "tClicks": {},
+  "tClicks": {
+    "1794780704622": 1,
+    "Ece": 1,
+    "ece": 1
+  },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 5
   },
   "logs": [
+    {
+      "time": "19:23",
+      "timestamp": 1794846192518,
+      "name": "Ece",
+      "city": "Bursa, Görükle",
+      "device": "iPhone 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:23",
       "name": "Ziyaretçi (iPhone 📱)",
