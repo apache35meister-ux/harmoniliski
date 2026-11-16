@@ -1,31 +1,22 @@
 {
   "totalVisits": 18,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "VIP Escort": 1,
     "vip escort": 1,
-    "Eylül": 1,
-    "eylül": 1
+    "Eylül": 2,
+    "eylül": 2
   },
   "tCalls": {},
   "logs": [
     {
-      "time": "21:16",
+      "time": "21:19",
       "name": "Eylül",
       "city": "Görükle",
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:16",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "21:08",
@@ -59,6 +50,23 @@
       "city": "Görükle",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:16",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:16",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -74,7 +82,7 @@
   ],
   "callLogs": [
     {
-      "time": "21:16",
+      "time": "21:19",
       "name": "Eylül",
       "city": "Görükle",
       "device": "iPhone 📱",
@@ -88,18 +96,17 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:16",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
-    {
-      "time": "21:16",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
     {
       "time": "21:08",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -124,6 +131,15 @@
       "city": "Görükle",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:16",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -142,5 +158,13 @@
     "İstanbul": 2,
     "Izmir": 1
   },
-  "activeVisitors": []
+  "activeVisitors": [
+    {
+      "id": "212.252.116.222",
+      "city": "İstanbul",
+      "device": "Masaüstü 💻",
+      "page": "/",
+      "lastSeen": 1794852491547
+    }
+  ]
 }
