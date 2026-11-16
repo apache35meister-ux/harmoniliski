@@ -1,26 +1,27 @@
 {
   "totalVisits": 18,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
     "VIP Escort": 1,
-    "vip escort": 1
+    "vip escort": 1,
+    "Eylül": 1,
+    "eylül": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "21:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "21:16",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Görükle",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -60,9 +61,26 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:16",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:08",
       "name": "VIP Escort",
@@ -75,17 +93,8 @@
   "cityVisits": [
     {
       "time": "21:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:16",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Görükle",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -113,6 +122,15 @@
       "time": "20:33",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
