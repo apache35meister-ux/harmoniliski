@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 41,
+  "totalWaClicks": 42,
   "totalCalls": 0,
   "totalVisits": 104,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -29,9 +29,9 @@
     "1794900000021": 1,
     "Simge": 1,
     "simge": 1,
-    "1794780704622": 4,
-    "Ece": 4,
-    "ece": 4,
+    "1794780704622": 5,
+    "Ece": 5,
+    "ece": 5,
     "1794900000003": 2,
     "Açelya": 2,
     "açelya": 2,
@@ -64,6 +64,14 @@
     "Bursa": 104
   },
   "logs": [
+    {
+      "time": "12:47",
+      "timestamp": 1794822423160,
+      "name": "Ece",
+      "city": "Bursa, Görükle",
+      "device": "iPhone 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:46",
       "timestamp": 1794822416042,
@@ -749,14 +757,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:49",
-      "timestamp": 1794782948204,
-      "name": "Simge",
-      "city": "Kocaeli / İzmit",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
