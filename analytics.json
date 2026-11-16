@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 31,
   "totalCalls": 0,
-  "totalVisits": 87,
+  "totalVisits": 88,
   "lastUpdated": "16.11.2026 01:01:50",
   "tClicks": {
     "1794900000002": 5,
@@ -50,9 +50,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 87
+    "Bursa": 88
   },
   "logs": [
+    {
+      "time": "09:35",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:09",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -737,15 +746,6 @@
       "city": "Bursa / Nilüfer",
       "device": "Android 📱",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:37",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "activeVisitors": []
