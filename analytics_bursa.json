@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794854733040,
-  "totalVisits": 118,
+  "totalVisits": 119,
   "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
@@ -23,11 +23,12 @@
   "logs": [
     {
       "time": "01:02",
-      "name": "Begüm",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "01:01",
@@ -732,14 +733,6 @@
   ],
   "callLogs": [
     {
-      "time": "01:02",
-      "name": "Begüm",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
       "time": "00:29",
       "name": "Eylül",
       "city": "Bursa",
@@ -829,6 +822,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:02",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:01",
       "name": "Ziyaretçi (Mobil 📱)",
