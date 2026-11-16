@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 122,
-  "totalWaClicks": 13,
+  "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
     "selin": 3,
-    "Damla": 1,
-    "damla": 1,
+    "Damla": 2,
+    "damla": 2,
     "Açelya": 3,
     "açelya": 3,
     "VIP Escort": 1,
@@ -21,6 +21,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:19",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:18",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -720,18 +728,17 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:23",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:19",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:29",
       "name": "Eylül",
@@ -1431,15 +1438,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:23",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
