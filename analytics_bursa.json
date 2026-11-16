@@ -1,24 +1,25 @@
 {
   "resetEpoch": 1794854604218,
   "totalVisits": 7,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
     "eylül": 1,
     "Selin": 1,
-    "selin": 1
+    "selin": 1,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "21:45",
-      "name": "Ziyaretçi (Android 📱)",
+      "name": "Damla",
       "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "21:45",
@@ -62,9 +63,26 @@
       "device": "Android 📱",
       "page": "/gorukle-eskort",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:45",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:45",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:45",
       "name": "Selin",
@@ -84,15 +102,6 @@
   ],
   "cityVisits": [
     {
-      "time": "21:45",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
       "time": "21:44",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -117,6 +126,15 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/gorukle-eskort",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:45",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
