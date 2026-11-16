@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 110,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
@@ -15,10 +15,20 @@
     "Eylül": 1,
     "eylül": 1,
     "Yaren": 1,
-    "yaren": 1
+    "yaren": 1,
+    "Begüm": 1,
+    "begüm": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:20",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:20",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -634,6 +644,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "00:20",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:16",
       "name": "Yaren",
