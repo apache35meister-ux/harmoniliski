@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "totalVisits": 92,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -38,22 +38,31 @@
     "1788500000003": 1,
     "Melisa": 1,
     "melisa": 1,
-    "1794900000005": 1,
-    "Melis": 1,
-    "melis": 1,
+    "1794900000005": 2,
+    "Melis": 2,
+    "melis": 2,
     "1788500000006": 1,
     "Rus ESC": 1,
     "rus esc": 1,
     "1790000000336": 1,
     "Gülce": 1,
     "gülce": 1,
-    "1790000000326": 3
+    "1790000000326": 3,
+    "905414677075": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 92
   },
   "logs": [
+    {
+      "time": "09:39",
+      "timestamp": 1794811169793,
+      "name": "Melis",
+      "city": "Bursa / Yıldırım",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:39",
       "name": "Ziyaretçi (Android 📱)",
@@ -735,14 +744,6 @@
     {
       "time": "01:39",
       "timestamp": 1794782354615,
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:39",
-      "timestamp": 1794782346940,
       "name": "VIP Escort",
       "city": "Bursa / Nilüfer",
       "device": "Android 📱",
