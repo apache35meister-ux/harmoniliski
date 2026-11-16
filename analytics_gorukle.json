@@ -1,15 +1,26 @@
 {
   "resetEpoch": 1794853594038,
-  "totalVisits": 4,
-  "totalWaClicks": 0,
+  "totalVisits": 5,
+  "totalWaClicks": 1,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "Eylül": 1,
+    "eylül": 1
+  },
   "tCalls": {},
   "logs": [
     {
       "time": "21:28",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:28",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Görükle",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -25,12 +36,21 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "21:28",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "21:28",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Görükle",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
