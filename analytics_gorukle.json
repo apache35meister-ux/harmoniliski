@@ -1,10 +1,19 @@
 {
-  "totalVisits": 13,
+  "totalVisits": 14,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:05",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -27,6 +36,15 @@
   "callLogs": [],
   "cityVisits": [
     {
+      "time": "21:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:05",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Görükle",
@@ -46,15 +64,16 @@
     }
   ],
   "cityCounts": {
-    "Görükle": 13
+    "Görükle": 13,
+    "İstanbul": 1
   },
   "activeVisitors": [
     {
       "id": "212.252.116.222",
-      "city": "Görükle",
+      "city": "İstanbul",
       "device": "Masaüstü 💻",
       "page": "/",
-      "lastSeen": 1794852350416
+      "lastSeen": 1794852486602
     }
   ]
 }
