@@ -1,10 +1,28 @@
 {
-  "totalVisits": 14,
+  "totalVisits": 16,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:08",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -45,6 +63,24 @@
       "type": "👁️ Site Ziyareti"
     },
     {
+      "time": "21:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Izmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:05",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Görükle",
@@ -65,7 +101,8 @@
   ],
   "cityCounts": {
     "Görükle": 13,
-    "İstanbul": 1
+    "İstanbul": 2,
+    "Izmir": 1
   },
   "activeVisitors": [
     {
@@ -73,7 +110,7 @@
       "city": "İstanbul",
       "device": "Masaüstü 💻",
       "page": "/",
-      "lastSeen": 1794852486602
+      "lastSeen": 1794852491547
     }
   ]
 }
