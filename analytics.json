@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 28,
+  "totalWaClicks": 29,
   "totalCalls": 0,
   "totalVisits": 84,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -10,8 +10,8 @@
     "damla": 6,
     "1790000000325": 1,
     "905542027476": 2,
-    "Şebnem": 1,
-    "şebnem": 1,
+    "Şebnem": 2,
+    "şebnem": 2,
     "1794900000001": 5,
     "905319222689": 8,
     "Selin": 6,
@@ -50,6 +50,14 @@
     "Bursa": 84
   },
   "logs": [
+    {
+      "time": "07:45",
+      "timestamp": 1794804346645,
+      "name": "Şebnem",
+      "city": "Bursa / Nilüfer",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:44",
       "timestamp": 1794804291740,
@@ -737,14 +745,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:31",
-      "timestamp": 1794781874063,
-      "name": "Damla",
-      "city": "Bursa / Görükle",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
