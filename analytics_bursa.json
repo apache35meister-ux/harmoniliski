@@ -1,24 +1,25 @@
 {
   "resetEpoch": 1794853608320,
   "totalVisits": 28,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
     "eylül": 1,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "Selin": 1,
+    "selin": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "21:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "21:38",
@@ -164,6 +165,15 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
+      "time": "21:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:38",
       "name": "Açelya",
       "city": "Bursa",
@@ -173,6 +183,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:39",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:28",
       "name": "Eylül",
@@ -192,15 +210,6 @@
   ],
   "cityVisits": [
     {
-      "time": "21:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
       "time": "21:38",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -328,6 +337,15 @@
     },
     {
       "time": "21:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
