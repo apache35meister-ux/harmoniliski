@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 61,
+  "totalWaClicks": 62,
   "totalCalls": 0,
   "totalVisits": 127,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -64,13 +64,23 @@
     "Ayşen": 1,
     "ayşen": 1,
     "Hale": 1,
-    "hale": 1
+    "hale": 1,
+    "Nehir": 1,
+    "nehir": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 127
   },
   "logs": [
+    {
+      "time": "16:02",
+      "timestamp": 1794834137525,
+      "name": "Nehir",
+      "city": "Bursa / Nilüfer",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:01",
       "timestamp": 1794834097690,
@@ -744,14 +754,6 @@
       "timestamp": 1794804274963,
       "name": "Melis",
       "city": "Bursa / Yıldırım",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:43",
-      "timestamp": 1794804235877,
-      "name": "Selin",
-      "city": "Bursa / Nilüfer",
       "device": "Android 📱",
       "type": "💬 WhatsApp Randevu Talebi"
     }
