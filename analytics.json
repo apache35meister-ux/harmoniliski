@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 39,
   "totalCalls": 0,
-  "totalVisits": 100,
+  "totalVisits": 101,
   "lastUpdated": "16.11.2026 01:01:50",
   "tClicks": {
     "1794900000002": 5,
@@ -59,9 +59,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 100
+    "Bursa": 101
   },
   "logs": [
+    {
+      "time": "01:22",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:22",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -747,14 +756,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:47",
-      "timestamp": 1794782872290,
-      "name": "Gül",
-      "city": "Bursa / Mudanya",
-      "device": "Android 📱",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "activeVisitors": []
