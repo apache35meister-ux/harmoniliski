@@ -1,23 +1,24 @@
 {
   "totalVisits": 24,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "VIP Escort": 1,
     "vip escort": 1,
     "Eylül": 2,
-    "eylül": 2
+    "eylül": 2,
+    "Melisa": 1,
+    "melisa": 1
   },
   "tCalls": {},
   "logs": [
     {
-      "time": "21:20",
-      "name": "Ziyaretçi (Masaüstü 💻)",
+      "time": "21:21",
+      "name": "Melisa",
       "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "21:20",
@@ -105,9 +106,26 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:20",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:21",
+      "name": "Melisa",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:08",
       "name": "VIP Escort",
@@ -136,15 +154,6 @@
   "cityVisits": [
     {
       "time": "21:20",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:20",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
       "country": "Türkiye",
@@ -203,6 +212,15 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:20",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
