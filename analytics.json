@@ -1,5 +1,5 @@
 {
-  "totalWaClicks": 31,
+  "totalWaClicks": 32,
   "totalCalls": 0,
   "totalVisits": 90,
   "lastUpdated": "16.11.2026 01:01:50",
@@ -13,13 +13,13 @@
     "Şebnem": 2,
     "şebnem": 2,
     "1794900000001": 5,
-    "905319222689": 8,
+    "905319222689": 9,
     "Selin": 6,
     "selin": 6,
     "VIP Escort": 4,
     "vip escort": 4,
-    "Dila": 1,
-    "dila": 1,
+    "Dila": 2,
+    "dila": 2,
     "1788500000004": 1,
     "Gül": 1,
     "gül": 1,
@@ -46,13 +46,22 @@
     "rus esc": 1,
     "1790000000336": 1,
     "Gülce": 1,
-    "gülce": 1
+    "gülce": 1,
+    "1790000000326": 1
   },
   "tCalls": {},
   "cityCounts": {
     "Bursa": 90
   },
   "logs": [
+    {
+      "time": "09:38",
+      "timestamp": 1794811111433,
+      "name": "Dila",
+      "city": "Bursa / Karacabey",
+      "device": "Android 📱",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:37",
       "name": "Ziyaretçi (Android 📱)",
@@ -738,15 +747,6 @@
       "city": "Bursa / Nilüfer",
       "device": "Android 📱",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:38",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/nilufer-eskort",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "activeVisitors": []
