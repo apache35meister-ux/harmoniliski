@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 283,
-  "totalWaClicks": 12,
+  "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
     "1794900000004": 2,
@@ -11,8 +11,8 @@
     "açelya": 2,
     "VIP Escort": 1,
     "vip escort": 1,
-    "Selin": 1,
-    "selin": 1,
+    "Selin": 2,
+    "selin": 2,
     "Nihan": 2,
     "nihan": 2,
     "Serap": 2,
@@ -22,6 +22,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:51",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:51",
       "name": "Ziyaretçi (Android 📱)",
@@ -730,18 +738,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:51",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:27",
       "name": "Serap",
@@ -1446,15 +1453,6 @@
     },
     {
       "time": "21:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:14",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
