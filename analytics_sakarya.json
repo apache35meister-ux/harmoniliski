@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 290,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 4,
-    "selin": 4,
+    "Selin": 5,
+    "selin": 5,
     "1794900000001": 2,
     "Gül": 1,
     "gül": 1,
@@ -28,6 +28,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:52",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:52",
       "name": "Ziyaretçi (Android 📱)",
@@ -734,17 +742,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:38",
-      "name": "VIP Escort",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:52",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:12",
       "name": "Melisa",
@@ -771,14 +779,6 @@
     },
     {
       "time": "08:39",
-      "name": "VIP Escort",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:38",
       "name": "VIP Escort",
       "city": "Bursa",
       "device": "iPhone 📱",
