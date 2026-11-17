@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 46,
-  "totalWaClicks": 13,
+  "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -23,10 +23,20 @@
     "Melisa": 1,
     "melisa": 1,
     "Sinem": 1,
-    "sinem": 1
+    "sinem": 1,
+    "Şebnem": 1,
+    "şebnem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:28",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:28",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -350,6 +360,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:28",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:27",
       "name": "Sinem",
