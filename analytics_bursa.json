@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 11,
-  "totalWaClicks": 6,
+  "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
     "gül": 2,
     "Selin": 1,
     "selin": 1,
-    "Eylül": 1,
-    "eylül": 1,
+    "Eylül": 2,
+    "eylül": 2,
     "Melis": 1,
     "melis": 1,
     "Rus ESC": 1,
@@ -17,6 +17,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:00",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:59",
       "name": "Ziyaretçi (Android 📱)",
@@ -122,6 +130,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:00",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:59",
       "name": "Rus ESC",
