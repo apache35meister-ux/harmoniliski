@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 310,
-  "totalWaClicks": 66,
+  "totalWaClicks": 67,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 12,
-    "selin": 12,
+    "Selin": 13,
+    "selin": 13,
     "Damla": 4,
     "damla": 4,
     "Açelya": 5,
@@ -61,6 +61,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:34",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:34",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -745,17 +753,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:01",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905350224331",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:34",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:08",
       "name": "Tuba",
@@ -962,14 +970,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:01",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905350224331",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
