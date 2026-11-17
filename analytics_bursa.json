@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794940635198,
   "totalVisits": 80,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
@@ -10,10 +10,20 @@
     "derin": 1,
     "1789700000033": 2,
     "Elena": 3,
-    "elena": 3
+    "elena": 3,
+    "Sinem": 1,
+    "sinem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:40",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:40",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -426,6 +436,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:40",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:17",
       "name": "Elena",
