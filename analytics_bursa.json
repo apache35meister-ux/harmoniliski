@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794854733040,
-  "totalVisits": 367,
+  "totalVisits": 368,
   "totalWaClicks": 76,
   "totalCalls": 0,
   "tClicks": {
@@ -61,6 +61,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -748,14 +757,6 @@
       "device": "Android 📱",
       "phone": "905319948487",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:03",
-      "name": "Nergis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -942,17 +943,18 @@
       "device": "Android 📱",
       "phone": "905319948487",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:03",
-      "name": "Nergis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:26",
       "name": "Ziyaretçi (Mobil 📱)",
