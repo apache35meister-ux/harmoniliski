@@ -12,8 +12,8 @@
     "eylül": 2,
     "Melis": 1,
     "melis": 1,
-    "Rus ESC": 1,
-    "rus esc": 1,
+    "Rus ESC": 2,
+    "rus esc": 2,
     "Emel": 1,
     "emel": 1,
     "Damla": 1,
@@ -35,10 +35,10 @@
   "logs": [
     {
       "time": "20:29",
-      "name": "Açelya",
+      "name": "Rus ESC",
       "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -404,15 +404,23 @@
       "device": "Masaüstü 💻",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "20:29",
       "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
+  "callLogs": [
+    {
+      "time": "20:29",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -525,6 +533,14 @@
       "city": "Bursa",
       "device": "Masaüstü 💻",
       "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:29",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
