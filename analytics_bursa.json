@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 216,
-  "totalWaClicks": 52,
+  "totalWaClicks": 53,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 9,
@@ -36,8 +36,8 @@
     "melike": 1,
     "Nergis": 1,
     "nergis": 1,
-    "Serap": 1,
-    "serap": 1,
+    "Serap": 2,
+    "serap": 2,
     "Lara": 2,
     "lara": 2,
     "İlayda": 1,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:20",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:20",
       "name": "Lara",
@@ -731,18 +739,17 @@
       "device": "Masaüstü 💻",
       "page": "/osmangazi-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:57",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:20",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:20",
       "name": "Lara",
@@ -1420,15 +1427,6 @@
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "/osmangazi-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:57",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
