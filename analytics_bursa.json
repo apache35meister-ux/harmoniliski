@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794933535282,
-  "totalVisits": 104,
+  "totalVisits": 105,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -50,16 +50,8 @@
   "logs": [
     {
       "time": "21:10",
-      "name": "Rus ESC",
-      "city": "Bursa / İnegöl",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -738,9 +730,7 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "21:10",
       "name": "Rus ESC",
@@ -748,7 +738,9 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
+    }
+  ],
+  "callLogs": [
     {
       "time": "20:01",
       "name": "Emel",
@@ -972,13 +964,21 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:10",
+      "name": "Rus ESC",
+      "city": "Bursa / İnegöl",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
     {
       "time": "21:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
