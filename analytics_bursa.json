@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794940635198,
   "totalVisits": 135,
-  "totalWaClicks": 11,
+  "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
@@ -20,26 +20,20 @@
     "Rus ESC": 1,
     "rus esc": 1,
     "Şebnem": 1,
-    "şebnem": 1
+    "şebnem": 1,
+    "1789700000056": 1,
+    "Zehra": 1,
+    "zehra": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "00:07",
-      "name": "Şebnem",
-      "city": "Bursa",
+      "name": "Zehra",
+      "city": "İstanbul / Mecidiyeköy",
       "device": "Masaüstü 💻",
-      "phone": "905358873382",
+      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:06",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "00:06",
@@ -47,7 +41,16 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
+      "page": "/fomara-eskort",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "00:06",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/osmangazi-eskort",
       "type": "👁️ Site Ziyareti"
     },
     {
@@ -664,6 +667,14 @@
       "type": "👁️ Site Ziyareti"
     },
     {
+      "time": "00:07",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "00:06",
       "name": "Rus ESC",
       "city": "Bursa",
@@ -675,10 +686,10 @@
   "callLogs": [
     {
       "time": "00:07",
-      "name": "Şebnem",
-      "city": "Bursa",
+      "name": "Zehra",
+      "city": "İstanbul / Mecidiyeköy",
       "device": "Masaüstü 💻",
-      "phone": "905358873382",
+      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -746,6 +757,14 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
+      "time": "00:07",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "00:06",
       "name": "Rus ESC",
       "city": "Bursa",
@@ -757,20 +776,20 @@
   "cityVisits": [
     {
       "time": "00:06",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:06",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
+      "page": "/fomara-eskort",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "00:06",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/osmangazi-eskort",
       "type": "👁️ Site Ziyareti"
     },
     {
