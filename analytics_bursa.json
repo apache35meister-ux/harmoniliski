@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 260,
-  "totalWaClicks": 59,
+  "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 11,
@@ -53,10 +53,20 @@
     "Su": 1,
     "su": 1,
     "Rus ESC": 1,
-    "rus esc": 1
+    "rus esc": 1,
+    "Roza": 1,
+    "roza": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:46",
+      "name": "Roza",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905347608013",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:45",
       "name": "Serap",
@@ -734,18 +744,17 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:22",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/fomara-eskort",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:46",
+      "name": "Roza",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905347608013",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:45",
       "name": "Serap",
@@ -1424,15 +1433,6 @@
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:22",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
     }
   ],
