@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1794854733040,
-  "totalVisits": 375,
-  "totalWaClicks": 77,
+  "totalVisits": 378,
+  "totalWaClicks": 78,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 16,
     "selin": 16,
-    "Damla": 4,
-    "damla": 4,
+    "Damla": 5,
+    "damla": 5,
     "Açelya": 6,
     "açelya": 6,
     "VIP Escort": 1,
@@ -63,6 +63,23 @@
   "logs": [
     {
       "time": "16:44",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "16:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "16:44",
       "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
@@ -743,26 +760,17 @@
       "device": "iPhone 📱",
       "page": "/gorukle-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:07",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:05",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "16:44",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:44",
       "name": "Açelya",
@@ -914,17 +922,18 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:05",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:43",
       "name": "Ziyaretçi (Android 📱)",
@@ -1454,15 +1463,6 @@
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "/gorukle-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:07",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
     }
   ],
