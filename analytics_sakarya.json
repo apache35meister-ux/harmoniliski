@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 362,
-  "totalWaClicks": 30,
+  "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -17,8 +17,8 @@
     "melis": 4,
     "Dila": 2,
     "dila": 2,
-    "Melisa": 1,
-    "melisa": 1,
+    "Melisa": 2,
+    "melisa": 2,
     "Serap": 2,
     "serap": 2,
     "Su": 1,
@@ -36,6 +36,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:41",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:40",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -735,18 +743,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:18",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:41",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:22",
       "name": "Rus ESC",
@@ -1442,15 +1449,6 @@
     },
     {
       "time": "19:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:18",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
