@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 209,
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 7,
@@ -31,10 +31,20 @@
     "Şebnem": 2,
     "şebnem": 2,
     "Sena": 1,
-    "sena": 1
+    "sena": 1,
+    "Melike": 1,
+    "melike": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:02",
+      "name": "Melike",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:01",
       "name": "Sena",
@@ -722,18 +732,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:02",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:02",
+      "name": "Melike",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:01",
       "name": "Sena",
@@ -1421,15 +1430,6 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:02",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
