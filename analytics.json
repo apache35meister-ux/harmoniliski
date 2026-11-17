@@ -1,7 +1,7 @@
 {
   "totalWaClicks": 5,
   "totalCalls": 0,
-  "totalVisits": 108,
+  "totalVisits": 109,
   "lastUpdated": "16.11.2026 19:12:50",
   "tClicks": {
     "1794780704622": 1,
@@ -25,9 +25,18 @@
   },
   "tCalls": {},
   "cityCounts": {
-    "Bursa": 108
+    "Bursa": 109
   },
   "logs": [
+    {
+      "time": "20:21",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:21",
       "name": "Ziyaretçi (Android 📱)",
@@ -736,18 +745,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:57",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "activeVisitors": [
+    {
+      "id": "v_m45qyzo",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "activity": "Sitede Aktif Geziniyor",
+      "lastSeen": 1794889309102,
+      "time": "20:21"
+    },
     {
       "id": "v_u8hly4t",
       "city": "Bursa",
