@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 58,
-  "totalWaClicks": 6,
+  "totalVisits": 59,
+  "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
     "1794900000004": 2,
@@ -10,10 +10,29 @@
     "Açelya": 2,
     "açelya": 2,
     "VIP Escort": 1,
-    "vip escort": 1
+    "vip escort": 1,
+    "Selin": 1,
+    "selin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:28",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:27",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:27",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -364,6 +383,14 @@
   ],
   "callLogs": [
     {
+      "time": "15:28",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "13:24",
       "name": "Açelya",
       "city": "Bursa",
@@ -397,6 +424,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:27",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:27",
       "name": "Ziyaretçi (Mobil 📱)",
