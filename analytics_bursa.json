@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 271,
-  "totalWaClicks": 60,
+  "totalWaClicks": 61,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 11,
@@ -14,8 +14,8 @@
     "vip escort": 1,
     "Eylül": 4,
     "eylül": 4,
-    "Yaren": 2,
-    "yaren": 2,
+    "Yaren": 3,
+    "yaren": 3,
     "Begüm": 2,
     "begüm": 2,
     "Gül": 3,
@@ -59,6 +59,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:08",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:07",
       "name": "Ziyaretçi (Android 📱)",
@@ -736,18 +744,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:43",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:08",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:46",
       "name": "Roza",
@@ -1425,15 +1432,6 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:43",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
