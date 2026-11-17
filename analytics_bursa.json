@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 430,
-  "totalWaClicks": 84,
+  "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 19,
     "selin": 19,
     "Damla": 5,
     "damla": 5,
-    "Açelya": 6,
-    "açelya": 6,
+    "Açelya": 7,
+    "açelya": 7,
     "VIP Escort": 1,
     "vip escort": 1,
     "Eylül": 4,
@@ -63,6 +63,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:57",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:57",
       "name": "Ziyaretçi (Android 📱)",
@@ -740,17 +748,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "06:51",
-      "name": "Melisa",
+      "time": "18:57",
+      "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "15:50",
       "name": "Nergis",
@@ -1013,14 +1021,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:51",
-      "name": "Melisa",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
