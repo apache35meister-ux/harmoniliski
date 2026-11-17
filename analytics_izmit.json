@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 138,
-  "totalWaClicks": 7,
+  "totalVisits": 139,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
     "1794900000004": 2,
@@ -12,14 +12,24 @@
     "VIP Escort": 1,
     "vip escort": 1,
     "Selin": 1,
-    "selin": 1
+    "selin": 1,
+    "Nihan": 2,
+    "nihan": 2
   },
   "tCalls": {},
   "logs": [
     {
       "time": "21:25",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:25",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -721,18 +731,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:25",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:28",
       "name": "Selin",
@@ -778,7 +787,7 @@
     {
       "time": "21:25",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -1438,15 +1447,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
