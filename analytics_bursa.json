@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 143,
+  "totalVisits": 146,
   "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
@@ -30,6 +30,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:16",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -729,14 +738,6 @@
       "device": "Masaüstü 💻",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:07",
-      "name": "Zehra",
-      "city": "İstanbul / Mecidiyeköy",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -827,17 +828,18 @@
       "device": "Masaüstü 💻",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:07",
-      "name": "Zehra",
-      "city": "İstanbul / Mecidiyeköy",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:16",
       "name": "Ziyaretçi (Masaüstü 💻)",
