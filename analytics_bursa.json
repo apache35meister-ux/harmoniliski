@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794854733040,
-  "totalVisits": 227,
+  "totalVisits": 228,
   "totalWaClicks": 53,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -732,14 +741,6 @@
       "device": "Masaüstü 💻",
       "page": "/osmangazi-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:16",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Masaüstü 💻",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1006,17 +1007,18 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:16",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Masaüstü 💻",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
