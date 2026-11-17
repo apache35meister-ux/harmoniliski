@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 295,
-  "totalWaClicks": 21,
+  "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -25,11 +25,19 @@
     "su": 1,
     "Sena": 1,
     "sena": 1,
-    "Eylül": 1,
-    "eylül": 1
+    "Eylül": 2,
+    "eylül": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:54",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:53",
       "name": "Ziyaretçi (Android 📱)",
@@ -734,18 +742,17 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:39",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:54",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:53",
       "name": "Eylül",
@@ -1450,15 +1457,6 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:39",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
