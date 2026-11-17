@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 446,
-  "totalWaClicks": 32,
+  "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 5,
-    "selin": 5,
+    "Selin": 6,
+    "selin": 6,
     "1794900000001": 2,
     "Gül": 1,
     "gül": 1,
@@ -38,6 +38,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:35",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:18",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -737,18 +745,17 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "00:35",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:48",
       "name": "Sabina",
@@ -1449,15 +1456,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
