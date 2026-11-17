@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 53,
-  "totalWaClicks": 15,
+  "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -27,10 +27,20 @@
     "Şebnem": 1,
     "şebnem": 1,
     "Melike": 1,
-    "melike": 1
+    "melike": 1,
+    "Açelya": 1,
+    "açelya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:29",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:29",
       "name": "Ziyaretçi (Android 📱)",
@@ -397,6 +407,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:29",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:28",
       "name": "Melike",
