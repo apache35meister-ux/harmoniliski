@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 40,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -15,10 +15,20 @@
     "Rus ESC": 1,
     "rus esc": 1,
     "Emel": 1,
-    "emel": 1
+    "emel": 1,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:26",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:26",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -266,6 +276,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:26",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:01",
       "name": "Emel",
