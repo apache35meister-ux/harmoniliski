@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 54,
-  "totalWaClicks": 16,
+  "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
     "gül": 2,
     "Selin": 2,
     "selin": 2,
-    "Eylül": 2,
-    "eylül": 2,
+    "Eylül": 3,
+    "eylül": 3,
     "Melis": 1,
     "melis": 1,
     "Rus ESC": 2,
@@ -35,19 +35,45 @@
   "logs": [
     {
       "time": "20:29",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:27",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "/besevler-eskort.html",
+      "page": "/gorukle-eskort",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "20:27",
-      "name": "Melisa",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:27",
+      "name": "Begüm",
       "city": "Bursa",
       "device": "Masaüstü 💻",
-      "phone": "905358873382",
+      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -312,38 +338,20 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "20:27",
+      "time": "20:29",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "/gorukle-eskort",
+      "page": "/besevler-eskort.html",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "20:27",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:27",
-      "name": "Begüm",
+      "name": "Melisa",
       "city": "Bursa",
       "device": "Masaüstü 💻",
-      "phone": "905319222689",
+      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -425,11 +433,19 @@
   ],
   "callLogs": [
     {
-      "time": "20:27",
-      "name": "Melisa",
+      "time": "20:29",
+      "name": "Eylül",
       "city": "Bursa",
       "device": "Masaüstü 💻",
-      "phone": "905358873382",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:27",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -506,10 +522,10 @@
     },
     {
       "time": "20:27",
-      "name": "Begüm",
+      "name": "Melisa",
       "city": "Bursa",
       "device": "Masaüstü 💻",
-      "phone": "905319222689",
+      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -555,12 +571,30 @@
   ],
   "cityVisits": [
     {
-      "time": "20:29",
+      "time": "20:27",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "/besevler-eskort.html",
+      "page": "/gorukle-eskort",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:27",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
@@ -753,30 +787,12 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "20:27",
+      "time": "20:29",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "/gorukle-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:27",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
+      "page": "/besevler-eskort.html",
       "type": "👁️ Site Ziyareti"
     },
     {
