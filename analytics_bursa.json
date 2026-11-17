@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 211,
-  "totalWaClicks": 42,
+  "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 8,
@@ -41,10 +41,20 @@
     "Lara": 1,
     "lara": 1,
     "İlayda": 1,
-    "i̇layda": 1
+    "i̇layda": 1,
+    "Dila": 1,
+    "dila": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:04",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:03",
       "name": "Ziyaretçi (Android 📱)",
@@ -727,18 +737,17 @@
       "device": "iPhone 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:24",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:04",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:03",
       "name": "İlayda",
@@ -1421,15 +1430,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:24",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
