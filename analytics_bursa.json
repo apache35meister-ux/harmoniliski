@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 41,
-  "totalWaClicks": 9,
+  "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
     "gül": 2,
-    "Selin": 1,
-    "selin": 1,
+    "Selin": 2,
+    "selin": 2,
     "Eylül": 2,
     "eylül": 2,
     "Melis": 1,
@@ -21,6 +21,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:27",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905350224331",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:26",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -276,6 +284,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:27",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905350224331",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:26",
       "name": "Damla",
