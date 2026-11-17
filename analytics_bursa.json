@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 210,
-  "totalWaClicks": 41,
+  "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 8,
@@ -39,10 +39,20 @@
     "Serap": 1,
     "serap": 1,
     "Lara": 1,
-    "lara": 1
+    "lara": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:03",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:03",
       "name": "Lara",
@@ -726,17 +736,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:28",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:03",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:03",
       "name": "Lara",
@@ -950,14 +960,6 @@
       "name": "Açelya",
       "city": "Bursa",
       "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:28",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
