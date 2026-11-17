@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 294,
-  "totalWaClicks": 62,
+  "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 11,
-    "selin": 11,
+    "Selin": 12,
+    "selin": 12,
     "Damla": 4,
     "damla": 4,
     "Açelya": 5,
@@ -59,6 +59,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:14",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:13",
       "name": "Ziyaretçi (Android 📱)",
@@ -741,18 +749,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:02",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:14",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:08",
       "name": "Tuba",
@@ -1436,15 +1443,6 @@
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:02",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
     }
   ],
