@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 106,
+  "totalVisits": 107,
   "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
@@ -18,6 +18,15 @@
   "logs": [
     {
       "time": "08:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Arcadia",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "08:39",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -32,15 +41,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "08:38",
@@ -602,19 +602,19 @@
   "cityVisits": [
     {
       "time": "08:39",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Arcadia",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "08:39",
-      "name": "Ziyaretçi (Mobil 📱)",
+      "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
