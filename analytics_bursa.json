@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 208,
+  "totalVisits": 209,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -30,6 +30,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:42",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -734,14 +743,6 @@
       "device": "Android 📱",
       "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:06",
-      "name": "Derin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -792,17 +793,18 @@
       "device": "Mobil 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:06",
-      "name": "Derin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:42",
       "name": "Ziyaretçi (Mobil 📱)",
