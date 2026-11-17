@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 211,
-  "totalWaClicks": 44,
+  "totalWaClicks": 45,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 8,
@@ -22,8 +22,8 @@
     "gül": 3,
     "Tuba": 2,
     "tuba": 2,
-    "Sinem": 3,
-    "sinem": 3,
+    "Sinem": 4,
+    "sinem": 4,
     "Nehir": 1,
     "nehir": 1,
     "Melisa": 1,
@@ -49,6 +49,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:04",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:04",
       "name": "Nihan",
@@ -731,17 +739,17 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:24",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:04",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:04",
       "name": "Nihan",
@@ -964,14 +972,6 @@
       "city": "Bursa / Nilüfer",
       "device": "Masaüstü 💻",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:24",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
