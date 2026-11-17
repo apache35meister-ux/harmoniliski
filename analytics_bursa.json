@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 155,
+  "totalVisits": 156,
   "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
@@ -30,6 +30,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:20",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,14 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:34",
-      "name": "VIP Escort",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -806,17 +807,18 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:34",
-      "name": "VIP Escort",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:20",
       "name": "Ziyaretçi (Android 📱)",
