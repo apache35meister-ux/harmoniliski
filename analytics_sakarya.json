@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 222,
-  "totalWaClicks": 14,
+  "totalWaClicks": 15,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 4,
@@ -18,10 +18,20 @@
     "Dila": 1,
     "dila": 1,
     "Melisa": 1,
-    "melisa": 1
+    "melisa": 1,
+    "Serap": 1,
+    "serap": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:26",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:23",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -726,18 +736,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:26",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:12",
       "name": "Melisa",
@@ -1442,15 +1451,6 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
