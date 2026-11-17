@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 243,
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 10,
-    "selin": 10,
+    "Selin": 11,
+    "selin": 11,
     "Damla": 4,
     "damla": 4,
     "Açelya": 5,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:21",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:20",
       "name": "Ziyaretçi (Android 📱)",
@@ -733,18 +741,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:00",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:21",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:20",
       "name": "Rus ESC",
@@ -1419,15 +1426,6 @@
       "time": "01:03",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:00",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
