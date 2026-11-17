@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 305,
+  "totalVisits": 308,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -22,6 +22,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,14 +740,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:27",
-      "name": "Serap",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -749,17 +750,18 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:27",
-      "name": "Serap",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:03",
       "name": "Ziyaretçi (Mobil 📱)",
