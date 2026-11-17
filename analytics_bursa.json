@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 198,
-  "totalWaClicks": 26,
+  "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 6,
@@ -25,10 +25,20 @@
     "Sinem": 3,
     "sinem": 3,
     "Nehir": 1,
-    "nehir": 1
+    "nehir": 1,
+    "Melisa": 1,
+    "melisa": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:51",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:51",
       "name": "Ziyaretçi (Android 📱)",
@@ -722,18 +732,17 @@
       "device": "Android 📱",
       "page": "/nilufer-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:46",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:51",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:35",
       "name": "Gül",
@@ -1428,15 +1437,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/nilufer-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:46",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
