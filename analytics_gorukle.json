@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794933587336,
-  "totalVisits": 294,
+  "totalVisits": 295,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -15,8 +15,17 @@
   "logs": [
     {
       "time": "23:51",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:51",
       "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "city": "Istanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
@@ -723,31 +732,23 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:32",
-      "name": "Melisa",
-      "city": "Görükle",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "callLogs": [
-    {
-      "time": "21:32",
-      "name": "Melisa",
-      "city": "Görükle",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
+  "callLogs": [],
   "cityVisits": [
     {
       "time": "23:51",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:51",
       "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "city": "Istanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
