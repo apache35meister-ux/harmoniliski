@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 310,
-  "totalWaClicks": 67,
+  "totalWaClicks": 68,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 13,
@@ -30,8 +30,8 @@
     "melisa": 1,
     "Şebnem": 2,
     "şebnem": 2,
-    "Sena": 1,
-    "sena": 1,
+    "Sena": 2,
+    "sena": 2,
     "Melike": 1,
     "melike": 1,
     "Nergis": 1,
@@ -61,6 +61,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:34",
+      "name": "Sena",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:34",
       "name": "Selin",
@@ -745,17 +753,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:01",
-      "name": "Sena",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:34",
+      "name": "Sena",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:34",
       "name": "Selin",
@@ -959,14 +967,6 @@
     {
       "time": "09:02",
       "name": "Melike",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:01",
-      "name": "Sena",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
