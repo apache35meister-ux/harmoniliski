@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 260,
-  "totalWaClicks": 58,
+  "totalWaClicks": 59,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 11,
@@ -36,8 +36,8 @@
     "melike": 1,
     "Nergis": 1,
     "nergis": 1,
-    "Serap": 2,
-    "serap": 2,
+    "Serap": 3,
+    "serap": 3,
     "Lara": 3,
     "lara": 3,
     "İlayda": 1,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:45",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:44",
       "name": "Ziyaretçi (Android 📱)",
@@ -735,17 +743,17 @@
       "device": "iPhone 📱",
       "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:21",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Masaüstü 💻",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:45",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:29",
       "name": "Nehir",
@@ -1000,14 +1008,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:21",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Masaüstü 💻",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
