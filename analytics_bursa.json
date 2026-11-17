@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 216,
-  "totalWaClicks": 51,
+  "totalWaClicks": 52,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 9,
@@ -38,8 +38,8 @@
     "nergis": 1,
     "Serap": 1,
     "serap": 1,
-    "Lara": 1,
-    "lara": 1,
+    "Lara": 2,
+    "lara": 2,
     "İlayda": 1,
     "i̇layda": 1,
     "Dila": 1,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:20",
+      "name": "Lara",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319948487",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:20",
       "name": "Su",
@@ -732,18 +740,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:20",
+      "name": "Lara",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319948487",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:20",
       "name": "Su",
@@ -1421,15 +1428,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
