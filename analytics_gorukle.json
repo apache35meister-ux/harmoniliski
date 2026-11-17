@@ -1,11 +1,22 @@
 {
   "resetEpoch": 1794933587336,
   "totalVisits": 6,
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "Melis": 1,
+    "melis": 1
+  },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:58",
+      "name": "Melis",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:58",
       "name": "Ziyaretçi (Android 📱)",
@@ -43,7 +54,16 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "19:58",
+      "name": "Melis",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "19:58",
