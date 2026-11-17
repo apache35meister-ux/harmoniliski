@@ -1,19 +1,21 @@
 {
   "resetEpoch": 1794940635198,
   "totalVisits": 8,
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "Selin": 1,
+    "selin": 1
+  },
   "tCalls": {},
   "logs": [
     {
-      "time": "21:39",
-      "name": "Ziyaretçi (Android 📱)",
+      "time": "21:41",
+      "name": "Selin",
       "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "21:39",
@@ -21,27 +23,45 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:39",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
-  "cityVisits": [
+  "callLogs": [
     {
-      "time": "21:39",
-      "name": "Ziyaretçi (Android 📱)",
+      "time": "21:41",
+      "name": "Selin",
       "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
+  "cityVisits": [
     {
       "time": "21:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:39",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
