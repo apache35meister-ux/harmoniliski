@@ -1,11 +1,23 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 14,
-  "totalWaClicks": 0,
+  "totalWaClicks": 3,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "1794900000004": 2,
+    "Eylül": 3,
+    "eylül": 3
+  },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:10",
+      "name": "Eylül",
+      "city": "İzmit / Alikahya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:00",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -52,7 +64,16 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "03:10",
+      "name": "Eylül",
+      "city": "İzmit / Alikahya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "03:00",
