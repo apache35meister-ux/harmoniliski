@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933587336,
   "totalVisits": 327,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Melis": 1,
@@ -9,27 +9,19 @@
     "Rus ESC": 1,
     "rus esc": 1,
     "Melisa": 1,
-    "melisa": 1
+    "melisa": 1,
+    "Test Escort": 1,
+    "test escort": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "00:36",
-      "name": "Ziyaretçi (Android 📱)",
+      "name": "Test Escort",
       "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/batikent-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Görükle",
-      "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Test Verification",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "00:13",
@@ -730,30 +722,30 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "22:05",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
-  "cityVisits": [
+  "callLogs": [
     {
       "time": "00:36",
-      "name": "Ziyaretçi (Android 📱)",
+      "name": "Test Escort",
       "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/batikent-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Görükle",
-      "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Test Verification",
-      "type": "👁️ Site Ziyareti"
-    },
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
+  "cityVisits": [
     {
       "time": "00:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1453,6 +1445,15 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "22:05",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
