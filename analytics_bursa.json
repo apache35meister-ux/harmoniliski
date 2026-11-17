@@ -1,14 +1,24 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 5,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 1,
-    "gül": 1
+    "gül": 1,
+    "Selin": 1,
+    "selin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:55",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:55",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -37,6 +47,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:55",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:55",
       "name": "Gül",
