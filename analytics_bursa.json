@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 210,
-  "totalWaClicks": 39,
+  "totalWaClicks": 40,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 8,
@@ -35,10 +35,20 @@
     "Melike": 1,
     "melike": 1,
     "Nergis": 1,
-    "nergis": 1
+    "nergis": 1,
+    "Serap": 1,
+    "serap": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:03",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:03",
       "name": "Ziyaretçi (Android 📱)",
@@ -722,17 +732,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:28",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:03",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:03",
       "name": "Nergis",
@@ -947,14 +957,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:28",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
