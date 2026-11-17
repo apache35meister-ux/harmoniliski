@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 86,
-  "totalWaClicks": 6,
+  "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 4,
@@ -10,18 +10,19 @@
     "Gül": 1,
     "gül": 1,
     "Damla": 1,
-    "damla": 1
+    "damla": 1,
+    "VIP Escort": 1,
+    "vip escort": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "08:36",
-      "name": "Ziyaretçi (iPhone 📱)",
+      "name": "VIP Escort",
       "city": "Bursa",
-      "country": "Türkiye",
       "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "08:36",
@@ -459,9 +460,26 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "08:36",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:36",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:54",
       "name": "Damla",
@@ -498,15 +516,6 @@
   "cityVisits": [
     {
       "time": "08:36",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:36",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -907,6 +916,15 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "08:36",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
