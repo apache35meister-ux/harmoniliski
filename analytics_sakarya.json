@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 448,
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 7,
@@ -34,10 +34,20 @@
     "Rus ESC": 1,
     "rus esc": 1,
     "Sabina": 1,
-    "sabina": 1
+    "sabina": 1,
+    "Test Escort": 1,
+    "test escort": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:36",
+      "name": "Test Escort",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:36",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -737,18 +747,17 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:53",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "00:36",
+      "name": "Test Escort",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:35",
       "name": "Selin",
@@ -1444,15 +1453,6 @@
     },
     {
       "time": "22:55",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:53",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
       "country": "Türkiye",
