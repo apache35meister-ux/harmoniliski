@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 193,
-  "totalWaClicks": 25,
+  "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 6,
@@ -18,8 +18,8 @@
     "yaren": 1,
     "Begüm": 2,
     "begüm": 2,
-    "Gül": 1,
-    "gül": 1,
+    "Gül": 2,
+    "gül": 2,
     "Tuba": 1,
     "tuba": 1,
     "Sinem": 3,
@@ -29,6 +29,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:35",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:35",
       "name": "Ziyaretçi (Android 📱)",
@@ -723,18 +731,17 @@
       "device": "Android 📱",
       "page": "/nilufer-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "05:35",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "04:53",
       "name": "Nehir",
@@ -1430,15 +1437,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/nilufer-eskort",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
