@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933587336,
   "totalVisits": 332,
-  "totalWaClicks": 4,
+  "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
     "Melis": 1,
@@ -11,43 +11,26 @@
     "Melisa": 1,
     "melisa": 1,
     "Test Escort": 1,
-    "test escort": 1
+    "test escort": 1,
+    "Selin": 1,
+    "selin": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "00:37",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
+      "name": "Selin",
+      "city": "Görükle",
       "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "00:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Android 📱)",
+      "name": "Ziyaretçi (iPhone 📱)",
       "city": "Görükle",
       "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -733,9 +716,35 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "00:37",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:36",
       "name": "Test Escort",
@@ -749,36 +758,9 @@
     {
       "time": "00:37",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
       "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -1454,6 +1436,24 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
