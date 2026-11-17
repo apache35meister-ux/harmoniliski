@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794933535282,
-  "totalVisits": 5,
+  "totalVisits": 7,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -13,18 +13,19 @@
   "logs": [
     {
       "time": "19:55",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "19:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Nilufer",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -44,9 +45,7 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "19:55",
       "name": "Selin",
@@ -54,7 +53,9 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
+    }
+  ],
+  "callLogs": [
     {
       "time": "19:55",
       "name": "Gül",
@@ -62,15 +63,32 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "19:55",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
     {
       "time": "19:55",
       "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Nilufer",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "19:55",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
