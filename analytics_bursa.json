@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794854733040,
-  "totalVisits": 422,
+  "totalVisits": 423,
   "totalWaClicks": 82,
   "totalCalls": 0,
   "tClicks": {
@@ -61,6 +61,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:19",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -761,14 +770,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:46",
-      "name": "Roza",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905347608013",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -851,17 +852,18 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12:46",
-      "name": "Roza",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905347608013",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:19",
       "name": "Ziyaretçi (Mobil 📱)",
