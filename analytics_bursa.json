@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 190,
-  "totalWaClicks": 24,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 6,
@@ -23,10 +23,20 @@
     "Tuba": 1,
     "tuba": 1,
     "Sinem": 3,
-    "sinem": 3
+    "sinem": 3,
+    "Nehir": 1,
+    "nehir": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:53",
+      "name": "Nehir",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "04:53",
       "name": "Ziyaretçi (Android 📱)",
@@ -721,18 +731,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "04:53",
+      "name": "Nehir",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "04:52",
       "name": "Sinem",
@@ -1423,15 +1432,6 @@
     },
     {
       "time": "22:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:28",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
