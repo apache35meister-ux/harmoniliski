@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 300,
-  "totalWaClicks": 23,
+  "totalVisits": 302,
+  "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -13,8 +13,8 @@
     "damla": 1,
     "VIP Escort": 5,
     "vip escort": 5,
-    "Melis": 1,
-    "melis": 1,
+    "Melis": 2,
+    "melis": 2,
     "Dila": 2,
     "dila": 2,
     "Melisa": 1,
@@ -34,20 +34,28 @@
   "logs": [
     {
       "time": "22:55",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Istanbul",
       "country": "Türkiye",
-      "device": "Android 📱",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "22:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "22:55",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
+      "device": "Android 📱",
+      "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
     },
     {
@@ -735,18 +743,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:41",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Los Angeles",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:55",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:54",
       "name": "Gülce",
@@ -807,20 +814,20 @@
   "cityVisits": [
     {
       "time": "22:55",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Istanbul",
       "country": "Türkiye",
-      "device": "Android 📱",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "22:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
+      "device": "Android 📱",
+      "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
     },
     {
@@ -1450,15 +1457,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:41",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Los Angeles",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
