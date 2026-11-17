@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 229,
-  "totalWaClicks": 53,
+  "totalWaClicks": 54,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 9,
-    "selin": 9,
+    "Selin": 10,
+    "selin": 10,
     "Damla": 4,
     "damla": 4,
     "Açelya": 5,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:40",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:40",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,18 +740,17 @@
       "device": "Masaüstü 💻",
       "page": "/osmangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:20",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/bursa-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:40",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:20",
       "name": "Serap",
@@ -1422,15 +1429,6 @@
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "/osmangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:20",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/bursa-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
