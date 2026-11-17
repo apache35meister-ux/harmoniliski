@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 89,
-  "totalWaClicks": 25,
+  "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -39,27 +39,19 @@
     "Nergis": 1,
     "nergis": 1,
     "Hale": 1,
-    "hale": 1
+    "hale": 1,
+    "Yaren": 1,
+    "yaren": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "21:00",
-      "name": "Ziyaretçi (Android 📱)",
+      "name": "Yaren",
       "city": "Bursa",
-      "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:00",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "21:00",
@@ -683,9 +675,35 @@
       "device": "Android 📱",
       "page": "/nilufer-eskort.html",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:00",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:00",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:00",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:00",
       "name": "Hale",
@@ -889,24 +907,6 @@
   ],
   "cityVisits": [
     {
-      "time": "21:00",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:00",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
       "time": "20:58",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1327,6 +1327,24 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/nilufer-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:00",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:00",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
