@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 337,
+  "totalVisits": 341,
   "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
@@ -36,11 +36,21 @@
   "logs": [
     {
       "time": "23:13",
-      "name": "Melis",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:13",
+      "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
+      "country": "Türkiye",
       "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "23:12",
@@ -727,17 +737,8 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "16:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:18",
-      "name": "Dila",
+      "time": "23:13",
+      "name": "Melis",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
@@ -746,14 +747,6 @@
   ],
   "callLogs": [
     {
-      "time": "23:13",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
       "time": "23:12",
       "name": "Damla",
       "city": "Bursa",
@@ -826,8 +819,8 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "16:18",
-      "name": "Dila",
+      "time": "23:13",
+      "name": "Melis",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
@@ -835,6 +828,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "23:13",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1444,15 +1455,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
