@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 111,
-  "totalWaClicks": 35,
+  "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -12,8 +12,8 @@
     "eylül": 5,
     "Melis": 2,
     "melis": 2,
-    "Rus ESC": 5,
-    "rus esc": 5,
+    "Rus ESC": 6,
+    "rus esc": 6,
     "Emel": 1,
     "emel": 1,
     "Damla": 1,
@@ -48,6 +48,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:14",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:14",
       "name": "Melis",
@@ -729,18 +737,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:57",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/orhangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:14",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:14",
       "name": "Melis",
@@ -1418,15 +1425,6 @@
     },
     {
       "time": "20:58",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/orhangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:57",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
       "country": "Türkiye",
