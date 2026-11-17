@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933587336,
   "totalVisits": 350,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Melis": 1,
@@ -12,8 +12,8 @@
     "melisa": 1,
     "Test Escort": 1,
     "test escort": 1,
-    "Selin": 1,
-    "selin": 1
+    "Selin": 2,
+    "selin": 2
   },
   "tCalls": {},
   "logs": [
@@ -1459,5 +1459,13 @@
     }
   ],
   "cityCounts": {},
-  "activeVisitors": []
+  "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_17w4",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794959739742
+    }
+  ]
 }
