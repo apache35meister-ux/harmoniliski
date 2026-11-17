@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 199,
-  "totalWaClicks": 27,
+  "totalWaClicks": 28,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 6,
@@ -20,8 +20,8 @@
     "begüm": 2,
     "Gül": 2,
     "gül": 2,
-    "Tuba": 1,
-    "tuba": 1,
+    "Tuba": 2,
+    "tuba": 2,
     "Sinem": 3,
     "sinem": 3,
     "Nehir": 1,
@@ -31,6 +31,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:52",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:52",
       "name": "Ziyaretçi (Android 📱)",
@@ -723,18 +731,17 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:49",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Osmangazi",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:52",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:51",
       "name": "Melisa",
@@ -1427,15 +1434,6 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:49",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Osmangazi",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
