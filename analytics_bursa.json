@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 82,
-  "totalWaClicks": 20,
+  "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -33,18 +33,19 @@
     "Sena": 1,
     "sena": 1,
     "Nihan": 1,
-    "nihan": 1
+    "nihan": 1,
+    "Dila": 1,
+    "dila": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "20:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "20:58",
@@ -601,9 +602,26 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:58",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:58",
       "name": "Selin",
@@ -767,15 +785,6 @@
   ],
   "cityVisits": [
     {
-      "time": "20:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
       "time": "20:57",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1164,6 +1173,15 @@
     },
     {
       "time": "20:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:58",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
