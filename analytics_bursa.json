@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 331,
-  "totalWaClicks": 72,
+  "totalWaClicks": 73,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 16,
@@ -56,11 +56,19 @@
     "rus esc": 1,
     "Roza": 1,
     "roza": 1,
-    "Melis": 2,
-    "melis": 2
+    "Melis": 3,
+    "melis": 3
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:49",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905414677075",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:48",
       "name": "Ziyaretçi (Android 📱)",
@@ -738,17 +746,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:53",
-      "name": "Nehir",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:49",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905414677075",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:48",
       "name": "Selin",
@@ -1011,14 +1019,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "04:53",
-      "name": "Nehir",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
