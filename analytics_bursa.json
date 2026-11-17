@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
-  "totalVisits": 109,
-  "totalWaClicks": 32,
+  "totalVisits": 111,
+  "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -28,8 +28,8 @@
     "şebnem": 1,
     "Melike": 1,
     "melike": 1,
-    "Açelya": 1,
-    "açelya": 1,
+    "Açelya": 2,
+    "açelya": 2,
     "Sena": 1,
     "sena": 1,
     "Nihan": 1,
@@ -50,19 +50,27 @@
   "logs": [
     {
       "time": "21:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:13",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "21:13",
-      "name": "Ziyaretçi (iPhone 📱)",
+      "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -731,18 +739,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:13",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:10",
       "name": "Rus ESC",
@@ -963,19 +970,19 @@
   "cityVisits": [
     {
       "time": "21:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
     {
       "time": "21:13",
-      "name": "Ziyaretçi (iPhone 📱)",
+      "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -1422,15 +1429,6 @@
     },
     {
       "time": "20:57",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:58",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
