@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 382,
-  "totalWaClicks": 78,
+  "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 16,
-    "selin": 16,
+    "Selin": 17,
+    "selin": 17,
     "Damla": 5,
     "damla": 5,
     "Açelya": 6,
@@ -61,6 +61,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:57",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:57",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -753,18 +761,17 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:16",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/osmangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "16:57",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:44",
       "name": "Damla",
@@ -1458,15 +1465,6 @@
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:16",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/osmangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
