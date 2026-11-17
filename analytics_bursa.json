@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794854733040,
   "totalVisits": 429,
-  "totalWaClicks": 83,
+  "totalWaClicks": 84,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 19,
@@ -57,10 +57,20 @@
     "Roza": 1,
     "roza": 1,
     "Melis": 3,
-    "melis": 3
+    "melis": 3,
+    "İzel": 1,
+    "i̇zel": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:44",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:44",
       "name": "Ziyaretçi (Android 📱)",
@@ -760,18 +770,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:08",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:44",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:30",
       "name": "Melisa",
@@ -1472,15 +1481,6 @@
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:08",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
