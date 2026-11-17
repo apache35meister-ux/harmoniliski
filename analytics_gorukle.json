@@ -1,18 +1,28 @@
 {
   "resetEpoch": 1794933587336,
-  "totalVisits": 51,
-  "totalWaClicks": 1,
+  "totalVisits": 52,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "Rus ESC": 1,
+    "rus esc": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "21:27",
+      "name": "Rus ESC",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:27",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Görükle",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
@@ -245,6 +255,14 @@
   ],
   "callLogs": [
     {
+      "time": "21:27",
+      "name": "Rus ESC",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "19:58",
       "name": "Melis",
       "city": "Görükle",
@@ -257,7 +275,7 @@
     {
       "time": "21:27",
       "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
+      "city": "Görükle",
       "country": "Türkiye",
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
