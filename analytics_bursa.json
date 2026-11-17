@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 85,
-  "totalWaClicks": 24,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -37,10 +37,20 @@
     "Dila": 1,
     "dila": 1,
     "Nergis": 1,
-    "nergis": 1
+    "nergis": 1,
+    "Hale": 1,
+    "hale": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:00",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:59",
       "name": "Melisa",
@@ -658,6 +668,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:00",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:59",
       "name": "Melisa",
