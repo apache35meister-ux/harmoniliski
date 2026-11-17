@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933535282,
   "totalVisits": 104,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Gül": 2,
@@ -12,8 +12,8 @@
     "eylül": 5,
     "Melis": 1,
     "melis": 1,
-    "Rus ESC": 2,
-    "rus esc": 2,
+    "Rus ESC": 3,
+    "rus esc": 3,
     "Emel": 1,
     "emel": 1,
     "Damla": 1,
@@ -43,10 +43,19 @@
     "Yaren": 1,
     "yaren": 1,
     "Serap": 1,
-    "serap": 1
+    "serap": 1,
+    "1788500000006": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:10",
+      "name": "Rus ESC",
+      "city": "Bursa / İnegöl",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -729,17 +738,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:00",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:10",
+      "name": "Rus ESC",
+      "city": "Bursa / İnegöl",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:01",
       "name": "Emel",
@@ -962,14 +971,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:00",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
