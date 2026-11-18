@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 91,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -25,10 +25,20 @@
     "Tuba": 1,
     "tuba": 1,
     "İzel": 1,
-    "i̇zel": 1
+    "i̇zel": 1,
+    "Rus Rita": 1,
+    "rus rita": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:45",
+      "name": "Rus Rita",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:45",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -722,18 +732,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:19",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/yildirim-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "17:45",
+      "name": "Rus Rita",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:44",
       "name": "İzel",
@@ -1614,6 +1623,13 @@
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_xbl1",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795013140840
+    },
     {
       "id": "iPhone 📱_Bursa_757e",
       "device": "iPhone 📱",
