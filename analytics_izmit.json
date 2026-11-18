@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993498994,
-  "totalVisits": 107,
+  "totalVisits": 108,
   "totalWaClicks": 47,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:34",
       "name": "Eylül",
@@ -714,15 +723,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1104,6 +1104,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1814,98 +1823,19 @@
       "device": "Android 📱",
       "page": "/yildirim-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 102,
+    "İstanbul": 103,
     "Bursa": 5
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_a4o3",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016073559
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Alikahya_wvn8",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Alikahya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016073537
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Alikahya_wmc8",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Alikahya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016073536
-    },
-    {
-      "id": "Android 📱_Bursa_w69k",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016066723
-    },
-    {
-      "id": "Mobil 📱_İstanbul_2njv",
+      "id": "Mobil 📱_İstanbul_ny4d",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795016060948
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Yahya Kaptan_p4a7",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Yahya Kaptan",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016059848
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_tplh",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016059848
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Yahya Kaptan_kq58",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Yahya Kaptan",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795016059848
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_e5qn",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795016056127
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_b88f",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795015983785
-    },
-    {
-      "id": "Mobil 📱_İstanbul_n6j8",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795015921650
+      "lastSeen": 1795016362106
     }
   ]
 }
