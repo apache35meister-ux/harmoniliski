@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794992835337,
   "totalVisits": 147,
-  "totalWaClicks": 10,
+  "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -16,11 +16,36 @@
     "i̇layda": 1,
     "Melis": 1,
     "melis": 1,
-    "Eylül": 2,
-    "eylül": 2
+    "Eylül": 5,
+    "eylül": 5,
+    "1794900000004": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:42",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:42",
+      "name": "Eylül",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:42",
+      "name": "Eylül",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -708,35 +733,33 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:54",
-      "name": "İlayda",
-      "city": "Görükle",
-      "device": "Android 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:42",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:42",
+      "name": "Eylül",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:42",
+      "name": "Eylül",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Eylül",
@@ -1545,6 +1568,27 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Görükle_fsvp",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016534824
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Özlüce_etwe",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Özlüce",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016534795
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Özlüce_x6fr",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Özlüce",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016534794
+    },
     {
       "id": "Masaüstü 💻_İstanbul_rmuq",
       "device": "Masaüstü 💻",
