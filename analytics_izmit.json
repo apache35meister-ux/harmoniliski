@@ -1,9 +1,10 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 388,
-  "totalWaClicks": 20,
+  "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
+    "99": 1,
     "1794900000004": 2,
     "Eylül": 3,
     "eylül": 3,
@@ -22,10 +23,20 @@
     "Test Escort": 1,
     "test escort": 1,
     "Gül": 1,
-    "gül": 1
+    "gül": 1,
+    "Buse": 1,
+    "buse": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:43",
+      "name": "Buse",
+      "city": "İzmit",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:48",
       "name": "Ziyaretçi (Android 📱)",
@@ -734,18 +745,17 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:43",
+      "name": "Buse",
+      "city": "İzmit",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:36",
       "name": "Test Escort",
@@ -1470,11 +1480,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_ee2n",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
+      "id": "Mobil 📱_İzmit_5n4y",
+      "device": "Mobil 📱",
+      "city": "İzmit",
       "page": "Ana Sayfa",
-      "lastSeen": 1794987283827
+      "lastSeen": 1794987780869
     }
   ]
 }
