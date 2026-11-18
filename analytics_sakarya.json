@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989741796,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -12,6 +12,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:24",
       "name": "Damla",
@@ -101,6 +110,15 @@
   ],
   "cityVisits": [
     {
+      "time": "11:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:18",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Sakarya",
@@ -131,11 +149,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Sakarya_nglk",
-      "device": "Masaüstü 💻",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794990275986
+      "id": "Mobil 📱_İstanbul_z7n1",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794990494345
     }
   ]
 }
