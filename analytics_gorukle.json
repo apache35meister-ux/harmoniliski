@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 19,
+  "totalVisits": 20,
   "totalWaClicks": 15,
   "totalCalls": 0,
   "tClicks": {
@@ -26,6 +26,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:57",
       "name": "Serap",
@@ -443,6 +452,15 @@
   "cityVisits": [
     {
       "time": "19:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "19:57",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
       "country": "Türkiye",
@@ -614,10 +632,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 17,
+    "İstanbul": 18,
     "Görükle": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_9zif",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795021066542
+    },
     {
       "id": "Android 📱_Görükle_pe3i",
       "device": "Android 📱",
