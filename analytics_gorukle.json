@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 58,
+  "totalVisits": 59,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -15,6 +15,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:06",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -606,6 +615,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:06",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1129,51 +1147,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 49,
+    "İstanbul": 50,
     "Görükle": 9
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_ygnn",
+      "id": "Mobil 📱_İstanbul_q1eu",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795003577078
-    },
-    {
-      "id": "Android 📱_Görükle_u9pn",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795003522381
-    },
-    {
-      "id": "Android 📱_Görükle_z0ve",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/batikent-eskort.html",
-      "lastSeen": 1795003506354
-    },
-    {
-      "id": "Android 📱_Görükle_8yit",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795003420629
-    },
-    {
-      "id": "Android 📱_Görükle_iwfv",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/batikent-eskort.html",
-      "lastSeen": 1795003419415
-    },
-    {
-      "id": "Mobil 📱_İstanbul_zysz",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795003417848
+      "lastSeen": 1795004214214
     }
   ]
 }
