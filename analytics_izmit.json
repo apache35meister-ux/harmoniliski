@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 61,
+  "totalVisits": 62,
   "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:30",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -805,6 +814,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:30",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:29",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1355,10 +1373,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 57,
+    "İstanbul": 58,
     "Bursa": 4
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_svws",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795037416790
+    },
     {
       "id": "Mobil 📱_İstanbul_7rqr",
       "device": "Mobil 📱",
@@ -1379,27 +1404,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795037237130
-    },
-    {
-      "id": "Android 📱_Bursa_gcm2",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795037215958
-    },
-    {
-      "id": "Android 📱_Bursa_akay",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795037214491
-    },
-    {
-      "id": "Android 📱_Bursa_mkrk",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795037205020
     }
   ]
 }
