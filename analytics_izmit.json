@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 107,
-  "totalWaClicks": 44,
+  "totalWaClicks": 47,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 13,
@@ -16,8 +16,8 @@
     "buket": 1,
     "Açelya": 3,
     "açelya": 3,
-    "Eylül": 5,
-    "eylül": 5,
+    "Eylül": 8,
+    "eylül": 8,
     "Rus ESC": 2,
     "rus esc": 2,
     "Gül": 3,
@@ -34,10 +34,35 @@
     "1790000000013": 2,
     "Tuğçe": 3,
     "tuğçe": 3,
-    "1794900000001": 2
+    "1794900000001": 2,
+    "1794900000004": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "İzmit / Alikahya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "İzmit / Alikahya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Selin",
@@ -698,33 +723,33 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:07",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "16:06",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "16:05",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "İzmit / Alikahya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "İzmit / Alikahya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Selin",
@@ -1805,6 +1830,27 @@
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_a4o3",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016073559
+    },
+    {
+      "id": "Masaüstü 💻_İzmit / Alikahya_wvn8",
+      "device": "Masaüstü 💻",
+      "city": "İzmit / Alikahya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016073537
+    },
+    {
+      "id": "Masaüstü 💻_İzmit / Alikahya_wmc8",
+      "device": "Masaüstü 💻",
+      "city": "İzmit / Alikahya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016073536
+    },
     {
       "id": "Android 📱_Bursa_w69k",
       "device": "Android 📱",
