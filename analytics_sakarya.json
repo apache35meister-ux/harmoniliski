@@ -1,21 +1,23 @@
 {
   "resetEpoch": 1794989741796,
   "totalVisits": 4,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
     "selin": 2,
-    "1794900000001": 1
+    "1794900000001": 1,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
     {
-      "time": "11:23",
-      "name": "Selin",
+      "time": "11:24",
+      "name": "Damla",
       "city": "Sakarya",
       "device": "Masaüstü 💻",
-      "phone": "905318539371",
+      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -55,6 +57,14 @@
     },
     {
       "time": "11:23",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:23",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Sakarya",
       "country": "Türkiye",
@@ -65,11 +75,11 @@
   ],
   "callLogs": [
     {
-      "time": "11:23",
-      "name": "Selin",
+      "time": "11:24",
+      "name": "Damla",
       "city": "Sakarya",
       "device": "Masaüstü 💻",
-      "phone": "905318539371",
+      "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -78,6 +88,14 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:23",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -113,11 +131,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Sakarya_9rh2",
+      "id": "Masaüstü 💻_Sakarya_nglk",
       "device": "Masaüstü 💻",
       "city": "Sakarya",
       "page": "Ana Sayfa",
-      "lastSeen": 1794990188497
+      "lastSeen": 1794990275986
     }
   ]
 }
