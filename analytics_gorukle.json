@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 162,
+  "totalVisits": 163,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:36",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,15 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1114,6 +1114,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:36",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1824,22 +1833,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:05",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 147,
+    "İstanbul": 148,
     "Görükle": 15
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_orm8",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795045025138
+    },
     {
       "id": "Mobil 📱_İstanbul_vcj5",
       "device": "Mobil 📱",
@@ -1860,20 +1867,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795044849643
-    },
-    {
-      "id": "Android 📱_Görükle_2c5m",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795044836823
-    },
-    {
-      "id": "Mobil 📱_İstanbul_f22o",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795044831730
     }
   ]
 }
