@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 73,
-  "totalWaClicks": 17,
+  "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -11,8 +11,8 @@
     "nergis": 1,
     "VIP Escort": 2,
     "vip escort": 2,
-    "Melis": 5,
-    "melis": 5,
+    "Melis": 6,
+    "melis": 6,
     "1790000000339": 2,
     "Açelya": 1,
     "açelya": 1,
@@ -25,6 +25,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:12",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -718,18 +726,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:00",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "02:12",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:18",
       "name": "Melisa",
@@ -1531,6 +1538,13 @@
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_2u39",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795043551471
+    },
     {
       "id": "Mobil 📱_İstanbul_ru2w",
       "device": "Mobil 📱",
