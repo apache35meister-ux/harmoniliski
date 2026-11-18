@@ -12,7 +12,7 @@
     {
       "time": "11:15",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -74,6 +74,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:15",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:15",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -141,11 +150,18 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_uvxb",
+      "id": "Masaüstü 💻_Bursa_enzd",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794989719686
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_6c4e",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794989718521
+      "lastSeen": 1794989718401
     },
     {
       "id": "Masaüstü 💻_İstanbul_mmkq",
