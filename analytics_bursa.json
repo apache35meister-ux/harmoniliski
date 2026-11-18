@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794993496824,
   "totalVisits": 56,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
@@ -11,10 +11,20 @@
     "Gül": 1,
     "gül": 1,
     "Su": 1,
-    "su": 1
+    "su": 1,
+    "Serap": 1,
+    "serap": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:24",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -561,6 +571,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "17:24",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:24",
       "name": "Su",
@@ -1114,6 +1132,13 @@
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_w3ot",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795011875045
+    },
     {
       "id": "Mobil 📱_İstanbul_plbl",
       "device": "Mobil 📱",
