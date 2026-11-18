@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 27,
+  "totalVisits": 28,
   "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:52",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/bursa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:52",
       "name": "Sinem",
@@ -502,6 +511,15 @@
   "cityVisits": [
     {
       "time": "20:52",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/bursa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:52",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
       "country": "Türkiye",
@@ -746,9 +764,16 @@
   ],
   "cityCounts": {
     "İstanbul": 26,
-    "Bursa": 1
+    "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_6ss0",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/bursa-eskort.html",
+      "lastSeen": 1795024363866
+    },
     {
       "id": "Android 📱_Bursa_v5nt",
       "device": "Android 📱",
