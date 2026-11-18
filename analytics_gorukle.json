@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 129,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -34,10 +34,20 @@
     "Şebnem": 1,
     "şebnem": 1,
     "İlayda": 2,
-    "i̇layda": 2
+    "i̇layda": 2,
+    "Sena": 1,
+    "sena": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:48",
+      "name": "Sena",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:48",
       "name": "Ziyaretçi (Android 📱)",
@@ -737,18 +747,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:06",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/heykel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:48",
+      "name": "Sena",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:48",
       "name": "İlayda",
@@ -1709,6 +1718,13 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_ivqh",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042098783
+    },
     {
       "id": "Android 📱_Görükle_u2t4",
       "device": "Android 📱",
