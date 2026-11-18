@@ -1,13 +1,41 @@
 {
   "resetEpoch": 1794989750470,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
   "tCalls": {},
-  "logs": [],
+  "logs": [
+    {
+      "time": "11:18",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    }
+  ],
   "callLogs": [],
-  "cityVisits": [],
+  "cityVisits": [
+    {
+      "time": "11:18",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    }
+  ],
   "cityCounts": {},
-  "activeVisitors": []
+  "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_hv7z",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794989891641
+    }
+  ]
 }
