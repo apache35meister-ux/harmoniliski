@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993496824,
-  "totalVisits": 56,
+  "totalVisits": 57,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:41",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:24",
       "name": "Serap",
@@ -638,6 +647,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:41",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:24",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1143,45 +1161,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 53,
+    "İstanbul": 54,
     "Izmir": 1,
     "Bursa": 2
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_ruru",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795011892967
-    },
-    {
-      "id": "iPhone 📱_Bursa_w3ot",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795011875045
-    },
-    {
-      "id": "Mobil 📱_İstanbul_plbl",
+      "id": "Mobil 📱_İstanbul_8vpm",
       "device": "Mobil 📱",
       "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795011859222
-    },
-    {
-      "id": "iPhone 📱_Bursa_fhco",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795011840693
-    },
-    {
-      "id": "iPhone 📱_İstanbul_tcy3",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795011733489
+      "lastSeen": 1795012891434
     }
   ]
 }
