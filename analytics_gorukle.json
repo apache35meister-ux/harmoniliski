@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 82,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 1,
@@ -23,8 +23,8 @@
     "nihan": 1,
     "Serap": 1,
     "serap": 1,
-    "Rus ESC": 1,
-    "rus esc": 1,
+    "Rus ESC": 2,
+    "rus esc": 2,
     "Ayşen": 1,
     "ayşen": 1,
     "Tuba": 1,
@@ -34,6 +34,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:27",
+      "name": "Rus ESC",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -734,18 +742,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:40",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:27",
+      "name": "Rus ESC",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:19",
       "name": "Açelya",
@@ -1626,6 +1633,13 @@
     "Görükle": 7
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_17l3",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795033677282
+    },
     {
       "id": "iPhone 📱_İstanbul_8yfe",
       "device": "iPhone 📱",
