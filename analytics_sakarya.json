@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 107,
-  "totalWaClicks": 38,
+  "totalWaClicks": 39,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
     "damla": 4,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 6,
-    "açelya": 6,
+    "Açelya": 7,
+    "açelya": 7,
     "Eylül": 2,
     "eylül": 2,
     "Melisa": 1,
@@ -39,6 +39,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:35",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -729,18 +737,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:39",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:35",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:35",
       "name": "VIP Escort",
@@ -1774,6 +1781,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_dodv",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795041355569
+    },
+    {
       "id": "Mobil 📱_İstanbul_1dxn",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -1828,13 +1842,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795041195213
-    },
-    {
-      "id": "Mobil 📱_İstanbul_qq21",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795041162790
     }
   ]
 }
