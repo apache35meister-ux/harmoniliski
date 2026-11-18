@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 114,
-  "totalWaClicks": 47,
+  "totalWaClicks": 48,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 5,
-    "damla": 5,
+    "Damla": 6,
+    "damla": 6,
     "Melis": 2,
     "melis": 2,
     "Açelya": 8,
@@ -43,6 +43,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:39",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:39",
       "name": "Eylül",
@@ -730,17 +738,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:52",
-      "name": "Sakarya Korucuk VIP Escort Vitrin Profilleri",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:39",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:39",
       "name": "Eylül",
@@ -1847,6 +1855,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_2ksj",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795041596664
+    },
+    {
       "id": "Android 📱_Bursa_engt",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1915,27 +1930,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795041450685
-    },
-    {
-      "id": "Android 📱_Bursa_61k9",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041409762
-    },
-    {
-      "id": "Mobil 📱_İstanbul_vxxb",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795041399430
-    },
-    {
-      "id": "Android 📱_Bursa_yr16",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041391083
     }
   ]
 }
