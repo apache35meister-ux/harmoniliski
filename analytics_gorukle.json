@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "totalWaClicks": 1,
   "totalCalls": 0,
   "tClicks": {
@@ -9,6 +9,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/eve-otele-eskort-hizmeti-nasil-alinir.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -156,6 +165,15 @@
   ],
   "cityVisits": [
     {
+      "time": "13:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/eve-otele-eskort-hizmeti-nasil-alinir.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "13:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -283,9 +301,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 14
+    "İstanbul": 14,
+    "Görükle": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_qs9v",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/eve-otele-eskort-hizmeti-nasil-alinir.h",
+      "lastSeen": 1794998556635
+    },
     {
       "id": "Masaüstü 💻_İstanbul_uzq9",
       "device": "Masaüstü 💻",
