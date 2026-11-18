@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794992835337,
   "totalVisits": 146,
-  "totalWaClicks": 9,
+  "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -16,11 +16,19 @@
     "i̇layda": 1,
     "Melis": 1,
     "melis": 1,
-    "Eylül": 1,
-    "eylül": 1
+    "Eylül": 2,
+    "eylül": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Selin",
@@ -726,18 +734,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:49",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:34",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Selin",
@@ -1538,6 +1545,13 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_b0bj",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016098350
+    },
     {
       "id": "iPhone 📱_Görükle_94f5",
       "device": "iPhone 📱",
