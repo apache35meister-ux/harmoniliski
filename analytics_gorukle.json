@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 18,
+  "totalVisits": 19,
   "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
@@ -24,6 +24,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:57",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yildirim-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:57",
       "name": "Nihan",
@@ -415,6 +424,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:57",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yildirim-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:56",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -579,9 +597,16 @@
   ],
   "cityCounts": {
     "İstanbul": 17,
-    "Görükle": 1
+    "Görükle": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_e63t",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/yildirim-eskort.html",
+      "lastSeen": 1795021032259
+    },
     {
       "id": "Android 📱_Görükle_mb1u",
       "device": "Android 📱",
