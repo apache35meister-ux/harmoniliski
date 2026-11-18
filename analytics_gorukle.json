@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794992835337,
   "totalVisits": 146,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 2,
-    "selin": 2,
+    "Selin": 3,
+    "selin": 3,
     "VIP Escort": 1,
     "vip escort": 1,
     "Aylin": 1,
@@ -21,6 +21,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -727,18 +735,17 @@
       "device": "Android 📱",
       "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:28",
       "name": "Eylül",
@@ -1531,6 +1538,13 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_94f5",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016092646
+    },
     {
       "id": "iPhone 📱_İstanbul_rcmp",
       "device": "iPhone 📱",
