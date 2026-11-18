@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 131,
-  "totalWaClicks": 37,
+  "totalWaClicks": 38,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -19,8 +19,8 @@
     "selin": 2,
     "Dila": 1,
     "dila": 1,
-    "Nihan": 1,
-    "nihan": 1,
+    "Nihan": 2,
+    "nihan": 2,
     "Serap": 2,
     "serap": 2,
     "Rus ESC": 2,
@@ -46,6 +46,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:51",
+      "name": "Nihan",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:51",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -737,18 +745,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:34",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:51",
+      "name": "Nihan",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:50",
       "name": "Gül",
@@ -1774,6 +1781,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Görükle_gywk",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042278823
+    },
+    {
       "id": "Mobil 📱_İstanbul_3a3t",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -1835,20 +1849,6 @@
       "city": "Görükle",
       "page": "Ana Sayfa",
       "lastSeen": 1795042122058
-    },
-    {
-      "id": "Android 📱_Görükle_ivqh",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795042098783
-    },
-    {
-      "id": "Android 📱_Görükle_u2t4",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/nilufer-eskort.html",
-      "lastSeen": 1795042097980
     }
   ]
 }
