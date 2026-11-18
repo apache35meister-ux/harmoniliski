@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 64,
-  "totalWaClicks": 15,
+  "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -18,11 +18,19 @@
     "açelya": 1,
     "Rus ESC": 1,
     "rus esc": 1,
-    "Gül": 1,
-    "gül": 1
+    "Gül": 2,
+    "gül": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:18",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:18",
       "name": "Gül",
@@ -730,6 +738,14 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
+      "time": "01:18",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "01:17",
       "name": "Rus ESC",
       "city": "Bursa",
@@ -1425,6 +1441,13 @@
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_ea5o",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795040296934
+    },
     {
       "id": "Android 📱_Bursa_fjk8",
       "device": "Android 📱",
