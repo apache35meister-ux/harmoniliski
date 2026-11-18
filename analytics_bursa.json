@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 1839,
+  "totalVisits": 1840,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -40,6 +40,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:50",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:49",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -743,15 +752,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -821,6 +821,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:50",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:49",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1531,19 +1540,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:07",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/fomara-eskort",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_a4vs",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794988200112
+    },
     {
       "id": "Masaüstü 💻_Bursa_3zgz",
       "device": "Masaüstü 💻",
