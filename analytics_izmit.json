@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 62,
-  "totalWaClicks": 15,
+  "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -14,8 +14,8 @@
     "eylül": 3,
     "Tuba": 1,
     "tuba": 1,
-    "Rus ESC": 1,
-    "rus esc": 1,
+    "Rus ESC": 2,
+    "rus esc": 2,
     "Sinem": 1,
     "sinem": 1,
     "Nergis": 1,
@@ -27,6 +27,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:30",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:30",
       "name": "Eylül",
@@ -707,6 +715,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "00:30",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:30",
       "name": "Eylül",
@@ -1393,6 +1409,13 @@
     "Bursa": 4
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_opqi",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795037457786
+    },
     {
       "id": "iPhone 📱_Bursa_2k6w",
       "device": "iPhone 📱",
