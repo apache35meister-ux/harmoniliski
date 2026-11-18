@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993498994,
-  "totalVisits": 120,
+  "totalVisits": 121,
   "totalWaClicks": 47,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:01",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:56",
       "name": "Ziyaretçi (Android 📱)",
@@ -716,15 +725,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1106,6 +1106,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:01",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:56",
       "name": "Ziyaretçi (Android 📱)",
@@ -1816,49 +1825,19 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:41",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 114,
+    "İstanbul": 115,
     "Bursa": 6
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_kuct",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
-      "lastSeen": 1795017381040
-    },
-    {
-      "id": "Mobil 📱_İstanbul_95qq",
+      "id": "Mobil 📱_İstanbul_2co2",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795017293869
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_dlrm",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795017216936
-    },
-    {
-      "id": "Mobil 📱_İstanbul_zakr",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795017212711
+      "lastSeen": 1795017668249
     }
   ]
 }
