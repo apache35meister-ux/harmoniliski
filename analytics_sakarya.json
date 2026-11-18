@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 93,
+  "totalVisits": 94,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:54",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/konak-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:51",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -735,14 +744,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:53",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -996,6 +997,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:54",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/konak-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:51",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1706,22 +1716,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:59",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 75,
-    "Bursa": 18
+    "Bursa": 19
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_byaz",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/konak-eskort.html",
+      "lastSeen": 1795038844573
+    },
     {
       "id": "Mobil 📱_İstanbul_artx",
       "device": "Mobil 📱",
