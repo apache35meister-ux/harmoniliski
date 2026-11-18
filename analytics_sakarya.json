@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 61,
-  "totalWaClicks": 26,
+  "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -31,10 +31,20 @@
     "Gülce": 1,
     "gülce": 1,
     "Sakarya Korucuk VIP Escort Vitrin Profilleri": 3,
-    "sakarya korucuk vip escort vitrin profilleri": 3
+    "sakarya korucuk vip escort vitrin profilleri": 3,
+    "VIP Escort": 1,
+    "vip escort": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:17",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:17",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -720,17 +730,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:45",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:17",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:53",
       "name": "Damla",
@@ -1496,6 +1506,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_k58z",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795033067215
+    },
     {
       "id": "Mobil 📱_İstanbul_napb",
       "device": "Mobil 📱",
