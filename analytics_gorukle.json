@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 58,
+  "totalVisits": 59,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -30,6 +30,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:53",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/iznik-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -829,6 +838,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:53",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/iznik-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -1353,9 +1371,16 @@
   ],
   "cityCounts": {
     "İstanbul": 54,
-    "Görükle": 4
+    "Görükle": 5
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_4scs",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "/iznik-eskort.html",
+      "lastSeen": 1795028036424
+    },
     {
       "id": "Masaüstü 💻_İstanbul_0y9l",
       "device": "Masaüstü 💻",
