@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 109,
-  "totalWaClicks": 42,
+  "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
@@ -35,10 +35,20 @@
     "VIP Escort": 3,
     "vip escort": 3,
     "Hale": 1,
-    "hale": 1
+    "hale": 1,
+    "Tuba": 1,
+    "tuba": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:37",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:36",
       "name": "Açelya",
@@ -726,18 +736,17 @@
       "device": "Android 📱",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:13",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/orhangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:37",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:36",
       "name": "Açelya",
@@ -1803,6 +1812,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_g5ia",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795041450685
+    },
+    {
       "id": "Android 📱_Bursa_61k9",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1871,13 +1887,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795041308634
-    },
-    {
-      "id": "Android 📱_Bursa_tqcm",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041248999
     }
   ]
 }
