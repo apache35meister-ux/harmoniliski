@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 124,
+  "totalVisits": 125,
   "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -724,15 +733,6 @@
       "device": "Android 📱",
       "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:53",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -778,6 +778,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "17:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1488,35 +1497,19 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 113,
+    "İstanbul": 114,
     "Görükle": 11
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_ppy0",
+      "id": "Mobil 📱_İstanbul_ynn3",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795011630871
-    },
-    {
-      "id": "Mobil 📱_İstanbul_p3j3",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795011585808
+      "lastSeen": 1795012248102
     }
   ]
 }
