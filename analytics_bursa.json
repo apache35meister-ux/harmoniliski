@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 23,
+  "totalVisits": 25,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -10,6 +10,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:23",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:23",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -270,6 +288,24 @@
   ],
   "cityVisits": [
     {
+      "time": "21:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:23",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:23",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -478,30 +514,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 21,
+    "İstanbul": 23,
     "Bursa": 2
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_wiao",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/rehber.html",
-      "lastSeen": 1795026182852
-    },
-    {
-      "id": "Mobil 📱_İstanbul_zvbw",
+      "id": "Mobil 📱_İstanbul_43we",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795026163366
-    },
-    {
-      "id": "Mobil 📱_İstanbul_qgy3",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795026078328
+      "lastSeen": 1795026371302
     }
   ]
 }
