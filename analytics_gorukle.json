@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 28,
+  "totalVisits": 29,
   "totalWaClicks": 1,
   "totalCalls": 0,
   "tClicks": {
@@ -9,6 +9,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:04",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/cankaya-gaziosmanpasa-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:01",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -282,6 +291,15 @@
   ],
   "cityVisits": [
     {
+      "time": "14:04",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/cankaya-gaziosmanpasa-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:01",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -536,29 +554,22 @@
   ],
   "cityCounts": {
     "İstanbul": 27,
-    "Görükle": 1
+    "Görükle": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_a6od",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/cankaya-gaziosmanpasa-vip-eskort.html",
+      "lastSeen": 1794999865345
+    },
     {
       "id": "Mobil 📱_İstanbul_wsew",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1794999692767
-    },
-    {
-      "id": "Mobil 📱_İstanbul_zqne",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794999676088
-    },
-    {
-      "id": "Mobil 📱_İstanbul_gl5z",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794999635259
     }
   ]
 }
