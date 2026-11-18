@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 129,
-  "totalWaClicks": 31,
+  "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -36,10 +36,20 @@
     "İlayda": 2,
     "i̇layda": 2,
     "Sena": 1,
-    "sena": 1
+    "sena": 1,
+    "Eylül": 1,
+    "eylül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:48",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:48",
       "name": "Serap",
@@ -737,18 +747,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:09",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:48",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:48",
       "name": "Serap",
@@ -1726,6 +1735,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Görükle_c9ep",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042137019
+    },
+    {
       "id": "Android 📱_Görükle_vn86",
       "device": "Android 📱",
       "city": "Görükle",
@@ -1815,20 +1831,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795041964953
-    },
-    {
-      "id": "Android 📱_Görükle_y7eg",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/nilufer-eskort.html",
-      "lastSeen": 1795041953407
-    },
-    {
-      "id": "Android 📱_Görükle_bjmn",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041949144
     }
   ]
 }
