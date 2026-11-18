@@ -1,19 +1,27 @@
 {
   "resetEpoch": 1794989714629,
   "totalVisits": 8,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 2,
-    "selin": 2,
-    "1794900000001": 1
+    "Selin": 3,
+    "selin": 3,
+    "1794900000001": 2
   },
   "tCalls": {},
   "logs": [
     {
       "time": "11:23",
-      "name": "Ziyaretçi (Masaüstü 💻)",
+      "name": "Selin",
       "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -65,6 +73,14 @@
   ],
   "callLogs": [
     {
+      "time": "11:23",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "11:20",
       "name": "Selin",
       "city": "İzmit",
@@ -85,7 +101,34 @@
     {
       "time": "11:23",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İzmit",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -113,11 +156,39 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İzmit_stue",
+      "id": "Masaüstü 💻_İzmit_6fki",
       "device": "Masaüstü 💻",
       "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990215801
+    },
+    {
+      "id": "Masaüstü 💻_Bursa_wog2",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990211132
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_nqvf",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990190391
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_i0v9",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794990215007
+      "lastSeen": 1794990190207
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_sgk6",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794990190203
     }
   ]
 }
