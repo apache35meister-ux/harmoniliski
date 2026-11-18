@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 86,
+  "totalVisits": 87,
   "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:10",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bekirpasa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:10",
       "name": "Eylül",
@@ -726,15 +735,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -900,6 +900,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:10",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bekirpasa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:09",
       "name": "Ziyaretçi (Android 📱)",
@@ -1610,22 +1619,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 80,
-    "Bursa": 6
+    "Bursa": 7
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_rnt6",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/bekirpasa-eskort.html",
+      "lastSeen": 1795043433646
+    },
     {
       "id": "Android 📱_Bursa_fdmx",
       "device": "Android 📱",
