@@ -1,22 +1,22 @@
 {
   "resetEpoch": 1794989750470,
   "totalVisits": 4,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 1,
-    "selin": 1
+    "Selin": 2,
+    "selin": 2,
+    "1794900000001": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "11:20",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "11:18",
@@ -52,9 +52,26 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:20",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:18",
       "name": "Selin",
@@ -65,15 +82,6 @@
     }
   ],
   "cityVisits": [
-    {
-      "time": "11:20",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
     {
       "time": "11:18",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -105,11 +113,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_grlm",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794990004938
+      "id": "Masaüstü 💻_Görükle_9ctt",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990018328
     },
     {
       "id": "Masaüstü 💻_Görükle_19mq",
