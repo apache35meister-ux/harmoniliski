@@ -16,10 +16,10 @@
   "logs": [
     {
       "time": "11:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -30,6 +30,15 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "11:24",
@@ -90,15 +99,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:28",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -138,10 +138,10 @@
   "cityVisits": [
     {
       "time": "11:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Mobil 📱",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -185,11 +185,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_aj98",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
+      "id": "Android 📱_Bursa_ns5j",
+      "device": "Android 📱",
+      "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1794990531351
+      "lastSeen": 1794990532523
     },
     {
       "id": "Android 📱_Bursa_h8li",
