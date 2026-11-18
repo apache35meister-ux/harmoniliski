@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 153,
+  "totalVisits": 154,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -24,6 +24,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:56",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:55",
       "name": "Gül",
@@ -723,15 +732,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -865,6 +865,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:56",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1575,22 +1584,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 141,
-    "Görükle": 12
+    "Görükle": 13
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_p4y8",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/gorukle-eskort.html",
+      "lastSeen": 1795017377397
+    },
     {
       "id": "Android 📱_Görükle_ygfo",
       "device": "Android 📱",
