@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 87,
+  "totalVisits": 88,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:34",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -731,14 +740,6 @@
       "device": "Android 📱",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:51",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -992,6 +993,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:34",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1702,22 +1712,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:46",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 69,
+    "İstanbul": 70,
     "Bursa": 18
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_rhrd",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795037810892
+    },
     {
       "id": "Masaüstü 💻_Bursa_rd6d",
       "device": "Masaüstü 💻",
@@ -1731,20 +1739,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795037667971
-    },
-    {
-      "id": "Mobil 📱_İstanbul_cjeb",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795037594343
-    },
-    {
-      "id": "Mobil 📱_İstanbul_90to",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795037548970
     }
   ]
 }
