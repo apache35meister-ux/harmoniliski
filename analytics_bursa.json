@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993496824,
-  "totalVisits": 57,
+  "totalVisits": 58,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:04",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/rehber.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:41",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -647,6 +656,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:04",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/rehber.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:41",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1163,15 +1181,15 @@
   "cityCounts": {
     "İstanbul": 54,
     "Izmir": 1,
-    "Bursa": 2
+    "Bursa": 3
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_8vpm",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795012891434
+      "id": "Android 📱_Bursa_l2f7",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/rehber.html",
+      "lastSeen": 1795014266132
     }
   ]
 }
