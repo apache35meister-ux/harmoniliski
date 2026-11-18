@@ -1,22 +1,22 @@
 {
   "resetEpoch": 1794989741796,
   "totalVisits": 4,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 1,
-    "selin": 1
+    "Selin": 2,
+    "selin": 2,
+    "1794900000001": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "11:23",
-      "name": "Ziyaretçi (Masaüstü 💻)",
+      "name": "Selin",
       "city": "Sakarya",
-      "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "11:18",
@@ -52,9 +52,26 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Sakarya",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:23",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:17",
       "name": "Selin",
@@ -65,15 +82,6 @@
     }
   ],
   "cityVisits": [
-    {
-      "time": "11:23",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Sakarya",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
     {
       "time": "11:18",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -105,11 +113,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Sakarya_r616",
+      "id": "Masaüstü 💻_Sakarya_9rh2",
       "device": "Masaüstü 💻",
       "city": "Sakarya",
-      "page": "/",
-      "lastSeen": 1794990187623
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990188497
     }
   ]
 }
