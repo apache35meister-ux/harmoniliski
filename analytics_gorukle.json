@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 132,
+  "totalVisits": 133,
   "totalWaClicks": 38,
   "totalCalls": 0,
   "tClicks": {
@@ -46,6 +46,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:49",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1054,6 +1054,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1764,42 +1773,26 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 119,
+    "İstanbul": 120,
     "Görükle": 13
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_kj0z",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795042519030
+    },
     {
       "id": "Mobil 📱_İstanbul_49ld",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795042452401
-    },
-    {
-      "id": "Android 📱_Görükle_gywk",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795042278823
-    },
-    {
-      "id": "Mobil 📱_İstanbul_3a3t",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795042274916
     }
   ]
 }
