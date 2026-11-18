@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 113,
+  "totalVisits": 114,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -43,6 +43,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:38",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -729,15 +738,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:52",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/serdivan-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1111,6 +1111,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:38",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1821,23 +1830,21 @@
       "device": "Android 📱",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:58",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 92,
+    "İstanbul": 93,
     "Bursa": 20,
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_295m",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041564535
+    },
     {
       "id": "Mobil 📱_Adapazari_crlt",
       "device": "Mobil 📱",
@@ -1921,20 +1928,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795041388581
-    },
-    {
-      "id": "Android 📱_Bursa_jlyj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041379420
-    },
-    {
-      "id": "Android 📱_Bursa_dodv",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041355569
     }
   ]
 }
