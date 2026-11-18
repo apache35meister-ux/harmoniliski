@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 59,
+  "totalVisits": 60,
   "totalWaClicks": 11,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:26",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:26",
       "name": "Nergis",
@@ -735,6 +744,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:26",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:25",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1268,9 +1286,16 @@
   ],
   "cityCounts": {
     "İstanbul": 56,
-    "Bursa": 3
+    "Bursa": 4
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_akay",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/yahya-kaptan-eskort.html",
+      "lastSeen": 1795037214491
+    },
     {
       "id": "Android 📱_Bursa_mkrk",
       "device": "Android 📱",
