@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 36,
-  "totalWaClicks": 6,
+  "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -10,10 +10,20 @@
     "Nergis": 1,
     "nergis": 1,
     "VIP Escort": 2,
-    "vip escort": 2
+    "vip escort": 2,
+    "Melis": 1,
+    "melis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:56",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:55",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -388,6 +398,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:56",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:54",
       "name": "VIP Escort",
@@ -769,6 +787,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_xjw6",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795028166712
+    },
+    {
       "id": "Mobil 📱_İstanbul_mwr1",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -802,13 +827,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795028009107
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_3rkb",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795027950533
     }
   ]
 }
