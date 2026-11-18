@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993498994,
-  "totalVisits": 95,
+  "totalVisits": 96,
   "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
@@ -34,6 +34,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:13",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:12",
       "name": "Peri",
@@ -726,14 +735,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:24",
-      "name": "Buket",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -931,6 +932,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:13",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:12",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1641,22 +1651,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 90,
+    "İstanbul": 91,
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_p1f4",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795014784841
+    },
     {
       "id": "Masaüstü 💻_Bursa_r2b1",
       "device": "Masaüstü 💻",
@@ -1691,13 +1699,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795014645997
-    },
-    {
-      "id": "iPhone 📱_İstanbul_keud",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795014593909
     }
   ]
 }
