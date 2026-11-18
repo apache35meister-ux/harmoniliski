@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794992829443,
   "totalVisits": 54,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
@@ -9,10 +9,20 @@
     "İlayda": 1,
     "i̇layda": 1,
     "Hale": 1,
-    "hale": 1
+    "hale": 1,
+    "Açelya": 1,
+    "açelya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:47",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -525,6 +535,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:47",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:47",
       "name": "Hale",
@@ -1044,6 +1062,13 @@
     "Anyang-si": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_42cq",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795009664608
+    },
     {
       "id": "Mobil 📱_İstanbul_pcp8",
       "device": "Mobil 📱",
