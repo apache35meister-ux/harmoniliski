@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 51,
+  "totalVisits": 52,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:01",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:59",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -507,6 +516,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:01",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:59",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -967,30 +985,23 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 44,
+    "İstanbul": 45,
     "Görükle": 7
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_o5r2",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795003284310
+    },
     {
       "id": "Mobil 📱_İstanbul_1txh",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795003162880
-    },
-    {
-      "id": "Mobil 📱_İstanbul_6iit",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795003013288
-    },
-    {
-      "id": "Android 📱_Görükle_2wbu",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
-      "lastSeen": 1795003009661
     }
   ]
 }
