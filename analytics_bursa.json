@@ -833,16 +833,7 @@
     {
       "time": "11:06",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:06",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -1540,30 +1531,32 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/fomara-eskort",
+      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_q7kg",
+      "id": "Masaüstü 💻_İstanbul_e86w",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794989208146
+    },
+    {
+      "id": "Masaüstü 💻_Bursa_jfuj",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1794989206684
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_y4of",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794989206681
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_xfoo",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794989203371
+      "lastSeen": 1794989204401
     }
   ]
 }
