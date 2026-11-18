@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 50,
+  "totalVisits": 52,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -28,6 +28,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:34",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:34",
       "name": "Ziyaretçi (Android 📱)",
@@ -739,6 +757,24 @@
   ],
   "cityVisits": [
     {
+      "time": "21:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:34",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:34",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
@@ -1190,10 +1226,24 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 46,
+    "İstanbul": 48,
     "Görükle": 4
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_rbn2",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795026958340
+    },
+    {
+      "id": "Mobil 📱_İstanbul_jfmg",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795026867553
+    },
     {
       "id": "Android 📱_Görükle_5ggi",
       "device": "Android 📱",
@@ -1207,13 +1257,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795026802031
-    },
-    {
-      "id": "iPhone 📱_İstanbul_2gzo",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795026751264
     }
   ]
 }
