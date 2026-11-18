@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 51,
-  "totalWaClicks": 9,
+  "totalVisits": 52,
+  "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 2,
-    "selin": 2,
+    "Selin": 3,
+    "selin": 3,
     "Melis": 1,
     "melis": 1,
     "İzel": 2,
@@ -21,6 +21,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:10",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "00:10",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:10",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -555,6 +572,14 @@
   ],
   "callLogs": [
     {
+      "time": "00:10",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "23:28",
       "name": "Selin",
       "city": "Bursa",
@@ -628,6 +653,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:10",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:10",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1089,10 +1123,24 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 49,
+    "İstanbul": 50,
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_fa78",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795036252299
+    },
+    {
+      "id": "Android 📱_Bursa_5n87",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795036252188
+    },
     {
       "id": "Mobil 📱_İstanbul_mxe0",
       "device": "Mobil 📱",
