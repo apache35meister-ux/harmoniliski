@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 105,
+  "totalVisits": 106,
   "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:33",
       "name": "Selin",
@@ -733,15 +742,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1019,6 +1019,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:32",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1729,22 +1738,20 @@
       "device": "Android 📱",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:51",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 86,
+    "İstanbul": 87,
     "Bursa": 19
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_g6hj",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041226008
+    },
     {
       "id": "Android 📱_Bursa_7oxj",
       "device": "Android 📱",
