@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 89,
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -23,10 +23,20 @@
     "Gül": 2,
     "gül": 2,
     "Tuba": 1,
-    "tuba": 1
+    "tuba": 1,
+    "İzel": 1,
+    "i̇zel": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:44",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:43",
       "name": "Tuba",
@@ -721,18 +731,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "17:44",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:43",
       "name": "Tuba",
@@ -1605,6 +1614,13 @@
     "Bursa": 4
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_1gbm",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795013052507
+    },
     {
       "id": "iPhone 📱_Bursa_eqbi",
       "device": "iPhone 📱",
