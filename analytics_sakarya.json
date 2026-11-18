@@ -1,20 +1,45 @@
 {
   "resetEpoch": 1794992829443,
   "totalVisits": 77,
-  "totalWaClicks": 4,
+  "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 1,
-    "selin": 1,
+    "Selin": 4,
+    "selin": 4,
     "İlayda": 1,
     "i̇layda": 1,
     "Hale": 1,
     "hale": 1,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "1794900000001": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:41",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:41",
+      "name": "Selin",
+      "city": "Sakarya / Adapazarı",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:41",
+      "name": "Selin",
+      "city": "Sakarya / Adapazarı",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -704,35 +729,33 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:29",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:29",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:22",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:41",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:41",
+      "name": "Selin",
+      "city": "Sakarya / Adapazarı",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:41",
+      "name": "Selin",
+      "city": "Sakarya / Adapazarı",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:47",
       "name": "Açelya",
@@ -1467,6 +1490,27 @@
     "Anyang-si": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_muu1",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016487255
+    },
+    {
+      "id": "Masaüstü 💻_Sakarya / Adapazarı_gzby",
+      "device": "Masaüstü 💻",
+      "city": "Sakarya / Adapazarı",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016487234
+    },
+    {
+      "id": "Masaüstü 💻_Sakarya / Adapazarı_960u",
+      "device": "Masaüstü 💻",
+      "city": "Sakarya / Adapazarı",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016487234
+    },
     {
       "id": "Masaüstü 💻_İstanbul_u3j3",
       "device": "Masaüstü 💻",
