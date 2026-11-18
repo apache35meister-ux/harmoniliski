@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 1749,
+  "totalVisits": 1750,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -42,16 +42,8 @@
   "logs": [
     {
       "time": "10:42",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Mobil 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -763,14 +755,6 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "10:42",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Mobil 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
       "time": "00:07",
       "name": "Yeliz",
       "city": "İzmir / Konak",
@@ -828,6 +812,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:42",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1542,6 +1535,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_6miw",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794987779729
+    },
     {
       "id": "Mobil 📱_Bursa_fapy",
       "device": "Mobil 📱",
