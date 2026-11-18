@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 46,
+  "totalVisits": 47,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -28,6 +28,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -703,6 +712,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:28",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1118,10 +1136,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 43,
+    "İstanbul": 44,
     "Görükle": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_i62r",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795026551777
+    },
     {
       "id": "Mobil 📱_İstanbul_vfy4",
       "device": "Mobil 📱",
@@ -1142,20 +1167,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795026378327
-    },
-    {
-      "id": "Mobil 📱_İstanbul_e4k4",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795026366672
-    },
-    {
-      "id": "Mobil 📱_İstanbul_xtbm",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795026363422
     }
   ]
 }
