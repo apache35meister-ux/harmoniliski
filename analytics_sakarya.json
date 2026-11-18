@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 55,
-  "totalWaClicks": 19,
+  "totalVisits": 56,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 2,
@@ -25,10 +25,29 @@
     "Selin": 2,
     "selin": 2,
     "Sinem": 2,
-    "sinem": 2
+    "sinem": 2,
+    "Nergis": 1,
+    "nergis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:50",
+      "name": "Nergis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "22:48",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/adapazari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:48",
       "name": "Ziyaretçi (Android 📱)",
@@ -679,6 +698,14 @@
   ],
   "callLogs": [
     {
+      "time": "22:50",
+      "name": "Nergis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "21:55",
       "name": "Selin",
       "city": "Bursa",
@@ -832,6 +859,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:48",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/adapazari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:48",
       "name": "Ziyaretçi (Android 📱)",
@@ -1330,9 +1366,23 @@
   ],
   "cityCounts": {
     "İstanbul": 45,
-    "Bursa": 10
+    "Bursa": 11
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_brbe",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795031425197
+    },
+    {
+      "id": "Android 📱_Bursa_j51k",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/adapazari-eskort.html",
+      "lastSeen": 1795031301409
+    },
     {
       "id": "Android 📱_Bursa_6hcx",
       "device": "Android 📱",
