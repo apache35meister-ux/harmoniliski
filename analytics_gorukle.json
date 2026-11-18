@@ -1,15 +1,25 @@
 {
   "resetEpoch": 1794989750470,
   "totalVisits": 5,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
     "selin": 3,
-    "1794900000001": 2
+    "1794900000001": 2,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:24",
+      "name": "Damla",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:23",
       "name": "Selin",
@@ -82,6 +92,14 @@
   ],
   "callLogs": [
     {
+      "time": "11:24",
+      "name": "Damla",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "11:23",
       "name": "Selin",
       "city": "Görükle",
@@ -138,18 +156,18 @@
   "cityCounts": {},
   "activeVisitors": [
     {
+      "id": "Masaüstü 💻_Görükle_7fu7",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990290561
+    },
+    {
       "id": "Masaüstü 💻_Görükle_o15s",
       "device": "Masaüstü 💻",
       "city": "Görükle",
       "page": "Ana Sayfa",
       "lastSeen": 1794990197329
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_9ctt",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794990018328
     }
   ]
 }
