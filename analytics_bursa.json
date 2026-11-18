@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 64,
-  "totalWaClicks": 12,
+  "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -11,14 +11,22 @@
     "nergis": 1,
     "VIP Escort": 2,
     "vip escort": 2,
-    "Melis": 4,
-    "melis": 4,
+    "Melis": 5,
+    "melis": 5,
     "1790000000339": 2,
     "Açelya": 1,
     "açelya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:17",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:17",
       "name": "Açelya",
@@ -693,6 +701,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "01:17",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:17",
       "name": "Açelya",
@@ -1373,6 +1389,13 @@
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_bh9p",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795040261441
+    },
     {
       "id": "Android 📱_Bursa_jq84",
       "device": "Android 📱",
