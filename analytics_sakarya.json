@@ -19,11 +19,19 @@
     {
       "time": "11:29",
       "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "city": "Istanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:29",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "11:28",
@@ -110,7 +118,9 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
       "time": "11:29",
       "name": "Açelya",
@@ -118,9 +128,7 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "11:28",
       "name": "Rus ESC",
@@ -152,21 +160,13 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:29",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
     {
       "time": "11:29",
       "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
+      "city": "Istanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
@@ -221,11 +221,18 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_iybq",
+      "id": "Mobil 📱_Istanbul_20pe",
       "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794990557584
+      "city": "Istanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990558214
+    },
+    {
+      "id": "Android 📱_Bursa_66iv",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990544059
     },
     {
       "id": "Android 📱_Bursa_ns5j",
