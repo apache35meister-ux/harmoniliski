@@ -1,11 +1,20 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 3,
+  "totalVisits": 4,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:21",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "/gursu-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:17",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -37,6 +46,15 @@
   "callLogs": [],
   "cityVisits": [
     {
+      "time": "19:21",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "/gursu-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:17",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -65,22 +83,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 3
+    "İstanbul": 3,
+    "Görükle": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_2mia",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795018678236
-    },
-    {
-      "id": "Mobil 📱_İstanbul_2rht",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795018643185
+      "id": "Masaüstü 💻_Görükle_exfa",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "/gursu-eskort.html",
+      "lastSeen": 1795018900688
     }
   ]
 }
