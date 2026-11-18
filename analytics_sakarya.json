@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 112,
-  "totalWaClicks": 44,
+  "totalWaClicks": 45,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
@@ -22,8 +22,8 @@
     "esra": 1,
     "Yaren": 1,
     "yaren": 1,
-    "Selin": 8,
-    "selin": 8,
+    "Selin": 9,
+    "selin": 9,
     "Sinem": 2,
     "sinem": 2,
     "Nergis": 2,
@@ -43,6 +43,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:38",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:38",
       "name": "Ziyaretçi (Android 📱)",
@@ -729,18 +737,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:50",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/korucuk-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:38",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:37",
       "name": "Yeliz",
@@ -1821,6 +1828,13 @@
     "Bursa": 20
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_6027",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795041496371
+    },
     {
       "id": "Android 📱_Bursa_am09",
       "device": "Android 📱",
