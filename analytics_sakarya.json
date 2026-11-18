@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 57,
+  "totalVisits": 58,
   "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:52",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/serdivan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:51",
       "name": "Nergis",
@@ -903,6 +912,15 @@
   ],
   "cityVisits": [
     {
+      "time": "22:52",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/serdivan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "22:50",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1418,9 +1436,16 @@
   ],
   "cityCounts": {
     "İstanbul": 45,
-    "Bursa": 12
+    "Bursa": 13
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_stqu",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/serdivan-eskort.html",
+      "lastSeen": 1795031526182
+    },
     {
       "id": "Android 📱_Bursa_irqw",
       "device": "Android 📱",
@@ -1448,13 +1473,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795031425197
-    },
-    {
-      "id": "Android 📱_Bursa_j51k",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/adapazari-eskort.html",
-      "lastSeen": 1795031301409
     }
   ]
 }
