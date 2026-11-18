@@ -1,16 +1,35 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 55,
-  "totalWaClicks": 2,
+  "totalVisits": 56,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
     "selin": 1,
     "VIP Escort": 1,
-    "vip escort": 1
+    "vip escort": 1,
+    "Aylin": 1,
+    "aylin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:03",
+      "name": "Aylin",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:03",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/batikent-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -525,6 +544,14 @@
   ],
   "callLogs": [
     {
+      "time": "15:03",
+      "name": "Aylin",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "14:27",
       "name": "VIP Escort",
       "city": "Görükle",
@@ -542,6 +569,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:03",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/batikent-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1040,9 +1076,23 @@
   ],
   "cityCounts": {
     "İstanbul": 48,
-    "Görükle": 7
+    "Görükle": 8
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_8yit",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795003420629
+    },
+    {
+      "id": "Android 📱_Görükle_iwfv",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/batikent-eskort.html",
+      "lastSeen": 1795003419415
+    },
     {
       "id": "Mobil 📱_İstanbul_zysz",
       "device": "Mobil 📱",
