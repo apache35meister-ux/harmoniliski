@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 125,
-  "totalWaClicks": 22,
+  "totalVisits": 126,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
     "hale": 2,
-    "Yaren": 1,
-    "yaren": 1,
+    "Yaren": 2,
+    "yaren": 2,
     "Sinem": 1,
     "sinem": 1,
     "1794900000005": 4,
@@ -34,6 +34,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:46",
+      "name": "Yaren",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "01:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:45",
       "name": "Ziyaretçi (Android 📱)",
@@ -729,27 +746,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:46",
+      "name": "Yaren",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:45",
       "name": "Hale",
@@ -928,6 +935,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:45",
       "name": "Ziyaretçi (Android 📱)",
@@ -1638,22 +1654,27 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 115,
+    "İstanbul": 116,
     "Görükle": 10
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_ix5j",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795041973716
+    },
+    {
+      "id": "Mobil 📱_İstanbul_txid",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041964953
+    },
     {
       "id": "Android 📱_Görükle_y7eg",
       "device": "Android 📱",
