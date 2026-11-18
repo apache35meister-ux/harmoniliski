@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 128,
-  "totalWaClicks": 28,
+  "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -33,11 +33,19 @@
     "açelya": 1,
     "Şebnem": 1,
     "şebnem": 1,
-    "İlayda": 1,
-    "i̇layda": 1
+    "İlayda": 2,
+    "i̇layda": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:48",
+      "name": "İlayda",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:47",
       "name": "İlayda",
@@ -738,17 +746,17 @@
       "device": "Android 📱",
       "page": "/eve-otele-eskort-hizmeti-nasil-alinir.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:54",
-      "name": "Tuba",
-      "city": "Görükle",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:48",
+      "name": "İlayda",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:47",
       "name": "İlayda",
@@ -1701,6 +1709,13 @@
     "Görükle": 11
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_s7d1",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042090939
+    },
     {
       "id": "Android 📱_Görükle_pjm9",
       "device": "Android 📱",
