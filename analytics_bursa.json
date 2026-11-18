@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 66,
+  "totalVisits": 67,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -25,6 +25,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:21",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -718,15 +727,6 @@
       "device": "Masaüstü 💻",
       "page": "/umitkoy-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -868,6 +868,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:21",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1464,37 +1473,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 64,
+    "İstanbul": 65,
     "Bursa": 2
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_17bc",
+      "id": "Mobil 📱_İstanbul_98qn",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795040471230
-    },
-    {
-      "id": "Android 📱_Bursa_9ulf",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795040303812
-    },
-    {
-      "id": "Mobil 📱_İstanbul_t4ji",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795040299704
-    },
-    {
-      "id": "Android 📱_Bursa_ea5o",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795040296934
+      "lastSeen": 1795040921043
     }
   ]
 }
