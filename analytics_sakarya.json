@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 515,
+  "totalVisits": 516,
   "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Sakarya",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:55",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -747,15 +756,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Socorro",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -825,6 +825,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:07",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Sakarya",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:55",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1503,22 +1512,16 @@
   ],
   "cityCounts": {
     "İstanbul": 1,
-    "Bursa": 1
+    "Bursa": 1,
+    "Sakarya": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_ifxb",
+      "id": "Masaüstü 💻_Sakarya_xdby",
       "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794988515573
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_adma",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
+      "city": "Sakarya",
       "page": "/",
-      "lastSeen": 1794988511655
+      "lastSeen": 1794989233156
     }
   ]
 }
