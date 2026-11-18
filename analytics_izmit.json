@@ -1,15 +1,25 @@
 {
   "resetEpoch": 1794989714629,
   "totalVisits": 8,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
     "selin": 3,
-    "1794900000001": 2
+    "1794900000001": 2,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:25",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:23",
       "name": "Selin",
@@ -72,6 +82,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "11:25",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:23",
       "name": "Selin",
@@ -155,6 +173,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmit_gx99",
+      "device": "Masaüstü 💻",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990304522
+    },
     {
       "id": "Masaüstü 💻_İzmit_6fki",
       "device": "Masaüstü 💻",
