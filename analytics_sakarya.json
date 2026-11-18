@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 513,
-  "totalWaClicks": 42,
+  "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
     "99": 1,
@@ -39,10 +39,20 @@
     "Test Escort": 1,
     "test escort": 1,
     "Ece": 1,
-    "ece": 1
+    "ece": 1,
+    "Aslıhan": 1,
+    "aslıhan": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:43",
+      "name": "Aslıhan",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:49",
       "name": "Ziyaretçi (Android 📱)",
@@ -746,18 +756,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:05",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:43",
+      "name": "Aslıhan",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:36",
       "name": "Test Escort",
@@ -1476,6 +1485,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Sakarya_iuyt",
+      "device": "Masaüstü 💻",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794987817811
+    },
     {
       "id": "Mobil 📱_Sakarya_jmog",
       "device": "Mobil 📱",
