@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 517,
-  "totalWaClicks": 44,
+  "totalVisits": 516,
+  "totalWaClicks": 45,
   "totalCalls": 0,
   "tClicks": {
     "99": 1,
@@ -43,18 +43,19 @@
     "Aslıhan": 1,
     "aslıhan": 1,
     "Canli Test": 1,
-    "canli test": 1
+    "canli test": 1,
+    "Canli Test Escort": 1,
+    "canli test escort": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "11:11",
-      "name": "Ziyaretçi (Masaüstü 💻)",
+      "name": "Canli Test Escort",
       "city": "Sakarya",
-      "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "11:08",
@@ -77,6 +78,15 @@
       "time": "10:55",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:55",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -748,18 +758,17 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:11",
+      "name": "Canli Test Escort",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:07",
       "name": "Canli Test",
@@ -834,15 +843,6 @@
     }
   ],
   "cityVisits": [
-    {
-      "time": "11:11",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Sakarya",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
     {
       "time": "11:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1534,11 +1534,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Sakarya_yw2p",
+      "id": "Masaüstü 💻_Sakarya_6x5q",
       "device": "Masaüstü 💻",
       "city": "Sakarya",
-      "page": "/",
-      "lastSeen": 1794989489275
+      "page": "Ana Sayfa",
+      "lastSeen": 1794989490118
     },
     {
       "id": "Mobil 📱_İstanbul_sx11",
