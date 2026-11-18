@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 110,
+  "totalVisits": 112,
   "totalWaClicks": 44,
   "totalCalls": 0,
   "tClicks": {
@@ -43,6 +43,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:38",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/adapazari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "01:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:37",
       "name": "Yeliz",
@@ -720,23 +738,6 @@
       "device": "Android 📱",
       "page": "/korucuk-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:50",
-      "name": "Nergis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:48",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/adapazari-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1094,6 +1095,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:38",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/adapazari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "01:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:37",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1795,31 +1814,27 @@
       "device": "Android 📱",
       "page": "/korucuk-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:55",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 91,
-    "Bursa": 19
+    "İstanbul": 92,
+    "Bursa": 20
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_am09",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/adapazari-eskort.html",
+      "lastSeen": 1795041491156
+    },
+    {
+      "id": "Mobil 📱_İstanbul_ixki",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041466654
+    },
     {
       "id": "Android 📱_Bursa_nxsp",
       "device": "Android 📱",
@@ -1889,27 +1904,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795041321013
-    },
-    {
-      "id": "Mobil 📱_Sakarya / Adapazarı_bcqg",
-      "device": "Mobil 📱",
-      "city": "Sakarya / Adapazarı",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041308637
-    },
-    {
-      "id": "Mobil 📱_Sakarya / Adapazarı_qffk",
-      "device": "Mobil 📱",
-      "city": "Sakarya / Adapazarı",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041308634
-    },
-    {
-      "id": "Android 📱_Bursa_wpjb",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041308634
     }
   ]
 }
