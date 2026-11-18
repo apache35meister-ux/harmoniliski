@@ -1,12 +1,13 @@
 {
   "resetEpoch": 1794940635198,
   "totalVisits": 1749,
-  "totalWaClicks": 24,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "1": 1,
-    "Selin": 9,
-    "selin": 9,
+    "99": 1,
+    "Selin": 10,
+    "selin": 10,
     "Derin": 1,
     "derin": 1,
     "1789700000033": 2,
@@ -39,6 +40,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:42",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Mobil 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -742,17 +751,17 @@
       "device": "Android 📱",
       "page": "/fomara-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:41",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:42",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Mobil 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:42",
       "name": "Selin",
@@ -1533,6 +1542,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_fapy",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794987778347
+    },
     {
       "id": "Masaüstü 💻_Bursa_n9bq",
       "device": "Masaüstü 💻",
