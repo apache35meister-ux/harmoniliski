@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933587336,
-  "totalVisits": 423,
-  "totalWaClicks": 22,
+  "totalVisits": 424,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
     "Melis": 2,
@@ -31,7 +31,9 @@
     "Damla": 1,
     "damla": 1,
     "Eylül": 1,
-    "eylül": 1
+    "eylül": 1,
+    "Sena": 1,
+    "sena": 1
   },
   "tCalls": {},
   "logs": [
@@ -1479,18 +1481,25 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_rl5c",
+      "id": "iPhone 📱_Görükle_ch40",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794984610213
+    },
+    {
+      "id": "iPhone 📱_Görükle_iavv",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794984555078
+    },
+    {
+      "id": "iPhone 📱_İstanbul_16ks",
       "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794984554114
-    },
-    {
-      "id": "Mobil 📱_İstanbul_1gua",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794984389332
+      "lastSeen": 1794984554274
     }
   ]
 }
