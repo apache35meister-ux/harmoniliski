@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 35,
+  "totalVisits": 36,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:27",
       "name": "VIP Escort",
@@ -363,6 +372,15 @@
   ],
   "cityVisits": [
     {
+      "time": "14:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:27",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -679,10 +697,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 30,
+    "İstanbul": 31,
     "Görükle": 5
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_xlg9",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795001375913
+    },
     {
       "id": "iPhone 📱_Görükle_lqyl",
       "device": "iPhone 📱",
@@ -703,13 +728,6 @@
       "city": "Görükle",
       "page": "/besiktas-levent-etiler-vip-eskort.html",
       "lastSeen": 1795001250238
-    },
-    {
-      "id": "Android 📱_Görükle_vy3o",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/buca-eskort.html",
-      "lastSeen": 1795001158349
     }
   ]
 }
