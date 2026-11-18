@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 35,
+  "totalVisits": 36,
   "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
@@ -14,6 +14,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:54",
       "name": "VIP Escort",
@@ -430,6 +439,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:53",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -746,10 +764,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 33,
+    "İstanbul": 34,
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_mwr1",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795028114992
+    },
     {
       "id": "Mobil 📱_Bursa / Nilüfer_a9n3",
       "device": "Mobil 📱",
