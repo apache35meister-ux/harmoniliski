@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 1894,
+  "totalVisits": 1895,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -833,6 +833,15 @@
     {
       "time": "10:53",
       "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:53",
+      "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
@@ -1531,19 +1540,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:08",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/nilufer-eskort",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_t8n6",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794988439713
+    },
     {
       "id": "Masaüstü 💻_İstanbul_brqs",
       "device": "Masaüstü 💻",
