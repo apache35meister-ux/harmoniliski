@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 96,
+  "totalVisits": 97,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:03",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:59",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -735,15 +744,6 @@
       "device": "Android 📱",
       "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -997,6 +997,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:03",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:59",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1707,35 +1716,19 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:03",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 77,
+    "İstanbul": 78,
     "Bursa": 19
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_lqem",
+      "id": "Mobil 📱_İstanbul_35kv",
       "device": "Mobil 📱",
       "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795039189236
-    },
-    {
-      "id": "Mobil 📱_İstanbul_r1bo",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795039057159
+      "page": "Ana Sayfa",
+      "lastSeen": 1795039402051
     }
   ]
 }
