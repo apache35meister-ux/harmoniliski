@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989750470,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -10,6 +10,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:20",
       "name": "Selin",
@@ -83,6 +92,15 @@
   ],
   "cityVisits": [
     {
+      "time": "11:23",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:18",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Görükle",
@@ -113,39 +131,18 @@
   "cityCounts": {},
   "activeVisitors": [
     {
+      "id": "Masaüstü 💻_Görükle_euo4",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "/",
+      "lastSeen": 1794990196544
+    },
+    {
       "id": "Masaüstü 💻_Görükle_9ctt",
       "device": "Masaüstü 💻",
       "city": "Görükle",
       "page": "Ana Sayfa",
       "lastSeen": 1794990018328
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_19mq",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "/",
-      "lastSeen": 1794989901409
-    },
-    {
-      "id": "iPhone 📱_Görükle_kr41",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794989894972
-    },
-    {
-      "id": "iPhone 📱_Görükle_14am",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794989892806
-    },
-    {
-      "id": "iPhone 📱_İstanbul_hv7z",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794989891641
     }
   ]
 }
