@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794989741796,
   "totalVisits": 9,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
@@ -12,25 +12,43 @@
     "Rus ESC": 1,
     "rus esc": 1,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "Serap": 1,
+    "serap": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "11:29",
-      "name": "Ziyaretçi (Android 📱)",
+      "name": "Serap",
       "city": "Bursa",
-      "country": "Türkiye",
       "device": "Android 📱",
-      "page": "/inegol-eskort.html",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
-      "time": "11:28",
+      "time": "11:29",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:29",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:28",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -41,6 +59,15 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "11:24",
@@ -103,22 +130,23 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "11:28",
+      "time": "11:29",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Android 📱",
-      "page": "Ana Sayfa",
+      "page": "/inegol-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
       "time": "11:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Istanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "11:29",
@@ -127,9 +155,7 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "11:28",
       "name": "Rus ESC",
@@ -161,32 +187,24 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:29",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
     {
       "time": "11:29",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/inegol-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:28",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:28",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -230,18 +248,32 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_ryxo",
+      "id": "Android 📱_Bursa_i8u9",
       "device": "Android 📱",
       "city": "Bursa",
-      "page": "/inegol-eskort.html",
-      "lastSeen": 1794990565664
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990572165
     },
     {
-      "id": "Mobil 📱_İstanbul_r4ph",
+      "id": "Mobil 📱_İstanbul_iloa",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794990531355
+      "lastSeen": 1794990557607
+    },
+    {
+      "id": "Android 📱_Bursa_66iv",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990544059
+    },
+    {
+      "id": "Android 📱_Bursa_ns5j",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990532523
     },
     {
       "id": "Android 📱_Bursa_h8li",
