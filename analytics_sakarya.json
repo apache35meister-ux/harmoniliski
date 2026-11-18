@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
-  "totalVisits": 516,
-  "totalWaClicks": 43,
+  "totalVisits": 515,
+  "totalWaClicks": 44,
   "totalCalls": 0,
   "tClicks": {
     "99": 1,
@@ -41,18 +41,19 @@
     "Ece": 1,
     "ece": 1,
     "Aslıhan": 1,
-    "aslıhan": 1
+    "aslıhan": 1,
+    "Canli Test": 1,
+    "canli test": 1
   },
   "tCalls": {},
   "logs": [
     {
       "time": "11:07",
-      "name": "Ziyaretçi (Masaüstü 💻)",
+      "name": "Canli Test",
       "city": "Sakarya",
-      "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "10:55",
@@ -760,6 +761,14 @@
   ],
   "callLogs": [
     {
+      "time": "11:07",
+      "name": "Canli Test",
+      "city": "Sakarya",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "10:43",
       "name": "Aslıhan",
       "city": "Sakarya",
@@ -825,15 +834,6 @@
     }
   ],
   "cityVisits": [
-    {
-      "time": "11:07",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Sakarya",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
     {
       "time": "10:55",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1512,16 +1512,15 @@
   ],
   "cityCounts": {
     "İstanbul": 1,
-    "Bursa": 1,
-    "Sakarya": 1
+    "Bursa": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Sakarya_xdby",
+      "id": "Masaüstü 💻_Sakarya_zbec",
       "device": "Masaüstü 💻",
       "city": "Sakarya",
-      "page": "/",
-      "lastSeen": 1794989233156
+      "page": "Ana Sayfa",
+      "lastSeen": 1794989234044
     }
   ]
 }
