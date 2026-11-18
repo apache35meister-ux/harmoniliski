@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 166,
+  "totalVisits": 167,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,15 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1114,6 +1114,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1824,22 +1833,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:09",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 151,
-    "Görükle": 15
+    "Görükle": 16
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_37lk",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/heykel-eskort.html",
+      "lastSeen": 1795045293508
+    },
     {
       "id": "Mobil 📱_İstanbul_39xz",
       "device": "Mobil 📱",
@@ -1853,20 +1860,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795045140062
-    },
-    {
-      "id": "Mobil 📱_İstanbul_4rfk",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795045049752
-    },
-    {
-      "id": "Mobil 📱_İstanbul_orm8",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795045025138
     }
   ]
 }
