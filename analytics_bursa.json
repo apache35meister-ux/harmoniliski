@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 1804,
+  "totalVisits": 1805,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -41,9 +41,18 @@
   "tCalls": {},
   "logs": [
     {
-      "time": "10:46",
+      "time": "10:47",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:46",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -52,16 +61,7 @@
     {
       "time": "10:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:44",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -70,7 +70,7 @@
     {
       "time": "10:43",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -79,7 +79,7 @@
     {
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -822,7 +822,7 @@
   ],
   "cityVisits": [
     {
-      "time": "10:46",
+      "time": "10:47",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
@@ -840,7 +840,7 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "10:45",
+      "time": "10:46",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
@@ -858,7 +858,16 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "10:44",
+      "time": "10:43",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
@@ -867,16 +876,7 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "10:43",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:43",
+      "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -1545,39 +1545,32 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_rsgn",
+      "id": "Masaüstü 💻_Bursa_90so",
       "device": "Masaüstü 💻",
       "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1794988010913
+      "lastSeen": 1794988020833
     },
     {
-      "id": "Masaüstü 💻_İstanbul_azjp",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794987972847
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_xk1n",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794987959269
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_uu9z",
+      "id": "Masaüstü 💻_İstanbul_sddq",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794987903751
+      "lastSeen": 1794987979467
     },
     {
-      "id": "Masaüstü 💻_Bursa_cu5d",
+      "id": "Masaüstü 💻_Bursa_iaax",
       "device": "Masaüstü 💻",
       "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1794987888993
+      "lastSeen": 1794987969107
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_6xvn",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794987908009
     }
   ]
 }
