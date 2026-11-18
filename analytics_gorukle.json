@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794992835337,
   "totalVisits": 151,
-  "totalWaClicks": 13,
+  "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 3,
-    "selin": 3,
+    "Selin": 4,
+    "selin": 4,
     "VIP Escort": 1,
     "vip escort": 1,
     "Aylin": 1,
@@ -22,6 +22,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:51",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -724,18 +732,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:51",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:42",
       "name": "Eylül",
@@ -1568,6 +1575,13 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_mmka",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795017064928
+    },
     {
       "id": "iPhone 📱_İstanbul_1c1z",
       "device": "iPhone 📱",
