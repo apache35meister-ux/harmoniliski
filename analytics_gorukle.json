@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794933587336,
   "totalVisits": 405,
-  "totalWaClicks": 16,
+  "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
     "Melis": 2,
@@ -25,7 +25,9 @@
     "Sinem": 1,
     "sinem": 1,
     "Şebnem": 1,
-    "şebnem": 1
+    "şebnem": 1,
+    "Su": 1,
+    "su": 1
   },
   "tCalls": {},
   "logs": [
@@ -1473,6 +1475,13 @@
   "cityCounts": {},
   "activeVisitors": [
     {
+      "id": "Android 📱_Görükle_twgt",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794983864056
+    },
+    {
       "id": "Android 📱_Görükle_4aqe",
       "device": "Android 📱",
       "city": "Görükle",
@@ -1485,13 +1494,6 @@
       "city": "Görükle",
       "page": "Ana Sayfa",
       "lastSeen": 1794983717622
-    },
-    {
-      "id": "Android 📱_Görükle_c3al",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794983665198
     }
   ]
 }
