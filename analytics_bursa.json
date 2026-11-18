@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989398258,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
@@ -9,7 +9,7 @@
     {
       "time": "11:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -18,6 +18,15 @@
   ],
   "callLogs": [],
   "cityVisits": [
+    {
+      "time": "11:10",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -30,6 +39,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_01us",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794989402362
+    },
     {
       "id": "Masaüstü 💻_İstanbul_4ww3",
       "device": "Masaüstü 💻",
