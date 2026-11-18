@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 65,
-  "totalWaClicks": 16,
+  "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -23,10 +23,20 @@
     "Damla": 1,
     "damla": 1,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "Serap": 1,
+    "serap": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:36",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,18 +731,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "00:36",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:30",
       "name": "Rus ESC",
@@ -1455,18 +1464,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_lbuq",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795037778380
+    },
+    {
       "id": "Mobil 📱_İstanbul_nerc",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795037703220
-    },
-    {
-      "id": "Mobil 📱_İstanbul_6r2k",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795037554472
     }
   ]
 }
