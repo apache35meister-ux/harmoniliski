@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 106,
-  "totalWaClicks": 40,
+  "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 9,
-    "selin": 9,
+    "Selin": 12,
+    "selin": 12,
     "Damla": 3,
     "damla": 3,
     "Melis": 4,
@@ -33,10 +33,35 @@
     "peri": 3,
     "1790000000013": 2,
     "Tuğçe": 3,
-    "tuğçe": 3
+    "tuğçe": 3,
+    "1794900000001": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "İzmit / Yahya Kaptan",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "İzmit / Yahya Kaptan",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -697,36 +722,33 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:04",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:56",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "İzmit / Yahya Kaptan",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:34",
+      "name": "Selin",
+      "city": "İzmit / Yahya Kaptan",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:26",
       "name": "Eylül",
@@ -1775,6 +1797,27 @@
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmit / Yahya Kaptan_p4a7",
+      "device": "Masaüstü 💻",
+      "city": "İzmit / Yahya Kaptan",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016059848
+    },
+    {
+      "id": "Masaüstü 💻_Bursa_tplh",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016059848
+    },
+    {
+      "id": "Masaüstü 💻_İzmit / Yahya Kaptan_kq58",
+      "device": "Masaüstü 💻",
+      "city": "İzmit / Yahya Kaptan",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795016059848
+    },
     {
       "id": "Masaüstü 💻_İstanbul_e5qn",
       "device": "Masaüstü 💻",
