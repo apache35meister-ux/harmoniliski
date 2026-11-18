@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 74,
+  "totalVisits": 75,
   "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
@@ -25,6 +25,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:14",
       "name": "Melis",
@@ -715,15 +724,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:05",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -889,6 +889,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1557,44 +1566,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 72,
+    "İstanbul": 73,
     "Bursa": 2
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_re8g",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795043646518
-    },
-    {
-      "id": "Mobil 📱_İstanbul_q2m4",
+      "id": "Mobil 📱_İstanbul_7h55",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795043613859
-    },
-    {
-      "id": "Android 📱_Bursa_0385",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795043582806
-    },
-    {
-      "id": "Android 📱_Bursa_2u39",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795043551471
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ru2w",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795043527237
+      "lastSeen": 1795044175861
     }
   ]
 }
