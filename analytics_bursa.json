@@ -1,11 +1,57 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 13,
-  "totalWaClicks": 0,
+  "totalVisits": 15,
+  "totalWaClicks": 3,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "1794900000001": 2,
+    "Selin": 3,
+    "selin": 3
+  },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:06",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:06",
+      "name": "Selin",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:06",
+      "name": "Selin",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:05",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:05",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -124,8 +170,51 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "20:06",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:06",
+      "name": "Selin",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:06",
+      "name": "Selin",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
+    {
+      "time": "20:05",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:05",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -245,23 +334,51 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 12,
+    "İstanbul": 14,
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_rq3z",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795021565526
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Nilüfer_bgre",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795021565513
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Nilüfer_kuwj",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795021565512
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_aeat",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795021546905
+    },
+    {
+      "id": "Mobil 📱_İstanbul_cl38",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795021535617
+    },
     {
       "id": "Mobil 📱_İstanbul_yv8k",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795021533773
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ph25",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795021374256
     }
   ]
 }
