@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989791069,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 1,
   "totalCalls": 0,
   "tClicks": {
@@ -11,20 +11,20 @@
   "logs": [
     {
       "time": "11:17",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:17",
       "name": "Damla",
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:17",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     },
     {
       "time": "11:16",
@@ -50,6 +50,15 @@
     {
       "time": "11:17",
       "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:17",
+      "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
@@ -68,6 +77,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_317i",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794989841422
+    },
     {
       "id": "iPhone 📱_Bursa_7655",
       "device": "iPhone 📱",
