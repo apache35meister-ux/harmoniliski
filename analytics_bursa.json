@@ -41,9 +41,9 @@
   "tCalls": {},
   "logs": [
     {
-      "time": "11:06",
+      "time": "11:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -63,6 +63,15 @@
       "city": "Bursa",
       "country": "Türkiye",
       "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:06",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -742,15 +751,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -829,9 +829,9 @@
   ],
   "cityVisits": [
     {
-      "time": "11:06",
+      "time": "11:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -1552,11 +1552,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_p74r",
+      "id": "Masaüstü 💻_İstanbul_cj8t",
       "device": "Masaüstü 💻",
-      "city": "Bursa",
+      "city": "İstanbul",
       "page": "Ana Sayfa",
-      "lastSeen": 1794989219338
+      "lastSeen": 1794989220374
     },
     {
       "id": "iPhone 📱_Bursa_jlbx",
