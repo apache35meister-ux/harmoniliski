@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 127,
-  "totalWaClicks": 24,
+  "totalVisits": 128,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -27,13 +27,30 @@
     "rus esc": 2,
     "Ayşen": 1,
     "ayşen": 1,
-    "Tuba": 1,
-    "tuba": 1,
+    "Tuba": 2,
+    "tuba": 2,
     "Açelya": 1,
     "açelya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:46",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "01:46",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/nilufer-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:46",
       "name": "Sinem",
@@ -728,27 +745,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:43",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:46",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:46",
       "name": "Sinem",
@@ -943,6 +950,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:46",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/nilufer-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1653,22 +1669,27 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:32",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 117,
-    "Görükle": 10
+    "Görükle": 11
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_3nnr",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042018346
+    },
+    {
+      "id": "Android 📱_Görükle_lei8",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/nilufer-eskort.html",
+      "lastSeen": 1795042004876
+    },
     {
       "id": "Android 📱_Görükle_n4x1",
       "device": "Android 📱",
