@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989741796,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -16,20 +16,20 @@
   "logs": [
     {
       "time": "11:28",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:28",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:28",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
     },
     {
       "time": "11:24",
@@ -146,6 +146,15 @@
       "type": "👁️ Site Ziyareti"
     },
     {
+      "time": "11:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:18",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Sakarya",
@@ -175,6 +184,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_aj98",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794990531351
+    },
     {
       "id": "Android 📱_Bursa_h8li",
       "device": "Android 📱",
