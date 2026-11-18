@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 73,
+  "totalVisits": 74,
   "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:53",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:52",
       "name": "Damla",
@@ -722,15 +731,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -888,6 +888,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:53",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1547,10 +1556,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 68,
+    "İstanbul": 69,
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_9nyx",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795038795794
+    },
     {
       "id": "iPhone 📱_Bursa_8ie4",
       "device": "iPhone 📱",
@@ -1564,27 +1580,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795038718484
-    },
-    {
-      "id": "Mobil 📱_İstanbul_r9no",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795038599038
-    },
-    {
-      "id": "iPhone 📱_İstanbul_q6sr",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795038578650
-    },
-    {
-      "id": "Android 📱_Bursa_pztm",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/nisantasi-eskort.html",
-      "lastSeen": 1795038563315
     }
   ]
 }
