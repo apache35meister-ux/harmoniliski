@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 167,
+  "totalVisits": 168,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/otel-ve-eve-vip-eskort-cagirma-rehberi.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:41",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,15 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1114,6 +1114,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/otel-ve-eve-vip-eskort-cagirma-rehberi.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:41",
       "name": "Ziyaretçi (Android 📱)",
@@ -1824,22 +1833,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 151,
-    "Görükle": 16
+    "Görükle": 17
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_cyje",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/otel-ve-eve-vip-eskort-cagirma-rehberi.",
+      "lastSeen": 1795045311363
+    },
     {
       "id": "Android 📱_Görükle_37lk",
       "device": "Android 📱",
