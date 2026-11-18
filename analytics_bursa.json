@@ -1,11 +1,20 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:36",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "/umitkoy-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:33",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -46,6 +55,15 @@
   "callLogs": [],
   "cityVisits": [
     {
+      "time": "19:36",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "/umitkoy-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:33",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -83,9 +101,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 4
+    "İstanbul": 4,
+    "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_o19s",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "/umitkoy-eskort.html",
+      "lastSeen": 1795019803557
+    },
     {
       "id": "Mobil 📱_İstanbul_fe0r",
       "device": "Mobil 📱",
