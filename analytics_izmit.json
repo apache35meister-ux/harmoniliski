@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 44,
-  "totalWaClicks": 8,
+  "totalVisits": 45,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 1,
-    "selin": 1,
+    "Selin": 2,
+    "selin": 2,
     "Melis": 1,
     "melis": 1,
     "İzel": 2,
@@ -21,6 +21,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:28",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "23:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:27",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -484,6 +501,14 @@
   ],
   "callLogs": [
     {
+      "time": "23:28",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "22:25",
       "name": "Sinem",
       "city": "Bursa",
@@ -549,6 +574,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:27",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -947,10 +981,24 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 42,
+    "İstanbul": 43,
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_9rcc",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795033691798
+    },
+    {
+      "id": "Mobil 📱_İstanbul_ivsv",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795033688049
+    },
     {
       "id": "Masaüstü 💻_İstanbul_dax3",
       "device": "Masaüstü 💻",
