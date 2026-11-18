@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 57,
-  "totalWaClicks": 20,
+  "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 2,
@@ -27,10 +27,20 @@
     "Sinem": 2,
     "sinem": 2,
     "Nergis": 1,
-    "nergis": 1
+    "nergis": 1,
+    "Gülce": 1,
+    "gülce": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:50",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:50",
       "name": "Ziyaretçi (Android 📱)",
@@ -706,6 +716,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:50",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:50",
       "name": "Nergis",
@@ -1387,6 +1405,13 @@
     "Bursa": 12
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_vlgd",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795031441251
+    },
     {
       "id": "Android 📱_Bursa_l1ck",
       "device": "Android 📱",
