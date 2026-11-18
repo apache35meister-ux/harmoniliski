@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 109,
+  "totalVisits": 110,
   "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
@@ -41,6 +41,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:37",
       "name": "Tuba",
@@ -727,15 +736,6 @@
       "device": "Android 📱",
       "page": "/adapazari-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:40",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/orhangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1085,6 +1085,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:36",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1795,22 +1804,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 90,
+    "İstanbul": 91,
     "Bursa": 19
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_6s19",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041458790
+    },
     {
       "id": "Android 📱_Bursa_g5ia",
       "device": "Android 📱",
