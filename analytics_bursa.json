@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 1854,
+  "totalVisits": 1855,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -43,7 +43,7 @@
     {
       "time": "10:51",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -824,6 +824,15 @@
     {
       "time": "10:51",
       "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:51",
+      "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
@@ -1531,19 +1540,17 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_fmnv",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794988270657
+    },
     {
       "id": "Masaüstü 💻_Bursa_5p58",
       "device": "Masaüstü 💻",
@@ -1634,27 +1641,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1794988100002
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_b85z",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794988083453
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_i0zg",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794988082553
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_3k24",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794988081056
     }
   ]
 }
