@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 134,
-  "totalWaClicks": 42,
+  "totalVisits": 135,
+  "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -15,8 +15,8 @@
     "melis": 8,
     "Melisa": 1,
     "melisa": 1,
-    "Selin": 3,
-    "selin": 3,
+    "Selin": 4,
+    "selin": 4,
     "Dila": 2,
     "dila": 2,
     "Nihan": 2,
@@ -46,6 +46,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:56",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "01:56",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/alsancak-kendi-yerinde-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:56",
       "name": "Ayşen",
@@ -724,26 +741,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "23:19",
-      "name": "Açelya",
+      "time": "01:56",
+      "name": "Selin",
       "city": "Görükle",
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     },
-    {
-      "time": "23:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    }
-  ],
-  "callLogs": [
     {
       "time": "01:56",
       "name": "Ayşen",
@@ -1082,6 +1090,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:56",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/alsancak-kendi-yerinde-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1792,22 +1809,27 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 121,
-    "Görükle": 13
+    "Görükle": 14
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_pz15",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042598827
+    },
+    {
+      "id": "Android 📱_Görükle_nsfe",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/alsancak-kendi-yerinde-vip-eskort.html",
+      "lastSeen": 1795042597319
+    },
     {
       "id": "Android 📱_Görükle_dxum",
       "device": "Android 📱",
