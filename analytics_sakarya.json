@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 108,
-  "totalWaClicks": 41,
+  "totalVisits": 109,
+  "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
     "damla": 4,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 7,
-    "açelya": 7,
+    "Açelya": 8,
+    "açelya": 8,
     "Eylül": 3,
     "eylül": 3,
     "Melisa": 1,
@@ -39,6 +39,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:36",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "01:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:36",
       "name": "Selin",
@@ -718,27 +735,17 @@
       "device": "Android 📱",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:12",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/orhangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:09",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:36",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:36",
       "name": "Selin",
@@ -1069,6 +1076,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:36",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1779,22 +1795,27 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 89,
+    "İstanbul": 90,
     "Bursa": 19
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_61k9",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795041409762
+    },
+    {
+      "id": "Mobil 📱_İstanbul_vxxb",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041399430
+    },
     {
       "id": "Android 📱_Bursa_yr16",
       "device": "Android 📱",
@@ -1857,20 +1878,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795041248999
-    },
-    {
-      "id": "Mobil 📱_İstanbul_g6hj",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795041226008
-    },
-    {
-      "id": "Android 📱_Bursa_7oxj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041212629
     }
   ]
 }
