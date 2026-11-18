@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794933587336,
-  "totalVisits": 435,
+  "totalVisits": 436,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:11",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:43",
       "name": "Damla",
@@ -744,15 +753,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:52",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -782,6 +782,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:11",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:49",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1488,32 +1497,11 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Görükle_hqct",
+      "id": "Masaüstü 💻_Görükle_gvlg",
       "device": "Masaüstü 💻",
       "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794987839040
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_nlkh",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794987692938
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_k99c",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794987692833
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_i3v1",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794987692822
+      "lastSeen": 1794989486721
     }
   ]
 }
