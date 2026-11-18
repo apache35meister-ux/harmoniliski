@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1763337600000,
   "totalVisits": 373,
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "1794900000004": 2,
@@ -20,7 +20,9 @@
     "Damla": 2,
     "damla": 2,
     "Test Escort": 1,
-    "test escort": 1
+    "test escort": 1,
+    "Gül": 1,
+    "gül": 1
   },
   "tCalls": {},
   "logs": [
@@ -1468,11 +1470,18 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_udq7",
+      "id": "Android 📱_Bursa_hdb8",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794968283495
+    },
+    {
+      "id": "Mobil 📱_İstanbul_tkyg",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794968265979
+      "lastSeen": 1794968266257
     },
     {
       "id": "Android 📱_Bursa_72nr",
