@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 20,
+  "totalVisits": 21,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -28,6 +28,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:57",
       "name": "Rus ESC",
@@ -469,6 +478,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:57",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -650,72 +668,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 18,
+    "İstanbul": 19,
     "Görükle": 2
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_qp15",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795021078142
-    },
-    {
-      "id": "Mobil 📱_İstanbul_9zif",
+      "id": "Mobil 📱_İstanbul_idmo",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795021066542
-    },
-    {
-      "id": "Android 📱_Görükle_pe3i",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795021058053
-    },
-    {
-      "id": "Android 📱_Görükle_e63t",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/yildirim-eskort.html",
-      "lastSeen": 1795021032259
-    },
-    {
-      "id": "Android 📱_Görükle_mb1u",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795021026525
-    },
-    {
-      "id": "Mobil 📱_İstanbul_cgad",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795020962066
-    },
-    {
-      "id": "Android 📱_Görükle_9dow",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795020941532
-    },
-    {
-      "id": "Mobil 📱_İstanbul_6gv7",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795020913292
-    },
-    {
-      "id": "Android 📱_Görükle_btth",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795020902814
+      "lastSeen": 1795021557743
     }
   ]
 }
