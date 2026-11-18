@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989714629,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 1,
   "totalCalls": 0,
   "tClicks": {
@@ -9,6 +9,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:18",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:17",
       "name": "Selin",
@@ -48,6 +57,15 @@
   ],
   "cityVisits": [
     {
+      "time": "11:18",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:17",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -68,6 +86,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmit_ckwj",
+      "device": "Masaüstü 💻",
+      "city": "İzmit",
+      "page": "/",
+      "lastSeen": 1794989915104
+    },
     {
       "id": "iPhone 📱_Bursa_ghry",
       "device": "iPhone 📱",
