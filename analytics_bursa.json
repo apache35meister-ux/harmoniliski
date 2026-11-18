@@ -1,11 +1,22 @@
 {
   "resetEpoch": 1794989791069,
   "totalVisits": 6,
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "Damla": 1,
+    "damla": 1
+  },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:17",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:17",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -25,7 +36,16 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "11:17",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "11:17",
@@ -48,6 +68,13 @@
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_7655",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794989837265
+    },
     {
       "id": "Masaüstü 💻_Bursa_o3mo",
       "device": "Masaüstü 💻",
