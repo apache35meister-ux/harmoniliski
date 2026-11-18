@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794992835337,
   "totalVisits": 144,
-  "totalWaClicks": 7,
+  "totalWaClicks": 8,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
@@ -15,10 +15,20 @@
     "İlayda": 1,
     "i̇layda": 1,
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "Eylül": 1,
+    "eylül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:28",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:27",
       "name": "Selin",
@@ -726,18 +736,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:28",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:27",
       "name": "Selin",
@@ -1522,6 +1531,13 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_vcid",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795015682773
+    },
     {
       "id": "iPhone 📱_Görükle_a4n9",
       "device": "iPhone 📱",
