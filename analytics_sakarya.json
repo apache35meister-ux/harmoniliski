@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 59,
-  "totalWaClicks": 25,
+  "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 2,
-    "damla": 2,
+    "Damla": 3,
+    "damla": 3,
     "Melis": 2,
     "melis": 2,
     "Açelya": 4,
@@ -35,6 +35,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:53",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:53",
       "name": "Ziyaretçi (Android 📱)",
@@ -720,18 +728,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:25",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:53",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:53",
       "name": "Sakarya Korucuk VIP Escort Vitrin Profilleri",
@@ -1472,6 +1479,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_fr0g",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795031618312
+    },
+    {
       "id": "Android 📱_Bursa_apvs",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1519,20 +1533,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795031441251
-    },
-    {
-      "id": "Android 📱_Bursa_l1ck",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/korucuk-eskort.html",
-      "lastSeen": 1795031430901
-    },
-    {
-      "id": "Android 📱_Bursa_brbe",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795031425197
     }
   ]
 }
