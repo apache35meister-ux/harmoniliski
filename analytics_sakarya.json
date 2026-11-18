@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992829443,
-  "totalVisits": 69,
+  "totalVisits": 70,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -15,6 +15,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:46",
       "name": "Ziyaretçi (Android 📱)",
@@ -705,6 +714,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:46",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1327,17 +1345,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 62,
+    "İstanbul": 63,
     "Bursa": 6,
     "Anyang-si": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_uhc3",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/rehber.html",
-      "lastSeen": 1795013211854
+      "id": "Masaüstü 💻_İstanbul_rbjb",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795013537042
     }
   ]
 }
