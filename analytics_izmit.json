@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 30,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
@@ -9,10 +9,20 @@
     "Damla": 1,
     "damla": 1,
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "Lara": 1,
+    "lara": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:20",
+      "name": "Lara",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:20",
       "name": "Melis",
@@ -309,6 +319,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:20",
+      "name": "Lara",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:20",
       "name": "Melis",
@@ -612,6 +630,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_k7wk",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795000849666
+    },
+    {
       "id": "Android 📱_Bursa_kx84",
       "device": "Android 📱",
       "city": "Bursa",
@@ -631,13 +656,6 @@
       "city": "Bursa",
       "page": "/yildirim-eskort.html",
       "lastSeen": 1795000750065
-    },
-    {
-      "id": "Mobil 📱_İstanbul_3q58",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795000667811
     }
   ]
 }
