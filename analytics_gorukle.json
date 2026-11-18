@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 26,
+  "totalVisits": 27,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -28,6 +28,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:36",
       "name": "Ziyaretçi (Android 📱)",
@@ -523,6 +532,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:36",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
@@ -758,10 +776,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 23,
+    "İstanbul": 24,
     "Görükle": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_8xrl",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795023505946
+    },
     {
       "id": "Android 📱_Görükle_fl9x",
       "device": "Android 📱",
