@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989741796,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 1,
   "totalCalls": 0,
   "tClicks": {
@@ -10,19 +10,11 @@
   "tCalls": {},
   "logs": [
     {
-      "time": "11:17",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
+      "time": "11:18",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Sakarya",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -34,6 +26,23 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:17",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:17",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -48,11 +57,20 @@
   ],
   "cityVisits": [
     {
-      "time": "11:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
+      "time": "11:18",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Sakarya",
       "country": "Türkiye",
-      "device": "iPhone 📱",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -69,25 +87,25 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_xu9b",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794989876070
+      "id": "Masaüstü 💻_Sakarya_j5p8",
+      "device": "Masaüstü 💻",
+      "city": "Sakarya",
+      "page": "/",
+      "lastSeen": 1794989895488
     },
     {
-      "id": "iPhone 📱_Bursa_odfz",
-      "device": "iPhone 📱",
-      "city": "Bursa",
+      "id": "Mobil 📱_İstanbul_4b6s",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
       "page": "Ana Sayfa",
-      "lastSeen": 1794989872344
+      "lastSeen": 1794989871602
     },
     {
-      "id": "iPhone 📱_İstanbul_a3z6",
+      "id": "iPhone 📱_İstanbul_oqhx",
       "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794989872015
+      "lastSeen": 1794989871424
     }
   ]
 }
