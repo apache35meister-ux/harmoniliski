@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 88,
-  "totalWaClicks": 23,
+  "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 4,
@@ -12,8 +12,8 @@
     "i̇zel": 2,
     "Eylül": 4,
     "eylül": 4,
-    "Tuba": 1,
-    "tuba": 1,
+    "Tuba": 2,
+    "tuba": 2,
     "Rus ESC": 2,
     "rus esc": 2,
     "Sinem": 2,
@@ -31,6 +31,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:18",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:17",
       "name": "Hale",
@@ -725,18 +733,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "02:18",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:17",
       "name": "Hale",
@@ -1649,6 +1656,13 @@
     "Bursa": 7
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_wg86",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795043893798
+    },
     {
       "id": "iPhone 📱_Bursa_0ejb",
       "device": "iPhone 📱",
