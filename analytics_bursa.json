@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993496824,
-  "totalVisits": 60,
+  "totalVisits": 61,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:09",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gorukle-eskort",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -674,6 +683,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:09",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gorukle-eskort",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:07",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1217,29 +1235,22 @@
   "cityCounts": {
     "İstanbul": 56,
     "Izmir": 1,
-    "Bursa": 3
+    "Bursa": 4
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_2gth",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/gorukle-eskort",
+      "lastSeen": 1795014556583
+    },
     {
       "id": "Mobil 📱_İstanbul_n2zy",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795014434782
-    },
-    {
-      "id": "Mobil 📱_İstanbul_u9rk",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795014325686
-    },
-    {
-      "id": "Android 📱_Bursa_l2f7",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/rehber.html",
-      "lastSeen": 1795014266132
     }
   ]
 }
