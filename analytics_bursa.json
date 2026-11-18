@@ -1,15 +1,43 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 35,
-  "totalWaClicks": 3,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
     "Selin": 3,
-    "selin": 3
+    "selin": 3,
+    "Nergis": 1,
+    "nergis": 1,
+    "VIP Escort": 2,
+    "vip escort": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:54",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:54",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:54",
+      "name": "Nergis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:53",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -351,6 +379,30 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:54",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:54",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:54",
+      "name": "Nergis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:06",
       "name": "Selin",
@@ -698,6 +750,27 @@
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa / Nilüfer_a9n3",
+      "device": "Mobil 📱",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795028095143
+    },
+    {
+      "id": "Mobil 📱_Bursa / Nilüfer_4rol",
+      "device": "Mobil 📱",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795028095069
+    },
+    {
+      "id": "iPhone 📱_Bursa_stom",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795028095067
+    },
     {
       "id": "iPhone 📱_İstanbul_1kiu",
       "device": "iPhone 📱",
