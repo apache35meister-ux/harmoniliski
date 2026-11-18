@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 62,
-  "totalWaClicks": 14,
+  "totalWaClicks": 15,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -10,8 +10,8 @@
     "melis": 1,
     "İzel": 2,
     "i̇zel": 2,
-    "Eylül": 2,
-    "eylül": 2,
+    "Eylül": 3,
+    "eylül": 3,
     "Tuba": 1,
     "tuba": 1,
     "Rus ESC": 1,
@@ -27,6 +27,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:30",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:30",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -699,6 +707,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "00:30",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:29",
       "name": "Eylül",
@@ -1378,6 +1394,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_2k6w",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795037430558
+    },
+    {
       "id": "iPhone 📱_İstanbul_svws",
       "device": "iPhone 📱",
       "city": "İstanbul",
@@ -1397,13 +1420,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795037348578
-    },
-    {
-      "id": "Android 📱_Bursa_ftv5",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795037237130
     }
   ]
 }
