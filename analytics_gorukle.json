@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 139,
+  "totalVisits": 140,
   "totalWaClicks": 44,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:00",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -734,15 +743,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1100,6 +1100,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:00",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1810,49 +1819,19 @@
       "device": "Android 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:00",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/eve-otele-eskort-hizmeti-nasil-alinir.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 125,
+    "İstanbul": 126,
     "Görükle": 14
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_dmnf",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795042801085
-    },
-    {
-      "id": "Mobil 📱_İstanbul_9bm8",
+      "id": "Mobil 📱_İstanbul_ufg8",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795042766886
-    },
-    {
-      "id": "Mobil 📱_İstanbul_gdp5",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795042705269
-    },
-    {
-      "id": "Android 📱_Görükle_0o64",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795042626174
+      "lastSeen": 1795043252140
     }
   ]
 }
