@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 67,
+  "totalVisits": 68,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -25,6 +25,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -718,15 +727,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:36",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/umitkoy-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -868,6 +868,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1473,10 +1482,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 65,
+    "İstanbul": 66,
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_n0fc",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795041043545
+    },
     {
       "id": "Mobil 📱_İstanbul_98qn",
       "device": "Mobil 📱",
