@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794992835337,
   "totalVisits": 57,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 1,
@@ -9,10 +9,20 @@
     "VIP Escort": 1,
     "vip escort": 1,
     "Aylin": 1,
-    "aylin": 1
+    "aylin": 1,
+    "Melisa": 1,
+    "melisa": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:05",
+      "name": "Melisa",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:05",
       "name": "Ziyaretçi (Android 📱)",
@@ -552,6 +562,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "15:05",
+      "name": "Melisa",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:03",
       "name": "Aylin",
@@ -1097,6 +1115,13 @@
     "Görükle": 9
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_u9pn",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795003522381
+    },
     {
       "id": "Android 📱_Görükle_z0ve",
       "device": "Android 📱",
