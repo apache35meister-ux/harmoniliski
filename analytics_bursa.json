@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794940635198,
-  "totalVisits": 1739,
+  "totalVisits": 1740,
   "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
@@ -42,7 +42,7 @@
     {
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -822,7 +822,7 @@
     {
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -832,6 +832,15 @@
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:42",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -1516,32 +1525,39 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_azqn",
+      "id": "Masaüstü 💻_Bursa_64e7",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794987753372
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_a501",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794987740763
+    },
+    {
+      "id": "Masaüstü 💻_Bursa_0e29",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794987738154
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_o8um",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "Ana Sayfa",
-      "lastSeen": 1794987752284
+      "lastSeen": 1794987736714
     },
     {
-      "id": "Masaüstü 💻_İstanbul_dor7",
+      "id": "Masaüstü 💻_İstanbul_cr4t",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794987752224
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_8zjy",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794987740779
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_d023",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794987736822
+      "lastSeen": 1794987736599
     },
     {
       "id": "Mobil 📱_Bursa_1a93",
