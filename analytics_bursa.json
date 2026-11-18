@@ -15,9 +15,18 @@
   "tCalls": {},
   "logs": [
     {
-      "time": "11:53",
+      "time": "11:54",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:53",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -254,6 +263,24 @@
   ],
   "cityVisits": [
     {
+      "time": "11:54",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:53",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:53",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -266,6 +293,33 @@
       "time": "11:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "New York City",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -752,18 +806,53 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_c53y",
+      "id": "Masaüstü 💻_İstanbul_715p",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794992039833
+      "page": "Ana Sayfa",
+      "lastSeen": 1794992040073
     },
     {
-      "id": "Masaüstü 💻_İstanbul_6bde",
+      "id": "Masaüstü 💻_Bursa_uokw",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794991992374
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_pfym",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794991991376
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_a5f0",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794991965916
+      "lastSeen": 1794991979641
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_07d1",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794991979584
+    },
+    {
+      "id": "Masaüstü 💻_New York City_a3wi",
+      "device": "Masaüstü 💻",
+      "city": "New York City",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794991965992
+    },
+    {
+      "id": "Masaüstü 💻_Bursa_hpgn",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794991964674
     },
     {
       "id": "Masaüstü 💻_İstanbul_u0un",
