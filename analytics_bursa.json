@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992327719,
-  "totalVisits": 1793,
+  "totalVisits": 1794,
   "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
@@ -40,6 +40,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:00",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -803,6 +812,15 @@
   ],
   "cityVisits": [
     {
+      "time": "12:00",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:59",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
@@ -1512,19 +1530,17 @@
       "device": "Android 📱",
       "page": "/nilufer-eskort",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:08",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {},
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_01g9",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794992401490
+    },
     {
       "id": "Masaüstü 💻_Bursa_k89p",
       "device": "Masaüstü 💻",
