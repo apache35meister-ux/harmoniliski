@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 129,
-  "totalWaClicks": 30,
+  "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -21,8 +21,8 @@
     "dila": 1,
     "Nihan": 1,
     "nihan": 1,
-    "Serap": 1,
-    "serap": 1,
+    "Serap": 2,
+    "serap": 2,
     "Rus ESC": 2,
     "rus esc": 2,
     "Ayşen": 2,
@@ -40,6 +40,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:48",
+      "name": "Serap",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:48",
       "name": "Sena",
@@ -738,18 +746,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:07",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:48",
+      "name": "Serap",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:48",
       "name": "Sena",
@@ -1718,6 +1725,13 @@
     "Görükle": 12
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_vn86",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795042122058
+    },
     {
       "id": "Android 📱_Görükle_ivqh",
       "device": "Android 📱",
