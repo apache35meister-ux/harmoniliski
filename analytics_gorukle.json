@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:24",
       "name": "Sinem",
@@ -120,6 +129,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:23",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -175,10 +193,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 5,
+    "İstanbul": 6,
     "Görükle": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_71bx",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795019134633
+    },
     {
       "id": "iPhone 📱_Görükle_8uqr",
       "device": "iPhone 📱",
@@ -213,13 +238,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795019025413
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_exfa",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "/gursu-eskort.html",
-      "lastSeen": 1795018900688
     }
   ]
 }
