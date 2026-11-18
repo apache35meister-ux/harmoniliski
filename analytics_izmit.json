@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 62,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 1,
-    "selin": 1,
+    "Selin": 2,
+    "selin": 2,
     "Damla": 1,
     "damla": 1,
     "Melis": 2,
@@ -21,6 +21,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:05",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:05",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -645,6 +653,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:05",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:42",
       "name": "Eylül",
@@ -1275,6 +1291,13 @@
     "Bursa": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_rc4q",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795007132931
+    },
     {
       "id": "Mobil 📱_İstanbul_304y",
       "device": "Mobil 📱",
