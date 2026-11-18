@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 155,
+  "totalVisits": 156,
   "totalWaClicks": 44,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:24",
       "name": "Ziyaretçi (Android 📱)",
@@ -734,15 +743,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1100,6 +1100,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:24",
       "name": "Ziyaretçi (Android 📱)",
@@ -1810,42 +1819,26 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:03",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 140,
+    "İstanbul": 141,
     "Görükle": 15
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_fan7",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795044418624
+    },
     {
       "id": "Android 📱_Görükle_mdo4",
       "device": "Android 📱",
       "city": "Görükle",
       "page": "/alsancak-kendi-yerinde-vip-eskort.html",
       "lastSeen": 1795044272307
-    },
-    {
-      "id": "Mobil 📱_İstanbul_zwpq",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795044202106
-    },
-    {
-      "id": "Mobil 📱_İstanbul_6861",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795044182179
     }
   ]
 }
