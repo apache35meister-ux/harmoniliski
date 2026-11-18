@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989791069,
-  "totalVisits": 9,
+  "totalVisits": 10,
   "totalWaClicks": 1,
   "totalCalls": 0,
   "tClicks": {
@@ -19,14 +19,6 @@
       "type": "👁️ Site Ziyareti"
     },
     {
-      "time": "11:17",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905358873382",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
       "time": "11:16",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -34,6 +26,14 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:17",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905358873382",
+      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -59,7 +59,7 @@
     {
       "time": "11:17",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
+      "city": "Bursa",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -68,7 +68,16 @@
     {
       "time": "11:17",
       "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:16",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
@@ -87,39 +96,39 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_y1n7",
+      "id": "Masaüstü 💻_İstanbul_iaeq",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794989848216
+      "lastSeen": 1794989855520
     },
     {
-      "id": "Masaüstü 💻_İstanbul_317i",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794989841422
-    },
-    {
-      "id": "iPhone 📱_Bursa_7655",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794989837265
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_o3mo",
+      "id": "Masaüstü 💻_Bursa_qzcg",
       "device": "Masaüstü 💻",
       "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1794989831285
+      "lastSeen": 1794989842548
     },
     {
-      "id": "Masaüstü 💻_İstanbul_0x9f",
+      "id": "Masaüstü 💻_İstanbul_lfwh",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794989807500
+      "lastSeen": 1794989830214
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_qzeg",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1794989819490
+    },
+    {
+      "id": "Masaüstü 💻_İstanbul_ws3n",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794989807522
     }
   ]
 }
