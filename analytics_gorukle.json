@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 107,
+  "totalVisits": 108,
   "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -723,15 +732,6 @@
       "device": "Android 📱",
       "page": "/buca-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:21",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/iznik-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -777,6 +777,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1487,22 +1496,20 @@
       "device": "Android 📱",
       "page": "/cankaya-gaziosmanpasa-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 96,
+    "İstanbul": 97,
     "Görükle": 11
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_v085",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795009749690
+    },
     {
       "id": "Mobil 📱_İstanbul_ldza",
       "device": "Mobil 📱",
@@ -1516,13 +1523,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795009570585
-    },
-    {
-      "id": "Mobil 📱_İstanbul_tcl2",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795009496567
     }
   ]
 }
