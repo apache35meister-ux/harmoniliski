@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992829443,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:50",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:47",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -156,6 +165,15 @@
   ],
   "cityVisits": [
     {
+      "time": "13:50",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "13:47",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -265,23 +283,23 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 11,
+    "İstanbul": 12,
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_pgdc",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794999011528
+    },
     {
       "id": "Masaüstü 💻_İstanbul_m4by",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1794998846188
-    },
-    {
-      "id": "Mobil 📱_İstanbul_jhtt",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1794998712040
     }
   ]
 }
