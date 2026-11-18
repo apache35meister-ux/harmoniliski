@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 60,
-  "totalWaClicks": 13,
+  "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -10,8 +10,8 @@
     "melis": 1,
     "İzel": 2,
     "i̇zel": 2,
-    "Eylül": 1,
-    "eylül": 1,
+    "Eylül": 2,
+    "eylül": 2,
     "Tuba": 1,
     "tuba": 1,
     "Rus ESC": 1,
@@ -27,6 +27,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:29",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:27",
       "name": "Açelya",
@@ -673,6 +681,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "00:29",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:27",
       "name": "Açelya",
@@ -1326,6 +1342,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_v4gk",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795037348578
+    },
+    {
       "id": "Android 📱_Bursa_ftv5",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1352,13 +1375,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795037205020
-    },
-    {
-      "id": "Android 📱_Bursa_m8bo",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795037114318
     }
   ]
 }
