@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794993498994,
-  "totalVisits": 75,
+  "totalVisits": 76,
   "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
@@ -25,6 +25,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -723,15 +732,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:59",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -849,6 +849,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1526,37 +1535,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 72,
+    "İstanbul": 73,
     "Bursa": 3
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_cyiv",
+      "id": "Mobil 📱_İstanbul_7qm9",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795008294293
-    },
-    {
-      "id": "Mobil 📱_İstanbul_tu9o",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795008266545
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ak1p",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795008144785
-    },
-    {
-      "id": "Mobil 📱_İstanbul_lpvg",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795008138730
+      "lastSeen": 1795008498351
     }
   ]
 }
