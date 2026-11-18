@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 101,
-  "totalWaClicks": 38,
+  "totalWaClicks": 39,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 8,
-    "selin": 8,
+    "Selin": 9,
+    "selin": 9,
     "Damla": 3,
     "damla": 3,
     "Melis": 4,
@@ -37,6 +37,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:26",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:25",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -717,18 +725,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:26",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:25",
       "name": "Selin",
@@ -1762,6 +1769,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_kprc",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795015581370
+    },
+    {
       "id": "Masaüstü 💻_İstanbul_ev18",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
@@ -1844,27 +1858,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795015407799
-    },
-    {
-      "id": "iPhone 📱_Bursa_c1ct",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795015397872
-    },
-    {
-      "id": "iPhone 📱_İstanbul_fifl",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795015394019
-    },
-    {
-      "id": "iPhone 📱_İstanbul_1ibd",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795015369467
     }
   ]
 }
