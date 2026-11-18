@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992835337,
-  "totalVisits": 136,
+  "totalVisits": 137,
   "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:04",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -720,15 +729,6 @@
     },
     {
       "time": "15:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:06",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -781,6 +781,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:04",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -1490,28 +1499,19 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:05",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/batikent-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 124,
+    "İstanbul": 125,
     "Görükle": 12
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_it8w",
-      "device": "iPhone 📱",
+      "id": "Mobil 📱_İstanbul_y7h7",
+      "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795014278951
+      "lastSeen": 1795014537645
     }
   ]
 }
