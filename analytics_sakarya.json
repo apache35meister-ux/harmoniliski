@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794989741796,
-  "totalVisits": 9,
+  "totalVisits": 11,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -22,6 +22,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:56",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:30",
       "name": "Hazal",
@@ -227,6 +236,24 @@
   ],
   "cityVisits": [
     {
+      "time": "11:56",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "11:56",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:29",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -284,46 +311,18 @@
   "cityCounts": {},
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_vtay",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794990625739
-    },
-    {
-      "id": "Android 📱_Bursa_j98u",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794990606236
-    },
-    {
-      "id": "Android 📱_Bursa_ryxo",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/inegol-eskort.html",
-      "lastSeen": 1794990565664
-    },
-    {
-      "id": "Mobil 📱_İstanbul_r4ph",
-      "device": "Mobil 📱",
+      "id": "Masaüstü 💻_İstanbul_zdkd",
+      "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1794990531355
+      "lastSeen": 1794992162897
     },
     {
-      "id": "Android 📱_Bursa_h8li",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794990526493
-    },
-    {
-      "id": "Mobil 📱_İstanbul_67fq",
-      "device": "Mobil 📱",
+      "id": "Masaüstü 💻_İstanbul_5xdx",
+      "device": "Masaüstü 💻",
       "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1794990494308
+      "page": "/",
+      "lastSeen": 1794992162843
     }
   ]
 }
