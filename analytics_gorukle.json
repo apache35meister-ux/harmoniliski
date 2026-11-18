@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 161,
+  "totalVisits": 162,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:34",
       "name": "Açelya",
@@ -732,15 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1114,6 +1114,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "02:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1824,22 +1833,20 @@
       "device": "Android 📱",
       "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:27",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 146,
+    "İstanbul": 147,
     "Görükle": 15
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_vcj5",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795044960933
+    },
     {
       "id": "Android 📱_Görükle_boxs",
       "device": "Android 📱",
