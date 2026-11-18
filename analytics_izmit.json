@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 88,
-  "totalWaClicks": 22,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 4,
@@ -25,10 +25,20 @@
     "Açelya": 1,
     "açelya": 1,
     "Serap": 1,
-    "serap": 1
+    "serap": 1,
+    "Hale": 1,
+    "hale": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:17",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:17",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -724,18 +734,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "02:17",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:11",
       "name": "Sinem",
@@ -1640,6 +1649,13 @@
     "Bursa": 7
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_0ejb",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795043873032
+    },
     {
       "id": "iPhone 📱_İstanbul_60es",
       "device": "iPhone 📱",
