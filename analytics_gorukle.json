@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1794992347545,
-  "totalVisits": 435,
+  "totalVisits": 436,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:00",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:43",
       "name": "Damla",
@@ -774,6 +783,15 @@
   ],
   "cityVisits": [
     {
+      "time": "12:00",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:49",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Görükle",
@@ -1477,5 +1495,13 @@
     }
   ],
   "cityCounts": {},
-  "activeVisitors": []
+  "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_xyyk",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1794992438404
+    }
+  ]
 }
