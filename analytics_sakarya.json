@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 115,
+  "totalVisits": 116,
   "totalWaClicks": 49,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:41",
       "name": "Nisan",
@@ -732,14 +741,6 @@
       "device": "Android 📱",
       "page": "/maltepe-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:53",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1137,6 +1138,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:40",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1847,85 +1857,20 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:05",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 94,
+    "İstanbul": 95,
     "Bursa": 20,
     "Adapazari": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_6o7j",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041667342
-    },
-    {
-      "id": "Mobil 📱_İstanbul_0gcb",
+      "id": "Mobil 📱_İstanbul_poyp",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795041619629
-    },
-    {
-      "id": "Android 📱_Bursa_2ksj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041596664
-    },
-    {
-      "id": "Android 📱_Bursa_engt",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041569120
-    },
-    {
-      "id": "Mobil 📱_İstanbul_295m",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795041564535
-    },
-    {
-      "id": "Mobil 📱_Adapazari_crlt",
-      "device": "Mobil 📱",
-      "city": "Adapazari",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041527237
-    },
-    {
-      "id": "Android 📱_Bursa_ygzo",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041509731
-    },
-    {
-      "id": "Android 📱_Bursa_6027",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795041496371
-    },
-    {
-      "id": "Android 📱_Bursa_am09",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/adapazari-eskort.html",
-      "lastSeen": 1795041491156
+      "lastSeen": 1795042683637
     }
   ]
 }
