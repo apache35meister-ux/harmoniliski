@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 57,
-  "totalWaClicks": 21,
+  "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 2,
@@ -26,13 +26,21 @@
     "selin": 2,
     "Sinem": 2,
     "sinem": 2,
-    "Nergis": 1,
-    "nergis": 1,
+    "Nergis": 2,
+    "nergis": 2,
     "Gülce": 1,
     "gülce": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:51",
+      "name": "Nergis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:50",
       "name": "Gülce",
@@ -716,6 +724,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:51",
+      "name": "Nergis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:50",
       "name": "Gülce",
@@ -1406,6 +1422,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_irqw",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795031478419
+    },
+    {
       "id": "Android 📱_Bursa_vlgd",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1432,13 +1455,6 @@
       "city": "Bursa",
       "page": "/adapazari-eskort.html",
       "lastSeen": 1795031301409
-    },
-    {
-      "id": "Android 📱_Bursa_6hcx",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/adapazari-eskort.html",
-      "lastSeen": 1795031296980
     }
   ]
 }
