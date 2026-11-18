@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1794993498994,
   "totalVisits": 91,
-  "totalWaClicks": 20,
+  "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -20,8 +20,8 @@
     "eylül": 2,
     "Rus ESC": 1,
     "rus esc": 1,
-    "Gül": 2,
-    "gül": 2,
+    "Gül": 3,
+    "gül": 3,
     "Tuba": 1,
     "tuba": 1,
     "İzel": 1,
@@ -31,6 +31,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:46",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:45",
       "name": "Rus Rita",
@@ -723,18 +731,17 @@
       "device": "Android 📱",
       "phone": "905358873382",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "17:46",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:45",
       "name": "Rus Rita",
@@ -1624,6 +1631,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_znrl",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795013183662
+    },
+    {
       "id": "iPhone 📱_Bursa_xbl1",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -1657,20 +1671,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795013016298
-    },
-    {
-      "id": "iPhone 📱_İstanbul_f5nv",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795012979267
-    },
-    {
-      "id": "iPhone 📱_Bursa_8tx1",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795012970309
     }
   ]
 }
