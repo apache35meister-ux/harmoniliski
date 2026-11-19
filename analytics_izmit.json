@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 19,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -37,10 +37,20 @@
     "İlayda": 1,
     "i̇layda": 1,
     "Su": 1,
-    "su": 1
+    "su": 1,
+    "Yasemin": 1,
+    "yasemin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:35",
+      "name": "Yasemin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:34",
       "name": "Melis",
@@ -446,6 +456,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:35",
+      "name": "Yasemin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:34",
       "name": "Melis",
@@ -858,6 +876,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_ldv4",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795088134692
+    },
+    {
       "id": "Android 📱_Bursa_4yez",
       "device": "Android 📱",
       "city": "Bursa",
@@ -891,55 +916,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795087986400
-    },
-    {
-      "id": "Mobil 📱_İstanbul_habk",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795087953459
-    },
-    {
-      "id": "Android 📱_Bursa_gwl1",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087952300
-    },
-    {
-      "id": "Android 📱_Bursa_tgg4",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087938547
-    },
-    {
-      "id": "Android 📱_Bursa_nex4",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087912679
-    },
-    {
-      "id": "Android 📱_Bursa_zd6k",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087895489
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ecyt",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795087892216
-    },
-    {
-      "id": "Mobil 📱_İstanbul_3cei",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795087886832
     }
   ]
 }
