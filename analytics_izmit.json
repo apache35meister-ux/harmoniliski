@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 65,
+  "totalVisits": 66,
   "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:38",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:34",
       "name": "Eylül",
@@ -740,14 +749,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:59",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -1395,6 +1396,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:38",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:33",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1981,37 +1991,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 60,
+    "İstanbul": 61,
     "Bursa": 5
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_c3j2",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795109647965
-    },
-    {
-      "id": "Android 📱_Bursa_hej5",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795109637091
-    },
-    {
-      "id": "Android 📱_Bursa_iric",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795109631223
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ahs3",
-      "device": "Mobil 📱",
+      "id": "iPhone 📱_İstanbul_us3o",
+      "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795109565400
+      "lastSeen": 1795109926670
     }
   ]
 }
