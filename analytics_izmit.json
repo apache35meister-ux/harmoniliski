@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 65,
-  "totalWaClicks": 84,
+  "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 16,
@@ -12,8 +12,8 @@
     "begüm": 2,
     "Damla": 4,
     "damla": 4,
-    "Eylül": 7,
-    "eylül": 7,
+    "Eylül": 8,
+    "eylül": 8,
     "Hale": 5,
     "hale": 5,
     "Ayşen": 4,
@@ -73,6 +73,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:34",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:33",
       "name": "Ziyaretçi (Android 📱)",
@@ -741,18 +749,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:34",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:33",
       "name": "Nergis",
@@ -1384,14 +1391,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:24",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1986,6 +1985,13 @@
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_c3j2",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795109647965
+    },
     {
       "id": "Android 📱_Bursa_hej5",
       "device": "Android 📱",
