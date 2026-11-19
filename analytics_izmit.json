@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 125,
+  "totalVisits": 126,
   "totalWaClicks": 55,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -722,15 +731,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1176,6 +1176,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1886,43 +1895,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:30",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 115,
+    "İstanbul": 116,
     "Bursa": 9,
     "Kane": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_l4co",
+      "id": "Mobil 📱_İstanbul_pp5n",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795076909516
-    },
-    {
-      "id": "Android 📱_Bursa_2xd6",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795076866060
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ly0g",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795076819731
+      "lastSeen": 1795079468857
     }
   ]
 }
