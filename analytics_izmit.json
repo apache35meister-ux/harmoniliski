@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 51,
-  "totalWaClicks": 70,
+  "totalWaClicks": 71,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 13,
@@ -65,10 +65,20 @@
     "1790000000321": 2,
     "Sinem": 4,
     "sinem": 4,
-    "1790000000323": 2
+    "1790000000323": 2,
+    "Hazal": 1,
+    "hazal": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:17",
+      "name": "Hazal",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -734,17 +744,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:32",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:17",
+      "name": "Hazal",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:16",
       "name": "Rus ESC",
@@ -1772,6 +1782,13 @@
     "Bursa": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_5g64",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795101427700
+    },
     {
       "id": "Mobil 📱_İstanbul_m6tm",
       "device": "Mobil 📱",
