@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 140,
-  "totalWaClicks": 64,
+  "totalWaClicks": 65,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 6,
-    "damla": 6,
+    "Damla": 7,
+    "damla": 7,
     "Melis": 3,
     "melis": 3,
     "Açelya": 9,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:20",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:20",
       "name": "Nehir",
@@ -734,18 +742,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:54",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/konak-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:20",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:20",
       "name": "Nehir",
@@ -1987,6 +1994,13 @@
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_fzxe",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795076444436
+    },
     {
       "id": "Android 📱_Bursa_zqy8",
       "device": "Android 📱",
