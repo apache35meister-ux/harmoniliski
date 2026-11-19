@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 102,
-  "totalWaClicks": 45,
+  "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -11,8 +11,8 @@
     "nergis": 1,
     "VIP Escort": 3,
     "vip escort": 3,
-    "Melis": 7,
-    "melis": 7,
+    "Melis": 8,
+    "melis": 8,
     "1790000000339": 2,
     "Açelya": 2,
     "açelya": 2,
@@ -39,6 +39,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:05",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:04",
       "name": "VIP Escort",
@@ -714,18 +722,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:43",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:05",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:04",
       "name": "VIP Escort",
@@ -1816,6 +1823,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_82eo",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795075502590
+    },
     {
       "id": "iPhone 📱_Bursa_nygr",
       "device": "iPhone 📱",
