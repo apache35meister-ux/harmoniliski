@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 71,
+  "totalVisits": 72,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:09",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -724,15 +733,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -866,6 +866,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:09",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1507,11 +1516,18 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 58,
+    "İstanbul": 59,
     "Görükle": 11,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_p3ba",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795119085395
+    },
     {
       "id": "Mobil 📱_İstanbul_edvi",
       "device": "Mobil 📱",
@@ -1525,13 +1541,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795118936749
-    },
-    {
-      "id": "Android 📱_Görükle_og7l",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.ht",
-      "lastSeen": 1795118781494
     }
   ]
 }
