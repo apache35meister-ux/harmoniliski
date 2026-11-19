@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 128,
-  "totalWaClicks": 126,
+  "totalWaClicks": 127,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -58,8 +58,8 @@
     "zeynep": 1,
     "Açelya": 5,
     "açelya": 5,
-    "Rus ESC": 7,
-    "rus esc": 7,
+    "Rus ESC": 8,
+    "rus esc": 8,
     "Gül": 7,
     "gül": 7,
     "1790000000321": 2,
@@ -82,6 +82,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:43",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:43",
       "name": "Melis",
@@ -762,18 +770,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:43",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:43",
       "name": "Melis",
@@ -1396,14 +1403,6 @@
       "city": "Bursa",
       "device": "Masaüstü 💻",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:00",
-      "name": "Sinem",
-      "city": "İzmit / Derince",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -2142,6 +2141,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_5etp",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795128195866
+    },
     {
       "id": "Mobil 📱_İzmit / Bekirpaşa_qskh",
       "device": "Mobil 📱",
