@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 131,
-  "totalWaClicks": 55,
+  "totalWaClicks": 56,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 6,
@@ -38,8 +38,8 @@
     "hale": 1,
     "Tuba": 2,
     "tuba": 2,
-    "Yeliz": 1,
-    "yeliz": 1,
+    "Yeliz": 2,
+    "yeliz": 2,
     "Nisan": 1,
     "nisan": 1,
     "Şebnem": 2,
@@ -47,6 +47,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:11",
+      "name": "Yeliz",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:10",
       "name": "Şebnem",
@@ -733,18 +741,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:11",
+      "name": "Yeliz",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:10",
       "name": "Şebnem",
@@ -1914,6 +1921,13 @@
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_t85g",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795057889715
+    },
     {
       "id": "Android 📱_Bursa_pfy1",
       "device": "Android 📱",
