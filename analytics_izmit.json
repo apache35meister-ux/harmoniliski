@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 130,
+  "totalVisits": 131,
   "totalWaClicks": 59,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:51",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:42",
       "name": "Ziyaretçi (Android 📱)",
@@ -721,15 +730,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1207,6 +1207,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:51",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:42",
       "name": "Ziyaretçi (Android 📱)",
@@ -1917,29 +1926,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:10",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 118,
+    "İstanbul": 119,
     "Bursa": 11,
     "Kane": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_fhfr",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/kestel-eskort.html",
-      "lastSeen": 1795081372469
+      "id": "Masaüstü 💻_İstanbul_65ij",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795081874648
     }
   ]
 }
