@@ -1,16 +1,26 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 2,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
     "selin": 2,
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "Begüm": 1,
+    "begüm": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:42",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -55,6 +65,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "13:42",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:33",
       "name": "Melis",
@@ -104,6 +122,13 @@
     "İstanbul": 2
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_otvt",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795084940154
+    },
     {
       "id": "Masaüstü 💻_İstanbul_9vzo",
       "device": "Masaüstü 💻",
