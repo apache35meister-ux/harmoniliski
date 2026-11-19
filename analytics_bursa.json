@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 114,
-  "totalWaClicks": 59,
+  "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -43,10 +43,20 @@
     "Yaren": 1,
     "yaren": 1,
     "Nehir": 1,
-    "nehir": 1
+    "nehir": 1,
+    "Dilara & Özge": 1,
+    "dilara & özge": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:34",
+      "name": "Dilara & Özge",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:34",
       "name": "Nehir",
@@ -718,17 +728,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:14",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:34",
+      "name": "Dilara & Özge",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:34",
       "name": "Nehir",
@@ -1931,6 +1941,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_mt4z",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795080891626
+    },
     {
       "id": "iPhone 📱_Bursa_m3bw",
       "device": "iPhone 📱",
