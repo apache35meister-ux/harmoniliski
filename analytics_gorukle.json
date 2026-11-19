@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 9,
+  "totalVisits": 10,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -15,6 +15,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Türkiye",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:17",
       "name": "Ziyaretçi (Android 📱)",
@@ -165,6 +174,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Türkiye",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:17",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
@@ -248,29 +266,16 @@
   ],
   "cityCounts": {
     "İstanbul": 6,
-    "Görükle": 3
+    "Görükle": 3,
+    "Türkiye": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_8i7t",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/korupark-eskort.html",
-      "lastSeen": 1795090679635
-    },
-    {
-      "id": "Android 📱_Görükle_hn69",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795090665399
-    },
-    {
-      "id": "Android 📱_Görükle_ru7c",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795090640850
+      "id": "Mobil 📱_Türkiye_9wax",
+      "device": "Mobil 📱",
+      "city": "Türkiye",
+      "page": "/",
+      "lastSeen": 1795091871154
     }
   ]
 }
