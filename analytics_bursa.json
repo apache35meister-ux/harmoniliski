@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 30,
+  "totalVisits": 31,
   "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:54",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -740,6 +749,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:54",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -1011,51 +1029,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 28,
+    "İstanbul": 29,
     "Bursa": 2
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_dchr",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795103687172
-    },
-    {
-      "id": "iPhone 📱_Bursa_5tru",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795103647293
-    },
-    {
-      "id": "iPhone 📱_Bursa_utg1",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795103631658
-    },
-    {
-      "id": "iPhone 📱_Bursa_xset",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795103621553
-    },
-    {
-      "id": "Mobil 📱_İstanbul_vod8",
+      "id": "Mobil 📱_İstanbul_spo8",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795103619559
-    },
-    {
-      "id": "iPhone 📱_İstanbul_for7",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795103605939
+      "lastSeen": 1795104273355
     }
   ]
 }
