@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 70,
+  "totalVisits": 71,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -724,14 +733,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:26",
-      "name": "Bursa Yıldırım VIP Escort Vitrin Profilleri",
-      "city": "Görükle",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -865,6 +866,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1497,11 +1507,18 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 57,
+    "İstanbul": 58,
     "Görükle": 11,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_edvi",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795118958194
+    },
     {
       "id": "Mobil 📱_İstanbul_9zrb",
       "device": "Mobil 📱",
