@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 108,
+  "totalVisits": 109,
   "totalWaClicks": 109,
   "totalCalls": 0,
   "tClicks": {
@@ -79,6 +79,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:30",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:28",
       "name": "Begüm",
@@ -759,14 +768,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:33",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1412,6 +1413,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:30",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2122,22 +2132,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:59",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 93,
+    "İstanbul": 94,
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_atr0",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795123803957
+    },
     {
       "id": "iPhone 📱_Bursa_5fjh",
       "device": "iPhone 📱",
@@ -2151,13 +2159,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795123655734
-    },
-    {
-      "id": "Mobil 📱_İstanbul_01jy",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795123538770
     }
   ]
 }
