@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:43",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:40",
       "name": "Melis",
@@ -46,9 +55,28 @@
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
-  "cityVisits": [],
-  "cityCounts": {},
+  "cityVisits": [
+    {
+      "time": "13:43",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    }
+  ],
+  "cityCounts": {
+    "İstanbul": 1
+  },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_718k",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795084989236
+    },
     {
       "id": "Masaüstü 💻_Bursa_qbs7",
       "device": "Masaüstü 💻",
