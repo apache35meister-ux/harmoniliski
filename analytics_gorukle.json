@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 129,
+  "totalVisits": 130,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "22:30",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:29",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -880,6 +880,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:46",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1589,23 +1598,21 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 111,
+    "İstanbul": 112,
     "Görükle": 16,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_rznk",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795124919200
+    },
     {
       "id": "Mobil 📱_İstanbul_siak",
       "device": "Mobil 📱",
@@ -1619,34 +1626,6 @@
       "city": "Görükle",
       "page": "/heykel-eskort.html",
       "lastSeen": 1795124740234
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ywls",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795124674033
-    },
-    {
-      "id": "Mobil 📱_İstanbul_cas8",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795124644907
-    },
-    {
-      "id": "Android 📱_Görükle_d1sn",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795124640929
-    },
-    {
-      "id": "Android 📱_Görükle_jylm",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795124634121
     }
   ]
 }
