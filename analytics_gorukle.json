@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 3,
+  "totalVisits": 4,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:20",
       "name": "Nihan",
@@ -75,6 +84,15 @@
   ],
   "cityVisits": [
     {
+      "time": "14:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:20",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
@@ -103,23 +121,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 2,
+    "İstanbul": 3,
     "Görükle": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_slqb",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087213018
-    },
-    {
-      "id": "Android 📱_Görükle_4lru",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/gursu-eskort.html",
-      "lastSeen": 1795087202946
+      "id": "Mobil 📱_İstanbul_zl2k",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795087569230
     }
   ]
 }
