@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 90,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -30,11 +30,19 @@
     "kumsal": 1,
     "Damla": 1,
     "damla": 1,
-    "Eylül": 2,
-    "eylül": 2
+    "Eylül": 3,
+    "eylül": 3
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:01",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:01",
       "name": "Eylül",
@@ -721,17 +729,17 @@
       "device": "Mobil 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:54",
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Mobil 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:01",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:01",
       "name": "Eylül",
@@ -1694,6 +1702,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_b31b",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795064512643
+    },
     {
       "id": "Android 📱_Bursa_vhe6",
       "device": "Android 📱",
