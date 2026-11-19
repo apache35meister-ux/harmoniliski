@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:39",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/cark-caddesi-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:39",
       "name": "Eylül",
@@ -120,6 +129,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:39",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/cark-caddesi-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:37",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -194,9 +212,16 @@
   ],
   "cityCounts": {
     "İstanbul": 7,
-    "Bursa": 1
+    "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_ybn0",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/cark-caddesi-eskort.html",
+      "lastSeen": 1795102757304
+    },
     {
       "id": "Android 📱_Bursa_gn6t",
       "device": "Android 📱",
