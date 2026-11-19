@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083689695,
   "totalVisits": 19,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
     "Açelya": 1,
@@ -17,10 +17,20 @@
     "VIP Escort": 1,
     "vip escort": 1,
     "Gül": 1,
-    "gül": 1
+    "gül": 1,
+    "Hale": 1,
+    "hale": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:23",
+      "name": "Hale",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:22",
       "name": "Ziyaretçi (Android 📱)",
@@ -258,6 +268,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:23",
+      "name": "Hale",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:22",
       "name": "Selin",
@@ -502,6 +520,13 @@
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_4xh7",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795094633042
+    },
     {
       "id": "Android 📱_Görükle_fdzq",
       "device": "Android 📱",
