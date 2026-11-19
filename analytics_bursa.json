@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 101,
-  "totalWaClicks": 75,
+  "totalWaClicks": 76,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -18,8 +18,8 @@
     "i̇layda": 4,
     "Serap": 3,
     "serap": 3,
-    "Nihan": 3,
-    "nihan": 3,
+    "Nihan": 4,
+    "nihan": 4,
     "Su": 1,
     "su": 1,
     "Dila": 2,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:29",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:28",
       "name": "Gül",
@@ -744,18 +752,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:29",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:28",
       "name": "Gül",
@@ -2085,6 +2092,13 @@
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_fqm1",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795127347143
+    },
     {
       "id": "Android 📱_Bursa_swgx",
       "device": "Android 📱",
