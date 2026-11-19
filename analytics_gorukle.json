@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 196,
+  "totalVisits": 198,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:50",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "02:50",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,24 +739,6 @@
     },
     {
       "time": "00:40",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,24 @@
   "cityVisits": [
     {
       "time": "02:50",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "02:50",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "02:50",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -1587,32 +1605,28 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 174,
-    "Görükle": 20,
+    "İstanbul": 175,
+    "Görükle": 21,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_81zw",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795132243292
+    },
+    {
+      "id": "Mobil 📱_İstanbul_84pa",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795132233787
+    },
     {
       "id": "Mobil 📱_İstanbul_fx04",
       "device": "Mobil 📱",
@@ -1626,13 +1640,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795132116710
-    },
-    {
-      "id": "Mobil 📱_İstanbul_unuo",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795132055830
     }
   ]
 }
