@@ -1,12 +1,12 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 108,
-  "totalWaClicks": 49,
+  "totalWaClicks": 50,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
-    "Selin": 12,
-    "selin": 12,
+    "Selin": 13,
+    "selin": 13,
     "Nergis": 1,
     "nergis": 1,
     "VIP Escort": 3,
@@ -39,6 +39,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:55",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -714,17 +722,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:17",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:55",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:53",
       "name": "Damla",
@@ -1847,6 +1855,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_twol",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795078505403
+    },
     {
       "id": "Mobil 📱_İstanbul_ux0k",
       "device": "Mobil 📱",
