@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 109,
-  "totalWaClicks": 53,
+  "totalWaClicks": 54,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -11,8 +11,8 @@
     "nergis": 1,
     "VIP Escort": 3,
     "vip escort": 3,
-    "Melis": 9,
-    "melis": 9,
+    "Melis": 10,
+    "melis": 10,
     "1790000000339": 2,
     "Açelya": 2,
     "açelya": 2,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:56",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:56",
       "name": "Serap",
@@ -715,18 +723,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:56",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:56",
       "name": "Serap",
@@ -1881,6 +1888,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_utk7",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795078590536
+    },
     {
       "id": "Android 📱_Bursa_a74t",
       "device": "Android 📱",
