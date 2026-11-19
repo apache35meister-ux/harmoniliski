@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 32,
-  "totalWaClicks": 52,
+  "totalVisits": 33,
+  "totalWaClicks": 53,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 9,
@@ -12,8 +12,8 @@
     "begüm": 2,
     "Damla": 2,
     "damla": 2,
-    "Eylül": 5,
-    "eylül": 5,
+    "Eylül": 6,
+    "eylül": 6,
     "Hale": 3,
     "hale": 3,
     "Ayşen": 1,
@@ -68,6 +68,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:17",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:16",
       "name": "Selin",
@@ -721,26 +738,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:42",
-      "name": "Begüm",
-      "city": "Bursa",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:41",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:17",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:16",
       "name": "Selin",
@@ -1160,6 +1168,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:16",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1449,10 +1466,24 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 31,
+    "İstanbul": 32,
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_fkbw",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795090655774
+    },
+    {
+      "id": "Mobil 📱_İstanbul_zpsp",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795090655698
+    },
     {
       "id": "Android 📱_Bursa_gx7k",
       "device": "Android 📱",
