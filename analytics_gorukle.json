@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083689695,
   "totalVisits": 14,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Açelya": 1,
@@ -13,10 +13,20 @@
     "Damla": 1,
     "damla": 1,
     "Selin": 1,
-    "selin": 1
+    "selin": 1,
+    "VIP Escort": 1,
+    "vip escort": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:50",
+      "name": "VIP Escort",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:50",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -185,6 +195,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "15:50",
+      "name": "VIP Escort",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:38",
       "name": "Selin",
@@ -360,6 +378,13 @@
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_c5y1",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795092611904
+    },
     {
       "id": "iPhone 📱_İstanbul_wgmd",
       "device": "iPhone 📱",
