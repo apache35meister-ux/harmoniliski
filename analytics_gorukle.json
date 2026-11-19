@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 75,
+  "totalVisits": 76,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:18",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:18",
       "name": "Ziyaretçi (Android 📱)",
@@ -725,14 +734,6 @@
       "device": "Android 📱",
       "page": "/korupark-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:17",
-      "name": "Damla",
-      "city": "Görükle",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -866,6 +867,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:18",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:18",
       "name": "Ziyaretçi (Android 📱)",
@@ -1543,11 +1553,18 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 61,
+    "İstanbul": 62,
     "Görükle": 12,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_y5gn",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795119521116
+    },
     {
       "id": "Android 📱_Görükle_o50g",
       "device": "Android 📱",
