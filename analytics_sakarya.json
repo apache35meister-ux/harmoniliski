@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 130,
-  "totalWaClicks": 52,
+  "totalWaClicks": 53,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 6,
     "damla": 6,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 8,
-    "açelya": 8,
+    "Açelya": 9,
+    "açelya": 9,
     "Eylül": 4,
     "eylül": 4,
     "Melisa": 1,
@@ -47,6 +47,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:10",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:09",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,18 +744,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:54",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:10",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "04:56",
       "name": "Yaren",
@@ -1893,6 +1900,13 @@
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_0e6a",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795057800394
+    },
     {
       "id": "Mobil 📱_İstanbul_sw3n",
       "device": "Mobil 📱",
