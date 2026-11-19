@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 132,
-  "totalWaClicks": 59,
+  "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 14,
@@ -20,8 +20,8 @@
     "sinem": 4,
     "Nergis": 2,
     "nergis": 2,
-    "Damla": 5,
-    "damla": 5,
+    "Damla": 6,
+    "damla": 6,
     "Açelya": 4,
     "açelya": 4,
     "Serap": 1,
@@ -48,6 +48,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:01",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:00",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -723,17 +731,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:18",
-      "name": "Tuba",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:01",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:24",
       "name": "Açelya",
@@ -1935,6 +1943,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_yuvu",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795082462671
+    },
     {
       "id": "iPhone 📱_İstanbul_okt2",
       "device": "iPhone 📱",
