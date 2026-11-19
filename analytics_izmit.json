@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 8,
-  "totalWaClicks": 4,
+  "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 2,
@@ -9,10 +9,20 @@
     "Melis": 1,
     "melis": 1,
     "Begüm": 1,
-    "begüm": 1
+    "begüm": 1,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:24",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -119,6 +129,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:24",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:42",
       "name": "Begüm",
@@ -232,18 +250,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_6dp9",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795087469765
+    },
+    {
       "id": "Mobil 📱_İstanbul_1p47",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795087396212
-    },
-    {
-      "id": "Mobil 📱_İstanbul_vrbq",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795087237920
     }
   ]
 }
