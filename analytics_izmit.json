@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 115,
-  "totalWaClicks": 113,
+  "totalWaClicks": 114,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 19,
@@ -12,8 +12,8 @@
     "begüm": 5,
     "Damla": 8,
     "damla": 8,
-    "Eylül": 11,
-    "eylül": 11,
+    "Eylül": 12,
+    "eylül": 12,
     "Hale": 5,
     "hale": 5,
     "Ayşen": 5,
@@ -79,6 +79,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:40",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:40",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -760,18 +768,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:33",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/yahya-kaptan-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "00:40",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:36",
       "name": "Damla",
@@ -1402,14 +1409,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:38",
-      "name": "Julia",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2140,6 +2139,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_pvx5",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795124444721
+    },
     {
       "id": "iPhone 📱_İstanbul_hpir",
       "device": "iPhone 📱",
