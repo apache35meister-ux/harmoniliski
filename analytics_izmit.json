@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 111,
+  "totalVisits": 112,
   "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
@@ -43,6 +43,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:13",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bursa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:13",
       "name": "Nihan",
@@ -725,14 +734,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:29",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1074,6 +1075,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:13",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bursa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1784,23 +1794,21 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:00",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 102,
-    "Bursa": 8,
+    "Bursa": 9,
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_adr3",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/bursa-eskort.html",
+      "lastSeen": 1795068812175
+    },
     {
       "id": "Android 📱_Bursa_94vy",
       "device": "Android 📱",
