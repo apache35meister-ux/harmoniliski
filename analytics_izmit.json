@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 111,
-  "totalWaClicks": 39,
+  "totalWaClicks": 40,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 7,
@@ -20,8 +20,8 @@
     "sinem": 3,
     "Nergis": 2,
     "nergis": 2,
-    "Damla": 3,
-    "damla": 3,
+    "Damla": 4,
+    "damla": 4,
     "Açelya": 2,
     "açelya": 2,
     "Serap": 1,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:11",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -723,18 +731,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:26",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/yahya-kaptan-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:11",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:09",
       "name": "Pınar",
@@ -1776,6 +1783,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_u12j",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795068710730
+    },
     {
       "id": "Mobil 📱_İstanbul_2117",
       "device": "Mobil 📱",
