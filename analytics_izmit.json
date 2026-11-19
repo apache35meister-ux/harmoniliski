@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 73,
-  "totalWaClicks": 85,
+  "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 16,
@@ -56,8 +56,8 @@
     "ebru": 1,
     "Zeynep": 1,
     "zeynep": 1,
-    "Açelya": 2,
-    "açelya": 2,
+    "Açelya": 3,
+    "açelya": 3,
     "Rus ESC": 3,
     "rus esc": 3,
     "Gül": 3,
@@ -73,6 +73,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:59",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:59",
       "name": "Ziyaretçi (Android 📱)",
@@ -748,17 +756,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:00",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:59",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:34",
       "name": "Eylül",
@@ -1373,14 +1381,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:25",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -2064,6 +2064,13 @@
     "Bursa": 7
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_x0fu",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795114797820
+    },
     {
       "id": "Android 📱_Bursa_w5xn",
       "device": "Android 📱",
