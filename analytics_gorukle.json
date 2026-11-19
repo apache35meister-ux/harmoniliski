@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 98,
+  "totalVisits": 99,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:09",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -873,6 +873,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1583,43 +1592,27 @@
       "device": "Android 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:22",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/nilufer-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 83,
+    "İstanbul": 84,
     "Görükle": 13,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_k8ik",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795121921079
+    },
     {
       "id": "Mobil 📱_İstanbul_693x",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795121801400
-    },
-    {
-      "id": "Android 📱_Görükle_99y1",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795121662524
-    },
-    {
-      "id": "Mobil 📱_İstanbul_8b7m",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795121637352
     }
   ]
 }
