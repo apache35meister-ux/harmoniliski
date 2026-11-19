@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083689695,
   "totalVisits": 25,
-  "totalWaClicks": 13,
+  "totalWaClicks": 14,
   "totalCalls": 0,
   "tClicks": {
     "Açelya": 1,
@@ -21,10 +21,20 @@
     "Hale": 1,
     "hale": 1,
     "Tuba": 1,
-    "tuba": 1
+    "tuba": 1,
+    "Sena": 1,
+    "sena": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:11",
+      "name": "Sena",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:09",
       "name": "VIP Escort",
@@ -356,6 +366,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:11",
+      "name": "Sena",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:09",
       "name": "VIP Escort",
@@ -694,6 +712,13 @@
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Görükle_her8",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795101065469
+    },
     {
       "id": "Masaüstü 💻_Bursa / Nilüfer_bo9g",
       "device": "Masaüstü 💻",
