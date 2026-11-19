@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 43,
+  "totalVisits": 44,
   "totalWaClicks": 65,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:05",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/kestel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:54",
       "name": "Ziyaretçi (Android 📱)",
@@ -717,14 +726,6 @@
     {
       "time": "14:29",
       "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:28",
-      "name": "Lara",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
@@ -1263,6 +1264,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:05",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/kestel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "16:54",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1652,15 +1662,15 @@
   ],
   "cityCounts": {
     "İstanbul": 41,
-    "Bursa": 2
+    "Bursa": 3
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_o911",
+      "id": "Android 📱_Bursa_tkfk",
       "device": "Android 📱",
       "city": "Bursa",
       "page": "/kestel-eskort.html",
-      "lastSeen": 1795096444461
+      "lastSeen": 1795097129913
     }
   ]
 }
