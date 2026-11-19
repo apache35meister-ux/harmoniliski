@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 34,
+  "totalVisits": 35,
   "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/hendek-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:57",
       "name": "Ziyaretçi (Android 📱)",
@@ -628,6 +637,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/hendek-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:57",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -936,9 +954,16 @@
   ],
   "cityCounts": {
     "İstanbul": 22,
-    "Bursa": 12
+    "Bursa": 13
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_9ril",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/hendek-eskort.html",
+      "lastSeen": 1795125522942
+    },
     {
       "id": "Android 📱_Bursa_e9d7",
       "device": "Android 📱",
@@ -952,34 +977,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795125438607
-    },
-    {
-      "id": "Android 📱_Bursa_oh5g",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125312271
-    },
-    {
-      "id": "Android 📱_Bursa_ahch",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125306852
-    },
-    {
-      "id": "Android 📱_Bursa_t7is",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125295786
-    },
-    {
-      "id": "Android 📱_Bursa_mg7j",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/adapazari-eskort.html",
-      "lastSeen": 1795125294480
     }
   ]
 }
