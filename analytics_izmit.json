@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 119,
-  "totalWaClicks": 120,
+  "totalWaClicks": 121,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -75,10 +75,20 @@
     "Şebnem": 1,
     "şebnem": 1,
     "Nihan": 1,
-    "nihan": 1
+    "nihan": 1,
+    "Yeliz": 1,
+    "yeliz": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:08",
+      "name": "Yeliz",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:07",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -755,18 +765,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:02",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:08",
+      "name": "Yeliz",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:06",
       "name": "Gül",
@@ -1397,14 +1406,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:59",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2136,6 +2137,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_9nxe",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795126092092
+    },
+    {
       "id": "iPhone 📱_İstanbul_0xb3",
       "device": "iPhone 📱",
       "city": "İstanbul",
@@ -2162,13 +2170,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795125938577
-    },
-    {
-      "id": "iPhone 📱_İstanbul_r3lz",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795125908408
     }
   ]
 }
