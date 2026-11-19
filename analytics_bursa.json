@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 28,
-  "totalWaClicks": 24,
+  "totalVisits": 29,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -24,8 +24,8 @@
     "su": 1,
     "Dila": 1,
     "dila": 1,
-    "Selin": 4,
-    "selin": 4,
+    "Selin": 5,
+    "selin": 5,
     "Açelya": 2,
     "açelya": 2,
     "Gül": 1,
@@ -33,6 +33,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:53",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:53",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:53",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -480,6 +497,14 @@
   ],
   "callLogs": [
     {
+      "time": "18:53",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "18:39",
       "name": "Selin",
       "city": "Bursa",
@@ -673,6 +698,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:53",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:53",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -927,10 +961,24 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 26,
+    "İstanbul": 27,
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_xset",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795103621553
+    },
+    {
+      "id": "Mobil 📱_İstanbul_vod8",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795103619559
+    },
     {
       "id": "iPhone 📱_İstanbul_for7",
       "device": "iPhone 📱",
