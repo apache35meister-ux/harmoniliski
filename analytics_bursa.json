@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 54,
+  "totalVisits": 55,
   "totalWaClicks": 61,
   "totalCalls": 0,
   "tClicks": {
@@ -57,6 +57,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:14",
       "name": "Rus ESC",
@@ -717,15 +726,6 @@
     },
     {
       "time": "16:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:49",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -1226,6 +1226,15 @@
   ],
   "cityVisits": [
     {
+      "time": "22:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "22:14",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1713,24 +1722,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 47,
+    "İstanbul": 48,
     "Bursa": 6,
     "Türkiye": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_dmt4",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115685893
-    },
-    {
-      "id": "Mobil 📱_İstanbul_dp36",
-      "device": "Mobil 📱",
+      "id": "iPhone 📱_İstanbul_n6b9",
+      "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795115650753
+      "lastSeen": 1795116195659
     }
   ]
 }
