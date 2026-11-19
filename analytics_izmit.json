@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 128,
-  "totalWaClicks": 123,
+  "totalWaClicks": 124,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
     "selin": 21,
-    "Melis": 5,
-    "melis": 5,
+    "Melis": 6,
+    "melis": 6,
     "Begüm": 5,
     "begüm": 5,
     "Damla": 9,
@@ -81,6 +81,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:43",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:42",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -763,17 +771,17 @@
       "device": "Android 📱",
       "page": "/korupark-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:13",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:43",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:39",
       "name": "Damla",
@@ -1404,14 +1412,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:59",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2142,6 +2142,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_uah2",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795128187561
+    },
     {
       "id": "iPhone 📱_İstanbul_krlq",
       "device": "iPhone 📱",
