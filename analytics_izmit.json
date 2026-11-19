@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 16,
-  "totalWaClicks": 21,
+  "totalVisits": 17,
+  "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 3,
-    "selin": 3,
+    "Selin": 4,
+    "selin": 4,
     "Melis": 1,
     "melis": 1,
     "Begüm": 1,
@@ -35,6 +35,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:31",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "14:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:31",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -351,6 +368,14 @@
   "callLogs": [
     {
       "time": "14:31",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "14:31",
       "name": "Anna I Arnavut",
       "city": "Bursa",
       "device": "Android 📱",
@@ -529,6 +554,15 @@
       "type": "👁️ Site Ziyareti"
     },
     {
+      "time": "14:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:29",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -665,10 +699,24 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 15,
+    "İstanbul": 16,
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_zd6k",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795087895489
+    },
+    {
+      "id": "Mobil 📱_İstanbul_ecyt",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795087892216
+    },
     {
       "id": "Mobil 📱_İstanbul_3cei",
       "device": "Mobil 📱",
@@ -731,20 +779,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795087721699
-    },
-    {
-      "id": "Mobil 📱_İstanbul_8jh3",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795087712312
-    },
-    {
-      "id": "Android 📱_Bursa_zy1b",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087708786
     }
   ]
 }
