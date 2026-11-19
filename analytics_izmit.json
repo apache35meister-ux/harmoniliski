@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 18,
-  "totalWaClicks": 26,
+  "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -33,10 +33,20 @@
     "Anna I Arnavut": 1,
     "anna i arnavut": 1,
     "Dila": 1,
-    "dila": 1
+    "dila": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:33",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Dila",
@@ -409,6 +419,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:33",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Dila",
@@ -787,6 +805,13 @@
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_50ke",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795087994686
+    },
     {
       "id": "Android 📱_Bursa_twg0",
       "device": "Android 📱",
