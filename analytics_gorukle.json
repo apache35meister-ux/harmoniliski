@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 74,
+  "totalVisits": 75,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:18",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -724,15 +733,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:17",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -866,6 +866,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:18",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Görükle",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1535,23 +1544,23 @@
   ],
   "cityCounts": {
     "İstanbul": 61,
-    "Görükle": 11,
+    "Görükle": 12,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_o50g",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795119490609
+    },
     {
       "id": "Mobil 📱_İstanbul_4x2w",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795119387588
-    },
-    {
-      "id": "Mobil 📱_İstanbul_8a14",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795119228553
     }
   ]
 }
