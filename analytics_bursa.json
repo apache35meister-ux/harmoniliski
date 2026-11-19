@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 81,
-  "totalWaClicks": 67,
+  "totalWaClicks": 68,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -14,8 +14,8 @@
     "yaren": 4,
     "Damla": 8,
     "damla": 8,
-    "İlayda": 3,
-    "i̇layda": 3,
+    "İlayda": 4,
+    "i̇layda": 4,
     "Serap": 2,
     "serap": 2,
     "Nihan": 3,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:58",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:58",
       "name": "İlayda",
@@ -737,17 +745,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:06",
-      "name": "Tuba",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:58",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:58",
       "name": "İlayda",
@@ -2013,6 +2021,13 @@
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_7fon",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795121922914
+    },
     {
       "id": "Android 📱_Bursa_mb5j",
       "device": "Android 📱",
