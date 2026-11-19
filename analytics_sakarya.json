@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 134,
-  "totalWaClicks": 59,
+  "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 6,
@@ -49,10 +49,20 @@
     "Gamze": 1,
     "gamze": 1,
     "Ayşen": 1,
-    "ayşen": 1
+    "ayşen": 1,
+    "Buket": 1,
+    "buket": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:49",
+      "name": "Buket",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:48",
       "name": "Ayşen",
@@ -735,18 +745,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:31",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/konak-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "07:49",
+      "name": "Buket",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:48",
       "name": "Ayşen",
@@ -1948,6 +1957,13 @@
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_eusi",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795063771102
+    },
     {
       "id": "Android 📱_Bursa_3r86",
       "device": "Android 📱",
