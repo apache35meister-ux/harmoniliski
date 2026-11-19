@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 74,
-  "totalWaClicks": 92,
+  "totalVisits": 75,
+  "totalWaClicks": 93,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 16,
@@ -71,10 +71,29 @@
     "Nergis": 1,
     "nergis": 1,
     "Tuba": 1,
-    "tuba": 1
+    "tuba": 1,
+    "Şebnem": 1,
+    "şebnem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:04",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "22:04",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/umuttepe-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:04",
       "name": "Ayşen",
@@ -739,25 +758,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:18",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:17",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:04",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:04",
       "name": "Ayşen",
@@ -1389,17 +1400,18 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:28",
-      "name": "Sena",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:04",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/umuttepe-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:02",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2069,9 +2081,23 @@
   ],
   "cityCounts": {
     "İstanbul": 67,
-    "Bursa": 7
+    "Bursa": 8
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_ta16",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795115094939
+    },
+    {
+      "id": "iPhone 📱_Bursa_wvxx",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/umuttepe-eskort.html",
+      "lastSeen": 1795115094846
+    },
     {
       "id": "iPhone 📱_Bursa_k3tg",
       "device": "iPhone 📱",
