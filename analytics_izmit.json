@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 47,
+  "totalVisits": 48,
   "totalWaClicks": 68,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:45",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:40",
       "name": "İzel",
@@ -732,14 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:31",
-      "name": "Anna I Arnavut",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1290,6 +1291,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:45",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1714,23 +1724,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 44,
+    "İstanbul": 45,
     "Bursa": 3
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_28m6",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795099206601
-    },
-    {
-      "id": "Mobil 📱_İstanbul_x64k",
-      "device": "Mobil 📱",
+      "id": "Masaüstü 💻_İstanbul_gsdq",
+      "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795099187426
+      "lastSeen": 1795099501409
     }
   ]
 }
