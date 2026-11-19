@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 38,
-  "totalWaClicks": 60,
+  "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 12,
@@ -16,8 +16,8 @@
     "eylül": 6,
     "Hale": 4,
     "hale": 4,
-    "Ayşen": 1,
-    "ayşen": 1,
+    "Ayşen": 4,
+    "ayşen": 4,
     "Sena": 1,
     "sena": 1,
     "Melisa": 2,
@@ -64,10 +64,35 @@
     "gül": 2,
     "1790000000321": 2,
     "Sinem": 4,
-    "sinem": 4
+    "sinem": 4,
+    "1790000000323": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:56",
+      "name": "Ayşen",
+      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:56",
+      "name": "Ayşen",
+      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:56",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:56",
       "name": "Damla",
@@ -710,34 +735,33 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:26",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:26",
-      "name": "Hale",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:56",
+      "name": "Ayşen",
+      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:56",
+      "name": "Ayşen",
+      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
+      "device": "Mobil 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "15:56",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:56",
       "name": "Damla",
@@ -1568,6 +1592,27 @@
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmit / Yürüyüş Yolu & Altıparmak_xf1y",
+      "device": "Mobil 📱",
+      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795093008575
+    },
+    {
+      "id": "Mobil 📱_İzmit / Yürüyüş Yolu & Altıparmak_aetf",
+      "device": "Mobil 📱",
+      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795093008572
+    },
+    {
+      "id": "iPhone 📱_Bursa_c470",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795093008572
+    },
     {
       "id": "iPhone 📱_Bursa_tu9r",
       "device": "iPhone 📱",
