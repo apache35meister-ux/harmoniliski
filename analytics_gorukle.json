@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 99,
+  "totalVisits": 100,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:00",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,14 +741,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:09",
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -873,6 +874,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "00:00",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1583,36 +1593,27 @@
       "device": "Android 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "17:01",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/heykel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 84,
+    "İstanbul": 85,
     "Görükle": 13,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_ta1t",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795122000889
+    },
     {
       "id": "Mobil 📱_İstanbul_k8ik",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795121921079
-    },
-    {
-      "id": "Mobil 📱_İstanbul_693x",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795121801400
     }
   ]
 }
