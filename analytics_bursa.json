@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 93,
+  "totalVisits": 94,
   "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:07",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/inegol-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:07",
       "name": "Rus ESC",
@@ -719,15 +728,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1021,6 +1021,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:07",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/inegol-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:05",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1731,24 +1740,22 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:05",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 89,
-    "Bursa": 2,
+    "Bursa": 3,
     "Istanbul": 1,
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_2rg7",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/inegol-eskort.html",
+      "lastSeen": 1795064844256
+    },
     {
       "id": "Android 📱_Bursa_2fpe",
       "device": "Android 📱",
