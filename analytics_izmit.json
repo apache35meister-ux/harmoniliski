@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 72,
+  "totalVisits": 73,
   "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:59",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:43",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -747,14 +756,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:00",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Masaüstü 💻",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1400,6 +1401,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:59",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:43",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2051,22 +2061,15 @@
   ],
   "cityCounts": {
     "İstanbul": 66,
-    "Bursa": 6
+    "Bursa": 7
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_ve3j",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795113788347
-    },
-    {
-      "id": "Mobil 📱_İstanbul_6307",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795113729931
+      "id": "Android 📱_Bursa_w5xn",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795114794467
     }
   ]
 }
