@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018321706,
-  "totalVisits": 133,
+  "totalVisits": 134,
   "totalWaClicks": 61,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:15",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:05",
       "name": "Tuba",
@@ -722,15 +731,6 @@
       "device": "Android 📱",
       "page": "/bursa-nilufer-ozluce-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:49",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1224,6 +1224,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:15",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:04",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1934,36 +1943,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 121,
+    "İstanbul": 122,
     "Bursa": 11,
     "Kane": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_jjok",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795082746264
-    },
-    {
-      "id": "iPhone 📱_İstanbul_93x3",
-      "device": "iPhone 📱",
+      "id": "Mobil 📱_İstanbul_468x",
+      "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795082687345
+      "lastSeen": 1795083341315
     }
   ]
 }
