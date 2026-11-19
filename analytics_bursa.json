@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 70,
+  "totalVisits": 71,
   "totalWaClicks": 62,
   "totalCalls": 0,
   "tClicks": {
@@ -57,6 +57,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:18",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/fsm-bulvari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:17",
       "name": "Serap",
@@ -729,15 +738,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1239,6 +1239,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:18",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/fsm-bulvari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:16",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1872,10 +1881,17 @@
   ],
   "cityCounts": {
     "İstanbul": 63,
-    "Bursa": 6,
+    "Bursa": 7,
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_5wx9",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/fsm-bulvari-eskort.html",
+      "lastSeen": 1795119486305
+    },
     {
       "id": "iPhone 📱_Bursa_1094",
       "device": "iPhone 📱",
