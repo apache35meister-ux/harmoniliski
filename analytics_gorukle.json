@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 159,
+  "totalVisits": 160,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:40",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "23:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:23",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -880,6 +880,15 @@
   ],
   "cityVisits": [
     {
+      "time": "01:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "01:40",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1589,36 +1598,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 139,
+    "İstanbul": 140,
     "Görükle": 18,
     "Türkiye": 2
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_6dq0",
+      "id": "Mobil 📱_İstanbul_pj27",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795128051651
-    },
-    {
-      "id": "Mobil 📱_İstanbul_n8mf",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795127917357
+      "lastSeen": 1795128291803
     }
   ]
 }
