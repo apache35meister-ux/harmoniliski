@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 42,
-  "totalWaClicks": 50,
+  "totalWaClicks": 51,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -18,8 +18,8 @@
     "i̇layda": 2,
     "Serap": 1,
     "serap": 1,
-    "Nihan": 2,
-    "nihan": 2,
+    "Nihan": 3,
+    "nihan": 3,
     "Su": 1,
     "su": 1,
     "Dila": 2,
@@ -51,6 +51,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:52",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:51",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -718,17 +726,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:10",
-      "name": "Serap",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:52",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:49",
       "name": "Yaren",
@@ -1517,6 +1525,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_zd8m",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795110736050
+    },
+    {
       "id": "Mobil 📱_İstanbul_msm8",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -1543,13 +1558,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795110568969
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ody4",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795110509354
     }
   ]
 }
