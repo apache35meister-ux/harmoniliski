@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 103,
+  "totalVisits": 104,
   "totalWaClicks": 106,
   "totalCalls": 0,
   "tClicks": {
@@ -79,6 +79,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:55",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -758,14 +767,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:23",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1411,6 +1412,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:55",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2121,22 +2131,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:43",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 90,
-    "Bursa": 13
+    "Bursa": 14
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_4edt",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/yahya-kaptan-eskort.html",
+      "lastSeen": 1795121719635
+    },
     {
       "id": "Mobil 📱_İstanbul_9ntq",
       "device": "Mobil 📱",
