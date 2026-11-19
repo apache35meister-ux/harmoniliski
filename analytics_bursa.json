@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 5,
-  "totalWaClicks": 5,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -13,10 +13,20 @@
     "Yaren": 1,
     "yaren": 1,
     "Damla": 1,
-    "damla": 1
+    "damla": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:09",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:09",
       "name": "Damla",
@@ -104,6 +114,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:09",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:09",
       "name": "Damla",
@@ -197,6 +215,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_mwtm",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795086596507
+    },
+    {
       "id": "Android 📱_Bursa_pyji",
       "device": "Android 📱",
       "city": "Bursa",
@@ -223,13 +248,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795086484473
-    },
-    {
-      "id": "iPhone 📱_İstanbul_ceyg",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795086383967
     }
   ]
 }
