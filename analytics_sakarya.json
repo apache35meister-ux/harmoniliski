@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 132,
-  "totalWaClicks": 57,
+  "totalWaClicks": 58,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 6,
@@ -45,10 +45,20 @@
     "Şebnem": 2,
     "şebnem": 2,
     "Rüya": 1,
-    "rüya": 1
+    "rüya": 1,
+    "Gamze": 1,
+    "gamze": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:12",
+      "name": "Gamze",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -733,18 +743,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:18",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:12",
+      "name": "Gamze",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:11",
       "name": "Rüya",
@@ -1930,6 +1939,13 @@
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_jumz",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795057922489
+    },
     {
       "id": "Mobil 📱_İstanbul_5djh",
       "device": "Mobil 📱",
