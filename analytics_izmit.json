@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 130,
-  "totalWaClicks": 132,
+  "totalWaClicks": 133,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -22,8 +22,8 @@
     "sena": 1,
     "Melisa": 5,
     "melisa": 5,
-    "Lara": 2,
-    "lara": 2,
+    "Lara": 3,
+    "lara": 3,
     "Esra": 1,
     "esra": 1,
     "İzel": 3,
@@ -82,6 +82,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:47",
+      "name": "Lara",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:45",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -756,18 +764,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:47",
+      "name": "Lara",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:44",
       "name": "Dila",
@@ -1398,14 +1405,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:17",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2137,81 +2136,18 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_fi2z",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795128434850
+    },
+    {
       "id": "iPhone 📱_Bursa_o7ed",
       "device": "iPhone 📱",
       "city": "Bursa",
       "page": "/izmit-merkez-eskort.html",
       "lastSeen": 1795128357607
-    },
-    {
-      "id": "iPhone 📱_Bursa_ha7m",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128252013
-    },
-    {
-      "id": "iPhone 📱_İstanbul_rkxg",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795128246360
-    },
-    {
-      "id": "iPhone 📱_Bursa_pkmy",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128243733
-    },
-    {
-      "id": "iPhone 📱_Bursa_nm8m",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128235967
-    },
-    {
-      "id": "iPhone 📱_Bursa_r97a",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128224659
-    },
-    {
-      "id": "iPhone 📱_Bursa_m8q7",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128200080
-    },
-    {
-      "id": "iPhone 📱_Bursa_5etp",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128195866
-    },
-    {
-      "id": "Mobil 📱_İzmit / Bekirpaşa_qskh",
-      "device": "Mobil 📱",
-      "city": "İzmit / Bekirpaşa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128187842
-    },
-    {
-      "id": "Mobil 📱_İzmit / Bekirpaşa_4mum",
-      "device": "Mobil 📱",
-      "city": "İzmit / Bekirpaşa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128187841
-    },
-    {
-      "id": "iPhone 📱_Bursa_uah2",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795128187561
     }
   ]
 }
