@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 43,
-  "totalWaClicks": 51,
+  "totalWaClicks": 52,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -47,10 +47,20 @@
     "Lara": 1,
     "lara": 1,
     "Eylül": 1,
-    "eylül": 1
+    "eylül": 1,
+    "Nehir": 1,
+    "nehir": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:53",
+      "name": "Nehir",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:52",
       "name": "Ziyaretçi (Android 📱)",
@@ -718,18 +728,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:53",
+      "name": "Nehir",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:52",
       "name": "Nihan",
@@ -1535,6 +1544,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_9z9b",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795110837239
+    },
+    {
       "id": "Android 📱_Bursa_0lhj",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1554,20 +1570,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795110672426
-    },
-    {
-      "id": "Android 📱_Bursa_und9",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795110587909
-    },
-    {
-      "id": "Android 📱_Bursa_lfmh",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/osmangazi-eskort.html",
-      "lastSeen": 1795110585470
     }
   ]
 }
