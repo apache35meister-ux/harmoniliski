@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 85,
+  "totalVisits": 86,
   "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:28",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -717,15 +726,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -931,6 +931,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:28",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1641,24 +1650,22 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:37",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 81,
+    "İstanbul": 82,
     "Bursa": 2,
     "Istanbul": 1,
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_e3xg",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795062505708
+    },
     {
       "id": "Mobil 📱_İstanbul_xvz3",
       "device": "Mobil 📱",
@@ -1686,27 +1693,6 @@
       "city": "Kane",
       "page": "Ana Sayfa",
       "lastSeen": 1795062334445
-    },
-    {
-      "id": "iPhone 📱_İstanbul_4h4y",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795062309317
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_egbz",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795062304960
-    },
-    {
-      "id": "iPhone 📱_Bursa_px2w",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795062270070
     }
   ]
 }
