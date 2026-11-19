@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 47,
-  "totalWaClicks": 67,
+  "totalWaClicks": 68,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 13,
@@ -26,8 +26,8 @@
     "lara": 2,
     "Esra": 1,
     "esra": 1,
-    "İzel": 1,
-    "i̇zel": 1,
+    "İzel": 2,
+    "i̇zel": 2,
     "Gülce": 1,
     "gülce": 1,
     "Anna I Arnavut": 1,
@@ -69,6 +69,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:40",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,17 +740,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:30",
-      "name": "Gülce",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "17:40",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:06",
       "name": "Selin",
@@ -1710,6 +1718,13 @@
     "Bursa": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_28m6",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795099206601
+    },
     {
       "id": "Mobil 📱_İstanbul_x64k",
       "device": "Mobil 📱",
