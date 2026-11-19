@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 17,
+  "totalVisits": 18,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -31,6 +31,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:24",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -461,6 +470,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:24",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -615,16 +633,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 15,
+    "İstanbul": 16,
     "Bursa": 2
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_kybi",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/bursa-eskort-fiyatlari-ve-rehberi.html",
-      "lastSeen": 1795091095061
+      "id": "Mobil 📱_İstanbul_wiik",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795091908191
     }
   ]
 }
