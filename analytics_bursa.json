@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 11,
+  "totalVisits": 12,
   "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:27",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -323,6 +332,15 @@
   ],
   "cityVisits": [
     {
+      "time": "14:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:27",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -423,36 +441,22 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 11
+    "İstanbul": 12
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_s00g",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795087831826
+    },
     {
       "id": "Mobil 📱_İstanbul_u1v9",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795087657045
-    },
-    {
-      "id": "Android 📱_Bursa_59ss",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087555436
-    },
-    {
-      "id": "Android 📱_Bursa_83ah",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087531022
-    },
-    {
-      "id": "Mobil 📱_İstanbul_868c",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795087528011
     }
   ]
 }
