@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 188,
+  "totalVisits": 189,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -739,14 +748,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:47",
-      "name": "Şebnem",
-      "city": "Görükle",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1120,6 +1121,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1830,42 +1840,19 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 169,
+    "İstanbul": 170,
     "Görükle": 19
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_gbsr",
+      "id": "Mobil 📱_İstanbul_no9i",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795050492185
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ugic",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795050382647
-    },
-    {
-      "id": "Android 📱_Görükle_91ct",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/karsiyaka-mavisehir-vip-eskort-rehberi.",
-      "lastSeen": 1795050328657
+      "lastSeen": 1795050755977
     }
   ]
 }
