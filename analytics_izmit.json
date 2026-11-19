@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 74,
-  "totalWaClicks": 88,
+  "totalWaClicks": 89,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 16,
     "selin": 16,
     "Melis": 4,
     "melis": 4,
-    "Begüm": 2,
-    "begüm": 2,
+    "Begüm": 3,
+    "begüm": 3,
     "Damla": 5,
     "damla": 5,
     "Eylül": 8,
@@ -73,6 +73,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:03",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:02",
       "name": "İlayda",
@@ -746,18 +754,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:03",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:02",
       "name": "İlayda",
@@ -1388,14 +1395,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:26",
-      "name": "Hale",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2073,6 +2072,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_hk1v",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795114998666
+    },
+    {
       "id": "iPhone 📱_Bursa_ipdv",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -2092,20 +2098,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795114920506
-    },
-    {
-      "id": "Android 📱_Bursa_x0fu",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795114797820
-    },
-    {
-      "id": "Android 📱_Bursa_w5xn",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795114794467
     }
   ]
 }
