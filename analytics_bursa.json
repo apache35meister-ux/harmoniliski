@@ -1,12 +1,12 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 113,
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
-    "Selin": 13,
-    "selin": 13,
+    "Selin": 14,
+    "selin": 14,
     "Nergis": 1,
     "nergis": 1,
     "VIP Escort": 3,
@@ -43,6 +43,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:34",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:33",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -714,18 +722,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:34",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:56",
       "name": "Damla",
@@ -1904,6 +1911,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_v5fx",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795080846073
+    },
     {
       "id": "iPhone 📱_İstanbul_aks2",
       "device": "iPhone 📱",
