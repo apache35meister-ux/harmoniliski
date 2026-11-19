@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 121,
-  "totalWaClicks": 50,
+  "totalWaClicks": 51,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 12,
-    "selin": 12,
+    "Selin": 13,
+    "selin": 13,
     "Melis": 4,
     "melis": 4,
     "İzel": 2,
@@ -46,6 +46,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:09",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:09",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -725,17 +733,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:52",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:09",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:08",
       "name": "Damla",
@@ -1865,6 +1873,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_zbg2",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795075791205
+    },
     {
       "id": "Mobil 📱_İstanbul_ulxb",
       "device": "Mobil 📱",
