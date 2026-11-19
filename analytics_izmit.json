@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 15,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 3,
@@ -27,10 +27,20 @@
     "Esra": 1,
     "esra": 1,
     "İzel": 1,
-    "i̇zel": 1
+    "i̇zel": 1,
+    "Gülce": 1,
+    "gülce": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:30",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:30",
       "name": "İzel",
@@ -320,6 +330,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:30",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:30",
       "name": "İzel",
@@ -615,6 +633,13 @@
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_dtmy",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795087853075
+    },
     {
       "id": "Android 📱_Bursa_3az5",
       "device": "Android 📱",
