@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018347666,
-  "totalVisits": 119,
+  "totalVisits": 120,
   "totalWaClicks": 64,
   "totalCalls": 0,
   "tClicks": {
@@ -51,6 +51,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:14",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:13",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -721,14 +730,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:24",
-      "name": "Anna I Arnavut",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1246,6 +1247,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:14",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:13",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1956,24 +1966,22 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 113,
+    "İstanbul": 114,
     "Bursa": 4,
     "Istanbul": 1,
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_12sd",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795083253673
+    },
     {
       "id": "iPhone 📱_Bursa_oaua",
       "device": "iPhone 📱",
