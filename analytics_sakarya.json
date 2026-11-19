@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 25,
+  "totalVisits": 26,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bakirkoy-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:55",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -359,6 +368,15 @@
   ],
   "cityVisits": [
     {
+      "time": "22:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bakirkoy-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "22:55",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
@@ -586,36 +604,22 @@
   ],
   "cityCounts": {
     "İstanbul": 17,
-    "Bursa": 8
+    "Bursa": 9
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_46cl",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/bakirkoy-eskort.html",
+      "lastSeen": 1795118289396
+    },
     {
       "id": "Masaüstü 💻_Bursa_cnbq",
       "device": "Masaüstü 💻",
       "city": "Bursa",
       "page": "/cark-caddesi-eskort.html",
       "lastSeen": 1795118136354
-    },
-    {
-      "id": "iPhone 📱_Bursa_i6wb",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795118102426
-    },
-    {
-      "id": "iPhone 📱_Bursa_my4z",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795118086102
-    },
-    {
-      "id": "iPhone 📱_Bursa_37ga",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/antalya-lara-sirinyali-vip-eskort.html",
-      "lastSeen": 1795118079288
     }
   ]
 }
