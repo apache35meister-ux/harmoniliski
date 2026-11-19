@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 7,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -12,8 +12,8 @@
     "şebnem": 1,
     "Yaren": 2,
     "yaren": 2,
-    "Damla": 1,
-    "damla": 1,
+    "Damla": 2,
+    "damla": 2,
     "İlayda": 1,
     "i̇layda": 1,
     "Serap": 1,
@@ -21,6 +21,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:11",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -150,6 +158,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:11",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:10",
       "name": "Yaren",
@@ -285,6 +301,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_3glk",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795086714167
+    },
+    {
       "id": "Mobil 📱_İstanbul_01av",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -325,20 +348,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795086556754
-    },
-    {
-      "id": "Android 📱_Bursa_5esx",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795086525564
-    },
-    {
-      "id": "Mobil 📱_İstanbul_fi82",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795086503038
     }
   ]
 }
