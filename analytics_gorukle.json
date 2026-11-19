@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083689695,
   "totalVisits": 19,
-  "totalWaClicks": 9,
+  "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
     "Açelya": 1,
@@ -19,10 +19,20 @@
     "Gül": 1,
     "gül": 1,
     "Hale": 1,
-    "hale": 1
+    "hale": 1,
+    "Tuba": 1,
+    "tuba": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:24",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:23",
       "name": "Hale",
@@ -268,6 +278,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:24",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:23",
       "name": "Hale",
@@ -520,6 +538,13 @@
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_c7fk",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795094660608
+    },
     {
       "id": "Android 📱_Görükle_4xh7",
       "device": "Android 📱",
