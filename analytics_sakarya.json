@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 35,
+  "totalVisits": 36,
   "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:25",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:01",
       "name": "Sinem",
@@ -705,6 +714,15 @@
   ],
   "cityVisits": [
     {
+      "time": "01:25",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:58",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1021,44 +1039,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 22,
+    "İstanbul": 23,
     "Bursa": 13
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_aooj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125670898
-    },
-    {
-      "id": "Android 📱_Bursa_yq4n",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125618606
-    },
-    {
-      "id": "Android 📱_Bursa_5ioj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125536225
-    },
-    {
-      "id": "Android 📱_Bursa_j1kc",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125524031
-    },
-    {
-      "id": "Android 📱_Bursa_9ril",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/hendek-eskort.html",
-      "lastSeen": 1795125522942
+      "id": "iPhone 📱_İstanbul_6it2",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795127128075
     }
   ]
 }
