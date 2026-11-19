@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 1,
+  "totalVisits": 2,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:41",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:33",
       "name": "Melis",
@@ -73,6 +82,15 @@
   ],
   "cityVisits": [
     {
+      "time": "13:41",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "13:31",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -83,36 +101,15 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 1
+    "İstanbul": 2
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_be7q",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795084387550
-    },
-    {
-      "id": "Android 📱_Bursa_w85d",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795084314165
-    },
-    {
-      "id": "Android 📱_Bursa_j74p",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795084290997
-    },
-    {
-      "id": "Mobil 📱_İstanbul_7bjw",
-      "device": "Mobil 📱",
+      "id": "Masaüstü 💻_İstanbul_9vzo",
+      "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795084275171
+      "lastSeen": 1795084917804
     }
   ]
 }
