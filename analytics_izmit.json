@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 129,
-  "totalWaClicks": 131,
+  "totalWaClicks": 132,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -32,8 +32,8 @@
     "gülce": 1,
     "Anna I Arnavut": 1,
     "anna i arnavut": 1,
-    "Dila": 1,
-    "dila": 1,
+    "Dila": 2,
+    "dila": 2,
     "İlayda": 2,
     "i̇layda": 2,
     "Su": 2,
@@ -82,6 +82,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:44",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:44",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -757,18 +765,17 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:34",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:44",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:44",
       "name": "Şebnem",
@@ -1399,14 +1406,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:16",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2137,6 +2136,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_ha7m",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795128252013
+    },
     {
       "id": "iPhone 📱_İstanbul_rkxg",
       "device": "iPhone 📱",
