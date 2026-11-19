@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 75,
+  "totalVisits": 76,
   "totalWaClicks": 93,
   "totalCalls": 0,
   "tClicks": {
@@ -77,6 +77,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:08",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:04",
       "name": "Şebnem",
@@ -750,14 +759,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:18",
-      "name": "Hale",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1403,6 +1404,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:08",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:04",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2080,72 +2090,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 67,
+    "İstanbul": 68,
     "Bursa": 8
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_ta16",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115094939
-    },
-    {
-      "id": "iPhone 📱_Bursa_wvxx",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/umuttepe-eskort.html",
-      "lastSeen": 1795115094846
-    },
-    {
-      "id": "iPhone 📱_Bursa_k3tg",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115086217
-    },
-    {
-      "id": "iPhone 📱_Bursa_yb5v",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115058626
-    },
-    {
-      "id": "iPhone 📱_Bursa_j400",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115029648
-    },
-    {
-      "id": "iPhone 📱_Bursa_hk1v",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795114998666
-    },
-    {
-      "id": "iPhone 📱_Bursa_ipdv",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795114962213
-    },
-    {
-      "id": "iPhone 📱_Bursa_rbkg",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795114940406
-    },
-    {
-      "id": "iPhone 📱_İstanbul_fw83",
+      "id": "iPhone 📱_İstanbul_mnh8",
       "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795114920506
+      "lastSeen": 1795115292838
     }
   ]
 }
