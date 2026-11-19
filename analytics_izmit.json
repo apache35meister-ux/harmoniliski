@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018321706,
   "totalVisits": 127,
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 14,
@@ -34,8 +34,8 @@
     "şebnem": 2,
     "Melike": 2,
     "melike": 2,
-    "Melisa": 2,
-    "melisa": 2,
+    "Melisa": 3,
+    "melisa": 3,
     "Pınar": 1,
     "pınar": 1,
     "Nihan": 2,
@@ -48,6 +48,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:17",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:17",
       "name": "Ziyaretçi (Android 📱)",
@@ -721,18 +729,17 @@
       "device": "Android 📱",
       "page": "/bekirpasa-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:17",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:12",
       "name": "Nihan",
@@ -1910,6 +1917,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_30n5",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795079851779
+    },
     {
       "id": "Android 📱_Bursa_e730",
       "device": "Android 📱",
