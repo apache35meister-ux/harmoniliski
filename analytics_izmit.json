@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 29,
-  "totalWaClicks": 44,
+  "totalWaClicks": 45,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 7,
@@ -20,8 +20,8 @@
     "ayşen": 1,
     "Sena": 1,
     "sena": 1,
-    "Melisa": 1,
-    "melisa": 1,
+    "Melisa": 2,
+    "melisa": 2,
     "Lara": 2,
     "lara": 2,
     "Esra": 1,
@@ -65,6 +65,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:00",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:59",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -680,6 +688,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "15:00",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:59",
       "name": "Gül",
@@ -1302,6 +1318,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_fw8e",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795089603530
+    },
+    {
       "id": "Masaüstü 💻_İstanbul_xtn0",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
@@ -1363,13 +1386,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795089423697
-    },
-    {
-      "id": "Mobil 📱_İstanbul_oeee",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795089418281
     }
   ]
 }
