@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 76,
-  "totalWaClicks": 63,
+  "totalWaClicks": 64,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -46,8 +46,8 @@
     "sena": 1,
     "Lara": 1,
     "lara": 1,
-    "Eylül": 1,
-    "eylül": 1,
+    "Eylül": 2,
+    "eylül": 2,
     "Nehir": 1,
     "nehir": 1,
     "Bursa Osmangazi VIP Escort Vitrin Profilleri": 1,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:28",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -733,17 +741,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:05",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:28",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:18",
       "name": "Melis",
@@ -1942,6 +1950,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_qlqg",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795120096248
+    },
+    {
       "id": "iPhone 📱_İstanbul_mzz9",
       "device": "iPhone 📱",
       "city": "İstanbul",
@@ -1954,13 +1969,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795120017421
-    },
-    {
-      "id": "Mobil 📱_İstanbul_52jn",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795119904734
     }
   ]
 }
