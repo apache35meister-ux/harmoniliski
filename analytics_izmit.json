@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 17,
-  "totalWaClicks": 23,
+  "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 4,
@@ -14,8 +14,8 @@
     "damla": 2,
     "Eylül": 4,
     "eylül": 4,
-    "Hale": 1,
-    "hale": 1,
+    "Hale": 2,
+    "hale": 2,
     "Ayşen": 1,
     "ayşen": 1,
     "Sena": 1,
@@ -35,6 +35,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:32",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:31",
       "name": "Begüm",
@@ -374,6 +382,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:32",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:31",
       "name": "Begüm",
@@ -720,6 +736,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_tgg4",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795087938547
+    },
+    {
       "id": "Android 📱_Bursa_nex4",
       "device": "Android 📱",
       "city": "Bursa",
@@ -781,20 +804,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795087759955
-    },
-    {
-      "id": "Android 📱_Bursa_n6mt",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087749720
-    },
-    {
-      "id": "Android 📱_Bursa_drqv",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795087736868
     }
   ]
 }
