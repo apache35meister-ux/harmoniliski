@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 21,
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 5,
@@ -47,10 +47,20 @@
     "Maya": 1,
     "maya": 1,
     "Julia": 1,
-    "julia": 1
+    "julia": 1,
+    "Derya": 1,
+    "derya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:38",
+      "name": "Derya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:38",
       "name": "Julia",
@@ -514,6 +524,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "14:38",
+      "name": "Derya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:38",
       "name": "Julia",
@@ -984,6 +1002,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_tbcu",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795088336499
+    },
+    {
       "id": "Android 📱_Bursa_1y27",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1017,20 +1042,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795088170253
-    },
-    {
-      "id": "Mobil 📱_İstanbul_jscg",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795088140696
-    },
-    {
-      "id": "Android 📱_Bursa_ldv4",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795088134692
     }
   ]
 }
