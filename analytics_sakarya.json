@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 124,
+  "totalVisits": 125,
   "totalWaClicks": 51,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:44",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gursu-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:43",
       "name": "Şebnem",
@@ -734,15 +743,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:32",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1156,6 +1156,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:44",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gursu-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:42",
       "name": "Ziyaretçi (Android 📱)",
@@ -1866,23 +1875,21 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:30",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 102,
-    "Bursa": 21,
+    "Bursa": 22,
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_q0rc",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/gursu-eskort.html",
+      "lastSeen": 1795052643451
+    },
     {
       "id": "Android 📱_Bursa_ln0g",
       "device": "Android 📱",
