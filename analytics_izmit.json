@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 39,
+  "totalVisits": 40,
   "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:06",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:57",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -727,15 +736,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1246,6 +1246,15 @@
   ],
   "cityVisits": [
     {
+      "time": "16:06",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:57",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -1598,58 +1607,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 38,
+    "İstanbul": 39,
     "Bursa": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_tgwu",
-      "device": "iPhone 📱",
+      "id": "Masaüstü 💻_İstanbul_3hjf",
+      "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795093054237
-    },
-    {
-      "id": "Mobil 📱_İzmit / Yürüyüş Yolu & Altıparmak_xf1y",
-      "device": "Mobil 📱",
-      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795093008575
-    },
-    {
-      "id": "Mobil 📱_İzmit / Yürüyüş Yolu & Altıparmak_aetf",
-      "device": "Mobil 📱",
-      "city": "İzmit / Yürüyüş Yolu & Altıparmak",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795093008572
-    },
-    {
-      "id": "iPhone 📱_Bursa_c470",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795093008572
-    },
-    {
-      "id": "iPhone 📱_Bursa_tu9r",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795092964638
-    },
-    {
-      "id": "iPhone 📱_Bursa_3p3t",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795092957427
-    },
-    {
-      "id": "iPhone 📱_İstanbul_665b",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795092939484
+      "lastSeen": 1795093598701
     }
   ]
 }
