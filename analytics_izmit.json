@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 97,
+  "totalVisits": 98,
   "totalWaClicks": 103,
   "totalCalls": 0,
   "tClicks": {
@@ -77,6 +77,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:13",
       "name": "Eylül",
@@ -754,15 +763,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1408,6 +1408,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2118,22 +2127,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:32",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 85,
+    "İstanbul": 86,
     "Bursa": 12
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_8drh",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795119228961
+    },
     {
       "id": "Android 📱_Bursa_l9vd",
       "device": "Android 📱",
@@ -2154,13 +2161,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795119137981
-    },
-    {
-      "id": "Android 📱_Bursa_i19k",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795119004196
     }
   ]
 }
