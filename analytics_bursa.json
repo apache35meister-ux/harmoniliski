@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 107,
-  "totalWaClicks": 48,
+  "totalWaClicks": 49,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -28,8 +28,8 @@
     "anna i arnavut": 1,
     "Kumsal": 1,
     "kumsal": 1,
-    "Damla": 3,
-    "damla": 3,
+    "Damla": 4,
+    "damla": 4,
     "Eylül": 4,
     "eylül": 4,
     "Maya": 1,
@@ -39,6 +39,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:53",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -713,17 +721,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:17",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:53",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:52",
       "name": "Selin",
@@ -1838,6 +1846,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_vh4r",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795078388818
+    },
     {
       "id": "Masaüstü 💻_İstanbul_blnu",
       "device": "Masaüstü 💻",
