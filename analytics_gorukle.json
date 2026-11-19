@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 146,
+  "totalVisits": 147,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:03",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -880,6 +880,15 @@
   ],
   "cityVisits": [
     {
+      "time": "01:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "01:16",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1589,43 +1598,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:03",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 128,
+    "İstanbul": 129,
     "Görükle": 16,
     "Türkiye": 2
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_d469",
+      "id": "Mobil 📱_İstanbul_08xn",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795126591153
-    },
-    {
-      "id": "Mobil 📱_İstanbul_zi8v",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795126475988
-    },
-    {
-      "id": "Mobil 📱_İstanbul_9svs",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795126411481
+      "lastSeen": 1795126891684
     }
   ]
 }
