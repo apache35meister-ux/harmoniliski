@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 128,
-  "totalWaClicks": 129,
+  "totalWaClicks": 130,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -72,8 +72,8 @@
     "nergis": 2,
     "Tuba": 1,
     "tuba": 1,
-    "Şebnem": 1,
-    "şebnem": 1,
+    "Şebnem": 2,
+    "şebnem": 2,
     "Nihan": 2,
     "nihan": 2,
     "Yeliz": 1,
@@ -82,6 +82,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:43",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:43",
       "name": "Nihan",
@@ -759,18 +767,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:43",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:43",
       "name": "Nihan",
@@ -1401,14 +1408,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:00",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2140,6 +2139,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_nm8m",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795128235967
+    },
+    {
       "id": "iPhone 📱_Bursa_r97a",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -2187,13 +2193,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795128157486
-    },
-    {
-      "id": "iPhone 📱_İstanbul_umbo",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795128052606
     }
   ]
 }
