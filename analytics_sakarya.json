@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 142,
-  "totalWaClicks": 68,
+  "totalWaClicks": 69,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 7,
@@ -48,8 +48,8 @@
     "rüya": 1,
     "Gamze": 1,
     "gamze": 1,
-    "Ayşen": 1,
-    "ayşen": 1,
+    "Ayşen": 2,
+    "ayşen": 2,
     "Buket": 1,
     "buket": 1,
     "Nehir": 1,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:22",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:21",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,18 +738,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:22",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:21",
       "name": "Eylül",
@@ -2016,6 +2023,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_olfn",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795076544001
+    },
+    {
       "id": "Mobil 📱_İstanbul_gnpc",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -2063,20 +2077,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795076406587
-    },
-    {
-      "id": "Android 📱_Bursa_7iqd",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795076346529
-    },
-    {
-      "id": "Android 📱_Bursa_9hbn",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/geyve-eskort.html",
-      "lastSeen": 1795076346139
     }
   ]
 }
