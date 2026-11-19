@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 40,
+  "totalVisits": 41,
   "totalWaClicks": 49,
   "totalCalls": 0,
   "tClicks": {
@@ -51,6 +51,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:49",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/osmangazi-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:49",
       "name": "Hale",
@@ -716,14 +725,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:09",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -1123,6 +1124,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:49",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/osmangazi-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:48",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1485,10 +1495,17 @@
   ],
   "cityCounts": {
     "İstanbul": 36,
-    "Bursa": 3,
+    "Bursa": 4,
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_lfmh",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/osmangazi-eskort.html",
+      "lastSeen": 1795110585470
+    },
     {
       "id": "Android 📱_Bursa_lbrp",
       "device": "Android 📱",
