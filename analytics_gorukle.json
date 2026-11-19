@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 222,
-  "totalWaClicks": 54,
+  "totalWaClicks": 55,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -27,8 +27,8 @@
     "rus esc": 2,
     "Ayşen": 4,
     "ayşen": 4,
-    "Tuba": 2,
-    "tuba": 2,
+    "Tuba": 3,
+    "tuba": 3,
     "Açelya": 3,
     "açelya": 3,
     "Şebnem": 2,
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:21",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "clickId": "",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:20",
       "name": "Selin",
@@ -751,18 +760,18 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:21",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "clickId": "",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:20",
       "name": "Selin",
@@ -1926,6 +1935,13 @@
     "Görükle": 26
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_mn2o",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795083671904
+    },
     {
       "id": "Android 📱_Görükle_1xqv",
       "device": "Android 📱",
