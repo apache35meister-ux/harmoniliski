@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 114,
-  "totalWaClicks": 60,
+  "totalWaClicks": 61,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -44,11 +44,19 @@
     "yaren": 1,
     "Nehir": 1,
     "nehir": 1,
-    "Dilara & Özge": 1,
-    "dilara & özge": 1
+    "Dilara & Özge": 2,
+    "dilara & özge": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:35",
+      "name": "Dilara & Özge",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:34",
       "name": "Dilara & Özge",
@@ -719,18 +727,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:35",
+      "name": "Dilara & Özge",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:34",
       "name": "Dilara & Özge",
@@ -1941,6 +1948,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_9igg",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795080904744
+    },
     {
       "id": "iPhone 📱_Bursa_mt4z",
       "device": "iPhone 📱",
