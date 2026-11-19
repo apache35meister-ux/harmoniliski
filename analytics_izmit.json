@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 50,
-  "totalWaClicks": 69,
+  "totalWaClicks": 70,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 13,
@@ -58,8 +58,8 @@
     "zeynep": 1,
     "Açelya": 1,
     "açelya": 1,
-    "Rus ESC": 2,
-    "rus esc": 2,
+    "Rus ESC": 3,
+    "rus esc": 3,
     "Gül": 3,
     "gül": 3,
     "1790000000321": 2,
@@ -69,6 +69,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:16",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:15",
       "name": "Rus ESC",
@@ -733,17 +741,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:31",
-      "name": "Begüm",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:16",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:15",
       "name": "Rus ESC",
@@ -1754,6 +1762,13 @@
     "Bursa": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_qzrm",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795101383580
+    },
     {
       "id": "iPhone 📱_Bursa_blhm",
       "device": "iPhone 📱",
