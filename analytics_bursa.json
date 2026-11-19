@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 80,
-  "totalWaClicks": 23,
+  "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -23,10 +23,20 @@
     "Melisa": 2,
     "melisa": 2,
     "Tuba": 1,
-    "tuba": 1
+    "tuba": 1,
+    "Anna I Arnavut": 1,
+    "anna i arnavut": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:24",
+      "name": "Anna I Arnavut",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:23",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -717,18 +727,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "07:24",
+      "name": "Anna I Arnavut",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:53",
       "name": "Tuba",
@@ -1642,6 +1651,13 @@
     "Istanbul": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_px2w",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795062270070
+    },
     {
       "id": "iPhone 📱_İstanbul_1gn7",
       "device": "iPhone 📱",
