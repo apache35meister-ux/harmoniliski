@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 125,
+  "totalVisits": 126,
   "totalWaClicks": 123,
   "totalCalls": 0,
   "tClicks": {
@@ -81,6 +81,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:39",
       "name": "Damla",
@@ -761,15 +770,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:08",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1415,6 +1415,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "01:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:38",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2125,22 +2134,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "17:21",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 110,
+    "İstanbul": 111,
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_hob2",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795127964855
+    },
     {
       "id": "iPhone 📱_Bursa_uhoo",
       "device": "iPhone 📱",
@@ -2161,13 +2168,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795127796120
-    },
-    {
-      "id": "iPhone 📱_İstanbul_bm2h",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795127782367
     }
   ]
 }
