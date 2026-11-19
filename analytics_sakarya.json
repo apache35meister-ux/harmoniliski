@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 35,
-  "totalWaClicks": 21,
+  "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -27,10 +27,20 @@
     "Emel": 1,
     "emel": 1,
     "Hazal": 1,
-    "hazal": 1
+    "hazal": 1,
+    "Sinem": 1,
+    "sinem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:01",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:00",
       "name": "Eylül",
@@ -516,6 +526,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "01:01",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:00",
       "name": "Eylül",
@@ -1008,6 +1026,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_aooj",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795125670898
+    },
+    {
       "id": "Android 📱_Bursa_yq4n",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1034,20 +1059,6 @@
       "city": "Bursa",
       "page": "/hendek-eskort.html",
       "lastSeen": 1795125522942
-    },
-    {
-      "id": "Android 📱_Bursa_e9d7",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/konak-eskort.html",
-      "lastSeen": 1795125449125
-    },
-    {
-      "id": "Android 📱_Bursa_v88r",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795125438607
     }
   ]
 }
