@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 187,
+  "totalVisits": 188,
   "totalWaClicks": 46,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:06",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -738,14 +747,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:47",
-      "name": "Ayşen",
-      "city": "Görükle",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1119,6 +1120,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:06",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1829,22 +1839,20 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 168,
+    "İstanbul": 169,
     "Görükle": 19
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_gbsr",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795050492185
+    },
     {
       "id": "Mobil 📱_İstanbul_ugic",
       "device": "Mobil 📱",
@@ -1858,13 +1866,6 @@
       "city": "Görükle",
       "page": "/karsiyaka-mavisehir-vip-eskort-rehberi.",
       "lastSeen": 1795050328657
-    },
-    {
-      "id": "Mobil 📱_İstanbul_pl14",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795050213237
     }
   ]
 }
