@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 78,
+  "totalVisits": 79,
   "totalWaClicks": 96,
   "totalCalls": 0,
   "tClicks": {
@@ -77,6 +77,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:13",
       "name": "Rus ESC",
@@ -749,15 +758,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1403,6 +1403,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:13",
       "name": "Ziyaretçi (Android 📱)",
@@ -2107,44 +2116,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 69,
+    "İstanbul": 70,
     "Bursa": 9
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_6h6z",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115624319
-    },
-    {
-      "id": "Android 📱_Bursa_p5nb",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/korupark-eskort.html",
-      "lastSeen": 1795115616004
-    },
-    {
-      "id": "Android 📱_Bursa_goiq",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115605387
-    },
-    {
-      "id": "Android 📱_Bursa_nsll",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795115540443
-    },
-    {
-      "id": "Mobil 📱_İstanbul_pd02",
+      "id": "Mobil 📱_İstanbul_vj33",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795115471639
+      "lastSeen": 1795116278136
     }
   ]
 }
