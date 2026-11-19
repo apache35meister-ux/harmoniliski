@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 75,
+  "totalVisits": 76,
   "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
@@ -57,6 +57,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,14 +741,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:04",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1249,6 +1250,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1926,11 +1936,18 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 67,
+    "İstanbul": 68,
     "Bursa": 7,
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_mzz9",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795120054924
+    },
     {
       "id": "Mobil 📱_İstanbul_auw2",
       "device": "Mobil 📱",
