@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 53,
+  "totalVisits": 54,
   "totalWaClicks": 73,
   "totalCalls": 0,
   "tClicks": {
@@ -71,6 +71,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:19",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:18",
       "name": "Melisa",
@@ -736,15 +745,6 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1335,6 +1335,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:19",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:17",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1813,10 +1822,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 50,
+    "İstanbul": 51,
     "Bursa": 3
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İstanbul_m55t",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795101594230
+    },
     {
       "id": "Android 📱_Bursa_z2iw",
       "device": "Android 📱",
@@ -1851,27 +1867,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795101427700
-    },
-    {
-      "id": "Mobil 📱_İstanbul_m6tm",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795101398270
-    },
-    {
-      "id": "iPhone 📱_Bursa_qzrm",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795101383580
-    },
-    {
-      "id": "iPhone 📱_Bursa_blhm",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795101344873
     }
   ]
 }
