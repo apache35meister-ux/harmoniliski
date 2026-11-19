@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 5,
+  "totalVisits": 6,
   "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
@@ -19,6 +19,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:09",
       "name": "İlayda",
@@ -165,6 +174,15 @@
   ],
   "cityVisits": [
     {
+      "time": "14:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:08",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -211,9 +229,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 5
+    "İstanbul": 6
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_uqy9",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795086599872
+    },
     {
       "id": "Android 📱_Bursa_mwtm",
       "device": "Android 📱",
