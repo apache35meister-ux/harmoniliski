@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 124,
-  "totalWaClicks": 121,
+  "totalWaClicks": 122,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -60,8 +60,8 @@
     "açelya": 5,
     "Rus ESC": 7,
     "rus esc": 7,
-    "Gül": 6,
-    "gül": 6,
+    "Gül": 7,
+    "gül": 7,
     "1790000000321": 2,
     "Sinem": 7,
     "sinem": 7,
@@ -81,6 +81,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:36",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:36",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -762,17 +770,17 @@
       "device": "iPhone 📱",
       "page": "/umuttepe-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "22:04",
-      "name": "Ayşen",
+      "time": "01:36",
+      "name": "Gül",
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "01:08",
       "name": "Yeliz",
@@ -1403,14 +1411,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:59",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2141,6 +2141,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_9t9u",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795127796120
+    },
     {
       "id": "iPhone 📱_İstanbul_bm2h",
       "device": "iPhone 📱",
