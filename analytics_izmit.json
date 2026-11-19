@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 118,
-  "totalWaClicks": 118,
+  "totalWaClicks": 119,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 20,
-    "selin": 20,
+    "Selin": 21,
+    "selin": 21,
     "Melis": 5,
     "melis": 5,
     "Begüm": 5,
@@ -79,6 +79,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:05",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:05",
       "name": "Selin",
@@ -756,18 +764,17 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:43",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "01:05",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:05",
       "name": "Selin",
@@ -1394,14 +1401,6 @@
     },
     {
       "time": "14:58",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:57",
       "name": "Selin",
       "city": "Bursa",
       "device": "Android 📱",
@@ -2136,6 +2135,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_d94y",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795125948924
+    },
     {
       "id": "iPhone 📱_Bursa_vwbz",
       "device": "iPhone 📱",
