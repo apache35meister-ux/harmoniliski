@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018336412,
-  "totalVisits": 139,
+  "totalVisits": 140,
   "totalWaClicks": 62,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:19",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/geyve-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:18",
       "name": "Melisa",
@@ -734,15 +743,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:45",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1244,6 +1244,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:19",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/geyve-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1954,23 +1963,21 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:11",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/maltepe-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 114,
-    "Bursa": 24,
+    "Bursa": 25,
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_9hbn",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/geyve-eskort.html",
+      "lastSeen": 1795076346139
+    },
     {
       "id": "Android 📱_Bursa_98x3",
       "device": "Android 📱",
