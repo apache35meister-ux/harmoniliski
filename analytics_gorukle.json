@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 21,
+  "totalVisits": 22,
   "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
@@ -25,6 +25,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:01",
       "name": "Ziyaretçi (Android 📱)",
@@ -379,6 +388,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:01",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Görükle",
@@ -569,24 +587,17 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 12,
+    "İstanbul": 13,
     "Görükle": 7,
     "Türkiye": 2
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_bp9x",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795096917701
-    },
-    {
-      "id": "Android 📱_Görükle_r0oc",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795096863635
+      "id": "Mobil 📱_İstanbul_qjki",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795098069001
     }
   ]
 }
