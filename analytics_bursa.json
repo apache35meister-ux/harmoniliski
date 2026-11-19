@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 51,
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -26,8 +26,8 @@
     "dila": 2,
     "Selin": 6,
     "selin": 6,
-    "Açelya": 5,
-    "açelya": 5,
+    "Açelya": 6,
+    "açelya": 6,
     "Gül": 3,
     "gül": 3,
     "Rus ESC": 3,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:08",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:08",
       "name": "Bursa Osmangazi VIP Escort Vitrin Profilleri",
@@ -723,17 +731,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "15:09",
-      "name": "Selin",
+      "time": "22:08",
+      "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "22:08",
       "name": "Bursa Osmangazi VIP Escort Vitrin Profilleri",
@@ -1650,6 +1658,13 @@
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_w63i",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795115314555
+    },
     {
       "id": "Android 📱_Bursa_br7o",
       "device": "Android 📱",
