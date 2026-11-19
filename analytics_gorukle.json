@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018328194,
   "totalVisits": 222,
-  "totalWaClicks": 52,
+  "totalWaClicks": 53,
   "totalCalls": 0,
   "tClicks": {
     "Hale": 2,
@@ -41,13 +41,22 @@
     "eylül": 2,
     "Begüm": 1,
     "begüm": 1,
-    "Gül": 2,
-    "gül": 2,
+    "Gül": 3,
+    "gül": 3,
     "Nergis": 1,
     "nergis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:20",
+      "name": "Gül",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "clickId": "",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:20",
       "name": "Melis",
@@ -751,18 +760,18 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:20",
+      "name": "Gül",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "clickId": "",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:20",
       "name": "Melis",
@@ -1908,6 +1917,13 @@
     "Görükle": 26
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_dq8k",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795083648341
+    },
     {
       "id": "Android 📱_Görükle_kbb8",
       "device": "Android 📱",
