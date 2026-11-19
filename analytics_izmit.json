@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 102,
-  "totalWaClicks": 105,
+  "totalWaClicks": 106,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 18,
@@ -73,10 +73,20 @@
     "Tuba": 1,
     "tuba": 1,
     "Şebnem": 1,
-    "şebnem": 1
+    "şebnem": 1,
+    "Nihan": 1,
+    "nihan": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:46",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:45",
       "name": "Selin",
@@ -755,18 +765,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:46",
+      "name": "Nihan",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:45",
       "name": "Selin",
@@ -1397,14 +1406,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:33",
-      "name": "Dila",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2135,6 +2136,13 @@
     "Bursa": 13
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_l8xx",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795121191913
+    },
     {
       "id": "iPhone 📱_Bursa_fude",
       "device": "iPhone 📱",
