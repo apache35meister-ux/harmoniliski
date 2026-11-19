@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 90,
-  "totalWaClicks": 71,
+  "totalWaClicks": 72,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -16,8 +16,8 @@
     "damla": 10,
     "İlayda": 4,
     "i̇layda": 4,
-    "Serap": 2,
-    "serap": 2,
+    "Serap": 3,
+    "serap": 3,
     "Nihan": 3,
     "nihan": 3,
     "Su": 1,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:34",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:34",
       "name": "Ziyaretçi (Android 📱)",
@@ -742,18 +750,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Türkiye",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "00:34",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:27",
       "name": "Damla",
@@ -2051,6 +2058,13 @@
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_76fi",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795124094597
+    },
     {
       "id": "Android 📱_Bursa_d7x7",
       "device": "Android 📱",
