@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018336412,
   "totalVisits": 130,
-  "totalWaClicks": 53,
+  "totalWaClicks": 54,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 6,
@@ -36,8 +36,8 @@
     "vip escort": 3,
     "Hale": 1,
     "hale": 1,
-    "Tuba": 1,
-    "tuba": 1,
+    "Tuba": 2,
+    "tuba": 2,
     "Yeliz": 1,
     "yeliz": 1,
     "Nisan": 1,
@@ -47,6 +47,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:10",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:10",
       "name": "Açelya",
@@ -735,18 +743,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:10",
+      "name": "Tuba",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:10",
       "name": "Açelya",
@@ -1900,6 +1907,13 @@
     "Adapazari": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_igmn",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795057829478
+    },
     {
       "id": "Android 📱_Bursa_0e6a",
       "device": "Android 📱",
