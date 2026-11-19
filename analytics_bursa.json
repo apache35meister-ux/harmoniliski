@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795018347666,
   "totalVisits": 110,
-  "totalWaClicks": 54,
+  "totalWaClicks": 55,
   "totalCalls": 0,
   "tClicks": {
     "1794900000001": 2,
@@ -37,10 +37,20 @@
     "Yasemin": 1,
     "yasemin": 1,
     "Serap": 1,
-    "serap": 1
+    "serap": 1,
+    "Sinem": 1,
+    "sinem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:56",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -714,18 +724,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:30",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:56",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:56",
       "name": "Melis",
@@ -1888,6 +1897,13 @@
     "Kane": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_97ia",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795078607532
+    },
     {
       "id": "Mobil 📱_İstanbul_s5zd",
       "device": "Mobil 📱",
