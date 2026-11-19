@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 125,
-  "totalWaClicks": 122,
+  "totalWaClicks": 123,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -10,8 +10,8 @@
     "melis": 5,
     "Begüm": 5,
     "begüm": 5,
-    "Damla": 8,
-    "damla": 8,
+    "Damla": 9,
+    "damla": 9,
     "Eylül": 12,
     "eylül": 12,
     "Hale": 5,
@@ -81,6 +81,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:39",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:38",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -762,17 +770,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "22:04",
-      "name": "Şebnem",
+      "time": "01:39",
+      "name": "Damla",
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "01:36",
       "name": "Gül",
@@ -1403,14 +1411,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:59",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2141,6 +2141,13 @@
     "Bursa": 15
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_uhoo",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795127945002
+    },
     {
       "id": "iPhone 📱_İstanbul_cwip",
       "device": "iPhone 📱",
