@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 44,
+  "totalVisits": 45,
   "totalWaClicks": 67,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:12",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:06",
       "name": "Selin",
@@ -730,14 +739,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:29",
-      "name": "Esra",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1280,6 +1281,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:12",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:05",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1677,30 +1687,16 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 41,
+    "İstanbul": 42,
     "Bursa": 3
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_lr5u",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795097181401
-    },
-    {
-      "id": "Android 📱_Bursa_qx3a",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795097163782
-    },
-    {
-      "id": "Android 📱_Bursa_tkfk",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/kestel-eskort.html",
-      "lastSeen": 1795097129913
+      "id": "iPhone 📱_İstanbul_p6tv",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795097524707
     }
   ]
 }
