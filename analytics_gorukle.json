@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795018328194,
-  "totalVisits": 214,
+  "totalVisits": 215,
   "totalWaClicks": 48,
   "totalCalls": 0,
   "tClicks": {
@@ -48,6 +48,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:29",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:13",
       "name": "Ziyaretçi (Android 📱)",
@@ -754,15 +763,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:00",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1152,6 +1152,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:29",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:13",
       "name": "Ziyaretçi (Android 📱)",
@@ -1862,56 +1871,19 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:56",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/alsancak-kendi-yerinde-vip-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 189,
+    "İstanbul": 190,
     "Görükle": 25
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_1bme",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795068834278
-    },
-    {
-      "id": "Android 📱_Görükle_7tz9",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795068826863
-    },
-    {
-      "id": "Android 📱_Görükle_zn8m",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "/korupark-eskort.html",
-      "lastSeen": 1795068773382
-    },
-    {
-      "id": "Android 📱_Görükle_pome",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795068769185
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ozf7",
-      "device": "Mobil 📱",
+      "id": "iPhone 📱_İstanbul_qf3k",
+      "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795068679575
+      "lastSeen": 1795073391999
     }
   ]
 }
