@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 51,
-  "totalWaClicks": 58,
+  "totalWaClicks": 59,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -51,10 +51,20 @@
     "Nehir": 1,
     "nehir": 1,
     "Bursa Osmangazi VIP Escort Vitrin Profilleri": 1,
-    "bursa osmangazi vip escort vitrin profilleri": 1
+    "bursa osmangazi vip escort vitrin profilleri": 1,
+    "Emel": 1,
+    "emel": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:09",
+      "name": "Emel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:09",
       "name": "Rus ESC",
@@ -723,17 +733,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:11",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:09",
+      "name": "Emel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:09",
       "name": "Rus ESC",
@@ -1666,6 +1676,13 @@
     "Türkiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_psyr",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795115380521
+    },
     {
       "id": "Android 📱_Bursa_2qpj",
       "device": "Android 📱",
