@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 30,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
@@ -36,10 +36,20 @@
     "Melisa": 1,
     "melisa": 1,
     "Lina": 1,
-    "lina": 1
+    "lina": 1,
+    "Simge": 1,
+    "simge": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:00",
+      "name": "Simge",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -544,6 +554,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:00",
+      "name": "Simge",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:52",
       "name": "Lina",
@@ -1063,6 +1081,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Sakarya_lpv8",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795197612220
+    },
+    {
       "id": "Mobil 📱_Amsterdam (NL)_aesl",
       "device": "Mobil 📱",
       "city": "Amsterdam (NL)",
@@ -1075,13 +1100,6 @@
       "city": "Amsterdam (NL)",
       "page": "/",
       "lastSeen": 1795197463550
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_4ajj",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/",
-      "lastSeen": 1795197431349
     }
   ]
 }
