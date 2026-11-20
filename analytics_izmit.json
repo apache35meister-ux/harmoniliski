@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 33,
-  "totalWaClicks": 71,
+  "totalWaClicks": 72,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -12,8 +12,8 @@
     "lara": 3,
     "Hale": 3,
     "hale": 3,
-    "Damla": 4,
-    "damla": 4,
+    "Damla": 5,
+    "damla": 5,
     "Nehir": 2,
     "nehir": 2,
     "Eylül": 6,
@@ -71,6 +71,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:20",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:19",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -727,17 +735,17 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:33",
-      "name": "İzel",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:20",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:16",
       "name": "Selin",
@@ -1615,6 +1623,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_ah97",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195200452
+    },
     {
       "id": "iPhone 📱_Köseköy_5q34",
       "device": "iPhone 📱",
