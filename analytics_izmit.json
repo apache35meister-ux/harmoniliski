@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -15,6 +15,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:22",
       "name": "Hale",
@@ -102,6 +111,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "16:22",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İzmit",
@@ -121,50 +139,16 @@
     }
   ],
   "cityCounts": {
-    "İzmit": 2
+    "İzmit": 2,
+    "İstanbul": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_r4pq",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795180960900
-    },
-    {
-      "id": "Android 📱_İzmit_dd9w",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795180949677
-    },
-    {
-      "id": "Android 📱_İzmit_obor",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795180940228
-    },
-    {
-      "id": "Mobil 📱_İzmit_twf5",
+      "id": "Mobil 📱_İstanbul_56b8",
       "device": "Mobil 📱",
-      "city": "İzmit",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795180923651
-    },
-    {
-      "id": "Android 📱_İzmit_9g9v",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795180860928
-    },
-    {
-      "id": "Mobil 📱_İzmit_vcrk",
-      "device": "Mobil 📱",
-      "city": "İzmit",
-      "page": "/",
-      "lastSeen": 1795180803402
+      "lastSeen": 1795184262463
     }
   ]
 }
