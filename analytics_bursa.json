@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 212,
+  "totalVisits": 213,
   "totalWaClicks": 130,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -757,14 +766,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:16",
-      "name": "Bahar",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1410,6 +1411,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2120,20 +2130,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:52",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Adapazarı",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 107,
-    "Bursa": 42,
+    "Bursa": 43,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2187,11 +2188,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İzmir_wdzc",
-      "device": "Mobil 📱",
-      "city": "İzmir",
+      "id": "Masaüstü 💻_Bursa_9xcn",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795164271911
+      "lastSeen": 1795164758596
     }
   ]
 }
