@@ -1,14 +1,24 @@
 {
   "resetEpoch": 1795180634718,
   "totalVisits": 2,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 1,
-    "i̇layda": 1
+    "i̇layda": 1,
+    "Melis": 1,
+    "melis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:54",
+      "name": "Melis",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -37,6 +47,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:54",
+      "name": "Melis",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:54",
       "name": "İlayda",
@@ -70,6 +88,13 @@
     "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_tgbu",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795182895578
+    },
     {
       "id": "Mobil 📱_Bursa_2zeg",
       "device": "Mobil 📱",
