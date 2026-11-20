@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 22,
-  "totalWaClicks": 24,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
@@ -10,8 +10,8 @@
     "damla": 5,
     "Melis": 1,
     "melis": 1,
-    "Açelya": 2,
-    "açelya": 2,
+    "Açelya": 3,
+    "açelya": 3,
     "Serap": 1,
     "serap": 1,
     "Selin": 2,
@@ -33,6 +33,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:48",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:48",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -425,6 +433,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:48",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:47",
       "name": "Rus ESC",
@@ -829,6 +845,13 @@
     "İzmit": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_j3jk",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795218532538
+    },
     {
       "id": "iPhone 📱_İzmit_1gyy",
       "device": "iPhone 📱",
