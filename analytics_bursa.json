@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 153,
+  "totalVisits": 154,
   "totalWaClicks": 91,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:03",
       "name": "Selin",
@@ -751,15 +760,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:39",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Türkiye",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1405,6 +1405,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2115,20 +2124,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:25",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 106,
-    "Bursa": 17,
+    "Bursa": 18,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2157,53 +2157,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_zuye",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795143828518
-    },
-    {
-      "id": "Android 📱_Bursa_mtrx",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795143795341
-    },
-    {
-      "id": "Android 📱_Bursa_5geb",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795143778381
-    },
-    {
-      "id": "Mobil 📱_Bursa_j90x",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/osmangazi-eskort.html",
-      "lastSeen": 1795143772823
-    },
-    {
-      "id": "Android 📱_Bursa_9oqn",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795143765877
-    },
-    {
-      "id": "Android 📱_Bursa_0o84",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795143742487
-    },
-    {
-      "id": "Mobil 📱_Bursa_2hpa",
+      "id": "Mobil 📱_Bursa_io4p",
       "device": "Mobil 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795143709734
+      "lastSeen": 1795144675348
     }
   ]
 }
