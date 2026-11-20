@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 48,
+  "totalVisits": 49,
   "totalWaClicks": 44,
   "totalCalls": 0,
   "tClicks": {
@@ -46,6 +46,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:47",
       "name": "Selin",
@@ -720,14 +729,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:22",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1085,6 +1086,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1520,7 +1530,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 33,
+    "Bursa": 34,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 3,
@@ -1533,6 +1543,13 @@
     "Amsterdam (NL)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_06co",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795207713629
+    },
     {
       "id": "Android 📱_Bursa_2whq",
       "device": "Android 📱",
