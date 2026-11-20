@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 64,
+  "totalVisits": 65,
   "totalWaClicks": 111,
   "totalCalls": 0,
   "tClicks": {
@@ -91,6 +91,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:57",
       "name": "İlayda",
@@ -758,15 +767,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1413,6 +1413,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:56",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1991,7 +2000,7 @@
   ],
   "cityCounts": {
     "İzmit": 5,
-    "İstanbul": 33,
+    "İstanbul": 34,
     "Bursa": 4,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -2001,6 +2010,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_plnx",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795201070547
+    },
     {
       "id": "Android 📱_İzmit_r0o3",
       "device": "Android 📱",
@@ -2021,13 +2037,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795201008802
-    },
-    {
-      "id": "Android 📱_Bursa_09v0",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
-      "lastSeen": 1795200881028
     }
   ]
 }
