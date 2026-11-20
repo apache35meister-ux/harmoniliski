@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 30,
+  "totalVisits": 31,
   "totalWaClicks": 70,
   "totalCalls": 0,
   "tClicks": {
@@ -71,6 +71,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:07",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:56",
       "name": "Selin",
@@ -724,15 +733,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:31",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Brussels (BE)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1299,6 +1299,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:07",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:56",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -1572,25 +1581,18 @@
   "cityCounts": {
     "İzmit": 4,
     "İstanbul": 10,
-    "Bursa": 2,
+    "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 12,
     "Milan (IT)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İzmit_ba9k",
+      "id": "iPhone 📱_Bursa_xpil",
       "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795193769870
-    },
-    {
-      "id": "iPhone 📱_İstanbul_ejjt",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795193761378
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795194477116
     }
   ]
 }
