@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 122,
-  "totalWaClicks": 84,
+  "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -54,11 +54,19 @@
     "bursa osmangazi vip escort vitrin profilleri": 1,
     "Emel": 1,
     "emel": 1,
-    "Begüm": 1,
-    "begüm": 1
+    "Begüm": 2,
+    "begüm": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:19",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:19",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -746,18 +754,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:06",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "03:19",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:18",
       "name": "Serap",
@@ -1388,14 +1395,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:09",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2130,6 +2129,13 @@
     "Ankara": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_0qsa",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795133948038
+    },
     {
       "id": "iPhone 📱_İstanbul_cak5",
       "device": "iPhone 📱",
