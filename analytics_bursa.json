@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 159,
-  "totalWaClicks": 103,
+  "totalWaClicks": 104,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -57,10 +57,20 @@
     "Begüm": 2,
     "begüm": 2,
     "Ceren": 2,
-    "ceren": 2
+    "ceren": 2,
+    "Bahar": 1,
+    "bahar": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:16",
+      "name": "Bahar",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:16",
       "name": "Ceren",
@@ -746,18 +756,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:41",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "07:16",
+      "name": "Bahar",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:16",
       "name": "Ceren",
@@ -1387,14 +1396,6 @@
       "name": "Selin",
       "city": "Bursa",
       "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:39",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
@@ -2153,6 +2154,13 @@
     "Indianapolis (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_8vxd",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795148182345
+    },
     {
       "id": "iPhone 📱_Bursa_6846",
       "device": "iPhone 📱",
