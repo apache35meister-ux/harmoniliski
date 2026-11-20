@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 77,
+  "totalVisits": 78,
   "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:33",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Zürich (CH)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:25",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -727,15 +736,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -957,6 +957,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:33",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Zürich (CH)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:25",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1674,15 +1683,16 @@
     "Clinton (US)": 1,
     "Secaucus (US)": 1,
     "Ananindeua (BR)": 1,
-    "Maceió (BR)": 1
+    "Maceió (BR)": 1,
+    "Zürich (CH)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Adapazarı_qyi4",
-      "device": "Mobil 📱",
-      "city": "Adapazarı",
+      "id": "iPhone 📱_Zürich (CH)_pasj",
+      "device": "iPhone 📱",
+      "city": "Zürich (CH)",
       "page": "/",
-      "lastSeen": 1795163155275
+      "lastSeen": 1795163627298
     }
   ]
 }
