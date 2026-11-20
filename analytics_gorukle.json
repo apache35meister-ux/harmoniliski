@@ -1,14 +1,22 @@
 {
   "resetEpoch": 1795207863266,
   "totalVisits": 1,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
-    "İlayda": 1,
-    "i̇layda": 1
+    "İlayda": 2,
+    "i̇layda": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:35",
+      "name": "İlayda",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:35",
       "name": "İlayda",
@@ -35,6 +43,14 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "00:35",
+      "name": "İlayda",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -52,6 +68,13 @@
     "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_n5a3",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795210511183
+    },
     {
       "id": "iPhone 📱_Görükle_pw4n",
       "device": "iPhone 📱",
