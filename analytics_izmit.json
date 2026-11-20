@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 243,
+  "totalVisits": 244,
   "totalWaClicks": 162,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:15",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:08",
       "name": "Melisa",
@@ -777,15 +786,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Sacramento (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1431,6 +1431,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:15",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2141,19 +2150,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bandırma",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 149,
+    "İstanbul": 150,
     "Bursa": 21,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2209,18 +2209,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_jes4",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795169301104
-    },
-    {
-      "id": "Mobil 📱_Gebze_vte9",
+      "id": "Mobil 📱_İstanbul_7pup",
       "device": "Mobil 📱",
-      "city": "Gebze",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795169279497
+      "lastSeen": 1795169719797
     }
   ]
 }
