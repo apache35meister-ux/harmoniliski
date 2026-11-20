@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 278,
+  "totalVisits": 279,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Nong Bua (TH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:52",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Nong Bua (TH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:30",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Elazığ",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1673,9 +1673,17 @@
     "Los Angeles (US)": 1,
     "Santo Domingo (DO)": 1,
     "Toronto (CA)": 1,
-    "Elazığ": 1
+    "Elazığ": 1,
+    "Nong Bua (TH)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Nong Bua (TH)_sfk9",
+      "device": "Mobil 📱",
+      "city": "Nong Bua (TH)",
+      "page": "/",
+      "lastSeen": 1795145469941
+    },
     {
       "id": "Mobil 📱_Elazığ_4o6h",
       "device": "Mobil 📱",
@@ -1689,13 +1697,6 @@
       "city": "Toronto (CA)",
       "page": "/",
       "lastSeen": 1795145339950
-    },
-    {
-      "id": "Mobil 📱_Santo Domingo (DO)_cx2p",
-      "device": "Mobil 📱",
-      "city": "Santo Domingo (DO)",
-      "page": "/",
-      "lastSeen": 1795145254970
     }
   ]
 }
