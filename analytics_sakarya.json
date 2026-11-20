@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 91,
+  "totalVisits": 92,
   "totalWaClicks": 41,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Manassas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:59",
       "name": "Melisa",
@@ -734,15 +743,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:58",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/hendek-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1076,6 +1076,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:08",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Manassas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:58",
       "name": "Ziyaretçi (Android 📱)",
@@ -1786,15 +1795,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:44",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/kestel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1824,29 +1824,16 @@
     "Zürich (CH)": 3,
     "Frankfurt am Main (DE)": 1,
     "Amsterdam (NL)": 7,
-    "Erzurum": 1
+    "Erzurum": 1,
+    "Manassas (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Sakarya_1vde",
-      "device": "Android 📱",
-      "city": "Sakarya",
+      "id": "Masaüstü 💻_Manassas (US)_7vod",
+      "device": "Masaüstü 💻",
+      "city": "Manassas (US)",
       "page": "Ana Sayfa",
-      "lastSeen": 1795175953825
-    },
-    {
-      "id": "Android 📱_Sakarya_h6o0",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795175899458
-    },
-    {
-      "id": "Android 📱_Erzurum_4jdf",
-      "device": "Android 📱",
-      "city": "Erzurum",
-      "page": "/igdir-eskort.html",
-      "lastSeen": 1795175889854
+      "lastSeen": 1795180091623
     }
   ]
 }
