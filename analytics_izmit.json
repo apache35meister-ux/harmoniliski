@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 31,
+  "totalVisits": 32,
   "totalWaClicks": 70,
   "totalCalls": 0,
   "tClicks": {
@@ -71,6 +71,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:07",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -724,14 +733,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:31",
-      "name": "Eylül",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -1299,6 +1300,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:07",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -1580,7 +1590,7 @@
   ],
   "cityCounts": {
     "İzmit": 4,
-    "İstanbul": 10,
+    "İstanbul": 11,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 12,
@@ -1588,11 +1598,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_xpil",
-      "device": "iPhone 📱",
-      "city": "Bursa",
+      "id": "Mobil 📱_İstanbul_r32n",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795194477116
+      "lastSeen": 1795194990980
     }
   ]
 }
