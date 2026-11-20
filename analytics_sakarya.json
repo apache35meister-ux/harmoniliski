@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 35,
-  "totalWaClicks": 32,
+  "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
@@ -18,8 +18,8 @@
     "i̇layda": 2,
     "Damla": 2,
     "damla": 2,
-    "İzel": 2,
-    "i̇zel": 2,
+    "İzel": 3,
+    "i̇zel": 3,
     "Açelya": 3,
     "açelya": 3,
     "Sena": 2,
@@ -42,6 +42,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:57",
+      "name": "İzel",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:57",
       "name": "Açelya",
@@ -615,6 +623,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:57",
+      "name": "İzel",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:57",
       "name": "Açelya",
@@ -1203,6 +1219,13 @@
     "Manavgat": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_7cw4",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795204649389
+    },
     {
       "id": "Android 📱_Sakarya_de0y",
       "device": "Android 📱",
