@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 267,
+  "totalVisits": 268,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Delhi (IN)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:55",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Delhi (IN)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:55",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Caruaru (BR)",
@@ -1597,15 +1606,6 @@
       "device": "Android 📱",
       "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1663,9 +1663,17 @@
     "Manila (PH)": 1,
     "Lynchburg (US)": 1,
     "Dallas (US)": 1,
-    "Caruaru (BR)": 1
+    "Caruaru (BR)": 1,
+    "Delhi (IN)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Delhi (IN)_e3c4",
+      "device": "Mobil 📱",
+      "city": "Delhi (IN)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795143472806
+    },
     {
       "id": "Mobil 📱_Caruaru (BR)_lefe",
       "device": "Mobil 📱",
