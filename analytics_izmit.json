@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 19,
+  "totalVisits": 20,
   "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:42",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:32",
       "name": "Zeynep",
@@ -561,6 +570,15 @@
   ],
   "cityVisits": [
     {
+      "time": "02:42",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "02:32",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Vienna (AT)",
@@ -739,29 +757,16 @@
     "Milan (IT)": 2,
     "Amsterdam (NL)": 4,
     "Frankfurt am Main (DE)": 3,
-    "Vienna (AT)": 1
+    "Vienna (AT)": 1,
+    "Dallas (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İzmit_cmpx",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217560822
-    },
-    {
-      "id": "iPhone 📱_İzmit_keb7",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217554476
-    },
-    {
-      "id": "iPhone 📱_Vienna (AT)_wmhy",
-      "device": "iPhone 📱",
-      "city": "Vienna (AT)",
+      "id": "Masaüstü 💻_Dallas (US)_uvkx",
+      "device": "Masaüstü 💻",
+      "city": "Dallas (US)",
       "page": "/",
-      "lastSeen": 1795217530588
+      "lastSeen": 1795218132420
     }
   ]
 }
