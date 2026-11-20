@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 26,
+  "totalVisits": 27,
   "totalWaClicks": 65,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:20",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:17",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,15 +730,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:24",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1256,6 +1256,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:20",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:17",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1492,7 +1501,7 @@
   ],
   "cityCounts": {
     "İzmit": 3,
-    "İstanbul": 8,
+    "İstanbul": 9,
     "Bursa": 1,
     "Brussels (BE)": 1,
     "Köseköy": 12,
@@ -1500,53 +1509,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Masaüstü 💻_İstanbul_fuqj",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795191602840
+    },
+    {
       "id": "Mobil 📱_İstanbul_pkwq",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795191478739
-    },
-    {
-      "id": "Android 📱_İzmit_a7k8",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191373321
-    },
-    {
-      "id": "Android 📱_İzmit_6gi6",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191356472
-    },
-    {
-      "id": "Mobil 📱_İstanbul_s3gz",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795191343502
-    },
-    {
-      "id": "Android 📱_İzmit_d9la",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191339618
-    },
-    {
-      "id": "Android 📱_İzmit_e2cd",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191322041
-    },
-    {
-      "id": "Mobil 📱_İstanbul_rsn6",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795191303116
     }
   ]
 }
