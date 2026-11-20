@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 166,
-  "totalWaClicks": 108,
+  "totalWaClicks": 109,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -22,8 +22,8 @@
     "nihan": 4,
     "Su": 1,
     "su": 1,
-    "Dila": 2,
-    "dila": 2,
+    "Dila": 3,
+    "dila": 3,
     "Selin": 14,
     "selin": 14,
     "Açelya": 9,
@@ -65,6 +65,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:53",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:53",
       "name": "Sinem",
@@ -747,18 +755,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:04",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/kestel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "07:53",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:53",
       "name": "Sinem",
@@ -1389,14 +1396,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:05",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2158,6 +2157,13 @@
     "Columbus (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_rv2g",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795150402229
+    },
     {
       "id": "Android 📱_Bursa_w82c",
       "device": "Android 📱",
