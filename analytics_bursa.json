@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 219,
+  "totalVisits": 220,
   "totalWaClicks": 137,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:20",
       "name": "Açelya",
@@ -758,15 +767,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:56",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/mudanya-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1412,6 +1412,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:19",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2122,19 +2131,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Sivas",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 108,
+    "İstanbul": 109,
     "Bursa": 47,
     "Türkiye": 2,
     "Rome (IT)": 1,
@@ -2188,6 +2188,13 @@
     "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_tgay",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795170073029
+    },
     {
       "id": "Android 📱_Bursa_09bp",
       "device": "Android 📱",
