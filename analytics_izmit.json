@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 190,
+  "totalVisits": 191,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:50",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Catriel (AR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -781,14 +790,6 @@
       "device": "Mobil 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:43",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1434,6 +1435,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:50",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Catriel (AR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2144,15 +2154,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:31",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2184,22 +2185,16 @@
     "Gebze": 1,
     "İznik": 1,
     "Sacramento (US)": 1,
-    "Chosica (PE)": 1
+    "Chosica (PE)": 1,
+    "Catriel (AR)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_9x0h",
+      "id": "Mobil 📱_Catriel (AR)_r3x5",
       "device": "Mobil 📱",
-      "city": "Bursa",
+      "city": "Catriel (AR)",
       "page": "/",
-      "lastSeen": 1795150022760
-    },
-    {
-      "id": "Mobil 📱_Kilis_1bug",
-      "device": "Mobil 📱",
-      "city": "Kilis",
-      "page": "/",
-      "lastSeen": 1795149851581
+      "lastSeen": 1795150231544
     }
   ]
 }
