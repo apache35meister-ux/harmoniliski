@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 28,
+  "totalVisits": 29,
   "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
@@ -44,6 +44,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:15",
       "name": "Selin",
@@ -845,6 +854,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:12",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bursa",
@@ -1099,7 +1117,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 21,
+    "Bursa": 22,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -1108,25 +1126,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_Bursa_1zsr",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795198574180
+    },
+    {
       "id": "Android 📱_Bursa_zipy",
       "device": "Android 📱",
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795198549505
-    },
-    {
-      "id": "Mobil 📱_Bursa_al83",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795198376907
-    },
-    {
-      "id": "Android 📱_Bursa_48q0",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795198372481
     }
   ]
 }
