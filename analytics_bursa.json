@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 47,
-  "totalWaClicks": 42,
+  "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -14,8 +14,8 @@
     "vip escort": 4,
     "Açelya": 5,
     "açelya": 5,
-    "Gül": 2,
-    "gül": 2,
+    "Gül": 3,
+    "gül": 3,
     "İzel": 2,
     "i̇zel": 2,
     "Eylül": 1,
@@ -46,6 +46,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:17",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -720,17 +728,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:21",
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Mobil 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:17",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:16",
       "name": "İlayda",
@@ -1507,6 +1515,13 @@
     "Yalova": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_qqa5",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795205824860
+    },
     {
       "id": "Mobil 📱_Bursa_pql8",
       "device": "Mobil 📱",
