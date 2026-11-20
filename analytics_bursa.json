@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -224,6 +233,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:58",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bursa",
@@ -281,15 +299,16 @@
   "cityCounts": {
     "Şanlıurfa": 1,
     "Bursa": 4,
-    "Frankfurt am Main (DE)": 1
+    "Frankfurt am Main (DE)": 1,
+    "New York City (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_y3l8",
+      "id": "Mobil 📱_New York City (US)_gt2x",
       "device": "Mobil 📱",
-      "city": "Bursa",
+      "city": "New York City (US)",
       "page": "/",
-      "lastSeen": 1795190315163
+      "lastSeen": 1795191086738
     }
   ]
 }
