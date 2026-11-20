@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 122,
+  "totalVisits": 123,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:19",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:19",
       "name": "Eylül",
@@ -744,15 +753,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1398,6 +1398,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:19",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:19",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2108,15 +2117,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:52",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/mudanya-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2125,9 +2125,17 @@
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
-    "Ankara": 1
+    "Ankara": 1,
+    "İzmir": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmir_cvqh",
+      "device": "Mobil 📱",
+      "city": "İzmir",
+      "page": "/",
+      "lastSeen": 1795133983555
+    },
     {
       "id": "iPhone 📱_Bursa_qsy2",
       "device": "iPhone 📱",
@@ -2183,13 +2191,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795133878419
-    },
-    {
-      "id": "Mobil 📱_Rome (IT)_dfzp",
-      "device": "Mobil 📱",
-      "city": "Rome (IT)",
-      "page": "/",
-      "lastSeen": 1795133803037
     }
   ]
 }
