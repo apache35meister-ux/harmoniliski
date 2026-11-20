@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 16,
+  "totalVisits": 17,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:05",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:01",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -380,6 +389,15 @@
   ],
   "cityVisits": [
     {
+      "time": "01:05",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "01:01",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Amsterdam (NL)",
@@ -526,38 +544,17 @@
   ],
   "cityCounts": {
     "Ankara": 4,
-    "İstanbul": 1,
+    "İstanbul": 2,
     "Bursa": 5,
     "Amsterdam (NL)": 6
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Amsterdam (NL)_rpql",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/mudanya-eskort.html",
-      "lastSeen": 1795212082333
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_t1c3",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/cekirge-eskort.html",
-      "lastSeen": 1795212070209
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_91do",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/mudanya-eskort.html",
-      "lastSeen": 1795212055365
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_m1cd",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
+      "id": "iPhone 📱_İstanbul_pruf",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795211936553
+      "lastSeen": 1795212319764
     }
   ]
 }
