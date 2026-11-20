@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 199,
-  "totalWaClicks": 122,
+  "totalVisits": 200,
+  "totalWaClicks": 123,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -12,8 +12,8 @@
     "şebnem": 7,
     "Yaren": 4,
     "yaren": 4,
-    "Damla": 13,
-    "damla": 13,
+    "Damla": 14,
+    "damla": 14,
     "İlayda": 5,
     "i̇layda": 5,
     "Serap": 5,
@@ -69,6 +69,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:16",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "10:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Moncks Corner (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -738,25 +755,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "06:03",
-      "name": "Açelya",
+      "time": "10:16",
+      "name": "Damla",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     },
-    {
-      "time": "06:02",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
     {
       "time": "09:36",
       "name": "Gül",
@@ -1388,17 +1397,18 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:07",
-      "name": "Sena",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Moncks Corner (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2109,15 +2119,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:18",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "La Lima (HN)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2167,9 +2168,24 @@
     "New York City (US)": 1,
     "Lindsay (CA)": 1,
     "Santa Clara (US)": 1,
-    "Chicago (US)": 1
+    "Chicago (US)": 1,
+    "Moncks Corner (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_rfw6",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795158990068
+    },
+    {
+      "id": "Mobil 📱_Moncks Corner (US)_q9er",
+      "device": "Mobil 📱",
+      "city": "Moncks Corner (US)",
+      "page": "/gorukle-eskort.html",
+      "lastSeen": 1795158980280
+    },
     {
       "id": "Mobil 📱_Bursa_pbyw",
       "device": "Mobil 📱",
