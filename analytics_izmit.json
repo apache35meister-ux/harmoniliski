@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 76,
+  "totalVisits": 77,
   "totalWaClicks": 122,
   "totalCalls": 0,
   "tClicks": {
@@ -95,6 +95,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:32",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:29",
       "name": "Nergis",
@@ -762,15 +771,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:04",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1416,6 +1416,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "23:32",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:29",
       "name": "Ziyaretçi (Android 📱)",
@@ -2103,7 +2112,7 @@
   ],
   "cityCounts": {
     "İzmit": 7,
-    "İstanbul": 42,
+    "İstanbul": 43,
     "Bursa": 5,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -2114,18 +2123,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_7ebz",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795206549515
-    },
-    {
-      "id": "Android 📱_İstanbul_bgby",
+      "id": "Android 📱_İstanbul_b8eu",
       "device": "Android 📱",
       "city": "İstanbul",
       "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795206540093
+      "lastSeen": 1795206746543
     }
   ]
 }
