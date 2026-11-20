@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 247,
+  "totalVisits": 248,
   "totalWaClicks": 164,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:27",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -775,15 +784,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Catriel (AR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1429,6 +1429,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:27",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2139,19 +2148,10 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:36",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Council Bluffs (US)",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 151,
+    "İstanbul": 152,
     "Bursa": 21,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2208,11 +2208,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Çayırova_p9t5",
-      "device": "Masaüstü 💻",
-      "city": "Çayırova",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795170447790
+      "id": "Mobil 📱_İstanbul_ty6g",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795171003490
     }
   ]
 }
