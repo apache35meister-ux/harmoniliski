@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:47",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:35",
       "name": "Serap",
@@ -188,6 +197,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:47",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:34",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Milan (IT)",
@@ -246,43 +264,16 @@
     "İstanbul": 2,
     "Gebze": 1,
     "Moscow (RU)": 1,
-    "Milan (IT)": 2
+    "Milan (IT)": 2,
+    "Amsterdam (NL)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İzmit_eghd",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210534255
-    },
-    {
-      "id": "iPhone 📱_İzmit_b8kt",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210504797
-    },
-    {
-      "id": "iPhone 📱_Milan (IT)_owjp",
-      "device": "iPhone 📱",
-      "city": "Milan (IT)",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795210497352
-    },
-    {
-      "id": "iPhone 📱_İzmit_yzj1",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210378657
-    },
-    {
-      "id": "iPhone 📱_Milan (IT)_cx5d",
-      "device": "iPhone 📱",
-      "city": "Milan (IT)",
+      "id": "Mobil 📱_Amsterdam (NL)_e8rc",
+      "device": "Mobil 📱",
+      "city": "Amsterdam (NL)",
       "page": "/",
-      "lastSeen": 1795210366079
+      "lastSeen": 1795211278611
     }
   ]
 }
