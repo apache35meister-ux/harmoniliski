@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 15,
+  "totalVisits": 16,
   "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "01:49",
       "name": "Selin",
@@ -466,6 +475,15 @@
       "type": "👁️ Site Ziyareti"
     },
     {
+      "time": "01:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:54",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Frankfurt am Main (DE)",
@@ -597,10 +615,17 @@
     "Gebze": 1,
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
-    "Amsterdam (NL)": 3,
+    "Amsterdam (NL)": 4,
     "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Amsterdam (NL)_oyf2",
+      "device": "Mobil 📱",
+      "city": "Amsterdam (NL)",
+      "page": "/",
+      "lastSeen": 1795214998375
+    },
     {
       "id": "Android 📱_İzmit_3j66",
       "device": "Android 📱",
