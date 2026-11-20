@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:05",
       "name": "İzel",
@@ -296,6 +305,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:04",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Frankfurt am Main (DE)",
@@ -410,9 +428,16 @@
     "San Jose (US)": 1,
     "London (GB)": 1,
     "Adapazarı": 3,
-    "Frankfurt am Main (DE)": 1
+    "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Frankfurt am Main (DE)_9cco",
+      "device": "Mobil 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795187119978
+    },
     {
       "id": "iPhone 📱_Sakarya_30s3",
       "device": "iPhone 📱",
