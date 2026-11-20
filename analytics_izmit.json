@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 34,
-  "totalWaClicks": 73,
+  "totalWaClicks": 74,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -67,10 +67,20 @@
     "Açelya": 1,
     "açelya": 1,
     "VIP Escort": 2,
-    "vip escort": 2
+    "vip escort": 2,
+    "Melisa": 1,
+    "melisa": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:20",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:20",
       "name": "Melis",
@@ -727,17 +737,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:38",
-      "name": "Melis",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:20",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:20",
       "name": "Melis",
@@ -1640,6 +1650,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_q4xw",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195235953
+    },
     {
       "id": "iPhone 📱_İzmit_irny",
       "device": "iPhone 📱",
