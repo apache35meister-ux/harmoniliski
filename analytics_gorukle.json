@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 263,
+  "totalVisits": 264,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Manila (PH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:34",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:31",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Manila (PH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:34",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Derby (GB)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:31",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1659,9 +1659,17 @@
     "Baltimore (US)": 1,
     "Auburndale (US)": 1,
     "San Isidro (PE)": 1,
-    "Derby (GB)": 1
+    "Derby (GB)": 1,
+    "Manila (PH)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Manila (PH)_w8ub",
+      "device": "Mobil 📱",
+      "city": "Manila (PH)",
+      "page": "/",
+      "lastSeen": 1795142275761
+    },
     {
       "id": "Mobil 📱_Derby (GB)_acit",
       "device": "Mobil 📱",
