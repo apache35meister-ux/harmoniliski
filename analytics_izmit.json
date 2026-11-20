@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 23,
-  "totalWaClicks": 59,
+  "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -61,10 +61,20 @@
     "Tuğçe": 1,
     "tuğçe": 1,
     "Buket": 2,
-    "buket": 2
+    "buket": 2,
+    "Ayşen": 1,
+    "ayşen": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:02",
+      "name": "Ayşen",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:02",
       "name": "Ziyaretçi (Android 📱)",
@@ -717,18 +727,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "16:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:02",
+      "name": "Ayşen",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:02",
       "name": "Tuba",
@@ -1421,6 +1430,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_puyf",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795190536593
+    },
+    {
       "id": "Android 📱_Köseköy_xz3e",
       "device": "Android 📱",
       "city": "Köseköy",
@@ -1482,13 +1498,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795190421525
-    },
-    {
-      "id": "Android 📱_İzmit_s58b",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795190355940
     }
   ]
 }
