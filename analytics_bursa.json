@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 141,
+  "totalVisits": 142,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Olinda (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -750,14 +759,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:58",
-      "name": "İlayda",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1403,6 +1404,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Olinda (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2113,15 +2123,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:47",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2143,9 +2144,17 @@
     "Corrientes (AR)": 1,
     "Fresno (US)": 1,
     "Sivas": 1,
-    "Kâhta": 1
+    "Kâhta": 1,
+    "Olinda (BR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Olinda (BR)_0rjs",
+      "device": "Mobil 📱",
+      "city": "Olinda (BR)",
+      "page": "/",
+      "lastSeen": 1795136959018
+    },
     {
       "id": "Mobil 📱_Kâhta_t5rm",
       "device": "Mobil 📱",
