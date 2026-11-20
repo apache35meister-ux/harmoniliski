@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 227,
-  "totalWaClicks": 153,
+  "totalWaClicks": 154,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 22,
-    "selin": 22,
+    "Selin": 23,
+    "selin": 23,
     "Melis": 11,
     "melis": 11,
     "Begüm": 5,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:24",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:24",
       "name": "Nehir",
@@ -783,18 +791,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Chicago (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:24",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:24",
       "name": "Nehir",
@@ -1421,14 +1428,6 @@
     },
     {
       "time": "18:23",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:22",
       "name": "Sinem",
       "city": "Bursa",
       "device": "Android 📱",
@@ -2211,6 +2210,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_15ps",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795159459727
+    },
+    {
       "id": "Android 📱_İzmit_1b9x",
       "device": "Android 📱",
       "city": "İzmit",
@@ -2237,13 +2243,6 @@
       "city": "İzmit",
       "page": "/",
       "lastSeen": 1795159288611
-    },
-    {
-      "id": "Android 📱_İzmit_hmcm",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795159273375
     }
   ]
 }
