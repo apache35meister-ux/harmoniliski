@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 16,
+  "totalVisits": 17,
   "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:45",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:45",
       "name": "Sabina",
@@ -772,6 +781,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:45",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:44",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Köseköy",
@@ -921,10 +939,17 @@
     "İstanbul": 5,
     "Bursa": 1,
     "Brussels (BE)": 1,
-    "Köseköy": 5,
+    "Köseköy": 6,
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Köseköy_1o3s",
+      "device": "Android 📱",
+      "city": "Köseköy",
+      "page": "/yahya-kaptan-eskort.html",
+      "lastSeen": 1795189529770
+    },
     {
       "id": "iPhone 📱_İzmit_c3bw",
       "device": "iPhone 📱",
@@ -980,20 +1005,6 @@
       "city": "Milan (IT)",
       "page": "Ana Sayfa",
       "lastSeen": 1795189359078
-    },
-    {
-      "id": "Android 📱_İzmit_id7p",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189344529
-    },
-    {
-      "id": "Android 📱_Köseköy_ea0r",
-      "device": "Android 📱",
-      "city": "Köseköy",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189336196
     }
   ]
 }
