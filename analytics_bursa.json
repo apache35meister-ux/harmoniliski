@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 210,
+  "totalVisits": 211,
   "totalWaClicks": 130,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:16",
       "name": "Ziyaretçi (Android 📱)",
@@ -755,14 +764,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:16",
-      "name": "Ceren",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1408,6 +1409,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:16",
       "name": "Ziyaretçi (Android 📱)",
@@ -2118,20 +2128,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Port of Spain (TT)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 107,
-    "Bursa": 41,
+    "Bursa": 42,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2185,18 +2186,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Gaziantep_qjoi",
-      "device": "Android 📱",
-      "city": "Gaziantep",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795162585635
-    },
-    {
-      "id": "Mobil 📱_Gaziantep_m4pu",
+      "id": "Mobil 📱_Bursa_mjv4",
       "device": "Mobil 📱",
-      "city": "Gaziantep",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795162419822
+      "lastSeen": 1795163103880
     }
   ]
 }
