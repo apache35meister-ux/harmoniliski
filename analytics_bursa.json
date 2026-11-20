@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 45,
-  "totalWaClicks": 40,
+  "totalWaClicks": 41,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
     "su": 1,
-    "Rus ESC": 4,
-    "rus esc": 4,
+    "Rus ESC": 5,
+    "rus esc": 5,
     "Hale": 6,
     "hale": 6,
     "VIP Escort": 4,
@@ -46,6 +46,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:05",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:04",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -719,17 +727,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:09",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:05",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:51",
       "name": "Serap",
@@ -1472,6 +1480,13 @@
     "Yalova": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_z5jm",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795205138206
+    },
     {
       "id": "Mobil 📱_Yalova_ym0v",
       "device": "Mobil 📱",
