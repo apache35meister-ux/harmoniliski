@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 18,
-  "totalWaClicks": 27,
+  "totalWaClicks": 28,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -16,8 +16,8 @@
     "açelya": 3,
     "Gül": 2,
     "gül": 2,
-    "İzel": 1,
-    "i̇zel": 1,
+    "İzel": 2,
+    "i̇zel": 2,
     "Eylül": 1,
     "eylül": 1,
     "Melis": 1,
@@ -38,6 +38,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:10",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:10",
       "name": "Tuba",
@@ -418,6 +426,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:10",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:10",
       "name": "Tuba",
@@ -808,6 +824,13 @@
     "Milan (IT)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_lqk2",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795194633800
+    },
     {
       "id": "Masaüstü 💻_Bursa / Kent Meydanı_5rcr",
       "device": "Masaüstü 💻",
