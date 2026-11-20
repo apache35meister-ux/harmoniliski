@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 234,
-  "totalWaClicks": 158,
+  "totalWaClicks": 159,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -26,8 +26,8 @@
     "dila": 3,
     "Selin": 21,
     "selin": 21,
-    "Açelya": 13,
-    "açelya": 13,
+    "Açelya": 14,
+    "açelya": 14,
     "Gül": 12,
     "gül": 12,
     "Rus ESC": 7,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:48",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:47",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -749,17 +757,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:14",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:48",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:45",
       "name": "Melisa",
@@ -1390,14 +1398,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:03",
-      "name": "Melisa",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2182,25 +2182,18 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_l8zi",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175335777
+    },
+    {
       "id": "iPhone 📱_İznik_hlyw",
       "device": "iPhone 📱",
       "city": "İznik",
       "page": "/",
       "lastSeen": 1795175268423
-    },
-    {
-      "id": "Android 📱_Bursa_rc6p",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795175105154
-    },
-    {
-      "id": "Masaüstü 💻_Dallas (US)_ilhk",
-      "device": "Masaüstü 💻",
-      "city": "Dallas (US)",
-      "page": "/",
-      "lastSeen": 1795175102629
     }
   ]
 }
