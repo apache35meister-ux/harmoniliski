@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 69,
+  "totalVisits": 70,
   "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:34",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Clinton (US)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/edirne-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -725,15 +734,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:44",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/kestel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -947,6 +947,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:34",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Clinton (US)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/edirne-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1588,15 +1597,16 @@
     "Santo Domingo (DO)": 1,
     "Johannesburg (ZA)": 1,
     "Ereğli": 1,
-    "San Antonio (US)": 1
+    "San Antonio (US)": 1,
+    "Clinton (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_San Antonio (US)_c6x7",
-      "device": "Mobil 📱",
-      "city": "San Antonio (US)",
-      "page": "/",
-      "lastSeen": 1795148005282
+      "id": "Android 📱_Clinton (US)_5g3o",
+      "device": "Android 📱",
+      "city": "Clinton (US)",
+      "page": "/edirne-eskort.html",
+      "lastSeen": 1795149251294
     }
   ]
 }
