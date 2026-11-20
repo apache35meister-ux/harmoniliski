@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 32,
+  "totalVisits": 33,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:29",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:09",
       "name": "Ziyaretçi (Android 📱)",
@@ -831,6 +840,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:29",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:09",
       "name": "Ziyaretçi (Android 📱)",
       "city": "İstanbul",
@@ -1124,7 +1142,7 @@
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1,
-    "Adapazarı": 3,
+    "Adapazarı": 4,
     "Frankfurt am Main (DE)": 3,
     "Milan (IT)": 1,
     "İzmir": 1,
@@ -1133,25 +1151,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İstanbul_5znq",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/hendek-eskort.html",
-      "lastSeen": 1795198199190
-    },
-    {
-      "id": "Android 📱_Sakarya_lzzg",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795198023787
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ccv0",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
+      "id": "iPhone 📱_Adapazarı_iq2q",
+      "device": "iPhone 📱",
+      "city": "Adapazarı",
       "page": "/",
-      "lastSeen": 1795198019322
+      "lastSeen": 1795199342479
     }
   ]
 }
