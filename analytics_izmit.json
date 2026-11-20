@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 59,
-  "totalWaClicks": 101,
+  "totalVisits": 60,
+  "totalWaClicks": 102,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -16,8 +16,8 @@
     "damla": 6,
     "Nehir": 4,
     "nehir": 4,
-    "Eylül": 6,
-    "eylül": 6,
+    "Eylül": 7,
+    "eylül": 7,
     "Şebnem": 2,
     "şebnem": 2,
     "Serap": 1,
@@ -89,6 +89,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:42",
+      "name": "Eylül",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:41",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -748,26 +765,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:02",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Köseköy",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/alikahya-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:02",
-      "name": "Tuba",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:42",
+      "name": "Eylül",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:41",
       "name": "Yaren",
@@ -1399,17 +1407,18 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:39",
-      "name": "Kumsal",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:41",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1944,7 +1953,7 @@
   ],
   "cityCounts": {
     "İzmit": 5,
-    "İstanbul": 29,
+    "İstanbul": 30,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -1954,6 +1963,20 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_lrtp",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795200126774
+    },
+    {
+      "id": "Mobil 📱_İstanbul_kr3o",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795200123141
+    },
     {
       "id": "iPhone 📱_Gebze_ezlu",
       "device": "iPhone 📱",
