@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 184,
+  "totalVisits": 185,
   "totalWaClicks": 118,
   "totalCalls": 0,
   "tClicks": {
@@ -67,6 +67,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Marrakesh (MA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:41",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -745,15 +754,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gaziantep",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1399,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Marrakesh (MA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:41",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2109,15 +2118,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:41",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2158,9 +2158,17 @@
     "Oudeschip (NL)": 1,
     "Boynton Beach (US)": 1,
     "Jaipur (IN)": 1,
-    "Johannesburg (ZA)": 1
+    "Johannesburg (ZA)": 1,
+    "Marrakesh (MA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Marrakesh (MA)_7qlm",
+      "device": "Mobil 📱",
+      "city": "Marrakesh (MA)",
+      "page": "/",
+      "lastSeen": 1795153370486
+    },
     {
       "id": "Mobil 📱_Johannesburg (ZA)_7gex",
       "device": "Mobil 📱",
