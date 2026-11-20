@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 5,
-  "totalWaClicks": 7,
+  "totalWaClicks": 8,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -13,10 +13,20 @@
     "VIP Escort": 2,
     "vip escort": 2,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "Gül": 1,
+    "gül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:22",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:22",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -120,6 +130,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:22",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:22",
       "name": "Açelya",
@@ -230,6 +248,13 @@
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_zdtm",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795188148380
+    },
     {
       "id": "Mobil 📱_Bursa_fciw",
       "device": "Mobil 📱",
