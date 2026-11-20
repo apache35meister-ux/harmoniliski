@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180634718,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:01",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/balat-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:00",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -84,6 +93,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:01",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/balat-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:00",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bursa",
@@ -121,9 +139,16 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 4
+    "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_us1y",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/balat-eskort.html",
+      "lastSeen": 1795190500017
+    },
     {
       "id": "Mobil 📱_Bursa_umxq",
       "device": "Mobil 📱",
