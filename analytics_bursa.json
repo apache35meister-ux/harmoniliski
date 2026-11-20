@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 246,
+  "totalVisits": 247,
   "totalWaClicks": 170,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Alanyurt",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -748,14 +757,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:03",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1401,6 +1402,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Alanyurt",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2111,15 +2121,6 @@
       "device": "iPhone 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2177,22 +2178,23 @@
     "Şanlıurfa": 2,
     "Selçuk": 2,
     "Dallas (US)": 1,
-    "İznik": 4
+    "İznik": 4,
+    "Alanyurt": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Alanyurt_fwvv",
+      "device": "Mobil 📱",
+      "city": "Alanyurt",
+      "page": "/",
+      "lastSeen": 1795179437753
+    },
     {
       "id": "Mobil 📱_İzmir_2051",
       "device": "Mobil 📱",
       "city": "İzmir",
       "page": "/ozluce-eskort.html",
       "lastSeen": 1795179284140
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ol53",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795179161522
     }
   ]
 }
