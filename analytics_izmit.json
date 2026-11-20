@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 228,
-  "totalWaClicks": 154,
+  "totalWaClicks": 155,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 23,
@@ -56,8 +56,8 @@
     "ebru": 1,
     "Zeynep": 1,
     "zeynep": 1,
-    "Açelya": 7,
-    "açelya": 7,
+    "Açelya": 8,
+    "açelya": 8,
     "Rus ESC": 9,
     "rus esc": 9,
     "Gül": 7,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:29",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -782,18 +790,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:31",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "San Isidro (PE)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:29",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:24",
       "name": "Selin",
@@ -1421,14 +1428,6 @@
     {
       "time": "18:24",
       "name": "Su",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:23",
-      "name": "Sinem",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
@@ -2209,6 +2208,13 @@
     "Oakville (CA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_kq04",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795159795893
+    },
     {
       "id": "Mobil 📱_İstanbul_gt8w",
       "device": "Mobil 📱",
