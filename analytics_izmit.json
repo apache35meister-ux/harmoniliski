@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 192,
+  "totalVisits": 193,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:59",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -783,14 +792,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:43",
-      "name": "Melis",
-      "city": "İzmit / Bekirpaşa",
-      "device": "Mobil 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1436,6 +1437,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:59",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:54",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2146,15 +2156,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2164,7 +2165,7 @@
     "Amsterdam (NL)": 1,
     "İzmir": 3,
     "Gaziantep": 1,
-    "Ankara": 1,
+    "Ankara": 2,
     "Cochabamba (BO)": 1,
     "Hinesville (US)": 1,
     "Bonney Lake (US)": 1,
@@ -2191,11 +2192,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_k5td",
+      "id": "Mobil 📱_Ankara_gj8i",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Ankara",
       "page": "/",
-      "lastSeen": 1795150451257
+      "lastSeen": 1795150786137
     }
   ]
 }
