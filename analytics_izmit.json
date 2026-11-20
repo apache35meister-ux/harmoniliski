@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 62,
-  "totalWaClicks": 105,
+  "totalWaClicks": 106,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -40,8 +40,8 @@
     "pınar": 1,
     "Seyma Su": 1,
     "seyma su": 1,
-    "Sinem": 1,
-    "sinem": 1,
+    "Sinem": 2,
+    "sinem": 2,
     "Sabina": 1,
     "sabina": 1,
     "Isil": 1,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:44",
+      "name": "Sinem",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:44",
       "name": "Melisa",
@@ -759,18 +767,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:44",
+      "name": "Sinem",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:44",
       "name": "Melisa",
@@ -1402,14 +1409,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:41",
-      "name": "Dila",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1985,6 +1984,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_2n5k",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795200288086
+    },
+    {
       "id": "Android 📱_İzmit_nm8q",
       "device": "Android 📱",
       "city": "İzmit",
@@ -2046,27 +2052,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795200117083
-    },
-    {
-      "id": "iPhone 📱_İzmit_2rac",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200104695
-    },
-    {
-      "id": "Android 📱_İstanbul_2j9m",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/bekirpasa-eskort.html",
-      "lastSeen": 1795200093404
-    },
-    {
-      "id": "iPhone 📱_Gebze_fleo",
-      "device": "iPhone 📱",
-      "city": "Gebze",
-      "page": "/",
-      "lastSeen": 1795200087869
     }
   ]
 }
