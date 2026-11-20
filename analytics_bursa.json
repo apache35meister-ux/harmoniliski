@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 228,
+  "totalVisits": 229,
   "totalWaClicks": 155,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:20",
       "name": "Eylül",
@@ -749,15 +758,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Capiatá (PY)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1403,6 +1403,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:19",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2113,15 +2122,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Mikkeli (FI)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2131,7 +2131,7 @@
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
     "Ankara": 2,
-    "İzmir": 4,
+    "İzmir": 5,
     "Bonao (DO)": 1,
     "Kayseri": 1,
     "Catalão (BR)": 1,
@@ -2179,6 +2179,13 @@
     "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmir_x9rq",
+      "device": "Mobil 📱",
+      "city": "İzmir",
+      "page": "/",
+      "lastSeen": 1795173714029
+    },
     {
       "id": "iPad 📱_Bursa_3y1e",
       "device": "iPad 📱",
