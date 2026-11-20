@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 54,
+  "totalVisits": 55,
   "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:46",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:28",
       "name": "Ziyaretçi (Android 📱)",
@@ -894,6 +903,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:46",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:28",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Port of Spain (TT)",
@@ -1381,7 +1399,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 33,
+    "İstanbul": 34,
     "Bursa": 14,
     "La Lima (HN)": 1,
     "La Paz (BO)": 1,
@@ -1393,11 +1411,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Port of Spain (TT)_v26y",
-      "device": "Android 📱",
-      "city": "Port of Spain (TT)",
-      "page": "/kalkan-eskort.html",
-      "lastSeen": 1795134487141
+      "id": "iPhone 📱_İstanbul_hhqd",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795135594655
     }
   ]
 }
