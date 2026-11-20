@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 237,
-  "totalWaClicks": 158,
+  "totalWaClicks": 159,
   "totalCalls": 0,
   "tClicks": {
-    "Selin": 23,
-    "selin": 23,
+    "Selin": 24,
+    "selin": 24,
     "Melis": 11,
     "melis": 11,
     "Begüm": 5,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:17",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -780,17 +788,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:27",
-      "name": "Nehir",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:17",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:47",
       "name": "Melisa",
@@ -1421,14 +1429,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:33",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2209,6 +2209,13 @@
     "Toronto (CA)": 4
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_l1cd",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795162622329
+    },
     {
       "id": "Mobil 📱_Frankfurt am Main (DE)_i2gc",
       "device": "Mobil 📱",
