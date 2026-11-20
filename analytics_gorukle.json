@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083689695,
   "totalVisits": 288,
-  "totalWaClicks": 17,
+  "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
     "Açelya": 1,
@@ -20,13 +20,21 @@
     "gül": 1,
     "Hale": 2,
     "hale": 2,
-    "Tuba": 1,
-    "tuba": 1,
+    "Tuba": 2,
+    "tuba": 2,
     "Sena": 1,
     "sena": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:24",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -737,18 +745,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Catalão (BR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "07:24",
+      "name": "Tuba",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:13",
       "name": "Damla",
@@ -1685,6 +1692,13 @@
     "Sacramento (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_g4db",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795148696122
+    },
     {
       "id": "Mobil 📱_Sacramento (US)_lg6r",
       "device": "Mobil 📱",
