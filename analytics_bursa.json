@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 183,
+  "totalVisits": 184,
   "totalWaClicks": 118,
   "totalCalls": 0,
   "tClicks": {
@@ -67,6 +67,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:41",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Johannesburg (ZA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:31",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -745,15 +754,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Mullins (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1399,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:41",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Johannesburg (ZA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:31",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2109,15 +2118,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2157,29 +2157,16 @@
     "Singapore (SG)": 3,
     "Oudeschip (NL)": 1,
     "Boynton Beach (US)": 1,
-    "Jaipur (IN)": 1
+    "Jaipur (IN)": 1,
+    "Johannesburg (ZA)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_ak65",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795152663129
-    },
-    {
-      "id": "iPhone 📱_Singapore (SG)_x0hu",
-      "device": "iPhone 📱",
-      "city": "Singapore (SG)",
-      "page": "/",
-      "lastSeen": 1795152587090
-    },
-    {
-      "id": "iPhone 📱_Singapore (SG)_j8pb",
-      "device": "iPhone 📱",
-      "city": "Singapore (SG)",
-      "page": "/",
-      "lastSeen": 1795152514844
+      "id": "Mobil 📱_Johannesburg (ZA)_7gex",
+      "device": "Mobil 📱",
+      "city": "Johannesburg (ZA)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795153278124
     }
   ]
 }
