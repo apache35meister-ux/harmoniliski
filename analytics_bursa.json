@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 113,
-  "totalWaClicks": 78,
+  "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -32,8 +32,8 @@
     "gül": 5,
     "Rus ESC": 5,
     "rus esc": 5,
-    "Melisa": 1,
-    "melisa": 1,
+    "Melisa": 2,
+    "melisa": 2,
     "Hale": 2,
     "hale": 2,
     "Sinem": 1,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:03",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -749,17 +757,17 @@
       "device": "Android 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:10",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "03:03",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:39",
       "name": "Şebnem",
@@ -2113,6 +2121,13 @@
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_j1e1",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795132991212
+    },
     {
       "id": "Mobil 📱_İstanbul_t7m2",
       "device": "Mobil 📱",
