@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 172,
+  "totalVisits": 173,
   "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
@@ -86,6 +86,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -774,14 +783,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:42",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1427,6 +1428,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2137,15 +2147,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:49",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2164,13 +2165,20 @@
     "Chicago (US)": 1,
     "Bandırma": 1,
     "San Isidro (PE)": 1,
-    "İzmit": 2,
+    "İzmit": 3,
     "Council Bluffs (US)": 2,
     "Fort Worth (US)": 1,
     "Cachoeiras de Macacu (BR)": 1,
     "Guayaquil (EC)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmit_9wva",
+      "device": "Mobil 📱",
+      "city": "İzmit",
+      "page": "/",
+      "lastSeen": 1795144126136
+    },
     {
       "id": "Mobil 📱_Guayaquil (EC)_bvjv",
       "device": "Mobil 📱",
