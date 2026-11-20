@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 14,
-  "totalWaClicks": 17,
+  "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -27,10 +27,20 @@
     "Serap": 1,
     "serap": 1,
     "Nihan": 1,
-    "nihan": 1
+    "nihan": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:49",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:48",
       "name": "Nihan",
@@ -295,6 +305,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:49",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:48",
       "name": "Nihan",
@@ -569,6 +587,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_pj73",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795193347440
+    },
     {
       "id": "iPhone 📱_Bursa_dukc",
       "device": "iPhone 📱",
