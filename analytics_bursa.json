@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 26,
-  "totalWaClicks": 32,
+  "totalVisits": 27,
+  "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
     "su": 1,
     "Rus ESC": 3,
     "rus esc": 3,
-    "Hale": 3,
-    "hale": 3,
+    "Hale": 4,
+    "hale": 4,
     "VIP Escort": 4,
     "vip escort": 4,
     "Açelya": 5,
@@ -42,6 +42,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:12",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:12",
       "name": "Açelya",
@@ -536,6 +553,14 @@
   "callLogs": [
     {
       "time": "21:12",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:12",
       "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
@@ -794,6 +819,15 @@
   "cityVisits": [
     {
       "time": "21:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:12",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "London (GB)",
       "country": "Türkiye",
@@ -1029,7 +1063,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 19,
+    "Bursa": 20,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -1037,6 +1071,20 @@
     "London (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_48q0",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795198372481
+    },
+    {
+      "id": "Mobil 📱_Bursa_yz1q",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795198350488
+    },
     {
       "id": "Android 📱_Bursa_hjgf",
       "device": "Android 📱",
