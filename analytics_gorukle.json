@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180634718,
   "totalVisits": 9,
-  "totalWaClicks": 7,
+  "totalWaClicks": 8,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 1,
@@ -14,11 +14,19 @@
     "dila": 1,
     "Lara": 1,
     "lara": 1,
-    "Selin": 2,
-    "selin": 2
+    "Selin": 3,
+    "selin": 3
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:39",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:39",
       "name": "Selin",
@@ -167,6 +175,14 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
+      "time": "20:39",
+      "name": "Selin",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "20:38",
       "name": "Selin",
       "city": "Görükle",
@@ -304,6 +320,13 @@
     "Amsterdam (NL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_n89s",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795196355468
+    },
     {
       "id": "Android 📱_Görükle_zhbt",
       "device": "Android 📱",
