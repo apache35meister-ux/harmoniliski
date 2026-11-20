@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 81,
+  "totalVisits": 82,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -41,6 +41,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:37",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -728,15 +737,6 @@
       "device": "Android 📱",
       "page": "/bakirkoy-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:55",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/cark-caddesi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -982,6 +982,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:37",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1692,15 +1701,6 @@
       "device": "Masaüstü 💻",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:58",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1727,50 +1727,16 @@
     "Secaucus (US)": 1,
     "Ananindeua (BR)": 1,
     "Maceió (BR)": 1,
-    "Zürich (CH)": 3
+    "Zürich (CH)": 3,
+    "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Zürich (CH)_3w4e",
+      "id": "Mobil 📱_Frankfurt am Main (DE)_ygow",
       "device": "Mobil 📱",
-      "city": "Zürich (CH)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795163821961
-    },
-    {
-      "id": "iPhone 📱_Sakarya_h80c",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795163818029
-    },
-    {
-      "id": "iPhone 📱_Sakarya_kng0",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795163801972
-    },
-    {
-      "id": "iPhone 📱_Zürich (CH)_i2r8",
-      "device": "iPhone 📱",
-      "city": "Zürich (CH)",
+      "city": "Frankfurt am Main (DE)",
       "page": "/",
-      "lastSeen": 1795163780164
-    },
-    {
-      "id": "Android 📱_Adapazarı_ens2",
-      "device": "Android 📱",
-      "city": "Adapazarı",
-      "page": "/muratpasa-eskort.html",
-      "lastSeen": 1795163646959
-    },
-    {
-      "id": "iPhone 📱_Sakarya_vy34",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795163645272
+      "lastSeen": 1795167463203
     }
   ]
 }
