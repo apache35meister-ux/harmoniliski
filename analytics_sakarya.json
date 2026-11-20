@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 80,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -20,8 +20,8 @@
     "lara": 1,
     "Damla": 5,
     "damla": 5,
-    "Selin": 1,
-    "selin": 1,
+    "Selin": 2,
+    "selin": 2,
     "Aylin": 2,
     "aylin": 2,
     "Emel": 1,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:36",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:36",
       "name": "Begüm",
@@ -728,17 +736,17 @@
       "device": "iPhone 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:54",
-      "name": "Merve",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:36",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:36",
       "name": "Begüm",
@@ -1722,6 +1730,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Sakarya_h80c",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795163818029
+    },
+    {
       "id": "iPhone 📱_Sakarya_kng0",
       "device": "iPhone 📱",
       "city": "Sakarya",
@@ -1748,13 +1763,6 @@
       "city": "Sakarya",
       "page": "Ana Sayfa",
       "lastSeen": 1795163645272
-    },
-    {
-      "id": "iPhone 📱_Zürich (CH)_pasj",
-      "device": "iPhone 📱",
-      "city": "Zürich (CH)",
-      "page": "/",
-      "lastSeen": 1795163627298
     }
   ]
 }
