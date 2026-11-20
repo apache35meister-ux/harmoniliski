@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 196,
+  "totalVisits": 197,
   "totalWaClicks": 122,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Chicago (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:36",
       "name": "Gül",
@@ -744,14 +753,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:02",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1397,6 +1398,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Chicago (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:36",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2107,15 +2117,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:08",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2164,9 +2165,17 @@
     "Çivril": 1,
     "New York City (US)": 1,
     "Lindsay (CA)": 1,
-    "Santa Clara (US)": 1
+    "Santa Clara (US)": 1,
+    "Chicago (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Chicago (US)_0ic3",
+      "device": "Mobil 📱",
+      "city": "Chicago (US)",
+      "page": "/",
+      "lastSeen": 1795156764062
+    },
     {
       "id": "iPhone 📱_Bursa_c4jr",
       "device": "iPhone 📱",
