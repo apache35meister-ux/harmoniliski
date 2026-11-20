@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 17,
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
@@ -25,10 +25,20 @@
     "Hale": 1,
     "hale": 1,
     "Tuba": 1,
-    "tuba": 1
+    "tuba": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:59",
+      "name": "İlayda",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:59",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -328,6 +338,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "01:59",
+      "name": "İlayda",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:49",
       "name": "Selin",
@@ -637,6 +655,13 @@
     "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_62dl",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795215587906
+    },
     {
       "id": "iPhone 📱_İstanbul_nytk",
       "device": "iPhone 📱",
