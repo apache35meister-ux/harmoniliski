@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 250,
+  "totalVisits": 251,
   "totalWaClicks": 168,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:14",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Council Bluffs (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:40",
       "name": "Selin",
@@ -771,15 +780,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Jaipur (IN)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1425,6 +1425,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:14",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Council Bluffs (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:39",
       "name": "Ziyaretçi (Android 📱)",
@@ -2135,15 +2144,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2163,7 +2163,7 @@
     "Bandırma": 1,
     "San Isidro (PE)": 1,
     "İzmit": 6,
-    "Council Bluffs (US)": 2,
+    "Council Bluffs (US)": 3,
     "Fort Worth (US)": 1,
     "Cachoeiras de Macacu (BR)": 1,
     "Guayaquil (EC)": 1,
@@ -2204,46 +2204,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_c2fi",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795171202298
-    },
-    {
-      "id": "Android 📱_İzmit_w9u4",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795171187236
-    },
-    {
-      "id": "Android 📱_İstanbul_ukfh",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795171172333
-    },
-    {
-      "id": "Android 📱_İzmit_ub26",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795171167906
-    },
-    {
-      "id": "Android 📱_İzmit_i9mm",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795171132459
-    },
-    {
-      "id": "Android 📱_İstanbul_1yvl",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795171095378
+      "id": "Mobil 📱_Council Bluffs (US)_ovi6",
+      "device": "Mobil 📱",
+      "city": "Council Bluffs (US)",
+      "page": "/",
+      "lastSeen": 1795173290088
     }
   ]
 }
