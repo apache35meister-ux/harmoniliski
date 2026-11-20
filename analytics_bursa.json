@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 233,
-  "totalWaClicks": 157,
+  "totalWaClicks": 158,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -32,8 +32,8 @@
     "gül": 12,
     "Rus ESC": 7,
     "rus esc": 7,
-    "Melisa": 5,
-    "melisa": 5,
+    "Melisa": 6,
+    "melisa": 6,
     "Hale": 4,
     "hale": 4,
     "Sinem": 4,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:45",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -749,18 +757,17 @@
       "device": "iPhone 📱",
       "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:08",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Kota (IN)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:45",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:43",
       "name": "Damla",
@@ -1391,14 +1398,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:39",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2181,6 +2180,13 @@
     "Dallas (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_rc6p",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175105154
+    },
     {
       "id": "Masaüstü 💻_Dallas (US)_ilhk",
       "device": "Masaüstü 💻",
