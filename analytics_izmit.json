@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 166,
-  "totalWaClicks": 138,
+  "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
@@ -80,10 +80,20 @@
     "yeliz": 1,
     "1794900000005": 2,
     "Merve": 1,
-    "merve": 1
+    "merve": 1,
+    "Yaren": 1,
+    "yaren": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:35",
+      "name": "Yaren",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -768,17 +778,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:34",
-      "name": "Begüm",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "05:35",
+      "name": "Yaren",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "04:40",
       "name": "Merve",
@@ -1409,14 +1419,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:55",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2162,18 +2164,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_5e5a",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795142110849
+    },
+    {
       "id": "Mobil 📱_İzmit_202r",
       "device": "Mobil 📱",
       "city": "İzmit",
       "page": "/",
       "lastSeen": 1795142061917
-    },
-    {
-      "id": "Mobil 📱_San Isidro (PE)_4h72",
-      "device": "Mobil 📱",
-      "city": "San Isidro (PE)",
-      "page": "/",
-      "lastSeen": 1795141889921
     }
   ]
 }
