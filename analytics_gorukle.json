@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 266,
+  "totalVisits": 267,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Caruaru (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:42",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:37",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Caruaru (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:42",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Dallas (US)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:37",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1662,22 +1662,16 @@
     "Derby (GB)": 1,
     "Manila (PH)": 1,
     "Lynchburg (US)": 1,
-    "Dallas (US)": 1
+    "Dallas (US)": 1,
+    "Caruaru (BR)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Dallas (US)_3oq1",
+      "id": "Mobil 📱_Caruaru (BR)_lefe",
       "device": "Mobil 📱",
-      "city": "Dallas (US)",
+      "city": "Caruaru (BR)",
       "page": "/",
-      "lastSeen": 1795142535040
-    },
-    {
-      "id": "Mobil 📱_Lynchburg (US)_v1nz",
-      "device": "Mobil 📱",
-      "city": "Lynchburg (US)",
-      "page": "/",
-      "lastSeen": 1795142426116
+      "lastSeen": 1795143315909
     }
   ]
 }
