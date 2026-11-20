@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 39,
+  "totalVisits": 40,
   "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
@@ -75,6 +75,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:04",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:46",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -733,14 +742,6 @@
       "device": "Android 📱",
       "page": "/yahya-kaptan-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:41",
-      "name": "Dila",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1379,6 +1380,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:04",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:46",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Frankfurt am Main (DE)",
@@ -1732,7 +1742,7 @@
   ],
   "cityCounts": {
     "İzmit": 4,
-    "İstanbul": 13,
+    "İstanbul": 14,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -1741,18 +1751,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Frankfurt am Main (DE)_h8pv",
+      "id": "iPhone 📱_İstanbul_qeg4",
       "device": "iPhone 📱",
-      "city": "Frankfurt am Main (DE)",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795196776034
-    },
-    {
-      "id": "iPhone 📱_Frankfurt am Main (DE)_qeet",
-      "device": "iPhone 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/",
-      "lastSeen": 1795196691646
+      "lastSeen": 1795197854315
     }
   ]
 }
