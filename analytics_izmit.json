@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 188,
+  "totalVisits": 189,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Kilis",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:40",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -780,15 +789,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:40",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1434,6 +1434,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Kilis",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:40",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2144,15 +2153,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:30",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2176,7 +2176,7 @@
     "Fort Worth (US)": 1,
     "Cachoeiras de Macacu (BR)": 1,
     "Guayaquil (EC)": 1,
-    "Kilis": 1,
+    "Kilis": 2,
     "Dallas (US)": 1,
     "Anseong (KR)": 1,
     "Giesen (DE)": 1,
@@ -2188,18 +2188,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_eywd",
+      "id": "Mobil 📱_Kilis_1bug",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Kilis",
       "page": "/",
-      "lastSeen": 1795149628871
-    },
-    {
-      "id": "Mobil 📱_İzmir_pw11",
-      "device": "Mobil 📱",
-      "city": "İzmir",
-      "page": "/",
-      "lastSeen": 1795149535967
+      "lastSeen": 1795149851581
     }
   ]
 }
