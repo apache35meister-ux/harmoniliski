@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 32,
-  "totalWaClicks": 70,
+  "totalWaClicks": 71,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
     "tuba": 2,
-    "Selin": 15,
-    "selin": 15,
+    "Selin": 16,
+    "selin": 16,
     "Lara": 3,
     "lara": 3,
     "Hale": 3,
@@ -71,6 +71,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:16",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -726,17 +734,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:32",
-      "name": "Şebnem",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:16",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:56",
       "name": "Selin",
@@ -1597,6 +1605,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_4gd9",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795194995651
+    },
     {
       "id": "Mobil 📱_İstanbul_r32n",
       "device": "Mobil 📱",
