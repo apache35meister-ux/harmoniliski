@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 27,
+  "totalVisits": 28,
   "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:12",
       "name": "Hale",
@@ -828,6 +837,15 @@
     },
     {
       "time": "21:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:12",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "London (GB)",
       "country": "Türkiye",
@@ -1063,7 +1081,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 20,
+    "Bursa": 21,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -1071,6 +1089,13 @@
     "London (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_al83",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795198376907
+    },
     {
       "id": "Android 📱_Bursa_48q0",
       "device": "Android 📱",
