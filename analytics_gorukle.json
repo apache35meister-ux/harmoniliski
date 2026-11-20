@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 265,
+  "totalVisits": 266,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:40",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:40",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Lynchburg (US)",
@@ -1597,15 +1606,6 @@
       "device": "Android 📱",
       "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1661,22 +1661,23 @@
     "San Isidro (PE)": 1,
     "Derby (GB)": 1,
     "Manila (PH)": 1,
-    "Lynchburg (US)": 1
+    "Lynchburg (US)": 1,
+    "Dallas (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Dallas (US)_3oq1",
+      "device": "Mobil 📱",
+      "city": "Dallas (US)",
+      "page": "/",
+      "lastSeen": 1795142535040
+    },
     {
       "id": "Mobil 📱_Lynchburg (US)_v1nz",
       "device": "Mobil 📱",
       "city": "Lynchburg (US)",
       "page": "/",
       "lastSeen": 1795142426116
-    },
-    {
-      "id": "Mobil 📱_Manila (PH)_w8ub",
-      "device": "Mobil 📱",
-      "city": "Manila (PH)",
-      "page": "/",
-      "lastSeen": 1795142275761
     }
   ]
 }
