@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 214,
+  "totalVisits": 215,
   "totalWaClicks": 133,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:53",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -758,15 +767,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gebze",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1412,6 +1412,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:53",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2122,20 +2131,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Richmond (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 107,
-    "Bursa": 44,
+    "Bursa": 45,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2189,39 +2189,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_b2nw",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795164821032
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_hkyx",
-      "device": "Masaüstü 💻",
+      "id": "Mobil 📱_Bursa_izih",
+      "device": "Mobil 📱",
       "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1795164816390
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Özlüce_u8n9",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Özlüce",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795164816388
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Özlüce_g9zz",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Özlüce",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795164816388
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_9xcn",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795164758596
+      "lastSeen": 1795165468315
     }
   ]
 }
