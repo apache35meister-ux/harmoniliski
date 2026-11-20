@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 54,
-  "totalWaClicks": 95,
+  "totalWaClicks": 96,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -81,10 +81,20 @@
     "Hazal": 1,
     "hazal": 1,
     "Rüya": 1,
-    "rüya": 1
+    "rüya": 1,
+    "Lina": 1,
+    "lina": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:35",
+      "name": "Lina",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:34",
       "name": "Zeynep",
@@ -751,17 +761,17 @@
       "device": "Android 📱",
       "page": "/alikahya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "18:53",
-      "name": "Damla",
+      "time": "21:35",
+      "name": "Lina",
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "21:34",
       "name": "Zeynep",
@@ -1393,14 +1403,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:33",
-      "name": "Serap",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1902,6 +1904,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_s24p",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795199700143
+    },
     {
       "id": "Android 📱_İzmit_7atp",
       "device": "Android 📱",
