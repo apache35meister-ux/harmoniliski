@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 76,
-  "totalWaClicks": 121,
+  "totalWaClicks": 122,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -89,10 +89,20 @@
     "Sena": 2,
     "sena": 2,
     "Melike": 1,
-    "melike": 1
+    "melike": 1,
+    "Nergis": 1,
+    "nergis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:29",
+      "name": "Nergis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:29",
       "name": "Ziyaretçi (Android 📱)",
@@ -761,18 +771,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:46",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:29",
+      "name": "Nergis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:38",
       "name": "Melike",
@@ -1403,14 +1412,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:47",
-      "name": "Lara",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2112,6 +2113,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_7ebz",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795206549515
+    },
     {
       "id": "Android 📱_İstanbul_bgby",
       "device": "Android 📱",
