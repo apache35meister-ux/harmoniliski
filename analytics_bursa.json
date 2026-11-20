@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 120,
+  "totalVisits": 122,
   "totalWaClicks": 84,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:19",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:19",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:18",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -737,24 +755,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:05",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1400,6 +1400,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:19",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:19",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:18",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2101,34 +2119,31 @@
       "device": "Android 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:51",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:49",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/osmangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 102,
+    "İstanbul": 103,
     "Bursa": 14,
     "Türkiye": 2,
     "Rome (IT)": 1,
-    "La Lima (HN)": 1
+    "La Lima (HN)": 1,
+    "Ankara": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_cak5",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/gorukle-eskort.html",
+      "lastSeen": 1795133944873
+    },
+    {
+      "id": "Mobil 📱_Ankara_ke7i",
+      "device": "Mobil 📱",
+      "city": "Ankara",
+      "page": "/",
+      "lastSeen": 1795133940989
+    },
     {
       "id": "Mobil 📱_La Lima (HN)_ja0a",
       "device": "Mobil 📱",
