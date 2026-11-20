@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180634718,
   "totalVisits": 9,
-  "totalWaClicks": 11,
+  "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 1,
@@ -19,10 +19,20 @@
     "Damla": 2,
     "damla": 2,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "Eylül": 1,
+    "eylül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:39",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:39",
       "name": "Açelya",
@@ -194,6 +204,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:39",
+      "name": "Eylül",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:39",
       "name": "Açelya",
@@ -372,6 +390,13 @@
     "Amsterdam (NL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_h1em",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795196387954
+    },
     {
       "id": "Android 📱_Görükle_0t7i",
       "device": "Android 📱",
