@@ -1,16 +1,26 @@
 {
   "resetEpoch": 1795180634718,
   "totalVisits": 5,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 1,
     "i̇layda": 1,
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "👑 Balat — Lüks Siteler & Çevre Yolu Profilleri": 1,
+    "👑 balat — lüks siteler & çevre yolu profilleri": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:01",
+      "name": "👑 Balat — Lüks Siteler & Çevre Yolu Profilleri",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:01",
       "name": "Ziyaretçi (Android 📱)",
@@ -74,6 +84,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:01",
+      "name": "👑 Balat — Lüks Siteler & Çevre Yolu Profilleri",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:54",
       "name": "Melis",
@@ -142,6 +160,13 @@
     "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_ph1b",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795190508708
+    },
     {
       "id": "Android 📱_Bursa_us1y",
       "device": "Android 📱",
