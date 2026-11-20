@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 272,
+  "totalVisits": 273,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fethiye",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:04",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:46",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fethiye",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:04",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Melbourne (AU)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:46",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1668,9 +1668,17 @@
     "Santiago (CL)": 1,
     "Cleveland (US)": 1,
     "Stuart (US)": 1,
-    "Melbourne (AU)": 1
+    "Melbourne (AU)": 1,
+    "Fethiye": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Fethiye_qarc",
+      "device": "Mobil 📱",
+      "city": "Fethiye",
+      "page": "/",
+      "lastSeen": 1795143903595
+    },
     {
       "id": "Mobil 📱_Melbourne (AU)_yoit",
       "device": "Mobil 📱",
