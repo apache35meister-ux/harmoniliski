@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 52,
-  "totalWaClicks": 22,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -29,10 +29,20 @@
     "Hazal": 1,
     "hazal": 1,
     "Sinem": 1,
-    "sinem": 1
+    "sinem": 1,
+    "İzel": 1,
+    "i̇zel": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:13",
+      "name": "İzel",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:10",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -679,6 +689,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "03:13",
+      "name": "İzel",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:01",
       "name": "Sinem",
@@ -1338,32 +1356,18 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Sakarya_2eix",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795133614966
+    },
+    {
       "id": "Mobil 📱_Rome (IT)_m6ps",
       "device": "Mobil 📱",
       "city": "Rome (IT)",
       "page": "/",
       "lastSeen": 1795133453513
-    },
-    {
-      "id": "iPhone 📱_Singapore (SG)_fcav",
-      "device": "iPhone 📱",
-      "city": "Singapore (SG)",
-      "page": "/",
-      "lastSeen": 1795133422625
-    },
-    {
-      "id": "Mobil 📱_Santa Inês (BR)_k9fj",
-      "device": "Mobil 📱",
-      "city": "Santa Inês (BR)",
-      "page": "/",
-      "lastSeen": 1795133352705
-    },
-    {
-      "id": "Android 📱_Kentwood (US)_sst8",
-      "device": "Android 📱",
-      "city": "Kentwood (US)",
-      "page": "/serdivan-eskort.html",
-      "lastSeen": 1795133331646
     }
   ]
 }
