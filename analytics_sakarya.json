@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 13,
-  "totalWaClicks": 12,
+  "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 1,
@@ -22,11 +22,19 @@
     "i̇zel": 1,
     "Açelya": 1,
     "açelya": 1,
-    "Sena": 1,
-    "sena": 1
+    "Sena": 2,
+    "sena": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:05",
+      "name": "Sena",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:05",
       "name": "Sena",
@@ -252,6 +260,14 @@
     },
     {
       "time": "18:05",
+      "name": "Sena",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "18:05",
       "name": "Açelya",
       "city": "Sakarya",
       "device": "iPhone 📱",
@@ -467,6 +483,13 @@
     "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_ql8m",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795187141772
+    },
     {
       "id": "iPhone 📱_Sakarya_i1th",
       "device": "iPhone 📱",
