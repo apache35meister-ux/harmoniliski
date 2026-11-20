@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 72,
+  "totalVisits": 73,
   "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:57",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -726,15 +735,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:21",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -948,6 +948,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:57",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1598,7 +1607,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 35,
+    "İstanbul": 36,
     "Bursa": 14,
     "La Lima (HN)": 1,
     "La Paz (BO)": 1,
@@ -1623,11 +1632,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Ananindeua (BR)_pkc3",
-      "device": "Mobil 📱",
-      "city": "Ananindeua (BR)",
+      "id": "iPhone 📱_İstanbul_1be9",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795153580207
+      "lastSeen": 1795154242819
     }
   ]
 }
