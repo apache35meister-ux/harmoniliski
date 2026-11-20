@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 156,
+  "totalVisits": 157,
   "totalWaClicks": 100,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Round Rock (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:20",
       "name": "Melisa",
@@ -745,14 +754,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:29",
-      "name": "Nihan",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1398,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Round Rock (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2108,15 +2118,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2146,92 +2147,16 @@
     "Loudwater (GB)": 1,
     "Natal (BR)": 1,
     "Mikkeli (FI)": 1,
-    "El Paso (US)": 1
+    "El Paso (US)": 1,
+    "Round Rock (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_wjug",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144840243
-    },
-    {
-      "id": "Mobil 📱_Bursa_7v6l",
+      "id": "Mobil 📱_Round Rock (US)_nwj7",
       "device": "Mobil 📱",
-      "city": "Bursa",
+      "city": "Round Rock (US)",
       "page": "/",
-      "lastSeen": 1795144835566
-    },
-    {
-      "id": "Android 📱_Bursa_jiq8",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144824624
-    },
-    {
-      "id": "Android 📱_Bursa_7xfh",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144792477
-    },
-    {
-      "id": "Android 📱_Bursa_ij74",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144775893
-    },
-    {
-      "id": "Android 📱_Bursa_3h33",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144766182
-    },
-    {
-      "id": "Android 📱_Bursa_dkns",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144755128
-    },
-    {
-      "id": "Mobil 📱_Bursa_s1h6",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795144751837
-    },
-    {
-      "id": "Android 📱_Bursa_ebti",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144720261
-    },
-    {
-      "id": "Android 📱_Bursa_652x",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144704278
-    },
-    {
-      "id": "Android 📱_Bursa_xngj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795144692098
-    },
-    {
-      "id": "Mobil 📱_Bursa_io4p",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795144675348
+      "lastSeen": 1795146339249
     }
   ]
 }
