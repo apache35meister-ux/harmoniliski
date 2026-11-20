@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 231,
+  "totalVisits": 232,
   "totalWaClicks": 158,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:51",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -779,15 +788,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1433,6 +1433,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:51",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2143,19 +2152,10 @@
       "device": "Android 📱",
       "page": "/bursa-nilufer-ozluce-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Cochabamba (BO)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 146,
+    "İstanbul": 147,
     "Bursa": 21,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2208,6 +2208,13 @@
     "Angeles City (PH)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_8496",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795161103688
+    },
     {
       "id": "Mobil 📱_Angeles City (PH)_952h",
       "device": "Mobil 📱",
