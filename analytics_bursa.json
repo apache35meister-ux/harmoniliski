@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 235,
-  "totalWaClicks": 160,
+  "totalWaClicks": 161,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
     "test model": 1,
-    "Melis": 6,
-    "melis": 6,
+    "Melis": 7,
+    "melis": 7,
     "Şebnem": 7,
     "şebnem": 7,
     "Yaren": 4,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:51",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:51",
       "name": "Eylül",
@@ -747,18 +755,17 @@
       "device": "iPhone 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:27",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Santa Clara (US)",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:51",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:51",
       "name": "Eylül",
@@ -1389,14 +1396,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:04",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2180,6 +2179,13 @@
     "İznik": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_tu8o",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175480065
+    },
     {
       "id": "iPhone 📱_Bursa_du3y",
       "device": "iPhone 📱",
