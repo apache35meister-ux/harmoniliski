@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 46,
-  "totalWaClicks": 41,
+  "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -28,8 +28,8 @@
     "serap": 2,
     "Nihan": 1,
     "nihan": 1,
-    "İlayda": 1,
-    "i̇layda": 1,
+    "İlayda": 2,
+    "i̇layda": 2,
     "Şebnem": 1,
     "şebnem": 1,
     "1790000000322": 2,
@@ -46,6 +46,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:16",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:15",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -719,18 +727,17 @@
       "device": "Mobil 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:16",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:05",
       "name": "Rus ESC",
@@ -1490,6 +1497,13 @@
     "Yalova": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_jjyd",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795205794205
+    },
     {
       "id": "Mobil 📱_Bursa_2p9x",
       "device": "Mobil 📱",
