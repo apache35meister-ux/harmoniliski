@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 177,
+  "totalVisits": 178,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:43",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:29",
       "name": "Ziyaretçi (Android 📱)",
@@ -777,15 +786,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:07",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1431,6 +1431,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:43",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:29",
       "name": "Ziyaretçi (Android 📱)",
@@ -2141,19 +2150,10 @@
       "device": "Android 📱",
       "page": "/korfez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 135,
+    "İstanbul": 136,
     "Bursa": 18,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2178,32 +2178,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İstanbul_ef4z",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795145367226
-    },
-    {
-      "id": "Android 📱_İzmit_y818",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795145359697
-    },
-    {
-      "id": "Android 📱_İzmit_lre7",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795145266825
-    },
-    {
-      "id": "Mobil 📱_İstanbul_g13c",
+      "id": "Mobil 📱_İstanbul_1kqy",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795145242251
+      "lastSeen": 1795146212165
     }
   ]
 }
