@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 18,
+  "totalVisits": 19,
   "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
@@ -31,6 +31,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:32",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Vienna (AT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:02",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -518,6 +527,15 @@
   ],
   "cityVisits": [
     {
+      "time": "02:32",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Vienna (AT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "02:02",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -686,36 +704,16 @@
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
     "Amsterdam (NL)": 4,
-    "Frankfurt am Main (DE)": 3
+    "Frankfurt am Main (DE)": 3,
+    "Vienna (AT)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_p0jz",
+      "id": "iPhone 📱_Vienna (AT)_wmhy",
       "device": "iPhone 📱",
-      "city": "İstanbul",
+      "city": "Vienna (AT)",
       "page": "/",
-      "lastSeen": 1795215729884
-    },
-    {
-      "id": "iPhone 📱_İzmit_ycdw",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795215661228
-    },
-    {
-      "id": "iPhone 📱_İzmit_62dl",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795215587906
-    },
-    {
-      "id": "iPhone 📱_İstanbul_nytk",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795215557423
+      "lastSeen": 1795217530588
     }
   ]
 }
