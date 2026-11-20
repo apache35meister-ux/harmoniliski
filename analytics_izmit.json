@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 62,
-  "totalWaClicks": 104,
+  "totalWaClicks": 105,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -68,8 +68,8 @@
     "açelya": 2,
     "VIP Escort": 3,
     "vip escort": 3,
-    "Melisa": 2,
-    "melisa": 2,
+    "Melisa": 3,
+    "melisa": 3,
     "Rus ESC": 1,
     "rus esc": 1,
     "Su": 1,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:44",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:43",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -760,17 +768,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:15",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:44",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:43",
       "name": "Melis",
@@ -1402,14 +1410,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:40",
-      "name": "Nehir",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1984,6 +1984,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_nm8q",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795200257508
+    },
     {
       "id": "Mobil 📱_İstanbul_3ace",
       "device": "Mobil 📱",
