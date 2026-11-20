@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 17,
-  "totalWaClicks": 36,
+  "totalWaClicks": 37,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -43,10 +43,20 @@
     "Sinem": 1,
     "sinem": 1,
     "Sabina": 1,
-    "sabina": 1
+    "sabina": 1,
+    "Isil": 1,
+    "isil": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:45",
+      "name": "Isil",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:45",
       "name": "Ziyaretçi (Android 📱)",
@@ -490,6 +500,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:45",
+      "name": "Isil",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:45",
       "name": "Sabina",
@@ -944,6 +962,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_İzmit_7k7y",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189541161
+    },
+    {
       "id": "Android 📱_Köseköy_1o3s",
       "device": "Android 📱",
       "city": "Köseköy",
@@ -998,13 +1023,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795189406712
-    },
-    {
-      "id": "Mobil 📱_Milan (IT)_vkxs",
-      "device": "Mobil 📱",
-      "city": "Milan (IT)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189359078
     }
   ]
 }
