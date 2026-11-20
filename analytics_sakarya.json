@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -260,6 +269,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:34",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Adapazarı",
@@ -355,9 +373,16 @@
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1,
-    "Adapazarı": 2
+    "Adapazarı": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Adapazarı_tj2r",
+      "device": "Mobil 📱",
+      "city": "Adapazarı",
+      "page": "/",
+      "lastSeen": 1795185351883
+    },
     {
       "id": "Mobil 📱_Adapazarı_qusz",
       "device": "Mobil 📱",
