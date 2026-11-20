@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 247,
+  "totalVisits": 248,
   "totalWaClicks": 175,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Alanyurt",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:58",
       "name": "Emel",
@@ -743,15 +752,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:52",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1397,6 +1397,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Alanyurt",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2107,15 +2116,6 @@
       "device": "iPhone 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:56",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/mudanya-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2174,9 +2174,16 @@
     "Selçuk": 2,
     "Dallas (US)": 1,
     "İznik": 4,
-    "Alanyurt": 1
+    "Alanyurt": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Alanyurt_wt3h",
+      "device": "Mobil 📱",
+      "city": "Alanyurt",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795179522180
+    },
     {
       "id": "Android 📱_Bursa_svqq",
       "device": "Android 📱",
