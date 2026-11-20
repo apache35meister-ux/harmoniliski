@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 206,
+  "totalVisits": 207,
   "totalWaClicks": 129,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:03",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Şanlıurfa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:03",
       "name": "Tuba",
@@ -754,14 +763,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:20",
-      "name": "Melisa",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1407,6 +1408,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:03",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Şanlıurfa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2117,15 +2127,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:25",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bonao (DO)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2180,9 +2181,16 @@
     "Slocomb (US)": 1,
     "Amsterdam (NL)": 1,
     "Tekirdağ": 1,
-    "Şanlıurfa": 1
+    "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Şanlıurfa_cb9s",
+      "device": "Mobil 📱",
+      "city": "Şanlıurfa",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795161815543
+    },
     {
       "id": "Android 📱_Bursa_4ye0",
       "device": "Android 📱",
