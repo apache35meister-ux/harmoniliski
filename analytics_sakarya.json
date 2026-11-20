@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 85,
+  "totalVisits": 86,
   "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
@@ -43,6 +43,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:01",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/serdivan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:00",
       "name": "Begüm",
@@ -730,14 +739,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:40",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1015,6 +1016,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:01",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/serdivan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:00",
       "name": "Ziyaretçi (Android 📱)",
@@ -1725,15 +1735,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "17:30",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1762,9 +1763,16 @@
     "Maceió (BR)": 1,
     "Zürich (CH)": 3,
     "Frankfurt am Main (DE)": 1,
-    "Amsterdam (NL)": 3
+    "Amsterdam (NL)": 4
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Amsterdam (NL)_q37p",
+      "device": "Android 📱",
+      "city": "Amsterdam (NL)",
+      "page": "/serdivan-eskort.html",
+      "lastSeen": 1795172483766
+    },
     {
       "id": "Android 📱_Sakarya_noo2",
       "device": "Android 📱",
