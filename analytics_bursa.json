@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 42,
+  "totalVisits": 43,
   "totalWaClicks": 38,
   "totalCalls": 0,
   "tClicks": {
@@ -46,6 +46,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:49",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -718,15 +727,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "16:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Şanlıurfa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1036,6 +1036,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:49",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1417,7 +1426,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 30,
+    "Bursa": 31,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 3,
@@ -1427,6 +1436,13 @@
     "İzmir": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_oab0",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795204265434
+    },
     {
       "id": "Masaüstü 💻_Bursa_8ced",
       "device": "Masaüstü 💻",
