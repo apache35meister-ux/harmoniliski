@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 23,
-  "totalWaClicks": 22,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
@@ -29,10 +29,20 @@
     "İlayda": 1,
     "i̇layda": 1,
     "Zeynep": 1,
-    "zeynep": 1
+    "zeynep": 1,
+    "VIP Escort": 1,
+    "vip escort": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:43",
+      "name": "VIP Escort",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:43",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -418,6 +428,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:43",
+      "name": "VIP Escort",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:32",
       "name": "Zeynep",
@@ -818,6 +836,13 @@
     "Santa Clara (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_r5hl",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795218208041
+    },
     {
       "id": "iPhone 📱_Santa Clara (US)_mwmn",
       "device": "iPhone 📱",
