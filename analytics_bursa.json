@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 207,
+  "totalVisits": 208,
   "totalWaClicks": 130,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:13",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:03",
       "name": "Açelya",
@@ -753,15 +762,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1407,6 +1407,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:13",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2117,19 +2126,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Kayseri",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 106,
+    "İstanbul": 107,
     "Bursa": 41,
     "Türkiye": 2,
     "Rome (IT)": 1,
@@ -2184,53 +2184,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_6qir",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795161822194
-    },
-    {
-      "id": "Mobil 📱_Şanlıurfa_cb9s",
-      "device": "Mobil 📱",
-      "city": "Şanlıurfa",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795161815543
-    },
-    {
-      "id": "Android 📱_Bursa_4ye0",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795161811215
-    },
-    {
-      "id": "Android 📱_Bursa_hb1j",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795161786650
-    },
-    {
-      "id": "Android 📱_Bursa_67sj",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795161769692
-    },
-    {
-      "id": "Android 📱_Bursa_hq64",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795161761565
-    },
-    {
-      "id": "Mobil 📱_Şanlıurfa_glz9",
-      "device": "Mobil 📱",
-      "city": "Şanlıurfa",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795161746151
+      "id": "Masaüstü 💻_İstanbul_283w",
+      "device": "Masaüstü 💻",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795162387847
     }
   ]
 }
