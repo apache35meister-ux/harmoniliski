@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 87,
+  "totalVisits": 88,
   "totalWaClicks": 37,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:06",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/adapazari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:06",
       "name": "Melis",
@@ -732,14 +741,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:57",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1041,6 +1042,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:06",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/adapazari-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:01",
       "name": "Ziyaretçi (Android 📱)",
@@ -1751,15 +1761,6 @@
       "device": "Android 📱",
       "page": "/cark-caddesi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1788,9 +1789,16 @@
     "Maceió (BR)": 1,
     "Zürich (CH)": 3,
     "Frankfurt am Main (DE)": 1,
-    "Amsterdam (NL)": 5
+    "Amsterdam (NL)": 6
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Amsterdam (NL)_eius",
+      "device": "Android 📱",
+      "city": "Amsterdam (NL)",
+      "page": "/adapazari-eskort.html",
+      "lastSeen": 1795172813567
+    },
     {
       "id": "Android 📱_Sakarya_hohl",
       "device": "Android 📱",
