@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 175,
+  "totalVisits": 176,
   "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
@@ -86,6 +86,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:24",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -774,15 +783,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:05",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1428,6 +1428,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:24",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2138,19 +2147,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:10",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 133,
+    "İstanbul": 134,
     "Bursa": 18,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2175,18 +2175,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_İstanbul_g13c",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795145242251
+    },
+    {
       "id": "Masaüstü 💻_Dallas (US)_ezpd",
       "device": "Masaüstü 💻",
       "city": "Dallas (US)",
       "page": "/",
       "lastSeen": 1795145095305
-    },
-    {
-      "id": "Mobil 📱_Kilis_zmqy",
-      "device": "Mobil 📱",
-      "city": "Kilis",
-      "page": "/",
-      "lastSeen": 1795145002395
     }
   ]
 }
