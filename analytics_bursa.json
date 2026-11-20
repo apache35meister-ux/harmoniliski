@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 187,
-  "totalWaClicks": 119,
+  "totalWaClicks": 120,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -63,10 +63,20 @@
     "Anna I Arnavut": 1,
     "anna i arnavut": 1,
     "Isil": 1,
-    "isil": 1
+    "isil": 1,
+    "İzel": 1,
+    "i̇zel": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:55",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:54",
       "name": "Su",
@@ -744,18 +754,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Kâhta",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:55",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:54",
       "name": "Su",
@@ -1386,14 +1395,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:06",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2162,6 +2163,13 @@
     "Capiatá (PY)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_a2bb",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795154118803
+    },
     {
       "id": "iPhone 📱_Bursa_0axx",
       "device": "iPhone 📱",
