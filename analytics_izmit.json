@@ -1,16 +1,26 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 2,
-  "totalWaClicks": 3,
+  "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
     "i̇zel": 1,
     "Damla": 2,
-    "damla": 2
+    "damla": 2,
+    "Melis": 1,
+    "melis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:57",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:56",
       "name": "Damla",
@@ -55,6 +65,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "23:57",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:56",
       "name": "Damla",
@@ -104,6 +122,13 @@
     "İstanbul": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_w4ay",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795208230530
+    },
     {
       "id": "iPhone 📱_İzmit_ysjj",
       "device": "iPhone 📱",
