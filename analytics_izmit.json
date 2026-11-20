@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 191,
+  "totalVisits": 192,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -782,14 +791,6 @@
       "device": "Mobil 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:43",
-      "name": "Melis",
-      "city": "İzmit / Bekirpaşa",
-      "device": "Mobil 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1435,6 +1436,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2145,19 +2155,10 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 138,
+    "İstanbul": 139,
     "Bursa": 19,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2190,11 +2191,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Catriel (AR)_r3x5",
+      "id": "Mobil 📱_İstanbul_k5td",
       "device": "Mobil 📱",
-      "city": "Catriel (AR)",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795150231544
+      "lastSeen": 1795150451257
     }
   ]
 }
