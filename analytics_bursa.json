@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 211,
+  "totalVisits": 212,
   "totalWaClicks": 130,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:25",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -756,14 +765,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:16",
-      "name": "Ceren",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1409,6 +1410,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:25",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2119,15 +2129,6 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:51",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Adapazarı",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2137,7 +2138,7 @@
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
     "Ankara": 1,
-    "İzmir": 3,
+    "İzmir": 4,
     "Bonao (DO)": 1,
     "Kayseri": 1,
     "Catalão (BR)": 1,
@@ -2186,11 +2187,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_mjv4",
+      "id": "Mobil 📱_İzmir_wdzc",
       "device": "Mobil 📱",
-      "city": "Bursa",
+      "city": "İzmir",
       "page": "/",
-      "lastSeen": 1795163103880
+      "lastSeen": 1795164271911
     }
   ]
 }
