@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180634718,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:18",
       "name": "Lara",
@@ -174,6 +183,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:17",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Amsterdam (NL)",
@@ -249,29 +267,15 @@
   "cityCounts": {
     "Bursa": 6,
     "İzmir": 1,
-    "Amsterdam (NL)": 1
+    "Amsterdam (NL)": 2
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_329q",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195127103
-    },
-    {
-      "id": "Android 📱_Görükle_7b5h",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195116071
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_7hiz",
+      "id": "Mobil 📱_Amsterdam (NL)_rztz",
       "device": "Mobil 📱",
       "city": "Amsterdam (NL)",
       "page": "/",
-      "lastSeen": 1795195067613
+      "lastSeen": 1795196328403
     }
   ]
 }
