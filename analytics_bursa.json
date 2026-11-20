@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 182,
+  "totalVisits": 183,
   "totalWaClicks": 118,
   "totalCalls": 0,
   "tClicks": {
@@ -67,6 +67,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:31",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:29",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -745,15 +754,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Richmond (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1399,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:31",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:29",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2109,20 +2118,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 106,
-    "Bursa": 33,
+    "Bursa": 34,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2160,6 +2160,13 @@
     "Jaipur (IN)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_ak65",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795152663129
+    },
     {
       "id": "iPhone 📱_Singapore (SG)_x0hu",
       "device": "iPhone 📱",
