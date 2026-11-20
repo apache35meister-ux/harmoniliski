@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 9,
+  "totalVisits": 10,
   "totalWaClicks": 11,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:50",
       "name": "Açelya",
@@ -283,6 +292,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:49",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -367,9 +385,16 @@
   "cityCounts": {
     "Ankara": 4,
     "İstanbul": 1,
-    "Bursa": 4
+    "Bursa": 5
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_foyr",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795211464441
+    },
     {
       "id": "iPhone 📱_Bursa_szup",
       "device": "iPhone 📱",
