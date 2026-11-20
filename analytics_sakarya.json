@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 80,
+  "totalVisits": 81,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -41,6 +41,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Zürich (CH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:36",
       "name": "Selin",
@@ -728,14 +737,6 @@
       "device": "Masaüstü 💻",
       "page": "/cark-caddesi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:55",
-      "name": "Ayla",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -981,6 +982,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Zürich (CH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:36",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1691,15 +1701,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:47",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1726,9 +1727,16 @@
     "Secaucus (US)": 1,
     "Ananindeua (BR)": 1,
     "Maceió (BR)": 1,
-    "Zürich (CH)": 2
+    "Zürich (CH)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Zürich (CH)_3w4e",
+      "device": "Mobil 📱",
+      "city": "Zürich (CH)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795163821961
+    },
     {
       "id": "iPhone 📱_Sakarya_h80c",
       "device": "iPhone 📱",
