@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 35,
-  "totalWaClicks": 33,
+  "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
     "serap": 2,
-    "Selin": 4,
-    "selin": 4,
+    "Selin": 5,
+    "selin": 5,
     "Eylül": 1,
     "eylül": 1,
     "Melis": 1,
@@ -42,6 +42,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:57",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:57",
       "name": "İzel",
@@ -623,6 +631,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:57",
+      "name": "Selin",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:57",
       "name": "İzel",
@@ -1219,6 +1235,13 @@
     "Manavgat": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_1sl7",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795204670750
+    },
     {
       "id": "Android 📱_Sakarya_7cw4",
       "device": "Android 📱",
