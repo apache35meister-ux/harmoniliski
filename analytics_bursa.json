@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 117,
+  "totalVisits": 118,
   "totalWaClicks": 82,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Rome (IT)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -748,15 +757,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:39",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1402,6 +1402,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Rome (IT)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:08",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2112,43 +2121,21 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:41",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/osmangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 101,
     "Bursa": 14,
-    "Türkiye": 2
+    "Türkiye": 2,
+    "Rome (IT)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_0ob2",
+      "id": "Mobil 📱_Rome (IT)_dfzp",
       "device": "Mobil 📱",
-      "city": "Bursa",
+      "city": "Rome (IT)",
       "page": "/",
-      "lastSeen": 1795133294721
-    },
-    {
-      "id": "Android 📱_Bursa_qx4p",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795133287650
-    },
-    {
-      "id": "Mobil 📱_Bursa_5l9n",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795133234038
+      "lastSeen": 1795133803037
     }
   ]
 }
