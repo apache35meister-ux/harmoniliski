@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 223,
-  "totalWaClicks": 145,
+  "totalWaClicks": 146,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -24,8 +24,8 @@
     "su": 2,
     "Dila": 3,
     "dila": 3,
-    "Selin": 19,
-    "selin": 19,
+    "Selin": 20,
+    "selin": 20,
     "Açelya": 13,
     "açelya": 13,
     "Gül": 10,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:31",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:31",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -756,17 +764,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:09",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:31",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:28",
       "name": "Rus ESC",
@@ -1397,14 +1405,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:29",
-      "name": "Ayşen",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2186,6 +2186,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_67qy",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795170689615
+    },
+    {
       "id": "Mobil 📱_Bursa_0upz",
       "device": "Mobil 📱",
       "city": "Bursa",
@@ -2205,13 +2212,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795170521784
-    },
-    {
-      "id": "Android 📱_Bursa_mv0p",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795170504158
     }
   ]
 }
