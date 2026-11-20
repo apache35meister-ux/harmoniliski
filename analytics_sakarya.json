@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 60,
+  "totalVisits": 61,
   "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:57",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -723,15 +732,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:55",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -929,6 +929,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05:57",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1483,15 +1492,16 @@
     "Holt (US)": 1,
     "Charlotte (US)": 1,
     "Tekirdağ": 1,
-    "Council Bluffs (US)": 1
+    "Council Bluffs (US)": 1,
+    "Adapazarı": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Council Bluffs (US)_4iym",
-      "device": "Masaüstü 💻",
-      "city": "Council Bluffs (US)",
+      "id": "iPhone 📱_Adapazarı_ijic",
+      "device": "iPhone 📱",
+      "city": "Adapazarı",
       "page": "/",
-      "lastSeen": 1795142756114
+      "lastSeen": 1795143461589
     }
   ]
 }
