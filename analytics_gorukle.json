@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207863266,
   "totalVisits": 5,
-  "totalWaClicks": 16,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 2,
@@ -12,17 +12,43 @@
     "yaren": 1,
     "Rus ESC": 1,
     "rus esc": 1,
-    "VIP Escort": 8,
-    "vip escort": 8,
+    "VIP Escort": 10,
+    "vip escort": 10,
     "Sinem": 1,
     "sinem": 1,
     "Yeliz": 1,
     "yeliz": 1,
     "Pınar": 1,
-    "pınar": 1
+    "pınar": 1,
+    "Dilara & Özge": 1,
+    "dilara & özge": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:37",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "02:37",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "02:37",
+      "name": "Dilara & Özge",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:36",
       "name": "Pınar",
@@ -198,6 +224,30 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:37",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "02:37",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "02:37",
+      "name": "Dilara & Özge",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:36",
       "name": "Pınar",
@@ -379,6 +429,27 @@
   },
   "activeVisitors": [
     {
+      "id": "Masaüstü 💻_Bursa / Nilüfer_r6dw",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795217852211
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Nilüfer_yb0t",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795217852210
+    },
+    {
+      "id": "Masaüstü 💻_Görükle_uou5",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795217852207
+    },
+    {
       "id": "Masaüstü 💻_Görükle_tyqv",
       "device": "Masaüstü 💻",
       "city": "Görükle",
@@ -447,34 +518,6 @@
       "city": "Görükle",
       "page": "Ana Sayfa",
       "lastSeen": 1795217675903
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_nqlk",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217646840
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_0r71",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217631471
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_xkdj",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217631469
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_07t4",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217631468
     }
   ]
 }
