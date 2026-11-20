@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 296,
+  "totalVisits": 297,
   "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:35",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,15 +741,6 @@
       "time": "03:51",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Antalya",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
@@ -895,6 +895,15 @@
   ],
   "cityVisits": [
     {
+      "time": "12:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "12:35",
       "name": "Ziyaretçi (Android 📱)",
       "city": "İstanbul",
@@ -1604,15 +1613,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Senhor do Bonfim (BR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1693,22 +1693,23 @@
     "Brantford (CA)": 1,
     "Loures (PT)": 1,
     "Huaura (PE)": 1,
-    "Council Bluffs (US)": 1
+    "Council Bluffs (US)": 1,
+    "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_d3hf",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795167482869
+    },
     {
       "id": "Android 📱_İstanbul_ptqg",
       "device": "Android 📱",
       "city": "İstanbul",
       "page": "/rehber.html",
       "lastSeen": 1795167313594
-    },
-    {
-      "id": "Mobil 📱_İstanbul_e0tt",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795167279774
     }
   ]
 }
