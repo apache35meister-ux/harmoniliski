@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 274,
+  "totalVisits": 275,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Los Angeles (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:05",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -735,15 +744,6 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:48",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Los Angeles (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:05",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:48",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1669,29 +1669,16 @@
     "Cleveland (US)": 1,
     "Stuart (US)": 1,
     "Melbourne (AU)": 1,
-    "Fethiye": 1
+    "Fethiye": 1,
+    "Los Angeles (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_rozf",
+      "id": "Mobil 📱_Los Angeles (US)_tntf",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Los Angeles (US)",
       "page": "/",
-      "lastSeen": 1795143927138
-    },
-    {
-      "id": "Mobil 📱_Fethiye_qarc",
-      "device": "Mobil 📱",
-      "city": "Fethiye",
-      "page": "/",
-      "lastSeen": 1795143903595
-    },
-    {
-      "id": "Mobil 📱_Melbourne (AU)_yoit",
-      "device": "Mobil 📱",
-      "city": "Melbourne (AU)",
-      "page": "/",
-      "lastSeen": 1795143873539
+      "lastSeen": 1795145108071
     }
   ]
 }
