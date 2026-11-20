@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 145,
+  "totalVisits": 146,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Charlotte (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -752,15 +761,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1406,6 +1406,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Charlotte (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2116,15 +2125,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:06",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2149,15 +2149,16 @@
     "Kâhta": 1,
     "Olinda (BR)": 1,
     "Windsor (CA)": 1,
-    "Araçatuba (BR)": 1
+    "Araçatuba (BR)": 1,
+    "Charlotte (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Araçatuba (BR)_zso6",
+      "id": "Mobil 📱_Charlotte (US)_bbwz",
       "device": "Mobil 📱",
-      "city": "Araçatuba (BR)",
+      "city": "Charlotte (US)",
       "page": "/",
-      "lastSeen": 1795137833555
+      "lastSeen": 1795138042721
     }
   ]
 }
