@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 90,
-  "totalWaClicks": 38,
+  "totalWaClicks": 39,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -18,8 +18,8 @@
     "tuba": 1,
     "Lara": 1,
     "lara": 1,
-    "Damla": 5,
-    "damla": 5,
+    "Damla": 6,
+    "damla": 6,
     "Selin": 3,
     "selin": 3,
     "Aylin": 2,
@@ -47,6 +47,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:49",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:48",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -735,17 +743,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:55",
-      "name": "Aylin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:49",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:07",
       "name": "Gül",
@@ -1802,6 +1810,13 @@
     "Amsterdam (NL)": 7
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_3key",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175352456
+    },
     {
       "id": "Mobil 📱_İstanbul_ohc1",
       "device": "Mobil 📱",
