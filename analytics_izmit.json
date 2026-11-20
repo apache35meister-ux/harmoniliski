@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 51,
-  "totalWaClicks": 90,
+  "totalWaClicks": 91,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -66,8 +66,8 @@
     "ayşen": 2,
     "Açelya": 1,
     "açelya": 1,
-    "VIP Escort": 2,
-    "vip escort": 2,
+    "VIP Escort": 3,
+    "vip escort": 3,
     "Melisa": 2,
     "melisa": 2,
     "Rus ESC": 1,
@@ -81,6 +81,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:30",
+      "name": "VIP Escort",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -745,17 +753,17 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:49",
-      "name": "Natali",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:30",
+      "name": "VIP Escort",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:29",
       "name": "Hale",
@@ -1387,14 +1395,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:51",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1869,6 +1869,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_v03r",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795199421723
+    },
     {
       "id": "Mobil 📱_İstanbul_fsfn",
       "device": "Mobil 📱",
