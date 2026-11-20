@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "01:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:54",
       "name": "Tuba",
@@ -432,6 +441,15 @@
   ],
   "cityVisits": [
     {
+      "time": "01:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:54",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Frankfurt am Main (DE)",
@@ -563,58 +581,16 @@
     "Gebze": 1,
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
-    "Amsterdam (NL)": 2,
+    "Amsterdam (NL)": 3,
     "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_84jh",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211687558
-    },
-    {
-      "id": "Android 📱_İzmit_bmix",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211681848
-    },
-    {
-      "id": "Mobil 📱_Frankfurt am Main (DE)_91ti",
+      "id": "Mobil 📱_Amsterdam (NL)_f2rj",
       "device": "Mobil 📱",
-      "city": "Frankfurt am Main (DE)",
+      "city": "Amsterdam (NL)",
       "page": "/",
-      "lastSeen": 1795211662525
-    },
-    {
-      "id": "Android 📱_İzmit_kura",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211574944
-    },
-    {
-      "id": "Android 📱_İzmit_wmy8",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211551255
-    },
-    {
-      "id": "Android 📱_İzmit_ucxw",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211536860
-    },
-    {
-      "id": "Android 📱_İzmit_aeju",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211518619
+      "lastSeen": 1795214954267
     }
   ]
 }
