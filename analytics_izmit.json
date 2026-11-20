@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 29,
+  "totalVisits": 30,
   "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
@@ -36,6 +36,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Seattle (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -718,6 +727,15 @@
   ],
   "cityVisits": [
     {
+      "time": "02:52",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Seattle (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "02:51",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Ashburn (US)",
@@ -992,9 +1010,17 @@
     "New York City (US)": 5,
     "Santa Clara (US)": 1,
     "İzmir": 1,
-    "Ashburn (US)": 1
+    "Ashburn (US)": 1,
+    "Seattle (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Seattle (US)_kuhc",
+      "device": "Masaüstü 💻",
+      "city": "Seattle (US)",
+      "page": "/",
+      "lastSeen": 1795218775001
+    },
     {
       "id": "iPhone 📱_Ashburn (US)_w3g4",
       "device": "iPhone 📱",
@@ -1008,13 +1034,6 @@
       "city": "New York City (US)",
       "page": "/",
       "lastSeen": 1795218603930
-    },
-    {
-      "id": "iPhone 📱_New York City (US)_4ezt",
-      "device": "iPhone 📱",
-      "city": "New York City (US)",
-      "page": "/",
-      "lastSeen": 1795218489331
     }
   ]
 }
