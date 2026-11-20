@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 236,
-  "totalWaClicks": 163,
+  "totalWaClicks": 164,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -40,8 +40,8 @@
     "sinem": 4,
     "Tuba": 4,
     "tuba": 4,
-    "Ayşen": 4,
-    "ayşen": 4,
+    "Ayşen": 5,
+    "ayşen": 5,
     "Sena": 1,
     "sena": 1,
     "Lara": 1,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:54",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:53",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -745,18 +753,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:54",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:53",
       "name": "Hale",
@@ -1387,14 +1394,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:18",
-      "name": "Serap",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2179,6 +2178,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_5s9l",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175658638
+    },
+    {
       "id": "iPhone 📱_İznik_yw1q",
       "device": "iPhone 📱",
       "city": "İznik",
@@ -2205,20 +2211,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795175480065
-    },
-    {
-      "id": "iPhone 📱_Bursa_du3y",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795175464071
-    },
-    {
-      "id": "iPhone 📱_İznik_u45f",
-      "device": "iPhone 📱",
-      "city": "İznik",
-      "page": "/gorukle-eskort.html",
-      "lastSeen": 1795175461127
     }
   ]
 }
