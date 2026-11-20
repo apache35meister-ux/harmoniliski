@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 220,
+  "totalVisits": 222,
   "totalWaClicks": 149,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:18",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Oakville (CA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:09",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -778,23 +796,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:40",
-      "name": "Merve",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "04:40",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1440,6 +1441,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:18",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "10:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Oakville (CA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:09",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2141,28 +2160,10 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 142,
+    "İstanbul": 143,
     "Bursa": 21,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2209,15 +2210,16 @@
     "Mexico City (MX)": 1,
     "Badlapur (IN)": 1,
     "Lahore (PK)": 1,
-    "Ashburn (US)": 2
+    "Ashburn (US)": 2,
+    "Oakville (CA)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Ashburn (US)_7mtl",
+      "id": "Mobil 📱_İstanbul_n51u",
       "device": "Mobil 📱",
-      "city": "Ashburn (US)",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795158594585
+      "lastSeen": 1795159133472
     }
   ]
 }
