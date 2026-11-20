@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 174,
-  "totalWaClicks": 114,
+  "totalWaClicks": 115,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
     "test model": 1,
     "Melis": 6,
     "melis": 6,
-    "Şebnem": 6,
-    "şebnem": 6,
+    "Şebnem": 7,
+    "şebnem": 7,
     "Yaren": 4,
     "yaren": 4,
     "Damla": 12,
@@ -65,6 +65,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:09",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:09",
       "name": "Şebnem",
@@ -747,18 +755,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:09",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:09",
       "name": "Şebnem",
@@ -1389,14 +1396,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:06",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2159,6 +2158,13 @@
     "Singapore (SG)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_fo07",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795151397160
+    },
     {
       "id": "Android 📱_Bursa_7j5t",
       "device": "Android 📱",
