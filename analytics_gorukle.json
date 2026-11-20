@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 249,
+  "totalVisits": 250,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Diyarbakır",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,15 +730,6 @@
     },
     {
       "time": "02:09",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:08",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Diyarbakır",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:02",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Upper La Taste (GD)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:06",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1646,15 +1646,16 @@
     "Mikkeli (FI)": 1,
     "Vaughan (CA)": 1,
     "Hazleton (US)": 1,
-    "Upper La Taste (GD)": 1
+    "Upper La Taste (GD)": 1,
+    "Diyarbakır": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Upper La Taste (GD)_njcc",
+      "id": "Mobil 📱_Diyarbakır_lf3p",
       "device": "Mobil 📱",
-      "city": "Upper La Taste (GD)",
+      "city": "Diyarbakır",
       "page": "/",
-      "lastSeen": 1795140128092
+      "lastSeen": 1795140328221
     }
   ]
 }
