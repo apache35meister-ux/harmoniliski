@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 68,
-  "totalWaClicks": 112,
+  "totalWaClicks": 113,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -64,8 +64,8 @@
     "buket": 2,
     "Ayşen": 3,
     "ayşen": 3,
-    "Açelya": 2,
-    "açelya": 2,
+    "Açelya": 3,
+    "açelya": 3,
     "VIP Escort": 3,
     "vip escort": 3,
     "Melisa": 3,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:05",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:05",
       "name": "Damla",
@@ -759,18 +767,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:07",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:05",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:05",
       "name": "Damla",
@@ -1402,14 +1409,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:44",
-      "name": "Seyma Su",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -2038,6 +2037,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_d7d8",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795201529354
+    },
     {
       "id": "Android 📱_İzmit_ygko",
       "device": "Android 📱",
