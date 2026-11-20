@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 34,
-  "totalWaClicks": 72,
+  "totalWaClicks": 73,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -26,8 +26,8 @@
     "i̇zel": 1,
     "Gülce": 3,
     "gülce": 3,
-    "Melis": 4,
-    "melis": 4,
+    "Melis": 5,
+    "melis": 5,
     "Peri": 1,
     "peri": 1,
     "Kumsal": 1,
@@ -71,6 +71,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:20",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:20",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -727,18 +735,17 @@
       "device": "iPhone 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:20",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:20",
       "name": "Damla",
@@ -1633,6 +1640,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_irny",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195214295
+    },
     {
       "id": "iPhone 📱_İstanbul_g4mj",
       "device": "iPhone 📱",
