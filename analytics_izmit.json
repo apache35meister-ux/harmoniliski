@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 12,
-  "totalWaClicks": 22,
+  "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -26,8 +26,8 @@
     "i̇zel": 1,
     "Gülce": 1,
     "gülce": 1,
-    "Melis": 1,
-    "melis": 1,
+    "Melis": 2,
+    "melis": 2,
     "Peri": 1,
     "peri": 1,
     "Kumsal": 1,
@@ -35,6 +35,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:40",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:40",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -321,6 +329,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:40",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:39",
       "name": "Kumsal",
@@ -616,6 +632,13 @@
     "Köseköy": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_5s34",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189220639
+    },
     {
       "id": "Mobil 📱_Köseköy_3mmu",
       "device": "Mobil 📱",
