@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 27,
-  "totalWaClicks": 35,
+  "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 2,
     "i̇zel": 2,
     "Damla": 5,
     "damla": 5,
-    "Melis": 1,
-    "melis": 1,
+    "Melis": 2,
+    "melis": 2,
     "Açelya": 3,
     "açelya": 3,
     "Serap": 1,
@@ -49,6 +49,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:59",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:59",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -574,6 +582,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:59",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:58",
       "name": "Trisha",
@@ -1111,6 +1127,13 @@
     "İzmit": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_2av8",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795219152748
+    },
     {
       "id": "Mobil 📱_İstanbul_bf83",
       "device": "Mobil 📱",
