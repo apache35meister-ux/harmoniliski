@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 10,
-  "totalWaClicks": 14,
+  "totalWaClicks": 15,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -12,8 +12,8 @@
     "hale": 2,
     "VIP Escort": 2,
     "vip escort": 2,
-    "Açelya": 2,
-    "açelya": 2,
+    "Açelya": 3,
+    "açelya": 3,
     "Gül": 1,
     "gül": 1,
     "İzel": 1,
@@ -27,6 +27,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:30",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -231,6 +239,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:30",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:29",
       "name": "Begüm",
@@ -444,6 +460,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_21s4",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795192257815
+    },
+    {
       "id": "Mobil 📱_Bursa_glm2",
       "device": "Mobil 📱",
       "city": "Bursa",
@@ -477,13 +500,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795192098254
-    },
-    {
-      "id": "Mobil 📱_Bursa_2zv9",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795192024849
     }
   ]
 }
