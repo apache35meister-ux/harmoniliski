@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 16,
-  "totalWaClicks": 35,
+  "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -41,10 +41,20 @@
     "Seyma Su": 1,
     "seyma su": 1,
     "Sinem": 1,
-    "sinem": 1
+    "sinem": 1,
+    "Sabina": 1,
+    "sabina": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:45",
+      "name": "Sabina",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:45",
       "name": "Sinem",
@@ -471,6 +481,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:45",
+      "name": "Sabina",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:45",
       "name": "Sinem",
@@ -907,6 +925,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_c3bw",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189513900
+    },
     {
       "id": "Android 📱_İzmit_k4fr",
       "device": "Android 📱",
