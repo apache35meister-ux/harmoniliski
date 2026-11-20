@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 35,
-  "totalWaClicks": 31,
+  "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
@@ -20,8 +20,8 @@
     "damla": 2,
     "İzel": 2,
     "i̇zel": 2,
-    "Açelya": 2,
-    "açelya": 2,
+    "Açelya": 3,
+    "açelya": 3,
     "Sena": 2,
     "sena": 2,
     "VIP Escort": 3,
@@ -42,6 +42,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:57",
+      "name": "Açelya",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -607,6 +615,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "22:57",
+      "name": "Açelya",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:07",
       "name": "VIP Escort",
@@ -1187,6 +1203,13 @@
     "Manavgat": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_de0y",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795204627842
+    },
     {
       "id": "Mobil 📱_Adapazarı_wenq",
       "device": "Mobil 📱",
