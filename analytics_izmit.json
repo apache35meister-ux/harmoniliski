@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 27,
+  "totalVisits": 28,
   "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
@@ -49,6 +49,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:59",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:59",
       "name": "Melis",
@@ -875,6 +884,15 @@
     {
       "time": "02:59",
       "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "02:59",
+      "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
@@ -1124,9 +1142,17 @@
     "Amsterdam (NL)": 4,
     "Frankfurt am Main (DE)": 3,
     "Vienna (AT)": 1,
-    "İzmit": 1
+    "İzmit": 1,
+    "Bursa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_rtpl",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795219173946
+    },
     {
       "id": "Android 📱_İzmit_2av8",
       "device": "Android 📱",
