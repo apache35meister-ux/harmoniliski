@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 165,
+  "totalVisits": 166,
   "totalWaClicks": 138,
   "totalCalls": 0,
   "tClicks": {
@@ -84,6 +84,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:34",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:31",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -767,15 +776,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1421,6 +1421,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05:34",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:31",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2131,15 +2140,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:42",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2157,9 +2157,17 @@
     "Fort Mill (US)": 1,
     "Chicago (US)": 1,
     "Bandırma": 1,
-    "San Isidro (PE)": 1
+    "San Isidro (PE)": 1,
+    "İzmit": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmit_202r",
+      "device": "Mobil 📱",
+      "city": "İzmit",
+      "page": "/",
+      "lastSeen": 1795142061917
+    },
     {
       "id": "Mobil 📱_San Isidro (PE)_4h72",
       "device": "Mobil 📱",
