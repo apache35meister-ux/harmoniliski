@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 268,
+  "totalVisits": 269,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Santiago (CL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:41",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Santiago (CL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:57",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Delhi (IN)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:41",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1664,22 +1664,23 @@
     "Lynchburg (US)": 1,
     "Dallas (US)": 1,
     "Caruaru (BR)": 1,
-    "Delhi (IN)": 1
+    "Delhi (IN)": 1,
+    "Santiago (CL)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Santiago (CL)_e2nc",
+      "device": "Mobil 📱",
+      "city": "Santiago (CL)",
+      "page": "/",
+      "lastSeen": 1795143496586
+    },
     {
       "id": "Mobil 📱_Delhi (IN)_e3c4",
       "device": "Mobil 📱",
       "city": "Delhi (IN)",
       "page": "Ana Sayfa",
       "lastSeen": 1795143472806
-    },
-    {
-      "id": "Mobil 📱_Caruaru (BR)_lefe",
-      "device": "Mobil 📱",
-      "city": "Caruaru (BR)",
-      "page": "/",
-      "lastSeen": 1795143315909
     }
   ]
 }
