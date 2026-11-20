@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 220,
-  "totalWaClicks": 137,
+  "totalWaClicks": 138,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -28,8 +28,8 @@
     "selin": 18,
     "Açelya": 12,
     "açelya": 12,
-    "Gül": 8,
-    "gül": 8,
+    "Gül": 9,
+    "gül": 9,
     "Rus ESC": 5,
     "rus esc": 5,
     "Melisa": 4,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:21",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:21",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -759,17 +767,17 @@
       "device": "iPhone 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:57",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:21",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:20",
       "name": "Açelya",
@@ -1397,14 +1405,6 @@
     {
       "time": "22:09",
       "name": "Emel",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "22:09",
-      "name": "Rus ESC",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
@@ -2188,6 +2188,13 @@
     "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_s434",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795170098881
+    },
     {
       "id": "Mobil 📱_İstanbul_tgay",
       "device": "Mobil 📱",
