@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 226,
-  "totalWaClicks": 148,
+  "totalVisits": 227,
+  "totalWaClicks": 149,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -34,8 +34,8 @@
     "rus esc": 7,
     "Melisa": 4,
     "melisa": 4,
-    "Hale": 2,
-    "hale": 2,
+    "Hale": 3,
+    "hale": 3,
     "Sinem": 3,
     "sinem": 3,
     "Tuba": 3,
@@ -76,6 +76,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:13",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "14:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -746,26 +763,17 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:13",
-      "name": "Isil",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Boynton Beach (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:13",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:59",
       "name": "Rus ESC",
@@ -1397,17 +1405,18 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:58",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2118,19 +2127,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Loudwater (GB)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 112,
+    "İstanbul": 113,
     "Bursa": 49,
     "Türkiye": 2,
     "Rome (IT)": 1,
@@ -2184,6 +2184,20 @@
     "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_66yi",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795173186034
+    },
+    {
+      "id": "Mobil 📱_İstanbul_1nhd",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795173168029
+    },
     {
       "id": "Mobil 📱_Bursa_6akr",
       "device": "Mobil 📱",
