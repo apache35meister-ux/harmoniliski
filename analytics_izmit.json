@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 185,
+  "totalVisits": 186,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Chosica (PE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -779,15 +788,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:38",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1433,6 +1433,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Chosica (PE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2143,15 +2152,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:03",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2182,22 +2182,16 @@
     "Salto (BR)": 1,
     "Gebze": 1,
     "İznik": 1,
-    "Sacramento (US)": 1
+    "Sacramento (US)": 1,
+    "Chosica (PE)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Sacramento (US)_pd8y",
+      "id": "Mobil 📱_Chosica (PE)_d8kp",
       "device": "Mobil 📱",
-      "city": "Sacramento (US)",
+      "city": "Chosica (PE)",
       "page": "/",
-      "lastSeen": 1795148674581
-    },
-    {
-      "id": "Mobil 📱_İstanbul_okjf",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795148571663
+      "lastSeen": 1795149094665
     }
   ]
 }
