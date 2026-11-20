@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:49",
       "name": "Ziyaretçi (Android 📱)",
@@ -207,6 +216,15 @@
   "cityVisits": [
     {
       "time": "00:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "00:49",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Amsterdam (NL)",
       "country": "Türkiye",
@@ -279,13 +297,20 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 2,
+    "İstanbul": 3,
     "Gebze": 1,
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
     "Amsterdam (NL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_qceb",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795211368411
+    },
     {
       "id": "Android 📱_Amsterdam (NL)_gypg",
       "device": "Android 📱",
