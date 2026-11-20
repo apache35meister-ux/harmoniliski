@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 193,
+  "totalVisits": 194,
   "totalWaClicks": 121,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:18",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Lindsay (CA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:15",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -744,15 +753,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Mikkeli (FI)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1398,6 +1398,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:18",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Lindsay (CA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:15",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2108,15 +2117,6 @@
       "device": "Mobil 📱",
       "page": "/kestel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:03",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/kestel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2163,29 +2163,16 @@
     "Melbourne (AU)": 1,
     "Kota (IN)": 1,
     "Çivril": 1,
-    "New York City (US)": 1
+    "New York City (US)": 1,
+    "Lindsay (CA)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_New York City (US)_j34q",
+      "id": "Mobil 📱_Lindsay (CA)_iok1",
       "device": "Mobil 📱",
-      "city": "New York City (US)",
-      "page": "/",
-      "lastSeen": 1795155341281
-    },
-    {
-      "id": "iPhone 📱_Bursa_cqbn",
-      "device": "iPhone 📱",
-      "city": "Bursa",
+      "city": "Lindsay (CA)",
       "page": "Ana Sayfa",
-      "lastSeen": 1795155282874
-    },
-    {
-      "id": "iPhone 📱_Çivril_u3qp",
-      "device": "iPhone 📱",
-      "city": "Çivril",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795155275582
+      "lastSeen": 1795155536703
     }
   ]
 }
