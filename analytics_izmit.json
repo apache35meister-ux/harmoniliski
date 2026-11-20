@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -19,6 +19,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:51",
       "name": "Nehir",
@@ -286,6 +295,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:51",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -342,37 +360,16 @@
   ],
   "cityCounts": {
     "İzmit": 2,
-    "İstanbul": 3,
+    "İstanbul": 4,
     "Bursa": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_mic0",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795186299776
-    },
-    {
-      "id": "Android 📱_İzmit_g4qt",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795186278702
-    },
-    {
-      "id": "Android 📱_İzmit_7nmc",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795186264516
-    },
-    {
-      "id": "Android 📱_Bursa_cgyp",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795186262784
+      "id": "iPhone 📱_İstanbul_b920",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795188209294
     }
   ]
 }
