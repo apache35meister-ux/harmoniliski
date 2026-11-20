@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 34,
+  "totalVisits": 35,
   "totalWaClicks": 75,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:21",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:20",
       "name": "Nehir",
@@ -726,14 +735,6 @@
       "name": "Eylül",
       "city": "İzmit",
       "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:39",
-      "name": "Peri",
-      "city": "İzmit",
-      "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
@@ -1342,6 +1343,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:21",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:20",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -1653,10 +1663,17 @@
     "İstanbul": 12,
     "Bursa": 3,
     "Brussels (BE)": 1,
-    "Köseköy": 13,
+    "Köseköy": 14,
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Köseköy_ou5y",
+      "device": "iPhone 📱",
+      "city": "Köseköy",
+      "page": "/",
+      "lastSeen": 1795195269572
+    },
     {
       "id": "iPhone 📱_İzmit_51qp",
       "device": "iPhone 📱",
