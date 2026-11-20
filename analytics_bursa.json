@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 129,
+  "totalVisits": 130,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:32",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -746,15 +755,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:23",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1400,6 +1400,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:32",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2110,15 +2119,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:07",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2131,22 +2131,23 @@
     "İzmir": 2,
     "Bonao (DO)": 1,
     "Kayseri": 1,
-    "Catalão (BR)": 1
+    "Catalão (BR)": 1,
+    "Gaziantep": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Gaziantep_wr17",
+      "device": "Mobil 📱",
+      "city": "Gaziantep",
+      "page": "/",
+      "lastSeen": 1795134756468
+    },
     {
       "id": "Mobil 📱_Catalão (BR)_z9eq",
       "device": "Mobil 📱",
       "city": "Catalão (BR)",
       "page": "/",
       "lastSeen": 1795134639928
-    },
-    {
-      "id": "Mobil 📱_Kayseri_pyh7",
-      "device": "Mobil 📱",
-      "city": "Kayseri",
-      "page": "/",
-      "lastSeen": 1795134536946
     }
   ]
 }
