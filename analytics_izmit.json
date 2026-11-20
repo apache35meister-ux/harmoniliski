@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 43,
+  "totalVisits": 44,
   "totalWaClicks": 81,
   "totalCalls": 0,
   "tClicks": {
@@ -77,6 +77,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:15",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -736,15 +745,6 @@
       "device": "iPhone 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Milan (IT)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1391,6 +1391,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:15",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Adapazarı",
@@ -1779,7 +1788,7 @@
     }
   ],
   "cityCounts": {
-    "İzmit": 4,
+    "İzmit": 5,
     "İstanbul": 16,
     "Bursa": 3,
     "Brussels (BE)": 1,
@@ -1790,11 +1799,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Adapazarı_jah8",
-      "device": "Masaüstü 💻",
-      "city": "Adapazarı",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795198525701
+      "id": "Mobil 📱_İzmit_kgl5",
+      "device": "Mobil 📱",
+      "city": "İzmit",
+      "page": "/",
+      "lastSeen": 1795199160835
     }
   ]
 }
