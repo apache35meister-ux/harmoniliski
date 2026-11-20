@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 49,
-  "totalWaClicks": 87,
+  "totalWaClicks": 88,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -75,10 +75,20 @@
     "Su": 1,
     "su": 1,
     "Gül": 1,
-    "gül": 1
+    "gül": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:29",
+      "name": "İlayda",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -742,17 +752,17 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:46",
-      "name": "Zehra",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:29",
+      "name": "İlayda",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:28",
       "name": "Dila",
@@ -1384,14 +1394,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:24",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1849,6 +1851,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_1e8x",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795199351936
+    },
+    {
       "id": "Mobil 📱_İstanbul_svbe",
       "device": "Mobil 📱",
       "city": "İstanbul",
@@ -1910,27 +1919,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795199190830
-    },
-    {
-      "id": "Mobil 📱_İstanbul_0ojw",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795199171136
-    },
-    {
-      "id": "Android 📱_İzmit_6s2g",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795199170511
-    },
-    {
-      "id": "Mobil 📱_İzmit_kgl5",
-      "device": "Mobil 📱",
-      "city": "İzmit",
-      "page": "/",
-      "lastSeen": 1795199160835
     }
   ]
 }
