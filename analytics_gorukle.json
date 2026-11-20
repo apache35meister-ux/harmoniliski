@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 243,
+  "totalVisits": 244,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bury (GB)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:48",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "01:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:54",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:49",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bury (GB)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:48",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bonney Lake (US)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1641,9 +1641,17 @@
     "Villavicencio (CO)": 1,
     "Bogotá (CO)": 1,
     "Miami Beach (US)": 1,
-    "Bonney Lake (US)": 1
+    "Bonney Lake (US)": 1,
+    "Bury (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bury (GB)_x8um",
+      "device": "Mobil 📱",
+      "city": "Bury (GB)",
+      "page": "/",
+      "lastSeen": 1795139348112
+    },
     {
       "id": "Mobil 📱_Bonney Lake (US)_bu06",
       "device": "Mobil 📱",
