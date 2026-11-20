@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207863266,
   "totalVisits": 7,
-  "totalWaClicks": 31,
+  "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 2,
@@ -27,10 +27,20 @@
     "Hazal": 1,
     "hazal": 1,
     "Tuğçe": 1,
-    "tuğçe": 1
+    "tuğçe": 1,
+    "Emel": 1,
+    "emel": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:40",
+      "name": "Emel",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:39",
       "name": "Selin",
@@ -344,6 +354,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:40",
+      "name": "Emel",
+      "city": "Görükle",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:39",
       "name": "Selin",
@@ -662,6 +680,13 @@
     "Bursa": 7
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Görükle_am2p",
+      "device": "Masaüstü 💻",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795218017912
+    },
     {
       "id": "Masaüstü 💻_Görükle_3r76",
       "device": "Masaüstü 💻",
