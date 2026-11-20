@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 5,
+  "totalVisits": 6,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:22",
       "name": "İzel",
@@ -215,6 +224,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:22",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bursa",
@@ -262,58 +280,16 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 3,
+    "Bursa": 4,
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_kbr6",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188162390
-    },
-    {
-      "id": "Android 📱_Bursa_zdtm",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188148380
-    },
-    {
-      "id": "Mobil 📱_Bursa_fciw",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/fsm-bulvari-eskort.html",
-      "lastSeen": 1795188143947
-    },
-    {
-      "id": "Android 📱_Bursa_tdpd",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188133227
-    },
-    {
-      "id": "Mobil 📱_Bursa / Nilüfer_ld8z",
-      "device": "Mobil 📱",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188082334
-    },
-    {
-      "id": "Mobil 📱_Bursa / Nilüfer_f9oy",
-      "device": "Mobil 📱",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188082287
-    },
-    {
-      "id": "Mobil 📱_Bursa_8hi7",
+      "id": "Mobil 📱_Bursa_y3l8",
       "device": "Mobil 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795188079683
+      "lastSeen": 1795190315163
     }
   ]
 }
