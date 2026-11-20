@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 214,
+  "totalVisits": 215,
   "totalWaClicks": 149,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Badlapur (IN)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:48",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -786,15 +795,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:45",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1440,6 +1440,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Badlapur (IN)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:48",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2150,15 +2159,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:57",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2206,9 +2206,17 @@
     "Royal Oak (US)": 1,
     "Frankfurt am Main (DE)": 3,
     "Melbourne (AU)": 1,
-    "Mexico City (MX)": 1
+    "Mexico City (MX)": 1,
+    "Badlapur (IN)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Badlapur (IN)_6b8o",
+      "device": "Mobil 📱",
+      "city": "Badlapur (IN)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795157335610
+    },
     {
       "id": "Mobil 📱_Mexico City (MX)_3hjq",
       "device": "Mobil 📱",
