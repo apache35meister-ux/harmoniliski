@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 57,
-  "totalWaClicks": 99,
+  "totalVisits": 58,
+  "totalWaClicks": 100,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -64,8 +64,8 @@
     "buket": 2,
     "Ayşen": 2,
     "ayşen": 2,
-    "Açelya": 1,
-    "açelya": 1,
+    "Açelya": 2,
+    "açelya": 2,
     "VIP Escort": 3,
     "vip escort": 3,
     "Melisa": 2,
@@ -89,6 +89,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:41",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bekirpasa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:41",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -747,26 +764,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:01",
-      "name": "Eylül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:00",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Köseköy",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/bekirpasa-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:41",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:40",
       "name": "Melek",
@@ -1398,17 +1406,18 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:39",
-      "name": "Peri",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bekirpasa-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:41",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1925,7 +1934,7 @@
   ],
   "cityCounts": {
     "İzmit": 5,
-    "İstanbul": 28,
+    "İstanbul": 29,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -1935,6 +1944,20 @@
     "Gebze": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_2rac",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795200104695
+    },
+    {
+      "id": "Android 📱_İstanbul_2j9m",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/bekirpasa-eskort.html",
+      "lastSeen": 1795200093404
+    },
     {
       "id": "iPhone 📱_Gebze_fleo",
       "device": "iPhone 📱",
