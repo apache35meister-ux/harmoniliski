@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 47,
+  "totalVisits": 48,
   "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:07",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "La Paz (BO)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/korupark-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -814,6 +823,15 @@
   "cityVisits": [
     {
       "time": "03:07",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "La Paz (BO)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/korupark-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:07",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "La Lima (HN)",
       "country": "Türkiye",
@@ -1239,9 +1257,17 @@
   "cityCounts": {
     "İstanbul": 32,
     "Bursa": 14,
-    "La Lima (HN)": 1
+    "La Lima (HN)": 1,
+    "La Paz (BO)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_La Paz (BO)_7ziq",
+      "device": "Android 📱",
+      "city": "La Paz (BO)",
+      "page": "/korupark-eskort.html",
+      "lastSeen": 1795133260542
+    },
     {
       "id": "Mobil 📱_La Lima (HN)_vy60",
       "device": "Mobil 📱",
