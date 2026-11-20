@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 17,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
     "su": 1,
     "Rus ESC": 2,
     "rus esc": 2,
-    "Hale": 2,
-    "hale": 2,
+    "Hale": 3,
+    "hale": 3,
     "VIP Escort": 2,
     "vip escort": 2,
     "Açelya": 3,
@@ -33,6 +33,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:09",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:09",
       "name": "Gül",
@@ -340,6 +348,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:09",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:09",
       "name": "Gül",
@@ -657,6 +673,13 @@
     "Milan (IT)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_d3ns",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795194562452
+    },
     {
       "id": "iPhone 📱_Bursa_4vn9",
       "device": "iPhone 📱",
