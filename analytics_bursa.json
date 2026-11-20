@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 248,
+  "totalVisits": 250,
   "totalWaClicks": 175,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,22 +754,6 @@
       "device": "Masaüstü 💻",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:53",
-      "name": "Gülce",
-      "city": "Bursa / Özlüce",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:53",
-      "name": "Gülce",
-      "city": "Bursa / Özlüce",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1397,6 +1399,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2098,29 +2118,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:59",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/mudanya-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:58",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/mudanya-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 120,
-    "Bursa": 51,
+    "Bursa": 52,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2168,7 +2170,7 @@
     "Chicago (US)": 1,
     "Moncks Corner (US)": 1,
     "Slocomb (US)": 1,
-    "Amsterdam (NL)": 2,
+    "Amsterdam (NL)": 3,
     "Tekirdağ": 1,
     "Şanlıurfa": 2,
     "Selçuk": 2,
@@ -2178,53 +2180,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Alanyurt_wt3h",
+      "id": "Mobil 📱_Bursa_m8vl",
       "device": "Mobil 📱",
-      "city": "Alanyurt",
+      "city": "Bursa",
       "page": "/ozluce-eskort.html",
-      "lastSeen": 1795179522180
-    },
-    {
-      "id": "Android 📱_Bursa_svqq",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795179516097
-    },
-    {
-      "id": "Android 📱_Bursa_7820",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795179494505
-    },
-    {
-      "id": "Android 📱_Bursa_682p",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795179481185
-    },
-    {
-      "id": "Android 📱_Bursa_6148",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795179468995
-    },
-    {
-      "id": "Android 📱_Bursa_xt5t",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795179449497
-    },
-    {
-      "id": "Mobil 📱_Alanyurt_fwvv",
-      "device": "Mobil 📱",
-      "city": "Alanyurt",
-      "page": "/",
-      "lastSeen": 1795179437753
+      "lastSeen": 1795179893184
     }
   ]
 }
