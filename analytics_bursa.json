@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 251,
+  "totalVisits": 252,
   "totalWaClicks": 175,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:10",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -746,15 +755,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:53",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1400,6 +1400,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:10",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2110,19 +2119,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:08",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Singapore (SG)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 120,
+    "İstanbul": 121,
     "Bursa": 52,
     "Türkiye": 2,
     "Rome (IT)": 1,
@@ -2182,11 +2182,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Frankfurt am Main (DE)_v7xb",
-      "device": "iPhone 📱",
-      "city": "Frankfurt am Main (DE)",
+      "id": "Mobil 📱_İstanbul_x5gb",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795180237127
+      "lastSeen": 1795180577655
     }
   ]
 }
