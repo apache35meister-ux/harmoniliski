@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 86,
-  "totalWaClicks": 35,
+  "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -39,10 +39,20 @@
     "Begüm": 2,
     "begüm": 2,
     "Açelya": 1,
-    "açelya": 1
+    "açelya": 1,
+    "Melis": 1,
+    "melis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:01",
+      "name": "Melis",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:01",
       "name": "Selin",
@@ -730,18 +740,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:45",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:01",
+      "name": "Melis",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:01",
       "name": "Selin",
@@ -1774,6 +1783,13 @@
     "Amsterdam (NL)": 4
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_6k7b",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795172509310
+    },
     {
       "id": "Android 📱_Sakarya_1ohr",
       "device": "Android 📱",
