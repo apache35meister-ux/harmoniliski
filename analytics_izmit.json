@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 60,
+  "totalVisits": 61,
   "totalWaClicks": 102,
   "totalCalls": 0,
   "tClicks": {
@@ -89,6 +89,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/izmit-merkez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:42",
       "name": "Eylül",
@@ -756,14 +765,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:02",
-      "name": "Ayşen",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -1412,6 +1413,15 @@
   "cityVisits": [
     {
       "time": "21:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/izmit-merkez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "21:42",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -1953,7 +1963,7 @@
   ],
   "cityCounts": {
     "İzmit": 5,
-    "İstanbul": 30,
+    "İstanbul": 31,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -1963,6 +1973,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İstanbul_e7ur",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/izmit-merkez-eskort.html",
+      "lastSeen": 1795200167097
+    },
     {
       "id": "iPhone 📱_İzmit_lrtp",
       "device": "iPhone 📱",
