@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 62,
-  "totalWaClicks": 108,
+  "totalWaClicks": 109,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -26,8 +26,8 @@
     "i̇zel": 1,
     "Gülce": 5,
     "gülce": 5,
-    "Melis": 9,
-    "melis": 9,
+    "Melis": 10,
+    "melis": 10,
     "Peri": 1,
     "peri": 1,
     "Kumsal": 1,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:45",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:45",
       "name": "Melis",
@@ -758,18 +766,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:45",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:45",
       "name": "Melis",
@@ -1401,14 +1408,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:42",
-      "name": "Hale",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1984,6 +1983,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_İzmit_0mmh",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795200354351
+    },
+    {
       "id": "iPhone 📱_İzmit_b75d",
       "device": "iPhone 📱",
       "city": "İzmit",
@@ -2031,13 +2037,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795200178765
-    },
-    {
-      "id": "Android 📱_İstanbul_e7ur",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795200167097
     }
   ]
 }
