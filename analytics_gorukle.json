@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 224,
+  "totalVisits": 225,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:10",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Cochabamba (BO)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:05",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "01:21",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:16",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:10",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Cochabamba (BO)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:05",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Olinda (BR)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1627,15 +1627,16 @@
     "Santa Isabel (BR)": 1,
     "Fresno (US)": 1,
     "Don Torcuato (AR)": 1,
-    "Olinda (BR)": 1
+    "Olinda (BR)": 1,
+    "Cochabamba (BO)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Olinda (BR)_2s06",
+      "id": "Mobil 📱_Cochabamba (BO)_lk0a",
       "device": "Mobil 📱",
-      "city": "Olinda (BR)",
+      "city": "Cochabamba (BO)",
       "page": "/",
-      "lastSeen": 1795136718750
+      "lastSeen": 1795137022538
     }
   ]
 }
