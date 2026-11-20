@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 36,
-  "totalWaClicks": 78,
+  "totalVisits": 37,
+  "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -14,8 +14,8 @@
     "hale": 3,
     "Damla": 5,
     "damla": 5,
-    "Nehir": 3,
-    "nehir": 3,
+    "Nehir": 4,
+    "nehir": 4,
     "Eylül": 6,
     "eylül": 6,
     "Şebnem": 1,
@@ -75,6 +75,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:24",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "20:24",
+      "name": "Nehir",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:22",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -722,25 +739,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:40",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:40",
-      "name": "Melis",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:24",
+      "name": "Nehir",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:22",
       "name": "Gülce",
@@ -1368,6 +1377,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:24",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:22",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Köseköy",
@@ -1694,13 +1712,27 @@
   ],
   "cityCounts": {
     "İzmit": 4,
-    "İstanbul": 12,
+    "İstanbul": 13,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 15,
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_sqap",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795195477311
+    },
+    {
+      "id": "iPhone 📱_İzmit_2wbv",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195477246
+    },
     {
       "id": "iPhone 📱_Köseköy_tsdi",
       "device": "iPhone 📱",
@@ -1721,62 +1753,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795195306226
-    },
-    {
-      "id": "iPhone 📱_İzmit_ozhj",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195281478
-    },
-    {
-      "id": "iPhone 📱_Köseköy_ou5y",
-      "device": "iPhone 📱",
-      "city": "Köseköy",
-      "page": "/",
-      "lastSeen": 1795195269572
-    },
-    {
-      "id": "iPhone 📱_İzmit_51qp",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195256233
-    },
-    {
-      "id": "iPhone 📱_İzmit_q4xw",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195235953
-    },
-    {
-      "id": "iPhone 📱_İzmit_irny",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195214295
-    },
-    {
-      "id": "iPhone 📱_İstanbul_g4mj",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795195213781
-    },
-    {
-      "id": "iPhone 📱_İzmit_ah97",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795195200452
-    },
-    {
-      "id": "iPhone 📱_Köseköy_5q34",
-      "device": "iPhone 📱",
-      "city": "Köseköy",
-      "page": "/",
-      "lastSeen": 1795195187823
     }
   ]
 }
