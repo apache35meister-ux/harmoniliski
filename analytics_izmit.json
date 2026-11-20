@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:42",
       "name": "Yaren",
@@ -651,6 +660,15 @@
   "cityVisits": [
     {
       "time": "18:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "18:42",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Köseköy",
       "country": "Türkiye",
@@ -781,9 +799,17 @@
     "İstanbul": 5,
     "Bursa": 1,
     "Brussels (BE)": 1,
-    "Köseköy": 4
+    "Köseköy": 4,
+    "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Milan (IT)_vkxs",
+      "device": "Mobil 📱",
+      "city": "Milan (IT)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189359078
+    },
     {
       "id": "Android 📱_İzmit_id7p",
       "device": "Android 📱",
@@ -874,20 +900,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795189194046
-    },
-    {
-      "id": "Android 📱_İzmit_8gn2",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189173420
-    },
-    {
-      "id": "iPhone 📱_İzmit_ocod",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189167143
     }
   ]
 }
