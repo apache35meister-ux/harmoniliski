@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 13,
+  "totalVisits": 14,
   "totalWaClicks": 15,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:52",
       "name": "Hale",
@@ -389,6 +398,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:51",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Frankfurt am Main (DE)",
@@ -512,9 +530,16 @@
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
     "Amsterdam (NL)": 2,
-    "Frankfurt am Main (DE)": 2
+    "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Frankfurt am Main (DE)_91ti",
+      "device": "Mobil 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "/",
+      "lastSeen": 1795211662525
+    },
     {
       "id": "Android 📱_İzmit_kura",
       "device": "Android 📱",
@@ -570,34 +595,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795211487624
-    },
-    {
-      "id": "Android 📱_İzmit_mqgt",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211469398
-    },
-    {
-      "id": "Android 📱_İzmit_tu5k",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211465841
-    },
-    {
-      "id": "Mobil 📱_Frankfurt am Main (DE)_ewxo",
-      "device": "Mobil 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/",
-      "lastSeen": 1795211446276
-    },
-    {
-      "id": "Android 📱_İstanbul_95cb",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/alikahya-eskort.html",
-      "lastSeen": 1795211410011
     }
   ]
 }
