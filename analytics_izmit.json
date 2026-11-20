@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 15,
-  "totalWaClicks": 30,
+  "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -35,10 +35,20 @@
     "Dila": 2,
     "dila": 2,
     "Yaren": 1,
-    "yaren": 1
+    "yaren": 1,
+    "Pınar": 1,
+    "pınar": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:43",
+      "name": "Pınar",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:42",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -416,6 +426,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:43",
+      "name": "Pınar",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:42",
       "name": "Yaren",
@@ -804,6 +822,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_İzmit_ubcl",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189406712
+    },
+    {
       "id": "Mobil 📱_Milan (IT)_vkxs",
       "device": "Mobil 📱",
       "city": "Milan (IT)",
@@ -872,34 +897,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795189245259
-    },
-    {
-      "id": "Android 📱_İzmit_5s34",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189220639
-    },
-    {
-      "id": "Mobil 📱_Köseköy_3mmu",
-      "device": "Mobil 📱",
-      "city": "Köseköy",
-      "page": "/",
-      "lastSeen": 1795189219335
-    },
-    {
-      "id": "Android 📱_İzmit_pq2h",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795189197224
-    },
-    {
-      "id": "iPhone 📱_İzmit_qiuy",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189194046
     }
   ]
 }
