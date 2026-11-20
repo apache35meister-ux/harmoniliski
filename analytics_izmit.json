@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 62,
+  "totalVisits": 63,
   "totalWaClicks": 109,
   "totalCalls": 0,
   "tClicks": {
@@ -91,6 +91,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:54",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:45",
       "name": "Melis",
@@ -757,15 +766,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:20",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1412,6 +1412,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:54",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:43",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1973,7 +1982,7 @@
   "cityCounts": {
     "İzmit": 5,
     "İstanbul": 32,
-    "Bursa": 3,
+    "Bursa": 4,
     "Brussels (BE)": 1,
     "Köseköy": 15,
     "Milan (IT)": 1,
@@ -1983,60 +1992,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İzmit_0mmh",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200354351
-    },
-    {
-      "id": "iPhone 📱_İzmit_b75d",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200344127
-    },
-    {
-      "id": "Android 📱_İzmit_7kk0",
+      "id": "Android 📱_Bursa_09v0",
       "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200311618
-    },
-    {
-      "id": "Android 📱_İzmit_2n5k",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200288086
-    },
-    {
-      "id": "Android 📱_İzmit_nm8q",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200257508
-    },
-    {
-      "id": "Mobil 📱_İstanbul_3ace",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795200209548
-    },
-    {
-      "id": "iPhone 📱_İzmit_zwcu",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200209115
-    },
-    {
-      "id": "Android 📱_İzmit_9ae7",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795200178765
+      "city": "Bursa",
+      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
+      "lastSeen": 1795200881028
     }
   ]
 }
