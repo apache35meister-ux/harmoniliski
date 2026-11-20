@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 3,
+  "totalVisits": 4,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:09",
       "name": "Hale",
@@ -109,6 +118,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:07",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Frankfurt am Main (DE)",
@@ -138,37 +156,16 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 1,
+    "Bursa": 2,
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_i0jj",
-      "device": "iPhone 📱",
+      "id": "Mobil 📱_Bursa_8hi7",
+      "device": "Mobil 📱",
       "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795187354400
-    },
-    {
-      "id": "iPhone 📱_Bursa_ptyc",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795187345772
-    },
-    {
-      "id": "iPhone 📱_Bursa_xpgp",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795187335697
-    },
-    {
-      "id": "iPhone 📱_Frankfurt am Main (DE)_mhgv",
-      "device": "iPhone 📱",
-      "city": "Frankfurt am Main (DE)",
       "page": "/",
-      "lastSeen": 1795187264558
+      "lastSeen": 1795188079683
     }
   ]
 }
