@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 40,
-  "totalWaClicks": 79,
+  "totalWaClicks": 80,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -68,13 +68,21 @@
     "açelya": 1,
     "VIP Escort": 2,
     "vip escort": 2,
-    "Melisa": 1,
-    "melisa": 1,
+    "Melisa": 2,
+    "melisa": 2,
     "Rus ESC": 1,
     "rus esc": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:05",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:04",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -733,18 +741,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:41",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Köseköy",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/yahya-kaptan-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:05",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:24",
       "name": "Nehir",
@@ -1750,6 +1757,13 @@
     "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_ebac",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795197945721
+    },
     {
       "id": "iPhone 📱_İstanbul_qeg4",
       "device": "iPhone 📱",
