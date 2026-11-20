@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 89,
-  "totalWaClicks": 37,
+  "totalWaClicks": 38,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -41,10 +41,20 @@
     "Açelya": 1,
     "açelya": 1,
     "Melis": 2,
-    "melis": 2
+    "melis": 2,
+    "Gül": 1,
+    "gül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:07",
+      "name": "Gül",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,18 +742,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:54",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/adapazari-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:07",
+      "name": "Gül",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:06",
       "name": "Melis",
@@ -1792,6 +1801,13 @@
     "Amsterdam (NL)": 7
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_60me",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795172854192
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_qkzz",
       "device": "Mobil 📱",
