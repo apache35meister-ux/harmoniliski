@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 210,
-  "totalWaClicks": 145,
+  "totalVisits": 211,
+  "totalWaClicks": 146,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 22,
@@ -74,8 +74,8 @@
     "tuba": 1,
     "Şebnem": 3,
     "şebnem": 3,
-    "Nihan": 2,
-    "nihan": 2,
+    "Nihan": 3,
+    "nihan": 3,
     "Yeliz": 1,
     "yeliz": 1,
     "1794900000005": 2,
@@ -88,6 +88,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "08:58",
+      "name": "Nihan",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:58",
       "name": "Ayşen",
@@ -780,27 +797,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:58",
+      "name": "Nihan",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:58",
       "name": "Ayşen",
@@ -1432,17 +1439,18 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:06",
-      "name": "Melisa",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2153,15 +2161,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Istanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2207,9 +2206,23 @@
     "Körfez": 2,
     "San José (CR)": 1,
     "Royal Oak (US)": 1,
-    "Frankfurt am Main (DE)": 2
+    "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Frankfurt am Main (DE)_yknt",
+      "device": "Android 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795154327733
+    },
+    {
+      "id": "Android 📱_İzmit_vxcm",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795154327688
+    },
     {
       "id": "Android 📱_İzmit_00f8",
       "device": "Android 📱",
