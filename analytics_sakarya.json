@@ -1,14 +1,24 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 2,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
-    "eylül": 1
+    "eylül": 1,
+    "İrem": 1,
+    "i̇rem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:49",
+      "name": "İrem",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:47",
       "name": "Eylül",
@@ -37,6 +47,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:49",
+      "name": "İrem",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:47",
       "name": "Eylül",
@@ -71,6 +89,13 @@
     "İstanbul": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_896b",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795218571314
+    },
     {
       "id": "iPhone 📱_Sakarya_v8y1",
       "device": "iPhone 📱",
