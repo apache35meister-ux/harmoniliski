@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 6,
+  "totalVisits": 7,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -19,6 +19,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/osmangazi-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:45",
       "name": "Açelya",
@@ -222,6 +231,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/osmangazi-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:44",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bursa",
@@ -279,9 +297,16 @@
   "cityCounts": {
     "Ankara": 4,
     "İstanbul": 1,
-    "Bursa": 1
+    "Bursa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_f6wg",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/osmangazi-eskort.html",
+      "lastSeen": 1795211109615
+    },
     {
       "id": "Android 📱_Bursa_is27",
       "device": "Android 📱",
