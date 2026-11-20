@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 52,
+  "totalVisits": 53,
   "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:14",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:13",
       "name": "İzel",
@@ -876,6 +885,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:14",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:10",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Rome (IT)",
@@ -1345,7 +1363,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 32,
+    "İstanbul": 33,
     "Bursa": 14,
     "La Lima (HN)": 1,
     "La Paz (BO)": 1,
@@ -1356,18 +1374,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_İstanbul_5bpk",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795133683814
+    },
+    {
       "id": "iPhone 📱_Sakarya_2eix",
       "device": "iPhone 📱",
       "city": "Sakarya",
       "page": "Ana Sayfa",
       "lastSeen": 1795133614966
-    },
-    {
-      "id": "Mobil 📱_Rome (IT)_m6ps",
-      "device": "Mobil 📱",
-      "city": "Rome (IT)",
-      "page": "/",
-      "lastSeen": 1795133453513
     }
   ]
 }
