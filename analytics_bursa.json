@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 21,
-  "totalWaClicks": 30,
+  "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -12,8 +12,8 @@
     "hale": 3,
     "VIP Escort": 4,
     "vip escort": 4,
-    "Açelya": 3,
-    "açelya": 3,
+    "Açelya": 4,
+    "açelya": 4,
     "Gül": 2,
     "gül": 2,
     "İzel": 2,
@@ -42,6 +42,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:38",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:38",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -473,6 +481,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:38",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:11",
       "name": "Yasemin",
@@ -914,6 +930,13 @@
     "Milan (IT)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_fbff",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795196318918
+    },
     {
       "id": "iPhone 📱_Bursa_i0je",
       "device": "iPhone 📱",
