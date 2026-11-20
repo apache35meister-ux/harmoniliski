@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 213,
-  "totalWaClicks": 130,
+  "totalWaClicks": 133,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -69,10 +69,37 @@
     "Nergis": 1,
     "nergis": 1,
     "Buket": 1,
-    "buket": 1
+    "buket": 1,
+    "1790000000336": 2,
+    "Gülce": 3,
+    "gülce": 3
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:53",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:53",
+      "name": "Gülce",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:53",
+      "name": "Gülce",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -740,35 +767,33 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:25",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Council Bluffs (US)",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Afyonkarahisar",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:16",
-      "name": "Anna I Arnavut",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:53",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:53",
+      "name": "Gülce",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "11:53",
+      "name": "Gülce",
+      "city": "Bursa / Özlüce",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:03",
       "name": "Açelya",
@@ -1383,30 +1408,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "21:24",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:53",
-      "name": "Nehir",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:52",
-      "name": "Nihan",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2187,6 +2188,27 @@
     "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_hkyx",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795164816390
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Özlüce_u8n9",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Özlüce",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795164816388
+    },
+    {
+      "id": "Masaüstü 💻_Bursa / Özlüce_g9zz",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Özlüce",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795164816388
+    },
     {
       "id": "Masaüstü 💻_Bursa_9xcn",
       "device": "Masaüstü 💻",
