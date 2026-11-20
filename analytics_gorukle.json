@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 277,
+  "totalVisits": 278,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Elazığ",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:50",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Elazığ",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:28",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Toronto (CA)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:50",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Görükle",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1672,9 +1672,17 @@
     "Fethiye": 1,
     "Los Angeles (US)": 1,
     "Santo Domingo (DO)": 1,
-    "Toronto (CA)": 1
+    "Toronto (CA)": 1,
+    "Elazığ": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Elazığ_4o6h",
+      "device": "Mobil 📱",
+      "city": "Elazığ",
+      "page": "/",
+      "lastSeen": 1795145403666
+    },
     {
       "id": "Mobil 📱_Toronto (CA)_4uc1",
       "device": "Mobil 📱",
