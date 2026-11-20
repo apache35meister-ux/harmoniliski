@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 244,
-  "totalWaClicks": 163,
+  "totalWaClicks": 164,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 25,
@@ -14,8 +14,8 @@
     "damla": 9,
     "Eylül": 15,
     "eylül": 15,
-    "Hale": 6,
-    "hale": 6,
+    "Hale": 7,
+    "hale": 7,
     "Ayşen": 7,
     "ayşen": 7,
     "Sena": 1,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:16",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:15",
       "name": "Eylül",
@@ -776,18 +784,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:16",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:15",
       "name": "Eylül",
@@ -1415,14 +1422,6 @@
     {
       "time": "20:34",
       "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:33",
-      "name": "Nergis",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
@@ -2207,6 +2206,13 @@
     "London (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_oe4n",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795169800058
+    },
     {
       "id": "Android 📱_İzmit_rfu0",
       "device": "Android 📱",
