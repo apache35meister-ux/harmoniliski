@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 19,
-  "totalWaClicks": 50,
+  "totalWaClicks": 51,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -12,8 +12,8 @@
     "lara": 2,
     "Hale": 3,
     "hale": 3,
-    "Damla": 2,
-    "damla": 2,
+    "Damla": 3,
+    "damla": 3,
     "Nehir": 2,
     "nehir": 2,
     "Eylül": 4,
@@ -63,6 +63,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:53",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:52",
       "name": "Gülce",
@@ -636,6 +644,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:53",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:52",
       "name": "Gülce",
@@ -1220,6 +1236,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_6h01",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189988255
+    },
+    {
       "id": "Android 📱_İzmit_um6f",
       "device": "Android 📱",
       "city": "İzmit",
@@ -1253,13 +1276,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795189818385
-    },
-    {
-      "id": "Android 📱_Köseköy_z46k",
-      "device": "Android 📱",
-      "city": "Köseköy",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795189794751
     }
   ]
 }
