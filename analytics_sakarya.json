@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 27,
+  "totalVisits": 28,
   "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
@@ -40,6 +40,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:52",
       "name": "Lina",
@@ -752,6 +761,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:52",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Amsterdam (NL)",
@@ -1005,57 +1023,15 @@
     "Milan (IT)": 1,
     "İzmir": 1,
     "Burnaby (CA)": 1,
-    "Amsterdam (NL)": 3
+    "Amsterdam (NL)": 4
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Sakarya_jsns",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795197153309
-    },
-    {
-      "id": "Android 📱_Amsterdam (NL)_14fq",
-      "device": "Android 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/karasu-eskort.html",
-      "lastSeen": 1795197135763
-    },
-    {
-      "id": "Android 📱_Sakarya_9wgp",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795197125006
-    },
-    {
-      "id": "Android 📱_Sakarya_ggpr",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795197062834
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_gdbd",
+      "id": "Mobil 📱_Amsterdam (NL)_4ajj",
       "device": "Mobil 📱",
       "city": "Amsterdam (NL)",
       "page": "/",
-      "lastSeen": 1795197047700
-    },
-    {
-      "id": "Android 📱_Sakarya_514i",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795197041734
-    },
-    {
-      "id": "Android 📱_Sakarya_a100",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795197020684
+      "lastSeen": 1795197431349
     }
   ]
 }
