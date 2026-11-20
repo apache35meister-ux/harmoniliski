@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 236,
+  "totalVisits": 237,
   "totalWaClicks": 158,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:13",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -779,15 +788,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:27",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1433,6 +1433,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:13",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2143,15 +2152,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:57",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bonney Lake (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2197,7 +2197,7 @@
     "Körfez": 2,
     "San José (CR)": 1,
     "Royal Oak (US)": 1,
-    "Frankfurt am Main (DE)": 3,
+    "Frankfurt am Main (DE)": 4,
     "Melbourne (AU)": 1,
     "Mexico City (MX)": 1,
     "Badlapur (IN)": 1,
@@ -2210,18 +2210,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Toronto (CA)_ysxz",
-      "device": "iPhone 📱",
-      "city": "Toronto (CA)",
+      "id": "Mobil 📱_Frankfurt am Main (DE)_i2gc",
+      "device": "Mobil 📱",
+      "city": "Frankfurt am Main (DE)",
       "page": "/",
-      "lastSeen": 1795162387096
-    },
-    {
-      "id": "iPhone 📱_Toronto (CA)_2tfc",
-      "device": "iPhone 📱",
-      "city": "Toronto (CA)",
-      "page": "/",
-      "lastSeen": 1795162304686
+      "lastSeen": 1795162608625
     }
   ]
 }
