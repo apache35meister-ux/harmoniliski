@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 15,
+  "totalVisits": 16,
   "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
@@ -41,6 +41,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:44",
       "name": "Yaren",
@@ -693,6 +702,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:44",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:42",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Milan (IT)",
@@ -833,10 +851,17 @@
     "İstanbul": 5,
     "Bursa": 1,
     "Brussels (BE)": 1,
-    "Köseköy": 4,
+    "Köseköy": 5,
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Köseköy_pg0b",
+      "device": "Mobil 📱",
+      "city": "Köseköy",
+      "page": "/",
+      "lastSeen": 1795189471623
+    },
     {
       "id": "Android 📱_İzmit_dq68",
       "device": "Android 📱",
