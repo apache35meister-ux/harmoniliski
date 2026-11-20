@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 10,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -27,10 +27,20 @@
     "Gülce": 1,
     "gülce": 1,
     "Melis": 1,
-    "melis": 1
+    "melis": 1,
+    "Peri": 1,
+    "peri": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:39",
+      "name": "Peri",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -275,6 +285,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:39",
+      "name": "Peri",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:38",
       "name": "Melis",
@@ -528,6 +546,13 @@
     "Köseköy": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_ocod",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189167143
+    },
     {
       "id": "Mobil 📱_Köseköy_4org",
       "device": "Mobil 📱",
