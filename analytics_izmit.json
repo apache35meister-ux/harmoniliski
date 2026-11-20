@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 19,
-  "totalWaClicks": 49,
+  "totalWaClicks": 50,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -24,8 +24,8 @@
     "serap": 1,
     "İzel": 1,
     "i̇zel": 1,
-    "Gülce": 2,
-    "gülce": 2,
+    "Gülce": 3,
+    "gülce": 3,
     "Melis": 3,
     "melis": 3,
     "Peri": 1,
@@ -63,6 +63,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:52",
+      "name": "Gülce",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:50",
       "name": "Gülce",
@@ -628,6 +636,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:52",
+      "name": "Gülce",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:50",
       "name": "Gülce",
@@ -1204,6 +1220,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_um6f",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189972333
+    },
+    {
       "id": "Android 📱_İzmit_cjix",
       "device": "Android 📱",
       "city": "İzmit",
@@ -1237,41 +1260,6 @@
       "city": "Köseköy",
       "page": "/yahya-kaptan-eskort.html",
       "lastSeen": 1795189794751
-    },
-    {
-      "id": "iPhone 📱_İzmit_xbdq",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189791799
-    },
-    {
-      "id": "iPhone 📱_İzmit_py5y",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189765960
-    },
-    {
-      "id": "Android 📱_İzmit_ag5l",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189685907
-    },
-    {
-      "id": "Android 📱_Köseköy_l297",
-      "device": "Android 📱",
-      "city": "Köseköy",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795189669608
-    },
-    {
-      "id": "Android 📱_İzmit_6mwn",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189662768
     }
   ]
 }
