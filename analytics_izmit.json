@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 50,
-  "totalWaClicks": 88,
+  "totalWaClicks": 89,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -26,8 +26,8 @@
     "i̇zel": 1,
     "Gülce": 4,
     "gülce": 4,
-    "Melis": 6,
-    "melis": 6,
+    "Melis": 7,
+    "melis": 7,
     "Peri": 1,
     "peri": 1,
     "Kumsal": 1,
@@ -81,6 +81,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:29",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -745,17 +753,17 @@
       "device": "Android 📱",
       "page": "/yahya-kaptan-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:47",
-      "name": "Lara",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:29",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:29",
       "name": "İlayda",
@@ -1387,14 +1395,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:24",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1860,6 +1860,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_l1b3",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795199364444
+    },
     {
       "id": "Mobil 📱_İstanbul_ftcf",
       "device": "Mobil 📱",
