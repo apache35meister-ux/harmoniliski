@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 285,
+  "totalVisits": 286,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:14",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Salto (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:14",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -733,15 +742,6 @@
       "time": "03:23",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:10",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "La Lima (HN)",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
@@ -890,6 +890,15 @@
     {
       "time": "07:14",
       "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Salto (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "07:14",
+      "name": "Ziyaretçi (Mobil 📱)",
       "city": "Easton (US)",
       "country": "Türkiye",
       "device": "Mobil 📱",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:10",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "La Lima (HN)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1679,9 +1679,17 @@
     "Singapore (SG)": 1,
     "João Pessoa (BR)": 1,
     "Bangkok (TH)": 1,
-    "Easton (US)": 1
+    "Easton (US)": 1,
+    "Salto (BR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Salto (BR)_vown",
+      "device": "Mobil 📱",
+      "city": "Salto (BR)",
+      "page": "/",
+      "lastSeen": 1795148083542
+    },
     {
       "id": "Mobil 📱_Easton (US)_difs",
       "device": "Mobil 📱",
