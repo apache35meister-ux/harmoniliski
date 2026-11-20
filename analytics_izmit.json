@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 16,
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -39,10 +39,20 @@
     "Pınar": 1,
     "pınar": 1,
     "Seyma Su": 1,
-    "seyma su": 1
+    "seyma su": 1,
+    "Sinem": 1,
+    "sinem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:45",
+      "name": "Sinem",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:45",
       "name": "Selin",
@@ -461,6 +471,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:45",
+      "name": "Sinem",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:45",
       "name": "Selin",
@@ -890,6 +908,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_k4fr",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189512508
+    },
+    {
       "id": "Android 📱_İzmit_vsmw",
       "device": "Android 📱",
       "city": "İzmit",
@@ -944,13 +969,6 @@
       "city": "Köseköy",
       "page": "Ana Sayfa",
       "lastSeen": 1795189336196
-    },
-    {
-      "id": "Android 📱_İzmit_qopo",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189329218
     }
   ]
 }
