@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 20,
+  "totalVisits": 21,
   "totalWaClicks": 23,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:47",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:46",
       "name": "Rus ESC",
@@ -586,6 +595,15 @@
   ],
   "cityVisits": [
     {
+      "time": "02:47",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "02:44",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Milan (IT)",
@@ -770,12 +788,19 @@
     "İstanbul": 7,
     "Gebze": 1,
     "Moscow (RU)": 1,
-    "Milan (IT)": 3,
+    "Milan (IT)": 4,
     "Amsterdam (NL)": 4,
     "Frankfurt am Main (DE)": 3,
     "Vienna (AT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Milan (IT)_eg6l",
+      "device": "iPhone 📱",
+      "city": "Milan (IT)",
+      "page": "/",
+      "lastSeen": 1795218424634
+    },
     {
       "id": "iPhone 📱_İzmit_piga",
       "device": "iPhone 📱",
