@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 115,
+  "totalVisits": 116,
   "totalWaClicks": 81,
   "totalCalls": 0,
   "tClicks": {
@@ -57,6 +57,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:04",
       "name": "Şebnem",
@@ -747,15 +756,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1401,6 +1401,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:04",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2111,23 +2120,21 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Türkiye",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 101,
-    "Bursa": 12,
+    "Bursa": 13,
     "Türkiye": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_5l9n",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795133234038
+    },
     {
       "id": "Android 📱_Bursa_dtig",
       "device": "Android 📱",
@@ -2148,27 +2155,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795133059521
-    },
-    {
-      "id": "Mobil 📱_İstanbul_c0ug",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/kestel-eskort.html",
-      "lastSeen": 1795133012702
-    },
-    {
-      "id": "Android 📱_Bursa_j1e1",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795132991212
-    },
-    {
-      "id": "Mobil 📱_İstanbul_t7m2",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795132949805
     }
   ]
 }
