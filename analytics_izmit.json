@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 230,
+  "totalVisits": 231,
   "totalWaClicks": 158,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:50",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Angeles City (PH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:47",
       "name": "Melisa",
@@ -779,15 +788,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Cachoeiras de Macacu (BR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1433,6 +1433,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:50",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Angeles City (PH)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:46",
       "name": "Ziyaretçi (Android 📱)",
@@ -2143,15 +2152,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:10",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2204,29 +2204,16 @@
     "Lahore (PK)": 1,
     "Ashburn (US)": 2,
     "Oakville (CA)": 1,
-    "Spartanburg (US)": 1
+    "Spartanburg (US)": 1,
+    "Angeles City (PH)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_no13",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795160844123
-    },
-    {
-      "id": "Android 📱_İzmit_9vii",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795160794470
-    },
-    {
-      "id": "Android 📱_Gebze_1uky",
-      "device": "Android 📱",
-      "city": "Gebze",
-      "page": "/kestel-eskort.html",
-      "lastSeen": 1795160783859
+      "id": "Mobil 📱_Angeles City (PH)_952h",
+      "device": "Mobil 📱",
+      "city": "Angeles City (PH)",
+      "page": "/",
+      "lastSeen": 1795161033038
     }
   ]
 }
