@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 213,
+  "totalVisits": 214,
   "totalWaClicks": 149,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Mexico City (MX)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -786,14 +795,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:45",
-      "name": "Melis",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1439,6 +1440,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Mexico City (MX)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2149,15 +2159,6 @@
       "device": "iPhone 📱",
       "page": "/bursa-nilufer-ozluce-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2204,15 +2205,16 @@
     "San José (CR)": 1,
     "Royal Oak (US)": 1,
     "Frankfurt am Main (DE)": 3,
-    "Melbourne (AU)": 1
+    "Melbourne (AU)": 1,
+    "Mexico City (MX)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Melbourne (AU)_a0zt",
+      "id": "Mobil 📱_Mexico City (MX)_3hjq",
       "device": "Mobil 📱",
-      "city": "Melbourne (AU)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795156559459
+      "city": "Mexico City (MX)",
+      "page": "/",
+      "lastSeen": 1795157303178
     }
   ]
 }
