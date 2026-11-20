@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 21,
+  "totalVisits": 22,
   "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
@@ -34,6 +34,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:23",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -580,6 +589,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:23",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -770,7 +788,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 10,
+    "İstanbul": 11,
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1,
@@ -781,32 +799,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_3tgt",
-      "device": "Masaüstü 💻",
+      "id": "Mobil 📱_İstanbul_y1q4",
+      "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795191810193
-    },
-    {
-      "id": "Masaüstü 💻_Sakarya_slu4",
-      "device": "Masaüstü 💻",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191805878
-    },
-    {
-      "id": "Masaüstü 💻_Sakarya, Serdivan_itbz",
-      "device": "Masaüstü 💻",
-      "city": "Sakarya, Serdivan",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191805872
-    },
-    {
-      "id": "Masaüstü 💻_Sakarya, Serdivan_87xn",
-      "device": "Masaüstü 💻",
-      "city": "Sakarya, Serdivan",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795191805860
+      "lastSeen": 1795192397706
     }
   ]
 }
