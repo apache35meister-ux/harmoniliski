@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 212,
+  "totalVisits": 213,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Incheon (KR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:38",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "00:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:50",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Incheon (KR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:38",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Gaziantep",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1617,36 +1617,23 @@
     "Ankara": 2,
     "Catalão (BR)": 1,
     "Atlanta (US)": 1,
-    "Gaziantep": 1
+    "Gaziantep": 1,
+    "Incheon (KR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Incheon (KR)_rwfy",
+      "device": "Mobil 📱",
+      "city": "Incheon (KR)",
+      "page": "/",
+      "lastSeen": 1795135166563
+    },
     {
       "id": "Mobil 📱_Gaziantep_7i46",
       "device": "Mobil 📱",
       "city": "Gaziantep",
       "page": "/",
       "lastSeen": 1795135118206
-    },
-    {
-      "id": "Mobil 📱_Ankara_2cx3",
-      "device": "Mobil 📱",
-      "city": "Ankara",
-      "page": "/",
-      "lastSeen": 1795134986368
-    },
-    {
-      "id": "Mobil 📱_Atlanta (US)_9p9v",
-      "device": "Mobil 📱",
-      "city": "Atlanta (US)",
-      "page": "/",
-      "lastSeen": 1795134958204
-    },
-    {
-      "id": "Mobil 📱_Catalão (BR)_j7xu",
-      "device": "Mobil 📱",
-      "city": "Catalão (BR)",
-      "page": "/",
-      "lastSeen": 1795134946073
     }
   ]
 }
