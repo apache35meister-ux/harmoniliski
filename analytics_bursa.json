@@ -1,13 +1,43 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 0,
+  "totalVisits": 1,
   "totalWaClicks": 0,
   "totalCalls": 0,
   "tClicks": {},
   "tCalls": {},
-  "logs": [],
+  "logs": [
+    {
+      "time": "16:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Şanlıurfa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    }
+  ],
   "callLogs": [],
-  "cityVisits": [],
-  "cityCounts": {},
-  "activeVisitors": []
+  "cityVisits": [
+    {
+      "time": "16:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Şanlıurfa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    }
+  ],
+  "cityCounts": {
+    "Şanlıurfa": 1
+  },
+  "activeVisitors": [
+    {
+      "id": "Mobil 📱_Şanlıurfa_g05m",
+      "device": "Mobil 📱",
+      "city": "Şanlıurfa",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795182505997
+    }
+  ]
 }
