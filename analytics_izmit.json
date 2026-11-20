@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 224,
+  "totalVisits": 225,
   "totalWaClicks": 152,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:21",
       "name": "Eylül",
@@ -784,15 +793,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:08",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1438,6 +1438,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2148,15 +2157,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:42",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2175,7 +2175,7 @@
     "Chicago (US)": 1,
     "Bandırma": 1,
     "San Isidro (PE)": 1,
-    "İzmit": 4,
+    "İzmit": 5,
     "Council Bluffs (US)": 2,
     "Fort Worth (US)": 1,
     "Cachoeiras de Macacu (BR)": 1,
@@ -2211,6 +2211,13 @@
     "Oakville (CA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmit_fs1l",
+      "device": "Mobil 📱",
+      "city": "İzmit",
+      "page": "/",
+      "lastSeen": 1795159288611
+    },
     {
       "id": "Android 📱_İzmit_hmcm",
       "device": "Android 📱",
