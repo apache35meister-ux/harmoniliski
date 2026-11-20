@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 253,
+  "totalVisits": 254,
   "totalWaClicks": 168,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:36",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:27",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -771,15 +780,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:42",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Johannesburg (ZA)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1425,6 +1425,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:36",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:27",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2135,20 +2144,11 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Kilis",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 156,
-    "Bursa": 21,
+    "Bursa": 22,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
     "İzmir": 3,
@@ -2204,11 +2204,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_fn60",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
+      "id": "iPhone 📱_Bursa_f58h",
+      "device": "iPhone 📱",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795174079438
+      "lastSeen": 1795174578414
     }
   ]
 }
