@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 83,
-  "totalWaClicks": 31,
+  "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -30,8 +30,8 @@
     "hazal": 1,
     "Sinem": 1,
     "sinem": 1,
-    "İzel": 1,
-    "i̇zel": 1,
+    "İzel": 2,
+    "i̇zel": 2,
     "Ayşen": 1,
     "ayşen": 1,
     "İlayda": 1,
@@ -43,6 +43,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:59",
+      "name": "İzel",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:59",
       "name": "Açelya",
@@ -729,18 +737,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:59",
+      "name": "İzel",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:59",
       "name": "Açelya",
@@ -1741,6 +1748,13 @@
     "Amsterdam (NL)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_sn69",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795172383506
+    },
     {
       "id": "Android 📱_Sakarya_nlc0",
       "device": "Android 📱",
