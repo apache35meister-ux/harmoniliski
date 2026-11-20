@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 206,
+  "totalVisits": 207,
   "totalWaClicks": 144,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Royal Oak (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:53",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -789,15 +798,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:13",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1443,6 +1443,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Royal Oak (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:53",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2153,15 +2162,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:40",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2205,9 +2205,17 @@
     "Johannesburg (ZA)": 1,
     "Marrakesh (MA)": 1,
     "Körfez": 2,
-    "San José (CR)": 1
+    "San José (CR)": 1,
+    "Royal Oak (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Royal Oak (US)_d87v",
+      "device": "Mobil 📱",
+      "city": "Royal Oak (US)",
+      "page": "/",
+      "lastSeen": 1795154182465
+    },
     {
       "id": "Mobil 📱_San José (CR)_yun4",
       "device": "Mobil 📱",
