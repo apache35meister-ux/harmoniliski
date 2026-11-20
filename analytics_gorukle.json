@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 280,
+  "totalVisits": 281,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Yerevan (AM)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:32",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:58",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Yerevan (AM)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:32",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1674,29 +1674,16 @@
     "Santo Domingo (DO)": 1,
     "Toronto (CA)": 1,
     "Elazığ": 1,
-    "Nong Bua (TH)": 1
+    "Nong Bua (TH)": 1,
+    "Yerevan (AM)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_ggrk",
+      "id": "Mobil 📱_Yerevan (AM)_n7eg",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Yerevan (AM)",
       "page": "/",
-      "lastSeen": 1795145550021
-    },
-    {
-      "id": "Mobil 📱_Nong Bua (TH)_sfk9",
-      "device": "Mobil 📱",
-      "city": "Nong Bua (TH)",
-      "page": "/",
-      "lastSeen": 1795145469941
-    },
-    {
-      "id": "Mobil 📱_Elazığ_4o6h",
-      "device": "Mobil 📱",
-      "city": "Elazığ",
-      "page": "/",
-      "lastSeen": 1795145403666
+      "lastSeen": 1795146407018
     }
   ]
 }
