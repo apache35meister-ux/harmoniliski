@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 177,
+  "totalVisits": 179,
   "totalWaClicks": 116,
   "totalCalls": 0,
   "tClicks": {
@@ -65,6 +65,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Boynton Beach (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "08:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Oudeschip (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,24 +754,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:30",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Catalão (BR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Kayseri",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1399,6 +1399,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Boynton Beach (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "08:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Oudeschip (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2100,24 +2118,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2154,9 +2154,25 @@
     "Council Bluffs (US)": 2,
     "Gebze": 1,
     "Columbus (US)": 1,
-    "Singapore (SG)": 1
+    "Singapore (SG)": 1,
+    "Oudeschip (NL)": 1,
+    "Boynton Beach (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Boynton Beach (US)_e4lc",
+      "device": "Mobil 📱",
+      "city": "Boynton Beach (US)",
+      "page": "/",
+      "lastSeen": 1795151585613
+    },
+    {
+      "id": "Mobil 📱_Oudeschip (NL)_eak9",
+      "device": "Mobil 📱",
+      "city": "Oudeschip (NL)",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795151533167
+    },
     {
       "id": "Mobil 📱_Bursa_gftm",
       "device": "Mobil 📱",
@@ -2184,27 +2200,6 @@
       "city": "Bursa",
       "page": "/",
       "lastSeen": 1795151430931
-    },
-    {
-      "id": "iPhone 📱_Bursa_fo07",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795151397160
-    },
-    {
-      "id": "Android 📱_Bursa_7j5t",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795151382443
-    },
-    {
-      "id": "Mobil 📱_Bursa_jumo",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/kestel-eskort.html",
-      "lastSeen": 1795151356056
     }
   ]
 }
