@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:52",
       "name": "Melisa",
@@ -326,6 +335,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:51",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -419,50 +437,16 @@
   "cityCounts": {
     "Ankara": 4,
     "İstanbul": 1,
-    "Bursa": 5
+    "Bursa": 5,
+    "Amsterdam (NL)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_f3hs",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211544612
-    },
-    {
-      "id": "iPhone 📱_Bursa_tgr7",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211515009
-    },
-    {
-      "id": "iPhone 📱_Bursa_foyr",
-      "device": "iPhone 📱",
-      "city": "Bursa",
+      "id": "Mobil 📱_Amsterdam (NL)_3ki6",
+      "device": "Mobil 📱",
+      "city": "Amsterdam (NL)",
       "page": "/",
-      "lastSeen": 1795211464441
-    },
-    {
-      "id": "iPhone 📱_Bursa_szup",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211445256
-    },
-    {
-      "id": "iPhone 📱_Bursa_j06w",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211404248
-    },
-    {
-      "id": "iPhone 📱_Bursa_rn33",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795211390399
+      "lastSeen": 1795211813879
     }
   ]
 }
