@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 259,
+  "totalVisits": 260,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Baltimore (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:25",
       "name": "Ziyaretçi (Android 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:22",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Baltimore (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:25",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bandırma",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1655,29 +1655,16 @@
     "İskenderun": 1,
     "Fort Mill (US)": 1,
     "El Paso (US)": 1,
-    "Bandırma": 1
+    "Bandırma": 1,
+    "Baltimore (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bandırma_ne75",
-      "device": "Android 📱",
-      "city": "Bandırma",
-      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.ht",
-      "lastSeen": 1795141548861
-    },
-    {
-      "id": "Mobil 📱_Atlanta (US)_2orp",
+      "id": "Mobil 📱_Baltimore (US)_njkk",
       "device": "Mobil 📱",
-      "city": "Atlanta (US)",
+      "city": "Baltimore (US)",
       "page": "/",
-      "lastSeen": 1795141521999
-    },
-    {
-      "id": "Mobil 📱_El Paso (US)_joju",
-      "device": "Mobil 📱",
-      "city": "El Paso (US)",
-      "page": "/",
-      "lastSeen": 1795141458848
+      "lastSeen": 1795141735233
     }
   ]
 }
