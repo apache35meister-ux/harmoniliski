@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 31,
-  "totalWaClicks": 30,
+  "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
@@ -24,8 +24,8 @@
     "açelya": 2,
     "Sena": 2,
     "sena": 2,
-    "VIP Escort": 2,
-    "vip escort": 2,
+    "VIP Escort": 3,
+    "vip escort": 3,
     "Gül": 1,
     "gül": 1,
     "1790000000203": 2,
@@ -42,6 +42,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:07",
+      "name": "VIP Escort",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:06",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -563,6 +571,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:07",
+      "name": "VIP Escort",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:00",
       "name": "Simge",
@@ -1098,6 +1114,13 @@
     "Amsterdam (NL)": 6
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_lzzg",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795198023787
+    },
     {
       "id": "Mobil 📱_İstanbul_ccv0",
       "device": "Mobil 📱",
