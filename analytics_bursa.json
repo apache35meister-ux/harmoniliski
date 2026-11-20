@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 235,
-  "totalWaClicks": 162,
+  "totalWaClicks": 163,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -34,8 +34,8 @@
     "rus esc": 7,
     "Melisa": 6,
     "melisa": 6,
-    "Hale": 4,
-    "hale": 4,
+    "Hale": 5,
+    "hale": 5,
     "Sinem": 4,
     "sinem": 4,
     "Tuba": 4,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:53",
+      "name": "Hale",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:51",
       "name": "Tuba",
@@ -746,17 +754,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "09:36",
-      "name": "Gül",
+      "time": "14:53",
+      "name": "Hale",
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "14:51",
       "name": "Tuba",
@@ -1387,14 +1395,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:18",
-      "name": "İlayda",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2179,6 +2179,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_dyhc",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175595681
+    },
+    {
       "id": "iPhone 📱_Bursa_k4tk",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -2205,13 +2212,6 @@
       "city": "İznik",
       "page": "/gorukle-eskort.html",
       "lastSeen": 1795175461127
-    },
-    {
-      "id": "iPhone 📱_Bursa_l8zi",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795175335777
     }
   ]
 }
