@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 138,
+  "totalVisits": 140,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:02",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Sivas",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "04:02",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fresno (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -740,24 +758,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:32",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1403,6 +1403,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:02",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Sivas",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "04:02",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fresno (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2104,24 +2122,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:39",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2140,9 +2140,25 @@
     "Adapazarı": 2,
     "Richmond (US)": 1,
     "Mullins (US)": 1,
-    "Corrientes (AR)": 1
+    "Corrientes (AR)": 1,
+    "Fresno (US)": 1,
+    "Sivas": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Sivas_y2gy",
+      "device": "Mobil 📱",
+      "city": "Sivas",
+      "page": "/",
+      "lastSeen": 1795136562134
+    },
+    {
+      "id": "Mobil 📱_Fresno (US)_2wfp",
+      "device": "Mobil 📱",
+      "city": "Fresno (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795136547366
+    },
     {
       "id": "Mobil 📱_Corrientes (AR)_i9tw",
       "device": "Mobil 📱",
