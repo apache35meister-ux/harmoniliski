@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 212,
+  "totalVisits": 213,
   "totalWaClicks": 149,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Melbourne (AU)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:59",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -785,15 +794,6 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1439,6 +1439,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Melbourne (AU)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:59",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2149,15 +2158,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2203,78 +2203,16 @@
     "Körfez": 2,
     "San José (CR)": 1,
     "Royal Oak (US)": 1,
-    "Frankfurt am Main (DE)": 3
+    "Frankfurt am Main (DE)": 3,
+    "Melbourne (AU)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_0l7n",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795154385461
-    },
-    {
-      "id": "Android 📱_İzmit_4i3m",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795154357589
-    },
-    {
-      "id": "Android 📱_İzmit_g5m3",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795154342762
-    },
-    {
-      "id": "Android 📱_İzmit_04fu",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795154334394
-    },
-    {
-      "id": "Android 📱_Frankfurt am Main (DE)_yknt",
-      "device": "Android 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795154327733
-    },
-    {
-      "id": "Android 📱_İzmit_vxcm",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795154327688
-    },
-    {
-      "id": "Android 📱_İzmit_00f8",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795154321722
-    },
-    {
-      "id": "Mobil 📱_Frankfurt am Main (DE)_o0b0",
+      "id": "Mobil 📱_Melbourne (AU)_a0zt",
       "device": "Mobil 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/",
-      "lastSeen": 1795154244830
-    },
-    {
-      "id": "iPhone 📱_Bursa_2pcg",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795154225247
-    },
-    {
-      "id": "Mobil 📱_Frankfurt am Main (DE)_tswr",
-      "device": "Mobil 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/",
-      "lastSeen": 1795154224699
+      "city": "Melbourne (AU)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795156559459
     }
   ]
 }
