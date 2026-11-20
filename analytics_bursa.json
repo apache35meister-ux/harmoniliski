@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 236,
+  "totalVisits": 237,
   "totalWaClicks": 164,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:54",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İznik",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/nilufer-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:54",
       "name": "Ayşen",
@@ -744,15 +753,6 @@
       "device": "Mobil 📱",
       "page": "/gorukle-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1398,6 +1398,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:54",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İznik",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/nilufer-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:53",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2108,15 +2117,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:45",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Round Rock (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2174,9 +2174,16 @@
     "Şanlıurfa": 2,
     "Selçuk": 2,
     "Dallas (US)": 1,
-    "İznik": 3
+    "İznik": 4
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İznik_c3ez",
+      "device": "iPhone 📱",
+      "city": "İznik",
+      "page": "/nilufer-eskort.html",
+      "lastSeen": 1795175661960
+    },
     {
       "id": "iPhone 📱_Bursa_5s9l",
       "device": "iPhone 📱",
@@ -2204,13 +2211,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795175512534
-    },
-    {
-      "id": "iPhone 📱_Bursa_tu8o",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795175480065
     }
   ]
 }
