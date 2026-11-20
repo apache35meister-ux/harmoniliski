@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -344,6 +353,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:57",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Amsterdam (NL)",
@@ -456,9 +474,16 @@
     "Ankara": 4,
     "İstanbul": 1,
     "Bursa": 5,
-    "Amsterdam (NL)": 2
+    "Amsterdam (NL)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Amsterdam (NL)_m1cd",
+      "device": "Mobil 📱",
+      "city": "Amsterdam (NL)",
+      "page": "/",
+      "lastSeen": 1795211936553
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_3qz5",
       "device": "Mobil 📱",
