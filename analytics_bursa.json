@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 22,
+  "totalVisits": 23,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:38",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -741,6 +750,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:38",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -941,13 +959,20 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 16,
+    "Bursa": 17,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
     "Milan (IT)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_j4kp",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795196353907
+    },
     {
       "id": "iPhone 📱_Bursa_m4zs",
       "device": "iPhone 📱",
