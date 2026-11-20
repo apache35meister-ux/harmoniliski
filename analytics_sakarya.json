@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 57,
+  "totalVisits": 58,
   "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:21",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Charlotte (US)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/mersin-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -723,15 +732,6 @@
       "device": "Masaüstü 💻",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:58",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -929,6 +929,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:21",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Charlotte (US)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/mersin-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1453,15 +1462,16 @@
     "Singapore (SG)": 1,
     "Rome (IT)": 1,
     "Port of Spain (TT)": 1,
-    "Holt (US)": 1
+    "Holt (US)": 1,
+    "Charlotte (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Holt (US)_fgrv",
-      "device": "Mobil 📱",
-      "city": "Holt (US)",
-      "page": "/",
-      "lastSeen": 1795137367735
+      "id": "Android 📱_Charlotte (US)_be0w",
+      "device": "Android 📱",
+      "city": "Charlotte (US)",
+      "page": "/mersin-eskort.html",
+      "lastSeen": 1795137695250
     }
   ]
 }
