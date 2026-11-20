@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 11,
+  "totalVisits": 12,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:04",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -269,6 +278,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:04",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:35",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Adapazarı",
@@ -373,29 +391,16 @@
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1,
-    "Adapazarı": 3
+    "Adapazarı": 3,
+    "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Adapazarı_tj2r",
-      "device": "Mobil 📱",
-      "city": "Adapazarı",
+      "id": "iPhone 📱_Frankfurt am Main (DE)_mbgw",
+      "device": "iPhone 📱",
+      "city": "Frankfurt am Main (DE)",
       "page": "/",
-      "lastSeen": 1795185351883
-    },
-    {
-      "id": "Mobil 📱_Adapazarı_qusz",
-      "device": "Mobil 📱",
-      "city": "Adapazarı",
-      "page": "/",
-      "lastSeen": 1795185286645
-    },
-    {
-      "id": "Mobil 📱_Adapazarı_3sxy",
-      "device": "Mobil 📱",
-      "city": "Adapazarı",
-      "page": "/",
-      "lastSeen": 1795185222639
+      "lastSeen": 1795187076517
     }
   ]
 }
