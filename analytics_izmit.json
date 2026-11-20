@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 18,
-  "totalWaClicks": 44,
+  "totalWaClicks": 45,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -53,10 +53,20 @@
     "Zeynep": 1,
     "zeynep": 1,
     "Natali": 1,
-    "natali": 1
+    "natali": 1,
+    "Mariya": 1,
+    "mariya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:49",
+      "name": "Mariya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:49",
       "name": "Natali",
@@ -573,6 +583,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:49",
+      "name": "Mariya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:49",
       "name": "Natali",
@@ -1100,6 +1118,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_İzmit_xbdq",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189791799
+    },
+    {
       "id": "iPhone 📱_İzmit_py5y",
       "device": "iPhone 📱",
       "city": "İzmit",
@@ -1126,20 +1151,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795189662768
-    },
-    {
-      "id": "iPhone 📱_İzmit_tt40",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189596598
-    },
-    {
-      "id": "iPhone 📱_İzmit_6rbl",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795189589350
     }
   ]
 }
