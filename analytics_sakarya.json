@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 73,
+  "totalVisits": 74,
   "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:10",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/karabuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:58",
       "name": "İlayda",
@@ -727,15 +736,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:25",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -957,6 +957,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:10",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/karabuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:57",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1616,7 +1625,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 36,
+    "İstanbul": 37,
     "Bursa": 14,
     "La Lima (HN)": 1,
     "La Paz (BO)": 1,
@@ -1641,18 +1650,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Sakarya_q04m",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795154339530
-    },
-    {
-      "id": "iPhone 📱_İstanbul_1be9",
-      "device": "iPhone 📱",
+      "id": "Android 📱_İstanbul_24a5",
+      "device": "Android 📱",
       "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795154242819
+      "page": "/karabuk-eskort.html",
+      "lastSeen": 1795155047716
     }
   ]
 }
