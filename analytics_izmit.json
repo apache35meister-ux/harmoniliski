@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 222,
-  "totalWaClicks": 149,
+  "totalWaClicks": 150,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 22,
     "selin": 22,
-    "Melis": 10,
-    "melis": 10,
+    "Melis": 11,
+    "melis": 11,
     "Begüm": 5,
     "begüm": 5,
     "Damla": 9,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:19",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:18",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -787,18 +795,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:43",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:19",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:59",
       "name": "Nihan",
@@ -1429,14 +1436,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:16",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2214,6 +2213,13 @@
     "Oakville (CA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_lvlc",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795159194446
+    },
     {
       "id": "Mobil 📱_İstanbul_n51u",
       "device": "Mobil 📱",
