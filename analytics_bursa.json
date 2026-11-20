@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 243,
+  "totalVisits": 244,
   "totalWaClicks": 168,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:43",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:37",
       "name": "Açelya",
@@ -746,14 +755,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:02",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1399,6 +1400,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:43",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:37",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2109,20 +2119,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Columbus (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 119,
-    "Bursa": 50,
+    "Bursa": 51,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2179,18 +2180,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_bt4l",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795178256828
-    },
-    {
-      "id": "Mobil 📱_Bursa_izvv",
+      "id": "Mobil 📱_Bursa_arf2",
       "device": "Mobil 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795178254340
+      "lastSeen": 1795178588050
     }
   ]
 }
