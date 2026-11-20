@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 239,
+  "totalVisits": 240,
   "totalWaClicks": 167,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:11",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -745,15 +754,6 @@
       "device": "iPhone 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:49",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1399,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:11",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:07",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2109,19 +2118,10 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Afyonkarahisar",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 116,
+    "İstanbul": 117,
     "Bursa": 49,
     "Türkiye": 2,
     "Rome (IT)": 1,
@@ -2179,39 +2179,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_70y7",
+      "id": "Masaüstü 💻_İstanbul_pxn1",
       "device": "Masaüstü 💻",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795176478842
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_ozgj",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795176447236
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_cd7a",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795176447236
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_zsc1",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795176447236
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_lfyc",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795176326605
+      "lastSeen": 1795176682068
     }
   ]
 }
