@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 198,
+  "totalVisits": 199,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Kingston (JM)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:21",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -788,15 +797,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:44",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1442,6 +1442,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Kingston (JM)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:21",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2152,15 +2161,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:07",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2198,9 +2198,17 @@
     "McAllen (US)": 1,
     "Milagres (BR)": 1,
     "Baltimore (US)": 1,
-    "Jaipur (IN)": 1
+    "Jaipur (IN)": 1,
+    "Kingston (JM)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Kingston (JM)_uudd",
+      "device": "Mobil 📱",
+      "city": "Kingston (JM)",
+      "page": "/",
+      "lastSeen": 1795152127285
+    },
     {
       "id": "Mobil 📱_Jaipur (IN)_wjuf",
       "device": "Mobil 📱",
