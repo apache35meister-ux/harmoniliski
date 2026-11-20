@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 247,
-  "totalWaClicks": 171,
+  "totalWaClicks": 172,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
     "test model": 1,
     "Melis": 7,
     "melis": 7,
-    "Şebnem": 7,
-    "şebnem": 7,
+    "Şebnem": 8,
+    "şebnem": 8,
     "Yaren": 4,
     "yaren": 4,
     "Damla": 17,
@@ -78,6 +78,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:57",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:57",
       "name": "Hale",
@@ -747,18 +755,17 @@
       "device": "Android 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gaziantep",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:57",
+      "name": "Şebnem",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:57",
       "name": "Hale",
@@ -1389,14 +1396,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:18",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2182,6 +2181,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_6148",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795179468995
+    },
+    {
       "id": "Android 📱_Bursa_xt5t",
       "device": "Android 📱",
       "city": "Bursa",
@@ -2194,13 +2200,6 @@
       "city": "Alanyurt",
       "page": "/",
       "lastSeen": 1795179437753
-    },
-    {
-      "id": "Mobil 📱_İzmir_2051",
-      "device": "Mobil 📱",
-      "city": "İzmir",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795179284140
     }
   ]
 }
