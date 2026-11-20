@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 26,
-  "totalWaClicks": 26,
+  "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
@@ -31,11 +31,19 @@
     "1790000000203": 2,
     "Buse": 3,
     "buse": 3,
-    "Rus ESC": 1,
-    "rus esc": 1
+    "Rus ESC": 2,
+    "rus esc": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:51",
+      "name": "Rus ESC",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -480,6 +488,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:51",
+      "name": "Rus ESC",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:50",
       "name": "Açelya",
@@ -938,6 +954,13 @@
     "Amsterdam (NL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_ggpr",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795197062834
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_gdbd",
       "device": "Mobil 📱",
