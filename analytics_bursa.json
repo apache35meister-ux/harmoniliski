@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 169,
+  "totalVisits": 170,
   "totalWaClicks": 111,
   "totalCalls": 0,
   "tClicks": {
@@ -65,6 +65,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:59",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/mudanya-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:59",
       "name": "Melis",
@@ -746,15 +755,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1400,6 +1400,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:59",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/mudanya-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:58",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2110,20 +2119,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:34",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gorukle-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 106,
-    "Bursa": 26,
+    "Bursa": 27,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2157,6 +2157,13 @@
     "Columbus (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_olk8",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/mudanya-eskort.html",
+      "lastSeen": 1795150779132
+    },
     {
       "id": "iPhone 📱_Bursa_eccc",
       "device": "iPhone 📱",
