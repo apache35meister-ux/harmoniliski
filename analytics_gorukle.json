@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 214,
+  "totalVisits": 215,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Richmond (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:45",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "00:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:55",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Richmond (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:45",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Devrek",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1619,9 +1619,17 @@
     "Atlanta (US)": 1,
     "Gaziantep": 1,
     "Incheon (KR)": 1,
-    "Devrek": 1
+    "Devrek": 1,
+    "Richmond (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Richmond (US)_r8gj",
+      "device": "Mobil 📱",
+      "city": "Richmond (US)",
+      "page": "/",
+      "lastSeen": 1795135611399
+    },
     {
       "id": "Mobil 📱_Devrek_tu0w",
       "device": "Mobil 📱",
