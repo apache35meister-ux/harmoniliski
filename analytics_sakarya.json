@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 93,
-  "totalWaClicks": 41,
+  "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 4,
@@ -43,10 +43,20 @@
     "Melis": 2,
     "melis": 2,
     "Gül": 1,
-    "gül": 1
+    "gül": 1,
+    "Rus ESC": 1,
+    "rus esc": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:17",
+      "name": "Rus ESC",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:16",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,17 +746,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:58",
-      "name": "Hazal",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "16:17",
+      "name": "Rus ESC",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:59",
       "name": "Melisa",
@@ -1829,6 +1839,13 @@
     "Manassas (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_6fga",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795180620300
+    },
     {
       "id": "Mobil 📱_İstanbul_jqnr",
       "device": "Mobil 📱",
