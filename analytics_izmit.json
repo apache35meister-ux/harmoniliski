@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 13,
-  "totalWaClicks": 14,
+  "totalWaClicks": 15,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
@@ -21,10 +21,20 @@
     "Sinem": 1,
     "sinem": 1,
     "Rus ESC": 2,
-    "rus esc": 2
+    "rus esc": 2,
+    "Hale": 1,
+    "hale": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:52",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:52",
       "name": "Rus ESC",
@@ -256,6 +266,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "00:52",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:52",
       "name": "Rus ESC",
@@ -497,6 +515,13 @@
     "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_kura",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795211574944
+    },
     {
       "id": "Android 📱_İzmit_wmy8",
       "device": "Android 📱",
