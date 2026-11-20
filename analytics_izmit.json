@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 63,
+  "totalVisits": 64,
   "totalWaClicks": 109,
   "totalCalls": 0,
   "tClicks": {
@@ -91,6 +91,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:54",
       "name": "Ziyaretçi (Android 📱)",
@@ -749,14 +758,6 @@
       "city": "İzmit",
       "device": "Masaüstü 💻",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:20",
-      "name": "VIP Escort",
-      "city": "İzmit / Yahya Kaptan",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -1412,6 +1413,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:54",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Bursa",
@@ -1981,7 +1991,7 @@
   ],
   "cityCounts": {
     "İzmit": 5,
-    "İstanbul": 32,
+    "İstanbul": 33,
     "Bursa": 4,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -1991,6 +2001,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_vjqm",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795201008802
+    },
     {
       "id": "Android 📱_Bursa_09v0",
       "device": "Android 📱",
