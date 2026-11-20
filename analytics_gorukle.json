@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 276,
+  "totalVisits": 277,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Toronto (CA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:27",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "country": "Türkiye",
       "device": "Android 📱",
       "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
   ],
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Toronto (CA)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:27",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Santo Domingo (DO)",
@@ -1597,15 +1606,6 @@
       "device": "Android 📱",
       "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1671,22 +1671,23 @@
     "Melbourne (AU)": 1,
     "Fethiye": 1,
     "Los Angeles (US)": 1,
-    "Santo Domingo (DO)": 1
+    "Santo Domingo (DO)": 1,
+    "Toronto (CA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Toronto (CA)_4uc1",
+      "device": "Mobil 📱",
+      "city": "Toronto (CA)",
+      "page": "/",
+      "lastSeen": 1795145339950
+    },
     {
       "id": "Mobil 📱_Santo Domingo (DO)_cx2p",
       "device": "Mobil 📱",
       "city": "Santo Domingo (DO)",
       "page": "/",
       "lastSeen": 1795145254970
-    },
-    {
-      "id": "Mobil 📱_Los Angeles (US)_tntf",
-      "device": "Mobil 📱",
-      "city": "Los Angeles (US)",
-      "page": "/",
-      "lastSeen": 1795145108071
     }
   ]
 }
