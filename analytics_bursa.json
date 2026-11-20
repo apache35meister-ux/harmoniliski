@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 7,
-  "totalWaClicks": 9,
+  "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -12,8 +12,8 @@
     "hale": 1,
     "VIP Escort": 2,
     "vip escort": 2,
-    "Açelya": 1,
-    "açelya": 1,
+    "Açelya": 2,
+    "açelya": 2,
     "Gül": 1,
     "gül": 1,
     "İzel": 1,
@@ -21,6 +21,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:11",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -158,6 +166,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:11",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:22",
       "name": "İzel",
@@ -303,6 +319,13 @@
     "New York City (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_ne6q",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795191098894
+    },
     {
       "id": "Mobil 📱_New York City (US)_gt2x",
       "device": "Mobil 📱",
