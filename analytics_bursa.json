@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 35,
-  "totalWaClicks": 35,
+  "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
     "su": 1,
-    "Rus ESC": 3,
-    "rus esc": 3,
+    "Rus ESC": 4,
+    "rus esc": 4,
     "Hale": 4,
     "hale": 4,
     "VIP Escort": 4,
@@ -46,6 +46,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:56",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:55",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -643,6 +651,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:56",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:17",
       "name": "Damla",
@@ -1252,6 +1268,13 @@
     "Zürich (CH)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_35q6",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795201004209
+    },
     {
       "id": "Mobil 📱_Bursa_5fmj",
       "device": "Mobil 📱",
