@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 184,
+  "totalVisits": 185,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Sacramento (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:22",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -779,14 +788,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:36",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1432,6 +1433,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Sacramento (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:22",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2142,15 +2152,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:00",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2180,9 +2181,17 @@
     "Giesen (DE)": 1,
     "Salto (BR)": 1,
     "Gebze": 1,
-    "İznik": 1
+    "İznik": 1,
+    "Sacramento (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Sacramento (US)_pd8y",
+      "device": "Mobil 📱",
+      "city": "Sacramento (US)",
+      "page": "/",
+      "lastSeen": 1795148674581
+    },
     {
       "id": "Mobil 📱_İstanbul_okjf",
       "device": "Mobil 📱",
