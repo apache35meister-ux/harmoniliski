@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 32,
+  "totalVisits": 33,
   "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
@@ -46,6 +46,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:44",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:21",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -899,6 +908,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:44",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:21",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Zürich (CH)",
@@ -1189,7 +1207,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 23,
+    "Bursa": 24,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -1199,18 +1217,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Zürich (CH)_u76e",
+      "id": "iPhone 📱_Bursa_4j59",
       "device": "iPhone 📱",
-      "city": "Zürich (CH)",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795198877221
-    },
-    {
-      "id": "Mobil 📱_Zürich (CH)_v6d3",
-      "device": "Mobil 📱",
-      "city": "Zürich (CH)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795198787513
+      "lastSeen": 1795200263205
     }
   ]
 }
