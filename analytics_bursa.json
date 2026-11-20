@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 218,
+  "totalVisits": 219,
   "totalWaClicks": 136,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:19",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:13",
       "name": "Eylül",
@@ -759,14 +768,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:53",
-      "name": "Dila",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1412,6 +1413,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:19",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2122,19 +2132,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Fresno (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 107,
+    "İstanbul": 108,
     "Bursa": 47,
     "Türkiye": 2,
     "Rome (IT)": 1,
@@ -2189,25 +2190,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_fw2x",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795169636705
-    },
-    {
-      "id": "Android 📱_Bursa_hoa3",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795169535160
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_tkj9",
+      "id": "Mobil 📱_İstanbul_utdx",
       "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795169527083
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795169981698
     }
   ]
 }
