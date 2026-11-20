@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 9,
+  "totalVisits": 10,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:50",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/alikahya-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:49",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -215,6 +224,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:50",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/alikahya-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:49",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -297,13 +315,20 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 3,
+    "İstanbul": 4,
     "Gebze": 1,
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
     "Amsterdam (NL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İstanbul_95cb",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/alikahya-eskort.html",
+      "lastSeen": 1795211410011
+    },
     {
       "id": "Mobil 📱_İstanbul_qceb",
       "device": "Mobil 📱",
