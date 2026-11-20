@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 289,
+  "totalVisits": 290,
   "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:25",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,15 +741,6 @@
       "time": "03:38",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Gaziantep",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
       "country": "Türkiye",
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
@@ -895,6 +895,15 @@
   ],
   "cityVisits": [
     {
+      "time": "07:39",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "07:25",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Brantford (CA)",
@@ -1604,19 +1613,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Atlanta (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 188,
+    "İstanbul": 189,
     "Görükle": 21,
     "Türkiye": 2,
     "Charlotte (US)": 2,
@@ -1694,32 +1694,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Brantford (CA)_2c3m",
-      "device": "Android 📱",
-      "city": "Brantford (CA)",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795148744448
-    },
-    {
-      "id": "Android 📱_Görükle_g4db",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795148696122
-    },
-    {
-      "id": "Mobil 📱_Sacramento (US)_lg6r",
+      "id": "Mobil 📱_İstanbul_ksk2",
       "device": "Mobil 📱",
-      "city": "Sacramento (US)",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795148627738
-    },
-    {
-      "id": "Android 📱_Laventille (TT)_jrty",
-      "device": "Android 📱",
-      "city": "Laventille (TT)",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795148578420
+      "lastSeen": 1795149548664
     }
   ]
 }
