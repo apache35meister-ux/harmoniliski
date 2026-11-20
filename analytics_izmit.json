@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 174,
+  "totalVisits": 175,
   "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
@@ -86,6 +86,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:24",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -774,15 +783,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:47",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1428,6 +1428,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:24",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2138,15 +2147,6 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2170,9 +2170,17 @@
     "Fort Worth (US)": 1,
     "Cachoeiras de Macacu (BR)": 1,
     "Guayaquil (EC)": 1,
-    "Kilis": 1
+    "Kilis": 1,
+    "Dallas (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Dallas (US)_ezpd",
+      "device": "Masaüstü 💻",
+      "city": "Dallas (US)",
+      "page": "/",
+      "lastSeen": 1795145095305
+    },
     {
       "id": "Mobil 📱_Kilis_zmqy",
       "device": "Mobil 📱",
