@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 34,
+  "totalVisits": 35,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:16",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -849,6 +858,15 @@
   ],
   "cityVisits": [
     {
+      "time": "22:56",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "22:16",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Manavgat",
@@ -1160,7 +1178,7 @@
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1,
-    "Adapazarı": 4,
+    "Adapazarı": 5,
     "Frankfurt am Main (DE)": 3,
     "Milan (IT)": 1,
     "İzmir": 1,
@@ -1170,11 +1188,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Manavgat_0l3l",
-      "device": "iPhone 📱",
-      "city": "Manavgat",
+      "id": "Mobil 📱_Adapazarı_wenq",
+      "device": "Mobil 📱",
+      "city": "Adapazarı",
       "page": "/",
-      "lastSeen": 1795202168879
+      "lastSeen": 1795204614454
     }
   ]
 }
