@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 169,
+  "totalVisits": 170,
   "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
@@ -86,6 +86,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Cachoeiras de Macacu (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:36",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -771,14 +780,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:40",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1424,6 +1425,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Cachoeiras de Macacu (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:36",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2134,15 +2144,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2163,43 +2164,16 @@
     "San Isidro (PE)": 1,
     "İzmit": 1,
     "Council Bluffs (US)": 2,
-    "Fort Worth (US)": 1
+    "Fort Worth (US)": 1,
+    "Cachoeiras de Macacu (BR)": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Fort Worth (US)_ufy8",
-      "device": "Masaüstü 💻",
-      "city": "Fort Worth (US)",
-      "page": "/",
-      "lastSeen": 1795142219248
-    },
-    {
-      "id": "Masaüstü 💻_Council Bluffs (US)_6j9c",
-      "device": "Masaüstü 💻",
-      "city": "Council Bluffs (US)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795142177541
-    },
-    {
-      "id": "Masaüstü 💻_Council Bluffs (US)_g7e0",
-      "device": "Masaüstü 💻",
-      "city": "Council Bluffs (US)",
-      "page": "/",
-      "lastSeen": 1795142170807
-    },
-    {
-      "id": "Android 📱_İzmit_5e5a",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795142110849
-    },
-    {
-      "id": "Mobil 📱_İzmit_202r",
+      "id": "Mobil 📱_Cachoeiras de Macacu (BR)_hd31",
       "device": "Mobil 📱",
-      "city": "İzmit",
+      "city": "Cachoeiras de Macacu (BR)",
       "page": "/",
-      "lastSeen": 1795142061917
+      "lastSeen": 1795143320901
     }
   ]
 }
