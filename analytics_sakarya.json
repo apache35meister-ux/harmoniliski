@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 7,
+  "totalVisits": 8,
   "totalWaClicks": 8,
   "totalCalls": 0,
   "tClicks": {
@@ -19,6 +19,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:56",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:56",
       "name": "Selin",
@@ -215,6 +224,15 @@
   ],
   "cityVisits": [
     {
+      "time": "16:56",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "16:55",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -279,12 +297,19 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 4,
+    "İstanbul": 5,
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_88mc",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795182993680
+    },
     {
       "id": "iPhone 📱_Sakarya_l16l",
       "device": "iPhone 📱",
