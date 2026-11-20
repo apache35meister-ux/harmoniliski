@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 54,
-  "totalWaClicks": 94,
+  "totalWaClicks": 95,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -50,8 +50,8 @@
     "nurcan & diana": 1,
     "Zehra": 1,
     "zehra": 1,
-    "Zeynep": 1,
-    "zeynep": 1,
+    "Zeynep": 2,
+    "zeynep": 2,
     "Natali": 1,
     "natali": 1,
     "Mariya": 1,
@@ -85,6 +85,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:34",
+      "name": "Zeynep",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -751,17 +759,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:52",
-      "name": "Gülce",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:34",
+      "name": "Zeynep",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:33",
       "name": "Rüya",
@@ -1393,14 +1401,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:32",
-      "name": "Şebnem",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1902,6 +1902,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_7atp",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795199678062
+    },
     {
       "id": "Mobil 📱_İstanbul_5rav",
       "device": "Mobil 📱",
