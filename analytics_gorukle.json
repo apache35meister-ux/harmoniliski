@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 255,
+  "totalVisits": 257,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "El Paso (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "05:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fort Mill (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:22",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -728,23 +746,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:13",
-      "name": "Damla",
-      "city": "Görükle",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -887,6 +888,24 @@
   ],
   "cityVisits": [
     {
+      "time": "05:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "El Paso (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "05:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fort Mill (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:22",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İskenderun",
@@ -1587,24 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1651,29 +1652,31 @@
     "Harker Heights (US)": 1,
     "Yazoo City (US)": 1,
     "Medellín (CO)": 1,
-    "İskenderun": 1
+    "İskenderun": 1,
+    "Fort Mill (US)": 1,
+    "El Paso (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_El Paso (US)_joju",
+      "device": "Mobil 📱",
+      "city": "El Paso (US)",
+      "page": "/",
+      "lastSeen": 1795141458848
+    },
+    {
+      "id": "Mobil 📱_Fort Mill (US)_6zbv",
+      "device": "Mobil 📱",
+      "city": "Fort Mill (US)",
+      "page": "/",
+      "lastSeen": 1795141343573
+    },
     {
       "id": "Mobil 📱_İskenderun_41vh",
       "device": "Mobil 📱",
       "city": "İskenderun",
       "page": "/",
       "lastSeen": 1795141338332
-    },
-    {
-      "id": "Mobil 📱_Medellín (CO)_l9me",
-      "device": "Mobil 📱",
-      "city": "Medellín (CO)",
-      "page": "/",
-      "lastSeen": 1795141224812
-    },
-    {
-      "id": "Mobil 📱_Yazoo City (US)_1zh1",
-      "device": "Mobil 📱",
-      "city": "Yazoo City (US)",
-      "page": "/",
-      "lastSeen": 1795141181365
     }
   ]
 }
