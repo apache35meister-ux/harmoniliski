@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 140,
+  "totalVisits": 141,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Kâhta",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -749,15 +758,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1403,6 +1403,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Kâhta",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:02",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2113,15 +2122,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:46",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2142,43 +2142,16 @@
     "Mullins (US)": 1,
     "Corrientes (AR)": 1,
     "Fresno (US)": 1,
-    "Sivas": 1
+    "Sivas": 1,
+    "Kâhta": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Sivas_y2gy",
+      "id": "Mobil 📱_Kâhta_t5rm",
       "device": "Mobil 📱",
-      "city": "Sivas",
+      "city": "Kâhta",
       "page": "/",
-      "lastSeen": 1795136562134
-    },
-    {
-      "id": "Mobil 📱_Fresno (US)_2wfp",
-      "device": "Mobil 📱",
-      "city": "Fresno (US)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795136547366
-    },
-    {
-      "id": "Mobil 📱_Corrientes (AR)_i9tw",
-      "device": "Mobil 📱",
-      "city": "Corrientes (AR)",
-      "page": "/",
-      "lastSeen": 1795136543755
-    },
-    {
-      "id": "Mobil 📱_Gaziantep_ftib",
-      "device": "Mobil 📱",
-      "city": "Gaziantep",
-      "page": "/",
-      "lastSeen": 1795136524545
-    },
-    {
-      "id": "Mobil 📱_Mullins (US)_k550",
-      "device": "Mobil 📱",
-      "city": "Mullins (US)",
-      "page": "/",
-      "lastSeen": 1795136513265
+      "lastSeen": 1795136856154
     }
   ]
 }
