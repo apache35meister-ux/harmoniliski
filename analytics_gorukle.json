@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 247,
+  "totalVisits": 248,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Hazleton (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:55",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "02:06",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:04",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Hazleton (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:55",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Vaughan (CA)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1644,29 +1644,23 @@
     "Bonney Lake (US)": 1,
     "Bury (GB)": 1,
     "Mikkeli (FI)": 1,
-    "Vaughan (CA)": 1
+    "Vaughan (CA)": 1,
+    "Hazleton (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Hazleton (US)_ndow",
+      "device": "Mobil 📱",
+      "city": "Hazleton (US)",
+      "page": "/",
+      "lastSeen": 1795139922345
+    },
     {
       "id": "Mobil 📱_Vaughan (CA)_nws0",
       "device": "Mobil 📱",
       "city": "Vaughan (CA)",
       "page": "/",
       "lastSeen": 1795139745726
-    },
-    {
-      "id": "Mobil 📱_Mikkeli (FI)_kn6b",
-      "device": "Mobil 📱",
-      "city": "Mikkeli (FI)",
-      "page": "/",
-      "lastSeen": 1795139720979
-    },
-    {
-      "id": "Mobil 📱_İstanbul_4tnc",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795139611447
     }
   ]
 }
