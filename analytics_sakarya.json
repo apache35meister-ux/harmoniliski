@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 85,
-  "totalWaClicks": 33,
+  "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -36,13 +36,21 @@
     "ayşen": 1,
     "İlayda": 2,
     "i̇layda": 2,
-    "Begüm": 1,
-    "begüm": 1,
+    "Begüm": 2,
+    "begüm": 2,
     "Açelya": 1,
     "açelya": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:00",
+      "name": "Begüm",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:00",
       "name": "İlayda",
@@ -730,18 +738,17 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:40",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:00",
+      "name": "Begüm",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:00",
       "name": "İlayda",
@@ -1758,6 +1765,13 @@
     "Amsterdam (NL)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_noo2",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795172457993
+    },
     {
       "id": "Android 📱_Sakarya_ea9b",
       "device": "Android 📱",
