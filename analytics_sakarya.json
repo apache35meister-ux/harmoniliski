@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:56",
       "name": "Damla",
@@ -242,6 +251,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "16:56",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -318,50 +336,16 @@
     "İstanbul": 5,
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
-    "London (GB)": 1
+    "London (GB)": 1,
+    "Adapazarı": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Sakarya_zgqd",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795182997239
-    },
-    {
-      "id": "iPhone 📱_İstanbul_88mc",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
+      "id": "Mobil 📱_Adapazarı_3sxy",
+      "device": "Mobil 📱",
+      "city": "Adapazarı",
       "page": "/",
-      "lastSeen": 1795182993680
-    },
-    {
-      "id": "iPhone 📱_Sakarya_l16l",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795182983086
-    },
-    {
-      "id": "iPhone 📱_Sakarya_emd7",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795182945447
-    },
-    {
-      "id": "iPhone 📱_Sakarya_d7h5",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795182933961
-    },
-    {
-      "id": "iPhone 📱_İstanbul_hxyi",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795182922616
+      "lastSeen": 1795185222639
     }
   ]
 }
