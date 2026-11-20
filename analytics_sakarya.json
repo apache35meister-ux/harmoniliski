@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:47",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "London (GB)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -138,6 +147,15 @@
   ],
   "cityVisits": [
     {
+      "time": "16:47",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "London (GB)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "16:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "San Jose (US)",
@@ -177,15 +195,16 @@
   "cityCounts": {
     "İstanbul": 2,
     "Warsaw (PL)": 1,
-    "San Jose (US)": 1
+    "San Jose (US)": 1,
+    "London (GB)": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_San Jose (US)_e4jy",
+      "id": "Masaüstü 💻_London (GB)_90vg",
       "device": "Masaüstü 💻",
-      "city": "San Jose (US)",
+      "city": "London (GB)",
       "page": "/",
-      "lastSeen": 1795182151114
+      "lastSeen": 1795182429440
     }
   ]
 }
