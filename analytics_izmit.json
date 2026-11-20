@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 13,
+  "totalVisits": 14,
   "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:42",
       "name": "Hale",
@@ -623,6 +632,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:42",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:41",
       "name": "Ziyaretçi (Android 📱)",
       "city": "Köseköy",
@@ -745,9 +763,16 @@
     "İstanbul": 5,
     "Bursa": 1,
     "Brussels (BE)": 1,
-    "Köseköy": 3
+    "Köseköy": 4
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Köseköy_ea0r",
+      "device": "Android 📱",
+      "city": "Köseköy",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189336196
+    },
     {
       "id": "Android 📱_İzmit_qopo",
       "device": "Android 📱",
