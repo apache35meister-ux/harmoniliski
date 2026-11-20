@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 152,
-  "totalWaClicks": 87,
+  "totalWaClicks": 88,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -16,8 +16,8 @@
     "damla": 11,
     "İlayda": 5,
     "i̇layda": 5,
-    "Serap": 4,
-    "serap": 4,
+    "Serap": 5,
+    "serap": 5,
     "Nihan": 4,
     "nihan": 4,
     "Su": 1,
@@ -59,6 +59,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:02",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:02",
       "name": "Damla",
@@ -753,18 +761,17 @@
       "device": "Android 📱",
       "page": "/gorukle-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:31",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "06:02",
+      "name": "Serap",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:02",
       "name": "Damla",
@@ -1395,14 +1402,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:10",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2158,6 +2157,13 @@
     "El Paso (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_9oqn",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795143765877
+    },
     {
       "id": "Android 📱_Bursa_0o84",
       "device": "Android 📱",
