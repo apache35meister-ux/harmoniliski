@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 18,
-  "totalWaClicks": 28,
+  "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -34,10 +34,20 @@
     "şebnem": 1,
     "1790000000322": 2,
     "Tuba": 3,
-    "tuba": 3
+    "tuba": 3,
+    "Didem": 1,
+    "didem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:11",
+      "name": "Didem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:10",
       "name": "İzel",
@@ -426,6 +436,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:11",
+      "name": "Didem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:10",
       "name": "İzel",
@@ -824,6 +842,13 @@
     "Milan (IT)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_ikyx",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795194671178
+    },
     {
       "id": "iPhone 📱_Bursa_lqk2",
       "device": "iPhone 📱",
