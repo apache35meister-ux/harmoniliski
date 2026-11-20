@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 39,
+  "totalVisits": 40,
   "totalWaClicks": 37,
   "totalCalls": 0,
   "tClicks": {
@@ -46,6 +46,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:29",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:18",
       "name": "Selin",
@@ -994,6 +1003,15 @@
   ],
   "cityVisits": [
     {
+      "time": "22:29",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "22:18",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İzmir",
@@ -1347,7 +1365,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 27,
+    "Bursa": 28,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 3,
@@ -1358,25 +1376,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_xmt5",
-      "device": "Android 📱",
+      "id": "iPhone 📱_Bursa_5bqu",
+      "device": "iPhone 📱",
       "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795202314516
-    },
-    {
-      "id": "Mobil 📱_İzmir_66ta",
-      "device": "Mobil 📱",
-      "city": "İzmir",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795202308178
-    },
-    {
-      "id": "Mobil 📱_İstanbul_98f5",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795202206860
+      "page": "/",
+      "lastSeen": 1795202972544
     }
   ]
 }
