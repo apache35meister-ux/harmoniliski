@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 242,
+  "totalVisits": 243,
   "totalWaClicks": 161,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -778,15 +787,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:18",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İznik",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1432,6 +1432,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:50",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2142,15 +2151,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Chicago (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2179,7 +2179,7 @@
     "Anseong (KR)": 1,
     "Giesen (DE)": 1,
     "Salto (BR)": 1,
-    "Gebze": 3,
+    "Gebze": 4,
     "İznik": 1,
     "Sacramento (US)": 1,
     "Chosica (PE)": 1,
@@ -2210,25 +2210,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_g35c",
+      "id": "Mobil 📱_Gebze_vte9",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Gebze",
       "page": "/",
-      "lastSeen": 1795168241102
-    },
-    {
-      "id": "Android 📱_İzmit_snxy",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795168128616
-    },
-    {
-      "id": "Mobil 📱_İstanbul_xji7",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795168110044
+      "lastSeen": 1795169279497
     }
   ]
 }
