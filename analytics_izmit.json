@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 211,
-  "totalWaClicks": 146,
+  "totalWaClicks": 147,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 22,
@@ -20,8 +20,8 @@
     "ayşen": 7,
     "Sena": 1,
     "sena": 1,
-    "Melisa": 5,
-    "melisa": 5,
+    "Melisa": 6,
+    "melisa": 6,
     "Lara": 3,
     "lara": 3,
     "Esra": 1,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:58",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:58",
       "name": "Ziyaretçi (Android 📱)",
@@ -788,18 +796,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:58",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:58",
       "name": "Nihan",
@@ -1430,14 +1437,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:06",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2209,6 +2208,13 @@
     "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_04fu",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795154334394
+    },
     {
       "id": "Android 📱_Frankfurt am Main (DE)_yknt",
       "device": "Android 📱",
