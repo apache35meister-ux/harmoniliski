@@ -1,11 +1,22 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 1,
-  "totalWaClicks": 0,
+  "totalWaClicks": 1,
   "totalCalls": 0,
-  "tClicks": {},
+  "tClicks": {
+    "Su": 1,
+    "su": 1
+  },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:48",
+      "name": "Su",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:48",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -16,7 +27,16 @@
       "type": "👁️ Site Ziyareti"
     }
   ],
-  "callLogs": [],
+  "callLogs": [
+    {
+      "time": "16:48",
+      "name": "Su",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    }
+  ],
   "cityVisits": [
     {
       "time": "16:48",
@@ -32,6 +52,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_wsm9",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795182518563
+    },
     {
       "id": "Mobil 📱_Şanlıurfa_g05m",
       "device": "Mobil 📱",
