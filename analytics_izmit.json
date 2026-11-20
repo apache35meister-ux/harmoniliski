@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "totalWaClicks": 22,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:39",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:39",
       "name": "Kumsal",
@@ -483,6 +492,15 @@
   "cityVisits": [
     {
       "time": "18:39",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "18:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Köseköy",
       "country": "Türkiye",
@@ -573,13 +591,20 @@
     }
   ],
   "cityCounts": {
-    "İzmit": 2,
+    "İzmit": 3,
     "İstanbul": 5,
     "Bursa": 1,
     "Brussels (BE)": 1,
     "Köseköy": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_pq2h",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795189197224
+    },
     {
       "id": "iPhone 📱_İzmit_qiuy",
       "device": "iPhone 📱",
