@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 50,
-  "totalWaClicks": 89,
+  "totalWaClicks": 90,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -10,8 +10,8 @@
     "selin": 18,
     "Lara": 3,
     "lara": 3,
-    "Hale": 3,
-    "hale": 3,
+    "Hale": 4,
+    "hale": 4,
     "Damla": 6,
     "damla": 6,
     "Nehir": 4,
@@ -81,6 +81,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:29",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:29",
       "name": "Melis",
@@ -744,18 +752,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:47",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Köseköy",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/yahya-kaptan-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:29",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:29",
       "name": "Melis",
@@ -1387,14 +1394,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "17:25",
-      "name": "Damla",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1861,6 +1860,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_pwcu",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795199388174
+    },
+    {
       "id": "Android 📱_İzmit_l1b3",
       "device": "Android 📱",
       "city": "İzmit",
@@ -1929,20 +1935,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795199231314
-    },
-    {
-      "id": "Android 📱_İzmit_vr2a",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795199206111
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ylu2",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795199190830
     }
   ]
 }
