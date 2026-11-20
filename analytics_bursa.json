@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 34,
+  "totalVisits": 35,
   "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
@@ -46,6 +46,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:46",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -917,6 +926,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:46",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -1225,7 +1243,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 25,
+    "Bursa": 26,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -1235,18 +1253,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_qiu4",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gursu-eskort.html",
-      "lastSeen": 1795200399438
-    },
-    {
-      "id": "iPhone 📱_Bursa_4j59",
-      "device": "iPhone 📱",
+      "id": "Mobil 📱_Bursa_5fmj",
+      "device": "Mobil 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795200263205
+      "lastSeen": 1795200941879
     }
   ]
 }
