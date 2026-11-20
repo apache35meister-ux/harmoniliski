@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 37,
+  "totalVisits": 38,
   "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:08",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Hendek",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/hendek-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "23:07",
       "name": "Damla",
@@ -956,6 +965,15 @@
   ],
   "cityVisits": [
     {
+      "time": "23:08",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Hendek",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/hendek-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "23:06",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Hendek",
@@ -1301,9 +1319,16 @@
     "Burnaby (CA)": 1,
     "Amsterdam (NL)": 6,
     "Manavgat": 1,
-    "Hendek": 1
+    "Hendek": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Hendek_3dx1",
+      "device": "Android 📱",
+      "city": "Hendek",
+      "page": "/hendek-eskort.html",
+      "lastSeen": 1795205281647
+    },
     {
       "id": "Android 📱_Sakarya_vo4a",
       "device": "Android 📱",
