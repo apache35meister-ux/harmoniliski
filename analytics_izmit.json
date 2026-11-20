@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 35,
-  "totalWaClicks": 77,
+  "totalWaClicks": 78,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -24,8 +24,8 @@
     "serap": 1,
     "İzel": 1,
     "i̇zel": 1,
-    "Gülce": 3,
-    "gülce": 3,
+    "Gülce": 4,
+    "gülce": 4,
     "Melis": 5,
     "melis": 5,
     "Peri": 1,
@@ -75,6 +75,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:22",
+      "name": "Gülce",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:21",
       "name": "Ayşen",
@@ -730,18 +738,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:39",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/golcuk-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:22",
+      "name": "Gülce",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:21",
       "name": "Ayşen",
@@ -1685,6 +1692,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_vpm5",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195327901
+    },
     {
       "id": "iPhone 📱_İzmit_wo6f",
       "device": "iPhone 📱",
