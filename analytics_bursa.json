@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 179,
-  "totalWaClicks": 116,
+  "totalWaClicks": 117,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -61,10 +61,20 @@
     "Bahar": 1,
     "bahar": 1,
     "Anna I Arnavut": 1,
-    "anna i arnavut": 1
+    "anna i arnavut": 1,
+    "Isil": 1,
+    "isil": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:13",
+      "name": "Isil",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -745,18 +755,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:32",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gaziantep",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:13",
+      "name": "Isil",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:10",
       "name": "Eylül",
@@ -1387,14 +1396,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:06",
-      "name": "Tuba",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2160,6 +2161,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_gjq4",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795151637529
+    },
+    {
       "id": "Mobil 📱_Boynton Beach (US)_e4lc",
       "device": "Mobil 📱",
       "city": "Boynton Beach (US)",
@@ -2186,20 +2194,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795151458246
-    },
-    {
-      "id": "Mobil 📱_Bursa_5pa5",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795151442357
-    },
-    {
-      "id": "Mobil 📱_Bursa_ilk7",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795151430931
     }
   ]
 }
