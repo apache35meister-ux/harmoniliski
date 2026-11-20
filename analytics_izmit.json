@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 17,
-  "totalWaClicks": 19,
+  "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
@@ -16,8 +16,8 @@
     "serap": 1,
     "Selin": 2,
     "selin": 2,
-    "Gül": 1,
-    "gül": 1,
+    "Gül": 2,
+    "gül": 2,
     "Sinem": 1,
     "sinem": 1,
     "Rus ESC": 3,
@@ -31,6 +31,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:01",
+      "name": "Gül",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:59",
       "name": "İlayda",
@@ -338,6 +346,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "02:01",
+      "name": "Gül",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "01:59",
       "name": "İlayda",
@@ -655,6 +671,13 @@
     "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_ycdw",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795215661228
+    },
     {
       "id": "iPhone 📱_İzmit_62dl",
       "device": "iPhone 📱",
