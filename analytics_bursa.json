@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 48,
-  "totalWaClicks": 43,
+  "totalWaClicks": 44,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -39,13 +39,21 @@
     "didem": 1,
     "Yasemin": 1,
     "yasemin": 1,
-    "Selin": 2,
-    "selin": 2,
+    "Selin": 3,
+    "selin": 3,
     "Damla": 1,
     "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:47",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -720,18 +728,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/fsm-bulvari-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "23:47",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:17",
       "name": "Gül",
@@ -1526,6 +1533,13 @@
     "Amsterdam (NL)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_2whq",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795207665795
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_0oyp",
       "device": "Mobil 📱",
