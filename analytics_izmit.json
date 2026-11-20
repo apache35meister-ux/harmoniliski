@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 72,
-  "totalWaClicks": 118,
+  "totalWaClicks": 119,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -12,8 +12,8 @@
     "lara": 3,
     "Hale": 4,
     "hale": 4,
-    "Damla": 8,
-    "damla": 8,
+    "Damla": 9,
+    "damla": 9,
     "Nehir": 4,
     "nehir": 4,
     "Eylül": 7,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:37",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:37",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -759,17 +767,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:21",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:37",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:14",
       "name": "Damla",
@@ -1400,14 +1408,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:46",
-      "name": "Nurcan & Diana",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2073,6 +2073,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_pzl6",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795203468783
+    },
     {
       "id": "Mobil 📱_İstanbul_sz5v",
       "device": "Mobil 📱",
