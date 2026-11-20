@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 62,
-  "totalWaClicks": 107,
+  "totalWaClicks": 108,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -26,8 +26,8 @@
     "i̇zel": 1,
     "Gülce": 5,
     "gülce": 5,
-    "Melis": 8,
-    "melis": 8,
+    "Melis": 9,
+    "melis": 9,
     "Peri": 1,
     "peri": 1,
     "Kumsal": 1,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:45",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:45",
       "name": "Ayşen",
@@ -759,17 +767,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:16",
-      "name": "Eylül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:45",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:45",
       "name": "Ayşen",
@@ -1401,14 +1409,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:41",
-      "name": "Eylül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -1983,6 +1983,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_b75d",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795200344127
+    },
     {
       "id": "Android 📱_İzmit_7kk0",
       "device": "Android 📱",
