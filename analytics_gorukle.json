@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 209,
+  "totalVisits": 211,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Atlanta (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,24 +739,6 @@
     },
     {
       "time": "00:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:49",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:48",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,24 @@
   ],
   "cityVisits": [
     {
+      "time": "03:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Atlanta (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:35",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Catalão (BR)",
@@ -1587,24 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1614,10 +1614,25 @@
     "Charlotte (US)": 1,
     "La Lima (HN)": 1,
     "İzmir": 1,
-    "Ankara": 1,
-    "Catalão (BR)": 1
+    "Ankara": 2,
+    "Catalão (BR)": 1,
+    "Atlanta (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Ankara_2cx3",
+      "device": "Mobil 📱",
+      "city": "Ankara",
+      "page": "/",
+      "lastSeen": 1795134986368
+    },
+    {
+      "id": "Mobil 📱_Atlanta (US)_9p9v",
+      "device": "Mobil 📱",
+      "city": "Atlanta (US)",
+      "page": "/",
+      "lastSeen": 1795134958204
+    },
     {
       "id": "Mobil 📱_Catalão (BR)_j7xu",
       "device": "Mobil 📱",
