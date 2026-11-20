@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 161,
+  "totalVisits": 162,
   "totalWaClicks": 138,
   "totalCalls": 0,
   "tClicks": {
@@ -84,6 +84,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fort Mill (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -766,15 +775,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:31",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1420,6 +1420,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Fort Mill (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2130,15 +2139,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2152,22 +2152,16 @@
     "Cochabamba (BO)": 1,
     "Hinesville (US)": 1,
     "Bonney Lake (US)": 1,
-    "Atlanta (US)": 1
+    "Atlanta (US)": 1,
+    "Fort Mill (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_1iib",
+      "id": "Mobil 📱_Fort Mill (US)_db7s",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Fort Mill (US)",
       "page": "/",
-      "lastSeen": 1795140663558
-    },
-    {
-      "id": "Mobil 📱_İstanbul_xslo",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795140558407
+      "lastSeen": 1795141511461
     }
   ]
 }
