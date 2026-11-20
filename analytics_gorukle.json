@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 257,
+  "totalVisits": 258,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Atlanta (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -735,15 +744,6 @@
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     }
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Atlanta (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:24",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "El Paso (US)",
@@ -1597,15 +1606,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1617,7 +1617,7 @@
     "İzmir": 2,
     "Ankara": 3,
     "Catalão (BR)": 1,
-    "Atlanta (US)": 1,
+    "Atlanta (US)": 2,
     "Gaziantep": 2,
     "Incheon (KR)": 1,
     "Devrek": 1,
@@ -1658,6 +1658,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_Atlanta (US)_2orp",
+      "device": "Mobil 📱",
+      "city": "Atlanta (US)",
+      "page": "/",
+      "lastSeen": 1795141521999
+    },
+    {
       "id": "Mobil 📱_El Paso (US)_joju",
       "device": "Mobil 📱",
       "city": "El Paso (US)",
@@ -1670,13 +1677,6 @@
       "city": "Fort Mill (US)",
       "page": "/",
       "lastSeen": 1795141343573
-    },
-    {
-      "id": "Mobil 📱_İskenderun_41vh",
-      "device": "Mobil 📱",
-      "city": "İskenderun",
-      "page": "/",
-      "lastSeen": 1795141338332
     }
   ]
 }
