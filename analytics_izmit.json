@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 64,
-  "totalWaClicks": 110,
+  "totalWaClicks": 111,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -76,8 +76,8 @@
     "su": 1,
     "Gül": 1,
     "gül": 1,
-    "İlayda": 2,
-    "i̇layda": 2,
+    "İlayda": 3,
+    "i̇layda": 3,
     "Hazal": 1,
     "hazal": 1,
     "Rüya": 1,
@@ -91,6 +91,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:57",
+      "name": "İlayda",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:57",
       "name": "İlayda",
@@ -759,17 +767,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:20",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Masaüstü 💻",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:57",
+      "name": "İlayda",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:57",
       "name": "İlayda",
@@ -1401,14 +1409,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:43",
-      "name": "Pınar",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
@@ -2001,6 +2001,13 @@
     "Gebze": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_r0o3",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795201048663
+    },
     {
       "id": "Android 📱_İzmit_wbm5",
       "device": "Android 📱",
