@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 238,
+  "totalVisits": 239,
   "totalWaClicks": 160,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:34",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "London (GB)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:28",
       "name": "Hale",
@@ -779,15 +788,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:43",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1433,6 +1433,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:34",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "London (GB)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:27",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2143,15 +2152,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:08",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2206,22 +2206,16 @@
     "Oakville (CA)": 1,
     "Spartanburg (US)": 1,
     "Angeles City (PH)": 1,
-    "Toronto (CA)": 4
+    "Toronto (CA)": 4,
+    "London (GB)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_5eo4",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795163302013
-    },
-    {
-      "id": "Mobil 📱_Gebze_xs6i",
-      "device": "Mobil 📱",
-      "city": "Gebze",
+      "id": "Masaüstü 💻_London (GB)_l9ye",
+      "device": "Masaüstü 💻",
+      "city": "London (GB)",
       "page": "/",
-      "lastSeen": 1795163272358
+      "lastSeen": 1795163693880
     }
   ]
 }
