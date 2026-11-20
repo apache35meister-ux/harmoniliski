@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 217,
+  "totalVisits": 218,
   "totalWaClicks": 134,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -759,14 +768,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:52",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1412,6 +1413,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2122,15 +2132,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Corrientes (AR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2183,17 +2184,17 @@
     "Chicago (US)": 1,
     "Moncks Corner (US)": 1,
     "Slocomb (US)": 1,
-    "Amsterdam (NL)": 1,
+    "Amsterdam (NL)": 2,
     "Tekirdağ": 1,
     "Şanlıurfa": 2
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_cxpm",
+      "id": "Mobil 📱_Amsterdam (NL)_tkj9",
       "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795167885001
+      "city": "Amsterdam (NL)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795169527083
     }
   ]
 }
