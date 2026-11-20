@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 223,
-  "totalWaClicks": 150,
+  "totalVisits": 224,
+  "totalWaClicks": 151,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 22,
@@ -56,8 +56,8 @@
     "ebru": 1,
     "Zeynep": 1,
     "zeynep": 1,
-    "Açelya": 6,
-    "açelya": 6,
+    "Açelya": 7,
+    "açelya": 7,
     "Rus ESC": 9,
     "rus esc": 9,
     "Gül": 7,
@@ -88,6 +88,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:20",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "10:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -777,27 +794,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:57",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bonney Lake (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:20",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:19",
       "name": "Melis",
@@ -1429,17 +1436,18 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:17",
-      "name": "Hazal",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2150,19 +2158,10 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:24",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 143,
+    "İstanbul": 144,
     "Bursa": 21,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
@@ -2213,6 +2212,20 @@
     "Oakville (CA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_g38s",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795159245890
+    },
+    {
+      "id": "Mobil 📱_İstanbul_edvn",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795159223014
+    },
     {
       "id": "Mobil 📱_İzmit_dula",
       "device": "Mobil 📱",
