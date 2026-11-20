@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
@@ -19,6 +19,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:49",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:45",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -240,6 +249,15 @@
   ],
   "cityVisits": [
     {
+      "time": "00:49",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:45",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Bursa",
@@ -315,36 +333,15 @@
   "cityCounts": {
     "Ankara": 4,
     "İstanbul": 1,
-    "Bursa": 3
+    "Bursa": 4
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_e9sh",
-      "device": "Mobil 📱",
+      "id": "iPhone 📱_Bursa_rn33",
+      "device": "iPhone 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795211128428
-    },
-    {
-      "id": "Mobil 📱_Bursa_f6wg",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/osmangazi-eskort.html",
-      "lastSeen": 1795211109615
-    },
-    {
-      "id": "Android 📱_Bursa_is27",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795211106816
-    },
-    {
-      "id": "Mobil 📱_Bursa_4zua",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795211064217
+      "lastSeen": 1795211390399
     }
   ]
 }
