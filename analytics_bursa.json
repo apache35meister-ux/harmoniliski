@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 197,
+  "totalVisits": 198,
   "totalWaClicks": 122,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -745,14 +754,6 @@
       "device": "Mobil 📱",
       "page": "/osmangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:02",
-      "name": "Serap",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1398,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:42",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2108,15 +2118,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:16",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Rome (IT)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2126,7 +2127,7 @@
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
     "Ankara": 1,
-    "İzmir": 2,
+    "İzmir": 3,
     "Bonao (DO)": 1,
     "Kayseri": 1,
     "Catalão (BR)": 1,
@@ -2170,25 +2171,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_İzmir_4dup",
+      "device": "Mobil 📱",
+      "city": "İzmir",
+      "page": "/",
+      "lastSeen": 1795156931879
+    },
+    {
       "id": "Mobil 📱_Chicago (US)_0ic3",
       "device": "Mobil 📱",
       "city": "Chicago (US)",
       "page": "/",
       "lastSeen": 1795156764062
-    },
-    {
-      "id": "iPhone 📱_Bursa_c4jr",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795156617022
-    },
-    {
-      "id": "iPhone 📱_Bursa_tuos",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/mudanya-eskort.html",
-      "lastSeen": 1795156596537
     }
   ]
 }
