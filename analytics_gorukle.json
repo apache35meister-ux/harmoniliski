@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 279,
+  "totalVisits": 280,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:32",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:31",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:55",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:32",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:31",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Nong Bua (TH)",
@@ -1597,19 +1606,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 187,
+    "İstanbul": 188,
     "Görükle": 21,
     "Türkiye": 2,
     "Charlotte (US)": 2,
@@ -1678,6 +1678,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_İstanbul_ggrk",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795145550021
+    },
+    {
       "id": "Mobil 📱_Nong Bua (TH)_sfk9",
       "device": "Mobil 📱",
       "city": "Nong Bua (TH)",
@@ -1690,13 +1697,6 @@
       "city": "Elazığ",
       "page": "/",
       "lastSeen": 1795145403666
-    },
-    {
-      "id": "Mobil 📱_Toronto (CA)_4uc1",
-      "device": "Mobil 📱",
-      "city": "Toronto (CA)",
-      "page": "/",
-      "lastSeen": 1795145339950
     }
   ]
 }
