@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 171,
+  "totalVisits": 172,
   "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
@@ -86,6 +86,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Guayaquil (EC)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -773,14 +782,6 @@
       "device": "iPhone 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:41",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1426,6 +1427,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "06:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Guayaquil (EC)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2136,15 +2146,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:48",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2166,9 +2167,17 @@
     "İzmit": 2,
     "Council Bluffs (US)": 2,
     "Fort Worth (US)": 1,
-    "Cachoeiras de Macacu (BR)": 1
+    "Cachoeiras de Macacu (BR)": 1,
+    "Guayaquil (EC)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Guayaquil (EC)_bvjv",
+      "device": "Mobil 📱",
+      "city": "Guayaquil (EC)",
+      "page": "/",
+      "lastSeen": 1795144093238
+    },
     {
       "id": "Mobil 📱_İzmit_erff",
       "device": "Mobil 📱",
