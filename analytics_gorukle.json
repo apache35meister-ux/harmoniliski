@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 271,
+  "totalVisits": 272,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Melbourne (AU)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:01",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:46",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:45",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Melbourne (AU)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:01",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Stuart (US)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:45",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1667,29 +1667,16 @@
     "Delhi (IN)": 1,
     "Santiago (CL)": 1,
     "Cleveland (US)": 1,
-    "Stuart (US)": 1
+    "Stuart (US)": 1,
+    "Melbourne (AU)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Stuart (US)_8mdi",
+      "id": "Mobil 📱_Melbourne (AU)_yoit",
       "device": "Mobil 📱",
-      "city": "Stuart (US)",
+      "city": "Melbourne (AU)",
       "page": "/",
-      "lastSeen": 1795143661725
-    },
-    {
-      "id": "Mobil 📱_Cleveland (US)_g8s2",
-      "device": "Mobil 📱",
-      "city": "Cleveland (US)",
-      "page": "/",
-      "lastSeen": 1795143535874
-    },
-    {
-      "id": "Mobil 📱_Santiago (CL)_e2nc",
-      "device": "Mobil 📱",
-      "city": "Santiago (CL)",
-      "page": "/",
-      "lastSeen": 1795143496586
+      "lastSeen": 1795143873539
     }
   ]
 }
