@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 5,
+  "totalVisits": 6,
   "totalWaClicks": 10,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:51",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:25",
       "name": "Damla",
@@ -227,6 +236,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:51",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:24",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -274,50 +292,16 @@
   ],
   "cityCounts": {
     "İzmit": 2,
-    "İstanbul": 3
+    "İstanbul": 3,
+    "Bursa": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_tcf4",
+      "id": "Android 📱_Bursa_cgyp",
       "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795184703889
-    },
-    {
-      "id": "Android 📱_İzmit_iwpk",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795184693997
-    },
-    {
-      "id": "Android 📱_İzmit_4c5f",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795184686975
-    },
-    {
-      "id": "Mobil 📱_İstanbul_8qpc",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795184658292
-    },
-    {
-      "id": "Android 📱_İzmit_lij2",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795184642085
-    },
-    {
-      "id": "Mobil 📱_İstanbul_yqn5",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795184562412
+      "city": "Bursa",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795186262784
     }
   ]
 }
