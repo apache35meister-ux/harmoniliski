@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 234,
+  "totalVisits": 235,
   "totalWaClicks": 159,
   "totalCalls": 0,
   "tClicks": {
@@ -76,6 +76,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İznik",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:48",
       "name": "Açelya",
@@ -748,15 +757,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "New York City (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1402,6 +1402,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İznik",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/gorukle-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:47",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2112,15 +2121,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2178,22 +2178,22 @@
     "Şanlıurfa": 2,
     "Selçuk": 2,
     "Dallas (US)": 1,
-    "İznik": 1
+    "İznik": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İznik_u45f",
+      "device": "iPhone 📱",
+      "city": "İznik",
+      "page": "/gorukle-eskort.html",
+      "lastSeen": 1795175461127
+    },
     {
       "id": "iPhone 📱_Bursa_l8zi",
       "device": "iPhone 📱",
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795175335777
-    },
-    {
-      "id": "iPhone 📱_İznik_hlyw",
-      "device": "iPhone 📱",
-      "city": "İznik",
-      "page": "/",
-      "lastSeen": 1795175268423
     }
   ]
 }
