@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 235,
+  "totalVisits": 236,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Basseterre (KN)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "01:38",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:37",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Basseterre (KN)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:34",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İzmir",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:36",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1633,9 +1633,17 @@
     "Windsor (CA)": 1,
     "Moncton (CA)": 1,
     "La Chorrera (PA)": 1,
-    "Loudwater (GB)": 1
+    "Loudwater (GB)": 1,
+    "Basseterre (KN)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Basseterre (KN)_glu2",
+      "device": "Mobil 📱",
+      "city": "Basseterre (KN)",
+      "page": "/",
+      "lastSeen": 1795138572646
+    },
     {
       "id": "Mobil 📱_İzmir_922p",
       "device": "Mobil 📱",
