@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180661970,
-  "totalVisits": 30,
+  "totalVisits": 31,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:06",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:00",
       "name": "Simge",
@@ -797,6 +806,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:06",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:57",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Amsterdam (NL)",
@@ -1068,7 +1086,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 12,
+    "İstanbul": 13,
     "Warsaw (PL)": 1,
     "San Jose (US)": 1,
     "London (GB)": 1,
@@ -1081,25 +1099,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Sakarya_lpv8",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795197612220
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_aesl",
+      "id": "Mobil 📱_İstanbul_ccv0",
       "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795197478820
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_i316",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/",
-      "lastSeen": 1795197463550
+      "lastSeen": 1795198019322
     }
   ]
 }
