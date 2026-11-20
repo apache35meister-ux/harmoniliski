@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 11,
-  "totalWaClicks": 9,
+  "totalWaClicks": 11,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
     "i̇zel": 1,
-    "Damla": 4,
-    "damla": 4,
+    "Damla": 5,
+    "damla": 5,
     "Melis": 1,
     "melis": 1,
     "Açelya": 1,
@@ -15,10 +15,28 @@
     "Serap": 1,
     "serap": 1,
     "Selin": 1,
-    "selin": 1
+    "selin": 1,
+    "Gül": 1,
+    "gül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:51",
+      "name": "Gül",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "00:51",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:51",
       "name": "Damla",
@@ -192,6 +210,22 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "00:51",
+      "name": "Gül",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "00:51",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "00:51",
       "name": "Damla",
@@ -375,6 +409,20 @@
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_39ui",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795211487624
+    },
+    {
+      "id": "Android 📱_İzmit_bszr",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795211487624
+    },
     {
       "id": "Android 📱_İzmit_mqgt",
       "device": "Android 📱",
