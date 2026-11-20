@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795180634718,
   "totalVisits": 10,
-  "totalWaClicks": 12,
+  "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 1,
     "i̇layda": 1,
-    "Melis": 1,
-    "melis": 1,
+    "Melis": 2,
+    "melis": 2,
     "👑 Balat — Lüks Siteler & Çevre Yolu Profilleri": 1,
     "👑 balat — lüks siteler & çevre yolu profilleri": 1,
     "Dila": 1,
@@ -25,6 +25,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:39",
+      "name": "Melis",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:39",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -213,6 +221,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:39",
+      "name": "Melis",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:39",
       "name": "Eylül",
@@ -408,6 +424,13 @@
     "Amsterdam (NL)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_yo9m",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795196395165
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_j7i3",
       "device": "Mobil 📱",
