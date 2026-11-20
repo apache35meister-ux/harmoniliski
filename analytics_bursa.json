@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 23,
+  "totalVisits": 24,
   "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:39",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -750,6 +759,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:08",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:39",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -959,7 +977,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 17,
+    "Bursa": 18,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -967,32 +985,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_j4kp",
-      "device": "iPhone 📱",
+      "id": "Mobil 📱_Bursa_e516",
+      "device": "Mobil 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795196353907
-    },
-    {
-      "id": "iPhone 📱_Bursa_m4zs",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gorukle-eskort.html",
-      "lastSeen": 1795196332652
-    },
-    {
-      "id": "iPhone 📱_Bursa_fbff",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196318918
-    },
-    {
-      "id": "iPhone 📱_Bursa_i0je",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795196282071
+      "lastSeen": 1795198099731
     }
   ]
 }
