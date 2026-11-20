@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 74,
+  "totalVisits": 75,
   "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "San Antonio (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:10",
       "name": "Ziyaretçi (Android 📱)",
@@ -727,15 +736,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:26",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -957,6 +957,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:57",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "San Antonio (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:10",
       "name": "Ziyaretçi (Android 📱)",
@@ -1643,18 +1652,18 @@
     "Santo Domingo (DO)": 1,
     "Johannesburg (ZA)": 1,
     "Ereğli": 1,
-    "San Antonio (US)": 1,
+    "San Antonio (US)": 2,
     "Clinton (US)": 1,
     "Secaucus (US)": 1,
     "Ananindeua (BR)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İstanbul_24a5",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/karabuk-eskort.html",
-      "lastSeen": 1795155047716
+      "id": "Mobil 📱_San Antonio (US)_wxfw",
+      "device": "Mobil 📱",
+      "city": "San Antonio (US)",
+      "page": "/",
+      "lastSeen": 1795157875983
     }
   ]
 }
