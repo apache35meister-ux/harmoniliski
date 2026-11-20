@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 28,
-  "totalWaClicks": 33,
+  "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -38,10 +38,20 @@
     "Didem": 1,
     "didem": 1,
     "Yasemin": 1,
-    "yasemin": 1
+    "yasemin": 1,
+    "Selin": 1,
+    "selin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:15",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:12",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -560,6 +570,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "21:15",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:12",
       "name": "Hale",
@@ -1090,6 +1108,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_zipy",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795198549505
+    },
+    {
       "id": "Mobil 📱_Bursa_al83",
       "device": "Mobil 📱",
       "city": "Bursa",
@@ -1102,34 +1127,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795198372481
-    },
-    {
-      "id": "Mobil 📱_Bursa_yz1q",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795198350488
-    },
-    {
-      "id": "Android 📱_Bursa_hjgf",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795198345686
-    },
-    {
-      "id": "iPhone 📱_London (GB)_deg7",
-      "device": "iPhone 📱",
-      "city": "London (GB)",
-      "page": "/iznik-eskort.html",
-      "lastSeen": 1795198337361
-    },
-    {
-      "id": "Mobil 📱_Bursa_4pfm",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795198320238
     }
   ]
 }
