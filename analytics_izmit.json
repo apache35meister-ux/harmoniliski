@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 34,
-  "totalWaClicks": 74,
+  "totalWaClicks": 75,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -14,8 +14,8 @@
     "hale": 3,
     "Damla": 5,
     "damla": 5,
-    "Nehir": 2,
-    "nehir": 2,
+    "Nehir": 3,
+    "nehir": 3,
     "Eylül": 6,
     "eylül": 6,
     "Şebnem": 1,
@@ -73,6 +73,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:20",
+      "name": "Nehir",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:20",
       "name": "Melisa",
@@ -728,18 +736,17 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Köseköy",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:20",
+      "name": "Nehir",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:20",
       "name": "Melisa",
@@ -1650,6 +1657,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_51qp",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195256233
+    },
     {
       "id": "iPhone 📱_İzmit_q4xw",
       "device": "iPhone 📱",
