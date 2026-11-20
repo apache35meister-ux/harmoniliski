@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 46,
+  "totalVisits": 47,
   "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
@@ -79,6 +79,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:27",
       "name": "Gül",
@@ -740,14 +749,6 @@
       "device": "Android 📱",
       "page": "/yahya-kaptan-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:45",
-      "name": "Sabina",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1394,6 +1395,15 @@
   ],
   "cityVisits": [
     {
+      "time": "21:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "21:26",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -1810,7 +1820,7 @@
   ],
   "cityCounts": {
     "İzmit": 5,
-    "İstanbul": 18,
+    "İstanbul": 19,
     "Bursa": 3,
     "Brussels (BE)": 1,
     "Köseköy": 15,
@@ -1819,6 +1829,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_dz61",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795199258993
+    },
     {
       "id": "Android 📱_İzmit_vfew",
       "device": "Android 📱",
