@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "totalWaClicks": 11,
   "totalCalls": 0,
   "tClicks": {
@@ -21,6 +21,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "00:51",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:51",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -312,6 +321,15 @@
     {
       "time": "00:51",
       "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "00:51",
+      "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
       "device": "Mobil 📱",
@@ -424,9 +442,16 @@
     "Moscow (RU)": 1,
     "Milan (IT)": 2,
     "Amsterdam (NL)": 2,
-    "Frankfurt am Main (DE)": 1
+    "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Frankfurt am Main (DE)_l29j",
+      "device": "Mobil 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "/",
+      "lastSeen": 1795211506672
+    },
     {
       "id": "Mobil 📱_İstanbul_1ffd",
       "device": "Mobil 📱",
