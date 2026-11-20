@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 233,
+  "totalVisits": 234,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Loudwater (GB)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,15 +730,6 @@
     },
     {
       "time": "01:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:36",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:31",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Loudwater (GB)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:30",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Charlotte (US)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1632,9 +1632,17 @@
     "Araçatuba (BR)": 1,
     "Windsor (CA)": 1,
     "Moncton (CA)": 1,
-    "La Chorrera (PA)": 1
+    "La Chorrera (PA)": 1,
+    "Loudwater (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Loudwater (GB)_lqsu",
+      "device": "Mobil 📱",
+      "city": "Loudwater (GB)",
+      "page": "/",
+      "lastSeen": 1795138294121
+    },
     {
       "id": "Mobil 📱_Charlotte (US)_anjs",
       "device": "Mobil 📱",
