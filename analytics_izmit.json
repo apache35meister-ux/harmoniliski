@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 193,
+  "totalVisits": 194,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:03",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Tece",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:59",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -784,14 +793,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:43",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1437,6 +1438,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:03",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Tece",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:59",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2147,15 +2157,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:36",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2188,15 +2189,16 @@
     "İznik": 1,
     "Sacramento (US)": 1,
     "Chosica (PE)": 1,
-    "Catriel (AR)": 1
+    "Catriel (AR)": 1,
+    "Tece": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Ankara_gj8i",
+      "id": "Mobil 📱_Tece_q1d9",
       "device": "Mobil 📱",
-      "city": "Ankara",
+      "city": "Tece",
       "page": "/",
-      "lastSeen": 1795150786137
+      "lastSeen": 1795151011340
     }
   ]
 }
