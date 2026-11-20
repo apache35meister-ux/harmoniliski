@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 130,
+  "totalVisits": 131,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Port of Spain (TT)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:32",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -746,15 +755,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:25",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1400,6 +1400,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:33",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Port of Spain (TT)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:32",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2110,15 +2119,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:08",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2132,9 +2132,17 @@
     "Bonao (DO)": 1,
     "Kayseri": 1,
     "Catalão (BR)": 1,
-    "Gaziantep": 1
+    "Gaziantep": 1,
+    "Port of Spain (TT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Port of Spain (TT)_5gbe",
+      "device": "Mobil 📱",
+      "city": "Port of Spain (TT)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795134790968
+    },
     {
       "id": "Mobil 📱_Gaziantep_wr17",
       "device": "Mobil 📱",
