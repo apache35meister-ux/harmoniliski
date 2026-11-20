@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
-  "totalVisits": 12,
-  "totalWaClicks": 26,
+  "totalVisits": 13,
+  "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -32,11 +32,28 @@
     "peri": 1,
     "Kumsal": 1,
     "kumsal": 1,
-    "Dila": 1,
-    "dila": 1
+    "Dila": 2,
+    "dila": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "18:41",
+      "name": "Dila",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:41",
       "name": "Dila",
@@ -364,6 +381,14 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
+      "time": "18:41",
+      "name": "Dila",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "18:40",
       "name": "Nehir",
       "city": "İzmit",
@@ -566,6 +591,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Köseköy",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/yahya-kaptan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:40",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Köseköy",
@@ -679,9 +713,23 @@
     "İstanbul": 5,
     "Bursa": 1,
     "Brussels (BE)": 1,
-    "Köseköy": 2
+    "Köseköy": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Köseköy_6top",
+      "device": "Android 📱",
+      "city": "Köseköy",
+      "page": "/yahya-kaptan-eskort.html",
+      "lastSeen": 1795189275503
+    },
+    {
+      "id": "Android 📱_İzmit_4rdn",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189275272
+    },
     {
       "id": "Android 📱_İzmit_0grr",
       "device": "Android 📱",
