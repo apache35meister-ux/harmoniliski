@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 217,
+  "totalVisits": 219,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:51",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Antalya",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,24 +739,6 @@
     },
     {
       "time": "01:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:05",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:02",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,24 @@
   ],
   "cityVisits": [
     {
+      "time": "03:51",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Antalya",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:47",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Senhor do Bonfim (BR)",
@@ -1587,28 +1605,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 182,
+    "İstanbul": 183,
     "Görükle": 21,
     "Türkiye": 2,
     "Charlotte (US)": 1,
@@ -1621,36 +1621,16 @@
     "Incheon (KR)": 1,
     "Devrek": 1,
     "Richmond (US)": 1,
-    "Senhor do Bonfim (BR)": 1
+    "Senhor do Bonfim (BR)": 1,
+    "Antalya": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Senhor do Bonfim (BR)_n381",
+      "id": "Mobil 📱_Antalya_h9b2",
       "device": "Mobil 📱",
-      "city": "Senhor do Bonfim (BR)",
+      "city": "Antalya",
       "page": "/",
-      "lastSeen": 1795135678407
-    },
-    {
-      "id": "Mobil 📱_İstanbul_k0cl",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795135643885
-    },
-    {
-      "id": "Mobil 📱_Richmond (US)_r8gj",
-      "device": "Mobil 📱",
-      "city": "Richmond (US)",
-      "page": "/",
-      "lastSeen": 1795135611399
-    },
-    {
-      "id": "Mobil 📱_Devrek_tu0w",
-      "device": "Mobil 📱",
-      "city": "Devrek",
-      "page": "/",
-      "lastSeen": 1795135532125
+      "lastSeen": 1795135911336
     }
   ]
 }
