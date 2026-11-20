@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 282,
+  "totalVisits": 283,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:53",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "João Pessoa (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:49",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "03:03",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:59",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:53",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "João Pessoa (BR)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:49",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Singapore (SG)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1676,22 +1676,16 @@
     "Elazığ": 1,
     "Nong Bua (TH)": 1,
     "Yerevan (AM)": 1,
-    "Singapore (SG)": 1
+    "Singapore (SG)": 1,
+    "João Pessoa (BR)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Singapore (SG)_bhbi",
+      "id": "Mobil 📱_João Pessoa (BR)_goyj",
       "device": "Mobil 📱",
-      "city": "Singapore (SG)",
+      "city": "João Pessoa (BR)",
       "page": "/",
-      "lastSeen": 1795146583526
-    },
-    {
-      "id": "Mobil 📱_Yerevan (AM)_n7eg",
-      "device": "Mobil 📱",
-      "city": "Yerevan (AM)",
-      "page": "/",
-      "lastSeen": 1795146407018
+      "lastSeen": 1795146817873
     }
   ]
 }
