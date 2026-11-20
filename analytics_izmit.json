@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 146,
+  "totalVisits": 147,
   "totalWaClicks": 137,
   "totalCalls": 0,
   "tClicks": {
@@ -82,6 +82,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:45",
       "name": "Melis",
@@ -758,15 +767,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1412,6 +1412,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2122,25 +2131,23 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "21:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 125,
+    "İstanbul": 126,
     "Bursa": 17,
     "Istanbul": 1,
     "Amsterdam (NL)": 1,
     "İzmir": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_elkb",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795135553984
+    },
     {
       "id": "Android 📱_İzmit_u1fc",
       "device": "Android 📱",
@@ -2154,13 +2161,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795135491287
-    },
-    {
-      "id": "iPhone 📱_İstanbul_4ldt",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795135362781
     }
   ]
 }
