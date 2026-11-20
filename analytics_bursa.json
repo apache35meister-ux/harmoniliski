@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 179,
-  "totalWaClicks": 117,
+  "totalWaClicks": 118,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -12,8 +12,8 @@
     "şebnem": 7,
     "Yaren": 4,
     "yaren": 4,
-    "Damla": 12,
-    "damla": 12,
+    "Damla": 13,
+    "damla": 13,
     "İlayda": 5,
     "i̇layda": 5,
     "Serap": 5,
@@ -67,6 +67,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:18",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:13",
       "name": "Isil",
@@ -746,18 +754,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Port of Spain (TT)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:18",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:13",
       "name": "Isil",
@@ -1388,14 +1395,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:06",
-      "name": "Ayşen",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2161,39 +2160,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_gjq4",
+      "id": "iPhone 📱_Bursa_j9m1",
       "device": "iPhone 📱",
       "city": "Bursa",
       "page": "Ana Sayfa",
-      "lastSeen": 1795151637529
-    },
-    {
-      "id": "Mobil 📱_Boynton Beach (US)_e4lc",
-      "device": "Mobil 📱",
-      "city": "Boynton Beach (US)",
-      "page": "/",
-      "lastSeen": 1795151585613
-    },
-    {
-      "id": "Mobil 📱_Oudeschip (NL)_eak9",
-      "device": "Mobil 📱",
-      "city": "Oudeschip (NL)",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795151533167
-    },
-    {
-      "id": "Mobil 📱_Bursa_gftm",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795151530957
-    },
-    {
-      "id": "iPhone 📱_Bursa_t9pp",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795151458246
+      "lastSeen": 1795151918434
     }
   ]
 }
