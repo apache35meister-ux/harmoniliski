@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 3,
+  "totalVisits": 4,
   "totalWaClicks": 7,
   "totalCalls": 0,
   "tClicks": {
@@ -17,6 +17,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:34",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:33",
       "name": "VIP Escort",
@@ -161,6 +170,15 @@
   ],
   "cityVisits": [
     {
+      "time": "02:34",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "02:33",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
@@ -189,9 +207,16 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 3
+    "Bursa": 4
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_nqlk",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795217646840
+    },
     {
       "id": "Masaüstü 💻_Bursa / Nilüfer_0r71",
       "device": "Masaüstü 💻",
