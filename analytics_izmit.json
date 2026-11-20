@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 146,
-  "totalWaClicks": 136,
+  "totalWaClicks": 137,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 21,
     "selin": 21,
-    "Melis": 8,
-    "melis": 8,
+    "Melis": 9,
+    "melis": 9,
     "Begüm": 5,
     "begüm": 5,
     "Damla": 9,
@@ -82,6 +82,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:45",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -759,18 +767,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:20",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "03:45",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:48",
       "name": "Açelya",
@@ -1397,14 +1404,6 @@
     },
     {
       "time": "15:28",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:27",
       "name": "Selin",
       "city": "Bursa",
       "device": "iPhone 📱",
@@ -2142,6 +2141,13 @@
     "İzmir": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_u1fc",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795135532249
+    },
     {
       "id": "Mobil 📱_İstanbul_8uvu",
       "device": "Mobil 📱",
