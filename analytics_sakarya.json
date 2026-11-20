@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 8,
-  "totalWaClicks": 8,
+  "totalWaClicks": 9,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 1,
@@ -15,10 +15,20 @@
     "💎 Serdivan — Mavi Durak, AVM & Bağlar Cad. Profilleri": 1,
     "💎 serdivan — mavi durak, avm & bağlar cad. profilleri": 1,
     "İlayda": 2,
-    "i̇layda": 2
+    "i̇layda": 2,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:56",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:56",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -157,6 +167,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:56",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:56",
       "name": "Selin",
@@ -303,6 +321,13 @@
     "London (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_zgqd",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795182997239
+    },
     {
       "id": "iPhone 📱_İstanbul_88mc",
       "device": "iPhone 📱",
