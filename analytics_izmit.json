@@ -1,14 +1,24 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 2,
-  "totalWaClicks": 1,
+  "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
-    "tuba": 1
+    "tuba": 1,
+    "Selin": 1,
+    "selin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:22",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:22",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -37,6 +47,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "16:22",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:21",
       "name": "Tuba",
@@ -70,6 +88,13 @@
     "İzmit": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_obor",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795180940228
+    },
     {
       "id": "Mobil 📱_İzmit_twf5",
       "device": "Mobil 📱",
