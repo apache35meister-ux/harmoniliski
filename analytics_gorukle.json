@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 260,
+  "totalVisits": 261,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Auburndale (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -731,15 +740,6 @@
     },
     {
       "time": "02:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:23",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -888,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Auburndale (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:28",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Baltimore (US)",
@@ -1597,15 +1606,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1656,9 +1656,17 @@
     "Fort Mill (US)": 1,
     "El Paso (US)": 1,
     "Bandırma": 1,
-    "Baltimore (US)": 1
+    "Baltimore (US)": 1,
+    "Auburndale (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Auburndale (US)_jpfv",
+      "device": "Mobil 📱",
+      "city": "Auburndale (US)",
+      "page": "/",
+      "lastSeen": 1795141836483
+    },
     {
       "id": "Mobil 📱_Baltimore (US)_njkk",
       "device": "Mobil 📱",
