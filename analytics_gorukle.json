@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 221,
+  "totalVisits": 222,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:55",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Fresno (US)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:53",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,15 +739,6 @@
     },
     {
       "time": "01:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:11",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
       "country": "Türkiye",
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:55",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Fresno (US)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:53",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Santa Isabel (BR)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:09",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1624,29 +1624,23 @@
     "Senhor do Bonfim (BR)": 1,
     "Antalya": 1,
     "Sivas": 1,
-    "Santa Isabel (BR)": 1
+    "Santa Isabel (BR)": 1,
+    "Fresno (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Fresno (US)_h4nq",
+      "device": "Android 📱",
+      "city": "Fresno (US)",
+      "page": "/bodrum-yalikavak-turkbuku-vip-eskort.ht",
+      "lastSeen": 1795136100353
+    },
     {
       "id": "Mobil 📱_Santa Isabel (BR)_rcj0",
       "device": "Mobil 📱",
       "city": "Santa Isabel (BR)",
       "page": "/",
       "lastSeen": 1795136007421
-    },
-    {
-      "id": "Mobil 📱_Sivas_irbf",
-      "device": "Mobil 📱",
-      "city": "Sivas",
-      "page": "/",
-      "lastSeen": 1795135913506
-    },
-    {
-      "id": "Mobil 📱_Antalya_h9b2",
-      "device": "Mobil 📱",
-      "city": "Antalya",
-      "page": "/",
-      "lastSeen": 1795135911336
     }
   ]
 }
