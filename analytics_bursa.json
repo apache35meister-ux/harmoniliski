@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180615867,
-  "totalVisits": 19,
+  "totalVisits": 20,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -42,6 +42,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:15",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:12",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -698,6 +707,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:15",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:12",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -871,7 +889,7 @@
   ],
   "cityCounts": {
     "Şanlıurfa": 1,
-    "Bursa": 13,
+    "Bursa": 14,
     "Frankfurt am Main (DE)": 1,
     "New York City (US)": 1,
     "İstanbul": 1,
@@ -879,102 +897,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_7ied",
+      "id": "iPhone 📱_Bursa_eoid",
       "device": "iPhone 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795194720204
-    },
-    {
-      "id": "iPhone 📱_Bursa_q5r0",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194707738
-    },
-    {
-      "id": "iPhone 📱_Bursa_ikyx",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194671178
-    },
-    {
-      "id": "iPhone 📱_Bursa_lqk2",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194633800
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Kent Meydanı_5rcr",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Kent Meydanı",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194625043
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_0lo6",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194625017
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Kent Meydanı_yuyt",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Kent Meydanı",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194625017
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_qzze",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194607160
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_o4wf",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194607154
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_4adq",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194607145
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_xmcn",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795194596616
-    },
-    {
-      "id": "iPhone 📱_Bursa_2k5f",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194595007
-    },
-    {
-      "id": "iPhone 📱_Bursa_d3ns",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194562452
-    },
-    {
-      "id": "iPhone 📱_Bursa_4vn9",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194556658
+      "lastSeen": 1795194950329
     }
   ]
 }
