@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795180634718,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "totalWaClicks": 16,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Konya",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:40",
       "name": "Açelya",
@@ -378,6 +387,15 @@
   ],
   "cityVisits": [
     {
+      "time": "23:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Konya",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Amsterdam (NL)",
@@ -471,99 +489,16 @@
   "cityCounts": {
     "Bursa": 6,
     "İzmir": 1,
-    "Amsterdam (NL)": 3
+    "Amsterdam (NL)": 3,
+    "Konya": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_i12g",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196429015
-    },
-    {
-      "id": "Android 📱_Görükle_xp6w",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196410609
-    },
-    {
-      "id": "Android 📱_Görükle_9jpv",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196402433
-    },
-    {
-      "id": "Android 📱_Görükle_yo9m",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196395165
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_j7i3",
+      "id": "Mobil 📱_Konya_60lx",
       "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
+      "city": "Konya",
       "page": "/",
-      "lastSeen": 1795196393102
-    },
-    {
-      "id": "Android 📱_Görükle_h1em",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196387954
-    },
-    {
-      "id": "Android 📱_Görükle_0t7i",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196377649
-    },
-    {
-      "id": "Android 📱_Görükle_pxgl",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196369559
-    },
-    {
-      "id": "Android 📱_Görükle_6uyz",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196362446
-    },
-    {
-      "id": "Android 📱_Görükle_n89s",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196355468
-    },
-    {
-      "id": "Android 📱_Görükle_zhbt",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196351354
-    },
-    {
-      "id": "Android 📱_Görükle_jozf",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795196338263
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_rztz",
-      "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/",
-      "lastSeen": 1795196328403
+      "lastSeen": 1795205809395
     }
   ]
 }
