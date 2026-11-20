@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 228,
+  "totalVisits": 229,
   "totalWaClicks": 156,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Spartanburg (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:30",
       "name": "Açelya",
@@ -781,14 +790,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:35",
-      "name": "Yaren",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1434,6 +1435,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Spartanburg (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2144,15 +2154,6 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:03",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gaziantep",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2204,29 +2205,16 @@
     "Badlapur (IN)": 1,
     "Lahore (PK)": 1,
     "Ashburn (US)": 2,
-    "Oakville (CA)": 1
+    "Oakville (CA)": 1,
+    "Spartanburg (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_kpig",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795159815364
-    },
-    {
-      "id": "Android 📱_İzmit_kq04",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795159795893
-    },
-    {
-      "id": "Mobil 📱_İstanbul_gt8w",
+      "id": "Mobil 📱_Spartanburg (US)_zwxg",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Spartanburg (US)",
       "page": "/",
-      "lastSeen": 1795159773405
+      "lastSeen": 1795160304264
     }
   ]
 }
