@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 235,
-  "totalWaClicks": 159,
+  "totalWaClicks": 160,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -46,8 +46,8 @@
     "sena": 1,
     "Lara": 1,
     "lara": 1,
-    "Eylül": 11,
-    "eylül": 11,
+    "Eylül": 12,
+    "eylül": 12,
     "Nehir": 1,
     "nehir": 1,
     "Bursa Osmangazi VIP Escort Vitrin Profilleri": 1,
@@ -76,6 +76,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:51",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -748,18 +756,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:18",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Lindsay (CA)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:51",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:48",
       "name": "Açelya",
@@ -1390,14 +1397,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:04",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2181,6 +2180,13 @@
     "İznik": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_du3y",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795175464071
+    },
     {
       "id": "iPhone 📱_İznik_u45f",
       "device": "iPhone 📱",
