@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083689695,
-  "totalVisits": 254,
+  "totalVisits": 255,
   "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İskenderun",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,15 +745,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:13",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -887,6 +887,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İskenderun",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:20",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Medellín (CO)",
@@ -1596,15 +1605,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:10",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1650,9 +1650,17 @@
     "Diyarbakır": 1,
     "Harker Heights (US)": 1,
     "Yazoo City (US)": 1,
-    "Medellín (CO)": 1
+    "Medellín (CO)": 1,
+    "İskenderun": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İskenderun_41vh",
+      "device": "Mobil 📱",
+      "city": "İskenderun",
+      "page": "/",
+      "lastSeen": 1795141338332
+    },
     {
       "id": "Mobil 📱_Medellín (CO)_l9me",
       "device": "Mobil 📱",
@@ -1666,13 +1674,6 @@
       "city": "Yazoo City (US)",
       "page": "/",
       "lastSeen": 1795141181365
-    },
-    {
-      "id": "Mobil 📱_Harker Heights (US)_j9nz",
-      "device": "Mobil 📱",
-      "city": "Harker Heights (US)",
-      "page": "/",
-      "lastSeen": 1795141084024
     }
   ]
 }
