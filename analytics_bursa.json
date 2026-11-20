@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 172,
-  "totalWaClicks": 112,
+  "totalWaClicks": 113,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -24,8 +24,8 @@
     "su": 1,
     "Dila": 3,
     "dila": 3,
-    "Selin": 14,
-    "selin": 14,
+    "Selin": 15,
+    "selin": 15,
     "Açelya": 9,
     "açelya": 9,
     "Gül": 7,
@@ -65,6 +65,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:08",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:08",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -747,18 +755,17 @@
       "device": "iPhone 📱",
       "page": "/gorukle-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:19",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:08",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:08",
       "name": "Ayşen",
@@ -1389,14 +1396,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:05",
-      "name": "Melisa",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2159,6 +2158,13 @@
     "Singapore (SG)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_znrr",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795151331646
+    },
     {
       "id": "iPhone 📱_Singapore (SG)_hhy3",
       "device": "iPhone 📱",
