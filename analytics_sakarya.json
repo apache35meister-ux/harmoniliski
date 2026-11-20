@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083682389,
   "totalVisits": 87,
-  "totalWaClicks": 36,
+  "totalWaClicks": 37,
   "totalCalls": 0,
   "tClicks": {
     "Melisa": 3,
@@ -40,11 +40,19 @@
     "begüm": 2,
     "Açelya": 1,
     "açelya": 1,
-    "Melis": 1,
-    "melis": 1
+    "Melis": 2,
+    "melis": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:06",
+      "name": "Melis",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:01",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,18 +740,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:57",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/kurtkoy-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:06",
+      "name": "Melis",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:01",
       "name": "Melis",
@@ -1785,74 +1792,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Amsterdam (NL)_o979",
-      "device": "Android 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/serdivan-eskort.html",
-      "lastSeen": 1795172515215
-    },
-    {
-      "id": "Android 📱_Sakarya_6k7b",
+      "id": "Android 📱_Sakarya_hohl",
       "device": "Android 📱",
       "city": "Sakarya",
       "page": "Ana Sayfa",
-      "lastSeen": 1795172509310
-    },
-    {
-      "id": "Android 📱_Sakarya_1ohr",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795172487592
-    },
-    {
-      "id": "Android 📱_Amsterdam (NL)_q37p",
-      "device": "Android 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/serdivan-eskort.html",
-      "lastSeen": 1795172483766
-    },
-    {
-      "id": "Android 📱_Sakarya_noo2",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795172457993
-    },
-    {
-      "id": "Android 📱_Sakarya_ea9b",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795172450122
-    },
-    {
-      "id": "Android 📱_Amsterdam (NL)_ifjo",
-      "device": "Android 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/adapazari-eskort.html",
-      "lastSeen": 1795172436472
-    },
-    {
-      "id": "Android 📱_Amsterdam (NL)_a2gk",
-      "device": "Android 📱",
-      "city": "Amsterdam (NL)",
-      "page": "/erenler-eskort.html",
-      "lastSeen": 1795172391238
-    },
-    {
-      "id": "Android 📱_Sakarya_sn69",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795172383506
-    },
-    {
-      "id": "Android 📱_Sakarya_nlc0",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795172354242
+      "lastSeen": 1795172808297
     }
   ]
 }
