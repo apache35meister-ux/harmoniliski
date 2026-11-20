@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 198,
+  "totalVisits": 199,
   "totalWaClicks": 122,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:42",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -745,15 +754,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/osmangazi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1399,6 +1399,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:42",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2109,20 +2118,11 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 106,
-    "Bursa": 38,
+    "Bursa": 39,
     "Türkiye": 2,
     "Rome (IT)": 1,
     "La Lima (HN)": 1,
@@ -2171,18 +2171,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İzmir_4dup",
+      "id": "Mobil 📱_Bursa_pbyw",
       "device": "Mobil 📱",
-      "city": "İzmir",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795156931879
-    },
-    {
-      "id": "Mobil 📱_Chicago (US)_0ic3",
-      "device": "Mobil 📱",
-      "city": "Chicago (US)",
-      "page": "/",
-      "lastSeen": 1795156764062
+      "lastSeen": 1795158967922
     }
   ]
 }
