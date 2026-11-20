@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083701931,
   "totalVisits": 211,
-  "totalWaClicks": 148,
+  "totalWaClicks": 149,
   "totalCalls": 0,
   "tClicks": {
     "Selin": 22,
@@ -74,8 +74,8 @@
     "tuba": 1,
     "Şebnem": 3,
     "şebnem": 3,
-    "Nihan": 3,
-    "nihan": 3,
+    "Nihan": 4,
+    "nihan": 4,
     "Yeliz": 1,
     "yeliz": 1,
     "1794900000005": 2,
@@ -88,6 +88,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:59",
+      "name": "Nihan",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:59",
       "name": "Eylül",
@@ -786,18 +794,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:24",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:59",
+      "name": "Nihan",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:59",
       "name": "Eylül",
@@ -1424,14 +1431,6 @@
     },
     {
       "time": "18:16",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:15",
       "name": "Rus ESC",
       "city": "Bursa",
       "device": "iPhone 📱",
@@ -2207,6 +2206,13 @@
     "Frankfurt am Main (DE)": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_4i3m",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795154357589
+    },
     {
       "id": "Android 📱_İzmit_g5m3",
       "device": "Android 📱",
