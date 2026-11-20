@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 88,
+  "totalVisits": 89,
   "totalWaClicks": 37,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:06",
       "name": "Ziyaretçi (Android 📱)",
@@ -732,15 +741,6 @@
       "device": "Android 📱",
       "page": "/adapazari-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:51",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1042,6 +1042,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:06",
       "name": "Ziyaretçi (Android 📱)",
@@ -1752,15 +1761,6 @@
       "device": "Android 📱",
       "page": "/orhangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:39",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/cark-caddesi-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1789,9 +1789,16 @@
     "Maceió (BR)": 1,
     "Zürich (CH)": 3,
     "Frankfurt am Main (DE)": 1,
-    "Amsterdam (NL)": 6
+    "Amsterdam (NL)": 7
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Amsterdam (NL)_qkzz",
+      "device": "Mobil 📱",
+      "city": "Amsterdam (NL)",
+      "page": "/",
+      "lastSeen": 1795172843994
+    },
     {
       "id": "Android 📱_Amsterdam (NL)_eius",
       "device": "Android 📱",
