@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 2,
+  "totalVisits": 3,
   "totalWaClicks": 4,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "02:33",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "00:36",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -100,6 +109,15 @@
   ],
   "cityVisits": [
     {
+      "time": "02:33",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "00:36",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -119,50 +137,15 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 2
+    "Bursa": 3
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_iyj0",
-      "device": "iPhone 📱",
+      "id": "Masaüstü 💻_Bursa_eqev",
+      "device": "Masaüstü 💻",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795210592781
-    },
-    {
-      "id": "iPhone 📱_Görükle_5ndg",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210586718
-    },
-    {
-      "id": "iPhone 📱_Görükle_7mtp",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210534988
-    },
-    {
-      "id": "iPhone 📱_Görükle_n5a3",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210511183
-    },
-    {
-      "id": "iPhone 📱_Görükle_pw4n",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795210505406
-    },
-    {
-      "id": "iPhone 📱_Bursa_ccp7",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795210486347
+      "lastSeen": 1795217586715
     }
   ]
 }
