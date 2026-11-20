@@ -1,16 +1,24 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 3,
-  "totalWaClicks": 2,
+  "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
     "su": 1,
-    "Rus ESC": 1,
-    "rus esc": 1
+    "Rus ESC": 2,
+    "rus esc": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:09",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:08",
       "name": "Rus ESC",
@@ -56,6 +64,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:09",
+      "name": "Rus ESC",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:08",
       "name": "Rus ESC",
@@ -108,6 +124,13 @@
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_ptyc",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795187345772
+    },
     {
       "id": "iPhone 📱_Bursa_xpgp",
       "device": "iPhone 📱",
