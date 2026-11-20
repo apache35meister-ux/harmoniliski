@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 9,
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 1,
@@ -25,10 +25,20 @@
     "İzel": 1,
     "i̇zel": 1,
     "Gülce": 1,
-    "gülce": 1
+    "gülce": 1,
+    "Melis": 1,
+    "melis": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:38",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:35",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -256,6 +266,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:38",
+      "name": "Melis",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Gülce",
@@ -492,32 +510,18 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_İzmit_uywj",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795189105715
+    },
+    {
       "id": "Mobil 📱_İstanbul_nt7j",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795188956441
-    },
-    {
-      "id": "iPhone 📱_İzmit_kdg8",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188897174
-    },
-    {
-      "id": "iPhone 📱_İzmit_kswh",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188815446
-    },
-    {
-      "id": "iPhone 📱_İzmit_vdiz",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795188801999
     }
   ]
 }
