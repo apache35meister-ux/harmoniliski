@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180615867,
   "totalVisits": 18,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Su": 1,
@@ -36,10 +36,20 @@
     "Tuba": 3,
     "tuba": 3,
     "Didem": 1,
-    "didem": 1
+    "didem": 1,
+    "Yasemin": 1,
+    "yasemin": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:11",
+      "name": "Yasemin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:11",
       "name": "Didem",
@@ -436,6 +446,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:11",
+      "name": "Yasemin",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:11",
       "name": "Didem",
@@ -843,6 +861,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_q5r0",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795194707738
+    },
+    {
       "id": "iPhone 📱_Bursa_ikyx",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -925,13 +950,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795194556658
-    },
-    {
-      "id": "Mobil 📱_Bursa_35bb",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795194517235
     }
   ]
 }
