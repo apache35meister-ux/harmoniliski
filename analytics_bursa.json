@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 159,
+  "totalVisits": 160,
   "totalWaClicks": 105,
   "totalCalls": 0,
   "tClicks": {
@@ -65,6 +65,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Afyonkarahisar",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:16",
       "name": "Anna I Arnavut",
@@ -748,15 +757,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:15",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1402,6 +1402,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:17",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Afyonkarahisar",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:14",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2112,15 +2121,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2152,9 +2152,17 @@
     "Mikkeli (FI)": 1,
     "El Paso (US)": 1,
     "Round Rock (US)": 1,
-    "Indianapolis (US)": 1
+    "Indianapolis (US)": 1,
+    "Afyonkarahisar": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Afyonkarahisar_y7bu",
+      "device": "Mobil 📱",
+      "city": "Afyonkarahisar",
+      "page": "/",
+      "lastSeen": 1795148264248
+    },
     {
       "id": "iPhone 📱_Bursa_gwk0",
       "device": "iPhone 📱",
@@ -2182,20 +2190,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795148160730
-    },
-    {
-      "id": "iPhone 📱_Bursa_1gso",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795148061637
-    },
-    {
-      "id": "Mobil 📱_Indianapolis (US)_wsfg",
-      "device": "Mobil 📱",
-      "city": "Indianapolis (US)",
-      "page": "/",
-      "lastSeen": 1795148042612
     }
   ]
 }
