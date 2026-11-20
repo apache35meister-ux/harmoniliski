@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 70,
+  "totalVisits": 71,
   "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
@@ -37,6 +37,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:02",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Secaucus (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:34",
       "name": "Ziyaretçi (Android 📱)",
@@ -726,14 +735,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:45",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -947,6 +948,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:02",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Secaucus (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:34",
       "name": "Ziyaretçi (Android 📱)",
@@ -1598,15 +1608,16 @@
     "Johannesburg (ZA)": 1,
     "Ereğli": 1,
     "San Antonio (US)": 1,
-    "Clinton (US)": 1
+    "Clinton (US)": 1,
+    "Secaucus (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Clinton (US)_5g3o",
-      "device": "Android 📱",
-      "city": "Clinton (US)",
-      "page": "/edirne-eskort.html",
-      "lastSeen": 1795149251294
+      "id": "Masaüstü 💻_Secaucus (US)_ff2o",
+      "device": "Masaüstü 💻",
+      "city": "Secaucus (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795150968695
     }
   ]
 }
