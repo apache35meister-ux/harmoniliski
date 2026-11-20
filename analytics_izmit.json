@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 157,
+  "totalVisits": 158,
   "totalWaClicks": 138,
   "totalCalls": 0,
   "tClicks": {
@@ -84,6 +84,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:59",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Atlanta (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -764,15 +773,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:27",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1418,6 +1418,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:59",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Atlanta (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2128,15 +2137,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "22:13",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/korupark-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2149,9 +2149,17 @@
     "Ankara": 1,
     "Cochabamba (BO)": 1,
     "Hinesville (US)": 1,
-    "Bonney Lake (US)": 1
+    "Bonney Lake (US)": 1,
+    "Atlanta (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Atlanta (US)_hm2j",
+      "device": "Mobil 📱",
+      "city": "Atlanta (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795139974484
+    },
     {
       "id": "Mobil 📱_Bonney Lake (US)_42qb",
       "device": "Mobil 📱",
