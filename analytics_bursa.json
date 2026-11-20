@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083708207,
-  "totalVisits": 208,
+  "totalVisits": 209,
   "totalWaClicks": 130,
   "totalCalls": 0,
   "tClicks": {
@@ -73,6 +73,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:13",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -753,15 +762,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Indianapolis (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1407,6 +1407,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:13",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:13",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2117,15 +2126,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:30",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Catalão (BR)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2139,7 +2139,7 @@
     "Bonao (DO)": 1,
     "Kayseri": 1,
     "Catalão (BR)": 1,
-    "Gaziantep": 3,
+    "Gaziantep": 4,
     "Port of Spain (TT)": 1,
     "Adapazarı": 2,
     "Richmond (US)": 1,
@@ -2183,6 +2183,13 @@
     "Şanlıurfa": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Gaziantep_m4pu",
+      "device": "Mobil 📱",
+      "city": "Gaziantep",
+      "page": "/",
+      "lastSeen": 1795162419822
+    },
     {
       "id": "Masaüstü 💻_İstanbul_283w",
       "device": "Masaüstü 💻",
