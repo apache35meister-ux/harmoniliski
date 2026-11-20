@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 206,
-  "totalWaClicks": 127,
+  "totalWaClicks": 128,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -67,10 +67,20 @@
     "İzel": 1,
     "i̇zel": 1,
     "Nergis": 1,
-    "nergis": 1
+    "nergis": 1,
+    "Buket": 1,
+    "buket": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:03",
+      "name": "Buket",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:02",
       "name": "Nergis",
@@ -753,17 +763,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:20",
-      "name": "Gül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:03",
+      "name": "Buket",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:02",
       "name": "Nergis",
@@ -1394,14 +1404,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "20:41",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2182,6 +2184,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_hb1j",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795161786650
+    },
     {
       "id": "Android 📱_Bursa_67sj",
       "device": "Android 📱",
