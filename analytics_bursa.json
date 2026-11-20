@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795083708207,
   "totalVisits": 165,
-  "totalWaClicks": 105,
+  "totalWaClicks": 106,
   "totalCalls": 0,
   "tClicks": {
     "Test Model": 1,
@@ -54,8 +54,8 @@
     "bursa osmangazi vip escort vitrin profilleri": 1,
     "Emel": 1,
     "emel": 1,
-    "Begüm": 2,
-    "begüm": 2,
+    "Begüm": 3,
+    "begüm": 3,
     "Ceren": 2,
     "ceren": 2,
     "Bahar": 1,
@@ -65,6 +65,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:52",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:51",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -748,18 +756,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:02",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "07:52",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "07:16",
       "name": "Anna I Arnavut",
@@ -1390,14 +1397,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "18:53",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2159,6 +2158,13 @@
     "Columbus (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_uepi",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795150329692
+    },
     {
       "id": "Mobil 📱_Bursa_m4sa",
       "device": "Mobil 📱",
