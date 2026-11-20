@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180661970,
   "totalVisits": 37,
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
     "Serap": 2,
@@ -20,8 +20,8 @@
     "damla": 2,
     "İzel": 3,
     "i̇zel": 3,
-    "Açelya": 3,
-    "açelya": 3,
+    "Açelya": 4,
+    "açelya": 4,
     "Sena": 2,
     "sena": 2,
     "VIP Escort": 3,
@@ -42,6 +42,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "23:07",
+      "name": "Açelya",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "23:06",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -649,6 +657,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "23:07",
+      "name": "Açelya",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:57",
       "name": "Selin",
@@ -1272,6 +1288,13 @@
     "Hendek": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_ztdx",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795205231012
+    },
     {
       "id": "Mobil 📱_Hendek_7xrh",
       "device": "Mobil 📱",
