@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795180678072,
   "totalVisits": 35,
-  "totalWaClicks": 76,
+  "totalWaClicks": 77,
   "totalCalls": 0,
   "tClicks": {
     "Tuba": 2,
@@ -62,8 +62,8 @@
     "tuğçe": 1,
     "Buket": 2,
     "buket": 2,
-    "Ayşen": 1,
-    "ayşen": 1,
+    "Ayşen": 2,
+    "ayşen": 2,
     "Açelya": 1,
     "açelya": 1,
     "VIP Escort": 2,
@@ -75,6 +75,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:21",
+      "name": "Ayşen",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:21",
       "name": "Rus ESC",
@@ -731,17 +739,17 @@
       "device": "Android 📱",
       "page": "/golcuk-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "18:39",
-      "name": "Kumsal",
+      "time": "20:21",
+      "name": "Ayşen",
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "20:21",
       "name": "Rus ESC",
@@ -1677,6 +1685,13 @@
     "Milan (IT)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_wo6f",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795195306226
+    },
     {
       "id": "iPhone 📱_İzmit_ozhj",
       "device": "iPhone 📱",
