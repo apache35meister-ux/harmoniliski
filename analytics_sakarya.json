@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083682389,
-  "totalVisits": 90,
+  "totalVisits": 91,
   "totalWaClicks": 39,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Erzurum",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/igdir-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:49",
       "name": "Damla",
@@ -735,14 +744,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:55",
-      "name": "Emel",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1060,6 +1061,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:58",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Erzurum",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/igdir-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:48",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1770,15 +1780,6 @@
       "device": "Android 📱",
       "page": "/kestel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:43",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/kestel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -1807,22 +1808,16 @@
     "Maceió (BR)": 1,
     "Zürich (CH)": 3,
     "Frankfurt am Main (DE)": 1,
-    "Amsterdam (NL)": 7
+    "Amsterdam (NL)": 7,
+    "Erzurum": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Sakarya_3key",
+      "id": "Android 📱_Erzurum_4jdf",
       "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795175352456
-    },
-    {
-      "id": "Mobil 📱_İstanbul_ohc1",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795175330506
+      "city": "Erzurum",
+      "page": "/igdir-eskort.html",
+      "lastSeen": 1795175889854
     }
   ]
 }
