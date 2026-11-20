@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795083701931,
-  "totalVisits": 196,
+  "totalVisits": 197,
   "totalWaClicks": 141,
   "totalCalls": 0,
   "tClicks": {
@@ -88,6 +88,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Baltimore (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -787,14 +796,6 @@
       "device": "iPhone 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:43",
-      "name": "Şebnem",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1440,6 +1441,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:20",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Baltimore (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:13",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2150,15 +2160,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:47",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2194,15 +2195,16 @@
     "Catriel (AR)": 1,
     "Tece": 1,
     "McAllen (US)": 1,
-    "Milagres (BR)": 1
+    "Milagres (BR)": 1,
+    "Baltimore (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Milagres (BR)_ro57",
+      "id": "Mobil 📱_Baltimore (US)_4zmo",
       "device": "Mobil 📱",
-      "city": "Milagres (BR)",
+      "city": "Baltimore (US)",
       "page": "/",
-      "lastSeen": 1795151585806
+      "lastSeen": 1795152002646
     }
   ]
 }
