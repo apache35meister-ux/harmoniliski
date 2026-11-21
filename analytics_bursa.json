@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 134,
-  "totalWaClicks": 107,
+  "totalWaClicks": 108,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 9,
@@ -59,10 +59,20 @@
     "Nergis": 1,
     "nergis": 1,
     "Ceren": 1,
-    "ceren": 1
+    "ceren": 1,
+    "Esra": 1,
+    "esra": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:26",
+      "name": "Esra",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:25",
       "name": "Ceren",
@@ -738,17 +748,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:17",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:26",
+      "name": "Esra",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:25",
       "name": "Ceren",
@@ -1376,14 +1386,6 @@
     {
       "time": "08:04",
       "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "07:39",
-      "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
@@ -2134,6 +2136,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_jd2j",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278362631
+    },
+    {
       "id": "iPhone 📱_Bursa_y2el",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -2181,13 +2190,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795278222726
-    },
-    {
-      "id": "iPhone 📱_Milan (IT)_kuf9",
-      "device": "iPhone 📱",
-      "city": "Milan (IT)",
-      "page": "/",
-      "lastSeen": 1795278181587
     }
   ]
 }
