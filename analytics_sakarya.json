@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 13,
+  "totalVisits": 14,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:25",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -183,6 +192,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:25",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Los Angeles (US)",
@@ -303,7 +321,7 @@
   "cityCounts": {
     "Amsterdam (NL)": 1,
     "İstanbul": 2,
-    "New York City (US)": 2,
+    "New York City (US)": 3,
     "San Jose (US)": 1,
     "San Francisco (US)": 1,
     "The Dalles (US)": 1,
@@ -313,6 +331,13 @@
     "Los Angeles (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_New York City (US)_02gw",
+      "device": "iPhone 📱",
+      "city": "New York City (US)",
+      "page": "/",
+      "lastSeen": 1795220821631
+    },
     {
       "id": "iPhone 📱_Los Angeles (US)_90i4",
       "device": "iPhone 📱",
@@ -361,27 +386,6 @@
       "city": "Romulus (US)",
       "page": "/",
       "lastSeen": 1795220652286
-    },
-    {
-      "id": "Masaüstü 💻_The Dalles (US)_7ivx",
-      "device": "Masaüstü 💻",
-      "city": "The Dalles (US)",
-      "page": "/",
-      "lastSeen": 1795220602106
-    },
-    {
-      "id": "Masaüstü 💻_San Francisco (US)_uxut",
-      "device": "Masaüstü 💻",
-      "city": "San Francisco (US)",
-      "page": "/",
-      "lastSeen": 1795220566199
-    },
-    {
-      "id": "Masaüstü 💻_San Jose (US)_6sn2",
-      "device": "Masaüstü 💻",
-      "city": "San Jose (US)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795220562486
     }
   ]
 }
