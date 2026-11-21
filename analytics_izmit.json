@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 148,
-  "totalWaClicks": 103,
+  "totalVisits": 149,
+  "totalWaClicks": 104,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -67,10 +67,29 @@
     "dila": 1,
     "yeliz": 2,
     "Nisa": 1,
-    "nisa": 1
+    "nisa": 1,
+    "Pınar": 1,
+    "pınar": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:27",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/istanbul-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "19:27",
+      "name": "Pınar",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:27",
       "name": "Nisa",
@@ -749,26 +768,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:59",
-      "name": "Açelya",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:58",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/izmit-merkez-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:27",
+      "name": "Pınar",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:27",
       "name": "Nisa",
@@ -1400,17 +1410,18 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:47",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:27",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/istanbul-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:26",
       "name": "Ziyaretçi (Android 📱)",
@@ -2121,19 +2132,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:17",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/izmit-merkez-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 70,
+    "İstanbul": 71,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2164,6 +2166,20 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İstanbul_vdvy",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/istanbul-eskort.html",
+      "lastSeen": 1795278453194
+    },
+    {
+      "id": "Android 📱_İzmit_x9q9",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278453188
+    },
     {
       "id": "Android 📱_İzmit_reo7",
       "device": "Android 📱",
