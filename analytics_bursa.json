@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 108,
-  "totalWaClicks": 82,
+  "totalWaClicks": 83,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 6,
-    "damla": 6,
+    "Damla": 7,
+    "damla": 7,
     "Eylül": 6,
     "eylül": 6,
     "Açelya": 9,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:46",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -732,18 +740,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/heykel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:46",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:38",
       "name": "İlayda",
@@ -1374,14 +1381,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:56",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2127,6 +2126,13 @@
     "Council Bluffs (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_7mb2",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795265215854
+    },
     {
       "id": "Mobil 📱_Frankfurt am Main (DE)_v74y",
       "device": "Mobil 📱",
