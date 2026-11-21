@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 60,
+  "totalVisits": 61,
   "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
@@ -31,6 +31,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:24",
       "name": "Damla",
@@ -717,15 +726,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -987,6 +987,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1531,7 +1540,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 5,
-    "Bursa": 13,
+    "Bursa": 14,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 2,
     "İzmir": 3,
@@ -1552,6 +1561,13 @@
     "Seattle (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_n4ie",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795289070341
+    },
     {
       "id": "Android 📱_Bursa_kmnm",
       "device": "Android 📱",
