@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 34,
+  "totalVisits": 35,
   "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
@@ -31,6 +31,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:21",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/kent-meydani-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:21",
       "name": "Tuba",
@@ -726,6 +735,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:21",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/kent-meydani-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:20",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -1035,12 +1053,19 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 6,
-    "Bursa": 14,
+    "Bursa": 15,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 1,
     "Konya": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_jmaa",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/kent-meydani-eskort.html",
+      "lastSeen": 1795231304567
+    },
     {
       "id": "iPhone 📱_Bursa_gj5n",
       "device": "iPhone 📱",
