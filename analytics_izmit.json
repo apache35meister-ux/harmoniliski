@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 38,
+  "totalVisits": 39,
   "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:26",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Aksaray",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/aksaray-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:21",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -723,14 +732,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:56",
-      "name": "İzel",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1080,6 +1081,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "04:26",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Aksaray",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/aksaray-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:21",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1434,15 +1444,16 @@
     "İzmit": 2,
     "Bursa": 2,
     "Ankara": 1,
-    "Ashburn (US)": 1
+    "Ashburn (US)": 1,
+    "Aksaray": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Ashburn (US)_4wzo",
-      "device": "Masaüstü 💻",
-      "city": "Ashburn (US)",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795224092925
+      "id": "iPhone 📱_Aksaray_46e1",
+      "device": "iPhone 📱",
+      "city": "Aksaray",
+      "page": "/aksaray-eskort.html",
+      "lastSeen": 1795224362712
     }
   ]
 }
