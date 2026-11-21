@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 80,
+  "totalVisits": 81,
   "totalWaClicks": 73,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:16",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:09",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -736,14 +745,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:37",
-      "name": "Aylin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1333,6 +1334,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:16",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:09",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2043,19 +2053,10 @@
       "device": "iPhone 📱",
       "page": "/izmit-merkez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:55",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 40,
+    "İstanbul": 41,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2073,11 +2074,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Frankfurt am Main (DE)_7n04",
-      "device": "iPhone 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/",
-      "lastSeen": 1795255770160
+      "id": "Android 📱_İstanbul_08eg",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795256202279
     }
   ]
 }
