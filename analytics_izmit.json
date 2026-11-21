@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 51,
+  "totalVisits": 52,
   "totalWaClicks": 50,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:05",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -726,14 +735,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:51",
-      "name": "Gül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1139,6 +1140,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:05",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1600,7 +1610,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 25,
+    "İstanbul": 26,
     "Gebze": 3,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -1616,18 +1626,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_İstanbul_gbwu",
-      "device": "Mobil 📱",
+      "id": "Android 📱_İstanbul_d01b",
+      "device": "Android 📱",
       "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795237109822
-    },
-    {
-      "id": "Mobil 📱_İstanbul_n8n7",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795237026755
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795237515524
     }
   ]
 }
