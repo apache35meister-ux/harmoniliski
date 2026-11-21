@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 161,
+  "totalVisits": 162,
   "totalWaClicks": 127,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:44",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:43",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -743,14 +752,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "17:00",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1396,6 +1397,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:44",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:43",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2106,15 +2116,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2125,7 +2126,7 @@
     "Milan (IT)": 6,
     "Konya": 2,
     "Oudeschip (NL)": 1,
-    "İzmir": 8,
+    "İzmir": 9,
     "Hamina (FI)": 3,
     "Dallas (US)": 2,
     "Frankfurt am Main (DE)": 13,
@@ -2142,6 +2143,13 @@
     "İnegol": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmir_zdph",
+      "device": "Masaüstü 💻",
+      "city": "İzmir",
+      "page": "/",
+      "lastSeen": 1795286694655
+    },
     {
       "id": "iPhone 📱_İnegol_ohcb",
       "device": "iPhone 📱",
