@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 58,
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
-    "İzel": 2,
-    "i̇zel": 2,
+    "İzel": 3,
+    "i̇zel": 3,
     "Damla": 6,
     "damla": 6,
     "Melis": 2,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:04",
+      "name": "İzel",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:04",
       "name": "Ziyaretçi (Android 📱)",
@@ -727,18 +735,17 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:59",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:04",
+      "name": "İzel",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:04",
       "name": "Selin",
@@ -1728,6 +1735,13 @@
     "Denver (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_p3nc",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795241083330
+    },
     {
       "id": "Android 📱_İstanbul_3qer",
       "device": "Android 📱",
