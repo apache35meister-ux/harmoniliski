@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 131,
+  "totalVisits": 132,
   "totalWaClicks": 102,
   "totalCalls": 0,
   "tClicks": {
@@ -59,6 +59,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:12",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -737,14 +746,6 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:40",
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1390,6 +1391,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:12",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2100,15 +2110,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:22",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2116,7 +2117,7 @@
     "İstanbul": 14,
     "Bursa": 58,
     "Amsterdam (NL)": 14,
-    "Milan (IT)": 5,
+    "Milan (IT)": 6,
     "Konya": 2,
     "Oudeschip (NL)": 1,
     "İzmir": 3,
@@ -2133,18 +2134,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_dwcl",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
+      "id": "iPhone 📱_Milan (IT)_kuf9",
+      "device": "iPhone 📱",
+      "city": "Milan (IT)",
       "page": "/",
-      "lastSeen": 1795277560518
-    },
-    {
-      "id": "Mobil 📱_Bursa_s8n9",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795277454771
+      "lastSeen": 1795278181587
     }
   ]
 }
