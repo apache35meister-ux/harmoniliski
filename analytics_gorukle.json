@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:02",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:21",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -742,6 +751,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:02",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "14:21",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İzmir",
@@ -869,7 +887,7 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 9,
+    "Bursa": 10,
     "Dallas (US)": 2,
     "İstanbul": 1,
     "Council Bluffs (US)": 1,
@@ -877,11 +895,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İzmir_11fm",
+      "id": "Masaüstü 💻_Bursa_6lcp",
       "device": "Masaüstü 💻",
-      "city": "İzmir",
-      "page": "/",
-      "lastSeen": 1795260075836
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795262538495
     }
   ]
 }
