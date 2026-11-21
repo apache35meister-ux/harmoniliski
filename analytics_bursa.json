@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 108,
+  "totalVisits": 109,
   "totalWaClicks": 84,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:47",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:47",
       "name": "Gül",
@@ -732,14 +741,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:11",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1385,6 +1386,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:47",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2095,15 +2105,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2117,7 +2118,7 @@
     "İzmir": 3,
     "Hamina (FI)": 1,
     "Dallas (US)": 2,
-    "Frankfurt am Main (DE)": 6,
+    "Frankfurt am Main (DE)": 7,
     "Singapore (SG)": 6,
     "Gaziantep": 1,
     "Bandırma": 2,
@@ -2126,6 +2127,13 @@
     "Council Bluffs (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Frankfurt am Main (DE)_px69",
+      "device": "Mobil 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "/",
+      "lastSeen": 1795265251805
+    },
     {
       "id": "Android 📱_Bursa_nqlv",
       "device": "Android 📱",
