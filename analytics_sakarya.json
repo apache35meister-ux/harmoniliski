@@ -1,18 +1,35 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 15,
-  "totalWaClicks": 4,
+  "totalVisits": 16,
+  "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
     "eylül": 1,
     "İrem": 1,
     "i̇rem": 1,
-    "VIP Escort": 2,
-    "vip escort": 2
+    "VIP Escort": 3,
+    "vip escort": 3
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:27",
+      "name": "VIP Escort",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "03:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:27",
       "name": "VIP Escort",
@@ -191,6 +208,14 @@
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
+      "time": "03:27",
+      "name": "VIP Escort",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "03:24",
       "name": "VIP Escort",
       "city": "Sakarya",
@@ -216,6 +241,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -355,7 +389,7 @@
   "cityCounts": {
     "Amsterdam (NL)": 1,
     "İstanbul": 2,
-    "New York City (US)": 3,
+    "New York City (US)": 4,
     "San Jose (US)": 1,
     "San Francisco (US)": 1,
     "The Dalles (US)": 1,
@@ -366,6 +400,20 @@
     "Santa Clara (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_2dck",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795220873684
+    },
+    {
+      "id": "iPhone 📱_New York City (US)_9xhw",
+      "device": "iPhone 📱",
+      "city": "New York City (US)",
+      "page": "/",
+      "lastSeen": 1795220869756
+    },
     {
       "id": "iPhone 📱_Sakarya_hw1h",
       "device": "iPhone 📱",
@@ -393,13 +441,6 @@
       "city": "Los Angeles (US)",
       "page": "/",
       "lastSeen": 1795220737064
-    },
-    {
-      "id": "iPhone 📱_Sakarya_2gvj",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795220692995
     }
   ]
 }
