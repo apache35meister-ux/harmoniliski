@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 22,
+  "totalVisits": 23,
   "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:44",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:40",
       "name": "VIP Escort",
@@ -780,6 +789,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:44",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:40",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "New York City (US)",
@@ -983,7 +1001,7 @@
     "San Francisco (US)": 1,
     "Council Bluffs (US)": 2,
     "Newark (US)": 2,
-    "New York City (US)": 3,
+    "New York City (US)": 4,
     "Dallas (US)": 3,
     "Floris (US)": 1,
     "Santa Clara (US)": 1,
@@ -991,95 +1009,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Görükle_gpop",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795221641345
-    },
-    {
-      "id": "iPhone 📱_New York City (US)_gxi8",
+      "id": "iPhone 📱_New York City (US)_kqfp",
       "device": "iPhone 📱",
       "city": "New York City (US)",
       "page": "/",
-      "lastSeen": 1795221632140
-    },
-    {
-      "id": "iPhone 📱_Jeffries Point (US)_v55q",
-      "device": "iPhone 📱",
-      "city": "Jeffries Point (US)",
-      "page": "/",
-      "lastSeen": 1795221631398
-    },
-    {
-      "id": "Masaüstü 💻_Dallas (US)_j6s6",
-      "device": "Masaüstü 💻",
-      "city": "Dallas (US)",
-      "page": "/",
-      "lastSeen": 1795221625524
-    },
-    {
-      "id": "iPhone 📱_Santa Clara (US)_a621",
-      "device": "iPhone 📱",
-      "city": "Santa Clara (US)",
-      "page": "/",
-      "lastSeen": 1795221598685
-    },
-    {
-      "id": "Masaüstü 💻_Council Bluffs (US)_ko8k",
-      "device": "Masaüstü 💻",
-      "city": "Council Bluffs (US)",
-      "page": "/",
-      "lastSeen": 1795221594324
-    },
-    {
-      "id": "iPhone 📱_Newark (US)_0w7o",
-      "device": "iPhone 📱",
-      "city": "Newark (US)",
-      "page": "/",
-      "lastSeen": 1795221578314
-    },
-    {
-      "id": "iPhone 📱_Görükle_qfxk",
-      "device": "iPhone 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795221564935
-    },
-    {
-      "id": "iPhone 📱_Floris (US)_17ng",
-      "device": "iPhone 📱",
-      "city": "Floris (US)",
-      "page": "/",
-      "lastSeen": 1795221558585
-    },
-    {
-      "id": "iPhone 📱_New York City (US)_un9s",
-      "device": "iPhone 📱",
-      "city": "New York City (US)",
-      "page": "/",
-      "lastSeen": 1795221549853
-    },
-    {
-      "id": "Masaüstü 💻_Dallas (US)_y1ha",
-      "device": "Masaüstü 💻",
-      "city": "Dallas (US)",
-      "page": "/",
-      "lastSeen": 1795221504882
-    },
-    {
-      "id": "Masaüstü 💻_Dallas (US)_qewt",
-      "device": "Masaüstü 💻",
-      "city": "Dallas (US)",
-      "page": "/",
-      "lastSeen": 1795221487112
-    },
-    {
-      "id": "iPhone 📱_New York City (US)_9mad",
-      "device": "iPhone 📱",
-      "city": "New York City (US)",
-      "page": "/",
-      "lastSeen": 1795221463179
+      "lastSeen": 1795221884526
     }
   ]
 }
