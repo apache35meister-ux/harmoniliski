@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 70,
+  "totalVisits": 71,
   "totalWaClicks": 58,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:19",
       "name": "Açelya",
@@ -718,15 +727,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:08",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1196,6 +1196,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:24",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:18",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1831,7 +1840,7 @@
     "Ankara": 5,
     "İstanbul": 9,
     "Bursa": 37,
-    "Amsterdam (NL)": 10,
+    "Amsterdam (NL)": 11,
     "Milan (IT)": 1,
     "Konya": 2,
     "Oudeschip (NL)": 1,
@@ -1842,25 +1851,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_6rl7",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795249143707
-    },
-    {
-      "id": "iPhone 📱_İstanbul_szoy",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795249087199
-    },
-    {
-      "id": "Mobil 📱_Frankfurt am Main (DE)_24hs",
+      "id": "Mobil 📱_Amsterdam (NL)_oydy",
       "device": "Mobil 📱",
-      "city": "Frankfurt am Main (DE)",
+      "city": "Amsterdam (NL)",
       "page": "/",
-      "lastSeen": 1795248989705
+      "lastSeen": 1795249462351
     }
   ]
 }
