@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 124,
+  "totalVisits": 125,
   "totalWaClicks": 95,
   "totalCalls": 0,
   "tClicks": {
@@ -57,6 +57,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:01",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:56",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -733,15 +742,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12:46",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/nilufer-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1387,6 +1387,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:01",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:56",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2097,15 +2106,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:04",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2119,7 +2119,7 @@
     "İzmir": 3,
     "Hamina (FI)": 1,
     "Dallas (US)": 2,
-    "Frankfurt am Main (DE)": 9,
+    "Frankfurt am Main (DE)": 10,
     "Singapore (SG)": 6,
     "Gaziantep": 1,
     "Bandırma": 2,
@@ -2130,18 +2130,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Milan (IT)_ehmu",
+      "id": "iPhone 📱_Frankfurt am Main (DE)_ku0k",
       "device": "iPhone 📱",
-      "city": "Milan (IT)",
-      "page": "/",
-      "lastSeen": 1795273019356
-    },
-    {
-      "id": "iPhone 📱_Bursa_a97j",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795272916913
+      "city": "Frankfurt am Main (DE)",
+      "page": "/heykel-eskort.html",
+      "lastSeen": 1795273319128
     }
   ]
 }
