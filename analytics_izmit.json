@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 101,
-  "totalWaClicks": 87,
+  "totalWaClicks": 88,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -30,8 +30,8 @@
     "i̇layda": 1,
     "Zeynep": 1,
     "zeynep": 1,
-    "Melisa": 6,
-    "melisa": 6,
+    "Melisa": 7,
+    "melisa": 7,
     "Yaren": 1,
     "yaren": 1,
     "Ayşen": 1,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:12",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:11",
       "name": "Melisa",
@@ -736,17 +744,17 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:03",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:12",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:11",
       "name": "Melisa",
@@ -1377,14 +1385,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:51",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2132,6 +2132,13 @@
     "Warsaw (PL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_fcd1",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795263168555
+    },
     {
       "id": "iPhone 📱_İzmit_u17h",
       "device": "iPhone 📱",
