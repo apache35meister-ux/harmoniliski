@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 87,
+  "totalVisits": 88,
   "totalWaClicks": 78,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:38",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:29",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -737,15 +746,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:40",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/hatay-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1375,6 +1375,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:38",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:29",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2085,19 +2094,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:49",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 46,
+    "İstanbul": 47,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2116,18 +2116,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_hybq",
+      "id": "iPhone 📱_İstanbul_j3o8",
       "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795256973874
-    },
-    {
-      "id": "iPhone 📱_İstanbul_bfuy",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/bursa-nilufer-ozluce-vip-eskort.html",
-      "lastSeen": 1795256819295
+      "lastSeen": 1795257533631
     }
   ]
 }
