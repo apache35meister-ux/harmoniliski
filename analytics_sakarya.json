@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:27",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Santa Clara (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -194,6 +203,15 @@
     {
       "time": "03:27",
       "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Santa Clara (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:27",
+      "name": "Ziyaretçi (iPhone 📱)",
       "city": "New York City (US)",
       "country": "Türkiye",
       "device": "iPhone 📱",
@@ -328,9 +346,17 @@
     "Romulus (US)": 1,
     "Ashburn (US)": 2,
     "Dallas (US)": 1,
-    "Los Angeles (US)": 1
+    "Los Angeles (US)": 1,
+    "Santa Clara (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Santa Clara (US)_0ld8",
+      "device": "iPhone 📱",
+      "city": "Santa Clara (US)",
+      "page": "/",
+      "lastSeen": 1795220860343
+    },
     {
       "id": "iPhone 📱_New York City (US)_02gw",
       "device": "iPhone 📱",
@@ -358,34 +384,6 @@
       "city": "New York City (US)",
       "page": "/",
       "lastSeen": 1795220680942
-    },
-    {
-      "id": "iPhone 📱_Dallas (US)_j1f4",
-      "device": "iPhone 📱",
-      "city": "Dallas (US)",
-      "page": "/",
-      "lastSeen": 1795220671352
-    },
-    {
-      "id": "Mobil 📱_Ashburn (US)_dmym",
-      "device": "Mobil 📱",
-      "city": "Ashburn (US)",
-      "page": "/",
-      "lastSeen": 1795220654878
-    },
-    {
-      "id": "Masaüstü 💻_Ashburn (US)_rf9j",
-      "device": "Masaüstü 💻",
-      "city": "Ashburn (US)",
-      "page": "/",
-      "lastSeen": 1795220654794
-    },
-    {
-      "id": "iPhone 📱_Romulus (US)_2rfm",
-      "device": "iPhone 📱",
-      "city": "Romulus (US)",
-      "page": "/",
-      "lastSeen": 1795220652286
     }
   ]
 }
