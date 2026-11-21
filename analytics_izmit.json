@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 67,
-  "totalWaClicks": 62,
+  "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -52,10 +52,20 @@
     "aylin": 2,
     "Emel": 1,
     "emel": 1,
-    "funda": 2
+    "funda": 2,
+    "Anna": 1,
+    "anna": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:34",
+      "name": "Anna",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:34",
       "name": "funda",
@@ -730,18 +740,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:34",
+      "name": "Anna",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:34",
       "name": "funda",
@@ -1862,6 +1871,13 @@
     "Körfez": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_xvp7",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795250055012
+    },
     {
       "id": "Android 📱_İzmit_3yo9",
       "device": "Android 📱",
