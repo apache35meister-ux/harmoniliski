@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 166,
+  "totalVisits": 167,
   "totalWaClicks": 117,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:18",
       "name": "Rus ESC",
@@ -762,15 +771,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:35",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Los Angeles (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1416,6 +1416,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "20:28",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:18",
       "name": "Ziyaretçi (Android 📱)",
@@ -2126,15 +2135,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:29",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2145,7 +2145,7 @@
     "Amsterdam (NL)": 6,
     "Frankfurt am Main (DE)": 4,
     "Vienna (AT)": 1,
-    "İzmit": 7,
+    "İzmit": 8,
     "Bursa": 12,
     "Ankara": 4,
     "Ashburn (US)": 3,
@@ -2171,18 +2171,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_bth1",
-      "device": "Android 📱",
+      "id": "Mobil 📱_İzmit_svq0",
+      "device": "Mobil 📱",
       "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795281518646
-    },
-    {
-      "id": "Android 📱_İzmir_90fy",
-      "device": "Android 📱",
-      "city": "İzmir",
-      "page": "/mecidiyekoy-eskort.html",
-      "lastSeen": 1795281511675
+      "page": "/",
+      "lastSeen": 1795282100552
     }
   ]
 }
