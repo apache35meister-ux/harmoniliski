@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 68,
+  "totalVisits": 69,
   "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:46",
       "name": "Selin",
@@ -718,15 +727,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:01",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Milan (IT)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1188,6 +1188,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:16",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1812,22 +1821,15 @@
     "İzmir": 1,
     "Hamina (FI)": 1,
     "Dallas (US)": 1,
-    "Frankfurt am Main (DE)": 1
+    "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_20p2",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795247215720
-    },
-    {
-      "id": "Mobil 📱_Amsterdam (NL)_5j2k",
+      "id": "Mobil 📱_Frankfurt am Main (DE)_24hs",
       "device": "Mobil 📱",
-      "city": "Amsterdam (NL)",
+      "city": "Frankfurt am Main (DE)",
       "page": "/",
-      "lastSeen": 1795247211316
+      "lastSeen": 1795248989705
     }
   ]
 }
