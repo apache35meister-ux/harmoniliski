@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 199,
+  "totalVisits": 200,
   "totalWaClicks": 148,
   "totalCalls": 0,
   "tClicks": {
@@ -83,6 +83,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:20",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:20",
       "name": "Damla",
@@ -758,15 +767,6 @@
       "device": "Masaüstü 💻",
       "page": "/korfez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:41",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/yahya-kaptan-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1412,6 +1412,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:20",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:19",
       "name": "Ziyaretçi (Android 📱)",
@@ -2122,20 +2131,11 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:43",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Romulus (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 89,
-    "Gebze": 13,
+    "Gebze": 14,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
     "Amsterdam (NL)": 6,
@@ -2167,6 +2167,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Gebze_9ym9",
+      "device": "Android 📱",
+      "city": "Gebze",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795288829172
+    },
     {
       "id": "Android 📱_İzmit_vhzt",
       "device": "Android 📱",
