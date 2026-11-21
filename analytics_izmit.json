@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 103,
+  "totalVisits": 104,
   "totalWaClicks": 90,
   "totalCalls": 0,
   "tClicks": {
@@ -62,6 +62,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:21",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/izmit-merkez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:13",
       "name": "Buket",
@@ -738,15 +747,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:04",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1392,6 +1392,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:21",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/izmit-merkez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:13",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2102,15 +2111,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:53",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2131,65 +2131,16 @@
     "Körfez": 1,
     "Madrid (ES)": 1,
     "Yuvacık": 1,
-    "İzmir": 1,
+    "İzmir": 2,
     "Warsaw (PL)": 2
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İzmit_684e",
+      "id": "iPhone 📱_İzmir_lbd1",
       "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795263230264
-    },
-    {
-      "id": "iPhone 📱_İzmit_mvvs",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795263202336
-    },
-    {
-      "id": "iPhone 📱_İstanbul_sm6t",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795263199495
-    },
-    {
-      "id": "iPhone 📱_İstanbul_2833",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795263169033
-    },
-    {
-      "id": "iPhone 📱_İzmit_fcd1",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795263168555
-    },
-    {
-      "id": "iPhone 📱_İzmit_u17h",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795263115548
-    },
-    {
-      "id": "iPhone 📱_İzmit_v6cl",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795263084533
-    },
-    {
-      "id": "iPhone 📱_İstanbul_up0z",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795263072974
+      "city": "İzmir",
+      "page": "/izmit-merkez-eskort.html",
+      "lastSeen": 1795263676318
     }
   ]
 }
