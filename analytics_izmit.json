@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 40,
+  "totalVisits": 41,
   "totalWaClicks": 45,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:40",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/hatay-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -724,14 +733,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:57",
-      "name": "Melis",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1098,6 +1099,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:40",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/hatay-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:27",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Aksaray",
@@ -1459,7 +1469,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 18,
+    "İstanbul": 19,
     "Gebze": 1,
     "Moscow (RU)": 1,
     "Milan (IT)": 4,
@@ -1474,32 +1484,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Aksaray_ix4i",
-      "device": "iPhone 📱",
-      "city": "Aksaray",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795224476853
-    },
-    {
-      "id": "iPhone 📱_İzmit_d1u1",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795224392608
-    },
-    {
-      "id": "iPhone 📱_İzmit_4hsq",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795224372890
-    },
-    {
-      "id": "iPhone 📱_Aksaray_46e1",
-      "device": "iPhone 📱",
-      "city": "Aksaray",
-      "page": "/aksaray-eskort.html",
-      "lastSeen": 1795224362712
+      "id": "Android 📱_İstanbul_ikdj",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/hatay-eskort.html",
+      "lastSeen": 1795225239278
     }
   ]
 }
