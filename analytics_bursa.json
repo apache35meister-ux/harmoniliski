@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 57,
+  "totalVisits": 58,
   "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
@@ -41,6 +41,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -720,14 +729,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:50",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1069,6 +1070,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:07",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:45",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1586,7 +1596,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 8,
-    "Bursa": 29,
+    "Bursa": 30,
     "Amsterdam (NL)": 9,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -1596,11 +1606,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Amsterdam (NL)_im4q",
-      "device": "Masaüstü 💻",
-      "city": "Amsterdam (NL)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795243533080
+      "id": "Mobil 📱_Bursa_2p90",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/heykel-eskort.html",
+      "lastSeen": 1795244879585
     }
   ]
 }
