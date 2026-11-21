@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 193,
+  "totalVisits": 194,
   "totalWaClicks": 144,
   "totalCalls": 0,
   "tClicks": {
@@ -83,6 +83,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:40",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:40",
       "name": "Yaren",
@@ -756,15 +765,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:30",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1410,6 +1410,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:40",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:39",
       "name": "Ziyaretçi (Android 📱)",
@@ -2120,20 +2129,11 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Romulus (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 87,
-    "Gebze": 10,
+    "Gebze": 11,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
     "Amsterdam (NL)": 6,
@@ -2164,6 +2164,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Gebze_52ho",
+      "device": "Android 📱",
+      "city": "Gebze",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795286443519
+    },
     {
       "id": "Android 📱_İzmit_ncxs",
       "device": "Android 📱",
