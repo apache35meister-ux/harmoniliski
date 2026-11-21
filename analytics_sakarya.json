@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 23,
+  "totalVisits": 24,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:56",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:17",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -443,6 +452,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:56",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "17:17",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Adapazarı",
@@ -652,7 +670,7 @@
   ],
   "cityCounts": {
     "Amsterdam (NL)": 1,
-    "İstanbul": 3,
+    "İstanbul": 4,
     "Dallas (US)": 4,
     "Dalyan": 3,
     "Manavgat": 1,
@@ -664,11 +682,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Adapazarı_mgey",
+      "id": "iPhone 📱_İstanbul_zeol",
       "device": "iPhone 📱",
-      "city": "Adapazarı",
-      "page": "/serdivan-eskort.html",
-      "lastSeen": 1795270660661
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795273013080
     }
   ]
 }
