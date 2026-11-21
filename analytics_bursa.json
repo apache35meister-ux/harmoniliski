@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 70,
-  "totalWaClicks": 57,
+  "totalWaClicks": 58,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
     "damla": 3,
     "Eylül": 4,
     "eylül": 4,
-    "Açelya": 7,
-    "açelya": 7,
+    "Açelya": 8,
+    "açelya": 8,
     "Rus ESC": 3,
     "rus esc": 3,
     "Melis": 4,
@@ -45,6 +45,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:19",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:18",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -719,18 +727,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:04",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:19",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:46",
       "name": "Selin",
@@ -1834,6 +1841,13 @@
     "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_6rl7",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795249143707
+    },
     {
       "id": "iPhone 📱_İstanbul_szoy",
       "device": "iPhone 📱",
