@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 134,
-  "totalWaClicks": 109,
+  "totalWaClicks": 110,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 9,
@@ -44,8 +44,8 @@
     "su": 1,
     "Peri": 1,
     "peri": 1,
-    "Gül": 4,
-    "gül": 4,
+    "Gül": 5,
+    "gül": 5,
     "VIP Escort": 4,
     "vip escort": 4,
     "Sena": 1,
@@ -67,6 +67,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:26",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:26",
       "name": "Nadya",
@@ -740,18 +748,17 @@
       "device": "Mobil 📱",
       "page": "/ozluce-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:28",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Ashburn (US)",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:26",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:26",
       "name": "Nadya",
@@ -1382,14 +1389,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:08",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2136,6 +2135,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_d27y",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278372982
+    },
     {
       "id": "iPhone 📱_Bursa_yzrg",
       "device": "iPhone 📱",
