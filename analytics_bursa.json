@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 128,
-  "totalWaClicks": 101,
+  "totalWaClicks": 102,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 9,
@@ -32,8 +32,8 @@
     "buket": 1,
     "Gülce": 3,
     "gülce": 3,
-    "Ayşen": 2,
-    "ayşen": 2,
+    "Ayşen": 3,
+    "ayşen": 3,
     "Emel": 1,
     "emel": 1,
     "Begüm": 2,
@@ -59,6 +59,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:34",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Gül",
@@ -735,17 +743,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:39",
-      "name": "VIP Escort",
-      "city": "Bursa / Nilüfer",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:34",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Gül",
@@ -1376,14 +1384,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:20",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2130,6 +2130,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_5zpn",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795275293240
+    },
     {
       "id": "iPhone 📱_Bursa_cg80",
       "device": "iPhone 📱",
