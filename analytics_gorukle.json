@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795207863266,
   "totalVisits": 9,
-  "totalWaClicks": 32,
+  "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 2,
     "i̇layda": 2,
     "Selin": 2,
     "selin": 2,
-    "Yaren": 1,
-    "yaren": 1,
+    "Yaren": 2,
+    "yaren": 2,
     "Rus ESC": 1,
     "rus esc": 1,
     "VIP Escort": 18,
@@ -33,6 +33,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:01",
+      "name": "Yaren",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:01",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -372,6 +380,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "10:01",
+      "name": "Yaren",
+      "city": "Görükle",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "02:40",
       "name": "Emel",
@@ -716,6 +732,13 @@
     "Bursa": 9
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Görükle_8j8y",
+      "device": "iPhone 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795244495155
+    },
     {
       "id": "Mobil 📱_Bursa_hppi",
       "device": "Mobil 📱",
