@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 158,
-  "totalWaClicks": 114,
+  "totalWaClicks": 115,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -10,8 +10,8 @@
     "damla": 9,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 6,
-    "açelya": 6,
+    "Açelya": 7,
+    "açelya": 7,
     "Serap": 5,
     "serap": 5,
     "Selin": 21,
@@ -78,6 +78,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:45",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:45",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -764,17 +772,17 @@
       "device": "iPhone 📱",
       "page": "/izmit-merkez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "15:13",
-      "name": "Buket",
+      "time": "19:45",
+      "name": "Açelya",
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "19:42",
       "name": "Yeliz",
@@ -1405,14 +1413,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:58",
-      "name": "Trisha",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2170,6 +2170,13 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_afwh",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795279535086
+    },
     {
       "id": "iPhone 📱_Bursa_79gs",
       "device": "iPhone 📱",
