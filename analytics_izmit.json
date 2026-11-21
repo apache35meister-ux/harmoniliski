@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 55,
-  "totalWaClicks": 51,
+  "totalWaClicks": 52,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 2,
@@ -14,8 +14,8 @@
     "açelya": 3,
     "Serap": 2,
     "serap": 2,
-    "Selin": 3,
-    "selin": 3,
+    "Selin": 4,
+    "selin": 4,
     "Gül": 3,
     "gül": 3,
     "Sinem": 2,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:34",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:33",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -728,17 +736,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:52",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:34",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:15",
       "name": "Gül",
@@ -1661,6 +1669,13 @@
     "Denver (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_pjrs",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795239256275
+    },
     {
       "id": "iPhone 📱_İstanbul_144q",
       "device": "iPhone 📱",
