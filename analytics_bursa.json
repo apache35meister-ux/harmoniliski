@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 135,
-  "totalWaClicks": 111,
+  "totalWaClicks": 112,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 9,
@@ -22,8 +22,8 @@
     "melisa": 7,
     "Hazal": 4,
     "hazal": 4,
-    "Yaren": 7,
-    "yaren": 7,
+    "Yaren": 8,
+    "yaren": 8,
     "Sinem": 3,
     "sinem": 3,
     "Tuba": 1,
@@ -67,6 +67,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:30",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:27",
       "name": "Buket",
@@ -740,17 +748,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:33",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:30",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:27",
       "name": "Buket",
@@ -1378,14 +1386,6 @@
     {
       "time": "08:20",
       "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:18",
-      "name": "Ayşen",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
@@ -2136,67 +2136,18 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_ttgq",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278637051
+    },
+    {
       "id": "iPhone 📱_Bursa_1c6t",
       "device": "iPhone 📱",
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795278457275
-    },
-    {
-      "id": "Mobil 📱_Frankfurt am Main (DE)_vyh4",
-      "device": "Mobil 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278426041
-    },
-    {
-      "id": "iPhone 📱_Bursa_d27y",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278372982
-    },
-    {
-      "id": "iPhone 📱_Bursa_yzrg",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278372382
-    },
-    {
-      "id": "iPhone 📱_Bursa_jd2j",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278362631
-    },
-    {
-      "id": "iPhone 📱_Bursa_y2el",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278349797
-    },
-    {
-      "id": "Mobil 📱_İzmir_5qfq",
-      "device": "Mobil 📱",
-      "city": "İzmir",
-      "page": "/",
-      "lastSeen": 1795278305293
-    },
-    {
-      "id": "iPhone 📱_Bursa_gm85",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278286402
-    },
-    {
-      "id": "iPhone 📱_Frankfurt am Main (DE)_fmaj",
-      "device": "iPhone 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/",
-      "lastSeen": 1795278277604
     }
   ]
 }
