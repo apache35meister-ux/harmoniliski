@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 53,
-  "totalWaClicks": 37,
+  "totalWaClicks": 38,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
     "damla": 3,
     "Eylül": 3,
     "eylül": 3,
-    "Açelya": 4,
-    "açelya": 4,
+    "Açelya": 5,
+    "açelya": 5,
     "Rus ESC": 3,
     "rus esc": 3,
     "Melis": 3,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:10",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:10",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,17 +729,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:58",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:10",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:22",
       "name": "Melis",
@@ -1520,6 +1528,13 @@
     "Hamina (FI)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_s9e4",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795241434637
+    },
     {
       "id": "Mobil 📱_İstanbul_ciml",
       "device": "Mobil 📱",
