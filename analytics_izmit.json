@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 76,
-  "totalWaClicks": 70,
+  "totalWaClicks": 71,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -10,8 +10,8 @@
     "damla": 7,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 4,
-    "açelya": 4,
+    "Açelya": 5,
+    "açelya": 5,
     "Serap": 2,
     "serap": 2,
     "Selin": 11,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:46",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -737,18 +745,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:04",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:46",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:42",
       "name": "Tuba",
@@ -2014,6 +2021,13 @@
     "Körfez": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_nxsl",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254375575
+    },
     {
       "id": "Mobil 📱_İstanbul_f7dp",
       "device": "Mobil 📱",
