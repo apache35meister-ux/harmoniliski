@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 71,
-  "totalWaClicks": 59,
+  "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -41,10 +41,20 @@
     "Dila": 1,
     "dila": 1,
     "Su": 1,
-    "su": 1
+    "su": 1,
+    "Peri": 1,
+    "peri": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:24",
+      "name": "Peri",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:24",
       "name": "Açelya",
@@ -717,18 +727,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:24",
+      "name": "Peri",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:24",
       "name": "Açelya",
@@ -1857,6 +1866,13 @@
     "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_0tzh",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795249472274
+    },
     {
       "id": "Android 📱_Bursa_x6sd",
       "device": "Android 📱",
