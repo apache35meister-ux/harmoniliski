@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 41,
+  "totalVisits": 42,
   "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:37",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Paris (FR)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:30",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -737,6 +746,15 @@
   ],
   "cityVisits": [
     {
+      "time": "11:37",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Paris (FR)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:30",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Ashburn (US)",
@@ -1119,15 +1137,16 @@
     "New York City (US)": 2,
     "Ashburn (US)": 5,
     "Groningen (NL)": 1,
-    "Council Bluffs (US)": 1
+    "Council Bluffs (US)": 1,
+    "Paris (FR)": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Ashburn (US)_ouyw",
-      "device": "iPhone 📱",
-      "city": "Ashburn (US)",
+      "id": "Masaüstü 💻_Paris (FR)_7zzg",
+      "device": "Masaüstü 💻",
+      "city": "Paris (FR)",
       "page": "/",
-      "lastSeen": 1795249835649
+      "lastSeen": 1795250250504
     }
   ]
 }
