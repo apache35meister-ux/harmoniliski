@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 175,
-  "totalWaClicks": 123,
+  "totalWaClicks": 124,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
     "i̇zel": 3,
-    "Damla": 11,
-    "damla": 11,
+    "Damla": 12,
+    "damla": 12,
     "Melis": 2,
     "melis": 2,
     "Açelya": 9,
@@ -78,6 +78,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:58",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:58",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -757,18 +765,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:46",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Romulus (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:58",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:50",
       "name": "Melisa",
@@ -1399,14 +1406,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "04:26",
-      "name": "Aylin",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2165,6 +2164,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_b5ky",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795283899889
+    },
     {
       "id": "Mobil 📱_İstanbul_tzvd",
       "device": "Mobil 📱",
