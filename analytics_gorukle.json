@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207863266,
   "totalVisits": 11,
-  "totalWaClicks": 34,
+  "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
-    "İlayda": 2,
-    "i̇layda": 2,
+    "İlayda": 3,
+    "i̇layda": 3,
     "Selin": 2,
     "selin": 2,
     "Yaren": 2,
@@ -35,6 +35,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:41",
+      "name": "İlayda",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "Damla",
@@ -408,6 +416,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "12:41",
+      "name": "İlayda",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "Damla",
@@ -788,6 +804,13 @@
     "İstanbul": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_mp43",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254080987
+    },
     {
       "id": "Android 📱_Görükle_wyey",
       "device": "Android 📱",
