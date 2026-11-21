@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 31,
+  "totalVisits": 32,
   "totalWaClicks": 20,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:36",
       "name": "Rus ESC",
@@ -631,6 +640,15 @@
   ],
   "cityVisits": [
     {
+      "time": "19:36",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "19:34",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Adapazarı",
@@ -912,7 +930,7 @@
   ],
   "cityCounts": {
     "Amsterdam (NL)": 2,
-    "İstanbul": 7,
+    "İstanbul": 8,
     "Dallas (US)": 4,
     "Dalyan": 3,
     "Manavgat": 1,
@@ -924,6 +942,13 @@
     "Paris (FR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_1awz",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795279007761
+    },
     {
       "id": "Android 📱_Sakarya_86q2",
       "device": "Android 📱",
