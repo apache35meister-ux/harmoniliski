@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:40",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -656,6 +665,15 @@
   ],
   "cityVisits": [
     {
+      "time": "12:40",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:52",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Dallas (US)",
@@ -748,15 +766,16 @@
   ],
   "cityCounts": {
     "Bursa": 9,
-    "Dallas (US)": 1
+    "Dallas (US)": 1,
+    "İstanbul": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Dallas (US)_idfm",
-      "device": "Masaüstü 💻",
-      "city": "Dallas (US)",
+      "id": "Mobil 📱_İstanbul_uudl",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795251133618
+      "lastSeen": 1795254045659
     }
   ]
 }
