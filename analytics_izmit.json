@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 158,
+  "totalVisits": 159,
   "totalWaClicks": 115,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:47",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:45",
       "name": "Açelya",
@@ -763,15 +772,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:21",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/izmit-merkez-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1417,6 +1417,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:47",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:45",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2127,15 +2136,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:03",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2147,7 +2147,7 @@
     "Frankfurt am Main (DE)": 4,
     "Vienna (AT)": 1,
     "İzmit": 7,
-    "Bursa": 8,
+    "Bursa": 9,
     "Ankara": 4,
     "Ashburn (US)": 3,
     "Aksaray": 2,
@@ -2171,6 +2171,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_s3z6",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795279635563
+    },
+    {
       "id": "iPhone 📱_İzmit_afwh",
       "device": "iPhone 📱",
       "city": "İzmit",
@@ -2190,13 +2197,6 @@
       "city": "Bursa",
       "page": "/gebze-eskort.html",
       "lastSeen": 1795279497788
-    },
-    {
-      "id": "Masaüstü 💻_İzmit_217a",
-      "device": "Masaüstü 💻",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795279361943
     }
   ]
 }
