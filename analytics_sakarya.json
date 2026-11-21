@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 10,
+  "totalVisits": 11,
   "totalWaClicks": 5,
   "totalCalls": 0,
   "tClicks": {
@@ -15,6 +15,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:36",
       "name": "Selin",
@@ -190,6 +199,15 @@
   ],
   "cityVisits": [
     {
+      "time": "11:37",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ankara",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "11:35",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Ankara",
@@ -287,9 +305,16 @@
     "Dalyan": 1,
     "Manavgat": 1,
     "Boston (US)": 1,
-    "Ankara": 1
+    "Ankara": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Ankara_0f3r",
+      "device": "Mobil 📱",
+      "city": "Ankara",
+      "page": "/",
+      "lastSeen": 1795250232697
+    },
     {
       "id": "Android 📱_Sakarya_ia8u",
       "device": "Android 📱",
