@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 25,
+  "totalVisits": 26,
   "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
@@ -23,6 +23,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:43",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Paris (FR)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/serdivan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "18:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -461,6 +470,15 @@
   ],
   "cityVisits": [
     {
+      "time": "18:43",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Paris (FR)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/serdivan-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "18:10",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İstanbul",
@@ -696,15 +714,16 @@
     "Ankara": 2,
     "İzmir": 1,
     "Frankfurt am Main (DE)": 2,
-    "Adapazarı": 5
+    "Adapazarı": 5,
+    "Paris (FR)": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İstanbul_ky9h",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795273812085
+      "id": "iPhone 📱_Paris (FR)_9gcg",
+      "device": "iPhone 📱",
+      "city": "Paris (FR)",
+      "page": "/serdivan-eskort.html",
+      "lastSeen": 1795275791492
     }
   ]
 }
