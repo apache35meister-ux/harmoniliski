@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 44,
+  "totalVisits": 45,
   "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:10",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:04",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -764,6 +773,15 @@
   ],
   "cityVisits": [
     {
+      "time": "13:10",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Milan (IT)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "13:04",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İzmir",
@@ -1165,7 +1183,7 @@
     "İstanbul": 5,
     "Bursa": 10,
     "Amsterdam (NL)": 7,
-    "Milan (IT)": 1,
+    "Milan (IT)": 2,
     "İzmir": 2,
     "The Dalles (US)": 1,
     "San Jose (US)": 1,
@@ -1179,11 +1197,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İzmir_gm2c",
-      "device": "Masaüstü 💻",
-      "city": "İzmir",
+      "id": "iPhone 📱_Milan (IT)_gkbj",
+      "device": "iPhone 📱",
+      "city": "Milan (IT)",
       "page": "/",
-      "lastSeen": 1795255483084
+      "lastSeen": 1795255809417
     }
   ]
 }
