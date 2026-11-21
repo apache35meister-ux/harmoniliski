@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 93,
-  "totalWaClicks": 74,
+  "totalWaClicks": 75,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
@@ -30,8 +30,8 @@
     "tuba": 1,
     "Buket": 1,
     "buket": 1,
-    "Gülce": 1,
-    "gülce": 1,
+    "Gülce": 2,
+    "gülce": 2,
     "Ayşen": 2,
     "ayşen": 2,
     "Emel": 1,
@@ -51,6 +51,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:33",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Eylül",
@@ -724,17 +732,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:22",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:33",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Eylül",
@@ -2068,6 +2076,13 @@
     "Ashburn (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_fo15",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795260835335
+    },
     {
       "id": "Android 📱_Bursa_15d1",
       "device": "Android 📱",
