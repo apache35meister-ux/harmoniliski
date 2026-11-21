@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 18,
+  "totalVisits": 20,
   "totalWaClicks": 33,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:40",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Santa Clara (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:39",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -728,6 +746,24 @@
   ],
   "cityVisits": [
     {
+      "time": "03:40",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Santa Clara (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:39",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Council Bluffs (US)",
@@ -896,10 +932,25 @@
     "Council Bluffs (US)": 2,
     "Newark (US)": 2,
     "New York City (US)": 2,
-    "Dallas (US)": 2,
-    "Floris (US)": 1
+    "Dallas (US)": 3,
+    "Floris (US)": 1,
+    "Santa Clara (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Dallas (US)_j6s6",
+      "device": "Masaüstü 💻",
+      "city": "Dallas (US)",
+      "page": "/",
+      "lastSeen": 1795221625524
+    },
+    {
+      "id": "iPhone 📱_Santa Clara (US)_a621",
+      "device": "iPhone 📱",
+      "city": "Santa Clara (US)",
+      "page": "/",
+      "lastSeen": 1795221598685
+    },
     {
       "id": "Masaüstü 💻_Council Bluffs (US)_ko8k",
       "device": "Masaüstü 💻",
@@ -955,13 +1006,6 @@
       "city": "New York City (US)",
       "page": "/",
       "lastSeen": 1795221463179
-    },
-    {
-      "id": "iPhone 📱_Newark (US)_cv9y",
-      "device": "iPhone 📱",
-      "city": "Newark (US)",
-      "page": "/",
-      "lastSeen": 1795221435967
     }
   ]
 }
