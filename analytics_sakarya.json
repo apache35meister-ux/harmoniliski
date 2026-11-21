@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 47,
+  "totalVisits": 48,
   "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
@@ -40,6 +40,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:08",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:07",
       "name": "Ukraynali Lena",
@@ -932,6 +941,15 @@
   ],
   "cityVisits": [
     {
+      "time": "20:08",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "20:06",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "İstanbul",
@@ -1357,7 +1375,7 @@
   ],
   "cityCounts": {
     "Amsterdam (NL)": 3,
-    "İstanbul": 14,
+    "İstanbul": 15,
     "New York City (US)": 6,
     "San Jose (US)": 1,
     "San Francisco (US)": 1,
@@ -1374,6 +1392,13 @@
     "Adapazarı": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_bxdl",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795280892722
+    },
     {
       "id": "iPhone 📱_Sakarya_tpz6",
       "device": "iPhone 📱",
@@ -1408,13 +1433,6 @@
       "city": "İstanbul",
       "page": "Ana Sayfa",
       "lastSeen": 1795280739585
-    },
-    {
-      "id": "iPhone 📱_Sakarya_7ubb",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795280671177
     }
   ]
 }
