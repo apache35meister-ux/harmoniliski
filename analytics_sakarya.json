@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 4,
+  "totalVisits": 5,
   "totalWaClicks": 2,
   "totalCalls": 0,
   "tClicks": {
@@ -11,6 +11,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:19",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:03",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -84,6 +93,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:19",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:03",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Dallas (US)",
@@ -123,15 +141,15 @@
   "cityCounts": {
     "Amsterdam (NL)": 1,
     "İstanbul": 2,
-    "Dallas (US)": 1
+    "Dallas (US)": 2
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Dallas (US)_0g2b",
+      "id": "Masaüstü 💻_Dallas (US)_285g",
       "device": "Masaüstü 💻",
       "city": "Dallas (US)",
       "page": "/",
-      "lastSeen": 1795226630148
+      "lastSeen": 1795227563389
     }
   ]
 }
