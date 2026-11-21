@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 79,
+  "totalVisits": 80,
   "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:48",
       "name": "Begüm",
@@ -721,14 +730,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:23",
-      "name": "Gülce",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1238,6 +1239,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:48",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Gaziantep",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:46",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1962,9 +1972,17 @@
     "Hamina (FI)": 1,
     "Dallas (US)": 2,
     "Frankfurt am Main (DE)": 2,
-    "Singapore (SG)": 3
+    "Singapore (SG)": 3,
+    "Gaziantep": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Gaziantep_q3j3",
+      "device": "Mobil 📱",
+      "city": "Gaziantep",
+      "page": "/",
+      "lastSeen": 1795254538322
+    },
     {
       "id": "iPhone 📱_Bursa_o72y",
       "device": "iPhone 📱",
