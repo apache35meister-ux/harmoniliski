@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 202,
+  "totalVisits": 203,
   "totalWaClicks": 151,
   "totalCalls": 0,
   "tClicks": {
@@ -83,6 +83,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:21",
       "name": "Ziyaretçi (Android 📱)",
@@ -757,15 +766,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:47",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1411,6 +1411,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:22",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:21",
       "name": "Ziyaretçi (Android 📱)",
@@ -2121,19 +2130,10 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:44",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "El Segundo (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 89,
+    "İstanbul": 90,
     "Gebze": 14,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2166,6 +2166,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_k4n0",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795288937383
+    },
     {
       "id": "Android 📱_Bursa_kl22",
       "device": "Android 📱",
@@ -2221,20 +2228,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795288797279
-    },
-    {
-      "id": "Android 📱_İzmit_o1aw",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795288756427
-    },
-    {
-      "id": "Android 📱_Gebze_4pe4",
-      "device": "Android 📱",
-      "city": "Gebze",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795288750768
     }
   ]
 }
