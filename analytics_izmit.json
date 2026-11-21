@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 200,
-  "totalWaClicks": 149,
+  "totalVisits": 201,
+  "totalWaClicks": 150,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 5,
@@ -16,8 +16,8 @@
     "serap": 6,
     "Selin": 23,
     "selin": 23,
-    "Gül": 7,
-    "gül": 7,
+    "Gül": 8,
+    "gül": 8,
     "Sinem": 2,
     "sinem": 2,
     "Rus ESC": 15,
@@ -83,6 +83,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:20",
+      "name": "Gül",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "22:20",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:20",
       "name": "Damla",
@@ -749,26 +766,17 @@
       "device": "iPhone 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:44",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:42",
-      "name": "Yeliz",
-      "city": "İzmit",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:20",
+      "name": "Gül",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:20",
       "name": "Damla",
@@ -1400,17 +1408,18 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12:42",
-      "name": "Tuba",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:20",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:20",
       "name": "Ziyaretçi (Android 📱)",
@@ -2121,15 +2130,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:44",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Ashburn (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2141,7 +2141,7 @@
     "Frankfurt am Main (DE)": 5,
     "Vienna (AT)": 1,
     "İzmit": 18,
-    "Bursa": 12,
+    "Bursa": 13,
     "Ankara": 4,
     "Ashburn (US)": 3,
     "Aksaray": 2,
@@ -2166,6 +2166,20 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_as64",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795288848731
+    },
+    {
+      "id": "Android 📱_Bursa_q1b0",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795288838729
+    },
     {
       "id": "Android 📱_İzmit_hgcm",
       "device": "Android 📱",
