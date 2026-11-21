@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 137,
-  "totalWaClicks": 96,
+  "totalWaClicks": 97,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -30,8 +30,8 @@
     "i̇layda": 1,
     "Zeynep": 1,
     "zeynep": 1,
-    "Melisa": 7,
-    "melisa": 7,
+    "Melisa": 8,
+    "melisa": 8,
     "Yaren": 1,
     "yaren": 1,
     "Ayşen": 1,
@@ -66,6 +66,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:29",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -753,18 +761,17 @@
       "device": "Android 📱",
       "page": "/korfez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:16",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "16:29",
+      "name": "Melisa",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:56",
       "name": "Damla",
@@ -1395,14 +1402,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:54",
-      "name": "Tuba",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2159,6 +2158,13 @@
     "Zürich (CH)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_h0ev",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795267750598
+    },
     {
       "id": "Mobil 📱_İstanbul_ppqd",
       "device": "Mobil 📱",
