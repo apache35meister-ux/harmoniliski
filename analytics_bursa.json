@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 122,
-  "totalWaClicks": 94,
+  "totalWaClicks": 95,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 7,
-    "damla": 7,
+    "Damla": 8,
+    "damla": 8,
     "Eylül": 6,
     "eylül": 6,
     "Açelya": 11,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:28",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -733,18 +741,17 @@
       "device": "iPhone 📱",
       "page": "/gorukle-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:35",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Dallas (US)",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "17:28",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "17:21",
       "name": "Sinem",
@@ -1375,14 +1382,6 @@
       "city": "Bursa",
       "device": "iPhone 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:26",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2129,6 +2128,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_rywi",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795271325044
+    },
     {
       "id": "Mobil 📱_Bursa_p2hc",
       "device": "Mobil 📱",
