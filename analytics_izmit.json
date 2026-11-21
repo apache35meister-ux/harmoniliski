@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 57,
+  "totalVisits": 59,
   "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
@@ -36,6 +36,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:04",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Secaucus (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:57",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -711,24 +729,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:32",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Milan (IT)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:06",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Moscow (RU)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -974,6 +974,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:04",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Secaucus (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:57",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1501,7 +1519,7 @@
     "New York City (US)": 6,
     "Santa Clara (US)": 1,
     "İzmir": 5,
-    "Ashburn (US)": 7,
+    "Ashburn (US)": 8,
     "Seattle (US)": 1,
     "Boardman (US)": 3,
     "Groningen (NL)": 1,
@@ -1510,15 +1528,16 @@
     "Paris (FR)": 1,
     "Ansan-si (KR)": 2,
     "Romulus (US)": 2,
-    "Toronto (CA)": 4
+    "Toronto (CA)": 4,
+    "Secaucus (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Ashburn (US)_a5x2",
-      "device": "Mobil 📱",
-      "city": "Ashburn (US)",
+      "id": "Masaüstü 💻_Secaucus (US)_0kyz",
+      "device": "Masaüstü 💻",
+      "city": "Secaucus (US)",
       "page": "/",
-      "lastSeen": 1795265809348
+      "lastSeen": 1795266278617
     }
   ]
 }
