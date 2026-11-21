@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 101,
+  "totalVisits": 102,
   "totalWaClicks": 88,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:12",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:12",
       "name": "Melisa",
@@ -735,15 +744,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:03",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1389,6 +1389,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:12",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:11",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2099,19 +2108,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:48",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 54,
+    "İstanbul": 55,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2132,6 +2132,13 @@
     "Warsaw (PL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_2833",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795263169033
+    },
     {
       "id": "iPhone 📱_İzmit_fcd1",
       "device": "iPhone 📱",
