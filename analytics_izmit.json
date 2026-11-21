@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 71,
-  "totalWaClicks": 65,
+  "totalWaClicks": 66,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
     "i̇zel": 3,
-    "Damla": 6,
-    "damla": 6,
+    "Damla": 7,
+    "damla": 7,
     "Melis": 2,
     "melis": 2,
     "Açelya": 3,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:30",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,17 +744,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:57",
-      "name": "Şebnem",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:30",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:52",
       "name": "Eylül",
@@ -1927,6 +1935,13 @@
     "Körfez": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_v78h",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795253431975
+    },
     {
       "id": "Mobil 📱_Bursa_yspw",
       "device": "Mobil 📱",
