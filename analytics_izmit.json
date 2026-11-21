@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 201,
+  "totalVisits": 202,
   "totalWaClicks": 151,
   "totalCalls": 0,
   "tClicks": {
@@ -83,6 +83,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:21",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:21",
       "name": "Selin",
@@ -757,14 +766,6 @@
       "device": "iPhone 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:45",
-      "name": "Açelya",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1410,6 +1411,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "22:21",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/golcuk-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "22:20",
       "name": "Ziyaretçi (Android 📱)",
@@ -2120,15 +2130,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Newark (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2140,7 +2141,7 @@
     "Frankfurt am Main (DE)": 5,
     "Vienna (AT)": 1,
     "İzmit": 18,
-    "Bursa": 13,
+    "Bursa": 14,
     "Ankara": 4,
     "Ashburn (US)": 3,
     "Aksaray": 2,
@@ -2165,6 +2166,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_kl22",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "/golcuk-eskort.html",
+      "lastSeen": 1795288880827
+    },
     {
       "id": "Android 📱_İzmit_ligz",
       "device": "Android 📱",
