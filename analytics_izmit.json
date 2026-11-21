@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 176,
-  "totalWaClicks": 124,
+  "totalVisits": 177,
+  "totalWaClicks": 125,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -10,8 +10,8 @@
     "damla": 12,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 9,
-    "açelya": 9,
+    "Açelya": 10,
+    "açelya": 10,
     "Serap": 5,
     "serap": 5,
     "Selin": 21,
@@ -78,6 +78,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:59",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:59",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/izmit-merkez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:59",
       "name": "Ziyaretçi (Android 📱)",
@@ -748,26 +765,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:53",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "15:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:59",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:58",
       "name": "Damla",
@@ -1399,17 +1407,18 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "04:26",
-      "name": "Hale",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "20:59",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/izmit-merkez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:59",
       "name": "Ziyaretçi (Android 📱)",
@@ -2120,15 +2129,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2137,7 +2137,7 @@
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
     "Amsterdam (NL)": 6,
-    "Frankfurt am Main (DE)": 4,
+    "Frankfurt am Main (DE)": 5,
     "Vienna (AT)": 1,
     "İzmit": 14,
     "Bursa": 12,
@@ -2164,6 +2164,20 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_oepl",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795283972366
+    },
+    {
+      "id": "Android 📱_Frankfurt am Main (DE)_653g",
+      "device": "Android 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "/izmit-merkez-eskort.html",
+      "lastSeen": 1795283964663
+    },
     {
       "id": "Android 📱_İstanbul_r1b0",
       "device": "Android 📱",
