@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 129,
-  "totalWaClicks": 92,
+  "totalWaClicks": 93,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -14,8 +14,8 @@
     "açelya": 6,
     "Serap": 4,
     "serap": 4,
-    "Selin": 16,
-    "selin": 16,
+    "Selin": 17,
+    "selin": 17,
     "Gül": 4,
     "gül": 4,
     "Sinem": 2,
@@ -66,6 +66,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:53",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:52",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -752,17 +760,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12:41",
-      "name": "Sena",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:53",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:44",
       "name": "🏙️ Alikahya — Yuvam Akarca & Kartepe Sınırı Profilleri",
@@ -1385,14 +1393,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:52",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -2156,6 +2156,13 @@
     "El Segundo (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_8wo6",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795265636816
+    },
     {
       "id": "Mobil 📱_İstanbul_iakd",
       "device": "Mobil 📱",
