@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 168,
-  "totalWaClicks": 131,
+  "totalWaClicks": 132,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 12,
-    "damla": 12,
+    "Damla": 13,
+    "damla": 13,
     "Eylül": 7,
     "eylül": 7,
     "Açelya": 12,
@@ -69,6 +69,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:15",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:15",
       "name": "Selin",
@@ -743,18 +751,17 @@
       "device": "iPhone 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:01",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/heykel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:15",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:15",
       "name": "Selin",
@@ -1377,14 +1384,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:11",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     },
     {
@@ -2144,6 +2143,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_19ga",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795288523803
+    },
+    {
       "id": "Android 📱_Bursa_e8rp",
       "device": "Android 📱",
       "city": "Bursa",
@@ -2170,13 +2176,6 @@
       "city": "Bursa",
       "page": "/",
       "lastSeen": 1795288489494
-    },
-    {
-      "id": "Mobil 📱_Bursa_qua5",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/kent-meydani-eskort.html",
-      "lastSeen": 1795288332859
     }
   ]
 }
