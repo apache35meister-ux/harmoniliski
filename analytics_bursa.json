@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 134,
-  "totalWaClicks": 106,
+  "totalWaClicks": 107,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 9,
@@ -57,10 +57,20 @@
     "Şebnem": 2,
     "şebnem": 2,
     "Nergis": 1,
-    "nergis": 1
+    "nergis": 1,
+    "Ceren": 1,
+    "ceren": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:25",
+      "name": "Ceren",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:25",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -736,18 +746,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:17",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:25",
+      "name": "Ceren",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:24",
       "name": "Selin",
@@ -1377,14 +1386,6 @@
       "name": "Açelya",
       "city": "Bursa",
       "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:23",
-      "name": "Gülce",
-      "city": "Bursa",
-      "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
@@ -2132,6 +2133,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_y2el",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278349797
+    },
     {
       "id": "Mobil 📱_İzmir_5qfq",
       "device": "Mobil 📱",
