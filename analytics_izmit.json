@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 99,
-  "totalWaClicks": 84,
+  "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -20,8 +20,8 @@
     "gül": 4,
     "Sinem": 2,
     "sinem": 2,
-    "Rus ESC": 11,
-    "rus esc": 11,
+    "Rus ESC": 12,
+    "rus esc": 12,
     "Hale": 3,
     "hale": 3,
     "Tuba": 3,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:34",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Ziyaretçi (Android 📱)",
@@ -737,17 +745,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:15",
-      "name": "Gül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:34",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:29",
       "name": "Eylül",
@@ -1378,14 +1386,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:32",
-      "name": "Damla",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2133,6 +2133,13 @@
     "Warsaw (PL)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_2ofl",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795260847726
+    },
     {
       "id": "Android 📱_Warsaw (PL)_zjgx",
       "device": "Android 📱",
