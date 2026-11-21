@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 30,
-  "totalWaClicks": 16,
+  "totalVisits": 31,
+  "totalWaClicks": 17,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -21,10 +21,29 @@
     "Yaren": 2,
     "yaren": 2,
     "VIP Escort": 2,
-    "vip escort": 2
+    "vip escort": 2,
+    "Begüm": 1,
+    "begüm": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:35",
+      "name": "Begüm",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "19:34",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -426,6 +445,14 @@
   ],
   "callLogs": [
     {
+      "time": "19:35",
+      "name": "Begüm",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "19:34",
       "name": "Selin",
       "city": "Sakarya",
@@ -555,6 +582,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:34",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Adapazarı",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:34",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -836,10 +872,24 @@
     "Ankara": 2,
     "İzmir": 1,
     "Frankfurt am Main (DE)": 2,
-    "Adapazarı": 6,
+    "Adapazarı": 7,
     "Paris (FR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_nxbv",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278904002
+    },
+    {
+      "id": "Masaüstü 💻_Adapazarı_u1wg",
+      "device": "Masaüstü 💻",
+      "city": "Adapazarı",
+      "page": "/",
+      "lastSeen": 1795278890673
+    },
     {
       "id": "Mobil 📱_İstanbul_5p0f",
       "device": "Mobil 📱",
