@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 62,
+  "totalVisits": 63,
   "totalWaClicks": 54,
   "totalCalls": 0,
   "tClicks": {
@@ -45,6 +45,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/iznik-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:12",
       "name": "Ayşen",
@@ -718,14 +727,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:26",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1163,6 +1164,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/iznik-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1725,7 +1735,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 8,
-    "Bursa": 32,
+    "Bursa": 33,
     "Amsterdam (NL)": 9,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -1736,6 +1746,13 @@
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_eak2",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/iznik-eskort.html",
+      "lastSeen": 1795245153344
+    },
     {
       "id": "Android 📱_Bursa_w0ui",
       "device": "Android 📱",
@@ -1819,20 +1836,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795244978119
-    },
-    {
-      "id": "Android 📱_Bursa_0k58",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795244970242
-    },
-    {
-      "id": "Mobil 📱_Bursa_ypoz",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795244962825
     }
   ]
 }
