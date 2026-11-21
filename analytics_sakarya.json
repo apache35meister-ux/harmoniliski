@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 31,
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -14,8 +14,8 @@
     "damla": 3,
     "Melis": 3,
     "melis": 3,
-    "Rus ESC": 1,
-    "rus esc": 1,
+    "Rus ESC": 2,
+    "rus esc": 2,
     "Gül": 1,
     "gül": 1,
     "Yaren": 2,
@@ -27,6 +27,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:36",
+      "name": "Rus ESC",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:36",
       "name": "Melis",
@@ -452,6 +460,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:36",
+      "name": "Rus ESC",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:36",
       "name": "Melis",
@@ -892,6 +908,13 @@
     "Paris (FR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_bu4j",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278994310
+    },
     {
       "id": "Android 📱_Sakarya_r4ta",
       "device": "Android 📱",
