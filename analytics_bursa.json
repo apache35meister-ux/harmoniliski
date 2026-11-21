@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 35,
+  "totalVisits": 36,
   "totalWaClicks": 26,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "06:22",
       "name": "Eylül",
@@ -769,6 +778,15 @@
   ],
   "cityVisits": [
     {
+      "time": "06:23",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/ozluce-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "06:21",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -1087,12 +1105,19 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 6,
-    "Bursa": 15,
+    "Bursa": 16,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 1,
     "Konya": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_rw2l",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "/ozluce-eskort.html",
+      "lastSeen": 1795231396453
+    },
     {
       "id": "iPhone 📱_Bursa_z74k",
       "device": "iPhone 📱",
@@ -1134,13 +1159,6 @@
       "city": "Bursa",
       "page": "/ozluce-eskort.html",
       "lastSeen": 1795231232422
-    },
-    {
-      "id": "iPhone 📱_Bursa_8ix6",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795231204452
     }
   ]
 }
