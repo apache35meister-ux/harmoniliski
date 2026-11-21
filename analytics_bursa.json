@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 44,
+  "totalVisits": 45,
   "totalWaClicks": 28,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:59",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -884,6 +893,15 @@
   ],
   "cityVisits": [
     {
+      "time": "08:04",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "07:59",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Konya",
@@ -1283,7 +1301,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 6,
-    "Bursa": 20,
+    "Bursa": 21,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -1293,11 +1311,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Konya_vtvt",
-      "device": "iPhone 📱",
-      "city": "Konya",
+      "id": "Mobil 📱_Bursa_ph0y",
+      "device": "Mobil 📱",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795237185128
+      "lastSeen": 1795237477462
     }
   ]
 }
