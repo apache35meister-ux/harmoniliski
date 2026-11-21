@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 170,
-  "totalWaClicks": 119,
+  "totalWaClicks": 120,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -10,8 +10,8 @@
     "damla": 11,
     "Melis": 2,
     "melis": 2,
-    "Açelya": 8,
-    "açelya": 8,
+    "Açelya": 9,
+    "açelya": 9,
     "Serap": 5,
     "serap": 5,
     "Selin": 21,
@@ -78,6 +78,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:31",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:31",
       "name": "Damla",
@@ -760,18 +768,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:43",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Ashburn (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:31",
+      "name": "Açelya",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:31",
       "name": "Damla",
@@ -1399,14 +1406,6 @@
     {
       "time": "04:00",
       "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "03:38",
-      "name": "Emel",
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
@@ -2168,6 +2167,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_xzmu",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795282277511
+    },
     {
       "id": "Android 📱_İzmit_7fjn",
       "device": "Android 📱",
