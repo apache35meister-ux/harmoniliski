@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 56,
+  "totalVisits": 57,
   "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
@@ -29,6 +29,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:23",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:22",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -715,15 +724,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -921,6 +921,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:23",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:22",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1437,7 +1446,7 @@
     "San Jose (US)": 1,
     "Boardman (US)": 1,
     "New York City (US)": 2,
-    "Ashburn (US)": 6,
+    "Ashburn (US)": 7,
     "Groningen (NL)": 1,
     "Council Bluffs (US)": 1,
     "Paris (FR)": 2,
@@ -1450,6 +1459,13 @@
     "Seattle (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Ashburn (US)_2u4n",
+      "device": "Mobil 📱",
+      "city": "Ashburn (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795285419085
+    },
     {
       "id": "Masaüstü 💻_Seattle (US)_79h7",
       "device": "Masaüstü 💻",
