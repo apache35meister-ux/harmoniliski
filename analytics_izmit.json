@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 56,
-  "totalWaClicks": 52,
+  "totalWaClicks": 53,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 2,
@@ -20,8 +20,8 @@
     "gül": 3,
     "Sinem": 2,
     "sinem": 2,
-    "Rus ESC": 7,
-    "rus esc": 7,
+    "Rus ESC": 8,
+    "rus esc": 8,
     "Hale": 2,
     "hale": 2,
     "Tuba": 2,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:03",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:02",
       "name": "Ziyaretçi (Android 📱)",
@@ -728,18 +736,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:03",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:34",
       "name": "Selin",
@@ -1679,6 +1686,13 @@
     "Denver (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_60l8",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795240988156
+    },
     {
       "id": "Android 📱_İstanbul_atx1",
       "device": "Android 📱",
