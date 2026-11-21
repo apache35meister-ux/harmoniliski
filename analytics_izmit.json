@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 146,
-  "totalWaClicks": 99,
+  "totalWaClicks": 100,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -62,10 +62,20 @@
     "VIP Escort": 1,
     "vip escort": 1,
     "🏙️ Alikahya — Yuvam Akarca & Kartepe Sınırı Profilleri": 1,
-    "🏙️ alikahya — yuvam akarca & kartepe sınırı profilleri": 1
+    "🏙️ alikahya — yuvam akarca & kartepe sınırı profilleri": 1,
+    "Dila": 1,
+    "dila": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:34",
+      "name": "Dila",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Serap",
@@ -755,18 +765,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:38",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "18:34",
+      "name": "Dila",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:34",
       "name": "Serap",
@@ -1397,14 +1406,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:01",
-      "name": "Gül",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2162,6 +2163,13 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_zxva",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795275289780
+    },
     {
       "id": "Android 📱_İzmit_s3a5",
       "device": "Android 📱",
