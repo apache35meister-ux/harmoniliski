@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 50,
+  "totalVisits": 51,
   "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
@@ -39,6 +39,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:21",
       "name": "Emel",
@@ -717,15 +726,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1003,6 +1003,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "08:21",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "08:20",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1457,7 +1466,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 7,
-    "Bursa": 25,
+    "Bursa": 26,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -1466,6 +1475,13 @@
     "Hamina (FI)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_jnuz",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795238500948
+    },
     {
       "id": "Android 📱_Bursa_fuub",
       "device": "Android 📱",
@@ -1486,13 +1502,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795238404997
-    },
-    {
-      "id": "Mobil 📱_Bursa_py1e",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795238315202
     }
   ]
 }
