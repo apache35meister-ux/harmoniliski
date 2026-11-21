@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 62,
-  "totalWaClicks": 53,
+  "totalWaClicks": 54,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -32,8 +32,8 @@
     "buket": 1,
     "Gülce": 1,
     "gülce": 1,
-    "Ayşen": 1,
-    "ayşen": 1,
+    "Ayşen": 2,
+    "ayşen": 2,
     "Emel": 1,
     "emel": 1,
     "Begüm": 1,
@@ -45,6 +45,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:12",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:11",
       "name": "Yaren",
@@ -718,17 +726,17 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:26",
-      "name": "Hale",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:12",
+      "name": "Ayşen",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:11",
       "name": "Yaren",
@@ -1729,6 +1737,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_w0ui",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795245136171
+    },
+    {
       "id": "Android 📱_Bursa_ou7l",
       "device": "Android 📱",
       "city": "Bursa",
@@ -1818,13 +1833,6 @@
       "city": "Bursa",
       "page": "/heykel-eskort.html",
       "lastSeen": 1795244962825
-    },
-    {
-      "id": "Android 📱_Bursa_pa32",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795244919398
     }
   ]
 }
