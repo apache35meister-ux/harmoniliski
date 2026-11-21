@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 135,
-  "totalWaClicks": 95,
+  "totalWaClicks": 96,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
     "i̇zel": 3,
-    "Damla": 7,
-    "damla": 7,
+    "Damla": 8,
+    "damla": 8,
     "Melis": 2,
     "melis": 2,
     "Açelya": 6,
@@ -66,6 +66,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:56",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:56",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -753,18 +761,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:03",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:56",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:55",
       "name": "Selin",
@@ -1395,14 +1402,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:54",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2159,6 +2158,13 @@
     "Zürich (CH)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_u4ak",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795265796095
+    },
     {
       "id": "iPhone 📱_Zürich (CH)_18uv",
       "device": "iPhone 📱",
