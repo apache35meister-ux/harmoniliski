@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 49,
-  "totalWaClicks": 31,
+  "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -38,10 +38,20 @@
     "Ukraynali Lena": 1,
     "ukraynali lena": 1,
     "Merve": 2,
-    "merve": 2
+    "merve": 2,
+    "Buse": 1,
+    "buse": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:10",
+      "name": "Buse",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:09",
       "name": "Merve",
@@ -721,18 +731,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:52",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:10",
+      "name": "Buse",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:09",
       "name": "Merve",
@@ -1445,6 +1454,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Sakarya_5qny",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795281027839
+    },
+    {
       "id": "iPhone 📱_Sakarya_cz62",
       "device": "iPhone 📱",
       "city": "Sakarya",
@@ -1471,20 +1487,6 @@
       "city": "İstanbul",
       "page": "/",
       "lastSeen": 1795280892722
-    },
-    {
-      "id": "iPhone 📱_Sakarya_tpz6",
-      "device": "iPhone 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795280823943
-    },
-    {
-      "id": "iPhone 📱_İstanbul_zj68",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795280809138
     }
   ]
 }
