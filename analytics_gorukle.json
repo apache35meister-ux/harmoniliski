@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 33,
+  "totalVisits": 34,
   "totalWaClicks": 34,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "17:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:52",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -879,6 +888,15 @@
   ],
   "cityVisits": [
     {
+      "time": "17:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:52",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Ashburn (US)",
@@ -1177,7 +1195,7 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 8,
+    "Bursa": 9,
     "San Francisco (US)": 1,
     "Council Bluffs (US)": 2,
     "Newark (US)": 2,
@@ -1194,11 +1212,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Ashburn (US)_laug",
-      "device": "iPhone 📱",
-      "city": "Ashburn (US)",
+      "id": "Mobil 📱_Bursa_vxgd",
+      "device": "Mobil 📱",
+      "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795265539141
+      "lastSeen": 1795271360067
     }
   ]
 }
