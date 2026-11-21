@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 151,
+  "totalVisits": 152,
   "totalWaClicks": 110,
   "totalCalls": 0,
   "tClicks": {
@@ -75,6 +75,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:30",
       "name": "Hale",
@@ -759,15 +768,6 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:29",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1413,6 +1413,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:30",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2123,19 +2132,10 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:30",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 73,
+    "İstanbul": 74,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2167,60 +2167,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İzmit / Bağçeşme_ng87",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Bağçeşme",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278658217
-    },
-    {
-      "id": "Masaüstü 💻_İzmit_3hr0",
-      "device": "Masaüstü 💻",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278658217
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Bağçeşme_azb9",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Bağçeşme",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278658211
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_42ag",
-      "device": "Masaüstü 💻",
+      "id": "Mobil 📱_İstanbul_2oz3",
+      "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795278646934
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Körfez_6a45",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Körfez",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278598300
-    },
-    {
-      "id": "Masaüstü 💻_İzmit_nu4x",
-      "device": "Masaüstü 💻",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278598300
-    },
-    {
-      "id": "Masaüstü 💻_İzmit / Körfez_cg0x",
-      "device": "Masaüstü 💻",
-      "city": "İzmit / Körfez",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278598300
-    },
-    {
-      "id": "Masaüstü 💻_İstanbul_mefp",
-      "device": "Masaüstü 💻",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795278560706
+      "lastSeen": 1795278921443
     }
   ]
 }
