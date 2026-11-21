@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 107,
-  "totalWaClicks": 81,
+  "totalWaClicks": 82,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 6,
@@ -49,10 +49,20 @@
     "VIP Escort": 4,
     "vip escort": 4,
     "Sena": 1,
-    "sena": 1
+    "sena": 1,
+    "İlayda": 1,
+    "i̇layda": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:38",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:38",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -730,18 +740,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:11",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:38",
+      "name": "İlayda",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:06",
       "name": "Damla",
@@ -1372,14 +1381,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:55",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2125,6 +2126,13 @@
     "Council Bluffs (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_a9np",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795264734662
+    },
     {
       "id": "Mobil 📱_Frankfurt am Main (DE)_fasq",
       "device": "Mobil 📱",
