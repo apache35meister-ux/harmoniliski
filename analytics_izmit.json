@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 89,
-  "totalWaClicks": 78,
+  "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -20,8 +20,8 @@
     "gül": 4,
     "Sinem": 2,
     "sinem": 2,
-    "Rus ESC": 10,
-    "rus esc": 10,
+    "Rus ESC": 11,
+    "rus esc": 11,
     "Hale": 2,
     "hale": 2,
     "Tuba": 3,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:51",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -738,17 +746,17 @@
       "device": "iPhone 📱",
       "page": "/korfez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:05",
-      "name": "Tuba",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:51",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:25",
       "name": "Selin",
@@ -2115,6 +2123,13 @@
     "Madrid (ES)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_eujx",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795258309262
+    },
     {
       "id": "iPhone 📱_İstanbul_vhxs",
       "device": "iPhone 📱",
