@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 152,
-  "totalWaClicks": 111,
+  "totalWaClicks": 112,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -71,10 +71,20 @@
     "Pınar": 1,
     "pınar": 1,
     "1788500000004": 2,
-    "1788500000002": 2
+    "1788500000002": 2,
+    "Begüm": 1,
+    "begüm": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:36",
+      "name": "Begüm",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:36",
       "name": "Damla",
@@ -759,17 +769,17 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "14:34",
-      "name": "Rus ESC",
+      "time": "19:36",
+      "name": "Begüm",
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "19:36",
       "name": "Damla",
@@ -1400,14 +1410,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:57",
-      "name": "Hazal",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2165,6 +2167,13 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_vynk",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795279000012
+    },
     {
       "id": "Android 📱_İzmit_eo8f",
       "device": "Android 📱",
