@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 181,
+  "totalVisits": 182,
   "totalWaClicks": 126,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:23",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:22",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -757,14 +766,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:55",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1410,6 +1411,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:23",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:22",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2120,19 +2130,10 @@
       "device": "iPhone 📱",
       "page": "/golcuk-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/golcuk-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 83,
+    "İstanbul": 84,
     "Gebze": 6,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2164,6 +2165,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_smxu",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795285434070
+    },
     {
       "id": "iPhone 📱_Gebze_w15h",
       "device": "iPhone 📱",
