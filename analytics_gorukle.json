@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 14,
+  "totalVisits": 15,
   "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:38",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -676,6 +685,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:39",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "New York City (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:38",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Dallas (US)",
@@ -807,10 +825,17 @@
     "San Francisco (US)": 1,
     "Council Bluffs (US)": 1,
     "Newark (US)": 1,
-    "New York City (US)": 1,
+    "New York City (US)": 2,
     "Dallas (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_New York City (US)_un9s",
+      "device": "iPhone 📱",
+      "city": "New York City (US)",
+      "page": "/",
+      "lastSeen": 1795221549853
+    },
     {
       "id": "Masaüstü 💻_Dallas (US)_y1ha",
       "device": "Masaüstü 💻",
@@ -845,13 +870,6 @@
       "city": "Council Bluffs (US)",
       "page": "/",
       "lastSeen": 1795221381490
-    },
-    {
-      "id": "Masaüstü 💻_San Francisco (US)_v9kw",
-      "device": "Masaüstü 💻",
-      "city": "San Francisco (US)",
-      "page": "/",
-      "lastSeen": 1795221342900
     }
   ]
 }
