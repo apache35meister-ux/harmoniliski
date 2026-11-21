@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 166,
-  "totalWaClicks": 116,
+  "totalWaClicks": 117,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -20,8 +20,8 @@
     "gül": 7,
     "Sinem": 2,
     "sinem": 2,
-    "Rus ESC": 12,
-    "rus esc": 12,
+    "Rus ESC": 13,
+    "rus esc": 13,
     "Hale": 6,
     "hale": 6,
     "Tuba": 3,
@@ -78,6 +78,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:18",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:18",
       "name": "Ziyaretçi (Android 📱)",
@@ -763,17 +771,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:34",
-      "name": "VIP Escort",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:18",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:57",
       "name": "Açelya",
@@ -1401,14 +1409,6 @@
     {
       "time": "03:05",
       "name": "Sena",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:59",
-      "name": "Damla",
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
@@ -2170,6 +2170,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_bth1",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795281518646
+    },
     {
       "id": "Android 📱_İzmir_90fy",
       "device": "Android 📱",
