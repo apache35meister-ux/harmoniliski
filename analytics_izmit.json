@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 50,
+  "totalVisits": 51,
   "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
@@ -36,6 +36,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:22",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Romulus (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:21",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -955,6 +964,15 @@
   ],
   "cityVisits": [
     {
+      "time": "15:22",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Romulus (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "15:21",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Romulus (US)",
@@ -1426,9 +1444,16 @@
     "Singapore (SG)": 1,
     "Paris (FR)": 1,
     "Ansan-si (KR)": 1,
-    "Romulus (US)": 1
+    "Romulus (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Romulus (US)_cnyn",
+      "device": "iPhone 📱",
+      "city": "Romulus (US)",
+      "page": "/",
+      "lastSeen": 1795263735731
+    },
     {
       "id": "iPhone 📱_Romulus (US)_7nx8",
       "device": "iPhone 📱",
