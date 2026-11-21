@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 36,
-  "totalWaClicks": 26,
+  "totalWaClicks": 27,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 1,
@@ -29,10 +29,20 @@
     "Tuba": 1,
     "tuba": 1,
     "Buket": 1,
-    "buket": 1
+    "buket": 1,
+    "Gülce": 1,
+    "gülce": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "06:23",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:23",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -567,6 +577,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "06:23",
+      "name": "Gülce",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "06:22",
       "name": "Eylül",
@@ -1112,6 +1130,13 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_Bursa_spfi",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795231420462
+    },
+    {
       "id": "iPhone 📱_Bursa_rw2l",
       "device": "iPhone 📱",
       "city": "Bursa",
@@ -1152,13 +1177,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795231252679
-    },
-    {
-      "id": "iPhone 📱_Bursa_38y4",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/ozluce-eskort.html",
-      "lastSeen": 1795231232422
     }
   ]
 }
