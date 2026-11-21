@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 152,
+  "totalVisits": 153,
   "totalWaClicks": 125,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:24",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:21",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -740,15 +749,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:31",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1394,6 +1394,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "20:24",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "20:21",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2104,21 +2113,12 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "Ankara": 6,
     "İstanbul": 15,
-    "Bursa": 70,
+    "Bursa": 71,
     "Amsterdam (NL)": 14,
     "Milan (IT)": 6,
     "Konya": 2,
@@ -2136,6 +2136,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_qlrc",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795281842832
+    },
     {
       "id": "Masaüstü 💻_Bursa_v2lk",
       "device": "Masaüstü 💻",
