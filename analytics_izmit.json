@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 194,
-  "totalWaClicks": 144,
+  "totalWaClicks": 145,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 4,
@@ -20,8 +20,8 @@
     "gül": 7,
     "Sinem": 2,
     "sinem": 2,
-    "Rus ESC": 14,
-    "rus esc": 14,
+    "Rus ESC": 15,
+    "rus esc": 15,
     "Hale": 6,
     "hale": 6,
     "Tuba": 4,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:41",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:40",
       "name": "Ziyaretçi (Android 📱)",
@@ -757,17 +765,17 @@
       "device": "Masaüstü 💻",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:30",
-      "name": "Hale",
-      "city": "İzmit / Bağçeşme",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:41",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:40",
       "name": "Yaren",
@@ -1398,14 +1406,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:52",
-      "name": "Eylül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2165,6 +2165,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_pc00",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795286477639
+    },
+    {
       "id": "Android 📱_Gebze_52ho",
       "device": "Android 📱",
       "city": "Gebze",
@@ -2198,13 +2205,6 @@
       "city": "Gebze",
       "page": "/gebze-eskort.html",
       "lastSeen": 1795286338572
-    },
-    {
-      "id": "Android 📱_İzmit_84fg",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795286287996
     }
   ]
 }
