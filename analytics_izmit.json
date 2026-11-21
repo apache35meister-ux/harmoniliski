@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 191,
+  "totalVisits": 192,
   "totalWaClicks": 142,
   "totalCalls": 0,
   "tClicks": {
@@ -83,6 +83,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:38",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:38",
       "name": "Eylül",
@@ -755,15 +764,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:29",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1409,6 +1409,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:38",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:36",
       "name": "Ziyaretçi (Android 📱)",
@@ -2119,20 +2128,11 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Santa Clara (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 87,
-    "Gebze": 8,
+    "Gebze": 9,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
     "Amsterdam (NL)": 6,
@@ -2163,6 +2163,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Gebze_0ym2",
+      "device": "Android 📱",
+      "city": "Gebze",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795286338572
+    },
     {
       "id": "Android 📱_İzmit_84fg",
       "device": "Android 📱",
@@ -2204,34 +2211,6 @@
       "city": "İzmit",
       "page": "/izmit-merkez-eskort.html",
       "lastSeen": 1795286166327
-    },
-    {
-      "id": "Android 📱_İzmit_8ykd",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795286149201
-    },
-    {
-      "id": "Mobil 📱_İstanbul_k421",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795286149134
-    },
-    {
-      "id": "Android 📱_İzmit_lgno",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "/kadikoy-moda-bagimsiz-vip-eskort.html",
-      "lastSeen": 1795286132575
-    },
-    {
-      "id": "Android 📱_İzmit_uniy",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795286127328
     }
   ]
 }
