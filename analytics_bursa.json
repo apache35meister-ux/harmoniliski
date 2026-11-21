@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 91,
+  "totalVisits": 92,
   "totalWaClicks": 72,
   "totalCalls": 0,
   "tClicks": {
@@ -51,6 +51,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:28",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -723,14 +732,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:21",
-      "name": "Emel",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1312,6 +1313,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:28",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:26",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2022,15 +2032,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:57",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2047,9 +2048,17 @@
     "Frankfurt am Main (DE)": 2,
     "Singapore (SG)": 3,
     "Gaziantep": 1,
-    "Bandırma": 1
+    "Bandırma": 1,
+    "Ashburn (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Ashburn (US)_ipfu",
+      "device": "Masaüstü 💻",
+      "city": "Ashburn (US)",
+      "page": "/",
+      "lastSeen": 1795260518191
+    },
     {
       "id": "Mobil 📱_Bandırma_3wh3",
       "device": "Mobil 📱",
