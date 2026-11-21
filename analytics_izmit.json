@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 138,
+  "totalVisits": 139,
   "totalWaClicks": 97,
   "totalCalls": 0,
   "tClicks": {
@@ -66,6 +66,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:31",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:30",
       "name": "Ziyaretçi (Android 📱)",
@@ -752,15 +761,6 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:18",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Madrid (ES)",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1406,6 +1406,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:31",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:30",
       "name": "Ziyaretçi (Android 📱)",
@@ -2116,19 +2125,10 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 64,
+    "İstanbul": 65,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2158,6 +2158,13 @@
     "Zürich (CH)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İstanbul_082q",
+      "device": "Android 📱",
+      "city": "İstanbul",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795267860197
+    },
     {
       "id": "Android 📱_İstanbul_ju1l",
       "device": "Android 📱",
