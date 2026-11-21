@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 133,
+  "totalVisits": 134,
   "totalWaClicks": 95,
   "totalCalls": 0,
   "tClicks": {
@@ -66,6 +66,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:55",
       "name": "Selin",
@@ -753,15 +762,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:48",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1407,6 +1407,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:55",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:55",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2117,19 +2126,10 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 61,
+    "İstanbul": 62,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2158,6 +2158,13 @@
     "El Segundo (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_isd7",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795265749115
+    },
     {
       "id": "iPhone 📱_İzmit_gwen",
       "device": "iPhone 📱",
