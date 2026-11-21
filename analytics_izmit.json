@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 37,
+  "totalVisits": 38,
   "totalWaClicks": 43,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:21",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "04:01",
       "name": "Hazal",
@@ -722,15 +731,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:55",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1081,6 +1081,15 @@
   ],
   "cityVisits": [
     {
+      "time": "04:21",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "04:01",
       "name": "Ziyaretçi (Android 📱)",
       "city": "İstanbul",
@@ -1424,43 +1433,16 @@
     "Vienna (AT)": 1,
     "İzmit": 2,
     "Bursa": 2,
-    "Ankara": 1
+    "Ankara": 1,
+    "Ashburn (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_202h",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795222909333
-    },
-    {
-      "id": "Android 📱_İstanbul_5qd0",
-      "device": "Android 📱",
-      "city": "İstanbul",
+      "id": "Masaüstü 💻_Ashburn (US)_4wzo",
+      "device": "Masaüstü 💻",
+      "city": "Ashburn (US)",
       "page": "/gebze-eskort.html",
-      "lastSeen": 1795222903614
-    },
-    {
-      "id": "Android 📱_İzmit_179c",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795222876260
-    },
-    {
-      "id": "Android 📱_İzmit_blkf",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795222846468
-    },
-    {
-      "id": "Android 📱_İstanbul_kpgh",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795222809770
+      "lastSeen": 1795224092925
     }
   ]
 }
