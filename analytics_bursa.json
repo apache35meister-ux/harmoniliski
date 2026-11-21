@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 97,
-  "totalWaClicks": 78,
+  "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
@@ -38,8 +38,8 @@
     "emel": 1,
     "Begüm": 2,
     "begüm": 2,
-    "Dila": 1,
-    "dila": 1,
+    "Dila": 2,
+    "dila": 2,
     "Su": 1,
     "su": 1,
     "Peri": 1,
@@ -53,6 +53,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:42",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:42",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -726,17 +734,17 @@
       "device": "Mobil 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:33",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:42",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:37",
       "name": "Eylül",
@@ -2103,6 +2111,13 @@
     "Zürich (CH)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_efwu",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795261367325
+    },
     {
       "id": "Mobil 📱_Bursa_aor1",
       "device": "Mobil 📱",
