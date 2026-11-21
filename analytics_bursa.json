@@ -1,15 +1,15 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 71,
-  "totalWaClicks": 58,
+  "totalWaClicks": 59,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
     "damla": 3,
     "Eylül": 4,
     "eylül": 4,
-    "Açelya": 8,
-    "açelya": 8,
+    "Açelya": 9,
+    "açelya": 9,
     "Rus ESC": 3,
     "rus esc": 3,
     "Melis": 4,
@@ -45,6 +45,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:24",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:24",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -718,18 +726,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "11:24",
+      "name": "Açelya",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:19",
       "name": "Açelya",
@@ -1850,6 +1857,13 @@
     "Frankfurt am Main (DE)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_x6sd",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795249465169
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_oydy",
       "device": "Mobil 📱",
