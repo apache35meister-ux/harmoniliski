@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 75,
+  "totalVisits": 76,
   "totalWaClicks": 70,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:42",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -737,15 +746,6 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:04",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1311,6 +1311,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:46",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:42",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1988,7 +1997,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 38,
+    "İstanbul": 39,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2006,53 +2015,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_mbf9",
-      "device": "iPhone 📱",
+      "id": "Mobil 📱_İstanbul_f7dp",
+      "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795254175566
-    },
-    {
-      "id": "iPhone 📱_İzmit_j7s1",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254168432
-    },
-    {
-      "id": "iPhone 📱_İzmit_tny8",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254119675
-    },
-    {
-      "id": "iPhone 📱_İzmit_x553",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254089814
-    },
-    {
-      "id": "Masaüstü 💻_İzmit_ps6n",
-      "device": "Masaüstü 💻",
-      "city": "İzmit",
-      "page": "/",
-      "lastSeen": 1795254078843
-    },
-    {
-      "id": "iPhone 📱_İzmit_dllj",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254071886
-    },
-    {
-      "id": "iPhone 📱_İstanbul_wbwz",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795254055677
+      "lastSeen": 1795254360831
     }
   ]
 }
