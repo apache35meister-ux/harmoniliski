@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 113,
-  "totalWaClicks": 88,
+  "totalWaClicks": 89,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 7,
@@ -24,8 +24,8 @@
     "hazal": 3,
     "Yaren": 7,
     "yaren": 7,
-    "Sinem": 1,
-    "sinem": 1,
+    "Sinem": 2,
+    "sinem": 2,
     "Tuba": 1,
     "tuba": 1,
     "Buket": 1,
@@ -57,6 +57,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:40",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:39",
       "name": "Melisa",
@@ -735,17 +743,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:35",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "16:40",
+      "name": "Sinem",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:39",
       "name": "Melisa",
@@ -1375,14 +1383,6 @@
       "name": "Selin",
       "city": "Bursa",
       "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:45",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
@@ -2129,6 +2129,13 @@
     "Council Bluffs (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_tsiw",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795268424317
+    },
     {
       "id": "iPhone 📱_Bursa_p0fv",
       "device": "iPhone 📱",
