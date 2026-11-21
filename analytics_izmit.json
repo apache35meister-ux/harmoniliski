@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 88,
+  "totalVisits": 89,
   "totalWaClicks": 78,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:38",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -737,15 +746,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "05:04",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1375,6 +1375,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:51",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:38",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2085,19 +2094,10 @@
       "device": "Android 📱",
       "page": "/alikahya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:49",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 47,
+    "İstanbul": 48,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2116,11 +2116,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_İstanbul_j3o8",
+      "id": "iPhone 📱_İstanbul_vhxs",
       "device": "iPhone 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795257533631
+      "lastSeen": 1795258274890
     }
   ]
 }
