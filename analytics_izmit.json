@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 142,
+  "totalVisits": 143,
   "totalWaClicks": 97,
   "totalCalls": 0,
   "tClicks": {
@@ -66,6 +66,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:03",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:14",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -755,14 +764,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:24",
-      "name": "Serap",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1408,6 +1409,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "18:03",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "17:14",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2118,19 +2128,10 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gebze",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 65,
+    "İstanbul": 66,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2162,18 +2163,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_İzmit_x2cc",
-      "device": "Masaüstü 💻",
-      "city": "İzmit",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795270444448
-    },
-    {
-      "id": "Android 📱_Ankara_cf1c",
-      "device": "Android 📱",
-      "city": "Ankara",
-      "page": "/cesmealti-eskort.html",
-      "lastSeen": 1795270368110
+      "id": "iPhone 📱_İstanbul_zk8w",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795273405583
     }
   ]
 }
