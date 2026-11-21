@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 192,
-  "totalWaClicks": 142,
+  "totalWaClicks": 143,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 4,
@@ -12,8 +12,8 @@
     "melis": 2,
     "Açelya": 13,
     "açelya": 13,
-    "Serap": 5,
-    "serap": 5,
+    "Serap": 6,
+    "serap": 6,
     "Selin": 23,
     "selin": 23,
     "Gül": 7,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:39",
+      "name": "Serap",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:38",
       "name": "Ziyaretçi (Android 📱)",
@@ -756,17 +764,17 @@
       "device": "Masaüstü 💻",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:29",
-      "name": "Gül",
-      "city": "İzmit / Körfez",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:39",
+      "name": "Serap",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:38",
       "name": "Eylül",
@@ -1397,14 +1405,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:34",
-      "name": "Anna",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2164,6 +2164,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_lhpe",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795286375679
+    },
+    {
       "id": "Android 📱_Gebze_0ym2",
       "device": "Android 📱",
       "city": "Gebze",
@@ -2190,27 +2197,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795286199200
-    },
-    {
-      "id": "Android 📱_İzmit_55l8",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795286179185
-    },
-    {
-      "id": "Android 📱_İzmit_c1g8",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795286173344
-    },
-    {
-      "id": "Android 📱_İzmit_ty4j",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795286166327
     }
   ]
 }
