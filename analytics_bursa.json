@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 111,
+  "totalVisits": 112,
   "totalWaClicks": 86,
   "totalCalls": 0,
   "tClicks": {
@@ -57,6 +57,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:31",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:20",
       "name": "İzel",
@@ -735,15 +744,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:14",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1389,6 +1389,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "16:31",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "16:19",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2099,21 +2108,12 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:39",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Konya",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "Ankara": 6,
     "İstanbul": 12,
-    "Bursa": 47,
+    "Bursa": 48,
     "Amsterdam (NL)": 14,
     "Milan (IT)": 2,
     "Konya": 2,
@@ -2131,18 +2131,11 @@
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_5tht",
+      "id": "iPhone 📱_Bursa_b3p5",
       "device": "iPhone 📱",
       "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795267214673
-    },
-    {
-      "id": "iPhone 📱_Milan (IT)_3dtx",
-      "device": "iPhone 📱",
-      "city": "Milan (IT)",
       "page": "/",
-      "lastSeen": 1795267179296
+      "lastSeen": 1795267893780
     }
   ]
 }
