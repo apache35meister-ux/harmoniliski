@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 194,
+  "totalVisits": 195,
   "totalWaClicks": 145,
   "totalCalls": 0,
   "tClicks": {
@@ -83,6 +83,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:41",
       "name": "Rus ESC",
@@ -757,14 +766,6 @@
       "device": "Masaüstü 💻",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:30",
-      "name": "Hale",
-      "city": "İzmit",
-      "device": "Masaüstü 💻",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1410,6 +1411,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:41",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Gebze",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:40",
       "name": "Ziyaretçi (Android 📱)",
@@ -2120,20 +2130,11 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:36",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Jeffries Point (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "İstanbul": 87,
-    "Gebze": 11,
+    "Gebze": 12,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
     "Amsterdam (NL)": 6,
@@ -2164,6 +2165,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Gebze_46x5",
+      "device": "Android 📱",
+      "city": "Gebze",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795286483521
+    },
     {
       "id": "Android 📱_İzmit_pc00",
       "device": "Android 📱",
