@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "totalWaClicks": 3,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:25",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Los Angeles (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:24",
       "name": "VIP Escort",
@@ -174,6 +183,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:25",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Los Angeles (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:24",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "New York City (US)",
@@ -291,9 +309,17 @@
     "The Dalles (US)": 1,
     "Romulus (US)": 1,
     "Ashburn (US)": 2,
-    "Dallas (US)": 1
+    "Dallas (US)": 1,
+    "Los Angeles (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Los Angeles (US)_90i4",
+      "device": "iPhone 📱",
+      "city": "Los Angeles (US)",
+      "page": "/",
+      "lastSeen": 1795220737064
+    },
     {
       "id": "iPhone 📱_Sakarya_2gvj",
       "device": "iPhone 📱",
