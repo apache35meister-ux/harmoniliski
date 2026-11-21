@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 43,
+  "totalVisits": 44,
   "totalWaClicks": 47,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:10",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/korfez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:10",
       "name": "Selin",
@@ -723,15 +732,6 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Milan (IT)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1113,6 +1113,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "05:10",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "/korfez-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:09",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1502,7 +1511,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 21,
+    "İstanbul": 22,
     "Gebze": 1,
     "Moscow (RU)": 1,
     "Milan (IT)": 4,
@@ -1516,6 +1525,13 @@
     "Aksaray": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_c12i",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/korfez-eskort.html",
+      "lastSeen": 1795227029606
+    },
     {
       "id": "iPhone 📱_İzmit_sct0",
       "device": "iPhone 📱",
