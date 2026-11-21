@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 23,
+  "totalVisits": 24,
   "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:58",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "05:51",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -321,6 +330,15 @@
   ],
   "cityVisits": [
     {
+      "time": "05:58",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "05:51",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Boardman (US)",
@@ -536,7 +554,7 @@
     "San Francisco (US)": 1,
     "The Dalles (US)": 1,
     "Romulus (US)": 1,
-    "Ashburn (US)": 4,
+    "Ashburn (US)": 5,
     "Dallas (US)": 1,
     "Los Angeles (US)": 1,
     "Santa Clara (US)": 1,
@@ -545,11 +563,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Boardman (US)_0vjl",
-      "device": "Masaüstü 💻",
-      "city": "Boardman (US)",
+      "id": "iPhone 📱_Ashburn (US)_kszq",
+      "device": "iPhone 📱",
+      "city": "Ashburn (US)",
       "page": "/",
-      "lastSeen": 1795229461304
+      "lastSeen": 1795229915430
     }
   ]
 }
