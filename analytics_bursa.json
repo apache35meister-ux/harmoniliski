@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 78,
-  "totalWaClicks": 60,
+  "totalWaClicks": 61,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -22,8 +22,8 @@
     "melisa": 3,
     "Hazal": 3,
     "hazal": 3,
-    "Yaren": 6,
-    "yaren": 6,
+    "Yaren": 7,
+    "yaren": 7,
     "Sinem": 1,
     "sinem": 1,
     "Tuba": 1,
@@ -47,6 +47,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:42",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -721,18 +729,17 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:21",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/kent-meydani-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:42",
+      "name": "Yaren",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "11:24",
       "name": "Peri",
@@ -1933,6 +1940,13 @@
     "Singapore (SG)": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_hji6",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254148591
+    },
     {
       "id": "iPhone 📱_İstanbul_exzc",
       "device": "iPhone 📱",
