@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 73,
+  "totalVisits": 74,
   "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "11:47",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Singapore (SG)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -718,15 +727,6 @@
       "device": "iPhone 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:17",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1212,6 +1212,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "11:47",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Singapore (SG)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:44",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1882,22 +1891,15 @@
     "Hamina (FI)": 1,
     "Dallas (US)": 1,
     "Frankfurt am Main (DE)": 2,
-    "Singapore (SG)": 1
+    "Singapore (SG)": 2
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Ankara_aa41",
-      "device": "Mobil 📱",
-      "city": "Ankara",
-      "page": "/",
-      "lastSeen": 1795250642876
-    },
-    {
-      "id": "iPhone 📱_Singapore (SG)_0d7b",
+      "id": "iPhone 📱_Singapore (SG)_v4vg",
       "device": "iPhone 📱",
       "city": "Singapore (SG)",
       "page": "/",
-      "lastSeen": 1795250617783
+      "lastSeen": 1795250865625
     }
   ]
 }
