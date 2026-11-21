@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 11,
+  "totalVisits": 12,
   "totalWaClicks": 35,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:41",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:41",
       "name": "İlayda",
@@ -699,6 +708,15 @@
   ],
   "cityVisits": [
     {
+      "time": "12:41",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "12:40",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "İstanbul",
@@ -800,10 +818,17 @@
   ],
   "cityCounts": {
     "Bursa": 9,
-    "Dallas (US)": 1,
+    "Dallas (US)": 2,
     "İstanbul": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Dallas (US)_1t0z",
+      "device": "Masaüstü 💻",
+      "city": "Dallas (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254091795
+    },
     {
       "id": "Android 📱_Görükle_mp43",
       "device": "Android 📱",
