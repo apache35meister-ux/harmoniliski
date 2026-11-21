@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 84,
+  "totalVisits": 85,
   "totalWaClicks": 70,
   "totalCalls": 0,
   "tClicks": {
@@ -51,6 +51,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:45",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:40",
       "name": "VIP Escort",
@@ -720,15 +729,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1294,6 +1294,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:45",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:39",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -2004,21 +2013,12 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:12",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "Ankara": 6,
     "İstanbul": 11,
-    "Bursa": 40,
+    "Bursa": 41,
     "Amsterdam (NL)": 13,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -2032,60 +2032,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_6hu5",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795257619485
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_hq2d",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795257619467
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_p0tk",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795257619466
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_67rq",
+      "id": "Masaüstü 💻_Bursa_etbh",
       "device": "Masaüstü 💻",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795257586160
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_4bds",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795257562752
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_qhl5",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795257562750
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_cwmu",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795257562745
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_2hcl",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795257491603
+      "lastSeen": 1795257910237
     }
   ]
 }
