@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 118,
+  "totalVisits": 121,
   "totalWaClicks": 91,
   "totalCalls": 0,
   "tClicks": {
@@ -64,6 +64,33 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:44",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:43",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Romulus (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:43",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:43",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -729,31 +756,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:51",
-      "name": "Gül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:51",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/korfez-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "11:34",
-      "name": "Anna",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1399,6 +1401,33 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:44",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:43",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Romulus (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:43",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:43",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2091,33 +2120,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:40",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/hatay-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:27",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Aksaray",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/izmit-merkez-eskort.html",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:26",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Aksaray",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/aksaray-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2131,7 +2133,7 @@
     "İzmit": 6,
     "Bursa": 6,
     "Ankara": 3,
-    "Ashburn (US)": 1,
+    "Ashburn (US)": 3,
     "Aksaray": 2,
     "Denver (US)": 1,
     "Manavgat": 1,
@@ -2143,12 +2145,33 @@
     "Newark (US)": 5,
     "Santa Clara (US)": 3,
     "Floris (US)": 1,
-    "Romulus (US)": 2,
+    "Romulus (US)": 3,
     "Los Angeles (US)": 1,
     "Jeffries Point (US)": 1,
     "Dallas (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Ashburn (US)_aowv",
+      "device": "iPhone 📱",
+      "city": "Ashburn (US)",
+      "page": "/",
+      "lastSeen": 1795265049408
+    },
+    {
+      "id": "iPhone 📱_Romulus (US)_ae8m",
+      "device": "iPhone 📱",
+      "city": "Romulus (US)",
+      "page": "/",
+      "lastSeen": 1795265004741
+    },
+    {
+      "id": "iPhone 📱_Ashburn (US)_segs",
+      "device": "iPhone 📱",
+      "city": "Ashburn (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795265004700
+    },
     {
       "id": "Mobil 📱_Newark (US)_gmol",
       "device": "Mobil 📱",
