@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 29,
+  "totalVisits": 30,
   "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:10",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "The Dalles (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:09",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -629,6 +638,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:10",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "The Dalles (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:09",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "İzmir",
@@ -896,9 +914,17 @@
     "Bursa": 10,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 1,
-    "İzmir": 1
+    "İzmir": 1,
+    "The Dalles (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_The Dalles (US)_kfbv",
+      "device": "Masaüstü 💻",
+      "city": "The Dalles (US)",
+      "page": "/",
+      "lastSeen": 1795219821229
+    },
     {
       "id": "Masaüstü 💻_İzmir_vbih",
       "device": "Masaüstü 💻",
