@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 62,
-  "totalWaClicks": 30,
+  "totalWaClicks": 31,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 1,
@@ -14,8 +14,8 @@
     "açelya": 2,
     "Serap": 1,
     "serap": 1,
-    "Selin": 8,
-    "selin": 8,
+    "Selin": 9,
+    "selin": 9,
     "Gül": 2,
     "gül": 2,
     "Sinem": 1,
@@ -36,6 +36,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "16:43",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "16:43",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -723,17 +731,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:35",
-      "name": "Serap",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "16:43",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:48",
       "name": "VIP Escort",
@@ -1563,6 +1571,13 @@
     "São Paulo (BR)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_snms",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795268614797
+    },
     {
       "id": "Mobil 📱_İstanbul_1rpb",
       "device": "Mobil 📱",
