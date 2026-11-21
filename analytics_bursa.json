@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 83,
+  "totalVisits": 84,
   "totalWaClicks": 67,
   "totalCalls": 0,
   "tClicks": {
@@ -51,6 +51,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:39",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:39",
       "name": "VIP Escort",
@@ -722,15 +731,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "07:54",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1272,6 +1272,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:39",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:38",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -1982,21 +1991,12 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "23:57",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "Ankara": 6,
     "İstanbul": 11,
-    "Bursa": 39,
+    "Bursa": 40,
     "Amsterdam (NL)": 13,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -2009,6 +2009,13 @@
     "Gaziantep": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_Bursa_67rq",
+      "device": "Masaüstü 💻",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795257586160
+    },
     {
       "id": "Masaüstü 💻_Bursa / Nilüfer_4bds",
       "device": "Masaüstü 💻",
