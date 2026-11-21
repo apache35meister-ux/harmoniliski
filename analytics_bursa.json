@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 60,
-  "totalWaClicks": 47,
+  "totalWaClicks": 48,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -37,10 +37,20 @@
     "Emel": 1,
     "emel": 1,
     "Begüm": 1,
-    "begüm": 1
+    "begüm": 1,
+    "Dila": 1,
+    "dila": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:11",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:09",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -717,18 +727,17 @@
       "device": "Mobil 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:01",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/cekirge-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:11",
+      "name": "Dila",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:09",
       "name": "Eylül",
@@ -1662,6 +1671,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Bursa_ivhe",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795245067039
+    },
+    {
       "id": "Masaüstü 💻_Dallas (US)_fggn",
       "device": "Masaüstü 💻",
       "city": "Dallas (US)",
@@ -1709,13 +1725,6 @@
       "city": "Bursa",
       "page": "Ana Sayfa",
       "lastSeen": 1795244902579
-    },
-    {
-      "id": "Mobil 📱_Bursa_2p90",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/heykel-eskort.html",
-      "lastSeen": 1795244879585
     }
   ]
 }
