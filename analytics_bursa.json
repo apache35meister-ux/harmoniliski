@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 103,
+  "totalVisits": 104,
   "totalWaClicks": 81,
   "totalCalls": 0,
   "tClicks": {
@@ -53,6 +53,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -728,14 +737,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:09",
-      "name": "Hazal",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1381,6 +1382,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:09",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Amsterdam (NL)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:07",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2091,22 +2101,13 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:43",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
     "Ankara": 6,
     "İstanbul": 12,
     "Bursa": 46,
-    "Amsterdam (NL)": 13,
+    "Amsterdam (NL)": 14,
     "Milan (IT)": 1,
     "Konya": 2,
     "Oudeschip (NL)": 1,
@@ -2122,25 +2123,18 @@
   },
   "activeVisitors": [
     {
+      "id": "Mobil 📱_Amsterdam (NL)_3dfa",
+      "device": "Mobil 📱",
+      "city": "Amsterdam (NL)",
+      "page": "/",
+      "lastSeen": 1795262975825
+    },
+    {
       "id": "Mobil 📱_Frankfurt am Main (DE)_fe8l",
       "device": "Mobil 📱",
       "city": "Frankfurt am Main (DE)",
       "page": "/",
       "lastSeen": 1795262864863
-    },
-    {
-      "id": "Android 📱_Bursa_vtdy",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795262781642
-    },
-    {
-      "id": "Mobil 📱_Bursa_0c6z",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795262771100
     }
   ]
 }
