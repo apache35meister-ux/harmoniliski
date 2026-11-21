@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 204,
-  "totalWaClicks": 152,
+  "totalWaClicks": 153,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 5,
@@ -22,8 +22,8 @@
     "sinem": 2,
     "Rus ESC": 15,
     "rus esc": 15,
-    "Hale": 6,
-    "hale": 6,
+    "Hale": 7,
+    "hale": 7,
     "Tuba": 4,
     "tuba": 4,
     "İlayda": 1,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:23",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:22",
       "name": "Ziyaretçi (Android 📱)",
@@ -756,18 +764,17 @@
       "device": "iPhone 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:54",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/bostanli-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:23",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:22",
       "name": "Damla",
@@ -1398,14 +1405,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:03",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2166,6 +2165,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_fkwd",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795289020598
+    },
+    {
       "id": "Android 📱_Bursa_cbyl",
       "device": "Android 📱",
       "city": "Bursa",
@@ -2206,41 +2212,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795288848731
-    },
-    {
-      "id": "Android 📱_Bursa_q1b0",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795288838729
-    },
-    {
-      "id": "Android 📱_İzmit_hgcm",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795288831986
-    },
-    {
-      "id": "Android 📱_Gebze_9ym9",
-      "device": "Android 📱",
-      "city": "Gebze",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795288829172
-    },
-    {
-      "id": "Android 📱_İzmit_vhzt",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795288824158
-    },
-    {
-      "id": "Android 📱_İzmit_ob2g",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795288797279
     }
   ]
 }
