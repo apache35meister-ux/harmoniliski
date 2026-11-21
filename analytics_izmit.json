@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 112,
+  "totalVisits": 114,
   "totalWaClicks": 91,
   "totalCalls": 0,
   "tClicks": {
@@ -64,6 +64,24 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Romulus (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:35",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Los Angeles (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:34",
       "name": "VIP Escort",
@@ -735,24 +753,6 @@
       "device": "Android 📱",
       "page": "/bursa-nilufer-ozluce-vip-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:58",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:37",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Gebze",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1398,6 +1398,24 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Romulus (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "15:35",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Los Angeles (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:34",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2099,24 +2117,6 @@
       "device": "Android 📱",
       "page": "/nisantasi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:33",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İzmit",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:08",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/izmit-merkez-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2142,9 +2142,24 @@
     "Newark (US)": 3,
     "Santa Clara (US)": 3,
     "Floris (US)": 1,
-    "Romulus (US)": 1
+    "Romulus (US)": 2,
+    "Los Angeles (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Romulus (US)_3542",
+      "device": "Mobil 📱",
+      "city": "Romulus (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795264559532
+    },
+    {
+      "id": "iPhone 📱_Los Angeles (US)_ji49",
+      "device": "iPhone 📱",
+      "city": "Los Angeles (US)",
+      "page": "/",
+      "lastSeen": 1795264559530
+    },
     {
       "id": "iPhone 📱_İzmit_cb6m",
       "device": "iPhone 📱",
