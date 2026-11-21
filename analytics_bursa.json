@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 151,
-  "totalWaClicks": 122,
+  "totalWaClicks": 125,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 10,
@@ -46,8 +46,8 @@
     "peri": 1,
     "Gül": 5,
     "gül": 5,
-    "VIP Escort": 4,
-    "vip escort": 4,
+    "VIP Escort": 7,
+    "vip escort": 7,
     "Sena": 1,
     "sena": 1,
     "İlayda": 1,
@@ -69,6 +69,30 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:21",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:21",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:21",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:18",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -724,35 +748,33 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "16:19",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Milan (IT)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:05",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:47",
-      "name": "Melisa",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:21",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:21",
+      "name": "VIP Escort",
+      "city": "Bursa / Nilüfer",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "20:21",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:11",
       "name": "Damla",
@@ -1367,30 +1389,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:09",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:08",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:08",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2138,18 +2136,25 @@
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_3ar8",
+      "id": "Masaüstü 💻_Bursa / Nilüfer_40kd",
       "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795281489563
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795281687205
     },
     {
-      "id": "Masaüstü 💻_Bursa_sjbf",
+      "id": "Masaüstü 💻_Bursa / Nilüfer_ozqi",
+      "device": "Masaüstü 💻",
+      "city": "Bursa / Nilüfer",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795281687205
+    },
+    {
+      "id": "Masaüstü 💻_Bursa_6c0z",
       "device": "Masaüstü 💻",
       "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795281312734
+      "page": "Ana Sayfa",
+      "lastSeen": 1795281687205
     }
   ]
 }
