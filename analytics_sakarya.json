@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 31,
-  "totalWaClicks": 17,
+  "totalWaClicks": 18,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -12,8 +12,8 @@
     "selin": 3,
     "Damla": 3,
     "damla": 3,
-    "Melis": 2,
-    "melis": 2,
+    "Melis": 3,
+    "melis": 3,
     "Rus ESC": 1,
     "rus esc": 1,
     "Gül": 1,
@@ -27,6 +27,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:36",
+      "name": "Melis",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:35",
       "name": "Begüm",
@@ -444,6 +452,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:36",
+      "name": "Melis",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:35",
       "name": "Begüm",
@@ -877,6 +893,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_Sakarya_r4ta",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278978012
+    },
+    {
       "id": "Android 📱_Sakarya_nxbv",
       "device": "Android 📱",
       "city": "Sakarya",
@@ -917,20 +940,6 @@
       "city": "Sakarya / Adapazarı",
       "page": "Ana Sayfa",
       "lastSeen": 1795278844186
-    },
-    {
-      "id": "Mobil 📱_İstanbul_plrj",
-      "device": "Mobil 📱",
-      "city": "İstanbul",
-      "page": "/",
-      "lastSeen": 1795278770168
-    },
-    {
-      "id": "Masaüstü 💻_Adapazarı_6z5m",
-      "device": "Masaüstü 💻",
-      "city": "Adapazarı",
-      "page": "/",
-      "lastSeen": 1795278740660
     }
   ]
 }
