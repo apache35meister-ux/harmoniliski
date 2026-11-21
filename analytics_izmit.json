@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 103,
-  "totalWaClicks": 89,
+  "totalWaClicks": 90,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -56,10 +56,20 @@
     "Anna": 1,
     "anna": 1,
     "Eylül": 2,
-    "eylül": 2
+    "eylül": 2,
+    "Buket": 1,
+    "buket": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:13",
+      "name": "Buket",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:13",
       "name": "Selin",
@@ -737,17 +747,17 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:04",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:13",
+      "name": "Buket",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:13",
       "name": "Selin",
@@ -1378,14 +1388,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:51",
-      "name": "Damla",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2133,6 +2135,13 @@
     "Warsaw (PL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_684e",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795263230264
+    },
     {
       "id": "iPhone 📱_İzmit_mvvs",
       "device": "iPhone 📱",
