@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 36,
-  "totalWaClicks": 40,
+  "totalWaClicks": 41,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 2,
@@ -20,8 +20,8 @@
     "gül": 2,
     "Sinem": 1,
     "sinem": 1,
-    "Rus ESC": 5,
-    "rus esc": 5,
+    "Rus ESC": 6,
+    "rus esc": 6,
     "Hale": 1,
     "hale": 1,
     "Tuba": 1,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "04:00",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "04:00",
       "name": "Ziyaretçi (Android 📱)",
@@ -701,6 +709,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "04:00",
+      "name": "Rus ESC",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:38",
       "name": "Emel",
@@ -1361,6 +1377,13 @@
     "Ankara": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_blkf",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795222846468
+    },
     {
       "id": "Android 📱_İstanbul_kpgh",
       "device": "Android 📱",
