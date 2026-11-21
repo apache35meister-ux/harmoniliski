@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 188,
-  "totalWaClicks": 137,
+  "totalVisits": 189,
+  "totalWaClicks": 138,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -77,10 +77,29 @@
     "Yeliz": 1,
     "1794900000004": 2,
     "Merve": 1,
-    "merve": 1
+    "merve": 1,
+    "Melike": 1,
+    "melike": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:35",
+      "name": "Melike",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "21:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:35",
       "name": "Ziyaretçi (Android 📱)",
@@ -745,26 +764,17 @@
       "device": "Android 📱",
       "page": "/istanbul-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:21",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "18:34",
-      "name": "Dila",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:35",
+      "name": "Melike",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:35",
       "name": "Merve",
@@ -1396,17 +1406,18 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:04",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:35",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:35",
       "name": "Ziyaretçi (Android 📱)",
@@ -2117,19 +2128,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:34",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Santa Clara (US)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 86,
+    "İstanbul": 87,
     "Gebze": 8,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2161,6 +2163,20 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_8ykd",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795286149201
+    },
+    {
+      "id": "Mobil 📱_İstanbul_k421",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795286149134
+    },
     {
       "id": "Android 📱_İzmit_lgno",
       "device": "Android 📱",
