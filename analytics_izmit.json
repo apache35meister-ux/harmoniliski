@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 55,
+  "totalVisits": 56,
   "totalWaClicks": 29,
   "totalCalls": 0,
   "tClicks": {
@@ -36,6 +36,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:48",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Toronto (CA)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:47",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -720,14 +729,6 @@
       "device": "iPhone 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:56",
-      "name": "Damla",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -965,6 +966,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "15:48",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Toronto (CA)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "15:47",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1483,9 +1493,16 @@
     "Paris (FR)": 1,
     "Ansan-si (KR)": 2,
     "Romulus (US)": 2,
-    "Toronto (CA)": 3
+    "Toronto (CA)": 4
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Toronto (CA)_hq9z",
+      "device": "iPhone 📱",
+      "city": "Toronto (CA)",
+      "page": "/",
+      "lastSeen": 1795265301319
+    },
     {
       "id": "iPhone 📱_Toronto (CA)_a80s",
       "device": "iPhone 📱",
