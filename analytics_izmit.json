@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 156,
-  "totalWaClicks": 113,
+  "totalWaClicks": 114,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -65,7 +65,7 @@
     "🏙️ alikahya — yuvam akarca & kartepe sınırı profilleri": 1,
     "Dila": 1,
     "dila": 1,
-    "yeliz": 2,
+    "yeliz": 3,
     "Nisa": 1,
     "nisa": 1,
     "Pınar": 1,
@@ -73,10 +73,19 @@
     "1788500000004": 2,
     "1788500000002": 2,
     "Begüm": 1,
-    "begüm": 1
+    "begüm": 1,
+    "Yeliz": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:42",
+      "name": "Yeliz",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:42",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -762,18 +771,17 @@
       "device": "iPhone 📱",
       "page": "/golcuk-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:12",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/golcuk-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:42",
+      "name": "Yeliz",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:36",
       "name": "Selin",
@@ -1401,14 +1409,6 @@
     {
       "time": "02:58",
       "name": "Trisha",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:58",
-      "name": "Ceren",
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905319222689",
@@ -2169,6 +2169,13 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmit_217a",
+      "device": "Masaüstü 💻",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795279361943
+    },
     {
       "id": "Masaüstü 💻_İstanbul_hpu5",
       "device": "Masaüstü 💻",
