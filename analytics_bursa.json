@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 28,
+  "totalVisits": 29,
   "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
@@ -27,6 +27,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:09",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:08",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -620,6 +629,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:09",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:08",
       "name": "Ziyaretçi (iPhone 📱)",
       "city": "Bursa",
@@ -877,9 +895,17 @@
     "İstanbul": 5,
     "Bursa": 10,
     "Amsterdam (NL)": 7,
-    "Milan (IT)": 1
+    "Milan (IT)": 1,
+    "İzmir": 1
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmir_vbih",
+      "device": "Masaüstü 💻",
+      "city": "İzmir",
+      "page": "/",
+      "lastSeen": 1795219742783
+    },
     {
       "id": "iPhone 📱_Bursa_zscu",
       "device": "iPhone 📱",
