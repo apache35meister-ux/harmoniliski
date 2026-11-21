@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 46,
-  "totalWaClicks": 49,
+  "totalWaClicks": 50,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 2,
@@ -12,8 +12,8 @@
     "melis": 2,
     "Açelya": 3,
     "açelya": 3,
-    "Serap": 1,
-    "serap": 1,
+    "Serap": 2,
+    "serap": 2,
     "Selin": 3,
     "selin": 3,
     "Gül": 2,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:16",
+      "name": "Serap",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:16",
       "name": "Rus ESC",
@@ -723,18 +731,17 @@
       "device": "Android 📱",
       "page": "/alikahya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:49",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "05:16",
+      "name": "Serap",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:16",
       "name": "Rus ESC",
@@ -1559,6 +1566,13 @@
     "Aksaray": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_7ciz",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795227391376
+    },
     {
       "id": "Android 📱_İzmit_vtdo",
       "device": "Android 📱",
