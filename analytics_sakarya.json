@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 18,
-  "totalWaClicks": 11,
+  "totalWaClicks": 12,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -10,8 +10,8 @@
     "i̇rem": 1,
     "Selin": 2,
     "selin": 2,
-    "Damla": 1,
-    "damla": 1,
+    "Damla": 2,
+    "damla": 2,
     "Melis": 2,
     "melis": 2,
     "Rus ESC": 1,
@@ -23,6 +23,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:50",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:50",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -275,6 +283,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "15:50",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:32",
       "name": "Yaren",
@@ -541,6 +557,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_p6u6",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795265417194
+    },
     {
       "id": "iPhone 📱_Frankfurt am Main (DE)_sbyx",
       "device": "iPhone 📱",
