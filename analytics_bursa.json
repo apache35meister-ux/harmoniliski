@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 145,
+  "totalVisits": 146,
   "totalWaClicks": 118,
   "totalCalls": 0,
   "tClicks": {
@@ -67,6 +67,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:49",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -740,15 +749,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:07",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1394,6 +1394,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:49",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2104,15 +2113,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "10:35",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2123,7 +2123,7 @@
     "Milan (IT)": 6,
     "Konya": 2,
     "Oudeschip (NL)": 1,
-    "İzmir": 5,
+    "İzmir": 6,
     "Hamina (FI)": 3,
     "Dallas (US)": 2,
     "Frankfurt am Main (DE)": 13,
@@ -2137,46 +2137,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_u4vq",
+      "id": "Mobil 📱_İzmir_t1ip",
       "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/altiparmak-eskort.html",
-      "lastSeen": 1795279753480
-    },
-    {
-      "id": "Android 📱_Bursa_krc9",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795279734390
-    },
-    {
-      "id": "Mobil 📱_Bursa_3568",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/altiparmak-eskort.html",
-      "lastSeen": 1795279692545
-    },
-    {
-      "id": "Android 📱_Bursa_ifr1",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795279633604
-    },
-    {
-      "id": "Mobil 📱_Bursa_d0lz",
-      "device": "Mobil 📱",
-      "city": "Bursa",
+      "city": "İzmir",
       "page": "/",
-      "lastSeen": 1795279631163
-    },
-    {
-      "id": "Android 📱_Bursa_4ee2",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795279599383
+      "lastSeen": 1795280076026
     }
   ]
 }
