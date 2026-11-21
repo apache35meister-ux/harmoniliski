@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 158,
+  "totalVisits": 159,
   "totalWaClicks": 127,
   "totalCalls": 0,
   "tClicks": {
@@ -69,6 +69,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "London (GB)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:04",
       "name": "Damla",
@@ -742,15 +751,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1396,6 +1396,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:05",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "London (GB)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2106,15 +2115,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "12:46",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/nilufer-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2136,9 +2136,17 @@
     "Zürich (CH)": 2,
     "Council Bluffs (US)": 1,
     "Adapazarı": 1,
-    "Toronto (CA)": 1
+    "Toronto (CA)": 1,
+    "London (GB)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_London (GB)_28ni",
+      "device": "Mobil 📱",
+      "city": "London (GB)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795284323643
+    },
     {
       "id": "Android 📱_Bursa_xnkn",
       "device": "Android 📱",
