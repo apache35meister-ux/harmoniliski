@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 43,
-  "totalWaClicks": 46,
+  "totalWaClicks": 47,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 2,
@@ -14,8 +14,8 @@
     "açelya": 3,
     "Serap": 1,
     "serap": 1,
-    "Selin": 2,
-    "selin": 2,
+    "Selin": 3,
+    "selin": 3,
     "Gül": 2,
     "gül": 2,
     "Sinem": 1,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "05:10",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:09",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -724,17 +732,17 @@
       "device": "iPhone 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:32",
-      "name": "Damla",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "05:10",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "05:05",
       "name": "Tuba",
@@ -1508,6 +1516,13 @@
     "Aksaray": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_sct0",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795227014916
+    },
     {
       "id": "iPhone 📱_İstanbul_ltrn",
       "device": "iPhone 📱",
