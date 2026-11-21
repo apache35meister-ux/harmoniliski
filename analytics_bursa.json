@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 101,
-  "totalWaClicks": 79,
+  "totalWaClicks": 80,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 4,
-    "damla": 4,
+    "Damla": 5,
+    "damla": 5,
     "Eylül": 6,
     "eylül": 6,
     "Açelya": 9,
@@ -53,6 +53,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:04",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -727,17 +735,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
+    }
+  ],
+  "callLogs": [
     {
-      "time": "10:08",
-      "name": "Selin",
+      "time": "15:04",
+      "name": "Damla",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    }
-  ],
-  "callLogs": [
+    },
     {
       "time": "14:42",
       "name": "Dila",
@@ -2112,6 +2120,13 @@
     "Zürich (CH)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_148l",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795262655619
+    },
     {
       "id": "Mobil 📱_Frankfurt am Main (DE)_a0o0",
       "device": "Mobil 📱",
