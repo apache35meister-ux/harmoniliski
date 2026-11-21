@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 51,
-  "totalWaClicks": 36,
+  "totalWaClicks": 37,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -12,8 +12,8 @@
     "açelya": 4,
     "Rus ESC": 3,
     "rus esc": 3,
-    "Melis": 2,
-    "melis": 2,
+    "Melis": 3,
+    "melis": 3,
     "Hale": 2,
     "hale": 2,
     "Selin": 6,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "08:22",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:22",
       "name": "Damla",
@@ -719,17 +727,17 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:57",
-      "name": "Rus ESC",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "08:22",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "08:22",
       "name": "Damla",
@@ -1492,6 +1500,13 @@
     "Hamina (FI)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_za3i",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795238565855
+    },
     {
       "id": "Android 📱_Bursa_r9wm",
       "device": "Android 📱",
