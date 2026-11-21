@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 151,
-  "totalWaClicks": 107,
+  "totalWaClicks": 110,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -22,8 +22,8 @@
     "sinem": 2,
     "Rus ESC": 12,
     "rus esc": 12,
-    "Hale": 3,
-    "hale": 3,
+    "Hale": 6,
+    "hale": 6,
     "Tuba": 3,
     "tuba": 3,
     "İlayda": 1,
@@ -70,10 +70,35 @@
     "nisa": 1,
     "Pınar": 1,
     "pınar": 1,
-    "1788500000004": 2
+    "1788500000004": 2,
+    "1788500000002": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:30",
+      "name": "Hale",
+      "city": "İzmit / Bağçeşme",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "19:30",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "19:30",
+      "name": "Hale",
+      "city": "İzmit / Bağçeşme",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:30",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -743,34 +768,33 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:29",
-      "name": "Eylül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:14",
-      "name": "Melisa",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:30",
+      "name": "Hale",
+      "city": "İzmit / Bağçeşme",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "19:30",
+      "name": "Hale",
+      "city": "İzmit",
+      "device": "Masaüstü 💻",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "19:30",
+      "name": "Hale",
+      "city": "İzmit / Bağçeşme",
+      "device": "Masaüstü 💻",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:29",
       "name": "Gül",
@@ -1385,30 +1409,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:57",
-      "name": "Ayşen",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:57",
-      "name": "Yaren",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:56",
-      "name": "Melisa",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2166,6 +2166,27 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Masaüstü 💻_İzmit / Bağçeşme_ng87",
+      "device": "Masaüstü 💻",
+      "city": "İzmit / Bağçeşme",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278658217
+    },
+    {
+      "id": "Masaüstü 💻_İzmit_3hr0",
+      "device": "Masaüstü 💻",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278658217
+    },
+    {
+      "id": "Masaüstü 💻_İzmit / Bağçeşme_azb9",
+      "device": "Masaüstü 💻",
+      "city": "İzmit / Bağçeşme",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278658211
+    },
     {
       "id": "Masaüstü 💻_İstanbul_42ag",
       "device": "Masaüstü 💻",
