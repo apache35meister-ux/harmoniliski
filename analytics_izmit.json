@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 99,
+  "totalVisits": 100,
   "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:34",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Warsaw (PL)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:34",
       "name": "Rus ESC",
@@ -736,15 +745,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1390,6 +1390,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:34",
+      "name": "Ziyaretçi (Android 📱)",
+      "city": "Warsaw (PL)",
+      "country": "Türkiye",
+      "device": "Android 📱",
+      "page": "/gebze-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:33",
       "name": "Ziyaretçi (Android 📱)",
@@ -2100,15 +2109,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:44",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Milan (IT)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2130,9 +2130,16 @@
     "Madrid (ES)": 1,
     "Yuvacık": 1,
     "İzmir": 1,
-    "Warsaw (PL)": 1
+    "Warsaw (PL)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Warsaw (PL)_g1ws",
+      "device": "Android 📱",
+      "city": "Warsaw (PL)",
+      "page": "/gebze-eskort.html",
+      "lastSeen": 1795260853571
+    },
     {
       "id": "Android 📱_İzmit_2ofl",
       "device": "Android 📱",
