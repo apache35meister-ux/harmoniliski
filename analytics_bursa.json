@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 79,
-  "totalWaClicks": 62,
+  "totalWaClicks": 63,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
@@ -36,8 +36,8 @@
     "ayşen": 2,
     "Emel": 1,
     "emel": 1,
-    "Begüm": 1,
-    "begüm": 1,
+    "Begüm": 2,
+    "begüm": 2,
     "Dila": 1,
     "dila": 1,
     "Su": 1,
@@ -47,6 +47,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:48",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:46",
       "name": "Damla",
@@ -721,18 +729,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:23",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:48",
+      "name": "Begüm",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:46",
       "name": "Damla",
@@ -1958,6 +1965,13 @@
     "Singapore (SG)": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_o72y",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254499101
+    },
     {
       "id": "iPhone 📱_Bursa_auvb",
       "device": "iPhone 📱",
