@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 55,
-  "totalWaClicks": 39,
+  "totalWaClicks": 40,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -12,8 +12,8 @@
     "açelya": 5,
     "Rus ESC": 3,
     "rus esc": 3,
-    "Melis": 3,
-    "melis": 3,
+    "Melis": 4,
+    "melis": 4,
     "Hale": 2,
     "hale": 2,
     "Selin": 6,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:33",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:32",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,17 +729,17 @@
       "device": "Mobil 📱",
       "page": "/osmangazi-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:45",
-      "name": "Açelya",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:33",
+      "name": "Melis",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "14175162850",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:10",
       "name": "Melisa",
@@ -1554,6 +1562,13 @@
     "Hamina (FI)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_gy8s",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795242785824
+    },
     {
       "id": "Mobil 📱_Bursa_f4s0",
       "device": "Mobil 📱",
