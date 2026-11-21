@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 72,
+  "totalVisits": 73,
   "totalWaClicks": 66,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:40",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -737,14 +746,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:58",
-      "name": "Su",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1278,6 +1279,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:40",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:30",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1928,7 +1938,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 36,
+    "İstanbul": 37,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -1946,32 +1956,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Mobil 📱_Bursa_mfn5",
-      "device": "Mobil 📱",
-      "city": "Bursa",
+      "id": "iPhone 📱_İstanbul_wbwz",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795253438256
-    },
-    {
-      "id": "Android 📱_İzmit_v78h",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795253431975
-    },
-    {
-      "id": "Mobil 📱_Bursa_yspw",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795253393653
-    },
-    {
-      "id": "Mobil 📱_Bursa_6xvz",
-      "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795253323132
+      "lastSeen": 1795254055677
     }
   ]
 }
