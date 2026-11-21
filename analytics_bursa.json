@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 109,
-  "totalWaClicks": 84,
+  "totalWaClicks": 85,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 7,
@@ -18,8 +18,8 @@
     "hale": 2,
     "Selin": 15,
     "selin": 15,
-    "Melisa": 4,
-    "melisa": 4,
+    "Melisa": 5,
+    "melisa": 5,
     "Hazal": 3,
     "hazal": 3,
     "Yaren": 7,
@@ -55,6 +55,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:47",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:47",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -733,17 +741,17 @@
       "device": "Android 📱",
       "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:11",
-      "name": "Yaren",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "15:47",
+      "name": "Melisa",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:47",
       "name": "Gül",
@@ -1374,14 +1382,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "23:57",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2127,6 +2127,13 @@
     "Council Bluffs (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_krgy",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795265259697
+    },
     {
       "id": "Mobil 📱_Frankfurt am Main (DE)_px69",
       "device": "Mobil 📱",
