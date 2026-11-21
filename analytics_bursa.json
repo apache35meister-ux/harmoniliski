@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 76,
+  "totalVisits": 77,
   "totalWaClicks": 60,
   "totalCalls": 0,
   "tClicks": {
@@ -47,6 +47,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:35",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:55",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -720,14 +729,6 @@
       "device": "iPhone 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "06:20",
-      "name": "Melis",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "14175162850",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1213,6 +1214,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:35",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "Dallas (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "11:55",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -1908,24 +1918,17 @@
     "Oudeschip (NL)": 1,
     "İzmir": 1,
     "Hamina (FI)": 1,
-    "Dallas (US)": 1,
+    "Dallas (US)": 2,
     "Frankfurt am Main (DE)": 2,
     "Singapore (SG)": 3
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Singapore (SG)_nwh3",
-      "device": "iPhone 📱",
-      "city": "Singapore (SG)",
-      "page": "/",
-      "lastSeen": 1795251310542
-    },
-    {
-      "id": "Masaüstü 💻_Amsterdam (NL)_adjj",
+      "id": "Masaüstü 💻_Dallas (US)_n3hf",
       "device": "Masaüstü 💻",
-      "city": "Amsterdam (NL)",
+      "city": "Dallas (US)",
       "page": "/",
-      "lastSeen": 1795251262468
+      "lastSeen": 1795253700251
     }
   ]
 }
