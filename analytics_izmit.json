@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 84,
-  "totalWaClicks": 76,
+  "totalWaClicks": 77,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -12,8 +12,8 @@
     "melis": 2,
     "Açelya": 5,
     "açelya": 5,
-    "Serap": 3,
-    "serap": 3,
+    "Serap": 4,
+    "serap": 4,
     "Selin": 13,
     "selin": 13,
     "Gül": 4,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:25",
+      "name": "Serap",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:24",
       "name": "Serap",
@@ -737,18 +745,17 @@
       "device": "iPhone 📱",
       "page": "/aksaray-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "04:21",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "Ashburn (US)",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "13:25",
+      "name": "Serap",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:24",
       "name": "Serap",
@@ -2100,18 +2107,18 @@
   },
   "activeVisitors": [
     {
+      "id": "iPhone 📱_İzmit_njht",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795256729878
+    },
+    {
       "id": "iPhone 📱_İzmit_il35",
       "device": "iPhone 📱",
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795256659693
-    },
-    {
-      "id": "iPhone 📱_İstanbul_t8k8",
-      "device": "iPhone 📱",
-      "city": "İstanbul",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795256520337
     }
   ]
 }
