@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 48,
-  "totalWaClicks": 23,
+  "totalWaClicks": 24,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 2,
@@ -23,10 +23,20 @@
     "Hazal": 1,
     "hazal": 1,
     "Yaren": 3,
-    "yaren": 3
+    "yaren": 3,
+    "VIP Escort": 1,
+    "vip escort": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "15:25",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "15:24",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -645,6 +655,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "15:25",
+      "name": "VIP Escort",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "13:10",
       "name": "Damla",
@@ -1284,6 +1302,13 @@
     "Jeffries Point (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_pjna",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795263906099
+    },
     {
       "id": "iPhone 📱_Jeffries Point (US)_gd6k",
       "device": "iPhone 📱",
