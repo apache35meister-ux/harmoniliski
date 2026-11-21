@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 44,
-  "totalWaClicks": 24,
+  "totalWaClicks": 25,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -28,10 +28,20 @@
     "Açelya": 3,
     "açelya": 3,
     "Melis": 2,
-    "melis": 2
+    "melis": 2,
+    "Sinem": 1,
+    "sinem": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:02",
+      "name": "Sinem",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:02",
       "name": "Melis",
@@ -622,6 +632,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:02",
+      "name": "Sinem",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:02",
       "name": "Melis",
@@ -1232,6 +1250,13 @@
     "Adapazarı": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_b4tt",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795280537715
+    },
     {
       "id": "iPhone 📱_Sakarya_1de0",
       "device": "iPhone 📱",
