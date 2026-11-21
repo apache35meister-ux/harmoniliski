@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 59,
-  "totalWaClicks": 46,
+  "totalWaClicks": 47,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
     "damla": 3,
-    "Eylül": 3,
-    "eylül": 3,
+    "Eylül": 4,
+    "eylül": 4,
     "Açelya": 6,
     "açelya": 6,
     "Rus ESC": 3,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:09",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:09",
       "name": "Hazal",
@@ -718,18 +726,17 @@
       "device": "Mobil 📱",
       "page": "/mudanya-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:58",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:09",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:09",
       "name": "Hazal",
@@ -1644,6 +1651,13 @@
     "Hamina (FI)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_ng01",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795244998241
+    },
     {
       "id": "Android 📱_Bursa_3bmx",
       "device": "Android 📱",
