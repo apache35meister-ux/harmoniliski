@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 56,
-  "totalWaClicks": 41,
+  "totalWaClicks": 42,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -20,8 +20,8 @@
     "selin": 7,
     "Melisa": 3,
     "melisa": 3,
-    "Hazal": 1,
-    "hazal": 1,
+    "Hazal": 2,
+    "hazal": 2,
     "Yaren": 3,
     "yaren": 3,
     "Sinem": 1,
@@ -41,6 +41,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:33",
+      "name": "Hazal",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:33",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -719,18 +727,17 @@
       "device": "iPhone 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:49",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "09:33",
+      "name": "Hazal",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "09:33",
       "name": "Selin",
@@ -1578,6 +1585,13 @@
     "Hamina (FI)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_k9oj",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795242826399
+    },
     {
       "id": "Mobil 📱_Bursa_lx24",
       "device": "Mobil 📱",
