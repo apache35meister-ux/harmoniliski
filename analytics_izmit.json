@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 97,
+  "totalVisits": 98,
   "totalWaClicks": 84,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:29",
       "name": "Eylül",
@@ -736,15 +745,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "08:05",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1390,6 +1390,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:29",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmit",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:28",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2100,15 +2109,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:02",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2119,7 +2119,7 @@
     "Amsterdam (NL)": 6,
     "Frankfurt am Main (DE)": 4,
     "Vienna (AT)": 1,
-    "İzmit": 5,
+    "İzmit": 6,
     "Bursa": 6,
     "Ankara": 3,
     "Ashburn (US)": 1,
@@ -2132,6 +2132,13 @@
     "İzmir": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmit_6j14",
+      "device": "Mobil 📱",
+      "city": "İzmit",
+      "page": "/",
+      "lastSeen": 1795260579286
+    },
     {
       "id": "Android 📱_İzmit_8ms4",
       "device": "Android 📱",
