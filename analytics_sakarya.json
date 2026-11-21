@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 39,
-  "totalWaClicks": 18,
+  "totalWaClicks": 19,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -25,11 +25,19 @@
     "i̇layda": 1,
     "Selin": 1,
     "selin": 1,
-    "Açelya": 1,
-    "açelya": 1
+    "Açelya": 2,
+    "açelya": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:28",
+      "name": "Açelya",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:24",
       "name": "Açelya",
@@ -527,6 +535,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "19:28",
+      "name": "Açelya",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:24",
       "name": "Açelya",
@@ -1045,53 +1061,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Sakarya_a8b4",
+      "id": "Android 📱_Sakarya_hq8g",
       "device": "Android 📱",
       "city": "Sakarya",
       "page": "Ana Sayfa",
-      "lastSeen": 1795278252185
-    },
-    {
-      "id": "Android 📱_Sakarya_rn98",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278239100
-    },
-    {
-      "id": "Android 📱_Sakarya_8owi",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278223361
-    },
-    {
-      "id": "Android 📱_İstanbul_l4ok",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/serdivan-eskort.html",
-      "lastSeen": 1795278212990
-    },
-    {
-      "id": "Android 📱_Sakarya_2csq",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278207714
-    },
-    {
-      "id": "Android 📱_Sakarya_zyye",
-      "device": "Android 📱",
-      "city": "Sakarya",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278169153
-    },
-    {
-      "id": "Android 📱_İstanbul_jiux",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/serdivan-eskort.html",
-      "lastSeen": 1795278155869
+      "lastSeen": 1795278504193
     }
   ]
 }
