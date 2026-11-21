@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 58,
+  "totalVisits": 59,
   "totalWaClicks": 59,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "09:47",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:05",
       "name": "Melisa",
@@ -726,15 +735,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "02:02",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1212,6 +1212,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "09:47",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "09:04",
       "name": "Ziyaretçi (Android 📱)",
@@ -1736,7 +1745,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 32,
+    "İstanbul": 33,
     "Gebze": 3,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -1752,74 +1761,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İzmit_e06h",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795241108115
-    },
-    {
-      "id": "Android 📱_İzmit_lv6s",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795241093163
-    },
-    {
-      "id": "Android 📱_İzmit_p3nc",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795241083330
-    },
-    {
-      "id": "Android 📱_İstanbul_3qer",
-      "device": "Android 📱",
+      "id": "Mobil 📱_İstanbul_hopt",
+      "device": "Mobil 📱",
       "city": "İstanbul",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795241082835
-    },
-    {
-      "id": "Android 📱_İzmit_qfqk",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795241055183
-    },
-    {
-      "id": "Android 📱_İzmit_f5i3",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795241044144
-    },
-    {
-      "id": "Android 📱_İzmit_qsnw",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795241035965
-    },
-    {
-      "id": "Android 📱_İstanbul_4mol",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795241021092
-    },
-    {
-      "id": "Android 📱_İzmit_60l8",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795240988156
-    },
-    {
-      "id": "Android 📱_İstanbul_atx1",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795240957047
+      "page": "/",
+      "lastSeen": 1795243643260
     }
   ]
 }
