@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 82,
-  "totalWaClicks": 63,
+  "totalWaClicks": 64,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
@@ -43,10 +43,20 @@
     "Su": 1,
     "su": 1,
     "Peri": 1,
-    "peri": 1
+    "peri": 1,
+    "Gül": 1,
+    "gül": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:56",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:56",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -721,18 +731,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "06:39",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Oudeschip (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/heykel-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:56",
+      "name": "Gül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:48",
       "name": "Begüm",
@@ -1976,6 +1985,13 @@
     "Gaziantep": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_x3ub",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795255003653
+    },
     {
       "id": "Mobil 📱_Bursa_1prn",
       "device": "Mobil 📱",
