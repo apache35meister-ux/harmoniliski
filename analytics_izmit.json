@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 148,
-  "totalWaClicks": 101,
+  "totalWaClicks": 102,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -64,10 +64,19 @@
     "🏙️ Alikahya — Yuvam Akarca & Kartepe Sınırı Profilleri": 1,
     "🏙️ alikahya — yuvam akarca & kartepe sınırı profilleri": 1,
     "Dila": 1,
-    "dila": 1
+    "dila": 1,
+    "yeliz": 2
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:27",
+      "name": "yeliz",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:26",
       "name": "Emel",
@@ -756,18 +765,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:52",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "19:27",
+      "name": "yeliz",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "19:26",
       "name": "Emel",
@@ -1395,14 +1403,6 @@
     {
       "time": "02:46",
       "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:32",
-      "name": "Zeynep",
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905301020804",
@@ -2163,6 +2163,13 @@
     "Cupertino (US)": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_djg3",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278430660
+    },
     {
       "id": "Android 📱_İzmit_gu98",
       "device": "Android 📱",
