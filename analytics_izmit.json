@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 182,
-  "totalWaClicks": 126,
+  "totalWaClicks": 127,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -55,8 +55,8 @@
     "funda": 2,
     "Anna": 1,
     "anna": 1,
-    "Eylül": 3,
-    "eylül": 3,
+    "Eylül": 4,
+    "eylül": 4,
     "Buket": 1,
     "buket": 1,
     "VIP Escort": 1,
@@ -78,6 +78,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:24",
+      "name": "Eylül",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:23",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -757,18 +765,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:55",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:24",
+      "name": "Eylül",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:19",
       "name": "Hazal",
@@ -1399,14 +1406,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "05:10",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2165,6 +2164,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_wpjs",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795285483973
+    },
     {
       "id": "Mobil 📱_İstanbul_smxu",
       "device": "Mobil 📱",
