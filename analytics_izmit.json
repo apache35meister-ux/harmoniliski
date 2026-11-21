@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 74,
-  "totalWaClicks": 67,
+  "totalWaClicks": 68,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -46,8 +46,8 @@
     "ceren": 1,
     "Trisha": 1,
     "trisha": 1,
-    "Sena": 1,
-    "sena": 1,
+    "Sena": 2,
+    "sena": 2,
     "Aylin": 2,
     "aylin": 2,
     "Emel": 1,
@@ -60,6 +60,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:41",
+      "name": "Sena",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -738,18 +746,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:59",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "12:41",
+      "name": "Sena",
+      "city": "İzmit",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "Açelya",
@@ -1973,6 +1980,13 @@
     "Körfez": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İzmit_x553",
+      "device": "iPhone 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254089814
+    },
     {
       "id": "Masaüstü 💻_İzmit_ps6n",
       "device": "Masaüstü 💻",
