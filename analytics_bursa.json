@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 96,
-  "totalWaClicks": 77,
+  "totalWaClicks": 78,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
     "damla": 4,
-    "Eylül": 5,
-    "eylül": 5,
+    "Eylül": 6,
+    "eylül": 6,
     "Açelya": 9,
     "açelya": 9,
     "Rus ESC": 4,
@@ -53,6 +53,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:37",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:37",
       "name": "Sena",
@@ -725,18 +733,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:32",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:37",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:37",
       "name": "Sena",
@@ -2095,6 +2102,13 @@
     "Zürich (CH)": 2
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Bursa_p5xr",
+      "device": "iPhone 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795261061000
+    },
     {
       "id": "iPhone 📱_Bursa_p2v1",
       "device": "iPhone 📱",
