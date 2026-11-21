@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 133,
+  "totalVisits": 134,
   "totalWaClicks": 106,
   "totalCalls": 0,
   "tClicks": {
@@ -61,6 +61,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:24",
       "name": "Selin",
@@ -736,15 +745,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:12",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1390,6 +1390,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:25",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İzmir",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:24",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2100,15 +2109,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:23",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2119,7 +2119,7 @@
     "Milan (IT)": 6,
     "Konya": 2,
     "Oudeschip (NL)": 1,
-    "İzmir": 3,
+    "İzmir": 4,
     "Hamina (FI)": 1,
     "Dallas (US)": 2,
     "Frankfurt am Main (DE)": 12,
@@ -2132,6 +2132,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İzmir_5qfq",
+      "device": "Mobil 📱",
+      "city": "İzmir",
+      "page": "/",
+      "lastSeen": 1795278305293
+    },
     {
       "id": "iPhone 📱_Bursa_gm85",
       "device": "iPhone 📱",
