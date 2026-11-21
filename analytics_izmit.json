@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 71,
+  "totalVisits": 72,
   "totalWaClicks": 66,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:30",
       "name": "Damla",
@@ -736,14 +745,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "02:57",
-      "name": "Hazal",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1277,6 +1278,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "12:30",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:29",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1926,7 +1936,7 @@
     "Frankfurt am Main (DE)": 3,
     "Vienna (AT)": 1,
     "İzmit": 3,
-    "Bursa": 4,
+    "Bursa": 5,
     "Ankara": 2,
     "Ashburn (US)": 1,
     "Aksaray": 2,
@@ -1935,6 +1945,13 @@
     "Körfez": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Bursa_mfn5",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/",
+      "lastSeen": 1795253438256
+    },
     {
       "id": "Android 📱_İzmit_v78h",
       "device": "Android 📱",
