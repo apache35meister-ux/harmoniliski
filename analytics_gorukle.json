@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 8,
+  "totalVisits": 9,
   "totalWaClicks": 32,
   "totalCalls": 0,
   "tClicks": {
@@ -33,6 +33,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:35",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "San Francisco (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "02:40",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -622,6 +631,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:35",
+      "name": "Ziyaretçi (Masaüstü 💻)",
+      "city": "San Francisco (US)",
+      "country": "Türkiye",
+      "device": "Masaüstü 💻",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "02:40",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Bursa",
@@ -695,141 +713,16 @@
     }
   ],
   "cityCounts": {
-    "Bursa": 8
+    "Bursa": 8,
+    "San Francisco (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_Bursa_n0lm",
+      "id": "Masaüstü 💻_San Francisco (US)_v9kw",
       "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/fsm-bulvari-eskort.html",
-      "lastSeen": 1795218025886
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_am2p",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795218017912
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_3r76",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217986457
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_bhhj",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217986457
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_8jox",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217986456
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_eudq",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217963361
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_1t4z",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217963360
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_stmt",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217963360
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_aobu",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
+      "city": "San Francisco (US)",
       "page": "/",
-      "lastSeen": 1795217960652
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_avzg",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217953013
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_dzx6",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217953012
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_99rl",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217953012
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_m59n",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217896857
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_agxg",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217896857
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_9cbk",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217896855
-    },
-    {
-      "id": "Masaüstü 💻_Bursa_pw8e",
-      "device": "Masaüstü 💻",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795217861728
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_r6dw",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217852211
-    },
-    {
-      "id": "Masaüstü 💻_Bursa / Nilüfer_yb0t",
-      "device": "Masaüstü 💻",
-      "city": "Bursa / Nilüfer",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217852210
-    },
-    {
-      "id": "Masaüstü 💻_Görükle_uou5",
-      "device": "Masaüstü 💻",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795217852207
+      "lastSeen": 1795221342900
     }
   ]
 }
