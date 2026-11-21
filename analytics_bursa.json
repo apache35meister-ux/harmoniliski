@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 42,
+  "totalVisits": 43,
   "totalWaClicks": 28,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:39",
       "name": "Açelya",
@@ -866,6 +875,15 @@
   ],
   "cityVisits": [
     {
+      "time": "07:54",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "07:39",
       "name": "Ziyaretçi (Mobil 📱)",
       "city": "Hamina (FI)",
@@ -1247,7 +1265,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 6,
-    "Bursa": 19,
+    "Bursa": 20,
     "Amsterdam (NL)": 7,
     "Milan (IT)": 1,
     "Konya": 1,
@@ -1257,25 +1275,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_rx93",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795235955678
-    },
-    {
-      "id": "Mobil 📱_Hamina (FI)_rava",
-      "device": "Mobil 📱",
-      "city": "Hamina (FI)",
-      "page": "/inegol-eskort.html",
-      "lastSeen": 1795235953426
-    },
-    {
-      "id": "Mobil 📱_Bursa_nesv",
+      "id": "Mobil 📱_Bursa_x3jb",
       "device": "Mobil 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795235937774
+      "lastSeen": 1795236890811
     }
   ]
 }
