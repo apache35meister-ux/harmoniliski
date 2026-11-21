@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 134,
+  "totalVisits": 135,
   "totalWaClicks": 110,
   "totalCalls": 0,
   "tClicks": {
@@ -67,6 +67,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:26",
       "name": "Gül",
@@ -739,15 +748,6 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "14:33",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "/ozluce-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1393,6 +1393,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:27",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Frankfurt am Main (DE)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:25",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2103,15 +2112,6 @@
       "device": "Mobil 📱",
       "page": "/heykel-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "09:32",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2125,7 +2125,7 @@
     "İzmir": 4,
     "Hamina (FI)": 1,
     "Dallas (US)": 2,
-    "Frankfurt am Main (DE)": 12,
+    "Frankfurt am Main (DE)": 13,
     "Singapore (SG)": 6,
     "Gaziantep": 1,
     "Bandırma": 2,
@@ -2135,6 +2135,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Frankfurt am Main (DE)_vyh4",
+      "device": "Mobil 📱",
+      "city": "Frankfurt am Main (DE)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795278426041
+    },
     {
       "id": "iPhone 📱_Bursa_d27y",
       "device": "iPhone 📱",
@@ -2183,27 +2190,6 @@
       "city": "Frankfurt am Main (DE)",
       "page": "/",
       "lastSeen": 1795278277604
-    },
-    {
-      "id": "iPhone 📱_Bursa_oqoz",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278244208
-    },
-    {
-      "id": "iPhone 📱_Bursa_7exe",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278235689
-    },
-    {
-      "id": "iPhone 📱_Bursa_9ylv",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795278222726
     }
   ]
 }
