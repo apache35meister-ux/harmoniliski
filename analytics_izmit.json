@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 190,
-  "totalWaClicks": 138,
+  "totalWaClicks": 139,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -14,8 +14,8 @@
     "açelya": 12,
     "Serap": 5,
     "serap": 5,
-    "Selin": 22,
-    "selin": 22,
+    "Selin": 23,
+    "selin": 23,
     "Gül": 7,
     "gül": 7,
     "Sinem": 2,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:36",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:36",
       "name": "Ziyaretçi (Android 📱)",
@@ -756,17 +764,17 @@
       "device": "Android 📱",
       "phone": "905319222689",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "19:26",
-      "name": "Emel",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:36",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:35",
       "name": "Melike",
@@ -1397,14 +1405,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:05",
-      "name": "Melisa",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2164,6 +2164,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_c1g8",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795286173344
+    },
+    {
       "id": "Android 📱_İzmit_ty4j",
       "device": "Android 📱",
       "city": "İzmit",
@@ -2239,13 +2246,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795286003191
-    },
-    {
-      "id": "Android 📱_Gebze_y4z7",
-      "device": "Android 📱",
-      "city": "Gebze",
-      "page": "/golcuk-eskort.html",
-      "lastSeen": 1795285989714
     }
   ]
 }
