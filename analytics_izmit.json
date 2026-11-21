@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 50,
+  "totalVisits": 51,
   "totalWaClicks": 50,
   "totalCalls": 0,
   "tClicks": {
@@ -55,6 +55,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "07:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -725,14 +734,6 @@
       "device": "Android 📱",
       "phone": "905542027476",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "00:51",
-      "name": "Damla",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1138,6 +1139,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "07:58",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "07:57",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1590,7 +1600,7 @@
     }
   ],
   "cityCounts": {
-    "İstanbul": 24,
+    "İstanbul": 25,
     "Gebze": 3,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -1605,6 +1615,13 @@
     "Denver (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_İstanbul_gbwu",
+      "device": "Mobil 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795237109822
+    },
     {
       "id": "Mobil 📱_İstanbul_n8n7",
       "device": "Mobil 📱",
