@@ -1,11 +1,11 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 158,
-  "totalWaClicks": 126,
+  "totalWaClicks": 127,
   "totalCalls": 0,
   "tClicks": {
-    "Damla": 10,
-    "damla": 10,
+    "Damla": 11,
+    "damla": 11,
     "Eylül": 7,
     "eylül": 7,
     "Açelya": 12,
@@ -69,6 +69,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:04",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:03",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -743,18 +751,17 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:44",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:04",
+      "name": "Damla",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:45",
       "name": "İzel",
@@ -1385,14 +1392,6 @@
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:09",
-      "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2140,6 +2139,13 @@
     "Toronto (CA)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_xnkn",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795284255842
+    },
     {
       "id": "Mobil 📱_Toronto (CA)_s5yd",
       "device": "Mobil 📱",
