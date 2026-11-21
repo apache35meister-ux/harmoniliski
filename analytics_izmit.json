@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 193,
-  "totalWaClicks": 143,
+  "totalWaClicks": 144,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 4,
@@ -32,8 +32,8 @@
     "zeynep": 1,
     "Melisa": 9,
     "melisa": 9,
-    "Yaren": 1,
-    "yaren": 1,
+    "Yaren": 2,
+    "yaren": 2,
     "Ayşen": 1,
     "ayşen": 1,
     "Şebnem": 1,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:40",
+      "name": "Yaren",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:39",
       "name": "Ziyaretçi (Android 📱)",
@@ -757,17 +765,17 @@
       "device": "Masaüstü 💻",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:29",
-      "name": "Gül",
-      "city": "İzmit / Körfez",
-      "device": "Masaüstü 💻",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:40",
+      "name": "Yaren",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:39",
       "name": "Serap",
@@ -1398,14 +1406,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "11:51",
-      "name": "Gül",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2165,6 +2165,13 @@
   },
   "activeVisitors": [
     {
+      "id": "Android 📱_İzmit_ncxs",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795286437388
+    },
+    {
       "id": "Android 📱_Gebze_0fz5",
       "device": "Android 📱",
       "city": "Gebze",
@@ -2191,13 +2198,6 @@
       "city": "İzmit",
       "page": "Ana Sayfa",
       "lastSeen": 1795286287996
-    },
-    {
-      "id": "Android 📱_İzmit_bvqk",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "/kadikoy-moda-bagimsiz-vip-eskort.html",
-      "lastSeen": 1795286214201
     }
   ]
 }
