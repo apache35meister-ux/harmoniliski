@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 68,
-  "totalWaClicks": 56,
+  "totalWaClicks": 57,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -16,8 +16,8 @@
     "melis": 4,
     "Hale": 2,
     "hale": 2,
-    "Selin": 11,
-    "selin": 11,
+    "Selin": 12,
+    "selin": 12,
     "Melisa": 3,
     "melisa": 3,
     "Hazal": 3,
@@ -45,6 +45,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:46",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:46",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -719,18 +727,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:47",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:46",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:35",
       "name": "Selin",
@@ -1808,6 +1815,13 @@
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_20p2",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795247215720
+    },
     {
       "id": "Mobil 📱_Amsterdam (NL)_5j2k",
       "device": "Mobil 📱",
