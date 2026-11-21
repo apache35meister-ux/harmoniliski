@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 37,
-  "totalWaClicks": 12,
+  "totalWaClicks": 13,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -18,10 +18,20 @@
     "Serap": 1,
     "serap": 1,
     "Begüm": 1,
-    "begüm": 1
+    "begüm": 1,
+    "Damla": 1,
+    "damla": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "18:44",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:44",
       "name": "Begüm",
@@ -453,6 +463,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "18:44",
+      "name": "Damla",
+      "city": "Sakarya",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "18:44",
       "name": "Begüm",
@@ -904,6 +922,13 @@
     "Adapazarı": 3
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Sakarya_3orq",
+      "device": "Android 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795275846872
+    },
     {
       "id": "Android 📱_Sakarya_p2gc",
       "device": "Android 📱",
