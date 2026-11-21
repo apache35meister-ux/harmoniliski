@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 206,
-  "totalWaClicks": 154,
+  "totalWaClicks": 155,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 5,
@@ -32,8 +32,8 @@
     "zeynep": 1,
     "Melisa": 9,
     "melisa": 9,
-    "Yaren": 2,
-    "yaren": 2,
+    "Yaren": 3,
+    "yaren": 3,
     "Ayşen": 1,
     "ayşen": 1,
     "Şebnem": 1,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:24",
+      "name": "Yaren",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:24",
       "name": "Ziyaretçi (Android 📱)",
@@ -755,18 +763,17 @@
       "device": "Android 📱",
       "page": "/mecidiyekoy-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "20:01",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Bursa",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:24",
+      "name": "Yaren",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:23",
       "name": "Hazal",
@@ -1397,14 +1404,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "13:18",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2164,6 +2163,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_cla8",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795289050200
+    },
     {
       "id": "Android 📱_İstanbul_smom",
       "device": "Android 📱",
