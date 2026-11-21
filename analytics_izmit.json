@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 199,
-  "totalWaClicks": 147,
+  "totalWaClicks": 148,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 5,
     "i̇zel": 5,
-    "Damla": 12,
-    "damla": 12,
+    "Damla": 13,
+    "damla": 13,
     "Melis": 2,
     "melis": 2,
     "Açelya": 14,
@@ -83,6 +83,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "22:20",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:19",
       "name": "İzel",
@@ -759,18 +767,17 @@
       "device": "Masaüstü 💻",
       "page": "/yahya-kaptan-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "19:38",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "/izmit-merkez-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "22:20",
+      "name": "Damla",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "22:19",
       "name": "İzel",
@@ -1401,14 +1408,6 @@
       "city": "İzmit",
       "device": "iPhone 📱",
       "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "12:41",
-      "name": "Sena",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2168,6 +2167,13 @@
     "Şanlıurfa": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_vhzt",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795288824158
+    },
     {
       "id": "Android 📱_İzmit_ob2g",
       "device": "Android 📱",
