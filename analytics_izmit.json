@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 178,
+  "totalVisits": 179,
   "totalWaClicks": 125,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:00",
       "name": "Ziyaretçi (Android 📱)",
@@ -757,14 +766,6 @@
       "device": "iPhone 📱",
       "page": "/izmit-merkez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:54",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1410,6 +1411,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "21:12",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "21:00",
       "name": "Ziyaretçi (Android 📱)",
@@ -2120,19 +2130,10 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "14:33",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Warsaw (PL)",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/gebze-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 82,
+    "İstanbul": 83,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2165,46 +2166,11 @@
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_İstanbul_buob",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795284047560
-    },
-    {
-      "id": "Android 📱_İzmit_oepl",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795283972366
-    },
-    {
-      "id": "Android 📱_Frankfurt am Main (DE)_653g",
-      "device": "Android 📱",
-      "city": "Frankfurt am Main (DE)",
-      "page": "/izmit-merkez-eskort.html",
-      "lastSeen": 1795283964663
-    },
-    {
-      "id": "Android 📱_İstanbul_r1b0",
-      "device": "Android 📱",
-      "city": "İstanbul",
-      "page": "/yahya-kaptan-eskort.html",
-      "lastSeen": 1795283954556
-    },
-    {
-      "id": "Android 📱_İzmit_b5ky",
-      "device": "Android 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795283899889
-    },
-    {
-      "id": "Mobil 📱_İstanbul_tzvd",
+      "id": "Mobil 📱_İstanbul_xh2t",
       "device": "Mobil 📱",
       "city": "İstanbul",
       "page": "/",
-      "lastSeen": 1795283893078
+      "lastSeen": 1795284779206
     }
   ]
 }
