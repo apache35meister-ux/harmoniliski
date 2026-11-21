@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207863266,
-  "totalVisits": 12,
+  "totalVisits": 13,
   "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
@@ -35,6 +35,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Council Bluffs (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "12:41",
       "name": "Sinem",
@@ -724,6 +733,15 @@
   ],
   "cityVisits": [
     {
+      "time": "12:45",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Council Bluffs (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "12:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "Dallas (US)",
@@ -835,43 +853,16 @@
   "cityCounts": {
     "Bursa": 9,
     "Dallas (US)": 2,
-    "İstanbul": 1
+    "İstanbul": 1,
+    "Council Bluffs (US)": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Görükle_vt5g",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254118280
-    },
-    {
-      "id": "Masaüstü 💻_Dallas (US)_1t0z",
-      "device": "Masaüstü 💻",
-      "city": "Dallas (US)",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254091795
-    },
-    {
-      "id": "Android 📱_Görükle_mp43",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254080987
-    },
-    {
-      "id": "Android 📱_Görükle_wyey",
-      "device": "Android 📱",
-      "city": "Görükle",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795254076020
-    },
-    {
-      "id": "Mobil 📱_İstanbul_uudl",
+      "id": "Mobil 📱_Council Bluffs (US)_95ww",
       "device": "Mobil 📱",
-      "city": "İstanbul",
+      "city": "Council Bluffs (US)",
       "page": "/",
-      "lastSeen": 1795254045659
+      "lastSeen": 1795254346886
     }
   ]
 }
