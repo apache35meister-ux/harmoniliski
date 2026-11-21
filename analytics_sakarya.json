@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 19,
+  "totalVisits": 20,
   "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
@@ -13,6 +13,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:37",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -285,6 +294,15 @@
   ],
   "cityVisits": [
     {
+      "time": "03:38",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Ashburn (US)",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
       "time": "03:37",
       "name": "Ziyaretçi (Masaüstü 💻)",
       "city": "New York City (US)",
@@ -464,13 +482,20 @@
     "San Francisco (US)": 1,
     "The Dalles (US)": 1,
     "Romulus (US)": 1,
-    "Ashburn (US)": 2,
+    "Ashburn (US)": 3,
     "Dallas (US)": 1,
     "Los Angeles (US)": 1,
     "Santa Clara (US)": 1,
     "Floris (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Mobil 📱_Ashburn (US)_1jvg",
+      "device": "Mobil 📱",
+      "city": "Ashburn (US)",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795221510446
+    },
     {
       "id": "Masaüstü 💻_New York City (US)_kfwn",
       "device": "Masaüstü 💻",
