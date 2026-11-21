@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207942546,
   "totalVisits": 185,
-  "totalWaClicks": 132,
+  "totalWaClicks": 133,
   "totalCalls": 0,
   "tClicks": {
     "İzel": 3,
@@ -14,8 +14,8 @@
     "açelya": 10,
     "Serap": 5,
     "serap": 5,
-    "Selin": 21,
-    "selin": 21,
+    "Selin": 22,
+    "selin": 22,
     "Gül": 7,
     "gül": 7,
     "Sinem": 2,
@@ -79,6 +79,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "21:33",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:33",
       "name": "Ziyaretçi (Android 📱)",
@@ -754,18 +762,17 @@
       "device": "Masaüstü 💻",
       "page": "/golcuk-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "17:12",
-      "name": "Ziyaretçi (Android 📱)",
-      "city": "Ankara",
-      "country": "Türkiye",
-      "device": "Android 📱",
-      "page": "/cesmealti-eskort.html",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "21:33",
+      "name": "Selin",
+      "city": "İzmit",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "21:25",
       "name": "Tuba",
@@ -1396,14 +1403,6 @@
       "city": "İzmit",
       "device": "Android 📱",
       "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "09:03",
-      "name": "Rus ESC",
-      "city": "İzmit",
-      "device": "Android 📱",
-      "phone": "905301020804",
       "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
@@ -2162,6 +2161,13 @@
     "Yalova": 2
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_İzmit_szt1",
+      "device": "Android 📱",
+      "city": "İzmit",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795286003191
+    },
     {
       "id": "Android 📱_Gebze_y4z7",
       "device": "Android 📱",
