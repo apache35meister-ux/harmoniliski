@@ -1,18 +1,35 @@
 {
   "resetEpoch": 1795207888525,
-  "totalVisits": 16,
-  "totalWaClicks": 5,
+  "totalVisits": 17,
+  "totalWaClicks": 6,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
     "eylül": 1,
     "İrem": 1,
     "i̇rem": 1,
-    "VIP Escort": 3,
-    "vip escort": 3
+    "VIP Escort": 4,
+    "vip escort": 4
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "03:28",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Floris (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
+    {
+      "time": "03:28",
+      "name": "VIP Escort",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "03:27",
       "name": "VIP Escort",
@@ -200,6 +217,14 @@
   ],
   "callLogs": [
     {
+      "time": "03:28",
+      "name": "VIP Escort",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
       "time": "03:27",
       "name": "VIP Escort",
       "city": "Sakarya",
@@ -241,6 +266,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "03:28",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Floris (US)",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "03:27",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -397,9 +431,24 @@
     "Ashburn (US)": 2,
     "Dallas (US)": 1,
     "Los Angeles (US)": 1,
-    "Santa Clara (US)": 1
+    "Santa Clara (US)": 1,
+    "Floris (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Floris (US)_pcmf",
+      "device": "iPhone 📱",
+      "city": "Floris (US)",
+      "page": "/",
+      "lastSeen": 1795220880932
+    },
+    {
+      "id": "iPhone 📱_Sakarya_rlcd",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795220880887
+    },
     {
       "id": "iPhone 📱_Sakarya_2dck",
       "device": "iPhone 📱",
