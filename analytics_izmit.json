@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 159,
+  "totalVisits": 160,
   "totalWaClicks": 115,
   "totalCalls": 0,
   "tClicks": {
@@ -78,6 +78,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "19:53",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Yalova",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:47",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -763,15 +772,6 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "15:28",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Newark (US)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
@@ -1417,6 +1417,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "19:53",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Yalova",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "19:47",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2127,15 +2136,6 @@
       "device": "Android 📱",
       "page": "/gebze-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "13:09",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2167,36 +2167,16 @@
     "Dallas (US)": 1,
     "El Segundo (US)": 2,
     "Zürich (CH)": 1,
-    "Cupertino (US)": 2
+    "Cupertino (US)": 2,
+    "Yalova": 1
   },
   "activeVisitors": [
     {
-      "id": "iPhone 📱_Bursa_s3z6",
+      "id": "iPhone 📱_Yalova_tqei",
       "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795279635563
-    },
-    {
-      "id": "iPhone 📱_İzmit_afwh",
-      "device": "iPhone 📱",
-      "city": "İzmit",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795279535086
-    },
-    {
-      "id": "iPhone 📱_Bursa_79gs",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795279533513
-    },
-    {
-      "id": "iPhone 📱_Bursa_mvx4",
-      "device": "iPhone 📱",
-      "city": "Bursa",
-      "page": "/gebze-eskort.html",
-      "lastSeen": 1795279497788
+      "city": "Yalova",
+      "page": "/",
+      "lastSeen": 1795280003381
     }
   ]
 }
