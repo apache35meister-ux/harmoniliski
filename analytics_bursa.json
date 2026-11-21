@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 156,
-  "totalWaClicks": 125,
+  "totalWaClicks": 126,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 10,
@@ -52,8 +52,8 @@
     "sena": 1,
     "İlayda": 1,
     "i̇layda": 1,
-    "İzel": 2,
-    "i̇zel": 2,
+    "İzel": 3,
+    "i̇zel": 3,
     "Şebnem": 2,
     "şebnem": 2,
     "Nergis": 1,
@@ -69,6 +69,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:45",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:43",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -743,17 +751,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "16:40",
-      "name": "Sinem",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905542027476",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "20:45",
+      "name": "İzel",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:21",
       "name": "VIP Escort",
@@ -1381,14 +1389,6 @@
     {
       "time": "10:09",
       "name": "Eylül",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905318539371",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "10:09",
-      "name": "Hazal",
       "city": "Bursa",
       "device": "Android 📱",
       "phone": "905318539371",
@@ -2138,6 +2138,13 @@
     "Adapazarı": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_xhg1",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795283104509
+    },
     {
       "id": "Mobil 📱_Bursa_fj6w",
       "device": "Mobil 📱",
