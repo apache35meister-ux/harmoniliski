@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 61,
-  "totalWaClicks": 49,
+  "totalVisits": 62,
+  "totalWaClicks": 50,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 3,
@@ -16,8 +16,8 @@
     "melis": 4,
     "Hale": 2,
     "hale": 2,
-    "Selin": 8,
-    "selin": 8,
+    "Selin": 9,
+    "selin": 9,
     "Melisa": 3,
     "melisa": 3,
     "Hazal": 3,
@@ -45,6 +45,23 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "10:11",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
+    {
+      "time": "10:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:11",
       "name": "Su",
@@ -711,26 +728,17 @@
       "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "01:06",
-      "name": "Hazal",
-      "city": "Bursa",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "01:05",
-      "name": "Ziyaretçi (iPhone 📱)",
-      "city": "İstanbul",
-      "country": "Türkiye",
-      "device": "iPhone 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "callLogs": [
+    {
+      "time": "10:11",
+      "name": "Selin",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905319222689",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "10:11",
       "name": "Su",
@@ -1125,6 +1133,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "10:11",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bursa",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "/heykel-eskort.html",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "10:11",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -1678,7 +1695,7 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 8,
-    "Bursa": 31,
+    "Bursa": 32,
     "Amsterdam (NL)": 9,
     "Milan (IT)": 1,
     "Konya": 2,
@@ -1689,6 +1706,20 @@
     "Frankfurt am Main (DE)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_d6fr",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795245079672
+    },
+    {
+      "id": "Mobil 📱_Bursa_hau2",
+      "device": "Mobil 📱",
+      "city": "Bursa",
+      "page": "/heykel-eskort.html",
+      "lastSeen": 1795245075378
+    },
     {
       "id": "Android 📱_Bursa_kw0t",
       "device": "Android 📱",
