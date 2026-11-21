@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 30,
+  "totalVisits": 29,
   "totalWaClicks": 21,
   "totalCalls": 0,
   "tClicks": {
@@ -28,20 +28,11 @@
   "tCalls": {},
   "logs": [
     {
-      "time": "03:10",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "The Dalles (US)",
+      "time": "03:12",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:09",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -638,20 +629,11 @@
   ],
   "cityVisits": [
     {
-      "time": "03:10",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "The Dalles (US)",
+      "time": "03:12",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "Bursa",
       "country": "Türkiye",
-      "device": "Masaüstü 💻",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "03:09",
-      "name": "Ziyaretçi (Masaüstü 💻)",
-      "city": "İzmir",
-      "country": "Türkiye",
-      "device": "Masaüstü 💻",
+      "device": "iPhone 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
     },
@@ -911,33 +893,17 @@
   "cityCounts": {
     "Ankara": 5,
     "İstanbul": 5,
-    "Bursa": 10,
+    "Bursa": 11,
     "Amsterdam (NL)": 7,
-    "Milan (IT)": 1,
-    "İzmir": 1,
-    "The Dalles (US)": 1
+    "Milan (IT)": 1
   },
   "activeVisitors": [
     {
-      "id": "Masaüstü 💻_The Dalles (US)_kfbv",
-      "device": "Masaüstü 💻",
-      "city": "The Dalles (US)",
-      "page": "/",
-      "lastSeen": 1795219821229
-    },
-    {
-      "id": "Masaüstü 💻_İzmir_vbih",
-      "device": "Masaüstü 💻",
-      "city": "İzmir",
-      "page": "/",
-      "lastSeen": 1795219742783
-    },
-    {
-      "id": "iPhone 📱_Bursa_zscu",
+      "id": "iPhone 📱_Bursa_iz6g",
       "device": "iPhone 📱",
       "city": "Bursa",
       "page": "/",
-      "lastSeen": 1795219684599
+      "lastSeen": 1795219968213
     }
   ]
 }
