@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207863266,
   "totalVisits": 12,
-  "totalWaClicks": 35,
+  "totalWaClicks": 36,
   "totalCalls": 0,
   "tClicks": {
     "İlayda": 3,
@@ -14,8 +14,8 @@
     "rus esc": 1,
     "VIP Escort": 18,
     "vip escort": 18,
-    "Sinem": 1,
-    "sinem": 1,
+    "Sinem": 2,
+    "sinem": 2,
     "Yeliz": 1,
     "yeliz": 1,
     "Pınar": 1,
@@ -35,6 +35,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "12:41",
+      "name": "Sinem",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "Ziyaretçi (Masaüstü 💻)",
@@ -425,6 +433,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "12:41",
+      "name": "Sinem",
+      "city": "Görükle",
+      "device": "Android 📱",
+      "phone": "905542027476",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "12:41",
       "name": "İlayda",
@@ -822,6 +838,13 @@
     "İstanbul": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Görükle_vt5g",
+      "device": "Android 📱",
+      "city": "Görükle",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795254118280
+    },
     {
       "id": "Masaüstü 💻_Dallas (US)_1t0z",
       "device": "Masaüstü 💻",
