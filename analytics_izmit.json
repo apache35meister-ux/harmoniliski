@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207942546,
-  "totalVisits": 90,
+  "totalVisits": 91,
   "totalWaClicks": 79,
   "totalCalls": 0,
   "tClicks": {
@@ -60,6 +60,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "13:52",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -738,14 +747,6 @@
       "device": "iPhone 📱",
       "page": "/korfez-eskort.html",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "05:10",
-      "name": "Selin",
-      "city": "İzmit",
-      "device": "iPhone 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1383,6 +1384,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "13:52",
+      "name": "Ziyaretçi (iPhone 📱)",
+      "city": "İstanbul",
+      "country": "Türkiye",
+      "device": "iPhone 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "13:51",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -2093,19 +2103,10 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:50",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Frankfurt am Main (DE)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
-    "İstanbul": 49,
+    "İstanbul": 50,
     "Gebze": 4,
     "Moscow (RU)": 1,
     "Milan (IT)": 5,
@@ -2123,6 +2124,13 @@
     "Madrid (ES)": 1
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_İstanbul_emgc",
+      "device": "iPhone 📱",
+      "city": "İstanbul",
+      "page": "/",
+      "lastSeen": 1795258352670
+    },
     {
       "id": "iPhone 📱_İstanbul_lj4z",
       "device": "iPhone 📱",
