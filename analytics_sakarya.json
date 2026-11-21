@@ -1,7 +1,7 @@
 {
   "resetEpoch": 1795207888525,
   "totalVisits": 48,
-  "totalWaClicks": 29,
+  "totalWaClicks": 30,
   "totalCalls": 0,
   "tClicks": {
     "Eylül": 1,
@@ -36,10 +36,20 @@
     "Roza": 1,
     "roza": 1,
     "Ukraynali Lena": 1,
-    "ukraynali lena": 1
+    "ukraynali lena": 1,
+    "Merve": 1,
+    "merve": 1
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "20:08",
+      "name": "Merve",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:08",
       "name": "Ziyaretçi (iPhone 📱)",
@@ -706,6 +716,14 @@
     }
   ],
   "callLogs": [
+    {
+      "time": "20:08",
+      "name": "Merve",
+      "city": "Sakarya",
+      "device": "iPhone 📱",
+      "phone": "905301020804",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "20:07",
       "name": "Ukraynali Lena",
@@ -1392,6 +1410,13 @@
     "Adapazarı": 3
   },
   "activeVisitors": [
+    {
+      "id": "iPhone 📱_Sakarya_c8li",
+      "device": "iPhone 📱",
+      "city": "Sakarya",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795280914578
+    },
     {
       "id": "iPhone 📱_İstanbul_bxdl",
       "device": "iPhone 📱",
