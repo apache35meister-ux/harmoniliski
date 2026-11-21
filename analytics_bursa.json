@@ -1,13 +1,13 @@
 {
   "resetEpoch": 1795207927010,
   "totalVisits": 93,
-  "totalWaClicks": 73,
+  "totalWaClicks": 74,
   "totalCalls": 0,
   "tClicks": {
     "Damla": 4,
     "damla": 4,
-    "Eylül": 4,
-    "eylül": 4,
+    "Eylül": 5,
+    "eylül": 5,
     "Açelya": 9,
     "açelya": 9,
     "Rus ESC": 4,
@@ -51,6 +51,14 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:33",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Selin",
@@ -724,17 +732,17 @@
       "device": "Android 📱",
       "phone": "14175162850",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:22",
-      "name": "Damla",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905301020804",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
+    {
+      "time": "14:33",
+      "name": "Eylül",
+      "city": "Bursa",
+      "device": "Android 📱",
+      "phone": "905318539371",
+      "type": "💬 WhatsApp Randevu Talebi"
+    },
     {
       "time": "14:33",
       "name": "Selin",
@@ -2060,6 +2068,13 @@
     "Ashburn (US)": 1
   },
   "activeVisitors": [
+    {
+      "id": "Android 📱_Bursa_15d1",
+      "device": "Android 📱",
+      "city": "Bursa",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795260814367
+    },
     {
       "id": "Android 📱_Bursa_oj2q",
       "device": "Android 📱",
