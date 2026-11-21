@@ -1,6 +1,6 @@
 {
   "resetEpoch": 1795207927010,
-  "totalVisits": 90,
+  "totalVisits": 91,
   "totalWaClicks": 72,
   "totalCalls": 0,
   "tClicks": {
@@ -51,6 +51,15 @@
   },
   "tCalls": {},
   "logs": [
+    {
+      "time": "14:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bandırma",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:17",
       "name": "Rus ESC",
@@ -722,14 +731,6 @@
       "device": "Android 📱",
       "phone": "905318539371",
       "type": "💬 WhatsApp Randevu Talebi"
-    },
-    {
-      "time": "08:20",
-      "name": "Selin",
-      "city": "Bursa",
-      "device": "Android 📱",
-      "phone": "905319222689",
-      "type": "💬 WhatsApp Randevu Talebi"
     }
   ],
   "callLogs": [
@@ -1311,6 +1312,15 @@
     }
   ],
   "cityVisits": [
+    {
+      "time": "14:26",
+      "name": "Ziyaretçi (Mobil 📱)",
+      "city": "Bandırma",
+      "country": "Türkiye",
+      "device": "Mobil 📱",
+      "page": "Ana Sayfa",
+      "type": "👁️ Site Ziyareti"
+    },
     {
       "time": "14:17",
       "name": "Ziyaretçi (Mobil 📱)",
@@ -2021,15 +2031,6 @@
       "device": "Mobil 📱",
       "page": "Ana Sayfa",
       "type": "👁️ Site Ziyareti"
-    },
-    {
-      "time": "00:56",
-      "name": "Ziyaretçi (Mobil 📱)",
-      "city": "Amsterdam (NL)",
-      "country": "Türkiye",
-      "device": "Mobil 📱",
-      "page": "Ana Sayfa",
-      "type": "👁️ Site Ziyareti"
     }
   ],
   "cityCounts": {
@@ -2045,22 +2046,16 @@
     "Dallas (US)": 2,
     "Frankfurt am Main (DE)": 2,
     "Singapore (SG)": 3,
-    "Gaziantep": 1
+    "Gaziantep": 1,
+    "Bandırma": 1
   },
   "activeVisitors": [
     {
-      "id": "Android 📱_Bursa_qwii",
-      "device": "Android 📱",
-      "city": "Bursa",
-      "page": "Ana Sayfa",
-      "lastSeen": 1795259849246
-    },
-    {
-      "id": "Mobil 📱_Bursa_xs6v",
+      "id": "Mobil 📱_Bandırma_3wh3",
       "device": "Mobil 📱",
-      "city": "Bursa",
-      "page": "/",
-      "lastSeen": 1795259838890
+      "city": "Bandırma",
+      "page": "Ana Sayfa",
+      "lastSeen": 1795260401148
     }
   ]
 }
